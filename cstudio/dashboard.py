@@ -190,13 +190,15 @@ def _stat_cards(st: dict, pending_props: int) -> str:
     return f'<div class="stats">{"".join(out)}</div>'
 
 
-def layout(page: str, body: str, slug: str = "", productions=None, status=None) -> str:
+def layout(page: str, body: str, slug: str = "", productions=None, status=None, history=None) -> str:
     prods = list(productions) if productions else []
     st = status or {}
     stage = str(st.get("stage", "") or "")
     state = str(st.get("state", "") or "")
     title = str(st.get("title", "") or "")
     blocked = bool(st.get("blocked", False))
+    # Historico p/ painel contextual: prefere arg explícito, senão `status["history"]`.
+    hist = list(history) if history is not None else list(st.get("history", []) or [])
 
     if page not in {p for p, _ in NAV}:
         page = "production" if not slug else page
@@ -230,22 +232,25 @@ def layout(page: str, body: str, slug: str = "", productions=None, status=None) 
             '<button class="btn btn-ghost" type="submit">Trocar</button>'
             "</form>"
         )
-        selector = (
+        top_search = (
             '<div class="top-right">'
             '<input type="search" class="top-search" placeholder="Buscar…" aria-label="Buscar">'
-            f'<div class="top-sel">{selector_inner}</div>'
             '<span class="avatar" title="showrunner">SR</span>'
             "</div>"
         )
+        prod_selector = f'<div class="top-sel">{selector_inner}</div>'
     else:
-        selector = '<span class="muted">Nenhuma produção cadastrada</span>'
+        top_search = '<span class="avatar" title="showrunner">SR</span>'
+        prod_selector = '<span class="muted">Nenhuma produção cadastrada</span>'
 
     crumb_label = dict(NAV).get(page, page)
     ctx = f" ctx-{page}" if page in ("gates", "sync", "master", "release", "cutlist") else ""
     if slug:
-        prod_info = (
+        crumb = (
             f'<nav class="crumb muted" aria-label="breadcrumb">Cuts Studio <span>/</span> {_e(crumb_label)} '
             f"<span>/</span> <strong>{_e(slug)}</strong>{(' <span>—</span> ' + _e(stage)) if stage else ''}</nav>"
+        )
+        prod_info = (
             f'<div class="prod-id"><strong>{_e(title or slug)}</strong>'
             f'<span class="muted mono">{_e(slug)}</span></div>'
             '<div class="top-badges">'
@@ -256,11 +261,37 @@ def layout(page: str, body: str, slug: str = "", productions=None, status=None) 
             + "</div>"
         )
     else:
-        prod_info = (
+        crumb = (
             f'<nav class="crumb muted" aria-label="breadcrumb">Cuts Studio <span>/</span> {_e(crumb_label)}</nav>'
+        )
+        prod_info = (
             '<div class="prod-id"><strong>Nenhuma produção selecionada</strong>'
             '<span class="muted">Escolha uma produção no seletor ou na lista.</span></div>'
         )
+    # Painel contextual (right-sidebar 280px): reativa _activity_feed (antes código morto).
+    try:
+        feed_html = _activity_feed(hist[-8:] if hist else [])
+    except Exception:
+        feed_html = '<p class="empty">Sem atividade registrada.</p>'
+    if slug:
+        _ctx_badge = '<span class="badge badge-fail">Bloqueado</span>' if blocked else '<span class="badge badge-ok">Liberado</span>'
+        ctx_meta = (
+            '<div class="ctx-meta">'
+            f"<div><span class='muted'>Fase</span><br><strong>{_e(stage or '—')}</strong></div>"
+            f"<div><span class='muted'>Estado</span><br><strong>{_e(state or '—')}</strong></div>"
+            f"<div>{_ctx_badge}</div>"
+            "</div>"
+        )
+    else:
+        ctx_meta = '<p class="muted">Selecione uma produção para ver o contexto.</p>'
+    context_panel = (
+        '<aside class="context-panel" aria-label="Painel contextual">'
+        '<div class="ctx-card"><h3>Resumo</h3>'
+        f"{ctx_meta}</div>"
+        '<div class="ctx-card"><h3>Atividade recente</h3>'
+        f"{feed_html}</div>"
+        "</aside>"
+    )
 
     return f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -269,18 +300,21 @@ def layout(page: str, body: str, slug: str = "", productions=None, status=None) 
 /* SnowUI DARK real — docs/SNOWUI-DARK-TOKENS.md (page bg #333333). */
 :root{{color-scheme:dark;--bg:#333333;--sidebar:#333333;
 --card:rgba(255,255,255,0.04);--elev:rgba(255,255,255,0.1);--border:rgba(255,255,255,0.15);
+--border-soft:rgba(255,255,255,0.08);
 --faint:rgba(255,255,255,0.2);--text:#FFFFFF;
 --muted:rgba(255,255,255,0.4);--accent:#0A84FF;--accent-soft:rgba(255,255,255,0.1);--ok:#30D158;
---fail:#FF453A;--warn:#FF9F0A;--gate:#BF5AF2;--teal:#63E6E2;--pastel-a:#EDEEFC;--pastel-b:#E6F1FD;--ink:#000000}}
+--fail:#FF453A;--warn:#FF9F0A;--gate:#BF5AF2;--teal:#63E6E2;--pastel-a:#EDEEFC;--pastel-b:#E6F1FD;--ink:#000000;
+--dur-fast:150ms;--dur-base:250ms;--dur-slow:400ms;--dur-chart:800ms;
+--ease-out:cubic-bezier(0,0,0.2,1);--ease-spring:cubic-bezier(0.34,1.56,0.64,1)}}
 *{{box-sizing:border-box}}body{{margin:0;background:#333333;background:var(--bg);color:var(--text);
 font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,sans-serif;font-size:14px;line-height:20px;
 font-feature-settings:"ss01" 1,"cv01" 1,"tnum" 1}}.num,.mono,td,.stat-v{{font-variant-numeric:tabular-nums}}
 a{{color:var(--accent);text-decoration:none}}a:hover{{text-decoration:underline}}
 img,svg{{max-width:100%}}
 .app{{display:flex;min-height:100vh;border-radius:24px;overflow:hidden;max-width:100%}}
-.sidebar{{width:220px;flex-shrink:0;background:var(--sidebar);border-right:0.5px solid var(--border);
+.sidebar{{width:220px;flex-shrink:0;background:var(--sidebar);border-right:1px solid var(--border-soft);
 padding:16px;display:flex;flex-direction:column;gap:8px;position:sticky;top:0;height:100vh;overflow:auto;
-transition:width .3s ease-out,transform .3s ease-out}}
+transition:width var(--dur-base) var(--ease-out),transform var(--dur-base) var(--ease-out)}}
 .logo{{font-size:18px;font-weight:800;letter-spacing:.2px;display:flex;align-items:center;gap:8px}}
 .logo-mark{{width:28px;height:28px;border-radius:8px;background:#0A84FF;
 display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:15px}}
@@ -289,13 +323,13 @@ display:inline-flex;align-items:center;justify-content:center;color:#fff;font-si
 .nav{{display:flex;flex-direction:column;gap:8px}}
 .nav-title{{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em;margin:4px 6px}}
 .nav-link{{display:flex;align-items:center;gap:12px;min-height:48px;width:100%;padding:12px;border-radius:16px;
-color:var(--text);border:1px solid transparent;transition:background .3s ease-out,border-color .3s ease-out,transform .3s ease-out}}
+color:var(--text);border:1px solid transparent;transition:background var(--dur-base) var(--ease-out),border-color var(--dur-base) var(--ease-out),transform var(--dur-fast) var(--ease-out)}}
 .nav-link .ic{{flex-shrink:0;width:24px;height:24px;border-radius:8px;background:var(--pastel-a);color:#000;
 padding:4px;opacity:1}}
 .nav a:nth-child(even) .ic,.nav-link:nth-child(even) .ic{{background:var(--pastel-b)}}
-.nav-link:hover{{background:var(--elev);text-decoration:none}}
+.nav-link:hover{{background:var(--elev);text-decoration:none;transform:translateX(2px)}}
 .nav-link.active{{background:rgba(255,255,255,0.1);background:var(--accent-soft);border-color:transparent;font-weight:700}}
-.side-block{{border-top:0.5px solid var(--border);padding-top:12px;display:flex;flex-direction:column;gap:8px}}
+.side-block{{border-top:1px solid var(--border-soft);padding-top:12px;display:flex;flex-direction:column;gap:8px}}
 .prod-link{{display:block;padding:5px 8px;border-radius:6px;color:var(--muted);
 white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
 .prod-link:hover{{color:var(--text);background:var(--elev);text-decoration:none}}
@@ -304,12 +338,15 @@ white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
 .brand-foot{{margin-top:auto;padding:10px 6px;font-size:12px;line-height:16px;color:var(--muted)}}
 .brand-foot strong{{color:var(--muted);font-weight:600}}
 .main{{flex:1;min-width:0;display:flex;flex-direction:column;max-width:100%}}
-.topbar{{display:flex;justify-content:space-between;align-items:center;gap:16px;
-padding:20px 28px;border-bottom:0.5px solid var(--border);background:var(--sidebar);flex-wrap:wrap;min-height:68px}}
-.topbar>div{{min-width:0;max-width:100%}}
+.topbar{{display:flex;flex-direction:column;justify-content:center;gap:10px;
+padding:16px 28px;border-bottom:1px solid var(--border-soft);background:var(--sidebar);min-height:68px}}
+.topbar-row-1{{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}}
+.topbar-row-2{{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}}
+.topbar>div,.topbar-row-1>div,.topbar-row-2>div{{min-width:0;max-width:100%}}
+.prod-id-wrap{{display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 280px}}
 .crumb{{font-size:12px;line-height:16px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}}.crumb span{{opacity:.5;margin:0 4px}}.crumb strong{{color:var(--text)}}
 .prod-id{{display:flex;flex-direction:column;gap:2px;min-width:0;max-width:100%}}
-.prod-id strong{{font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}}.mono{{font-family:ui-monospace,Consolas,monospace;font-size:12px}}
+.prod-id strong{{font-size:18px;font-weight:600;line-height:24px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}}.mono{{font-family:ui-monospace,Consolas,monospace;font-size:12px}}
 .top-badges{{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap;max-width:100%}}
 .top-right{{display:flex;align-items:center;gap:12px;flex-wrap:wrap;min-width:0;max-width:100%}}
 .top-sel{{min-width:0;max-width:100%}}
@@ -320,26 +357,40 @@ display:inline-flex;align-items:center;justify-content:center;font-size:12px;fon
 .cell-id{{display:flex;align-items:center;gap:8px;min-height:28px;min-width:0}}
 .cell-id a{{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}}
 .top-search{{width:160px;max-width:100%;flex:1 1 120px;min-width:0;height:28px;background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);
--webkit-backdrop-filter:blur(10px);border:0.5px solid var(--border);color:var(--text);border-radius:16px;padding:4px 12px;font-size:12px}}
+-webkit-backdrop-filter:blur(10px);border:1px solid var(--border-soft);color:var(--text);border-radius:16px;padding:4px 12px;font-size:12px}}
 .top-search::placeholder{{color:var(--muted)}}
 .top-search:focus{{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}}
-.content{{padding:28px;max-width:892px;width:100%;margin:0 auto;display:flex;flex-direction:column;gap:28px;min-width:0;box-sizing:border-box}}
-.card{{background:rgba(255,255,255,0.04);background:var(--card);border:0;border-radius:24px;
+.content{{padding:28px;width:100%;margin:0;flex:1 1 auto;min-width:0;box-sizing:border-box;
+display:flex;flex-direction:column;gap:24px;max-width:1440px}}
+.workspace{{display:flex;gap:24px;align-items:flex-start;width:100%;max-width:1440px;margin:0 auto;padding:28px;box-sizing:border-box;min-width:0}}
+.workspace .content{{padding:0;max-width:none;margin:0}}
+.context-panel{{width:280px;flex-shrink:0;display:flex;flex-direction:column;gap:16px;position:sticky;top:16px;max-height:calc(100vh - 32px);overflow:auto;min-width:0}}
+.ctx-card{{background:var(--card);border:0;border-radius:24px;padding:20px;display:flex;flex-direction:column;gap:12px;min-width:0}}
+.ctx-card h3{{margin:0;font-size:14px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}}
+.ctx-meta{{display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--muted)}}
+.ctx-meta strong{{color:var(--text)}}
+.card{{background:rgba(255,255,255,0.04);background:var(--card);border:0;border-radius:24px;position:relative;
 padding:24px;margin-bottom:0;display:flex;flex-direction:column;gap:16px;box-shadow:0 0.5px 1px rgba(0,0,0,0.1);
-transition:transform .3s ease-out,box-shadow .3s ease-out,border-color .3s ease-out;min-width:0;max-width:100%;overflow:hidden}}
-@media(hover:hover){{.card:hover{{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.35)}}}}
+transition:transform var(--dur-base) var(--ease-out),box-shadow var(--dur-base) var(--ease-out),border-color var(--dur-base) var(--ease-out);min-width:0;max-width:100%;overflow:hidden;will-change:transform}}
+@media(hover:hover){{.card:hover{{transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,0,0,.3),0 2px 8px rgba(0,0,0,.2)}}}}
+.card:active{{transform:translateY(0) scale(0.995)}}
 .card h2,.card h3{{margin:0 0 10px;overflow-wrap:anywhere}}.card h2{{font-size:18px;font-weight:600;line-height:24px}}
 .card h3{{font-size:14px;font-weight:600;color:var(--muted);
 text-transform:uppercase;letter-spacing:.04em}}
 .ctx-gates .card h2{{color:#BF5AF2}}.ctx-sync .card h2{{color:#0A84FF}}.ctx-master .card h2{{color:#30D158}}
 .ctx-release .card h2{{color:#FF453A}}.ctx-cutlist .card h2{{color:#63E6E2}}
+.ctx-gates .card::before{{background:#BF5AF2}}.ctx-sync .card::before{{background:#0A84FF}}.ctx-master .card::before{{background:#30D158}}
+.ctx-release .card::before{{background:#FF453A}}.ctx-cutlist .card::before{{background:#63E6E2}}
+.ctx-gates .card::before,.ctx-sync .card::before,.ctx-master .card::before,.ctx-release .card::before,.ctx-cutlist .card::before{{
+content:'';position:absolute;left:0;top:20px;bottom:20px;width:3px;border-radius:0 3px 3px 0;opacity:.8}}
 .muted{{color:var(--muted)}}.faint{{color:var(--faint)}}
 .stats{{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:100%}}
 .stat{{border-radius:24px;padding:16px 20px;min-height:100px;min-width:0;max-width:100%;overflow:hidden;
-display:flex;flex-direction:column;gap:8px;color:#FFFFFF;transition:transform .3s ease-out,box-shadow .3s ease-out}}
+display:flex;flex-direction:column;gap:8px;color:#FFFFFF;transition:transform var(--dur-base) var(--ease-out),box-shadow var(--dur-base) var(--ease-out);will-change:transform}}
 .stat-primary{{background:linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.4)),#0A84FF}}
 .stat-dark{{background:linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.2)),#000000}}
-@media(hover:hover){{.stat:hover{{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.35)}}}}
+@media(hover:hover){{.stat:hover{{transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,0,0,.3),0 2px 8px rgba(0,0,0,.2)}}}}
+.stat:active{{transform:translateY(0) scale(0.995)}}
 .stat-h{{display:flex;justify-content:space-between;align-items:center;gap:8px;min-width:0;
 font-size:16px;line-height:22px;font-weight:400;color:#FFFFFF}}
 .stat-h>span:first-child{{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}}
@@ -350,17 +401,20 @@ background:rgba(255,255,255,0.2);color:#FFFFFF;font-size:12px;line-height:16px;f
 .spark{{opacity:.9;max-width:100%;height:auto}}
 .grid2{{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:100%}}
 .stepper{{list-style:none;margin:0;padding:0 0 4px;display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin;max-width:100%}}
-.step{{flex:1 0 96px;min-width:96px;max-width:180px;background:rgba(255,255,255,0.04);border:0;border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:4px;min-width:0}}
+.step{{flex:1 0 96px;min-width:96px;max-width:180px;background:rgba(255,255,255,0.04);border:0;border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:4px;min-width:0;
+transition:background var(--dur-base) var(--ease-out),transform var(--dur-fast) var(--ease-out)}}
 .step .dot{{width:24px;height:24px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;
 font-size:12px;font-weight:700;background:rgba(255,255,255,0.1);color:var(--text);flex-shrink:0}}
 .step.done .dot{{background:rgba(113,221,140,.25);color:#fff}}
-.step.cur{{outline:0.5px solid var(--border)}}.step.cur .dot{{background:var(--accent);color:#fff}}
+.step.cur{{outline:1px solid var(--border-soft)}}.step.cur .dot{{background:var(--accent);color:#fff;animation:dotPulse 2s var(--ease-out) infinite}}
+@keyframes dotPulse{{0%,100%{{box-shadow:0 0 0 0 rgba(10,132,255,0.4)}}50%{{box-shadow:0 0 0 6px rgba(10,132,255,0)}}}}
 .step-t{{font-size:12px;line-height:16px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}}.step-id{{font-size:11px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}
 .donut-row{{display:flex;gap:24px;align-items:center;flex-wrap:wrap;max-width:100%}}
 .donut-side{{flex:1 1 240px;min-width:0;max-width:100%}}
-.donut-wrap{{position:relative;width:120px;height:120px;flex-shrink:0}}
-.donut-fg{{transition:stroke-dashoffset 1s ease-out;animation:donutIn 1s ease-out}}
+.donut-wrap{{position:relative;width:120px;height:120px;flex-shrink:0;animation:donutPulse 2.4s var(--ease-out) infinite}}
+.donut-fg{{transition:stroke-dashoffset var(--dur-chart) var(--ease-out);animation:donutIn var(--dur-chart) var(--ease-out)}}
 @keyframes donutIn{{from{{stroke-dashoffset:213.6}}}}
+@keyframes donutPulse{{0%,100%{{filter:drop-shadow(0 0 0 rgba(10,132,255,0))}}50%{{filter:drop-shadow(0 0 8px rgba(10,132,255,0.3))}}}}
 .donut-c{{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0}}
 .donut-c strong{{font-size:20px}}.donut-c span{{font-size:12px;line-height:16px}}
 .chart-line{{border-top:1px dashed #A0BCE8}}
@@ -370,13 +424,13 @@ font-size:12px;font-weight:700;background:rgba(255,255,255,0.1);color:var(--text
 table{{border-collapse:separate;border-spacing:0;width:100%;font-size:14px;line-height:20px;
 border-radius:16px;overflow:hidden;max-width:100%}}
 thead th{{color:var(--muted);font-weight:400;font-size:12px;line-height:16px;letter-spacing:.02em;
-padding:12px 16px;text-align:left;height:40px;vertical-align:middle;border-bottom:0.5px solid var(--border)}}
+padding:12px 16px;text-align:left;height:40px;vertical-align:middle;border-bottom:1px solid var(--border-soft)}}
 tbody td{{padding:12px 16px;height:52px;text-align:left;vertical-align:middle;
-font-size:14px;font-weight:400;border-bottom:0.5px solid var(--border);overflow-wrap:break-word}}
+font-size:14px;font-weight:400;border-bottom:1px solid var(--border-soft);overflow-wrap:break-word}}
 td .badge,td code{{flex-shrink:0}}
 tbody tr:last-child td{{border-bottom:0}}
-tbody tr{{transition:background .3s ease-out}}tbody tr:nth-child(even){{background:rgba(255,255,255,0.04)}}
-tbody tr:hover{{background:rgba(255,255,255,0.1)}}
+tbody tr{{transition:background var(--dur-fast) ease-out,transform var(--dur-fast) var(--ease-out)}}tbody tr:nth-child(even){{background:rgba(255,255,255,0.03)}}
+tbody tr:hover{{background:rgba(255,255,255,0.08);transform:translateX(2px)}}
 .badge{{display:inline-flex;align-items:center;gap:6px;min-height:28px;padding:4px 12px;border-radius:80px;
 font-size:14px;line-height:20px;font-weight:400;border:0.5px solid transparent;white-space:nowrap}}
 .badge-ok{{background:rgba(48,209,88,0.1);border-color:rgba(48,209,88,0.2);color:#30D158}}
@@ -389,12 +443,16 @@ font-size:14px;line-height:20px;font-weight:400;border:0.5px solid transparent;w
 pre{{background:rgba(255,255,255,0.04);border:0;border-radius:8px;padding:12px;max-width:100%;
 overflow:auto;color:var(--text);font-size:12px;line-height:16px;white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word}}
 code{{background:rgba(255,255,255,0.1);border:0;border-radius:6px;padding:1px 6px;font-size:12px;overflow-wrap:anywhere}}
-kbd{{border:0.5px solid rgba(255,255,255,0.15);border-radius:6px;padding:1px 6px;font-size:12px;font-family:inherit}}
+kbd{{border:1px solid rgba(255,255,255,0.15);border-radius:6px;padding:1px 6px;font-size:12px;font-family:inherit}}
 .tooltip{{background:rgba(255,255,255,0.8);color:#000000;border:0;
 border-radius:80px;padding:4px 12px;font-size:12px;line-height:16px;max-width:100%}}
 .btn{{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:36px;padding:4px 12px;border-radius:12px;border:1px solid var(--border);
-background:var(--elev);color:var(--text);cursor:pointer;font-weight:600;font-size:13px;text-decoration:none;white-space:nowrap;transition:filter .3s ease-out,transform .3s ease-out}}
-.btn:hover{{filter:brightness(1.15);text-decoration:none}}.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{{outline:2px solid var(--accent);outline-offset:2px}}
+background:var(--elev);color:var(--text);cursor:pointer;font-weight:600;font-size:13px;text-decoration:none;white-space:nowrap;
+transition:transform var(--dur-fast) var(--ease-out),filter var(--dur-fast) var(--ease-out),box-shadow var(--dur-fast) var(--ease-out)}}
+.btn:hover{{transform:translateY(-1px);filter:brightness(1.1);box-shadow:0 2px 8px rgba(0,0,0,0.25);text-decoration:none}}
+.btn:active{{transform:translateY(0);filter:brightness(0.95)}}
+.btn-primary:hover{{box-shadow:0 4px 12px rgba(10,132,255,0.35)}}
+.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{{outline:2px solid var(--accent);outline-offset:2px}}
 .btn-primary{{background:var(--accent);border-color:var(--accent);color:#fff}}
 .btn-success{{background:#30D158;border-color:#30D158;color:#fff}}
 .btn-danger{{background:rgba(255,107,107,.2);border-color:var(--fail);color:#ffe3e3}}
@@ -403,37 +461,43 @@ background:var(--elev);color:var(--text);cursor:pointer;font-weight:600;font-siz
 .btn:disabled{{opacity:.5;cursor:not-allowed}}
 form.inline{{display:inline}}form.stack{{display:flex;gap:8px;flex-wrap:wrap;align-items:end;max-width:100%}}
 label.f{{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--muted);flex:1 1 180px;min-width:0;max-width:100%}}
-input[type=text],select,textarea{{background:rgba(255,255,255,0.1);border:0.5px solid var(--border);color:var(--text);
+input[type=text],select,textarea{{background:rgba(255,255,255,0.1);border:1px solid var(--border-soft);color:var(--text);
 border-radius:12px;padding:8px 10px;font-size:13px;min-width:0;max-width:100%;width:100%;box-sizing:border-box;font-family:inherit}}
 select option{{background:#2a2a2a;color:#FFFFFF}}
 input[type=text]:focus,select:focus,textarea:focus{{border-color:var(--accent);outline:2px solid var(--accent);outline-offset:1px}}
 input[type=search]:not(.top-search){{background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);
--webkit-backdrop-filter:blur(10px);border:0.5px solid var(--border);color:var(--text);border-radius:16px;padding:6px 12px;font-size:13px;min-width:0;max-width:100%;flex:1 1 160px}}
+-webkit-backdrop-filter:blur(10px);border:1px solid var(--border-soft);color:var(--text);border-radius:16px;padding:6px 12px;font-size:13px;min-width:0;max-width:100%;flex:1 1 160px}}
 .actions{{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;max-width:100%}}
 .empty{{color:var(--muted);padding:8px 0}}
-.missing{{border-radius:8px;background:var(--elev);color:var(--muted);border:0.5px dashed var(--border)}}
+.missing{{border-radius:8px;color:var(--muted);border:1px dashed var(--border-soft);
+background:linear-gradient(90deg,rgba(255,255,255,0.03) 25%,rgba(255,255,255,0.09) 50%,rgba(255,255,255,0.03) 75%);
+background-size:200% 100%;animation:shimmer 1.6s var(--ease-out) infinite}}
+@keyframes shimmer{{from{{background-position:200% 0}}to{{background-position:-200% 0}}}}
 .feed{{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0;max-width:100%}}
-.feed li{{display:flex;gap:10px;padding:10px 2px;border-bottom:0.5px solid var(--border);font-size:13px;min-width:0}}
+.feed li{{display:flex;gap:10px;padding:10px 2px;border-bottom:1px solid var(--border-soft);font-size:13px;min-width:0}}
 .feed li>div{{min-width:0;flex:1;overflow-wrap:anywhere;word-break:break-word}}
 .feed .fdot{{width:8px;height:8px;border-radius:999px;background:#A0BCE8;margin-top:6px;flex-shrink:0}}
 .feed time{{color:var(--muted);font-size:12px;overflow-wrap:anywhere}}
 .feed .badge{{margin-bottom:4px}}
-.anim{{opacity:0;animation:fadeSlideIn .3s ease-out forwards}}
-.anim-1{{animation-delay:.02s}}.anim-2{{animation-delay:.08s}}.anim-3{{animation-delay:.14s}}
-.anim-4{{animation-delay:.2s}}.anim-5{{animation-delay:.26s}}.anim-6{{animation-delay:.32s}}
-@keyframes fadeSlideIn{{from{{opacity:0;transform:translateY(8px)}}to{{opacity:1;transform:none}}}}
+.anim{{opacity:0;animation:fadeSlideIn var(--dur-base) var(--ease-out) forwards}}
+.anim-1{{animation-delay:0ms}}.anim-2{{animation-delay:60ms}}.anim-3{{animation-delay:120ms}}
+.anim-4{{animation-delay:180ms}}.anim-5{{animation-delay:240ms}}.anim-6{{animation-delay:300ms}}
+@keyframes fadeSlideIn{{from{{opacity:0;transform:translateY(12px) scale(0.99)}}to{{opacity:1;transform:none}}}}
 .filterbar{{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px;max-width:100%}}
 .filterbar .muted{{flex-shrink:0}}
-@media(max-width:1100px){{.stats{{grid-template-columns:1fr 1fr}}.topbar{{gap:16px}}}}
-@media(max-width:960px){{.app{{flex-direction:column}}.sidebar{{width:auto;height:auto;position:static;max-height:none}}
-.grid2{{grid-template-columns:1fr}}.topbar{{align-items:flex-start;gap:16px}}.content{{padding:16px;max-width:none}}.stats{{grid-template-columns:1fr 1fr}}.stat{{max-width:none}}.donut-row{{gap:16px}}}}
-@media(max-width:640px){{body{{font-size:13px}}.sidebar{{padding:12px}}.nav-link{{min-height:44px;padding:10px}}.topbar{{padding:12px 16px;flex-direction:column;align-items:stretch}}
+@media(min-width:1441px){{.workspace{{max-width:1600px;margin:0 auto}}}}
+@media(max-width:1280px){{.context-panel{{display:none}}.workspace{{max-width:100%}}.content{{max-width:100%}}}}
+@media(max-width:1100px){{.stats{{grid-template-columns:1fr 1fr}}.topbar{{gap:10px}}.workspace{{gap:16px}}}}
+@media(max-width:960px){{.app{{flex-direction:column}}.sidebar{{width:auto;height:auto;position:static;max-height:none;border-right:0;border-bottom:1px solid var(--border-soft)}}
+.grid2{{grid-template-columns:1fr}}.topbar{{align-items:flex-start;gap:12px;padding:16px}}.workspace{{flex-direction:column;padding:16px}}.content{{padding:0;max-width:none}}.stats{{grid-template-columns:1fr 1fr}}.stat{{max-width:none}}.donut-row{{gap:16px}}
+.stepper{{flex-direction:column;overflow-x:visible}}.step{{min-width:auto;max-width:none;flex:none}}.topbar-row-1,.topbar-row-2{{flex-direction:column;align-items:stretch;gap:8px}}}}
+@media(max-width:640px){{body{{font-size:13px}}.sidebar{{padding:12px}}.nav-link{{min-height:44px;padding:10px}}.topbar{{padding:12px 16px}}
 .top-right{{width:100%}}.top-sel,.top-sel .prod-switch{{width:100%}}.top-sel select{{flex:1}}.top-search{{width:100%;flex:1 1 100%}}
-.content{{padding:12px 16px;gap:16px}}.card{{padding:16px;border-radius:16px}}.stats{{grid-template-columns:1fr;gap:12px}}
+.workspace{{padding:12px 16px}}.content{{gap:16px}}.card{{padding:16px;border-radius:16px}}.stats{{grid-template-columns:1fr;gap:12px}}
 form.stack{{flex-direction:column;align-items:stretch}}label.f{{flex:1 1 100%}}.donut-row{{flex-direction:column;align-items:flex-start}}
 .donut-side{{flex:1 1 100%;width:100%}}th,td{{padding:8px 12px}}.filterbar{{align-items:stretch;flex-direction:column}}.filterbar input{{width:100%}}}}
 @media(max-width:400px){{.stat-v{{font-size:20px;line-height:28px}}.card h2{{font-size:16px}}.btn:not(.btn-sm){{width:100%}}.table-wrap table{{min-width:520px}}}}
-@media(prefers-reduced-motion:reduce){{*,*::before,*::after{{animation:none !important;transition:none !important}}.anim{{opacity:1}}}}
+@media(prefers-reduced-motion:reduce){{*,*::before,*::after{{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important}}.anim{{opacity:1}}}}
 </style>
 </head><body><div class="app">
 <aside class="sidebar">
@@ -443,8 +507,11 @@ form.stack{{flex-direction:column;align-items:stretch}}label.f{{flex:1 1 100%}}.
 <div class="side-block side-hint">CLI: <code>python -m cstudio new --title "..."</code><br>API: <code>GET /health</code> · <code>GET /api/status</code></div>
 <div class="brand-foot"><strong>Cuts Studio</strong> · SnowUI dark #333333</div>
 </aside>
-<div class="main"><header class="topbar"><div>{prod_info}</div><div>{selector}</div></header>
-<main class="content{ctx}">{body}</main></div>
+<div class="main"><header class="topbar">
+<div class="topbar-row-1"><div>{crumb}</div><div>{top_search}</div></div>
+<div class="topbar-row-2"><div class="prod-id-wrap">{prod_info}</div><div>{prod_selector}</div></div>
+</header>
+<div class="workspace"><main class="content{ctx}">{body}</main>{context_panel}</div></div>
 </div></body></html>"""
 
 
@@ -596,6 +663,13 @@ def render(root: str, page: str, slug: str = "") -> str:
         prods = C.list_productions(root)
     except Exception:
         prods = []
+
+    def _hist_for(s: str):
+        try:
+            _, _proj = C.load_project(root, s)
+            return list((_proj or {}).get("history", []) or [])
+        except Exception:
+            return []
     if page == "production":
         rows = "".join(
             f"<tr><td><span class=\"cell-id\"><span class=\"avatar avatar-sm\" aria-hidden=\"true\">"
@@ -659,17 +733,17 @@ def render(root: str, page: str, slug: str = "") -> str:
                     f"<div class='donut-side'><h3>Pipeline</h3>{_stepper(root, st['stage'])}</div></div></section>")
             except Exception:
                 pass
-        return layout(page, body, slug, productions=prods, status=None)
+        return layout(page, body, slug, productions=prods, status=None, history=_hist_for(slug) if slug else [])
     if not slug:
         body = ("<section class='card anim anim-1'><h2>Selecione uma produção</h2>"
                 "<p class='muted'>Use o seletor no topo ou abra a página "
                 "<a href='/?page=production'>Produção</a> para escolher.</p></section>")
-        return layout(page, body, slug, productions=prods, status=None)
+        return layout(page, body, slug, productions=prods, status=None, history=[])
     try:
         st = C.workflow_status(root, slug)
     except Exception as exc:
         return layout(page, f"<section class='card'><p class='bad'>{_e(exc)}</p></section>",
-                      slug, productions=prods, status=None)
+                      slug, productions=prods, status=None, history=_hist_for(slug))
     try:
         props_all = P.list_proposals(root, slug)
     except Exception:
@@ -713,7 +787,7 @@ def render(root: str, page: str, slug: str = "") -> str:
                 f"<div class='donut-side'>{_gates_table(st['gates'], slug)}</div></div></section>"
                 f"{approve_box}"
                 f"<section class='card anim anim-5'><h3>Verificações da fase</h3>{_checks_table(st['checks'])}</section>")
-        return layout(page, body, slug, productions=prods, status=st)
+        return layout(page, body, slug, productions=prods, status=st, history=_hist_for(slug))
     if page == "proposals":
         props = props_all
         body = (f"<section class='card anim anim-1'><h2>Propostas — {_e(slug)}</h2>"
@@ -731,7 +805,7 @@ def render(root: str, page: str, slug: str = "") -> str:
                 f"<button class='btn btn-danger' type='submit'>Descartar</button></form></div>"
                 f"<p class='muted'>Aplicar grava os arquivos validados; descartar marca como descartada.</p></section>"
                 f"<section class='card anim anim-3'><h3>Pipeline</h3>{stepper_html}</section>")
-        return layout(page, body, slug, productions=prods, status=st)
+        return layout(page, body, slug, productions=prods, status=st, history=_hist_for(slug))
     if page in ("cutlist", "sync", "graphics", "master", "release"):
         titles = {"cutlist": "Cutlist", "sync": "Sync", "graphics": "Gráficos",
                   "master": "Master", "release": "Release"}
@@ -757,7 +831,7 @@ def render(root: str, page: str, slug: str = "") -> str:
                 f"{content_html}</section>"
                 f"<section class='card anim anim-2'><h3>Pipeline</h3>{stepper_html}</section>"
                 f"<section class='card anim anim-3'><h3>Verificações da fase</h3>{_checks_table(st['checks'])}</section>")
-        html_out = layout(page, body, slug, productions=prods, status=st)
+        html_out = layout(page, body, slug, productions=prods, status=st, history=_hist_for(slug))
         if extra_js:
             html_out = html_out.replace("</body>", extra_js + "</body>")
         return html_out
