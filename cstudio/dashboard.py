@@ -276,7 +276,8 @@ def layout(page: str, body: str, slug: str = "", productions=None, status=None) 
 font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,sans-serif;font-size:14px;line-height:20px;
 font-feature-settings:"ss01" 1,"cv01" 1,"tnum" 1}}.num,.mono,td,.stat-v{{font-variant-numeric:tabular-nums}}
 a{{color:var(--accent);text-decoration:none}}a:hover{{text-decoration:underline}}
-.app{{display:flex;min-height:100vh;border-radius:24px}}
+img,svg{{max-width:100%}}
+.app{{display:flex;min-height:100vh;border-radius:24px;overflow:hidden;max-width:100%}}
 .sidebar{{width:220px;flex-shrink:0;background:var(--sidebar);border-right:0.5px solid var(--border);
 padding:16px;display:flex;flex-direction:column;gap:8px;position:sticky;top:0;height:100vh;overflow:auto;
 transition:width .3s ease-out,transform .3s ease-out}}
@@ -299,58 +300,64 @@ padding:4px;opacity:1}}
 white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
 .prod-link:hover{{color:var(--text);background:var(--elev);text-decoration:none}}
 .prod-link.active{{color:var(--text);background:var(--elev);font-weight:700}}
-.side-hint{{color:var(--muted);font-size:12px;line-height:16px}}.side-hint code{{color:var(--text)}}
+.side-hint{{color:var(--muted);font-size:12px;line-height:16px;overflow-wrap:anywhere;word-break:break-word}}.side-hint code{{color:var(--text)}}
 .brand-foot{{margin-top:auto;padding:10px 6px;font-size:12px;line-height:16px;color:var(--muted)}}
 .brand-foot strong{{color:var(--muted);font-weight:600}}
-.main{{flex:1;min-width:0;display:flex;flex-direction:column}}
-.topbar{{display:flex;justify-content:space-between;align-items:center;gap:312px;
+.main{{flex:1;min-width:0;display:flex;flex-direction:column;max-width:100%}}
+.topbar{{display:flex;justify-content:space-between;align-items:center;gap:16px;
 padding:20px 28px;border-bottom:0.5px solid var(--border);background:var(--sidebar);flex-wrap:wrap;min-height:68px}}
-.crumb{{font-size:12px;line-height:16px}}.crumb span{{opacity:.5;margin:0 4px}}.crumb strong{{color:var(--text)}}
-.prod-id{{display:flex;flex-direction:column;gap:2px}}
-.prod-id strong{{font-size:15px}}.mono{{font-family:ui-monospace,Consolas,monospace;font-size:12px}}
-.top-badges{{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}}
-.top-right{{display:flex;align-items:center;gap:12px}}
-.top-sel .prod-switch{{display:flex;align-items:center;gap:8px}}
+.topbar>div{{min-width:0;max-width:100%}}
+.crumb{{font-size:12px;line-height:16px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}}.crumb span{{opacity:.5;margin:0 4px}}.crumb strong{{color:var(--text)}}
+.prod-id{{display:flex;flex-direction:column;gap:2px;min-width:0;max-width:100%}}
+.prod-id strong{{font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}}.mono{{font-family:ui-monospace,Consolas,monospace;font-size:12px}}
+.top-badges{{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap;max-width:100%}}
+.top-right{{display:flex;align-items:center;gap:12px;flex-wrap:wrap;min-width:0;max-width:100%}}
+.top-sel{{min-width:0;max-width:100%}}
+.top-sel .prod-switch{{display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-width:0;max-width:100%}}
 .avatar{{width:32px;height:32px;border-radius:80px;background:rgba(255,255,255,0.1);
 display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--text);flex-shrink:0}}
 .avatar-sm{{width:24px;height:24px;font-size:10px}}
-.cell-id{{display:flex;align-items:center;gap:8px;min-height:28px}}
-.top-search{{width:160px;height:28px;background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);
--webkit-backdrop-filter:blur(10px);border:0;color:var(--text);border-radius:16px;padding:4px 12px;font-size:12px}}
+.cell-id{{display:flex;align-items:center;gap:8px;min-height:28px;min-width:0}}
+.cell-id a{{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}}
+.top-search{{width:160px;max-width:100%;flex:1 1 120px;min-width:0;height:28px;background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);border:0.5px solid var(--border);color:var(--text);border-radius:16px;padding:4px 12px;font-size:12px}}
 .top-search::placeholder{{color:var(--muted)}}
-.content{{padding:28px;max-width:892px;width:100%;margin:0 auto;display:flex;flex-direction:column;gap:28px}}
+.top-search:focus{{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}}
+.content{{padding:28px;max-width:892px;width:100%;margin:0 auto;display:flex;flex-direction:column;gap:28px;min-width:0;box-sizing:border-box}}
 .card{{background:rgba(255,255,255,0.04);background:var(--card);border:0;border-radius:24px;
 padding:24px;margin-bottom:0;display:flex;flex-direction:column;gap:16px;box-shadow:0 0.5px 1px rgba(0,0,0,0.1);
-transition:transform .3s ease-out,box-shadow .3s ease-out,border-color .3s ease-out}}
-.card:hover{{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.35)}}
-.card h2,.card h3{{margin:0 0 10px}}.card h2{{font-size:18px;font-weight:600;line-height:24px}}
+transition:transform .3s ease-out,box-shadow .3s ease-out,border-color .3s ease-out;min-width:0;max-width:100%;overflow:hidden}}
+@media(hover:hover){{.card:hover{{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.35)}}}}
+.card h2,.card h3{{margin:0 0 10px;overflow-wrap:anywhere}}.card h2{{font-size:18px;font-weight:600;line-height:24px}}
 .card h3{{font-size:14px;font-weight:600;color:var(--muted);
 text-transform:uppercase;letter-spacing:.04em}}
 .ctx-gates .card h2{{color:#BF5AF2}}.ctx-sync .card h2{{color:#0A84FF}}.ctx-master .card h2{{color:#30D158}}
 .ctx-release .card h2{{color:#FF453A}}.ctx-cutlist .card h2{{color:#63E6E2}}
 .muted{{color:var(--muted)}}.faint{{color:var(--faint)}}
-.stats{{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}}
-.stat{{border-radius:24px;padding:16px 20px;min-height:100px;
+.stats{{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:100%}}
+.stat{{border-radius:24px;padding:16px 20px;min-height:100px;min-width:0;max-width:100%;overflow:hidden;
 display:flex;flex-direction:column;gap:8px;color:#FFFFFF;transition:transform .3s ease-out,box-shadow .3s ease-out}}
 .stat-primary{{background:linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.4)),#0A84FF}}
 .stat-dark{{background:linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.2)),#000000}}
-.stat:hover{{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.35)}}
-.stat-h{{display:flex;justify-content:space-between;align-items:center;gap:8px;
+@media(hover:hover){{.stat:hover{{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.35)}}}}
+.stat-h{{display:flex;justify-content:space-between;align-items:center;gap:8px;min-width:0;
 font-size:16px;line-height:22px;font-weight:400;color:#FFFFFF}}
-.stat-chip{{display:inline-flex;align-items:center;min-height:24px;padding:2px 10px;border-radius:80px;
-background:rgba(255,255,255,0.2);color:#FFFFFF;font-size:12px;line-height:16px;font-weight:400;white-space:nowrap}}
-.stat-v{{font-size:24px;font-weight:600;line-height:32px;color:#FFFFFF}}
-.stat-f{{display:flex;justify-content:flex-end;align-items:end;gap:8px}}
-.spark{{opacity:.9}}
-.grid2{{display:grid;grid-template-columns:1fr 1fr;gap:16px}}
-.stepper{{list-style:none;margin:0;padding:0;display:flex;gap:8px;overflow-x:auto}}
-.step{{flex:1;min-width:96px;background:rgba(255,255,255,0.04);border:0;border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:4px}}
+.stat-h>span:first-child{{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}}
+.stat-chip{{display:inline-flex;align-items:center;min-height:24px;padding:2px 10px;border-radius:80px;flex-shrink:0;max-width:100%;
+background:rgba(255,255,255,0.2);color:#FFFFFF;font-size:12px;line-height:16px;font-weight:400;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
+.stat-v{{font-size:24px;font-weight:600;line-height:32px;color:#FFFFFF;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}
+.stat-f{{display:flex;justify-content:flex-end;align-items:end;gap:8px;min-width:0;overflow:hidden}}
+.spark{{opacity:.9;max-width:100%;height:auto}}
+.grid2{{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:100%}}
+.stepper{{list-style:none;margin:0;padding:0 0 4px;display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin;max-width:100%}}
+.step{{flex:1 0 96px;min-width:96px;max-width:180px;background:rgba(255,255,255,0.04);border:0;border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:4px;min-width:0}}
 .step .dot{{width:24px;height:24px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;
-font-size:12px;font-weight:700;background:rgba(255,255,255,0.1);color:var(--text)}}
+font-size:12px;font-weight:700;background:rgba(255,255,255,0.1);color:var(--text);flex-shrink:0}}
 .step.done .dot{{background:rgba(113,221,140,.25);color:#fff}}
 .step.cur{{outline:0.5px solid var(--border)}}.step.cur .dot{{background:var(--accent);color:#fff}}
-.step-t{{font-size:12px;line-height:16px;font-weight:600}}.step-id{{font-size:11px;color:var(--muted)}}
-.donut-row{{display:flex;gap:24px;align-items:center;flex-wrap:wrap}}
+.step-t{{font-size:12px;line-height:16px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}}.step-id{{font-size:11px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}
+.donut-row{{display:flex;gap:24px;align-items:center;flex-wrap:wrap;max-width:100%}}
+.donut-side{{flex:1 1 240px;min-width:0;max-width:100%}}
 .donut-wrap{{position:relative;width:120px;height:120px;flex-shrink:0}}
 .donut-fg{{transition:stroke-dashoffset 1s ease-out;animation:donutIn 1s ease-out}}
 @keyframes donutIn{{from{{stroke-dashoffset:213.6}}}}
@@ -358,12 +365,15 @@ font-size:12px;font-weight:700;background:rgba(255,255,255,0.1);color:var(--text
 .donut-c strong{{font-size:20px}}.donut-c span{{font-size:12px;line-height:16px}}
 .chart-line{{border-top:1px dashed #A0BCE8}}
 .bar{{height:28px;border-radius:8px}}
+.table-wrap{{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:16px;max-width:100%;margin-top:12px}}
+.table-wrap table{{min-width:560px}}
 table{{border-collapse:separate;border-spacing:0;width:100%;font-size:14px;line-height:20px;
-border-radius:16px;overflow:hidden}}
+border-radius:16px;overflow:hidden;max-width:100%}}
 thead th{{color:var(--muted);font-weight:400;font-size:12px;line-height:16px;letter-spacing:.02em;
 padding:12px 16px;text-align:left;height:40px;vertical-align:middle;border-bottom:0.5px solid var(--border)}}
 tbody td{{padding:12px 16px;height:52px;text-align:left;vertical-align:middle;
-font-size:14px;font-weight:400;border-bottom:0.5px solid var(--border)}}
+font-size:14px;font-weight:400;border-bottom:0.5px solid var(--border);overflow-wrap:break-word}}
+td .badge,td code{{flex-shrink:0}}
 tbody tr:last-child td{{border-bottom:0}}
 tbody tr{{transition:background .3s ease-out}}tbody tr:nth-child(even){{background:rgba(255,255,255,0.04)}}
 tbody tr:hover{{background:rgba(255,255,255,0.1)}}
@@ -376,43 +386,53 @@ font-size:14px;line-height:20px;font-weight:400;border:0.5px solid transparent;w
 .badge-gate{{background:rgba(191,90,242,0.1);border-color:rgba(191,90,242,0.2);color:#BF5AF2}}
 .badge-muted{{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2);color:var(--muted)}}
 .ok{{color:var(--ok)}}.bad{{color:var(--fail)}}
-pre{{background:rgba(255,255,255,0.04);border:0;border-radius:8px;padding:12px;
-overflow:auto;color:var(--text);font-size:12px;line-height:16px;white-space:pre-wrap}}
-code{{background:rgba(255,255,255,0.1);border:0;border-radius:6px;padding:1px 6px;font-size:12px}}
+pre{{background:rgba(255,255,255,0.04);border:0;border-radius:8px;padding:12px;max-width:100%;
+overflow:auto;color:var(--text);font-size:12px;line-height:16px;white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word}}
+code{{background:rgba(255,255,255,0.1);border:0;border-radius:6px;padding:1px 6px;font-size:12px;overflow-wrap:anywhere}}
 kbd{{border:0.5px solid rgba(255,255,255,0.15);border-radius:6px;padding:1px 6px;font-size:12px;font-family:inherit}}
 .tooltip{{background:rgba(255,255,255,0.8);color:#000000;border:0;
-border-radius:80px;padding:4px 12px;font-size:12px;line-height:16px}}
-.btn{{display:inline-block;padding:4px 12px;border-radius:12px;border:1px solid var(--border);
-background:var(--elev);color:var(--text);cursor:pointer;font-weight:600;font-size:13px;transition:filter .3s ease-out,transform .3s ease-out}}
-.btn:hover{{filter:brightness(1.15)}}.btn-primary{{background:var(--accent);border-color:var(--accent);color:#fff}}
+border-radius:80px;padding:4px 12px;font-size:12px;line-height:16px;max-width:100%}}
+.btn{{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:36px;padding:4px 12px;border-radius:12px;border:1px solid var(--border);
+background:var(--elev);color:var(--text);cursor:pointer;font-weight:600;font-size:13px;text-decoration:none;white-space:nowrap;transition:filter .3s ease-out,transform .3s ease-out}}
+.btn:hover{{filter:brightness(1.15);text-decoration:none}}.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{{outline:2px solid var(--accent);outline-offset:2px}}
+.btn-primary{{background:var(--accent);border-color:var(--accent);color:#fff}}
 .btn-success{{background:#30D158;border-color:#30D158;color:#fff}}
 .btn-danger{{background:rgba(255,107,107,.2);border-color:var(--fail);color:#ffe3e3}}
 .btn-ghost{{background:transparent}}
-.btn-sm{{padding:4px 8px;font-size:12px;border-radius:8px}}
-form.inline{{display:inline}}form.stack{{display:flex;gap:8px;flex-wrap:wrap;align-items:end}}
-label.f{{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--muted)}}
-input[type=text],select{{background:rgba(255,255,255,0.1);border:0;color:var(--text);
-border-radius:12px;padding:8px 10px;font-size:13px;min-width:0}}
+.btn-sm{{padding:4px 8px;font-size:12px;border-radius:8px;min-height:28px}}
+.btn:disabled{{opacity:.5;cursor:not-allowed}}
+form.inline{{display:inline}}form.stack{{display:flex;gap:8px;flex-wrap:wrap;align-items:end;max-width:100%}}
+label.f{{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--muted);flex:1 1 180px;min-width:0;max-width:100%}}
+input[type=text],select,textarea{{background:rgba(255,255,255,0.1);border:0.5px solid var(--border);color:var(--text);
+border-radius:12px;padding:8px 10px;font-size:13px;min-width:0;max-width:100%;width:100%;box-sizing:border-box;font-family:inherit}}
+select option{{background:#2a2a2a;color:#FFFFFF}}
+input[type=text]:focus,select:focus,textarea:focus{{border-color:var(--accent);outline:2px solid var(--accent);outline-offset:1px}}
 input[type=search]:not(.top-search){{background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);
--webkit-backdrop-filter:blur(10px);border:0;color:var(--text);border-radius:16px;padding:6px 12px;font-size:13px;min-width:0}}
-.actions{{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}}
+-webkit-backdrop-filter:blur(10px);border:0.5px solid var(--border);color:var(--text);border-radius:16px;padding:6px 12px;font-size:13px;min-width:0;max-width:100%;flex:1 1 160px}}
+.actions{{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;max-width:100%}}
 .empty{{color:var(--muted);padding:8px 0}}
-.missing{{border-radius:8px;background:linear-gradient(90deg,var(--elev) 25%,rgba(255,255,255,0.2) 50%,var(--elev) 75%);
-background-size:200% 100%;animation:shimmer 1.6s ease-out infinite;color:transparent !important}}
-@keyframes shimmer{{from{{background-position:200% 0}}to{{background-position:-200% 0}}}}
-.feed{{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0}}
-.feed li{{display:flex;gap:10px;padding:10px 2px;border-bottom:0.5px solid var(--border);font-size:13px}}
+.missing{{border-radius:8px;background:var(--elev);color:var(--muted);border:0.5px dashed var(--border)}}
+.feed{{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0;max-width:100%}}
+.feed li{{display:flex;gap:10px;padding:10px 2px;border-bottom:0.5px solid var(--border);font-size:13px;min-width:0}}
+.feed li>div{{min-width:0;flex:1;overflow-wrap:anywhere;word-break:break-word}}
 .feed .fdot{{width:8px;height:8px;border-radius:999px;background:#A0BCE8;margin-top:6px;flex-shrink:0}}
-.feed time{{color:var(--muted);font-size:12px}}
+.feed time{{color:var(--muted);font-size:12px;overflow-wrap:anywhere}}
 .feed .badge{{margin-bottom:4px}}
 .anim{{opacity:0;animation:fadeSlideIn .3s ease-out forwards}}
 .anim-1{{animation-delay:.02s}}.anim-2{{animation-delay:.08s}}.anim-3{{animation-delay:.14s}}
 .anim-4{{animation-delay:.2s}}.anim-5{{animation-delay:.26s}}.anim-6{{animation-delay:.32s}}
 @keyframes fadeSlideIn{{from{{opacity:0;transform:translateY(8px)}}to{{opacity:1;transform:none}}}}
-.filterbar{{display:flex;gap:8px;align-items:center;margin-bottom:10px}}
+.filterbar{{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px;max-width:100%}}
+.filterbar .muted{{flex-shrink:0}}
 @media(max-width:1100px){{.stats{{grid-template-columns:1fr 1fr}}.topbar{{gap:16px}}}}
-@media(max-width:960px){{.app{{flex-direction:column}}.sidebar{{width:auto;height:auto;position:static}}
-.grid2{{grid-template-columns:1fr}}.topbar{{align-items:flex-start;gap:16px}}.content{{padding:16px;max-width:none}}.stats{{grid-template-columns:1fr}}.stat{{max-width:none}}}}
+@media(max-width:960px){{.app{{flex-direction:column}}.sidebar{{width:auto;height:auto;position:static;max-height:none}}
+.grid2{{grid-template-columns:1fr}}.topbar{{align-items:flex-start;gap:16px}}.content{{padding:16px;max-width:none}}.stats{{grid-template-columns:1fr 1fr}}.stat{{max-width:none}}.donut-row{{gap:16px}}}}
+@media(max-width:640px){{body{{font-size:13px}}.sidebar{{padding:12px}}.nav-link{{min-height:44px;padding:10px}}.topbar{{padding:12px 16px;flex-direction:column;align-items:stretch}}
+.top-right{{width:100%}}.top-sel,.top-sel .prod-switch{{width:100%}}.top-sel select{{flex:1}}.top-search{{width:100%;flex:1 1 100%}}
+.content{{padding:12px 16px;gap:16px}}.card{{padding:16px;border-radius:16px}}.stats{{grid-template-columns:1fr;gap:12px}}
+form.stack{{flex-direction:column;align-items:stretch}}label.f{{flex:1 1 100%}}.donut-row{{flex-direction:column;align-items:flex-start}}
+.donut-side{{flex:1 1 100%;width:100%}}th,td{{padding:8px 12px}}.filterbar{{align-items:stretch;flex-direction:column}}.filterbar input{{width:100%}}}}
+@media(max-width:400px){{.stat-v{{font-size:20px;line-height:28px}}.card h2{{font-size:16px}}.btn:not(.btn-sm){{width:100%}}.table-wrap table{{min-width:520px}}}}
 @media(prefers-reduced-motion:reduce){{*,*::before,*::after{{animation:none !important;transition:none !important}}.anim{{opacity:1}}}}
 </style>
 </head><body><div class="app">
@@ -438,7 +458,7 @@ def _checks_table(checks) -> str:
         detail = _e(c.get('detail', ''))
         out.append(f'<tr><td>{badge}</td><td>{label}</td><td class="muted">{detail}</td></tr>')
     rows = ''.join(out)
-    return f'<table><thead><tr><th>Status</th><th>Verificação</th><th>Detalhe</th></tr></thead><tbody>{rows}</tbody></table>'
+    return f'<div class="table-wrap"><table><thead><tr><th>Status</th><th>Verificação</th><th>Detalhe</th></tr></thead><tbody>{rows}</tbody></table></div>'
 
 
 def _gates_table(gates, slug: str) -> str:
@@ -459,9 +479,9 @@ def _gates_table(gates, slug: str) -> str:
         rows.append(
             f"<tr><td><span class=\"badge badge-gate\">{_e(g.get('gate', ''))}</span></td><td>{_e(g.get('stage', ''))}</td>"
             f"<td>{badge}</td><td class=\"muted\">{_e(g.get('detail', ''))}</td><td>{action}</td></tr>")
-    return ("<table><thead><tr><th>Gate</th><th>Fase</th><th>Situação</th>"
+    return ("<div class=\"table-wrap\"><table><thead><tr><th>Gate</th><th>Fase</th><th>Situação</th>"
             "<th>Detalhe</th><th>Ação</th></tr></thead><tbody>"
-            + "".join(rows) + "</tbody></table>")
+            + "".join(rows) + "</tbody></table></div>")
 
 
 def _proposals_table(props, slug: str) -> str:
@@ -494,10 +514,10 @@ def _proposals_table(props, slug: str) -> str:
             action = '<span class="muted">—</span>'
         rows.append(
             f"<tr><td><code>{_e(pid)}</code></td><td>{_e(p.get('runner', ''))}</td>"
-            f"<td>{badge}</td><td>{_e(p.get('summary', '')[:120])}</td><td>{action}</td></tr>")
-    return ("<table><thead><tr><th>ID</th><th>Runner</th><th>Situação</th>"
+            f"<td>{badge}</td><td title=\"{_e(p.get('summary', ''))}\">{_e(p.get('summary', '')[:120])}{'…' if len(str(p.get('summary', ''))) > 120 else ''}</td><td>{action}</td></tr>")
+    return ("<div class=\"table-wrap\"><table><thead><tr><th>ID</th><th>Runner</th><th>Situação</th>"
             "<th>Resumo</th><th>Ações</th></tr></thead><tbody>"
-            + "".join(rows) + "</tbody></table>")
+            + "".join(rows) + "</tbody></table></div>")
 
 
 def _feed_badge(ev: str) -> str:
@@ -565,7 +585,7 @@ def _cutlist_table(csv_text: str) -> str:
         '<div class="filterbar"><label class="muted" for="cutfilter">Filtrar</label>'
         '<input type="search" id="cutfilter" placeholder="ex.: cut_id, fonte, tc…">'
         f'<span class="muted" id="cutcount">{len(rows)} linhas</span></div>'
-        f'<div style="overflow:auto"><table id="cuttable"><thead><tr>{head}</tr></thead>'
+        f'<div class="table-wrap"><table id="cuttable"><thead><tr>{head}</tr></thead>'
         f"<tbody>{body}</tbody></table></div>"
     )
 
@@ -585,8 +605,8 @@ def render(root: str, page: str, slug: str = "") -> str:
             f"<td>{_e(p.get('state', ''))}</td></tr>" for p in prods)
         body = (f"<section class='card anim anim-1'><h2>Produções</h2>"
                 f"<p class='muted'>Uma produção ativa por vez. Clique no slug para abrir os gates.</p>"
-                f"<table><thead><tr><th>Slug</th><th>Título</th>"
-                f"<th>Fase</th><th>Estado</th></tr></thead><tbody>{rows}</tbody></table>"
+                f"<div class=\"table-wrap\"><table><thead><tr><th>Slug</th><th>Título</th>"
+                f"<th>Fase</th><th>Estado</th></tr></thead><tbody>{rows}</tbody></table></div>"
                 f"<div class='actions'><span class='muted'>CLI: "
                 f"<code>python -m cstudio new --title \"...\"</code></span></div></section>")
         try:
@@ -610,7 +630,7 @@ def render(root: str, page: str, slug: str = "") -> str:
                 f"<button class='btn btn-sm' type='submit'>Retomar</button></form> "
                 f"<form class='inline' method='post' action='/action/abandon'>"
                 f"<input type='hidden' name='slug' value='{_e(_aslug)}'>"
-                f"<label class='muted' style='font-size:12px'><input type='checkbox' name='confirmo' value='on' required> confirmo</label> "
+                f"<label class='muted' style='font-size:12px;display:inline-flex;align-items:center;gap:6px;white-space:nowrap'><input type='checkbox' name='confirmo' value='on' required> confirmo</label> "
                 f"<button class='btn btn-sm btn-danger' type='submit'>Abandonar</button></form>"
                 f"</div>")
         else:
@@ -636,7 +656,7 @@ def render(root: str, page: str, slug: str = "") -> str:
                     f"<section class='card anim anim-2'><h3>Resumo — {_e(slug)}</h3>"
                     f"{_stat_cards(st, pend)}"
                     f"<div class='donut-row'>{_donut(ok_g, len(st['gates']) or 1)}"
-                    f"<div><h3>Pipeline</h3>{_stepper(root, st['stage'])}</div></div></section>")
+                    f"<div class='donut-side'><h3>Pipeline</h3>{_stepper(root, st['stage'])}</div></div></section>")
             except Exception:
                 pass
         return layout(page, body, slug, productions=prods, status=None)
@@ -690,7 +710,7 @@ def render(root: str, page: str, slug: str = "") -> str:
                 f"<section class='card anim anim-2'><h3>Pipeline (12 stages)</h3>{stepper_html}</section>"
                 f"<section class='card anim anim-3'><h3>Gates</h3>"
                 f"<div class='donut-row'>{_donut(ok_g, len(st['gates']) or 1)}"
-                f"<div style='flex:1;min-width:280px'>{_gates_table(st['gates'], slug)}</div></div></section>"
+                f"<div class='donut-side'>{_gates_table(st['gates'], slug)}</div></div></section>"
                 f"{approve_box}"
                 f"<section class='card anim anim-5'><h3>Verificações da fase</h3>{_checks_table(st['checks'])}</section>")
         return layout(page, body, slug, productions=prods, status=st)
@@ -752,7 +772,7 @@ def render(root: str, page: str, slug: str = "") -> str:
     import json as _j
     body = (f"<section class='card anim anim-1'><h2>Diagnóstico — {_e(slug)}</h2>{stats_html}"
             f"<div class='donut-row'>{_donut(ok_g, len(st['gates']) or 1)}"
-            f"<div style='flex:1;min-width:280px'><h3>Atividade recente</h3>{_activity_feed(hist)}</div></div></section>"
+            f"<div class='donut-side'><h3>Atividade recente</h3>{_activity_feed(hist)}</div></div></section>"
             f"<section class='card anim anim-2'><h3>Pipeline</h3>{stepper_html}</section>"
             f"<section class='card anim anim-3'><h2>Estado bruto</h2>"
             f"<pre>{_e(_j.dumps(diag, ensure_ascii=False, indent=2))}</pre></section>"
