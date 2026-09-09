@@ -1,0 +1,531 @@
+[
+  {
+    "name": "direction",
+    "label": "Direction",
+    "approval_gate": "direction_lock",
+    "user_document": "01-direction/direction.md",
+    "assistant_focus": "Develop the smallest strong concept, decide whether research is needed, and make the viewer promise explicit.",
+    "human_focus": "Choose the creative direction worth making.",
+    "requirements": [
+      {
+        "path": "01-direction/direction.md",
+        "kind": "text",
+        "min_chars": 900,
+        "label": "direction document"
+      },
+      {
+        "path": ".studio/internal/direction/idea-score.json",
+        "kind": "json",
+        "required_keys": [
+          "premise",
+          "viewer_promise",
+          "expected_pleasure",
+          "hook",
+          "dramatic_engine",
+          "thematic_question",
+          "minecraft_causality",
+          "climactic_choice",
+          "ending",
+          "final_state",
+          "scope",
+          "score",
+          "decision",
+          "research_mode",
+          "research_reason"
+        ],
+        "label": "internal direction scorecard"
+      }
+    ],
+    "validators": [
+      "conditional_research"
+    ]
+  },
+  {
+    "name": "story",
+    "label": "Story",
+    "approval_gate": "story_lock",
+    "user_document": "02-story/story-plan.md",
+    "assistant_focus": "Turn the direction into a causal, producible story and maintain the hidden continuity and audience-information records.",
+    "human_focus": "Approve the story, ending, character choices, and canon.",
+    "requirements": [
+      {
+        "path": "02-story/story-plan.md",
+        "kind": "text",
+        "min_chars": 1800,
+        "label": "story plan"
+      },
+      {
+        "path": ".studio/internal/story/story-model.json",
+        "kind": "json",
+        "required_keys": [
+          "audience_promise",
+          "premise",
+          "theme",
+          "characters",
+          "opposition",
+          "stakes",
+          "story_layers",
+          "ending_design",
+          "structure_choice",
+          "minecraft_story_engine"
+        ],
+        "label": "internal story model"
+      },
+      {
+        "path": ".studio/internal/story/causal-spine.csv",
+        "kind": "csv",
+        "min_rows": 5,
+        "required_columns": [
+          "event_id",
+          "order",
+          "summary",
+          "cause_ids",
+          "cause_type",
+          "actor_id",
+          "goal",
+          "decision",
+          "consequence",
+          "state_change",
+          "new_information",
+          "audience_effect",
+          "dependent_event_ids",
+          "counterfactual_result",
+          "deletion_impact",
+          "production_note"
+        ],
+        "label": "internal causal spine"
+      },
+      {
+        "path": ".studio/internal/story/sequence-outline.csv",
+        "kind": "csv",
+        "min_rows": 2,
+        "required_columns": [
+          "sequence_id",
+          "order",
+          "temporary_goal",
+          "strategy",
+          "primary_location",
+          "complications",
+          "reversal",
+          "outcome",
+          "story_state_afterward",
+          "estimated_seconds",
+          "production_note"
+        ],
+        "label": "internal sequence outline"
+      },
+      {
+        "path": ".studio/internal/story/beat-sheet.csv",
+        "kind": "csv",
+        "min_rows": 6,
+        "required_columns": [
+          "beat_id",
+          "sequence_id",
+          "order",
+          "actor_id",
+          "attempt",
+          "interference",
+          "change",
+          "next_cause",
+          "purpose",
+          "reveal",
+          "visual",
+          "audio",
+          "estimated_seconds",
+          "dependency"
+        ],
+        "label": "internal beat sheet"
+      },
+      {
+        "path": ".studio/internal/story/scene-cards.csv",
+        "kind": "csv",
+        "min_rows": 3,
+        "required_columns": [
+          "scene_id",
+          "sequence_id",
+          "location",
+          "time",
+          "pov",
+          "scene_purpose",
+          "entry_state",
+          "objective",
+          "reason_objective_matters",
+          "obstacle",
+          "opposing_agent",
+          "tactics",
+          "information_revealed",
+          "information_withheld",
+          "emotional_progression",
+          "visual_event",
+          "turn",
+          "outcome",
+          "exit_state",
+          "new_question",
+          "setup_or_payoff",
+          "story_value",
+          "production_requirements"
+        ],
+        "label": "internal scene cards"
+      },
+      {
+        "path": ".studio/internal/story/information-map.csv",
+        "kind": "exists",
+        "label": "internal information map"
+      },
+      {
+        "path": ".studio/internal/story/setup-payoff-ledger.csv",
+        "kind": "exists",
+        "label": "internal setup/payoff ledger"
+      },
+      {
+        "path": ".studio/internal/story/relationships.csv",
+        "kind": "exists",
+        "label": "internal relationship register"
+      }
+    ],
+    "validators": [
+      "story_outline"
+    ]
+  },
+  {
+    "name": "script",
+    "label": "Script",
+    "approval_gate": "script_lock",
+    "user_document": "03-script/script.md",
+    "assistant_focus": "Draft and revise the production script, activating only the revision checks this story needs.",
+    "human_focus": "Approve the final words, performances, and production intent.",
+    "requirements": [
+      {
+        "path": "03-script/script.md",
+        "kind": "text",
+        "min_chars": 2200,
+        "label": "production script"
+      },
+      {
+        "path": ".studio/internal/script/revision-pass-status.json",
+        "kind": "json",
+        "required_keys": [
+          "schema_version",
+          "draft_id",
+          "passes"
+        ],
+        "label": "adaptive revision status"
+      },
+      {
+        "path": ".studio/internal/script/table-read-notes.md",
+        "kind": "text",
+        "min_chars": 350,
+        "label": "spoken-pass notes"
+      }
+    ],
+    "validators": [
+      "story_script"
+    ]
+  },
+  {
+    "name": "production",
+    "label": "Production",
+    "user_document": "04-production/production-plan.md",
+    "assistant_focus": "Research the exact toolchain, deterministic take control, scene implementation, proof-of-concept tests, visual storyboard, build, shot, asset, budget, risk, and capture records while keeping evidence honest.",
+    "human_focus": "Build, perform, record, and select usable material.",
+    "requirements": [
+      {
+        "path": "04-production/production-plan.md",
+        "kind": "text",
+        "min_chars": 1200,
+        "label": "production plan and completion record"
+      },
+      {
+        "path": ".studio/internal/production/storyboard-plan.md",
+        "kind": "text",
+        "min_chars": 1800,
+        "label": "aphantasia-accessible storyboard plan"
+      },
+      {
+        "path": ".studio/internal/production/technical-research.md",
+        "kind": "text",
+        "min_chars": 1800,
+        "label": "production technical research and version decision"
+      },
+      {
+        "path": ".studio/internal/production/toolchain-matrix.csv",
+        "kind": "csv",
+        "min_rows": 8,
+        "required_columns": [
+          "component_id",
+          "category",
+          "candidate",
+          "exact_version",
+          "minecraft_version",
+          "loader",
+          "purpose",
+          "official_source",
+          "licence",
+          "compatibility_status",
+          "decision",
+          "fallback",
+          "notes"
+        ],
+        "label": "researched toolchain and compatibility matrix"
+      },
+      {
+        "path": ".studio/internal/production/scene-implementation-matrix.csv",
+        "kind": "csv",
+        "min_rows": 13,
+        "required_columns": [
+          "scene_id",
+          "script_requirement",
+          "preferred_method",
+          "minecraft_version",
+          "tool_or_mod",
+          "deterministic_control",
+          "camera_method",
+          "vfx_method",
+          "fallback",
+          "test_id",
+          "evidence_status",
+          "notes"
+        ],
+        "label": "scene-by-scene implementation matrix"
+      },
+      {
+        "path": ".studio/internal/production/test-matrix.csv",
+        "kind": "csv",
+        "min_rows": 8,
+        "required_columns": [
+          "test_id",
+          "capability",
+          "scene_ids",
+          "stack",
+          "procedure",
+          "pass_criteria",
+          "failure_evidence",
+          "fallback",
+          "status",
+          "notes"
+        ],
+        "label": "technical proof-of-concept test matrix"
+      },
+      {
+        "path": ".studio/internal/production/storyboard-panels.csv",
+        "kind": "csv",
+        "min_rows": 26,
+        "required_columns": [
+          "panel_id",
+          "scene_id",
+          "shot_id",
+          "order",
+          "frame_description",
+          "composition",
+          "camera",
+          "subject_blocking",
+          "environment",
+          "lighting",
+          "movement",
+          "transition",
+          "audio",
+          "continuity",
+          "generation_reference",
+          "status"
+        ],
+        "label": "text-first storyboard panel ledger"
+      },
+      {
+        "path": ".studio/internal/production/camera-paths.csv",
+        "kind": "csv",
+        "min_rows": 13,
+        "required_columns": [
+          "path_id",
+          "shot_id",
+          "tool",
+          "duration_seconds",
+          "fps",
+          "start_state",
+          "end_state",
+          "notes"
+        ],
+        "label": "planned camera-path register"
+      },
+      {
+        "path": ".studio/internal/production/location-plan.md",
+        "kind": "text",
+        "min_chars": 700,
+        "label": "modular location and build strategy"
+      },
+      {
+        "path": ".studio/internal/production/build-budget.md",
+        "kind": "text",
+        "min_chars": 450,
+        "label": "solo-production build budget and cut lines"
+      },
+      {
+        "path": ".studio/internal/production/shot-list.csv",
+        "kind": "csv",
+        "min_rows": 6,
+        "required_columns": [
+          "shot_id",
+          "beat",
+          "location",
+          "framing",
+          "camera_move",
+          "action",
+          "dialogue_or_vo",
+          "duration_seconds",
+          "capture_method",
+          "assets",
+          "status"
+        ],
+        "label": "internal shot list"
+      },
+      {
+        "path": ".studio/internal/production/asset-register.csv",
+        "kind": "csv",
+        "min_rows": 1,
+        "required_columns": [
+          "asset_id",
+          "asset",
+          "type",
+          "source_or_owner",
+          "licence",
+          "version",
+          "needed_for",
+          "status",
+          "notes"
+        ],
+        "label": "internal asset register"
+      },
+      {
+        "path": ".studio/internal/production/location-cards.csv",
+        "kind": "csv",
+        "min_rows": 1,
+        "required_columns": [
+          "location_id",
+          "name",
+          "story_function",
+          "hero_angle",
+          "modular_elements",
+          "lighting_state",
+          "completion",
+          "notes"
+        ],
+        "label": "internal location cards"
+      },
+      {
+        "path": ".studio/internal/production/capture-log.csv",
+        "kind": "csv",
+        "min_rows": 1,
+        "required_columns": [
+          "shot_id",
+          "take",
+          "file",
+          "captured_at",
+          "technical_ok",
+          "performance_ok",
+          "selected",
+          "notes"
+        ],
+        "label": "internal capture log",
+        "proposal_required": false
+      }
+    ],
+    "validators": [
+      {
+        "name": "capture_evidence",
+        "proposal_required": false
+      }
+    ]
+  },
+  {
+    "name": "edit",
+    "label": "Edit",
+    "approval_gate": "master_lock",
+    "user_document": "05-edit/edit-review.md",
+    "assistant_focus": "Audit picture, sound, captions, continuity, exports, and promise alignment.",
+    "human_focus": "Judge the finished film and approve the final master.",
+    "requirements": [
+      {
+        "path": "05-edit/edit-review.md",
+        "kind": "text",
+        "min_chars": 1100,
+        "label": "edit and master review"
+      },
+      {
+        "path": ".studio/internal/edit/final-qc.md",
+        "kind": "text",
+        "min_chars": 500,
+        "label": "internal final QC"
+      },
+      {
+        "path": ".studio/internal/edit/captions-en-GB.srt",
+        "kind": "text",
+        "min_chars": 150,
+        "label": "British-English captions"
+      }
+    ],
+    "validators": [
+      "master_media"
+    ]
+  },
+  {
+    "name": "release",
+    "label": "Release",
+    "approval_gate": "publish_lock",
+    "user_document": "06-release/release-plan.md",
+    "assistant_focus": "Prepare honest packaging, metadata, captions, checksums, and a dry-run release package.",
+    "human_focus": "Choose the title and thumbnail direction and explicitly approve publication.",
+    "requirements": [
+      {
+        "path": "06-release/release-plan.md",
+        "kind": "text",
+        "min_chars": 900,
+        "label": "release plan"
+      },
+      {
+        "path": ".studio/internal/release/metadata.json",
+        "kind": "json",
+        "required_keys": [
+          "title",
+          "description",
+          "tags",
+          "category_id",
+          "default_language",
+          "made_for_kids",
+          "contains_synthetic_media"
+        ],
+        "label": "YouTube metadata"
+      },
+      {
+        "path": ".studio/internal/release/thumbnail-concepts.json",
+        "kind": "json",
+        "required_keys": [
+          "concepts"
+        ],
+        "label": "thumbnail concepts"
+      },
+      {
+        "path": ".studio/internal/release/publish-checklist.md",
+        "kind": "text",
+        "min_chars": 300,
+        "label": "internal publish checklist"
+      }
+    ],
+    "validators": [
+      "thumbnail_media"
+    ]
+  },
+  {
+    "name": "learn",
+    "label": "Learn",
+    "user_document": "07-learn/lessons.md",
+    "assistant_focus": "Separate observations from uncertain causes and carry only useful lessons into the next production.",
+    "human_focus": "Confirm the few decisions worth applying to the next video.",
+    "requirements": [
+      {
+        "path": "07-learn/lessons.md",
+        "kind": "text",
+        "min_chars": 650,
+        "label": "lessons document"
+      }
+    ]
+  }
+]

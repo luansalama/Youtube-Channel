@@ -1,0 +1,77 @@
+{
+  "schema_version": 4,
+  "interface": {
+    "name": "Studio Assistant",
+    "user_selects_agents": false,
+    "max_concurrent_workstreams": 1,
+    "normal_control_surface": "dashboard"
+  },
+  "runner_manager": {
+    "routing_mode": "automatic",
+    "proposal_contract": "read_only_structured_json",
+    "apply_requires_human_review": true,
+    "fallback_order": [
+      "codex",
+      "opencode",
+      "openai"
+    ],
+    "routes": {
+      "creative": "codex",
+      "production": "opencode",
+      "audit": "opencode"
+    }
+  },
+  "runners": {
+    "codex": {
+      "label": "Codex CLI",
+      "preferred_for": [
+        "direction",
+        "story architecture",
+        "script writing",
+        "complex synthesis",
+        "creative trade-offs"
+      ],
+      "execution": "codex exec",
+      "sandbox": "read-only",
+      "authentication": "Codex login or API-key configuration"
+    },
+    "opencode": {
+      "label": "OpenCode CLI",
+      "preferred_for": [
+        "production planning",
+        "edit and release support",
+        "format and schema repair",
+        "consistency audits",
+        "structured maintenance"
+      ],
+      "execution": "opencode run",
+      "agent": "studio-assistant",
+      "permissions": "read-only"
+    },
+    "openai": {
+      "label": "OpenAI API",
+      "preferred_for": [
+        "explicit API fallback"
+      ],
+      "execution": "Responses API",
+      "billing": "separate API account"
+    }
+  },
+  "safety": {
+    "runner_may_not": [
+      "approve a phase",
+      "apply its own proposal",
+      "publish or message externally",
+      "access credentials unless explicitly required by an approved action",
+      "spend money or accept agreements",
+      "invent captured footage, production completion, rights clearance, analytics, or audience evidence"
+    ],
+    "server_enforces": [
+      "one active video",
+      "proposal review before application",
+      "approval fingerprints",
+      "publication lock",
+      "local-only dashboard binding"
+    ]
+  }
+}

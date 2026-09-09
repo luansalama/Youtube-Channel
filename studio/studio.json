@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "channel": {
+    "working_name": "TODO",
+    "primary_language": "en-GB",
+    "creator_language": "pt-BR",
+    "timezone": "America/Bahia",
+    "format": "scripted story-driven Minecraft videos",
+    "positioning": "high-quality authored productions using Minecraft as a storytelling medium"
+  },
+  "creative_policy": {
+    "human_showrunner": true,
+    "human_approval_required": true,
+    "final_ai_generated_imagery": false,
+    "ai_visuals_allowed_for": [
+      "storyboard sketches",
+      "thumbnail wireframes",
+      "layout prototypes"
+    ],
+    "default_scope": "small",
+    "preferred_spelling": "British English",
+    "writing_system": "recommendation-driven doctrine; no universal plot formula",
+    "silent_ai_canon_changes": false,
+    "structured_story_audit": true
+  },
+  "production_constraints": {
+    "solo_creator": true,
+    "strengths": [
+      "video editing",
+      "Blender",
+      "3D production"
+    ],
+    "current_limits": [
+      "large custom Minecraft builds",
+      "paid build teams",
+      "unbounded production scope"
+    ],
+    "design_response": [
+      "reuse modular sets",
+      "imply scale off-screen",
+      "prioritise one hero location",
+      "use editing and sound to multiply production value"
+    ]
+  },
+  "business": {
+    "base_currency": "BRL",
+    "commercial_currency": "BRL",
+    "default_cost_model": "cash plus creator-hours"
+  },
+  "automation": {
+    "default_mode": "guided-autonomy",
+    "publishing_default": "dry-run",
+    "max_parallel_agents": 1,
+    "single_active_video": true,
+    "auto_advance_safe_phases": true,
+    "dashboard_primary_interface": true
+  },
+  "interface": {
+    "showrunner_name": "Luan",
+    "primary_command": "mcstudio studio",
+    "visible_phases": [
+      "direction",
+      "story",
+      "script",
+      "production",
+      "edit",
+      "release",
+      "learn"
+    ],
+    "hide_empty_operations": true
+  }
+}

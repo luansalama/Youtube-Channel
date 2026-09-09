@@ -1,0 +1,5 @@
+Studio Assistant · OpenCode · default model
+Working directory: K:\Minecraft Narrative Studio
+Command: C:\nvm4w\nodejs\opencode.CMD run --format json --dir K:\Minecraft Narrative Studio --file C:\Users\Admin\AppData\Local\Temp\mcstudio-opencode-2p60s65a\studio-task.txt --agent studio-assistant Read the attached Studio Assistant task specification and return only the required JSON object.
+
+{"type":"step_start","timestamp":1784150743201,"sessionID":"ses_098544878ffe3Dj73rRZWFKMNp","part":{"id":"prt_f67abd89a001JLpRKYGU1uK002","messageID":"msg_f67abbd89001xLE4KunWbcjru3","sessionID":"ses_098544878ffe3Dj73rRZWFKMNp","type":"step-start"}}

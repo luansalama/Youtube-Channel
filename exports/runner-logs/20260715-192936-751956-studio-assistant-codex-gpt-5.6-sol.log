@@ -1,0 +1,498 @@
+Studio Assistant · Codex · gpt-5.6-sol
+Working directory: K:\Minecraft Narrative Studio
+Command: K:\Applications\Codex\codex.EXE --search exec --ephemeral --sandbox read-only --skip-git-repo-check --color never -C K:\Minecraft Narrative Studio --output-schema C:\Users\Admin\AppData\Local\Temp\mcstudio-codex-li54ama8\proposal-schema.json -o C:\Users\Admin\AppData\Local\Temp\mcstudio-codex-li54ama8\proposal.json -m gpt-5.6-sol -c model_reasoning_effort="xhigh" -
+
+OpenAI Codex v0.144.4
+--------
+workdir: K:\Minecraft Narrative Studio
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 019f6741-908e-7083-8d47-ba5295e701cb
+--------
+user
+You are the Studio Assistant inside Minecraft Narrative Studio v0.3.5.
+Work on exactly one video and its current phase. Use British English for public-facing writing. BRL is the business currency.
+Respect the supplied writing doctrine, source policy, automation policy, established canon and previous approved decisions.
+Never use rigid storytelling formulae as mandatory rules. Prefer causality, audience promise, character agency, visual storytelling and feasible Minecraft production.
+Do not invent external sources. If research is needed and web search is unavailable, mark research evidence as incomplete.
+Return STRICT JSON only, with no Markdown fences and this exact top-level shape:
+{
+  "summary": "concise explanation of what you changed and any unresolved issue",
+  "document": "complete replacement Markdown for 01-direction/direction.md",
+  "files": {"allowed/relative/path": "complete file content"},
+  "questions": ["only genuinely blocking questions"],
+  "warnings": ["uncertainties or evidence still needed"]
+}
+Only use paths from the allowed list. Include every allowed file that can be completed honestly. Preserve required JSON schemas and CSV headers exactly. CSV values must be valid RFC-style CSV text. Do not include project.json. Do not write capture-log.csv, upload records, approvals, or claims of actions not evidenced.
+
+VIDEO
+Title: The Portal That Nobody Made
+Slug: the-portal-that-nobody-made
+Current phase: Direction
+Mode: develop
+
+USER REQUEST
+This is a start. Seams like a short story tho. The character would defenatly want to enteder the portal, even if he hasitated before. The story really starts with the character's jorney inside the portal.
+
+
+
+I am thinking of making it a time travel mistery. Maybe the protagonist is the one that built this portal to make sure he would enter it in hope of changing the outcome. The mystery is then the protagonist reliving his past actions in some way. Since its a ground fiction story. The protagonist can't change the outcome (we can research on this type of story to make it great). The viwer will figure that out as the story progressess (but make it so good that its not obvious at first, make it a story so great that it acctually has layers and prompts the viwer to think and question whats going on).
+
+
+
+I will be voicing the narrator. For the first video I cant aford to have other voices. Maybe one or two lines here and there I can ask someone I know to voice it, but ultimatlly the narrator is the only voice.
+
+
+
+We can set a 20min for the video for now. We can increase it if needed later.
+
+ALLOWED FILES
+- 01-direction/direction.md
+- .studio/internal/direction/idea-score.json
+- .studio/internal/research/inspiration-analysis.md
+- .studio/internal/research/source-ledger.csv
+- .studio/internal/research/claims.md
+
+
+WRITING DOCTRINE
+{
+  "schema_version": 2,
+  "position": "This doctrine operationalises professional recommendations, not a universal formula. Automated checks may verify recorded decisions, references, consistency, and process evidence; they must not pretend to measure artistic greatness.",
+  "governing_principle": "AI may propose possibilities, compare alternatives, diagnose weaknesses, and draft unlocked artefacts. It must not silently decide canon, theme, character motivation, factual claims, or structural changes.",
+  "development_sequence": [
+    "research",
+    "concept_generation",
+    "concept_evaluation",
+    "premise",
+    "thematic_model",
+    "character_system",
+    "ending_design",
+    "causal_spine",
+    "sequence_outline",
+    "beat_sheet",
+    "scene_cards",
+    "treatment_or_story_outline",
+    "screenplay",
+    "table_read_or_animatic",
+    "specialised_revision_passes",
+    "production_validation",
+    "publication",
+    "evidence_based_postmortem"
+  ],
+  "strong_doctrine": [
+    {
+      "id": "audience_promise",
+      "principle": "Define the novel situation, human problem, pressure source, and expected audience pleasure; packaging and opening must honour the same promise.",
+      "enforcement": "required evidence and human review"
+    },
+    {
+      "id": "story_plot_discourse",
+      "principle": "Keep chronological story, causal plot, and audience presentation distinct.",
+      "enforcement": "required structured fields"
+    },
+    {
+      "id": "causal_chain",
+      "principle": "Major events require traceable causes, consequences, state changes, and deletion/counterfactual tests.",
+      "enforcement": "deterministic reference and graph validation"
+    },
+    {
+      "id": "character_agency",
+      "principle": "Characters, especially the protagonist and opposition, should make consequential decisions that alter later events.",
+      "enforcement": "required character records plus advisory agency ratio"
+    },
+    {
+      "id": "opposition_and_constraints",
+      "principle": "Opposition must have an active goal, advantage, vulnerability, and costs for confrontation or avoidance.",
+      "enforcement": "required structured fields"
+    },
+    {
+      "id": "meaningful_change",
+      "principle": "Scenes and causal events must record what changes or what other story value earns their place.",
+      "enforcement": "required state/value evidence; conventions remain advisory"
+    },
+    {
+      "id": "information_design",
+      "principle": "Track audience knowledge, questions, expectations, emotional orientation, and character knowledge around important reveals.",
+      "enforcement": "required information map"
+    },
+    {
+      "id": "setup_payoff",
+      "principle": "Every major setup has a planned payoff, explicit reinterpretation, or justified intentionally open status.",
+      "enforcement": "deterministic ledger validation"
+    },
+    {
+      "id": "earned_climax",
+      "principle": "The climax resolves the central dramatic question through earlier causes and a consequential action or value choice.",
+      "enforcement": "required ending design and human review"
+    },
+    {
+      "id": "minecraft_causality",
+      "principle": "Minecraft mechanics, geography, construction, resources, and world rules should influence goals, strategies, reversals, climax, or visual design rather than merely decorate the story.",
+      "enforcement": "required story-engine fields and production review"
+    },
+    {
+      "id": "specialised_revision",
+      "principle": "Revision uses a small core of always-required checks plus additional passes activated only when relevant to the script.",
+      "enforcement": "adaptive deterministic pass-status validation"
+    },
+    {
+      "id": "traceable_human_control",
+      "principle": "Canon, theme, motivation, factual claims, and structural changes remain versioned and human-approved; locked evidence cannot change silently.",
+      "enforcement": "existing stage approvals and fingerprints"
+    }
+  ],
+  "flexible_conventions": [
+    {
+      "id": "three_act_structure",
+      "use": "Optional organising lens; require only a chosen framework and rationale."
+    },
+    {
+      "id": "midpoint",
+      "use": "Advisory recontextualisation device when supported by the material."
+    },
+    {
+      "id": "protagonist_arc",
+      "use": "May be positive, negative, flat, collective, tragic, or deliberately minimal."
+    },
+    {
+      "id": "scene_objective",
+      "use": "Useful diagnostic for most dramatic scenes; omissions create warnings, not gate failures."
+    },
+    {
+      "id": "act_climax",
+      "use": "Optional structural convention, never a mandatory timestamp."
+    },
+    {
+      "id": "opening_and_closing_image",
+      "use": "Useful visual comparison when meaningful, not compulsory."
+    },
+    {
+      "id": "sequence_length",
+      "use": "Production and pacing aid, not a fixed count or percentage."
+    },
+    {
+      "id": "subplot_count",
+      "use": "Determined by story need and solo production capacity."
+    }
+  ],
+  "must_not_enforce": [
+    "exact page numbers",
+    "fixed beat percentages",
+    "exactly fifteen beats",
+    "mandatory Hero's Journey stages",
+    "a twist at a predetermined timestamp",
+    "a likeable protagonist",
+    "constant action",
+    "dialogue-free exposition",
+    "a mandatory happy ending",
+    "one prescribed emotional arc"
+  ],
+  "audit": {
+    "protagonist_decision_warning_ratio": 0.35,
+    "counterfactual_results": [
+      "pass",
+      "weak",
+      "not_applicable"
+    ],
+    "setup_statuses": [
+      "planned",
+      "paid_off",
+      "intentionally_open",
+      "cut"
+    ],
+    "payoff_types": [
+      "confirmation",
+      "reversal",
+      "escalation",
+      "reinterpretation",
+      "tragic_fulfilment",
+      "comic_return",
+      "character_choice",
+      "visual_transformation"
+    ],
+    "revision_statuses": [
+      "complete",
+      "not_applicable",
+      "not_required",
+      "blocked"
+    ],
+    "revision_pass_ids": [
+      "promise",
+      "causality",
+      "dialogue_and_subtext",
+      "visual_storytelling",
+      "production_feasibility",
+      "continuity_and_canon",
+      "character_agency",
+      "escalation",
+      "theme_and_change",
+      "information",
+      "scene_necessity",
+      "audience_results_plan"
+    ],
+    "cause_types": [
+      "initial_state",
+      "prior_event",
+      "external_disruption",
+      "background_condition",
+      "parallel_cause"
+    ],
+    "core_revision_pass_ids": [
+      "promise",
+      "causality",
+      "dialogue_and_subtext",
+      "visual_storytelling",
+      "production_feasibility",
+      "continuity_and_canon"
+    ],
+    "optional_revision_pass_ids": [
+      "character_agency",
+      "escalation",
+      "theme_and_change",
+      "information",
+      "scene_necessity",
+      "audience_results_plan"
+    ]
+  }
+}
+
+
+SOURCE POLICY
+{
+  "tiers": {
+    "A": "primary/official source or direct original evidence",
+    "B": "reputable secondary reporting or specialist documentation",
+    "C": "community source useful for discovery but not decisive support"
+  },
+  "rules": [
+    "log every factual claim that affects the story or business decision",
+    "keep URL, publisher, dates and access date",
+    "mark unresolved contradictions",
+    "do not cite AI summaries as sources",
+    "archive notes rather than copying large copyrighted passages"
+  ]
+}
+
+
+AUTOMATION POLICY
+{
+  "default": "deny consequential automation",
+  "allowed_without_confirmation": [
+    "read project files",
+    "search public sources",
+    "draft text",
+    "calculate scores",
+    "generate SVG wireframes",
+    "run validation/tests",
+    "maintain hidden internal evidence",
+    "repair safe schema and ledger issues",
+    "advance approval-free phases after checks pass",
+    "regenerate the local dashboard"
+  ],
+  "requires_human_approval": [
+    "record one of the five creative/publication locks",
+    "change channel strategy or approved canon",
+    "commission paid work",
+    "use assets without confirmed rights",
+    "execute a video upload or schedule",
+    "send external messages",
+    "publish social posts",
+    "accept sponsorship terms"
+  ],
+  "forbidden": [
+    "invent sources or research findings",
+    "fabricate analytics",
+    "generate final production imagery",
+    "expose secrets",
+    "skip phase checks or human locks",
+    "silently alter approved artefacts"
+  ]
+}
+
+
+DETERMINISTIC PHASE CHECKS
+- PASS · direction document: 6276 characters
+- PASS · internal direction scorecard: required keys populated; no placeholders
+- PASS · research decision: no external research required; rationale recorded
+
+PROJECT CONTEXT
+
+===== Direction document: 01-direction/direction.md =====
+# Direction â€” The Portal That Nobody Made
+
+> This is the only document you need to read during Direction. The Studio Assistant maintains the supporting scorecard and any research evidence internally.
+
+## Viewer promise
+
+The viewer is promised the experience of a quiet, eerie mystery in a pristine Minecraft world. They follow a lone player who stumbles upon something impossible: a lit nether portal in a world where nobody else has ever built anything. The story will not betray this mystery with jump-scares or supernatural threats; instead, it will satisfy through careful observation, clue-gathering, and a final logical revelation. A viewer would be disappointed if the explanation were arbitrary, if the mystery dissolved without fair clues, or if the story abandoned grounded Minecraft logic.
+
+## Premise and hook
+
+A player starts a fresh survival world, gathers basic supplies, and descends into a cave to find iron. Deep underground, the cave opens into a ravine â€” and embedded in the far wall, humming with violet energy, stands a complete, lit nether portal. The player definitely did not build it. In a world with no other players, this is impossible.
+
+The hook: the first moment the player sees the portal is the first moment the viewer sees it. No setup, no foreshadowing â€” just the sudden, impossible sight of a portal where none should exist. The question is planted instantly: *How?*
+
+## Why Minecraft matters
+
+This story only works in Minecraft because:
+
+1. **Single-player agency**: In single-player Minecraft, the player is the exclusive agent of permanent change. A constructed block like obsidian cannot appear without player action. A lit nether portal violates this fundamental rule, creating an immediate, visceral contradiction.
+
+2. **Ruined portal generation**: Vanilla Minecraft already generates ruined portal structures with incomplete frames and chest loot (flint and steel, fire charges). The mystery leverages this existing mechanic and posits a rare variant: a complete frame that can be ignited by natural causes.
+
+3. **Lightning and fire mechanics**: Minecraft simulates weather â€” lightning strikes ignite blocks on fire, and fire can light a nether portal if the frame is complete. This provides the natural trigger, keeping the resolution inside game rules.
+
+4. **Portal physics**: Nether portals emit sounds, particles, and purple fog. Zombie pigmen can wander through. These standard behaviours create spooky atmosphere and false-flag anomalies â€” the mystery lives in the player's *interpretation*, not in scripted paranormal events.
+
+5. **Cave and ravine geography**: Ravines are natural, player-independent landscape features. Embedding the portal in a ravine wall makes it feel organic, not staged.
+
+## Emotional and thematic direction
+
+The intended emotional journey moves: **curiosity** (what is that glow?) â†’ **unease** (this should not exist) â†’ **investigation** (finding and reading clues) â†’ **revelation** (it was natural all along) â†’ **wonder** (the world is bigger and stranger than I knew). The story explores the question: *When something seems impossible, do we accept mystery or look for the mechanism?* The story rewards the act of paying attention without forcing a moral answer.
+
+## Ending direction
+
+The climactic moment is the player piecing together the final clue: a lightning-struck acacia tree next to the portal frame, the flint and steel inside a generated chest, the partial ruined portal frame nearby whose missing obsidian block is present in the active portal. The dramatic choice is not a fight but an interpretation â€” the player can accept the natural explanation and step through the portal, or preserve the mystery by walking away. The final state is the player deciding to step through, crossing into the Nether for the first time on this world. A new adventure begins from an answer found.
+
+The final image: the player's silhouette against the swirling portal surface, a brief pause, then a cut to black as they step through.
+
+## Production scope
+
+**Smallest version worth making:**
+
+- **Hero location**: A cave-ravine system with the portal set into one wall. Found via procedural seed-hunting or hand-built in a superflat world.
+- **Reusable elements**: Ruined portal structure (obsidian, stone bricks, crying obsidian, golden blocks), chest with generated loot, lightning-struck tree near the frame.
+- **Cast**: Single player character (silent, first-person perspective).
+- **Technical risks**: Finding a seed where a ruined portal generates in a ravine with a complete frame; timing of lightning strike during a storm; readability of clues in first-person perspective.
+- **Kill criterion**: If no suitable seed can be found after exploring 20 candidates, switch to staged hand-building in a superflat world and reframe as a constructed narrative set.
+
+## Research decision
+
+**Mode: none** â€” This is original fiction using established vanilla Minecraft mechanics (ruined portals, lightning ignition, nether portal behaviour, cave generation). The story does not make factual claims about the real world, require cultural references, or depend on technical accuracy beyond standard player knowledge. If a question arises about specific generation rules or lightning-portal interaction, a light research pass can be done during the Story phase.
+
+## Showrunner decision
+
+**Chosen direction**: Grounded logical mystery â€” the portal is an ultra-rare natural generation variant that was lit by a lightning strike. The story satisfies through clue-gathering and a final "aha" revelation rather than supernatural or sci-fi explanations.
+
+**Rejected alternatives:**
+
+| Alternative | Why rejected |
+|---|---|
+| *Supernatural horror* â€” portal is a glitch, ghost, or curse | Contradicts the grounded mandate. Hard to resolve fairly without breaking Minecraft rules. |
+| *Multiplayer prank* â€” another player built it | Requires off-screen characters; weakens the isolation that makes the mystery compelling. |
+| *Time travel paradox* â€” future self built it | Too convoluted for a grounded short; raises unanswerable causal questions. |
+| *Mod or datapack interference* â€” player forgot they installed something | Feels like a cheat; undermines the purity of vanilla discovery. |
+
+CURRENT INTERNAL FILE SCHEMAS/TEMPLATES
+
+--- Required file .studio/internal/direction/idea-score.json; preserve its schema/columns ---
+{
+  "premise": "A lone survival player discovers a fully-formed, lit nether portal in a brand-new single-player world. They definitely did not build it. The story follows their investigation as they gather clues to explain the impossible.",
+  "viewer_promise": "The viewer is promised a quiet, eerie mystery that plays fair â€” every clue is visible, every oddity has a natural explanation rooted in Minecraft mechanics. The pleasure comes from solving the puzzle alongside the player, not from supernatural shocks.",
+  "expected_pleasure": "Curiosity, deduction, the satisfaction of an 'aha' reveal, and the wonder of seeing familiar Minecraft rules combine into an unfamiliar result. The low-key tension of not knowing whether the mystery is benign or threatening.",
+  "hook": "The player descends into a ravine and the camera reveals â€” without warning â€” a fully-formed, active nether portal embedded in the stone wall. The player hasn't even crafted a pickaxe yet. It could not exist. But it does.",
+  "dramatic_engine": "The central dramatic question: 'Where did this portal come from?' drives every scene. Each clue eliminates wrong explanations and narrows toward the truth. Suspense is sustained by the possibility that the portal might have dangerous consequences (mobs, unknown forces).",
+  "thematic_question": "When something seems impossible, do we accept mystery or look for the mechanism?",
+  "minecraft_causality": "The entire story depends on three Minecraft mechanics: (1) ruined portal generation with variable frame completeness, (2) lightning ignition of nether portals, and (3) single-player world rules where the player is the only agent of construction. The 'impossible' event is actually a rare-but-valid combination of these systems.",
+  "climactic_choice": "The player must decide whether to accept the natural explanation and step through the portal into the Nether, or preserve the mystery by walking away. This is a choice about mindset â€” embracing discovery versus protecting uncertainty.",
+  "ending": "The player finds a lightning-struck tree adjacent to the portal frame, a flint and steel in a nearby generated chest, and the partial frame of a ruined portal whose missing block matches the active portal. The pieces click: this is a rare complete-frame ruined portal lit by a storm. The player steps through.",
+  "final_state": "The player crosses into the Nether for the first time on this world. The mystery is solved, but a new adventure â€” and a new dimension â€” begins. A hopeful, forward-looking close.",
+  "scope": "small",
+  "score": "7.8",
+  "score_dimensions": {
+    "clarity": 8,
+    "hook_strength": 9,
+    "visual_potential": 8,
+    "feasibility": 9,
+    "originality": 7,
+    "series_potential": 6
+  },
+  "decision": "develop",
+  "research_mode": "none",
+  "research_reason": "Original fiction relying on established vanilla Minecraft mechanics (ruined portals, lightning, nether portal behaviour). No real-world factual claims, cultural references, or external technical dependencies. A light research pass may be added during Story phase if specific generation rules need verification."
+}
+--- Required file .studio/internal/research/inspiration-analysis.md; preserve its schema/columns ---
+# Inspiration analysis
+
+## What the reference achieves
+
+Not applicable â€” research mode is **none**. This is an original fiction concept that does not draw from or compare against external references. The story relies on internal Minecraft mechanics and original narrative structure.
+
+## Transferable principles
+
+Not applicable. No external references were used. The structural principles (reveal pacing, environmental storytelling, evidence presentation) were developed from the requirements of the mystery format itself: fair clues, causal chain, single point-of-view.
+
+## Elements not to copy
+
+Not applicable. No external references were consulted or adapted.
+
+## Our production translation
+
+Not applicable. Translation from external references is unnecessary. The production design will derive directly from the story requirements described in the direction document.
+--- Required file .studio/internal/research/source-ledger.csv; preserve its schema/columns ---
+source_id,claim,url,publisher,published_date,accessed_date,source_type,reliability,status,notes
+--- Required file .studio/internal/research/claims.md; preserve its schema/columns ---
+# Claims and evidence map
+
+Use this for real-world facts, Minecraft mechanics, quoted material, cultural references, licences, and business claims.
+
+## Supported claims
+
+No factual claims about the real world are made by this story. All narrative events occur within standard vanilla Minecraft mechanics (ruined portal generation, lightning ignition, nether portal behaviour, cave/ravine geography). These are presented as accepted game rules, not as external factual claims requiring citation.
+
+## Story facts versus factual claims
+
+**Story facts (invented canon):**
+- The player's world has a rare complete-frame ruined portal
+- Lightning struck the portal frame during a storm, completing and igniting it
+- The generated chest contains flint and steel
+- A lightning-struck tree stands adjacent to the frame
+
+**Factual claims about the real world or game behaviour:**
+- None. The story does not assert real-world facts, quote external material, reference cultural works, cite data, or depend on specific game-version behaviour beyond general player knowledge.
+
+## Conflicts and uncertainty
+
+No conflicts. The story does not draw on conflicting sources. If a future phase requires confirmation that lightning can light a complete portal frame (standard mechanic since 1.16), a light research pass can verify.
+
+## Research exclusions
+
+- Supernatural horror references excluded by grounded mandate
+- Multiplayer/server mechanics excluded to preserve isolation
+- Sci-fi or time-travel mechanics excluded to maintain causality
+- No real-world scientific claims are made (portal is the in-game Nether portal, not a physics phenomenon)
+
+CODEX STRUCTURED-OUTPUT OVERRIDE
+For this Codex transport, encode files as an array of objects with exactly two string keys: path and content. Use an empty array when there are no files. All other top-level keys remain unchanged.
+
+codex
+{"summary":"I’m using the channel operating system, idea development and research-ledger guidance because this request revises the active video’s direction and explicitly calls for research into its time-travel model. I’ll inspect the current workspace state, then return only the requested replacement artefacts in the final JSON.","document":"","files":[],"questions":[],"warnings":[]}
+exec
+"C:\\Program Files\\PowerShell\\7\\pwsh.exe" -Command "Get-Content -Raw '.agents/skills/channel-operating-system/SKILL.md'; Get-Content -Raw '.agents/skills/idea-development/SKILL.md'; Get-Content -Raw '.agents/skills/research-ledger/SKILL.md'" in K:\Minecraft Narrative Studio
+2026-07-15T19:29:56.904704Z ERROR codex_core::exec: exec error: windows sandbox: helper_sandbox_lock_failed: lock sandbox bin dir K:\Applications\Codex\.codex\.sandbox-bin failed: SetNamedSecurityInfoW sandbox dir failed: 5
+2026-07-15T19:29:56.905157Z ERROR codex_core::tools::router: error=execution error: Io(Custom { kind: Other, error: "windows sandbox: helper_sandbox_lock_failed: lock sandbox bin dir K:\\Applications\\Codex\\.codex\\.sandbox-bin failed: SetNamedSecurityInfoW sandbox dir failed: 5" })
+ exited -1 in 0ms:
+execution error: Io(Custom { kind: Other, error: "windows sandbox: helper_sandbox_lock_failed: lock sandbox bin dir K:\\Applications\\Codex\\.codex\\.sandbox-bin failed: SetNamedSecurityInfoW sandbox dir failed: 5" })
+codex
+{"summary":"The first read-only workspace check was blocked by the local sandbox helper before any command ran. I’m retrying through the available resource interface; if the workspace remains inaccessible, I’ll use the complete project context supplied in your request and mark any external evidence as incomplete.","document":"","files":[],"questions":[],"warnings":["No workspace command has executed yet because the sandbox helper failed during initialisation."]}
+mcp: codex/list_mcp_resources started
+mcp: codex/list_mcp_resources (completed)
+mcp: codex/list_mcp_resource_templates started
+mcp: codex/list_mcp_resource_templates (completed)
+codex
+{"summary":"The workspace skill files remain inaccessible in this read-only session, so I cannot honestly claim those local procedures were executed. I’m continuing with the supplied phase document and schemas, and I’m activating a light source pass on fixed-timeline/self-consistent time travel because that research materially shapes the revised direction.","document":"","files":[],"questions":[],"warnings":["Local skill and maintenance commands could not be read or run due to the sandbox initialisation failure."]}
+web search: 
+web search: David Lewis The Paradoxes of Time Travel 1976 PDF ...
+web search: 
+web search: 
+web search: 
+web search: 
+codex
+{"summary":"Reframed the portal as the gateway into a roughly 20-minute, single-narrator time-travel mystery. The proposed fixed timeline lets the protagonist investigate his own past, discover that his older self built the portal, and learn that he can participate in—but not rewrite—the outcome. Added light research evidence and a concrete but unlocked homestead/fire/wolf stake.","document":"# Direction — The Portal That Nobody Made\n\n> This is the only document you need to read during Direction. The Studio Assistant maintains the supporting scorecard and research evidence internally.\n\n## Development status\n\nThis is an **unlocked development direction**. It reflects the latest showrunner note but does not record a `direction_lock`. The time-travel model, ending principle and production boundaries are ready to evaluate; the exact Minecraft mechanism behind the destructive outcome still needs verification before Story is locked.\n\n## Viewer promise\n\nThe viewer is promised a layered, grounded time-travel mystery told through a solitary Minecraft world. A lone player discovers a lit portal that nobody could have built, hesitates, and chooses to enter. That discovery is only the threshold: the main story follows his journey through displaced moments of his own world, where familiar places, unexplained damage and glimpses of another player gradually reveal that he is witnessing the consequences of his own actions from the wrong side of time.\n\nThe intended pleasure is not a last-minute twist delivered through exposition. It is the accumulating sensation that apparently separate mysteries are parts of one causal pattern. Attentive viewers should be able to suspect the truth before the protagonist confirms it, then reinterpret earlier images once they understand it.\n\nThe story would break its promise if the portal merely led to an ordinary Nether adventure, if time changed its rules to protect the twist, if an unseen cosmic force prevented choices, or if the ending depended on information that was withheld unfairly.\n\n## Premise and hook\n\nA lone player has established a modest survival homestead above a ravine. During an ordinary descent, he finds a complete, active portal in a section of cave he knows was empty. No other player has access to the world, and he did not build it.\n\nHe hesitates because the evidence contradicts what he knows, but curiosity and agency win: he enters during the opening movement. The story properly begins on the other side.\n\nInstead of arriving in the expected Nether, he emerges into the same ravine in a different state. Blocks he remembers placing are absent; other damage has not happened yet; the route back to his home leads to a version of the landscape that cannot belong to the present. Successive crossings expose different moments rather than alternate worlds. Among them is a future in which his homestead has burned and his tamed wolf appears to be gone.\n\nThe initial question, **‘Who built the portal?’**, expands into two connected questions: **‘When am I?’** and **‘Can I prevent what I have already seen?’**\n\n## Story engine and human problem\n\nThe protagonist is not simply carried through a puzzle. His decisions create its causal chain:\n\n1. He enters the impossible portal despite his hesitation.\n2. He investigates repeated locations instead of treating them as unrelated worlds.\n3. He attempts to leave warnings and alter small events.\n4. He discovers that those interventions produced details he already remembers.\n5. He constructs the original portal so that his younger self will enter and gain the foreknowledge he believes may avert the future destruction.\n6. When the destructive event arrives, he must choose between futilely protecting the homestead and using his limited time to rescue the wolf.\n\nThere is no conventional villain. The active opposition comes from the protagonist’s earlier and later selves acting with unequal information. His travelling self wants to break the observed chain; his older self needs the portal journey to occur because it created the only chance to act during the disaster. Their shared habits are an advantage when solving clues and a vulnerability when concealing identity. Avoiding the loop would cost the foreknowledge needed for the rescue; preserving it costs the home and the belief that the past can be rewritten.\n\nThe fixed timeline supplies constraint, not character motivation. Ordinary Minecraft causes, incomplete knowledge and the protagonist’s own choices must produce every apparent failure.\n\n## Grounded time-travel model\n\nThe story uses a **single, self-consistent timeline** as a fictional world rule:\n\n- There are no branches, resets or replacement timelines.\n- The traveller experiences events in personal order while the world retains one chronological history.\n- A past event that has already been observed cannot become a different event.\n- The protagonist can still participate in the past and be one of the causes that made it happen.\n- Each event happens once. Apparent repetition comes from seeing the same event at different points in the protagonist’s personal journey or from a different physical angle.\n- No invisible force corrects paradoxes. A warning can fail because it is damaged, misunderstood or deliberately left incomplete; an intervention can become the remembered cause of the problem.\n- Materials retain ordinary origins. The older protagonist mines or carries the obsidian and physically builds the portal. The loop does not conjure blocks or evidence from nowhere.\n- The portal’s temporal behaviour is invented speculative canon, not a claim about vanilla Minecraft or real physics.\n\nThe protagonist initially interprets the experience as a recurring loop in which another attempt might change the result. The deeper revelation is that there have never been repeated versions. His journey has always been part of the one history he is trying to alter.\n\n## Story, plot and audience presentation\n\n**World chronology:** the homestead and relationship with the wolf exist first; the older, post-journey protagonist arrives before the discovery and constructs the portal; his younger self finds and enters it; the older self later confronts the already-observed destruction and saves the wolf while the homestead burns.\n\n**Protagonist’s personal journey:** he finds the portal; visits later and earlier states of the world; witnesses fragments of his own past from outside; attempts to intervene; arrives before his original entry; builds the portal; watches his younger self enter; and finally reaches the destructive event with a different understanding of what can still be saved.\n\n**Audience presentation:** the film follows personal rather than world chronology. Early evidence supports several readings. Spatial matches establish that this is one world before personal signatures establish whose actions are being observed. The older protagonist’s identity is confirmed through an action the audience has already seen the consequence of, not through an explanatory speech.\n\n## Audience information design\n\n| Layer | Audience question | Initial interpretation | Fair evidence | Pay-off |\n|---|---|---|---|---|\n| Portal | Who built it? | Another player, an anomaly or an unknown survivor | Single-player isolation; familiar block placement; an asymmetrical cobblestone footing | The older protagonist physically built it before the opening |\n| World state | Is this another world? | Future ruin, copy or simulation | The same unusual ravine profile, tree line and player-made details in different states | These are different moments of one world |\n| Unseen figure | Who keeps interfering? | A hostile traveller or temporal echo | Matching movement habits, torch placement and equipment silhouette | Every sighting is the protagonist at another point in personal time |\n| Repetition | Is he retrying the same events? | A reset loop with another chance | Damage and objects accumulate consistently; no event has two outcomes | Events occur once and are revisited from new perspectives |\n| Outcome | Can the fire be prevented? | Foreknowledge should permit a better version | Each attempted safeguard becomes part of the remembered configuration | The homestead still burns, but the rescue was always part of the outcome |\n\nEarly clues should be legible without being uniquely identifying. Mid-story clues should make the self-loop a credible theory. Late evidence should confirm it by matching cause to an image already shown. The narrator must never lie; the narration stays close to what the protagonist understands at that point.\n\n## Why Minecraft matters\n\n1. **Single-player authorship:** A deliberately constructed portal in a private world creates an immediate contradiction. The player knows which permanent changes he made.\n2. **Persistent blocks:** Missing blocks, repairs, torch placement, water paths and fire damage allow past actions to be read visually without dialogue.\n3. **Repeatable geography:** The same ravine, cave mouth and homestead can be rebuilt in several temporal states. Viewers can recognise place before they understand time.\n4. **Portal language:** Nether portals already imply crossing a boundary. Redirecting that expectation towards time creates surprise while remaining visually native to Minecraft.\n5. **Survival causality:** Obsidian acquisition, route access, fire spread, water placement, animal movement and limited inventory can determine what the protagonist can attempt.\n6. **Avatar identity:** Armour damage, tools, movement habits and a controlled silhouette can reveal that two apparent characters are the same person without requiring a second speaking role.\n\nThe exact cause of the homestead’s destruction must be a verified, reproducible Minecraft chain. It should interact with the protagonist’s precautions rather than occur as an arbitrary scripted explosion.\n\n## Emotional and thematic direction\n\nThe intended movement is **impossibility → chosen curiosity → disorientation → pattern recognition → hope of intervention → self-recognition → tragic acceptance → purposeful action**.\n\nThe central thematic question is: **If an outcome cannot be rewritten, can a choice still matter?**\n\nThe answer should be dramatic rather than didactic. The protagonist cannot save the structure he set out to protect, but his foreknowledge lets him recognise the meaningful action still available. Saving the wolf does not create a new timeline; it reveals that what looked like total failure was always an incomplete reading of the future.\n\nA second layer concerns authorship. The protagonist built the portal, but he copied the portal he remembered entering. The film may leave the viewer considering where the idea begins without treating that causal loop as a missing explanation.\n\n## Narration and cast\n\n- **Human voices:** one narrator, voiced by the creator.\n- **Protagonist:** silent on screen; thoughts and interpretation are carried by narration.\n- **Other human roles:** none required.\n- **Optional borrowed voices:** at most one or two short lines, but they must be removable and must not carry essential clues, exposition or emotion.\n- **Additional presence:** one tamed wolf provides a visual relationship and personal stake without another human performance.\n\nThe narrator may speak retrospectively, but the wording should preserve discovery. Phrases such as ‘I thought I was seeing the future’ are fair; phrases that knowingly conceal the narrator’s identity or final understanding are not.\n\n## Ending direction\n\nThe mystery reveal and emotional resolution are connected but distinct.\n\nThe protagonist reaches the cave before his younger self’s discovery. He recognises the asymmetrical footing and other details from the opening because his own hurried construction is creating them. He completes and lights the portal, believing that his younger self must enter, see the future and carry the warning forwards. From concealment, he watches the opening hesitation again from the opposite side of the ravine. The younger self steps through. The ‘unknown builder’ is resolved without dialogue.\n\nWhen the foretold destruction arrives, the protagonist’s preparations cannot produce a different history. The exact verified Minecraft chain still destroys the homestead. He finally stops spending the remaining moments on the building and rescues the wolf. After the fire, the landscape matches the ruin seen earlier; nothing has changed. What changes is the meaning of the image: the apparently empty future did not prove that every living thing was lost.\n\nThe final image is the protagonist leading the wolf away from the burned homestead at first light while the portal stands silent in the distance. The central mystery is answered, the fixed outcome is honoured, and the protagonist’s agency survives through the choice of what to save.\n\n## Production scope\n\n**Target duration:** approximately 20 minutes for development. It may expand only if clarity or earned emotion requires it; duration is not a structural quota.\n\n**Scope:** medium, designed for a solo first production.\n\n**Smallest version worth making:**\n\n- One ravine-and-cave portal location in three readable states.\n- One compact homestead and its burned state.\n- One protagonist avatar, with younger and older appearances distinguished through equipment condition rather than a second performance.\n- One tamed wolf.\n- Narrator-only voice track.\n- A limited number of temporal crossings, each changing the viewer’s understanding rather than merely repeating spectacle.\n\n**Reusable elements:** portal set, ravine landmarks, homestead states, fire-damage palette, avatar continuity kit and temporal transition language.\n\n**Primary risks:**\n\n- Temporal geography may become confusing before it becomes intriguing.\n- Showing two versions of one avatar may require controlled compositing, replay capture or carefully limited silhouettes.\n- Resetting the same location across time states may create continuity errors.\n- The destruction mechanism may fail to behave consistently in the chosen Minecraft version.\n- The wolf can feel manipulative if the relationship is not established through ordinary shared actions before it becomes threatened.\n- Twenty minutes may be too short if crossings are numerous; clarity takes priority over count.\n\n**Scope controls:**\n\n- Use no voiced supporting character.\n- Use no parallel universe, time authority, lore council or explanatory scientist.\n- Keep the mystery within one world, one relationship and one visible outcome.\n- If a temporal visit does not add a clue, reverse an interpretation or force a decision, remove it.\n- If the double-avatar capture is unreliable, restrict overlap to distant silhouettes and one controlled reveal shot.\n- If an animatic cannot communicate the timeline with three world states, simplify the crossings before adding narration.\n\n## Research decision\n\n**Mode: light.** Two sources were consulted to distinguish changing a single past from participating in it and to understand self-consistency as a proposed constraint on closed-timelike-curve models. These sources support the internal logic used for the fiction; they do not establish that backwards time travel is physically achievable.\n\nNo films, episodes, novels or game narratives were used as plot references. This avoids importing another work’s reveal pattern, imagery or causal chain. Version-specific Minecraft research remains necessary once the destruction mechanism is selected.\n\n## Direction decision record\n\n**Proposed direction:** a grounded, self-consistent time-travel mystery in which the portal is the inciting gateway, the protagonist relives his own history from displaced perspectives, and his older self is revealed as the builder. The fixed destruction cannot be rewritten, but the protagonist’s final value choice remains consequential.\n\n| Alternative | Status and rationale |\n|---|---|\n| Naturally generated portal with a mechanical explanation | Superseded. It resolves at the threshold and does not support the requested journey beyond the portal. |\n| Branching timelines or repeated resets | Rejected for this direction. They weaken the fixed-outcome premise and make clue causality less precise. |\n| Supernatural guardian enforcing history | Rejected. It adds exposition, another role and an arbitrary force where character action can carry causality. |\n| Another player built the portal | Rejected. It breaks the isolation and removes the self-authorship layer. |\n| Purely tragic ending in which nothing meaningful can be saved | Rejected. A fixed event should constrain agency, not make every choice irrelevant. |\n\n**Approval status:** not locked. The homestead, fire and wolf are a concrete working stake proposed for evaluation and can still change before `direction_lock`.","files":[{"path":".studio/internal/direction/idea-score.json","content":"{\n  \"premise\": \"A lone Minecraft player enters an impossible portal and is carried through different moments of his own single-player world. After witnessing the future destruction of his homestead, he tries to change events before discovering that his older self built the portal and that every intervention has always been part of one fixed timeline.\",\n  \"viewer_promise\": \"A layered, fair time-travel mystery in which the journey begins after the portal is crossed. Familiar Minecraft spaces and actions become clues, allowing attentive viewers to infer that the unseen builder and interfering traveller are the protagonist himself before the final confirmation.\",\n  \"expected_pleasure\": \"Uncanny recognition, causal deduction, reinterpreting earlier images, anticipating the self-builder revelation, and debating whether choice still matters when an observed outcome cannot change.\",\n  \"hook\": \"A player finds a lit portal in a private cave where no portal existed, hesitates, then enters. He emerges into the same ravine in a state that cannot belong to the present, turning the portal’s origin into the first layer of a larger temporal mystery.\",\n  \"dramatic_engine\": \"The connected questions ‘Who built the portal?’, ‘When is this version of the world?’ and ‘Can the foretold destruction be prevented?’ drive investigation and action. Each crossing reveals a new state of the same locations, while the protagonist’s attempts to interfere create the evidence he previously misunderstood.\",\n  \"thematic_question\": \"If an outcome cannot be rewritten, can a choice still matter?\",\n  \"minecraft_causality\": \"Single-player authorship makes the constructed portal impossible; persistent blocks preserve evidence across time; repeated ravine and homestead geography lets viewers recognise one world in several states; and verified survival mechanics must cause the destructive outcome and constrain the final rescue. The portal’s temporal behaviour is explicit invented canon rather than a claimed vanilla mechanic.\",\n  \"climactic_choice\": \"Once he understands that the homestead’s destruction is fixed, the protagonist must choose whether to keep fighting for the structure or use the remaining time to rescue his tamed wolf. He abandons the futile objective and saves the relationship, an action that was always part of the observed history.\",\n  \"ending\": \"The protagonist arrives before his original discovery and builds the portal he remembers entering, revealing himself as the unknown architect. He watches his younger self cross it, then later confronts the foretold destruction. The homestead still burns, but he rescues the wolf and understands that he participated in the fixed outcome rather than creating a replacement timeline.\",\n  \"final_state\": \"The timeline and the burned landscape are unchanged. The portal mystery is solved, the protagonist has lost his home but not the wolf, and he leaves with a more mature understanding that agency can determine what an inevitable event means even when it cannot erase the event.\",\n  \"scope\": \"medium\",\n  \"score\": \"8.3\",\n  \"score_dimensions\": {\n    \"clarity\": 8,\n    \"hook_strength\": 9,\n    \"visual_potential\": 9,\n    \"feasibility\": 7,\n    \"originality\": 9,\n    \"series_potential\": 7\n  },\n  \"decision\": \"develop\",\n  \"research_mode\": \"light\",\n  \"research_reason\": \"The fixed-timeline premise benefits from limited conceptual research into the distinction between changing and participating in a single past and the proposed principle of self-consistency. Scholarly sources support a coherent fictional rule set but do not establish physical time travel. Minecraft-version research is deferred until the exact destructive mechanism is chosen.\"\n}"},{"path":".studio/internal/research/inspiration-analysis.md","content":"# Inspiration analysis\n\n## What the reference achieves\n\nThis research pass used philosophical and physics sources as **concept references**, not story references.\n\nThe Stanford Encyclopedia of Philosophy distinguishes changing a single past from participating in it. In a one-past model, a traveller cannot make an established event different, but can be one of the causes that made the event occur. This preserves consequential action without requiring branching timelines.\n\nFriedman, Morris, Novikov and colleagues describe a proposed self-consistency principle for models containing closed timelike curves: local events must fit a globally consistent history. Their paper is theoretical physics research, not evidence that a Minecraft portal or practical backwards time travel can exist.\n\n## Transferable principles\n\n- Use one history seen from more than one personal perspective.\n- Let the protagonist’s actions cause details that previously looked like interference.\n- Preserve agency by distinguishing changing an event from participating in it.\n- Make consistency emerge through ordinary causes, incomplete knowledge and decisions rather than an invisible temporal police force.\n- Track the protagonist’s personal order separately from world chronology and audience presentation.\n- Treat an apparent repeat as a revisit to one event, not an automatic reset.\n- Allow the final image to remain physically unchanged while its meaning changes through new information.\n\n## Elements not to copy\n\n- No plot, character, setting, dialogue, image or reveal sequence was taken from an existing time-travel story.\n- Do not reproduce scientific examples, equations or technical terminology in the narration unless later research establishes a genuine need.\n- Do not claim that the self-consistency principle proves backwards time travel is possible.\n- Do not use academic authority as a substitute for explaining the fictional portal rules through action.\n- Do not rely on a grandfather-paradox scenario; the Minecraft story needs its own personal and visual stakes.\n\n## Our production translation\n\nThe same ravine and homestead will appear in several controlled states. Persistent block arrangements, damage and the protagonist’s habits will carry the mystery visually. The protagonist first assumes he is encountering retries or an unknown traveller, then learns that each sighting belongs to one world history and one personal life viewed out of order.\n\nThe portal’s time-travel function remains invented canon. Minecraft mechanics will instead ground the consequences: the portal must be physically constructed from traceable materials, location changes must be reproducible, and the homestead’s destruction must follow a version-verified in-game causal chain. The narrator explains interpretation and emotion but does not deliver the solution before the images earn it."},{"path":".studio/internal/research/source-ledger.csv","content":"source_id,claim,url,publisher,published_date,accessed_date,source_type,reliability,status,notes\nSRC-001,\"In a single-past model, a time traveller cannot make the past different but may participate in the events that made it so.\",https://plato.stanford.edu/entries/time-travel/index.html,\"Metaphysics Research Lab, Stanford University\",2024-03-22,2026-07-15,specialist_reference,B,supported,\"Substantive revision date recorded. Used as a philosophical model for fictional consistency, not as proof that physical backwards time travel exists.\"\nSRC-002,\"The proposed self-consistency principle requires local events in a closed-timelike-curve model to fit a globally consistent solution.\",https://authors.library.caltech.edu/records/aw0a8-ps286,\"Physical Review D / American Physical Society\",1990-09-15,2026-07-15,primary_research,A,supported,\"Primary theoretical physics paper archived by Caltech; DOI 10.1103/PhysRevD.42.1915. Its conditional model does not establish that practical time travel is physically achievable.\"\n"},{"path":".studio/internal/research/claims.md","content":"# Claims and evidence map\n\nUse this for real-world facts, Minecraft mechanics, quoted material, cultural references, licences, and business claims.\n\n## Supported claims\n\n### C-001 — Participation versus alteration in a single past\n\n**Claim:** In a model with one past, a traveller cannot make an established past event different, but may participate in and help cause that event.\n\n**Support:** SRC-001, Stanford Encyclopedia of Philosophy, substantive revision 22 March 2024.\n\n**Use in project:** This distinction supports a protagonist whose decisions remain causally important even though the observed destruction cannot be rewritten.\n\n**Boundary:** This is a philosophical account of a coherent model, not proof that backwards time travel exists.\n\n### C-002 — Self-consistency as a proposed constraint\n\n**Claim:** A published closed-timelike-curve model proposes that locally possible events must extend into a globally self-consistent history.\n\n**Support:** SRC-002, Friedman et al., *Physical Review D* 42(6), 1990, DOI 10.1103/PhysRevD.42.1915.\n\n**Use in project:** This informs the fictional rule that every portal crossing belongs to one history rather than producing a branch or reset.\n\n**Boundary:** The paper is conditional theoretical work. It does not demonstrate a real time machine and does not validate the fictional portal mechanism.\n\n## Story facts versus factual claims\n\n**Proposed story facts (invented, unlocked canon):**\n\n- The portal can connect different moments of the same Minecraft world.\n- There is one self-consistent timeline rather than parallel worlds or repeated resets.\n- The older protagonist physically constructs the portal before his younger self discovers it.\n- The protagonist witnesses the burned future of his homestead and initially believes his wolf was lost.\n- The homestead’s destruction remains fixed.\n- The protagonist’s rescue of the wolf was always part of the observed history.\n- The time-travel effect is speculative fiction and is not presented as a vanilla Minecraft mechanic.\n\n**Factual claims about philosophy or physics:**\n\n- C-001 and C-002 only, with the limitations recorded above.\n\n**Minecraft behaviours still requiring evidence:**\n\n- The exact reproducible mechanic that destroys the homestead.\n- How the protagonist’s attempted safeguard interacts with that mechanic.\n- Fire spread, portal behaviour, animal movement and capture reliability in the production version of Minecraft.\n- The practical capture method for showing two temporal versions of one avatar.\n\nThese behaviours are not yet asserted as supported claims. They must be tested or sourced after the Story phase selects the causal chain.\n\n## Conflicts and uncertainty\n\nThe two sources do not conflict at the limited level used: both permit discussion of internally consistent histories. They approach the subject from different disciplines and neither establishes that backwards time travel is physically achievable.\n\nA causal loop can raise a deeper authorship question even when every physical object has an ordinary origin. The story may preserve that question as thematic residue, but it must not use it to excuse an untraceable Minecraft object or a missing causal step.\n\nThe homestead, fire and wolf are a concrete direction proposal, not locked canon. Their dramatic value and production feasibility require human review before `direction_lock`.\n\n## Research exclusions\n\n- No existing film, television episode, novel, game narrative or online plot summary was used as a story template.\n- No quotations or copyrighted passages will appear in the video from these sources.\n- Branching-timeline and many-worlds models were excluded because they contradict the requested fixed outcome.\n- Claims that time travel is scientifically proven or practically achievable were excluded.\n- Version-specific Minecraft claims remain excluded until a mechanics test or source pass is completed.\n"}],"questions":[],"warnings":["The homestead fire and tamed wolf are an unlocked working stake proposed to give the fixed outcome personal and visual meaning; they are not approved canon until direction_lock.","The exact Minecraft mechanism causing the destruction is not yet verified. A light mechanics test or source pass is required before story_lock.","The research supports conceptual consistency only; it does not establish that backwards time travel is physically possible.","The local maintenance commands and skill files could not be run or read because the workspace sandbox failed during initialisation; the replacements therefore rely on the complete project context supplied in the request."]}
+tokens used
+111,824
+{"summary":"Reframed the portal as the gateway into a roughly 20-minute, single-narrator time-travel mystery. The proposed fixed timeline lets the protagonist investigate his own past, discover that his older self built the portal, and learn that he can participate in—but not rewrite—the outcome. Added light research evidence and a concrete but unlocked homestead/fire/wolf stake.","document":"# Direction — The Portal That Nobody Made\n\n> This is the only document you need to read during Direction. The Studio Assistant maintains the supporting scorecard and research evidence internally.\n\n## Development status\n\nThis is an **unlocked development direction**. It reflects the latest showrunner note but does not record a `direction_lock`. The time-travel model, ending principle and production boundaries are ready to evaluate; the exact Minecraft mechanism behind the destructive outcome still needs verification before Story is locked.\n\n## Viewer promise\n\nThe viewer is promised a layered, grounded time-travel mystery told through a solitary Minecraft world. A lone player discovers a lit portal that nobody could have built, hesitates, and chooses to enter. That discovery is only the threshold: the main story follows his journey through displaced moments of his own world, where familiar places, unexplained damage and glimpses of another player gradually reveal that he is witnessing the consequences of his own actions from the wrong side of time.\n\nThe intended pleasure is not a last-minute twist delivered through exposition. It is the accumulating sensation that apparently separate mysteries are parts of one causal pattern. Attentive viewers should be able to suspect the truth before the protagonist confirms it, then reinterpret earlier images once they understand it.\n\nThe story would break its promise if the portal merely led to an ordinary Nether adventure, if time changed its rules to protect the twist, if an unseen cosmic force prevented choices, or if the ending depended on information that was withheld unfairly.\n\n## Premise and hook\n\nA lone player has established a modest survival homestead above a ravine. During an ordinary descent, he finds a complete, active portal in a section of cave he knows was empty. No other player has access to the world, and he did not build it.\n\nHe hesitates because the evidence contradicts what he knows, but curiosity and agency win: he enters during the opening movement. The story properly begins on the other side.\n\nInstead of arriving in the expected Nether, he emerges into the same ravine in a different state. Blocks he remembers placing are absent; other damage has not happened yet; the route back to his home leads to a version of the landscape that cannot belong to the present. Successive crossings expose different moments rather than alternate worlds. Among them is a future in which his homestead has burned and his tamed wolf appears to be gone.\n\nThe initial question, **‘Who built the portal?’**, expands into two connected questions: **‘When am I?’** and **‘Can I prevent what I have already seen?’**\n\n## Story engine and human problem\n\nThe protagonist is not simply carried through a puzzle. His decisions create its causal chain:\n\n1. He enters the impossible portal despite his hesitation.\n2. He investigates repeated locations instead of treating them as unrelated worlds.\n3. He attempts to leave warnings and alter small events.\n4. He discovers that those interventions produced details he already remembers.\n5. He constructs the original portal so that his younger self will enter and gain the foreknowledge he believes may avert the future destruction.\n6. When the destructive event arrives, he must choose between futilely protecting the homestead and using his limited time to rescue the wolf.\n\nThere is no conventional villain. The active opposition comes from the protagonist’s earlier and later selves acting with unequal information. His travelling self wants to break the observed chain; his older self needs the portal journey to occur because it created the only chance to act during the disaster. Their shared habits are an advantage when solving clues and a vulnerability when concealing identity. Avoiding the loop would cost the foreknowledge needed for the rescue; preserving it costs the home and the belief that the past can be rewritten.\n\nThe fixed timeline supplies constraint, not character motivation. Ordinary Minecraft causes, incomplete knowledge and the protagonist’s own choices must produce every apparent failure.\n\n## Grounded time-travel model\n\nThe story uses a **single, self-consistent timeline** as a fictional world rule:\n\n- There are no branches, resets or replacement timelines.\n- The traveller experiences events in personal order while the world retains one chronological history.\n- A past event that has already been observed cannot become a different event.\n- The protagonist can still participate in the past and be one of the causes that made it happen.\n- Each event happens once. Apparent repetition comes from seeing the same event at different points in the protagonist’s personal journey or from a different physical angle.\n- No invisible force corrects paradoxes. A warning can fail because it is damaged, misunderstood or deliberately left incomplete; an intervention can become the remembered cause of the problem.\n- Materials retain ordinary origins. The older protagonist mines or carries the obsidian and physically builds the portal. The loop does not conjure blocks or evidence from nowhere.\n- The portal’s temporal behaviour is invented speculative canon, not a claim about vanilla Minecraft or real physics.\n\nThe protagonist initially interprets the experience as a recurring loop in which another attempt might change the result. The deeper revelation is that there have never been repeated versions. His journey has always been part of the one history he is trying to alter.\n\n## Story, plot and audience presentation\n\n**World chronology:** the homestead and relationship with the wolf exist first; the older, post-journey protagonist arrives before the discovery and constructs the portal; his younger self finds and enters it; the older self later confronts the already-observed destruction and saves the wolf while the homestead burns.\n\n**Protagonist’s personal journey:** he finds the portal; visits later and earlier states of the world; witnesses fragments of his own past from outside; attempts to intervene; arrives before his original entry; builds the portal; watches his younger self enter; and finally reaches the destructive event with a different understanding of what can still be saved.\n\n**Audience presentation:** the film follows personal rather than world chronology. Early evidence supports several readings. Spatial matches establish that this is one world before personal signatures establish whose actions are being observed. The older protagonist’s identity is confirmed through an action the audience has already seen the consequence of, not through an explanatory speech.\n\n## Audience information design\n\n| Layer | Audience question | Initial interpretation | Fair evidence | Pay-off |\n|---|---|---|---|---|\n| Portal | Who built it? | Another player, an anomaly or an unknown survivor | Single-player isolation; familiar block placement; an asymmetrical cobblestone footing | The older protagonist physically built it before the opening |\n| World state | Is this another world? | Future ruin, copy or simulation | The same unusual ravine profile, tree line and player-made details in different states | These are different moments of one world |\n| Unseen figure | Who keeps interfering? | A hostile traveller or temporal echo | Matching movement habits, torch placement and equipment silhouette | Every sighting is the protagonist at another point in personal time |\n| Repetition | Is he retrying the same events? | A reset loop with another chance | Damage and objects accumulate consistently; no event has two outcomes | Events occur once and are revisited from new perspectives |\n| Outcome | Can the fire be prevented? | Foreknowledge should permit a better version | Each attempted safeguard becomes part of the remembered configuration | The homestead still burns, but the rescue was always part of the outcome |\n\nEarly clues should be legible without being uniquely identifying. Mid-story clues should make the self-loop a credible theory. Late evidence should confirm it by matching cause to an image already shown. The narrator must never lie; the narration stays close to what the protagonist understands at that point.\n\n## Why Minecraft matters\n\n1. **Single-player authorship:** A deliberately constructed portal in a private world creates an immediate contradiction. The player knows which permanent changes he made.\n2. **Persistent blocks:** Missing blocks, repairs, torch placement, water paths and fire damage allow past actions to be read visually without dialogue.\n3. **Repeatable geography:** The same ravine, cave mouth and homestead can be rebuilt in several temporal states. Viewers can recognise place before they understand time.\n4. **Portal language:** Nether portals already imply crossing a boundary. Redirecting that expectation towards time creates surprise while remaining visually native to Minecraft.\n5. **Survival causality:** Obsidian acquisition, route access, fire spread, water placement, animal movement and limited inventory can determine what the protagonist can attempt.\n6. **Avatar identity:** Armour damage, tools, movement habits and a controlled silhouette can reveal that two apparent characters are the same person without requiring a second speaking role.\n\nThe exact cause of the homestead’s destruction must be a verified, reproducible Minecraft chain. It should interact with the protagonist’s precautions rather than occur as an arbitrary scripted explosion.\n\n## Emotional and thematic direction\n\nThe intended movement is **impossibility → chosen curiosity → disorientation → pattern recognition → hope of intervention → self-recognition → tragic acceptance → purposeful action**.\n\nThe central thematic question is: **If an outcome cannot be rewritten, can a choice still matter?**\n\nThe answer should be dramatic rather than didactic. The protagonist cannot save the structure he set out to protect, but his foreknowledge lets him recognise the meaningful action still available. Saving the wolf does not create a new timeline; it reveals that what looked like total failure was always an incomplete reading of the future.\n\nA second layer concerns authorship. The protagonist built the portal, but he copied the portal he remembered entering. The film may leave the viewer considering where the idea begins without treating that causal loop as a missing explanation.\n\n## Narration and cast\n\n- **Human voices:** one narrator, voiced by the creator.\n- **Protagonist:** silent on screen; thoughts and interpretation are carried by narration.\n- **Other human roles:** none required.\n- **Optional borrowed voices:** at most one or two short lines, but they must be removable and must not carry essential clues, exposition or emotion.\n- **Additional presence:** one tamed wolf provides a visual relationship and personal stake without another human performance.\n\nThe narrator may speak retrospectively, but the wording should preserve discovery. Phrases such as ‘I thought I was seeing the future’ are fair; phrases that knowingly conceal the narrator’s identity or final understanding are not.\n\n## Ending direction\n\nThe mystery reveal and emotional resolution are connected but distinct.\n\nThe protagonist reaches the cave before his younger self’s discovery. He recognises the asymmetrical footing and other details from the opening because his own hurried construction is creating them. He completes and lights the portal, believing that his younger self must enter, see the future and carry the warning forwards. From concealment, he watches the opening hesitation again from the opposite side of the ravine. The younger self steps through. The ‘unknown builder’ is resolved without dialogue.\n\nWhen the foretold destruction arrives, the protagonist’s preparations cannot produce a different history. The exact verified Minecraft chain still destroys the homestead. He finally stops spending the remaining moments on the building and rescues the wolf. After the fire, the landscape matches the ruin seen earlier; nothing has changed. What changes is the meaning of the image: the apparently empty future did not prove that every living thing was lost.\n\nThe final image is the protagonist leading the wolf away from the burned homestead at first light while the portal stands silent in the distance. The central mystery is answered, the fixed outcome is honoured, and the protagonist’s agency survives through the choice of what to save.\n\n## Production scope\n\n**Target duration:** approximately 20 minutes for development. It may expand only if clarity or earned emotion requires it; duration is not a structural quota.\n\n**Scope:** medium, designed for a solo first production.\n\n**Smallest version worth making:**\n\n- One ravine-and-cave portal location in three readable states.\n- One compact homestead and its burned state.\n- One protagonist avatar, with younger and older appearances distinguished through equipment condition rather than a second performance.\n- One tamed wolf.\n- Narrator-only voice track.\n- A limited number of temporal crossings, each changing the viewer’s understanding rather than merely repeating spectacle.\n\n**Reusable elements:** portal set, ravine landmarks, homestead states, fire-damage palette, avatar continuity kit and temporal transition language.\n\n**Primary risks:**\n\n- Temporal geography may become confusing before it becomes intriguing.\n- Showing two versions of one avatar may require controlled compositing, replay capture or carefully limited silhouettes.\n- Resetting the same location across time states may create continuity errors.\n- The destruction mechanism may fail to behave consistently in the chosen Minecraft version.\n- The wolf can feel manipulative if the relationship is not established through ordinary shared actions before it becomes threatened.\n- Twenty minutes may be too short if crossings are numerous; clarity takes priority over count.\n\n**Scope controls:**\n\n- Use no voiced supporting character.\n- Use no parallel universe, time authority, lore council or explanatory scientist.\n- Keep the mystery within one world, one relationship and one visible outcome.\n- If a temporal visit does not add a clue, reverse an interpretation or force a decision, remove it.\n- If the double-avatar capture is unreliable, restrict overlap to distant silhouettes and one controlled reveal shot.\n- If an animatic cannot communicate the timeline with three world states, simplify the crossings before adding narration.\n\n## Research decision\n\n**Mode: light.** Two sources were consulted to distinguish changing a single past from participating in it and to understand self-consistency as a proposed constraint on closed-timelike-curve models. These sources support the internal logic used for the fiction; they do not establish that backwards time travel is physically achievable.\n\nNo films, episodes, novels or game narratives were used as plot references. This avoids importing another work’s reveal pattern, imagery or causal chain. Version-specific Minecraft research remains necessary once the destruction mechanism is selected.\n\n## Direction decision record\n\n**Proposed direction:** a grounded, self-consistent time-travel mystery in which the portal is the inciting gateway, the protagonist relives his own history from displaced perspectives, and his older self is revealed as the builder. The fixed destruction cannot be rewritten, but the protagonist’s final value choice remains consequential.\n\n| Alternative | Status and rationale |\n|---|---|\n| Naturally generated portal with a mechanical explanation | Superseded. It resolves at the threshold and does not support the requested journey beyond the portal. |\n| Branching timelines or repeated resets | Rejected for this direction. They weaken the fixed-outcome premise and make clue causality less precise. |\n| Supernatural guardian enforcing history | Rejected. It adds exposition, another role and an arbitrary force where character action can carry causality. |\n| Another player built the portal | Rejected. It breaks the isolation and removes the self-authorship layer. |\n| Purely tragic ending in which nothing meaningful can be saved | Rejected. A fixed event should constrain agency, not make every choice irrelevant. |\n\n**Approval status:** not locked. The homestead, fire and wolf are a concrete working stake proposed for evaluation and can still change before `direction_lock`.","files":[{"path":".studio/internal/direction/idea-score.json","content":"{\n  \"premise\": \"A lone Minecraft player enters an impossible portal and is carried through different moments of his own single-player world. After witnessing the future destruction of his homestead, he tries to change events before discovering that his older self built the portal and that every intervention has always been part of one fixed timeline.\",\n  \"viewer_promise\": \"A layered, fair time-travel mystery in which the journey begins after the portal is crossed. Familiar Minecraft spaces and actions become clues, allowing attentive viewers to infer that the unseen builder and interfering traveller are the protagonist himself before the final confirmation.\",\n  \"expected_pleasure\": \"Uncanny recognition, causal deduction, reinterpreting earlier images, anticipating the self-builder revelation, and debating whether choice still matters when an observed outcome cannot change.\",\n  \"hook\": \"A player finds a lit portal in a private cave where no portal existed, hesitates, then enters. He emerges into the same ravine in a state that cannot belong to the present, turning the portal’s origin into the first layer of a larger temporal mystery.\",\n  \"dramatic_engine\": \"The connected questions ‘Who built the portal?’, ‘When is this version of the world?’ and ‘Can the foretold destruction be prevented?’ drive investigation and action. Each crossing reveals a new state of the same locations, while the protagonist’s attempts to interfere create the evidence he previously misunderstood.\",\n  \"thematic_question\": \"If an outcome cannot be rewritten, can a choice still matter?\",\n  \"minecraft_causality\": \"Single-player authorship makes the constructed portal impossible; persistent blocks preserve evidence across time; repeated ravine and homestead geography lets viewers recognise one world in several states; and verified survival mechanics must cause the destructive outcome and constrain the final rescue. The portal’s temporal behaviour is explicit invented canon rather than a claimed vanilla mechanic.\",\n  \"climactic_choice\": \"Once he understands that the homestead’s destruction is fixed, the protagonist must choose whether to keep fighting for the structure or use the remaining time to rescue his tamed wolf. He abandons the futile objective and saves the relationship, an action that was always part of the observed history.\",\n  \"ending\": \"The protagonist arrives before his original discovery and builds the portal he remembers entering, revealing himself as the unknown architect. He watches his younger self cross it, then later confronts the foretold destruction. The homestead still burns, but he rescues the wolf and understands that he participated in the fixed outcome rather than creating a replacement timeline.\",\n  \"final_state\": \"The timeline and the burned landscape are unchanged. The portal mystery is solved, the protagonist has lost his home but not the wolf, and he leaves with a more mature understanding that agency can determine what an inevitable event means even when it cannot erase the event.\",\n  \"scope\": \"medium\",\n  \"score\": \"8.3\",\n  \"score_dimensions\": {\n    \"clarity\": 8,\n    \"hook_strength\": 9,\n    \"visual_potential\": 9,\n    \"feasibility\": 7,\n    \"originality\": 9,\n    \"series_potential\": 7\n  },\n  \"decision\": \"develop\",\n  \"research_mode\": \"light\",\n  \"research_reason\": \"The fixed-timeline premise benefits from limited conceptual research into the distinction between changing and participating in a single past and the proposed principle of self-consistency. Scholarly sources support a coherent fictional rule set but do not establish physical time travel. Minecraft-version research is deferred until the exact destructive mechanism is chosen.\"\n}"},{"path":".studio/internal/research/inspiration-analysis.md","content":"# Inspiration analysis\n\n## What the reference achieves\n\nThis research pass used philosophical and physics sources as **concept references**, not story references.\n\nThe Stanford Encyclopedia of Philosophy distinguishes changing a single past from participating in it. In a one-past model, a traveller cannot make an established event different, but can be one of the causes that made the event occur. This preserves consequential action without requiring branching timelines.\n\nFriedman, Morris, Novikov and colleagues describe a proposed self-consistency principle for models containing closed timelike curves: local events must fit a globally consistent history. Their paper is theoretical physics research, not evidence that a Minecraft portal or practical backwards time travel can exist.\n\n## Transferable principles\n\n- Use one history seen from more than one personal perspective.\n- Let the protagonist’s actions cause details that previously looked like interference.\n- Preserve agency by distinguishing changing an event from participating in it.\n- Make consistency emerge through ordinary causes, incomplete knowledge and decisions rather than an invisible temporal police force.\n- Track the protagonist’s personal order separately from world chronology and audience presentation.\n- Treat an apparent repeat as a revisit to one event, not an automatic reset.\n- Allow the final image to remain physically unchanged while its meaning changes through new information.\n\n## Elements not to copy\n\n- No plot, character, setting, dialogue, image or reveal sequence was taken from an existing time-travel story.\n- Do not reproduce scientific examples, equations or technical terminology in the narration unless later research establishes a genuine need.\n- Do not claim that the self-consistency principle proves backwards time travel is possible.\n- Do not use academic authority as a substitute for explaining the fictional portal rules through action.\n- Do not rely on a grandfather-paradox scenario; the Minecraft story needs its own personal and visual stakes.\n\n## Our production translation\n\nThe same ravine and homestead will appear in several controlled states. Persistent block arrangements, damage and the protagonist’s habits will carry the mystery visually. The protagonist first assumes he is encountering retries or an unknown traveller, then learns that each sighting belongs to one world history and one personal life viewed out of order.\n\nThe portal’s time-travel function remains invented canon. Minecraft mechanics will instead ground the consequences: the portal must be physically constructed from traceable materials, location changes must be reproducible, and the homestead’s destruction must follow a version-verified in-game causal chain. The narrator explains interpretation and emotion but does not deliver the solution before the images earn it."},{"path":".studio/internal/research/source-ledger.csv","content":"source_id,claim,url,publisher,published_date,accessed_date,source_type,reliability,status,notes\nSRC-001,\"In a single-past model, a time traveller cannot make the past different but may participate in the events that made it so.\",https://plato.stanford.edu/entries/time-travel/index.html,\"Metaphysics Research Lab, Stanford University\",2024-03-22,2026-07-15,specialist_reference,B,supported,\"Substantive revision date recorded. Used as a philosophical model for fictional consistency, not as proof that physical backwards time travel exists.\"\nSRC-002,\"The proposed self-consistency principle requires local events in a closed-timelike-curve model to fit a globally consistent solution.\",https://authors.library.caltech.edu/records/aw0a8-ps286,\"Physical Review D / American Physical Society\",1990-09-15,2026-07-15,primary_research,A,supported,\"Primary theoretical physics paper archived by Caltech; DOI 10.1103/PhysRevD.42.1915. Its conditional model does not establish that practical time travel is physically achievable.\"\n"},{"path":".studio/internal/research/claims.md","content":"# Claims and evidence map\n\nUse this for real-world facts, Minecraft mechanics, quoted material, cultural references, licences, and business claims.\n\n## Supported claims\n\n### C-001 — Participation versus alteration in a single past\n\n**Claim:** In a model with one past, a traveller cannot make an established past event different, but may participate in and help cause that event.\n\n**Support:** SRC-001, Stanford Encyclopedia of Philosophy, substantive revision 22 March 2024.\n\n**Use in project:** This distinction supports a protagonist whose decisions remain causally important even though the observed destruction cannot be rewritten.\n\n**Boundary:** This is a philosophical account of a coherent model, not proof that backwards time travel exists.\n\n### C-002 — Self-consistency as a proposed constraint\n\n**Claim:** A published closed-timelike-curve model proposes that locally possible events must extend into a globally self-consistent history.\n\n**Support:** SRC-002, Friedman et al., *Physical Review D* 42(6), 1990, DOI 10.1103/PhysRevD.42.1915.\n\n**Use in project:** This informs the fictional rule that every portal crossing belongs to one history rather than producing a branch or reset.\n\n**Boundary:** The paper is conditional theoretical work. It does not demonstrate a real time machine and does not validate the fictional portal mechanism.\n\n## Story facts versus factual claims\n\n**Proposed story facts (invented, unlocked canon):**\n\n- The portal can connect different moments of the same Minecraft world.\n- There is one self-consistent timeline rather than parallel worlds or repeated resets.\n- The older protagonist physically constructs the portal before his younger self discovers it.\n- The protagonist witnesses the burned future of his homestead and initially believes his wolf was lost.\n- The homestead’s destruction remains fixed.\n- The protagonist’s rescue of the wolf was always part of the observed history.\n- The time-travel effect is speculative fiction and is not presented as a vanilla Minecraft mechanic.\n\n**Factual claims about philosophy or physics:**\n\n- C-001 and C-002 only, with the limitations recorded above.\n\n**Minecraft behaviours still requiring evidence:**\n\n- The exact reproducible mechanic that destroys the homestead.\n- How the protagonist’s attempted safeguard interacts with that mechanic.\n- Fire spread, portal behaviour, animal movement and capture reliability in the production version of Minecraft.\n- The practical capture method for showing two temporal versions of one avatar.\n\nThese behaviours are not yet asserted as supported claims. They must be tested or sourced after the Story phase selects the causal chain.\n\n## Conflicts and uncertainty\n\nThe two sources do not conflict at the limited level used: both permit discussion of internally consistent histories. They approach the subject from different disciplines and neither establishes that backwards time travel is physically achievable.\n\nA causal loop can raise a deeper authorship question even when every physical object has an ordinary origin. The story may preserve that question as thematic residue, but it must not use it to excuse an untraceable Minecraft object or a missing causal step.\n\nThe homestead, fire and wolf are a concrete direction proposal, not locked canon. Their dramatic value and production feasibility require human review before `direction_lock`.\n\n## Research exclusions\n\n- No existing film, television episode, novel, game narrative or online plot summary was used as a story template.\n- No quotations or copyrighted passages will appear in the video from these sources.\n- Branching-timeline and many-worlds models were excluded because they contradict the requested fixed outcome.\n- Claims that time travel is scientifically proven or practically achievable were excluded.\n- Version-specific Minecraft claims remain excluded until a mechanics test or source pass is completed.\n"}],"questions":[],"warnings":["The homestead fire and tamed wolf are an unlocked working stake proposed to give the fixed outcome personal and visual meaning; they are not approved canon until direction_lock.","The exact Minecraft mechanism causing the destruction is not yet verified. A light mechanics test or source pass is required before story_lock.","The research supports conceptual consistency only; it does not establish that backwards time travel is physically possible.","The local maintenance commands and skill files could not be run or read because the workspace sandbox failed during initialisation; the replacements therefore rely on the complete project context supplied in the request."]}

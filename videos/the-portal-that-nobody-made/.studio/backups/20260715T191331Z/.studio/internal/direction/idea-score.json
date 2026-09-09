@@ -1,0 +1,25 @@
+{
+  "premise": "TODO",
+  "viewer_promise": "TODO",
+  "expected_pleasure": "TODO",
+  "hook": "TODO",
+  "dramatic_engine": "TODO",
+  "thematic_question": "TODO",
+  "minecraft_causality": "TODO",
+  "climactic_choice": "TODO",
+  "ending": "TODO",
+  "final_state": "TODO",
+  "scope": "small",
+  "score": "TODO",
+  "score_dimensions": {
+    "clarity": 0,
+    "hook_strength": 0,
+    "visual_potential": 0,
+    "feasibility": 0,
+    "originality": 0,
+    "series_potential": 0
+  },
+  "decision": "TODO",
+  "research_mode": "TODO: none, light, or full",
+  "research_reason": "TODO"
+}

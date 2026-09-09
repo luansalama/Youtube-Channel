@@ -1,0 +1,1103 @@
+OpenAI Codex v0.144.5
+--------
+workdir: C:\Users\Admin\AppData\Local\Temp\mcstudio-codex-tlsvf2cn
+model: gpt-5.6-sol
+provider: openai
+approval: on-request
+sandbox: workspace-write [workdir, /tmp, $TMPDIR]
+reasoning effort: medium
+reasoning summaries: detailed
+session id: 019f6d5f-ed3e-73d1-8c1a-4cf2a8aaa7a1
+--------
+user
+You are the Studio Assistant inside Minecraft Narrative Studio v0.3.6.
+Work on exactly one video and its current phase. Use British English for public-facing writing. BRL is the business currency.
+Respect the supplied writing doctrine, source policy, automation policy, established canon and previous approved decisions.
+Never use rigid storytelling formulae as mandatory rules. Prefer causality, audience promise, character agency, visual storytelling and feasible Minecraft production.
+This is a focused proposal-generation task. The complete project context, schemas and deterministic findings are supplied below. Do not inspect the repository, read AGENTS.md or skills, run shell commands, invoke mcstudio, use Git, browse files, modify files, or perform independent maintenance/audits. Produce the requested final JSON directly from the supplied context. The dashboard—not the model—runs deterministic checks and applies files after human review.
+You may design the story, but do not claim audience testing or production validation occurred.
+Return STRICT JSON only, with no Markdown fences and this exact top-level shape:
+{
+  "summary": "concise explanation of what you changed and any unresolved issue",
+  "document": "complete replacement Markdown for 02-story/story-plan.md",
+  "files": {"allowed/auxiliary/path": "complete file content"},
+  "questions": ["only genuinely blocking questions"],
+  "warnings": ["uncertainties or evidence still needed"]
+}
+The top-level document field is the complete replacement for 02-story/story-plan.md. Do not repeat 02-story/story-plan.md inside files. Only use auxiliary paths from the allowed auxiliary list. Include every auxiliary file that can be completed honestly. Preserve required JSON schemas and CSV headers exactly. CSV values must be valid RFC-style CSV text. Do not include project.json. Do not write capture-log.csv, upload records, approvals, or claims of actions not evidenced.
+
+VIDEO
+Title: The Portal That Nobody Made
+Slug: the-portal-that-nobody-made
+Current phase: Story
+Mode: develop
+
+USER REQUEST
+Update only the Story phase artefacts to match the existing approved 03-script/script.md. Treat the script as authoritative for the protagonist finding and naming Moss, the revised opening/ending loop, and the creeper-triggered activation. Do not edit, rewrite, or propose changes to the script. Preserve everything in the story plan that already agrees with it.
+
+MAIN DOCUMENT
+- 02-story/story-plan.md — return this only in the top-level document field
+
+ALLOWED AUXILIARY FILES
+- .studio/internal/story/story-model.json
+- .studio/internal/story/causal-spine.csv
+- .studio/internal/story/sequence-outline.csv
+- .studio/internal/story/beat-sheet.csv
+- .studio/internal/story/scene-cards.csv
+- .studio/internal/story/information-map.csv
+- .studio/internal/story/setup-payoff-ledger.csv
+- .studio/internal/story/relationships.csv
+- .studio/internal/story/continuity-bible.md
+
+
+WRITING DOCTRINE
+{
+  "schema_version": 2,
+  "position": "This doctrine operationalises professional recommendations, not a universal formula. Automated checks may verify recorded decisions, references, consistency, and process evidence; they must not pretend to measure artistic greatness.",
+  "governing_principle": "AI may propose possibilities, compare alternatives, diagnose weaknesses, and draft unlocked artefacts. It must not silently decide canon, theme, character motivation, factual claims, or structural changes.",
+  "development_sequence": [
+    "research",
+    "concept_generation",
+    "concept_evaluation",
+    "premise",
+    "thematic_model",
+    "character_system",
+    "ending_design",
+    "causal_spine",
+    "sequence_outline",
+    "beat_sheet",
+    "scene_cards",
+    "treatment_or_story_outline",
+    "screenplay",
+    "table_read_or_animatic",
+    "specialised_revision_passes",
+    "production_validation",
+    "publication",
+    "evidence_based_postmortem"
+  ],
+  "strong_doctrine": [
+    {
+      "id": "audience_promise",
+      "principle": "Define the novel situation, human problem, pressure source, and expected audience pleasure; packaging and opening must honour the same promise.",
+      "enforcement": "required evidence and human review"
+    },
+    {
+      "id": "story_plot_discourse",
+      "principle": "Keep chronological story, causal plot, and audience presentation distinct.",
+      "enforcement": "required structured fields"
+    },
+    {
+      "id": "causal_chain",
+      "principle": "Major events require traceable causes, consequences, state changes, and deletion/counterfactual tests.",
+      "enforcement": "deterministic reference and graph validation"
+    },
+    {
+      "id": "character_agency",
+      "principle": "Characters, especially the protagonist and opposition, should make consequential decisions that alter later events.",
+      "enforcement": "required character records plus advisory agency ratio"
+    },
+    {
+      "id": "opposition_and_constraints",
+      "principle": "Opposition must have an active goal, advantage, vulnerability, and costs for confrontation or avoidance.",
+      "enforcement": "required structured fields"
+    },
+    {
+      "id": "meaningful_change",
+      "principle": "Scenes and causal events must record what changes or what other story value earns their place.",
+      "enforcement": "required state/value evidence; conventions remain advisory"
+    },
+    {
+      "id": "information_design",
+      "principle": "Track audience knowledge, questions, expectations, emotional orientation, and character knowledge around important reveals.",
+      "enforcement": "required information map"
+    },
+    {
+      "id": "setup_payoff",
+      "principle": "Every major setup has a planned payoff, explicit reinterpretation, or justified intentionally open status.",
+      "enforcement": "deterministic ledger validation"
+    },
+    {
+      "id": "earned_climax",
+      "principle": "The climax resolves the central dramatic question through earlier causes and a consequential action or value choice.",
+      "enforcement": "required ending design and human review"
+    },
+    {
+      "id": "minecraft_causality",
+      "principle": "Minecraft mechanics, geography, construction, resources, and world rules should influence goals, strategies, reversals, climax, or visual design rather than merely decorate the story.",
+      "enforcement": "required story-engine fields and production review"
+    },
+    {
+      "id": "specialised_revision",
+      "principle": "Revision uses a small core of always-required checks plus additional passes activated only when relevant to the script.",
+      "enforcement": "adaptive deterministic pass-status validation"
+    },
+    {
+      "id": "traceable_human_control",
+      "principle": "Canon, theme, motivation, factual claims, and structural changes remain versioned and human-approved; locked evidence cannot change silently.",
+      "enforcement": "existing stage approvals and fingerprints"
+    }
+  ],
+  "flexible_conventions": [
+    {
+      "id": "three_act_structure",
+      "use": "Optional organising lens; require only a chosen framework and rationale."
+    },
+    {
+      "id": "midpoint",
+      "use": "Advisory recontextualisation device when supported by the material."
+    },
+    {
+      "id": "protagonist_arc",
+      "use": "May be positive, negative, flat, collective, tragic, or deliberately minimal."
+    },
+    {
+      "id": "scene_objective",
+      "use": "Useful diagnostic for most dramatic scenes; omissions create warnings, not gate failures."
+    },
+    {
+      "id": "act_climax",
+      "use": "Optional structural convention, never a mandatory timestamp."
+    },
+    {
+      "id": "opening_and_closing_image",
+      "use": "Useful visual comparison when meaningful, not compulsory."
+    },
+    {
+      "id": "sequence_length",
+      "use": "Production and pacing aid, not a fixed count or percentage."
+    },
+    {
+      "id": "subplot_count",
+      "use": "Determined by story need and solo production capacity."
+    }
+  ],
+  "must_not_enforce": [
+    "exact page numbers",
+    "fixed beat percentages",
+    "exactly fifteen beats",
+    "mandatory Hero's Journey stages",
+    "a twist at a predetermined timestamp",
+    "a likeable protagonist",
+    "constant action",
+    "dialogue-free exposition",
+    "a mandatory happy ending",
+    "one prescribed emotional arc"
+  ],
+  "audit": {
+    "protagonist_decision_warning_ratio": 0.35,
+    "counterfactual_results": [
+      "pass",
+      "weak",
+      "not_applicable"
+    ],
+    "setup_statuses": [
+      "planned",
+      "paid_off",
+      "intentionally_open",
+      "cut"
+    ],
+    "payoff_types": [
+      "confirmation",
+      "reversal",
+      "escalation",
+      "reinterpretation",
+      "tragic_fulfilment",
+      "comic_return",
+      "character_choice",
+      "visual_transformation"
+    ],
+    "revision_statuses": [
+      "complete",
+      "not_applicable",
+      "not_required",
+      "blocked"
+    ],
+    "revision_pass_ids": [
+      "promise",
+      "causality",
+      "dialogue_and_subtext",
+      "visual_storytelling",
+      "production_feasibility",
+      "continuity_and_canon",
+      "character_agency",
+      "escalation",
+      "theme_and_change",
+      "information",
+      "scene_necessity",
+      "audience_results_plan"
+    ],
+    "cause_types": [
+      "initial_state",
+      "prior_event",
+      "external_disruption",
+      "background_condition",
+      "parallel_cause"
+    ],
+    "core_revision_pass_ids": [
+      "promise",
+      "causality",
+      "dialogue_and_subtext",
+      "visual_storytelling",
+      "production_feasibility",
+      "continuity_and_canon"
+    ],
+    "optional_revision_pass_ids": [
+      "character_agency",
+      "escalation",
+      "theme_and_change",
+      "information",
+      "scene_necessity",
+      "audience_results_plan"
+    ]
+  }
+}
+
+
+SOURCE POLICY
+{
+  "tiers": {
+    "A": "primary/official source or direct original evidence",
+    "B": "reputable secondary reporting or specialist documentation",
+    "C": "community source useful for discovery but not decisive support"
+  },
+  "rules": [
+    "log every factual claim that affects the story or business decision",
+    "keep URL, publisher, dates and access date",
+    "mark unresolved contradictions",
+    "do not cite AI summaries as sources",
+    "archive notes rather than copying large copyrighted passages"
+  ]
+}
+
+
+AUTOMATION POLICY
+{
+  "default": "deny consequential automation",
+  "allowed_without_confirmation": [
+    "read project files",
+    "search public sources",
+    "draft text",
+    "calculate scores",
+    "generate SVG wireframes",
+    "run validation/tests",
+    "maintain hidden internal evidence",
+    "repair safe schema and ledger issues",
+    "advance approval-free phases after checks pass",
+    "regenerate the local dashboard"
+  ],
+  "requires_human_approval": [
+    "record one of the five creative/publication locks",
+    "change channel strategy or approved canon",
+    "commission paid work",
+    "use assets without confirmed rights",
+    "execute a video upload or schedule",
+    "send external messages",
+    "publish social posts",
+    "accept sponsorship terms"
+  ],
+  "forbidden": [
+    "invent sources or research findings",
+    "fabricate analytics",
+    "generate final production imagery",
+    "expose secrets",
+    "skip phase checks or human locks",
+    "silently alter approved artefacts"
+  ]
+}
+
+
+DETERMINISTIC PHASE CHECKS
+- PASS · story plan: 31159 characters
+- PASS · internal story model: required keys populated; no placeholders
+- PASS · internal causal spine: 10 populated row(s)
+- PASS · internal sequence outline: 5 populated row(s)
+- PASS · internal beat sheet: 15 populated row(s)
+- PASS · internal scene cards: 13 populated row(s)
+- PASS · internal information map: present
+- PASS · internal setup/payoff ledger: present
+- PASS · internal relationship register: present
+- PASS · story model decisions: required narrative decisions are recorded
+- PASS · character system: 2 complete character record(s)
+- PASS · protagonist reference: PROTAGONIST resolves to a character record
+- PASS · thematic conflict: competing values are recorded
+- PASS · causal event IDs: 10 unique ID(s)
+- PASS · causal cause types: all cause types are recognised
+- PASS · causal entry point: exactly one initial_state event
+- PASS · causal references: all cause and dependency references resolve
+- PASS · causal graph: no causal cycle detected
+- PASS · causal event completeness: every event records cause logic, consequence, state change, information effect, and deletion impact
+- PASS · counterfactual tests: every causal event has an allowed counterfactual result
+- PASS · protagonist agency: 10/10 causal events contain a recorded protagonist decision
+- PASS · sequence IDs: 5 unique ID(s)
+- PASS · sequence completeness: 5 temporary objective/outcome unit(s) recorded
+- PASS · beat IDs: 15 unique ID(s)
+- PASS · beat change logic: 15 beat(s) record attempt, interference, change, and next-cause logic
+- PASS · sequence references: all beat and scene sequence references resolve
+- PASS · relationship IDs: 1 unique ID(s)
+- PASS · relationship dynamics: 1 relationship change model(s) recorded
+- PASS · setup IDs: 13 unique ID(s)
+- PASS · setup/payoff obligations: 13 setup obligation(s) have a planned payoff or explicit open-thread reason
+- PASS · information IDs: 10 unique ID(s)
+- PASS · information state transitions: 10 audience/character knowledge transition(s) recorded
+- PASS · scene IDs: 13 unique ID(s)
+- PASS · scene necessity evidence: 13 scene(s) record purpose, state change evidence, value, and production requirements
+- PASS · scene engine conventions: all scene cards use the optional objective/obstacle/turn/outcome diagnostic
+
+PROJECT CONTEXT
+
+===== Direction document: 01-direction/direction.md =====
+# Direction — The Portal That Nobody Made
+
+> This is the only document you need to read during Direction. The Studio Assistant maintains the supporting scorecard and research evidence internally.
+
+## Development status
+
+This is an **unlocked development direction**. It reflects the latest showrunner note but does not record a `direction_lock`. The time-travel model, ending principle and production boundaries are ready to evaluate; the exact Minecraft mechanism behind the destructive outcome still needs verification before Story is locked.
+
+## Viewer promise
+
+The viewer is promised a layered, grounded time-travel mystery told through a solitary Minecraft world. A lone player discovers a lit portal that nobody could have built, hesitates, and chooses to enter. That discovery is only the threshold: the main story follows his journey through displaced moments of his own world, where familiar places, unexplained damage and glimpses of another player gradually reveal that he is witnessing the consequences of his own actions from the wrong side of time.
+
+The intended pleasure is not a last-minute twist delivered through exposition. It is the accumulating sensation that apparently separate mysteries are parts of one causal pattern. Attentive viewers should be able to suspect the truth before the protagonist confirms it, then reinterpret earlier images once they understand it.
+
+The story would break its promise if the portal merely led to an ordinary Nether adventure, if time changed its rules to protect the twist, if an unseen cosmic force prevented choices, or if the ending depended on information that was withheld unfairly.
+
+## Premise and hook
+
+A lone player has established a modest survival homestead above a ravine. During an ordinary descent, he finds a complete, active portal in a section of cave he knows was empty. No other player has access to the world, and he did not build it.
+
+He hesitates because the evidence contradicts what he knows, but curiosity and agency win: he enters during the opening movement. The story properly begins on the other side.
+
+Instead of arriving in the expected Nether, he emerges into the same ravine in a different state. Blocks he remembers placing are absent; other damage has not happened yet; the route back to his home leads to a version of the landscape that cannot belong to the present. Successive crossings expose different moments rather than alternate worlds. Among them is a future in which his homestead has burned and his tamed wolf appears to be gone.
+
+The initial question, **‘Who built the portal?’**, expands into two connected questions: **‘When am I?’** and **‘Can I prevent what I have already seen?’**
+
+## Story engine and human problem
+
+The protagonist is not simply carried through a puzzle. His decisions create its causal chain:
+
+1. He enters the impossible portal despite his hesitation.
+2. He investigates repeated locations instead of treating them as unrelated worlds.
+3. He attempts to leave warnings and alter small events.
+4. He discovers that those interventions produced details he already remembers.
+5. He constructs the original portal so that his younger self will enter and gain the foreknowledge he believes may avert the future destruction.
+6. When the destructive event arrives, he must choose between futilely protecting the homestead and using his limited time to rescue the wolf.
+
+There is no conventional villain. The active opposition comes from the protagonist’s earlier and later selves acting with unequal information. His travelling self wants to break the observed chain; his older self needs the portal journey to occur because it created the only chance to act during the disaster. Their shared habits are an advantage when solving clues and a vulnerability when concealing identity. Avoiding the loop would cost the foreknowledge needed for the rescue; preserving it costs the home and the belief that the past can be rewritten.
+
+The fixed timeline supplies constraint, not character motivation. Ordinary Minecraft causes, incomplete knowledge and the protagonist’s own choices must produce every apparent failure.
+
+## Grounded time-travel model
+
+The story uses a **single, self-consistent timeline** as a fictional world rule:
+
+- There are no branches, resets or replacement timelines.
+- The traveller experiences events in personal order while the world retains one chronological history.
+- A past event that has already been observed cannot become a different event.
+- The protagonist can still participate in the past and be one of the causes that made it happen.
+- Each event happens once. Apparent repetition comes from seeing the same event at different points in the protagonist’s personal journey or from a different physical angle.
+- No invisible force corrects paradoxes. A warning can fail because it is damaged, misunderstood or deliberately left incomplete; an intervention can become the remembered cause of the problem.
+- Materials retain ordinary origins. The older protagonist mines or carries the obsidian and physically builds the portal. The loop does not conjure blocks or evidence from nowhere.
+- The portal’s temporal behaviour is invented speculative canon, not a claim about vanilla Minecraft or real physics.
+
+The protagonist initially interprets the experience as a recurring loop in which another attempt might change the result. The deeper revelation is that there have never been repeated versions. His journey has always been part of the one history he is trying to alter.
+
+## Story, plot and audience presentation
+
+**World chronology:** the homestead and relationship with the wolf exist first; the older, post-journey protagonist arrives before the discovery and constructs the portal; his younger self finds and enters it; the older self later confronts the already-observed destruction and saves the wolf while the homestead burns.
+
+**Protagonist’s personal journey:** he finds the portal; visits later and earlier states of the world; witnesses fragments of his own past from outside; attempts to intervene; arrives before his original entry; builds the portal; watches his younger self enter; and finally reaches the destructive event with a different understanding of what can still be saved.
+
+**Audience presentation:** the film follows personal rather than world chronology. Early evidence supports several readings. Spatial matches establish that this is one world before personal signatures establish whose actions are being observed. The older protagonist’s identity is confirmed through an action the audience has already seen the consequence of, not through an explanatory speech.
+
+## Audience information design
+
+| Layer | Audience question | Initial interpretation | Fair evidence | Pay-off |
+|---|---|---|---|---|
+| Portal | Who built it? | Another player, an anomaly or an unknown survivor | Single-player isolation; familiar block placement; an asymmetrical cobblestone footing | The older protagonist physically built it before the opening |
+| World state | Is this another world? | Future ruin, copy or simulation | The same unusual ravine profile, tree line and player-made details in different states | These are different moments of one world |
+| Unseen figure | Who keeps interfering? | A hostile traveller or temporal echo | Matching movement habits, torch placement and equipment silhouette | Every sighting is the protagonist at another point in personal time |
+| Repetition | Is he retrying the same events? | A reset loop with another chance | Damage and objects accumulate consistently; no event has two outcomes | Events occur once and are revisited from new perspectives |
+| Outcome | Can the fire be prevented? | Foreknowledge should permit a better version | Each attempted safeguard becomes part of the remembered configuration | The homestead still burns, but the rescue was always part of the outcome |
+
+Early clues should be legible without being uniquely identifying. Mid-story clues should make the self-loop a credible theory. Late evidence should confirm it by matching cause to an image already shown. The narrator must never lie; the narration stays close to what the protagonist understands at that point.
+
+## Why Minecraft matters
+
+1. **Single-player authorship:** A deliberately constructed portal in a private world creates an immediate contradiction. The player knows which permanent changes he made.
+2. **Persistent blocks:** Missing blocks, repairs, torch placement, water paths and fire damage allow past actions to be read visually without dialogue.
+3. **Repeatable geography:** The same ravine, cave mouth and homestead can be rebuilt in several temporal states. Viewers can recognise place before they understand time.
+4. **Portal language:** Nether portals already imply crossing a boundary. Redirecting that expectation towards time creates surprise while remaining visually native to Minecraft.
+5. **Survival causality:** Obsidian acquisition, route access, fire spread, water placement, animal movement and limited inventory can determine what the protagonist can attempt.
+6. **Avatar identity:** Armour damage, tools, movement habits and a controlled silhouette can reveal that two apparent characters are the same person without requiring a second speaking role.
+
+The exact cause of the homestead’s destruction must be a verified, reproducible Minecraft chain. It should interact with the protagonist’s precautions rather than occur as an arbitrary scripted explosion.
+
+## Emotional and thematic direction
+
+The intended movement is **impossibility → chosen curiosity → disorientation → pattern recognition → hope of intervention → self-recognition → tragic acceptance → purposeful action**.
+
+The central thematic question is: **If an outcome cannot be rewritten, can a choice still matter?**
+
+The answer should be dramatic rather than didactic. The protagonist cannot save the structure he set out to protect, but his foreknowledge lets him recognise the meaningful action still available. Saving the wolf does not create a new timeline; it reveals that what looked like total failure was always an incomplete reading of the future.
+
+A second layer concerns authorship. The protagonist built the portal, but he copied the portal he remembered entering. The film may leave the viewer considering where the idea begins without treating that causal loop as a missing explanation.
+
+## Narration and cast
+
+- **Human voices:** one narrator, voiced by the creator.
+- **Protagonist:** silent on screen; thoughts and interpretation are carried by narration.
+- **Other human roles:** none required.
+- **Optional borrowed voices:** at most one or two short lines, but they must be removable and must not carry essential clues, exposition or emotion.
+- **Additional presence:** one tamed wolf provides a visual relationship and personal stake without another human performance.
+
+The narrator may speak retrospectively, but the wording should preserve discovery. Phrases such as ‘I thought I was seeing the future’ are fair; phrases that knowingly conceal the narrator’s identity or final understanding are not.
+
+## Ending direction
+
+The mystery reveal and emotional resolution are connected but distinct.
+
+The protagonist reaches the cave before his younger self’s discovery. He recognises the asymmetrical footing and other details from the opening because his own hurried construction is creating them. He completes and lights the portal, believing that his younger self must enter, see the future and carry the warning forwards. From concealment, he watches the opening hesitation again from the opposite side of the ravine. The younger self steps through. The ‘unknown builder’ is resolved without dialogue.
+
+When the foretold destruction arrives, the protagonist’s preparations cannot produce a different history. The exact verified Minecraft chain still destroys the homestead. He finally stops spending the remaining moments on the building and rescues the wolf. After the fire, the landscape matches the ruin seen earlier; nothing has changed. What changes is the meaning of the image: the apparently empty future did not prove that every living thing was lost.
+
+The final image is the protagonist leading the wolf away from the burned homestead at first light while the portal stands silent in the distance. The central mystery is answered, the fixed outcome is honoured, and the protagonist’s agency survives through the choice of what to save.
+
+## Production scope
+
+**Target duration:** approximately 20 minutes for development. It may expand only if clarity or earned emotion requires it; duration is not a structural quota.
+
+**Scope:** medium, designed for a solo first production.
+
+**Smallest version worth making:**
+
+- One ravine-and-cave portal location in three readable states.
+- One compact homestead and its burned state.
+- One protagonist avatar, with younger and older appearances distinguished through equipment condition rather than a second performance.
+- One tamed wolf.
+- Narrator-only voice track.
+- A limited number of temporal crossings, each changing the viewer’s understanding rather than merely repeating spectacle.
+
+**Reusable elements:** portal set, ravine landmarks, homestead states, fire-damage palette, avatar continuity kit and temporal transition language.
+
+**Primary risks:**
+
+- Temporal geography may become confusing before it becomes intriguing.
+- Showing two versions of one avatar may require controlled compositing, replay capture or carefully limited silhouettes.
+- Resetting the same location across time states may create continuity errors.
+- The destruction mechanism may fail to behave consistently in the chosen Minecraft version.
+- The wolf can feel manipulative if the relationship is not established through ordinary shared actions before it becomes threatened.
+- Twenty minutes may be too short if crossings are numerous; clarity takes priority over count.
+
+**Scope controls:**
+
+- Use no voiced supporting character.
+- Use no parallel universe, time authority, lore council or explanatory scientist.
+- Keep the mystery within one world, one relationship and one visible outcome.
+- If a temporal visit does not add a clue, reverse an interpretation or force a decision, remove it.
+- If the double-avatar capture is unreliable, restrict overlap to distant silhouettes and one controlled reveal shot.
+- If an animatic cannot communicate the timeline with three world states, simplify the crossings before adding narration.
+
+## Research decision
+
+**Mode: light.** Two sources were consulted to distinguish changing a single past from participating in it and to understand self-consistency as a proposed constraint on closed-timelike-curve models. These sources support the internal logic used for the fiction; they do not establish that backwards time travel is physically achievable.
+
+No films, episodes, novels or game narratives were used as plot references. This avoids importing another work’s reveal pattern, imagery or causal chain. Version-specific Minecraft research remains necessary once the destruction mechanism is selected.
+
+## Direction decision record
+
+**Proposed direction:** a grounded, self-consistent time-travel mystery in which the portal is the inciting gateway, the protagonist relives his own history from displaced perspectives, and his older self is revealed as the builder. The fixed destruction cannot be rewritten, but the protagonist’s final value choice remains consequential.
+
+| Alternative | Status and rationale |
+|---|---|
+| Naturally generated portal with a mechanical explanation | Superseded. It resolves at the threshold and does not support the requested journey beyond the portal. |
+| Branching timelines or repeated resets | Rejected for this direction. They weaken the fixed-outcome premise and make clue causality less precise. |
+| Supernatural guardian enforcing history | Rejected. It adds exposition, another role and an arbitrary force where character action can carry causality. |
+| Another player built the portal | Rejected. It breaks the isolation and removes the self-authorship layer. |
+| Purely tragic ending in which nothing meaningful can be saved | Rejected. A fixed event should constrain agency, not make every choice irrelevant. |
+
+**Approval status:** not locked. The homestead, fire and wolf are a concrete working stake proposed for evaluation and can still change before `direction_lock`.
+===== Story document: 02-story/story-plan.md =====
+# Story plan — The Portal That Nobody Made
+
+> This is an unlocked Story proposal. It records no creative lock, audience result or production validation.
+
+## Development status
+
+This revision adopts the new echo-reality journey and replaces the previous fixed-timeline tragedy within the unlocked development material.
+
+The protagonist and Moss arrive together at a clearing above a ravine. Beneath it, they discover an active portal made from crying obsidian, although such a frame should not work like an ordinary Minecraft portal. The first crossing confuses the protagonist. After exploring the same ravine in a changed reality, he turns back expecting the portal to undo the trip. Instead, it advances him and Moss into another version of the same place. Further crossings reveal that the gate is a one-way chain rather than a reversible door.
+
+A damaged version of the protagonist’s own survey journal, found in an abandoned echo, explains enough of the invented portal behaviour to support the climax. When the chain finally strands them in a habitable reality, they build a home beside the ravine. A wool rug placed too close to an open fireplace later catches fire while the protagonist is away collecting the last materials needed for a controlled return. He comes home too late and Moss is gone.
+
+The protagonist uses the journal’s instructions to build a complete crying-obsidian frame in the ravine. He discharges a respawn anchor to wake it, knowing the activation is explosive but believing the frame will open before the blast reaches him. The explosion kills him. The portal lights a fraction too late.
+
+The camera enters the active frame, rises through the corresponding underground reality and breaks through the surface into the exact scene presented after the cold open: the protagonist and Moss first reaching the clearing and deciding to stay. The portal he will soon discover already waits below them. The ending therefore closes the physical, emotional and presentational loop without claiming that the protagonist survived the blast.
+
+The portal rules, fire geometry, target Minecraft edition and explosion staging remain proposed until human approval and reproducibility testing.
+
+## Audience promise
+
+A lone player and his wolf discover a portal nobody could have built in an untouched part of their private world. Crossing it does not take them to the Nether. It carries them through increasingly unsettling realities of the same ravine, and trying to go back only moves them farther from the world they knew.
+
+The intended pleasure is cumulative recognition:
+
+- the same geography acquiring incompatible histories;
+- a return attempt becoming another departure;
+- crude marks proving that the realities are distinct rather than changing around him;
+- an older version of his own journal turning an abstract anomaly into a dangerous possibility;
+- a comfortable household detail becoming the fire’s ordinary cause;
+- the crying frame at the end becoming the impossible portal from the beginning;
+- the final ascent revealing that the apparent beginning was always the portal’s destination.
+
+The central questions are:
+
+- Who made the crying-obsidian portal beneath the clearing?
+- Why does going back through it lead somewhere new?
+- Can the protagonist use what he learns to return to a reality where Moss is still with him?
+- Does opening a route matter if he cannot survive long enough to cross it?
+
+The story would break its promise if the realities were interchangeable spectacle, if a hidden wizard or visible second player supplied the explanation, if the rug fire lacked a legible material path, if Moss were forgotten while the house burned, or if the final explosion were presented as a verified vanilla method for activating crying obsidian.
+
+## The selected knowledge source: The Weeping Atlas
+
+The strongest working solution is not a generic ancient lore book. It is a weathered version of the protagonist’s own survey journal, found in the Archive Echo.
+
+At the beginning, the protagonist carries a small field journal in which he records coordinates and draws a distinctive three-line symbol for ravines. In the Archive Echo, he finds an older journal with the same repaired corner, the same shorthand and the same hand. It contains observations apparently made by another version of him:
+
+- several plans of the identical ravine laid over one another;
+- a diagram showing that an unanchored crossing follows the next arrow, never the previous one;
+- the phrase **ONE FRAME, MANY MOUTHS**;
+- a full crying-obsidian frame connected to a respawn anchor;
+- an arrow from that frame to **FIRST THRESHOLD**;
+- a warning that the hand which discharges the anchor becomes the key;
+- a blast-distance page whose final measurement has been torn away.
+
+The book does not explain the universe or introduce a lore authority. Its diagrams record experiments, failed returns and practical observations. The protagonist verifies the one-way rule through his own crossings before trusting the final instruction.
+
+The final surface reveal shows the younger protagonist carrying the clean, mostly blank version of the same journal. This pays off the book’s identity while leaving the exact history of the counterpart who completed it open. That unanswered authorship is reflective residue, not missing information required to understand the fire, the explosion or the loop.
+
+### Reserve approaches if the Atlas proves too explicit
+
+| Option | Dramatic advantage | Cost |
+|---|---|---|
+| An abandoned echo laboratory | Item frames, marked portals and redstone indicators could demonstrate the rule without prose | Requires a larger set and implies an unseen experimenter without the personal journal pay-off |
+| A cartographic palimpsest | Layered maps reveal the same coordinates and crying particles trace a route to the first map | More mysterious and visually elegant, but the respawn-anchor danger may become too obscure |
+| A ruined-portal field manual | A concise written book gives the rule directly | Cheapest to stage, but least personal and most dependent on exposition |
+
+The Weeping Atlas is the working choice because it joins information, character identity, visual evidence and the final image without adding another speaking role.
+
+## Proposed echo-portal canon
+
+These are invented story rules, not claims about vanilla Minecraft or real physics.
+
+1. Echoes are stable realities with the same underlying coordinates but divergent histories. They are not resets, dreams or temporary illusions.
+2. A crying-obsidian frame binds matching coordinates across echoes. The nearest safe vertical exit may differ, but the ravine profile remains the primary orientation landmark.
+3. An unanchored crossing moves forwards through a chain of echoes. Turning round and entering again does not reverse the previous crossing.
+4. Blocks placed beside a portal belong only to that reality. A missing cobblestone mark therefore provides fair evidence that the traveller has not returned.
+5. A projected mouth can appear in an echo where nobody locally placed the frame. Its material source is the constructed frame in the reality that created the connection.
+6. A complete crying-obsidian frame can be keyed to the builder’s first threshold by discharging a charged respawn anchor within it.
+7. The builder must trigger that discharge directly. The proposed Overworld discharge is explosive; the frame’s response to it is speculative canon.
+8. Activation does not rewrite a reality. It opens a route to another existing echo at the moment bound to the first threshold.
+9. The final R4 frame projects the receiving mouth found in R0. The R0 protagonist enters that receiving mouth without a key, so the one-way chain carries him onwards to R1 rather than back to R4.
+10. The camera may cross the completed connection after the protagonist dies, but this is audience access rather than evidence that his consciousness survives.
+
+The film should teach only the rules needed for the current decision. Geography, repeated portal composition, adjacent block marks and the Atlas diagrams carry most of the explanation.
+
+## Dramatic opening
+
+### Cold open
+
+At night, the protagonist returns over the ridge carrying crying obsidian and glowstone. His house is already burning. He drops the materials, runs past recoverable storage and empties his water bucket towards the shared room. The wool rug beside the fireplace is aflame. Moss cannot be seen from the doorway.
+
+The protagonist breaks through the shortest wall and reaches into the smoke. The scene cuts before the room is revealed.
+
+A restrained narration line may establish the emotional promise:
+
+**By the time I saw the smoke, Moss had been alone in it for too long.**
+
+The fragment should last about thirty-five seconds. It withholds Moss’s fate but makes the protagonist’s priority unambiguous.
+
+### Return to the beginning
+
+Morning replaces the fire. The protagonist and Moss reach a green clearing above a recognisable ravine. They are already an established pair: Moss follows naturally, waits while the protagonist checks the map and sits at the overlook while he opens his clean survey journal.
+
+The repeated narration line is simple:
+
+**Moss sat down before I did. I took it as a vote. We could stay.**
+
+He draws the ravine symbol, places a temporary marker and hears a low portal hum below. Their decision to investigate produces the first crossing. At this point, the audience reads the scene as an ordinary chronological beginning. The ending later reveals it as the receiving reality created by the final portal.
+
+## Protagonist’s personal journey and audience presentation
+
+1. **Fire without an answer:** The cold open shows the protagonist returning too late to an established home and racing towards an unseen Moss.
+2. **A place worth keeping:** Earlier in his experience, he and Moss reach the clearing, mark it in the survey journal and decide to stay.
+3. **The portal nobody made:** In the ravine they find a complete, active crying-obsidian frame in an unvisited private world. No path, mine, camp or dropped inventory identifies a builder.
+4. **The first crossing:** They enter together and emerge beside the same granite seam in the Rain Echo. The weather, vegetation and water paths are incompatible with the clearing they left.
+5. **The failed return:** Confused, the protagonist explores long enough to verify the geography, then re-enters the portal expecting to go home. It sends them to the Ash Echo instead.
+6. **A method replaces panic:** He marks the frame’s left foot with cobblestone, records coordinates and crosses once more. The next mouth has no mark. Same place and different histories become the best explanation.
+7. **The Weeping Atlas:** In the Archive Echo, an abandoned survey recess contains the older version of his journal. Its diagrams name the one-way behaviour and propose a dangerous method of reaching the first threshold.
+8. **The last uncontrolled crossing:** Environmental pressure and a failing portal plane force one more entry. They emerge in a habitable echo. The local mouth closes and cannot be relit with ordinary fire. Without a complete frame, sufficient crying obsidian or a charged anchor, they cannot leave.
+9. **A life in one reality:** They remain near the ravine because it is the only known seam between echoes. A shelter becomes a house. The protagonist builds a stone fireplace with an open flame and places a wool rug beside it for Moss. Their routines turn enforced settlement into home.
+10. **Preparing a route without abandoning the present:** Over time, the protagonist collects crying obsidian and studies the Atlas. He delays the dangerous activation until he has a full frame, glowstone and a plausible blast shelter.
+11. **The absence that completes the cold open:** He leaves Moss sitting on the warm rug during a final supply run through a conventional Nether route. Fire spreads from the open hearth to the wool while he is away. He returns to the cold open, reaches the room and finds Moss gone. He searches the ruins and surrounding paths but receives no response.
+12. **Grief turns research into urgency:** The protagonist traces the burn fan back to the missing rug, retrieves the materials he brought home and descends to the ravine. The Atlas’s first-threshold diagram now appears to offer the only reality in which Moss is certainly alive.
+13. **The final frame:** He builds a complete crying-obsidian frame at the dead mouth’s coordinates, places and charges a respawn anchor, and constructs an incomplete stone baffle. The torn safety page leaves him with evidence of danger but no reliable distance.
+14. **A route opened too late:** He directly discharges the anchor. The explosion kills him before the portal plane forms. Purple light appears through the smoke after his death.
+15. **The beginning as destination:** The camera enters, rises through corresponding stone and soil, and reaches the surface in R0. The exact earlier shot continues: the protagonist opens his blank journal, Moss sits at the overlook, and they decide to stay. The portal waits beneath them, completing the loop.
+
+## Reality chronology
+
+| Reality | Distinguishing state | Story function |
+|---|---|---|
+| R0 — Root Echo | Green clearing, dry ravine, no local player construction above ground; the projected crying portal waits below | The apparent beginning and final destination |
+| R1 — Rain Echo | Persistent rain, a new waterfall and dense vegetation, but identical stone and granite profiles | Creates confusion and invites the mistaken return attempt |
+| R2 — Ash Echo | A naturally scorched tree line and exposed ravine shelf; the prior cobblestone portal mark is absent | Confirms forward movement into distinct realities |
+| R3 — Archive Echo | A small abandoned survey recess contains the Weeping Atlas; portal behaviour becomes unstable | Supplies incomplete but actionable knowledge |
+| R4 — Home Echo | Habitable surface, inert local mouth and sufficient resources for long-term survival | Holds the house, wool-rug fire, final frame, death and outbound link to R0 |
+
+The realities need not share a synchronised clock. The final keyed portal selects the R0 moment associated with the protagonist’s first threshold. It does not change an event already shown.
+
+## Plot and causality
+
+The major chain is:
+
+- The clearing offers shelter and the portal hum threatens the protagonist’s confidence that the region is untouched, so he investigates.
+- The complete crying frame presents the only direct explanation for its own impossibility, so he enters with Moss rather than leaving the wolf behind.
+- The first changed reality confuses him, but repeated geography makes the portal the most credible route home.
+- Re-entering advances instead of returning, so he begins marking coordinates and adjacent blocks.
+- Missing marks and incompatible world histories establish a chain of echoes, so the Atlas can clarify observed evidence rather than invent the premise late.
+- The Atlas and failing mouth force a final uncontrolled crossing, which strands them in R4.
+- Staying near the only known seam leads to the house, hearth and wool rug.
+- The protagonist’s gradual portal research requires crying obsidian and glowstone, causing the supply journey during which the continuously burning hearth reaches the rug.
+- Sitting Moss indoors is an established safety choice for dangerous travel, but it prevents following or teleporting while the protagonist is away.
+- The fire and Moss’s disappearance turn a cautious future project into an immediate attempt to reach the first threshold.
+- The Atlas’s direct-hand rule requires the protagonist to remain close to the respawn anchor discharge.
+- The explosion kills him, but its discharge activates the crying frame.
+- The portal’s destination reveals the opening reality and creates the mouth his earlier self will enter.
+
+Removing the failed return removes the central portal rule. Removing the marks makes the reality conclusion arbitrary. Removing the Atlas removes the protagonist’s basis for building and activating the final frame. Removing the domestic Moss scenes makes the rug and loss merely functional. Removing the wool adjacency makes the fire arbitrary. Removing the material-gathering objective removes the reason he is away. Removing the anchor blast breaks the protagonist’s death and the portal’s activation. Removing the repeated surface shot breaks the final loop.
+
+## Characters and relationship
+
+### The protagonist
+
+The protagonist is observant, practical and accustomed to treating Minecraft systems as legible. He begins with healthy curiosity: when the portal contradicts his map, he investigates. His first mistake is understandable rather than foolish. He assumes that a portal can be traversed in reverse because ordinary doors and familiar Nether travel support that expectation.
+
+His strength is evidence gathering. After the failed return, he marks blocks, records coordinates and compares terrain. His limitation emerges gradually: once knowledge offers even a dangerous possibility of reversal, he finds it harder to accept the reality in front of him.
+
+His important decisions are to stay at the clearing, enter with Moss, attempt the return, continue marking echoes, trust the Atlas only after verifying part of it, settle near the dead mouth, build a home, pursue the materials slowly, leave Moss somewhere normally safe, search after the fire, build the crying frame and directly discharge the anchor.
+
+His final choice is not between Moss and the house. The house is already lost. He chooses a lethal chance of reaching a reality with Moss over surviving in a reality where Moss may be gone.
+
+### Moss
+
+Moss is already the protagonist’s tamed companion when the story begins. The relationship is expressed through Minecraft-scale behaviour rather than human reasoning:
+
+- Moss follows while the protagonist surveys the clearing;
+- waits while he bridges or enters hazardous areas;
+- interrupts construction by occupying useful blocks;
+- receives food after ordinary damage;
+- sleeps or sits on the wool rug beside the hearth;
+- remains home only during the dangerous final supply run.
+
+Moss is not kept in a pen, kennel or separate pet room. The rug is part of the shared living space. Its placement begins as an affectionate domestic choice and becomes the fire’s vulnerable material.
+
+The film confirms that Moss is absent after the fire but does not show a body, invented collar drop or on-screen death message. The protagonist treats that absence as loss. The final R0 image shows an earlier Moss, not proof that the R4 Moss escaped.
+
+### Opposition and pressure
+
+There is no conventional villain. Active pressure comes from incompatible objectives within the protagonist:
+
+- his practical self wants evidence, preparation and a survivable activation;
+- his grief-driven self wants the first available route to a reality where Moss is alive.
+
+The echo system has a one-way advantage. The Atlas is incomplete. The fire has destroyed time, shelter and emotional patience. Direct activation keeps the protagonist inside the blast problem. He could delay, rebuild, seek better protection or live without certainty, but every delay feels like choosing the Moss-less reality.
+
+The costs remain concrete. Careful preparation costs emotional acceptance of the present. Immediate activation costs his life.
+
+## Movement of the story
+
+| Movement | Temporary objective and strategy | Reversal | Changed state |
+|---|---|---|---|
+| 1. A door beneath home | Survive the cold-open promise, then inspect the clearing and impossible frame | The portal leads to a changed version of the same ravine | Chosen home becomes unexplained displacement |
+| 2. Every way is forwards | Explore, turn back and then mark successive mouths | The return attempt advances them, and the chain finally strands them | Confusion becomes knowledge without escape |
+| 3. Make one echo home | Settle near the seam, build a safe life and gather return materials patiently | A wool rug beside the open hearth creates an unnoticed fire route | Enforced settlement becomes valued home and latent danger |
+| 4. Come back too late | Reach Moss, search the ruins and determine the fire’s cause | Moss is gone and the materials for the dangerous route have just arrived | Care becomes grief-driven urgency |
+| 5. Wake the first threshold | Build the full crying frame and survive its activation | The anchor discharge kills him before the portal forms | Failed return becomes the portal found at the beginning |
+
+This five-movement shape is a clarity tool for the particular chain of realities, not a mandatory formula or timing quota.
+
+## Scene progression
+
+| Scene | Entry and objective | Visual conflict or clue | Turn and outcome | Production need |
+|---|---|---|---|---|
+| 1. Smoke on the ridge | Return home and reach Moss | Burning rug, ignored supplies and an unseen shared room | He breaks in; cut before the room is revealed | Controlled partial fire state and matched continuation |
+| 2. A place to stay | Survey the clearing with Moss | Ravine symbol, blank journal and faint hum | They choose the clearing as home and descend | Exact shot reserved for the ending |
+| 3. Nobody built this | Explain the active crying frame | Unvisited coordinates and no construction trail | The protagonist enters with Moss | Crying-frame hero set and wolf transition blocking |
+| 4. The wrong way back | Orient in the Rain Echo and return | Same granite seam, incompatible water and vegetation | Re-entry produces the Ash Echo | Matched geography in two readable states |
+| 5. Marks that do not follow | Test whether the world is changing or being replaced | A cobblestone foot mark is absent at the next mouth | Distinct realities become the working model | Repeatable adjacent-block continuity |
+| 6. The Weeping Atlas | Search an abandoned survey recess | Older version of his journal and one-way diagrams | He learns of the full frame and first threshold | Custom book pages and concise insert shots |
+| 7. The last mouth closes | Reach a safer echo before the portal fails | Flickering field and dwindling supplies | They arrive in R4 and cannot relight the mouth | Inert frame state and clear reason immediate travel ends |
+| 8. A house beside the seam | Build a life while preparing slowly | Open hearth, wool rug and Moss’s preferred sitting place | Temporary shelter becomes home | Lived construction, feeding and sit-follow routines |
+| 9. One last supply run | Obtain final crying obsidian and glowstone | Moss stays on the rug beside a fire assumed to be contained | The protagonist leaves and the house remains vulnerable | Conventional portal route and material continuity |
+| 10. The room from the opening | Reach Moss and understand the fire | Wool-to-timber spread and an empty sitting place | Search fails; he chooses the Atlas route | Tested fire stages and no invented remains |
+| 11. One frame, many mouths | Build the full crying frame in the ravine | Exact opening geometry and incomplete blast protection | He charges the respawn anchor | Crying-obsidian inventory and coordinate match |
+| 12. The hand that wakes it | Activate the frame and cross | Direct interaction keeps him close to the discharge | Explosion kills him; portal lights afterwards | Version-tested blast staging plus fictional portal effect |
+| 13. Under the beginning | Reveal the portal’s destination | Camera rises through matching ground layers | R0 protagonist and Moss choose to stay above the active mouth | Stylised through-ground move and exact surface match |
+
+## Environmental clue design
+
+| Early detail | Initial reading | Later cause or pay-off |
+|---|---|---|
+| The same lightning-shaped granite seam | Useful orientation inside a strange destination | Confirms every crossing shares the same base geography |
+| A cobblestone block beside the R1 mouth | A practical route marker | Its absence in R2 proves adjacent blocks do not travel between realities |
+| Crying particles moving in one direction | Portal decoration or atmosphere | The Atlas diagrams identify the one-way echo current |
+| The clean survey journal | Ordinary expedition bookkeeping | The Archive Echo contains an older counterpart with matching symbols |
+| The phrase one frame, many mouths | Abstract portal theory | The final constructed frame projects the mouth found in R0 |
+| A torn blast-distance page | Damage to an old book | Leaves the protagonist with a real warning but no safe activation measurement |
+| Moss repeatedly choosing the wool rug | Domestic warmth and visual character | The familiar sitting place becomes the centre of the fire and later absence |
+| Stone surrounding the fireplace | Evidence of responsible construction | The stone survives, but the wool remains within the open flame’s spread range |
+| Crying obsidian and glowstone brought home | Hope of eventual travel | They explain why the protagonist was away and supply the final frame and anchor |
+| The cold open’s dropped materials | Unexplained purple cargo | The completed story reveals the final supply run and immediate portal capability |
+| The first clearing composition | A chronological restart after the cold open | The final ascent reveals it as the portal’s selected destination |
+| The blank journal visible in the final shot | A repeated personal prop | Suggests how another echo of the protagonist could eventually create the Atlas |
+
+## Ending and meaning
+
+The informational climax is the activation of the full crying frame. The protagonist has physically built the portal, supplied the crying obsidian, charged the anchor and triggered the event that projects its earlier mouth. Nobody built the portal in R0, but the protagonist built the connected frame in R4 after he had already found it in his own personal order.
+
+The emotional climax is his decision to wake it before he has a verified way to survive. He is not careless about Moss or distracted by possessions. He has searched, found the rug empty and concluded that the only reality in which Moss is certainly alive lies behind the first threshold. The tragedy is that the method works a fraction too late for its builder.
+
+After the blast, the camera remains. Purple light gathers between the crying blocks. It passes through the frame, travels vertically through dark stone and soil, and emerges into morning.
+
+The exact Return to the beginning composition appears. Moss sits at the overlook. The earlier protagonist opens the blank journal and draws the ravine symbol. The earlier narration repeats:
+
+**Moss sat down before I did. I took it as a vote. We could stay.**
+
+A faint portal hum rises from below. The audience knows they will investigate, enter, attempt to return, cross the echoes, build the house and eventually create the connection beneath them.
+
+The ending argues that reaching another reality is not the same as recovering what was lost. The protagonist succeeds in opening the route but cannot turn that technical success into a second life. Home remains meaningful because he and Moss chose and made it together, even though that choice also begins the loop.
+
+Moss’s exact fate in R4 remains intentionally unseen in this proposal. If Story lock requires explicit death rather than absence, that must be a human decision and the fire blocking should be revised without inventing a non-Minecraft corpse or keepsake.
+
+## Minecraft story engine
+
+### Candidate ordinary mechanics to verify
+
+- A tamed wolf can follow the protagonist through the planned portal blocking or be transferred through controlled capture.
+- A sitting wolf remains in place rather than following or teleporting during the supply run.
+- An open fireplace source can ignite wool placed within the relevant fire-spread range when fire spread is enabled.
+- Fire can continue from the rug into adjacent timber and create the planned house state.
+- Crying obsidian and glowstone can be acquired through the chosen survival route in the target edition and version.
+- A charged respawn anchor can produce the required Overworld explosion, damage and surviving frame geometry.
+
+These behaviours are production candidates, not claimed test results.
+
+### Invented mechanics
+
+- Crying-obsidian frames can form active portals.
+- Such portals connect echo-realities rather than the Nether.
+- Unanchored re-entry advances rather than returns.
+- A directly discharged respawn anchor can key a full crying frame to the traveller’s first threshold.
+- The discharge activates the portal after the explosion.
+- A constructed frame can project a receiving mouth into another reality at matching coordinates.
+
+The film must not present those rules as vanilla facts. The Atlas, repeated crossings and distinct visual language establish them as this story’s speculative canon.
+
+## Narration and camera
+
+- One narrator carries the protagonist’s interpretation; no additional spoken role is required.
+- The protagonist remains silent on screen.
+- The narrator may say what he believed at each stage but cannot call the echoes timelines after evidence supports separate realities.
+- The Atlas should be read through diagrams and a few short labels, not a long spoken lecture.
+- The cold open withholds Moss’s fate by cutting, not by making a false statement.
+- The final through-ground camera is explicitly omniscient audience presentation after the protagonist’s death.
+- No visible counterpart, double-avatar conversation or explanatory authority is required.
+
+## Production scope and evidence still required
+
+The working target remains approximately twenty minutes, with clarity taking priority over a fixed duration.
+
+The smallest version worth making requires:
+
+- one ravine reproduced in five strongly differentiated echo states;
+- one active crying-frame state, one unstable state, one inert state and one final activation state;
+- one compact house in lived, burning and burned conditions;
+- one pr
+
+CURRENT INTERNAL FILE SCHEMAS/TEMPLATES
+
+--- Required file .studio/internal/story/story-model.json; preserve its schema/columns ---
+{
+  "schema_version": 1,
+  "audience_promise": {
+    "novel_situation": "A lone Minecraft player and his tamed wolf find an active crying-obsidian portal beneath an untouched clearing, discover that every attempted return advances them through another reality of the same ravine, and eventually become stranded in the reality where the player will build the connected portal himself.",
+    "human_problem": "The protagonist learns how to reach his first threshold only after a wool-rug fire leaves Moss missing, turning a dangerous possibility of return into an urgent refusal to remain in the present reality.",
+    "pressure_source": "A one-way echo chain, dwindling supplies, an incomplete journal, a dead local portal mouth, a flammable domestic detail, Moss's sit state and a directly triggered respawn-anchor discharge compress his choices.",
+    "expected_pleasure": [
+      "Recognising one ravine beneath incompatible reality states",
+      "Watching an attempted return become another departure",
+      "Reading portal rules through marks, geography and the protagonist's echoed journal",
+      "Seeing a warm household detail become the ordinary cause of the fire",
+      "Discovering that the final crying frame projects the portal found at the beginning",
+      "Reinterpreting the Return to the beginning scene as the final portal's destination"
+    ],
+    "disappointment_test": "The promise fails if the realities are decorative repetitions, a visible second player explains the portal, the Atlas replaces observed evidence, the rug fire lacks a readable material path, the protagonist protects property instead of Moss, or speculative crying-obsidian behaviour is presented as verified vanilla Minecraft."
+  },
+  "premise": {
+    "disruption": "The protagonist and Moss discover a complete active crying-obsidian frame beneath an unvisited clearing, and trying to return through it sends them onwards into another reality.",
+    "protagonist_id": "PROTAGONIST",
+    "difficult_goal": "Find a survivable route back to the first reality while keeping Moss safe and making a life in the echo where the portal strands them.",
+    "central_opposition": "His evidence-led patience conflicts with his grief-driven demand for immediate reversal while the one-way portal rule, fire and explosive activation make haste consequential.",
+    "meaningful_consequence": "The material-gathering plan leaves Moss beside a flammable rug during the fire, and the protagonist's final attempt opens the route to the beginning only after its explosion kills him.",
+    "logline": "After a crying-obsidian portal traps a Minecraft player and his wolf in a chain of alternate realities, they build a home beside its dead mouth; when a wool rug catches fire and Moss disappears, the player follows an echoed version of his own journal to construct a return portal whose activation kills him but creates the impossible doorway he first found."
+  },
+  "theme": {
+    "subject": "Grief, home and the difference between a route back and a second chance",
+    "question": "If another reality still contains what was lost, does opening a path to it restore a life or merely refuse the life that remains?",
+    "provisional_argument": "Technical access to another possibility cannot undo the cost already paid, and grief can turn a real route into a demand for immediate action that the traveller cannot survive.",
+    "competing_values": [
+      "Care expressed through inhabiting the present",
+      "Control pursued through another reality",
+      "Patient evidence and survivable preparation",
+      "Urgent hope after ambiguous loss"
+    ]
+  },
+  "characters": [
+    {
+      "character_id": "PROTAGONIST",
+      "role": "protagonist",
+      "want": "Understand the crying portal, recover the first reality and keep Moss beside him.",
+      "need": "Distinguish a possible route from a guaranteed second chance and recognise when grief has replaced evidence as his decision standard.",
+      "fear": "That every crossing takes him farther from the only reality where he and Moss were unquestionably safe.",
+      "belief": "If he can record enough coordinates, acquire the correct materials and reproduce the Atlas diagram, Minecraft systems will remain legible and controllable.",
+      "limitation": "After Moss disappears, he treats delay for safer activation as equivalent to abandoning the wolf.",
+      "strategy": "Compare persistent geography, mark portal mouths, study the echoed journal, remain near the ravine seam, gather crying obsidian and glowstone, and key a full frame with a respawn anchor.",
+      "contradiction": "His patient routines create a genuine home with Moss, but the possibility of reversal eventually makes that patience intolerable.",
+      "boundary": "Once the fire is visible, he abandons every recoverable possession and directs each action towards finding Moss.",
+      "pressure_point": "He returns to the burning home with the final portal materials and finds Moss's familiar wool-rug position empty.",
+      "relationship_function": "Moss turns the echo chain from a spatial mystery into a shared life whose possible loss makes the first threshold irresistible.",
+      "agency": "He chooses the clearing, enters the portal, attempts the return, records successive echoes, uses the Atlas, settles near the seam, builds the house, gathers the activation materials, searches for Moss, constructs the final frame and directly discharges the anchor."
+    },
+    {
+      "character_id": "WOLF",
+      "role": "companion",
+      "want": "Expressed behaviourally, to follow the protagonist, remain near the shared home and occupy the warm wool rug.",
+      "need": "The protagonist must keep its command state and environmental safety compatible when he leaves the house.",
+      "fear": "Expressed only through ordinary avoidance, distress and fire response rather than humanised thought.",
+      "belief": "No abstract belief is assigned; Moss follows when standing and waits when seated.",
+      "limitation": "Moss cannot interpret the portal diagrams, assess the fireplace or cancel the sit command during the protagonist's absence.",
+      "strategy": "Follow across safe terrain, wait during hazardous work, accept food after damage and settle on the shared rug.",
+      "contradiction": "The reliable waiting behaviour that normally protects Moss prevents following or teleporting away when the house catches fire.",
+      "boundary": "Moss is never placed in a pen, kennel, separate pet room or human-like decision role.",
+      "pressure_point": "The protagonist leaves for the final material run while Moss is sitting beside the open hearth.",
+      "relationship_function": "Moss makes each reality emotionally comparable and turns enforced settlement into a chosen home.",
+      "agency": "Limited diegetic agency: Moss follows, sits, obstructs construction, accepts food and chooses familiar resting positions, but cannot override the final command state."
+    }
+  ],
+  "opposition": {
+    "opposing_goal": "The protagonist's grief-driven objective seeks immediate access to the first threshold, while his practical survival objective requires delay, testing and safer blast protection.",
+    "why_neither_side_can_withdraw": "The first threshold is the only reality in which Moss is certainly alive, but the activation method requires direct exposure and the protagonist has no complete safety measurement.",
+    "advantage": "The echo route is one-way, the Atlas is incomplete, the house fire has compressed his emotional judgement and the direct-hand rule places him beside the explosive anchor.",
+    "vulnerability": "He could wait, obtain stronger protection, test a sacrificial frame, search longer for Moss or accept uncertainty in R4.",
+    "cost_of_confrontation": "Attempting activation immediately risks the protagonist's life and destroys any chance to continue searching in R4.",
+    "cost_of_avoidance": "Delaying means remaining in the reality where Moss is absent and accepting that another echo may be reachable but not recoverable."
+  },
+  "stakes": {
+    "immediate": "Keep Moss with him and determine whether the first changed ravine can be exited safely.",
+    "practical": "Each crossing consumes supplies and may strand them in a less habitable reality without a working mouth.",
+    "personal": "The protagonist's trust that patient observation can make every Minecraft system controllable is tested by incomplete cross-reality evidence.",
+    "relational": "Moss is left sitting beside the flammable rug and is gone when the protagonist returns.",
+    "moral": "The fire response must prioritise Moss completely; the tragic error lies in prior material placement and later activation haste, not preference for property.",
+    "existential": "Other realities make another possibility visible without guaranteeing that the traveller can inhabit it.",
+    "systemic": "The consequences remain within one player, one wolf, five echoes and one repeated ravine."
+  },
+  "story_layers": {
+    "chronological_story": "In R0 the protagonist and Moss choose a clearing and enter a projected crying portal. Unanchored crossings carry them through R1, R2 and R3 into R4, where they build a home. A wool rug catches fire during a material run and Moss disappears. The protagonist builds and activates a keyed crying frame in R4; its explosion kills him while its receiving mouth opens into the earlier R0 threshold.",
+    "causal_plot": "An impossible portal prompts entry; a failed return prompts systematic marking; the marks make the Atlas credible; the chain's collapse prompts settlement; settlement creates the hearth and rug; portal preparation causes the absence during the fire; loss prompts immediate construction; direct activation causes death and opens the beginning mouth.",
+    "audience_presentation": "A fragment of the R4 fire opens the film, followed by the R0 arrival, portal discovery, successive realities, Atlas discovery, R4 h
+--- Required file .studio/internal/story/causal-spine.csv; preserve its schema/columns ---
+event_id,order,summary,cause_ids,cause_type,actor_id,goal,decision,consequence,state_change,new_information,audience_effect,dependent_event_ids,counterfactual_result,deletion_impact,production_note
+"CE-01","1","The protagonist and Moss reach an untouched clearing above an unvisited ravine, choose it as a possible home and discover an active crying-obsidian frame below.","","initial_state","PROTAGONIST","Establish a safe stopping place and account for the impossible portal hum.","He records the clearing in his survey journal and descends with Moss instead of ignoring the contradiction.","The pair confront a constructed threshold with no local builder or approach route.","Routine exploration becomes a shared authorship mystery.","A crying-obsidian portal is active where no ordinary portal should exist.","Warmth from the apparent beginning acquires an immediate layer of unease.","CE-02|CE-10","pass","Without the chosen clearing and impossible frame, there is no threshold, title question or surface image for the ending to reinterpret.","Reserve the exact surface composition, blank journal, ravine seam and portal cave for later matches."
+"CE-02","2","They enter the portal, explore the Rain Echo and re-enter expecting to return, but arrive in the Ash Echo instead.","CE-01","prior_event","PROTAGONIST","Verify the destination and take Moss back to the clearing they left.","After matching the ravine geography, he treats the same frame as a reversible door and crosses again.","The attempted return becomes a second displacement.","Curious traveller becomes unwilling echo traveller.","Re-entry does not undo a crying-portal crossing.","Confusion sharpens into the story's governing threat.","CE-03","pass","Deleting the failed return removes the user-requested reversal and leaves later one-way knowledge unearned.","Use identical granite and stone profiles with clearly incompatible rain, water and surface states."
+"CE-03","3","The protagonist marks successive mouths and confirms that each crossing enters a distinct reality of the same place.","CE-02","prior_event","PROTAGONIST","Replace panic with a testable model and avoid losing orientation.","He places a cobblestone mark beside one frame, records coordinates and crosses when the current echo becomes unsafe.","The next mouth has the same frame and coordinates but not the adjacent mark.","Displacement becomes an evidence-led echo model.","Portal-adjacent blocks belong to individual realities while the ravine geometry persists.","The audience can anticipate further realities without treating them as arbitrary spectacle.","CE-04","pass","Without the marking test, the Atlas supplies a rule the protagonist has not earned and the realities could be read as changing time states.","Keep the mark outside the frame and repeat its absence in a clean matched insert."
+"CE-04","4","In the Archive Echo he finds the Weeping Atlas, then takes one final uncontrolled crossing into R4 where the local mouth closes.","CE-03","prior_event","PROTAGONIST","Learn whether any crossing can reach the first threshold and escape the failing echo.","He compares the older journal with his own, takes it and trusts its next-arrow warning when the portal destabilises.","He and Moss reach a habitable reality but cannot relight the dead mouth with ordinary fire.","Systematic traveller becomes informed but stranded settler.","A full crying frame keyed by a direct respawn-anchor discharge may reach the traveller's first threshold.","Explanation creates hope while the torn blast page preserves danger.","CE-05|CE-08","pass","Deleting the Atlas removes the established crying-frame deviation, the final construction basis and the journal pay-off.","Use a few legible diagrams, a matching journal prop and an inert R4 portal state; do not claim the rule is vanilla."
+"CE-05","5","The protagonist and Moss settle beside the R4 ravine, build a house and establish a wool-rug routine beside an open fireplace while gathering portal materials slowly.","CE-04","prior_event","PROTAGONIST","Make a safe life without abandoning the possibility of a prepared return.","He remains near the only known seam, builds a stone-surrounded hearth and places a wool rug where Moss prefers to sit.","Enforced settlement becomes a valued home with a concealed flammable adjacency.","Stranding becomes attachment and long-term preparation.","The household seen burning in the cold open arises from ordinary shared choices.","Relief and affection make the latent fire route emotionally costly.","CE-06","pass","Without home life and the rug routine, the fire and Moss's absence are merely plot mechanisms.","Capture construction, feeding, follow and sit behaviour; test the exact hearth-to-wool range before lock."
+"CE-06","6","He leaves Moss sitting on the rug during a final material run, and fire spreads from the open hearth into the wool while he is away.","CE-05","prior_event","PROTAGONIST","Obtain the last crying obsidian and glowstone required for a full frame and anchor.","He treats the stone fireplace as contained, leaves its permanent flame burning and keeps Moss home from the dangerous route.","The rug ignites and carries fire into the timber interior before he returns.","Patient portal preparation becomes immediate domestic danger.","The fire comes from the affectionate rug placement and ordinary absence, not an echo force.","The cold-open disaster becomes traceable before its completed outcome is shown.","CE-07","pass","Without the supply decision and material path, the fire is arbitrary and his final inventory lacks an origin.","Design the route or simulation conditions so the house can progress to the planned state; verify in the target version."
+"CE-07","7","The protagonist returns, completes the cold-open rescue route and finds Moss gone despite searching the house and surrounding paths.","CE-06","prior_event","PROTAGONIST","Reach Moss without spending time on possessions or structural defence.","He drops the portal materials, directs water and block breaking towards the shared room, then searches beyond the burned shell when the rug position is empty.","The house is lost and Moss's R4 fate becomes an unresolved absence.","Home and companionship become grief and uncertainty.","The wool rug was the fire's first vulnerable block and Moss is no longer present in the reality the protagonist can inspect.","The withheld cold-open outcome resolves as absence rather than an invented body or token.","CE-08","pass","Deleting the failed search removes the emotional cause of immediate activation and risks making the protagonist abandon Moss too quickly.","Stage the same cold-open actions, an empty sitting position and a credible external search; no death message or collar object."
+"CE-08","8","Using the Atlas and the materials brought home, he builds a complete crying-obsidian frame at the R4 ravine seam.","CE-04|CE-07","parallel_cause","PROTAGONIST","Open a route to the first threshold where Moss is certainly alive.","He stops treating the frame as a future project and reconstructs the Atlas geometry immediately after the search fails.","The final frame reproduces the impossible portal composition from R0 and a charged anchor is placed within it.","Grief becomes committed cross-reality action.","The protagonist is the material builder of the connected portal found at the beginning.","The title mystery resolves while activation danger remains.","CE-09","pass","Without his construction choice, the initial portal has no dramatic author and the final materials have no pay-off.","Show every crying block, the exact ravine coordinates, anchor placement and incomplete stone baffle."
+"CE-09","9","The protagonist directly discharges the respawn anchor; the explosion kills him and the crying portal activates after the blast.","CE-08","prior_event","PROTAGONIST","Key the completed frame to his first threshold and cross before the discharge reaches him.","He accepts the incomplete safety evidence and triggers the anchor by hand rather than delaying for a tested method.","He dies before crossing, but the frame forms a stable portal plane through the smoke.","Hopeful builder becomes absent builder; inert frame becomes active connection.","The opening portal's activation and the protagonist's final absence share one chosen cause.","Success and death arrive in the wrong order, completing the tragedy.","CE-10","pass","Without the direct discharge, neither the explicit death nor the active final portal is caused by the protagonist's value choice.","Verify candidate anchor blast behaviour separately from the fictional crying-frame activation effect."
+"CE-10","10","The camera crosses the lit frame and rises into R0 as the earlier protagonist and Moss choose the clearing above it as home.","CE-01|CE-09","parallel_cause","PROTAGONIST","In the revealed earlier moment, mark the new place and stay with Moss.","The earlier protagonist opens his blank journal, records the ravine and chooses to investigate the hum below.","The apparent beginning is identified as the final portal's receiving reality and the first decision leads towards the same journey.","Linear presentation closes into a cross-reality loop.","The R4 frame projects the R0 portal, the blank journal precedes the Atlas and the pair are about to find the threshold.","Tragic death gives way to tenderness, recognition and inevitable continuation.","","pass","Without the vertical reveal and repeated decision, the portal destination, journal image and requested loop remain incomplete.","Use an omniscient through-ground transition, the exact SC-02 surface composition and repeated audio rather than implying player survival."
+--- Required file .studio/internal/story/sequence-outline.csv; preserve its schema/columns ---
+sequence_id,order,temporary_goal,strategy,primary_location,complications,reversal,outcome,story_state_afterward,estimated_seconds,production_note
+"SQ-01","1","Survive the promised fire image, then understand the clearing and impossible portal beneath it.","Open on direct rescue action, cut before the room reveal, return to the pair's arrival and let map evidence and portal hum pull them into the ravine.","R4 burning house fragment, R0 clearing and R0 ravine cave","The cold open supplies unexplained loss while the unvisited R0 frame contradicts the protagonist's authorship knowledge.","The crying portal leads to the same ravine in a different reality.","The protagonist and Moss cross by choice and lose their original context.","A proposed home becomes a cross-reality mystery.","160","Reserve the exact clearing image for SQ-05 and show no local builder, message or second avatar."
+"SQ-02","2","Get back to R0 and determine how the crying portal selects destinations.","Explore the first echo, attempt a return, mark successive mouths, compare coordinates and use the Weeping Atlas only after observed evidence supports it.","R1 Rain Echo, R2 Ash Echo, R3 Archive Echo and R4 dead mouth","Each apparent return advances the chain, local marks disappear, supplies diminish and the Archive mouth destabilises.","The Atlas offers a keyed return method, but the final uncontrolled crossing strands them in R4 without the necessary materials.","Confusion becomes a reliable model and a long-term problem.","Knowledge replaces panic, but knowledge cannot provide immediate escape.","310","Give every echo one strong state change and one informational function; keep Atlas inserts concise."
+"SQ-03","3","Make R4 habitable while preparing a survivable first-threshold route.","Stay beside the ravine seam, build a compact home, establish Moss's rug routine and acquire crying obsidian and glowstone gradually.","R4 clearing, house, ravine and conventional supply route","The local mouth is inert, the full frame is resource-intensive and the open hearth appears safely surrounded by stone.","The final supply journey leaves Moss sitting beside wool within the fire-spread range.","Stranding becomes home while the return plan creates the conditions for absence.","Patient coexistence becomes latent domestic danger.","265","Use lived construction and survival actions; the fireplace-to-wool geometry remains provisional until tested."
+"SQ-04","4","Return through the burning house, find Moss and determine whether any present-world action remains.","Ignore supplies, direct water and block breaking towards the shared room, search the ruin and nearby terrain, then trace the burn fan to the rug.","R4 burning house, burned clearing and ravine entrance","Moss's sit state, progressed fire and lack of recoverable evidence deny a clear rescue or answer.","Moss is gone, and the materials just brought home make the Atlas route immediately possible.","The protagonist abandons gradual preparation and commits to the crying frame.","Care becomes uncertain grief and urgent reversal.","195","Complete the cold-open blocking exactly; do not invent a corpse, collar drop or tested fire result."
+"SQ-05","5","Build and wake a portal to the first threshold before accepting the R4 loss.","Reproduce the full crying frame, charge the anchor, use an incomplete blast baffle and trigger the required direct discharge.","R4 ravine portal cave, portal passage and R0 surface clearing","The Atlas safety page is torn, direct interaction requires proximity and the protagonist is acting after the fire and failed search.","The explosion kills him before the portal forms, but the active connection opens into the earlier R0 arrival.","The builder mystery and destination resolve while the earlier pair unknowingly begin the same journey.","Fatal activation becomes the portal that nobody made in R0.","210","Separate verified candidate explosion behaviour from fictional portal activation and use an omniscient final camera."
+--- Required file .studio/internal/story/beat-sheet.csv; preserve its schema/columns ---
+beat_id,sequence_id,order,actor_id,attempt,interference,change,next_cause,purpose,reveal,visual,audio,estimated_seconds,dependency
+"BEAT-01","SQ-01","1","PROTAGONIST","Return through the burning house and reach Moss.","The fire has already reached the wool rug and shared room while Moss is unseen.","He drops valuable portal materials, sends water towards the room and breaks in before the film cuts.","CE-07","Open with loss, action and an honestly withheld outcome.","The protagonist values Moss above the house and has returned carrying crying obsidian and glowstone.","Purple materials hit the ground as water crosses the burning rug.","Fire and block breaking overtake one short narration line.","35","SC-01"
+"BEAT-02","SQ-01","2","PROTAGONIST","Survey a new clearing and decide whether it can become home.","The ravine is remote, but water, timber and shelter make it promising.","Moss sits at the overlook, the protagonist records the place and decides they can stay.","CE-01","Establish the relationship, blank journal and surface image later reinterpreted by the ending.","The pair arrive together and the ravine symbol belongs to the protagonist's ordinary notation.","Morning wide shot, Moss at the ledge and a clean journal page.","The repeated line about Moss's vote plays over quiet ambience.","55","SC-02"
+"BEAT-03","SQ-01","3","PROTAGONIST","Identify the portal hum and test the impossible frame.","The crying-obsidian frame is complete and active despite no local path, mine or builder evidence.","Observation cannot explain it, so he leads Moss through.","CE-02","Honour the portal promise through accountable curiosity.","The private unvisited ravine contains a portal that cannot be an ordinary Nether frame.","Hand, wolf and purple plane share the threshold before the transition.","Portal hum replaces narration at the decision.","70","SC-03"
+"BEAT-04","SQ-02","4","PROTAGONIST","Orient in the Rain Echo and return to R0.","The same stone profile exists beneath incompatible water, weather and vegetation.","He explores, confirms the coordinates and re-enters the portal, only to emerge in the Ash Echo.","CE-02","Deliver the requested confusion, exploration and failed return.","A crying portal is not reversible through immediate re-entry.","The granite seam matches while a waterfall and scorched horizon replace the clearing.","Rain cuts abruptly to dry wind after the second transition.","85","SC-04"
+"BEAT-05","SQ-02","5","PROTAGONIST","Test whether the destination is another reality or a changing version of one world.","The frame persists, but local details contradict the previous echo.","He places a cobblestone mark beside the mouth, records it and finds it absent after the next crossing.","CE-03","Turn disorientation into an audience-readable experiment.","Adjacent matter stays with its reality while matching coordinates and frame geometry recur.","A clean matched close-up replaces the marked portal foot.","Pick-up and placement sounds create the comparison without explanatory dialogue.","65","SC-05"
+"BEAT-06","SQ-02","6","PROTAGONIST","Search the Archive Echo for food, shelter and portal evidence.","An abandoned survey recess contains a damaged book that looks like his own journal.","Matching symbols and diagrams identify the Weeping Atlas and the one-way next-arrow rule.","CE-04","Establish the invented crying-frame mechanism through personal evidence.","A full frame plus direct anchor discharge may reach the traveller's first threshold, but the safety measurement is missing.","Clean journal and weathered Atlas lie open on matching ravine symbols.","Page turns, distant portal instability and sparse narration carry the discovery.","100","SC-06"
+"BEAT-07","SQ-02","7","PROTAGONIST","Reach a habitable echo before the Archive mouth fails.","The portal plane flickers and the surrounding reality offers no safe long-term shelter.","He crosses with Moss, reaches R4 and cannot relight the extinguished local mouth.","CE-05","End uncontrolled travel and force life in one reality.","The Atlas describes a possible return, but he lacks a frame, anchor and materials.","Purple light collapses to an inert crying outline as flint produces no response.","Portal sound drains into ordinary ravine ambience.","60","SC-07"
+"BEAT-08","SQ-03","8","PROTAGONIST","Turn the R4 shelter into a shared home beside the only known seam.","The compact footprint demands a fireplace near the main room, and Moss repeatedly chooses the warm floor beside it.","He surrounds the flame with stone but places a wool rug inside its potential spread range.","CE-05","Make the home, Moss routine and fire cause one continuous visual choice.","The cold-open house and rug arise from care rather than decorative coincidence.","Moss settles on fresh wool while the stone hearth burns behind it.","Building rhythm, feeding and domestic fire replace heavy narration.","120","SC-08"
+"BEAT-09","SQ-03","9","PROTAGONIST","Prepare the first-threshold method without risking an incomplete activation.","A full crying frame and charged anchor require more materials than he has.","He gathers gradually, studies the torn blast page and plans one final supply run.","CE-06","Give the final inventory an ordinary origin and contrast patience with later haste.","He understands that activation is dangerous before Moss disappears.","Crying blocks, glowstone slots and a rough stone-baffle sketch accumulate beside the Atlas.","Measured inventory sounds support restrained explanation.","85","SC-08"
+"BEAT-10","SQ-03","10","PROTAGONIST","Collect the remaining crying obsidian and glowstone without exposing Moss to the dangerous route.","The open hearth is left burning and Moss's familiar safe command position is the wool rug.","He seats Moss, leaves through the conventional supply route and returns carrying the final materials.","CE-06","Join the portal plan, absence and fire setup through one responsible-looking decision.","The exact conditions of the cold open are now in place.","The door closes on Moss beside the hearth; the shot holds after the protagonist leaves.","Footsteps fade until only the fire remains.","60","SC-09"
+"BEAT-11","SQ-04","11","PROTAGONIST","Reach Moss immediately after seeing smoke on the return ridge.","Fire has spread from the rug into timber and obscured the shared room.","He completes the cold-open route, reaches the sitting place and finds it empty.","CE-07","Resolve the opening action without creating a property-versus-life choice.","Moss is gone in R4, though no body or death message establishes the exact fate.","The camera continues past the earlier cut to the consumed rug position.","Narration falls silent through the search of the room.","125","SC-10"
+"BEAT-12","SQ-04","12","PROTAGONIST","Search beyond the house and decide what the remaining evidence allows.","There is no response nearby, while the burn fan leads back to the rug and the Atlas promises only a dangerous route.","He retrieves the dropped materials and carries the Atlas into the ravine.","CE-08","Let grief become a consequential decision after a credible search.","The final supply run caused his absence, but it also completed the inventory needed to reach the first threshold.","Empty paths give way to crying blocks stacked at the dead mouth.","Sparse narration states belief rather than certainty about Moss.","70","SC-10"
+"BEAT-13","SQ-05","13","PROTAGONIST","Build the exact full crying frame and a survivable activation position.","The Atlas requires direct discharge and its final blast-distance measurement is torn away.","He completes the frame, charges the anchor and accepts an incomplete stone baffle.","CE-09","Pay off builder identity, materials and the knowledge source before the climax.","The portal nobody made in R0 is materially constructed by the protagonist in R4.","Opening portal close-ups recur as each crying block takes its coordinate.","Placement sounds echo the initial inspection in reverse order.","90","SC-11"
+"BEAT-14","SQ-05","14","PROTAGONIST","Wake the frame and cross to the first threshold.","Direct interaction keeps him inside the unverified blast problem.","The anchor explodes and kills him; after the debris settles, the invented portal field lights.","CE-09","Resolve the final choice through mechanism rather than exposition.","The activation succeeds after its intended traveller is dead.","White blast, still frame, then purple light through smoke.","The explosion cuts all sound before the portal hum slowly returns.","55","SC-12"
+"BEAT-15","SQ-05","15","PROTAGONIST","In the revealed R0 moment, choose whether the clearing should become home.","Neither the earlier protagonist nor Moss knows the active receiving mouth waits beneath them.","The camera rises into the repeated arrival, the blank journal opens and the decision to stay leads towards discovery.","CE-10","Close the spatial, journal and emotional loop in one visual transformation.","The final portal reaches the Return to the beginning reality and precedes its own discovery.","Stone becomes soil, then the exact morning wide shot of Moss at the overlook.","The opening line repeats as a faint portal hum enters below it.","65","SC-13"
+--- Required file .studio/internal/story/scene-cards.csv; preserve its schema/columns ---
+scene_id,sequence_id,location,time,pov,scene_purpose,entry_state,objective,reason_objective_matters,obstacle,opposing_agent,tactics,information_revealed,information_withheld,emotional_progression,visual_event,turn,outcome,exit_state,new_question,setup_or_payoff,story_value,production_requirements
+SC-01,SQ-01,R4 burning house and shared main room,R4 at night; late personal order; presented first as a cold open,Close protagonist,Promise urgent relationship loss and establish that Moss outranks possessions.,The protagonist returns over the ridge carrying portal materials and sees the house already burning.,Reach Moss through the shortest available route.,Moss is the shared-life stake and the opening cannot imply that the protagonist pauses to save property.,The wool rug and timber interior are burning while Moss is not visible from outside.,Fire geometry and elapsed absence.,"Drop crying obsidian and glowstone, place water towards the room and break the shortest wall.",The protagonist spends no action on storage and has returned with unexplained portal materials.,"The fire's cause, Moss's location and the meaning of the materials remain unknown.","Shock to concentrated rescue, then interruption.",Water crosses the burning rug as the protagonist reaches through smoke.,The image cuts before the room is visible.,The rescue remains unresolved but its priority is clear.,The rescue remains unresolved but its priority is clear.,"What happened while he was away, and is Moss still inside?",SP-11,"Hook, emotional orientation and material mystery.","Set and state: R4 house in a controlled partial-fire condition. Props and mechanics: dropped crying obsidian, glowstone, water placement and a breakable rescue wall. Continuity and capture: exact action and camera match for SC-10; no mechanical validation is claimed."
+SC-02,SQ-01,R0 clearing and ravine overlook,R0 morning; personal order 1 after the cold open,Close protagonist and Moss,"Establish the pair, blank survey journal and surface composition later revealed as the portal destination.",The protagonist and Moss have reached an unvisited but resource-rich clearing.,Decide whether to stop and establish a base.,The choice defines home before the portal makes location unstable.,"The ravine is remote, but it offers water, stone, timber and a natural overlook.","Terrain, distance and ordinary survival needs.","Check the map, draw the ravine symbol, let Moss settle and place a temporary marker.",Moss and the protagonist are already a functioning pair and voluntarily choose the place.,An active crying portal waits below and the scene is the far end of the final connection.,Travel weariness to quiet belonging.,Moss sits at the ledge while the clean journal opens on the first ravine sketch.,A low hum from below changes settlement into investigation.,They descend together rather than beginning construction immediately.,They descend together rather than beginning construction immediately.,What could be active beneath an untouched clearing?,SP-01;SP-03;SP-12,"Relationship foundation, audience orientation and final-image setup.","Set and capture: repeatable R0 morning clearing, ravine overlook and locked wide-shot position. Performance and props: controlled Moss mark, clean journal insert, ravine symbol and temporary marker. Continuity: preserve lighting, blocking and audio references for SC-13."
+SC-03,SQ-01,R0 north-wall ravine cave,R0 later that morning; personal order 1,Close protagonist and Moss,Pose the title question and make the first entry an accountable decision.,The pair follow the hum into a cave with no player route or mine.,Explain enough of the active frame to decide whether to cross.,The frame is the only evidence capable of challenging the protagonist's private-world knowledge.,A complete crying-obsidian portal should not behave like a normal Nether frame and has no local construction evidence.,The impossible active threshold and uncertain destination.,"Inspect coordinates, frame faces, surrounding natural blocks and absence of dropped or written evidence; keep Moss close before crossing.",The portal is deliberate in shape but has no local builder or approach history.,It is the receiving mouth of the protagonist's final R4 construction.,"Curiosity to unease, then chosen risk.",The protagonist's hand and Moss's silhouette enter the purple plane together.,He chooses action when inspection reaches its limit.,Both leave R0 through the impossible frame.,Both leave R0 through the impossible frame.,"Does it lead to the Nether, another location or another version of this place?",SP-02;SP-05,Inciting agency and title mystery.,"Set and effects: complete active crying-obsidian hero frame in an untouched natural cave, with a transition language distinct from a vanilla Nether portal. Blocking and continuity: safe repeatable player-and-wolf entry, coordinate insert and matching frame geometry for SC-11."
+SC-04,SQ-02,R1 Rain Echo ravine and R2 Ash Echo threshold,R1 and R2 during the first two crossings; personal order 2,Close protagonist and Moss,"Deliver confusion, exploration and the failed assumption that re-entry returns home.",The pair emerge beside the same granite seam under persistent rain and a new watercourse.,"Verify the place, then return to R0.","Moss, supplies and the intended home all remain on the far side as far as the protagonist understands.",Natural geography matches while the surface state contradicts the clearing they left.,The echo environment and an incorrect reversible-door model.,"Compare coordinates, climb to the surface, inspect landmarks and re-enter the frame.",The portal preserves place more reliably than reality state.,The one-way chain and ultimate destination remain unknown.,"Disorientation to cautious confidence, then sharper alarm.",Rain vanishes at the transition and an ash-coloured tree line replaces it.,The attempted return produces another unfamiliar reality.,The protagonist can no longer assume that turning round means going back.,The protagonist can no longer assume that turning round means going back.,How can he test whether these are distinct realities rather than one changing world?,PAY-01;SP-04,Requested first-return reversal and portal-rule foundation.,"Sets and capture: coordinate-matched R1 rain and R2 ash ravine states with a fixed granite profile, waterfall, vegetation and tree-line variants. Blocking and effects: two controlled player-and-wolf crossings, matched thresholds and an audible rain-to-dry-wind transition."
+SC-05,SQ-02,R2 Ash Echo ravine mouth and next projected threshold,R2 later the same personal day,Close protagonist,Turn repeated displacement into a reproducible test.,The protagonist now distrusts the portal but cannot remain indefinitely in the scorched echo.,Determine what persists and whether any action can mark a return path.,A reliable model is necessary before another crossing risks Moss and supplies.,The frame looks identical even though surrounding reality details differ.,Resource pressure and the portal's one-way behaviour.,"Record coordinates, place cobblestone outside the frame, sketch the granite seam and cross only after documenting the test.",The next mouth retains geography and frame form but not the adjacent cobblestone mark.,Whether a deliberately keyed frame can select a previous echo remains unknown.,Fear to methodical focus.,A marked portal foot match-cuts to clean natural stone beside the next mouth.,The missing mark supports separate stable realities.,The protagonist adopts an echo-chain model and searches for prior evidence.,The protagonist adopts an echo-chain model and searches for prior evidence.,"Has anyone, including another version of him, already tested the chain?",PAY-04,Evidence-led reality distinction and protagonist competence.,"Props and continuity: cobblestone marker placed outside the frame, clean unmarked counterpart, journal sketch and coordinate overlay. Capture: exact matched portal-foot compositions, controlled inventory state and a legible comparison that does not rely on narration."
+SC-06,SQ-02,R3 Archive Echo survey recess,R3 during an unstable portal interval,Close protagonist and Moss,Establish the crying-portal deviation and give the final method a personal source.,The pair enter an echo containing a small abandoned recess near the same ravine wall.,"Find food, shelter and any record explaining the portals.",The portal plane is becoming unreliable and another blind crossing may strand them.,The only record is a damaged counterpart of the protagonist's own survey journal.,"Incomplete evidence, portal instability and an unseen counterpart's history.","Compare covers and symbols, read diagrams rather than prose and test the next-arrow notation against prior crossings.","The Weeping Atlas records one frame with many mouths, forward-only unanchored travel and a full-frame anchor route to the first threshold.","Who completed the Atlas, how that counterpart learned the rule and the missing safe blast distance remain unknown.","Isolation to uncanny recognition, then qualified hope.",The clean journal lies beside its weathered counterpart on matching ravine drawings.,The direct-hand anchor diagram offers a route but the safety page ends at a torn edge.,He takes the Atlas and chooses one more crossing when the mouth begins to fail.,He takes the Atlas and chooses one more crossing when the mouth begins to fail.,Can they reach a habitable echo and ever gather enough material for the keyed frame?,PAY-03;SP-05;SP-10,"Mechanism establishment, identity clue and actionable hope.","Set and props: R3 survey recess, clean journal and weathered Atlas with a small number of readable matching pages. Effects and blocking: unstable portal state, controlled player-and-wolf positions and insert-shot lighting. Cast restriction: no counterpart actor or additional voice."
+SC-07,SQ-02,R4 north-wall cave and surface clearing,R4 late afternoon; personal order 3,Close protagonist and Moss,End the crossing 
+--- Required file .studio/internal/story/information-map.csv; preserve its schema/columns ---
+info_id,question_or_fact,audience_knows_before,audience_expects_before,character_knowledge_before,delivery_beat_or_scene,audience_knows_after,audience_expects_after,emotional_orientation_after,withheld_or_revealed,fairness_setup_ids,payoff_or_resolution_id,notes
+"INF-01","What happened to Moss in the cold-open fire?","The protagonist returns to a burning shared home and directs every action towards Moss before the scene cuts.","Moss may still be in the room and reachable.","The protagonist knows Moss was left sitting on the rug but has not yet seen the room.","SC-10","The sitting place is empty, the surrounding search fails and Moss is gone from observable R4.","The protagonist will seek a reality in which Moss is certainly alive, but the exact R4 fate may remain unseen.","Loss, uncertainty and sympathy without a false property dilemma.","withheld","SP-11|SP-13","OPEN-01","The film supplies absence rather than a corpse, collar object or unshown claim of survival."
+"INF-02","Where does the first portal crossing lead?","The active frame sits beneath a recognisable R0 ravine.","It may lead to the Nether, another location or another state of the same world.","The protagonist has no tested model and expects ordinary portal logic to be relevant.","SC-04","Matching granite and coordinates exist beneath incompatible natural history in R1.","Re-entry appears likely to return to R0 until the next transition disproves it.","Disorientation mixed with spatial recognition.","revealed","SP-01|SP-02","PAY-01","Geography establishes place before the story names realities."
+"INF-03","Are the destinations different realities rather than changing times or resets?","R1 and R2 share geography but have incompatible water and surface states.","The portal may be cycling one mutable world.","The protagonist suspects an ordered chain but lacks a persistent test.","SC-05","A cobblestone mark placed beside one mouth is absent beside the next while coordinates and frame geometry persist.","The audience expects stable echoes with local block histories.","Methodical recognition replaces arbitrary uncertainty.","revealed","SP-01|SP-04","PAY-04","The Atlas later labels a model already supported by action."
+"INF-04","Why can the protagonist not simply go back or keep crossing?","The first return attempt advances and successive mouths follow the same pattern.","A later mouth might eventually cycle back to R0.","The protagonist knows only that each observed crossing has moved forwards.","SC-06;SC-07","The Atlas records a forward-only unanchored chain, and the R4 mouth closes before another crossing is possible.","A deliberately keyed full frame becomes the only proposed route to the first threshold.","Knowledge provides hope while stranding becomes real.","revealed","SP-04|SP-05|SP-06","PAY-06","The rule is fictional canon and remains subject to human approval."
+"INF-05","Who created the Weeping Atlas?","The protagonist carries a clean journal with a distinctive ravine symbol and repaired corner.","Any portal explanation may come from an unknown prior traveller.","He knows his own notation and has not seen another person.","SC-06;SC-13","The Archive book is an older counterpart of his journal, and the final R0 image repeats its clean beginning.","Another echo of the protagonist is the strongest inference, but its exact experimental history remains open.","Personal uncanniness rather than external lore exposition.","revealed","SP-03","PAY-03","No counterpart appears or speaks; only the document and final prop support the inference."
+"INF-06","What starts the house fire?","The house has a stone-surrounded open hearth and Moss routinely sits on a wool rug beside it.","The stone may appear to make the fireplace safe.","The protagonist believes the permanent flame is contained.","SC-09;SC-10","Fire spreads from the open hearth to wool within range, then from the rug into the timber room while he is away.","The audience can trace the cold-open burn fan without an echo force or random explosion.","Tragic recognition of an affectionate practical mistake.","revealed","SP-07|SP-08","PAY-07","Exact spread distance and simulation behaviour require target-version testing."
+"INF-07","How can a complete crying-obsidian frame behave differently?","The observed frame already connects realities and ignores ordinary reverse travel.","Its behaviour may be uncontrollable.","The protagonist has verified only the unanchored next-echo rule.","SC-06;SC-11","The Atlas proposes that a full frame keyed by direct respawn-anchor discharge reaches the traveller's first threshold.","The final build will test the method under lethal uncertainty.","Qualified hope and concern.","revealed","SP-05|SP-10","PAY-05","The story labels this rule as invented rather than vanilla Minecraft."
+"INF-08","Why is the protagonist away when the rug catches fire?","He has been collecting portal materials gradually while living with Moss.","A final journey may complete the Atlas method.","He believes Moss is safer sitting at home than travelling through the hazardous supply route.","SC-09","The final run supplies the crying obsidian and glowstone dropped in the cold open and leaves Moss beside the vulnerable rug.","Those same materials can now drive an immediate grief response.","Foreboding grounded in a responsible-looking choice.","revealed","SP-08|SP-09","PAY-09","The route and loaded-area behaviour remain production questions."
+"INF-09","What causes the final explosion and death?","The Atlas shows a charged anchor, direct-hand keying and a torn blast-distance page.","The protagonist may construct enough protection to survive and cross.","He knows the activation is dangerous but lacks the final safety measurement.","SC-12","His direct discharge produces the explosion, kills him and wakes the fictional portal field after his death.","The audience expects the active frame to reveal a destination without carrying him through.","Shock followed by tragic mechanical satisfaction.","revealed","SP-09|SP-10","PAY-10","Candidate anchor behaviour requires verification; crying-frame activation remains explicit invention."
+"INF-10","Who made the initial portal, and where does the final frame lead?","The R0 mouth has no local builder and the opening surface scene appears to precede all portal events.","The protagonist may build a similar gate without proving it is the same connection.","He believes the full frame will seek his first threshold but cannot observe its result before death.","SC-11;SC-13","The protagonist materially builds the R4 frame, and the camera emerges into the exact R0 arrival above its projected receiving mouth.","The earlier pair will descend, enter and begin the same one-way journey.","Mystery resolution, tenderness and loop recognition.","revealed","SP-02|SP-05|SP-12","PAY-12","Nobody built the frame locally in R0; its constructed source is the connected R4 frame."
+--- Required file .studio/internal/story/setup-payoff-ledger.csv; preserve its schema/columns ---
+setup_id,setup_beat_or_scene,setup,initial_audience_interpretation,payoff_id,payoff_beat_or_scene,payoff,planned_payoff_type,resolution_status,intentionally_open_reason,latest_acceptable_point,notes
+"SP-01","SC-02;SC-04","The R0 and R1 ravines share a lightning-shaped granite seam, stone rib and coordinate pattern despite incompatible surface states.","The portal may have moved the pair through time or altered one world.","PAY-01","SC-05;SC-13","Missing local marks establish separate echoes, and the final ascent uses the same coordinates to reveal R0 as the destination.","reinterpretation","planned","","SC-13","Use exact terrain and lenses before relying on narration."
+"SP-02","SC-03","A complete active crying-obsidian frame stands in an unvisited R0 cave without a local approach route or builder evidence.","An unknown traveller or anomaly may have constructed it.","PAY-02","SC-11;SC-13","The protagonist builds the connected full frame in R4, whose receiving mouth appears in R0.","confirmation","planned","","SC-13","The R0 frame is projected from a material source rather than locally placed by another character."
+"SP-03","SC-02","The protagonist records the clearing in a clean survey journal using a distinctive ravine symbol and repaired corner.","It is ordinary expedition bookkeeping.","PAY-03","SC-06;SC-13","The Archive Echo contains an older counterpart with the same notation, and the final image restores the clean journal at its beginning.","reinterpretation","planned","","SC-13","The exact counterpart history may remain open, but the prop identity must be unmistakable."
+"SP-04","SC-04;SC-05","Re-entering advances to R2, and a cobblestone mark placed beside one mouth is absent at the next.","The portal may be malfunctioning or randomly selecting worlds.","PAY-04","SC-05;SC-06","Observed marks and Atlas arrows establish a stable forward-only echo chain.","confirmation","planned","","SC-06","Keep the mark outside the frame so its absence tests local reality rather than portal movement."
+"SP-05","SC-03;SC-06","Crying particles flow directionally, and the Atlas labels the system one frame, many mouths with a full-frame route to first threshold.","The labels may be an unverified theory from an unseen traveller.","PAY-05","SC-11;SC-12;SC-13","The completed frame and anchor discharge activate a connection whose far mouth is the protagonist's first R0 threshold.","confirmation","planned","","SC-13","Fictional rule requires human canon approval and consistent visual language."
+"SP-06","SC-07","The R4 mouth collapses and cannot be relit with ordinary fire, forcing the pair to remain near its coordinates.","The portal chain may have exhausted or the frame may be damaged.","PAY-06","SC-11","The protagonist returns to the same seam and builds the full keyed frame instead of attempting another ordinary relight.","escalation","planned","","SC-11","Make the missing materials and failed relight visible."
+"SP-07","SC-08","A wool rug is placed beside a stone-surrounded open fireplace where Moss prefers to sit.","The stone surround makes the warm domestic arrangement appear safe.","PAY-07","SC-09;SC-10","The open flame reaches wool within its spread range and the rug carries fire into the timber room while the protagonist is away.","tragic_fulfilment","planned","","SC-10","Exact geometry and fire-tick behaviour require target-version testing."
+"SP-08","SC-08;SC-09","Moss routinely waits on the rug only when the protagonist undertakes dangerous work and follows again on return.","The sit command is responsible care and ordinary household routine.","PAY-08","SC-10","The same command state prevents following or teleporting during the fire, and the sitting place is empty when the protagonist reaches it.","tragic_fulfilment","planned","","SC-10","Moss is never penned or placed in a separate pet room."
+"SP-09","SC-01;SC-08;SC-09","Crying obsidian and glowstone are accumulated slowly, and the cold open shows the completed supply dropping outside the fire.","The materials are connected to the unexplained portal but not yet to the protagonist's absence.","PAY-09","SC-11;SC-12","The same inventory completes the frame and charged anchor immediately after the failed search.","confirmation","planned","","SC-12","Show ordinary acquisition or concise survival shorthand and preserve quantities."
+"SP-10","SC-06","The Atlas requires the activating hand to discharge the anchor, but its final blast-distance measurement is torn away.","The danger may be manageable with improvised cover.","PAY-10","SC-11;SC-12","The direct-hand requirement keeps the protagonist inside the lethal blast problem and the incomplete baffle fails.","tragic_fulfilment","planned","","SC-12","Do not imply that the book guaranteed survival."
+"SP-11","SC-01","The cold open cuts as the protagonist breaks towards the unseen shared room.","A direct rescue may still reach Moss.","PAY-11","SC-10","The repeated action continues to the consumed rug position, where Moss is gone, followed by an unsuccessful external search.","tragic_fulfilment","planned","","SC-10","Withhold through editing rather than false narration."
+"SP-12","SC-02","Moss sits at the overlook while the protagonist opens his blank journal and decides that they can stay.","This is a conventional chronological restart after the cold open.","PAY-12","SC-13","The camera rises from the final portal into the exact scene, revealing it as the first-threshold destination and the next beginning of the loop.","reinterpretation","planned","","SC-13","Match blocking, light, audio and journal position precisely."
+"SP-13","SC-10","No body, invented collar object or on-screen death message establishes what happened to Moss after the fire began.","Moss most likely died in the shared room, but absence leaves a narrow uncertainty.","OPEN-01","SC-13","The ending shows Moss alive only in the earlier R0 reality and does not resolve the R4 wolf's exact fate.","reinterpretation","intentionally_open","The requested event is that Moss is gone; keeping the R4 fate unseen avoids invented remains and preserves the protagonist's uncertainty without affecting the fire, portal, death or loop.","SC-13","Human approval should decide whether Story lock retains absence or requires explicit death evidence."
+--- Required file .studio/internal/story/relationships.csv; preserve its schema/columns ---
+relationship_id,character_a,character_b,public_relationship,private_tension,shared_history,what_a_wants_from_b,what_b_wants_from_a,power_balance,secret,predicted_change
+"REL-01","PROTAGONIST","WOLF","An established solo player and tamed wolf travel through successive echo-realities and turn forced settlement beside a ravine into a shared home.","The protagonist's habit of seating Moss somewhere safe protects the wolf during ordinary danger, but the chosen wool-rug position becomes vulnerable to the fireplace while he is away.","They arrive at R0 together, survey the clearing, cross every echo as a pair, share limited shelter, build R4 routines, gather resources and repeatedly return to the same warm rug beside the hearth.","He wants Moss beside him through ordinary life, safely absent from hazardous supply travel and ultimately present in whichever reality becomes home.","Expressed behaviourally, Moss wants proximity, food after damage, a clear follow state and the familiar warm resting place.","The protagonist controls portal entry, route choice and sit-follow commands; after the fire, Moss's absence controls the protagonist's search and final willingness to risk death.","The R0 portal they discover is the receiving mouth of the frame the protagonist builds only after Moss disappears in R4.","Comfortable partnership becomes chosen home, then ambiguous loss and a fatal attempt to reach the earlier reality where the relationship is still intact."
+--- Required file .studio/internal/story/continuity-bible.md; preserve its schema/columns ---
+# Continuity bible — The Portal That Nobody Made
+
+## Canon authority
+
+- Canon owner: Luan
+- Current canon version: Story proposal 0.3 — unlocked, 16 July 2026
+- Locked upstream artefacts: None stated. The supplied Direction and prior Story plan are explicitly unlocked.
+- Status of this bible: proposed continuity for human review; it records no Story lock, audience result or production validation.
+- Major proposed changes: parallel echo-realities replace the fixed timeline; Moss accompanies the protagonist from the beginning; the initial and final portal uses crying obsidian; the Weeping Atlas establishes the invented rule; a wool rug beside an open hearth causes the fire; Moss becomes missing rather than visibly confirmed dead; and a respawn-anchor discharge causes the protagonist’s terminal explosion.
+- Rule for later change: portal canon, Moss’s fate, theme, motivation and structural changes require human approval before a creative lock.
+
+## Reality register
+
+| Reality | Stable geography | Divergent state | Required story event |
+|---|---|---|---|
+| R0 — Root Echo | Clearing above the ravine, lightning-shaped granite seam, north-wall cave and west-rim shelf | Green surface, dry main wall and no local player construction above ground | The protagonist and Moss arrive, choose to stay, discover the projected crying portal and enter it. The final R4 frame later opens its receiving mouth into this moment. |
+| R1 — Rain Echo | Same seam, cave position and ravine profile | Persistent rain, added waterfall and dense vegetation | The pair explore; the protagonist re-enters expecting to return to R0. |
+| R2 — Ash Echo | Same coordinates and portal position | Naturally scorched tree line and exposed shelf | The attempted return arrives here. The protagonist begins controlled marking tests. |
+| R3 — Archive Echo | Same ravine anchors | Small abandoned survey recess beside the portal cave | The protagonist finds the Weeping Atlas, verifies its notation against his observations and takes it before the mouth destabilises. |
+| R4 — Home Echo | Same ravine anchors and west-rim build shelf | Habitable surface and an inert local mouth | The pair settle, build the house, experience the rug fire and loss, and construct the final keyed crying frame. |
+
+The echoes are stable realities rather than resets, dreams or replacement timelines. They need not share a synchronised clock.
+
+## Personal order and audience order
+
+### Protagonist’s personal order
+
+P1 R0 arrival with Moss → P2 R0 portal discovery and entry → P3 R1 exploration → P4 attempted return into R2 → P5 marking tests → P6 R3 Atlas discovery → P7 final uncontrolled crossing into R4 → P8 R4 settlement and house → P9 final material run → P10 fire and Moss’s disappearance → P11 search and decision → P12 crying-frame construction → P13 respawn-anchor discharge and death.
+
+### Audience presentation
+
+A short fragment from P10 opens the film. The presentation then follows P1 through P13. After the protagonist dies, an omniscient camera crosses the active portal and rises into P1 in R0. The repeated scene continues far enough to confirm that the earlier pair will investigate the portal beneath them.
+
+The final camera is audience access. It does not represent the protagonist’s soul, respawn or survival.
+
+## Crying-portal rules
+
+These are proposed fictional rules and must not be described as vanilla Minecraft facts.
+
+1. A complete crying-obsidian frame can hold a portal plane.
+2. The frame binds matching horizontal coordinates across echo-realities. It selects the nearest safe vertical exit around the repeated ravine seam.
+3. Unanchored entry advances through the echo chain. Immediate re-entry does not reverse the last crossing.
+4. Player blocks beside a mouth remain local to their reality. The frame and natural coordinate anchors recur; an adjacent cobblestone mark does not.
+5. A projected receiving mouth may appear in a reality where nobody locally placed blocks. Its material source is the constructed keyed frame in another echo.
+6. The R0 mouth is the receiving mouth projected by the final R4 frame. Nobody builds it locally in R0.
+7. Entering the R0 receiving face without being the keyed builder starts the forward chain R0 → R1 → R2 → R3 → R4.
+8. The R4 arrival mouth collapses after the uncontrolled chain completes and cannot be relit with ordinary fire.
+9. A new complete frame can be keyed to its builder’s first threshold by directly discharging a charged respawn anchor within the frame geometry.
+10. Direct interaction is required because the activating hand supplies the traveller key. Remote activation would not select the first threshold in this fictional rule set.
+11. The proposed Overworld anchor discharge is explosive. The explosion candidate requires target-version verification; the frame’s activation response is invented.
+12. The discharge keys the R4 frame to R0 at the moment the protagonist and Moss first established the clearing as their threshold.
+13. Activation does not rewrite R0 or resurrect R4 Moss. It opens a connection to an already existing echo-state.
+14. After the protagonist’s death, the active R4 portal remains long enough for the camera to reveal its destination.
+
+No invisible force corrects choices. Each reversal follows a portal rule, material adjacency, command state or decision already established.
+
+## The Weeping Atlas
+
+### Prop continuity
+
+- The protagonist’s clean survey journal has a green cloth repair at the lower-right corner.
+- His ravine notation uses three descending lines crossed by a short horizontal shelf mark.
+- The R0 opening insert shows the first clean version of that symbol.
+- The Archive Echo book uses the same cover repair, symbol, coordinate shorthand and hand but is older, water-damaged and fuller.
+- The protagonist carries both books out of R3; the clean journal may later be stored, but the Atlas remains available through the climax.
+- The final R0 surface reveal must show the clean journal, not the weathered Atlas.
+
+### Legible Atlas information
+
+- Repeated plans of the same ravine.
+- Forward arrows between mouths.
+- BACK crossed out and NEXT repeated.
+- ONE FRAME, MANY MOUTHS.
+- A complete crying frame connected to a charged respawn anchor.
+- FIRST THRESHOLD as the selected destination.
+- A hand symbol beside the activation point.
+- A blast warning whose final safe-distance measurement is torn away.
+
+The film does not confirm which counterpart completed the Atlas or how that counterpart survived long enough to record the rule. The matching journal makes another echo of the protagonist the intended inference. This open history cannot be expanded into a speaking traveller, portal guardian or lore institution without approval.
+
+## Character states and knowledge
+
+| Scene | Protagonist state, knowledge and objective | Key possessions | Moss state |
+|---|---|---|---|
+| SC-01 | Presented late in personal order; knows Moss was left in the house and spends no action on property. | Water bucket, ordinary tools, final crying obsidian and glowstone supply. | Not visible from the doorway; fate withheld by the cut. |
+| SC-02 | Has no portal model; chooses the clearing as a possible home. | Clean survey journal, expedition tools, food and ordinary survival gear. | Tamed before the film, following normally and sitting briefly at the overlook. |
+| SC-03 | Knows the frame is active and locally impossible; chooses entry. | Same kit and journal; no Atlas. | Standing and following through the controlled threshold. |
+| SC-04 | Knows R1 shares coordinates but differs visibly; incorrectly expects re-entry to return to R0. | Carried kit, map and journal. | Following, unsettled only through ordinary movement and command response. |
+| SC-05 | Knows immediate return failed and begins systematic tests. | Cobblestone marker blocks and journal notes. | Kept near the protagonist during each crossing. |
+| SC-06 | Recognises the Atlas as a counterpart of his journal and learns the proposed keyed-frame method. | Clean journal plus weathered Atlas. | Waiting nearby; not used to interpret the book. |
+| SC-07 | Knows R4 is habitable and the local mouth is dead; lacks materials for the full method. | Depleted travel kit, both books and no complete crying inventory. | Alive, following and stranded with him. |
+| SC-08 | Builds a shared home and prepares slowly rather than risking an incomplete activation. | Growing crying-obsidian supply, glowstone, tools and baffle sketches. | Following during safe work, fed after damage and routinely sitting on the rug during danger. |
+| SC-09 | Believes the stone-surrounded hearth and familiar sit position are safe during the final run. | Supply kit taken out; Atlas remains secured or carried according to capture continuity. | Healthy enough to remain home, seated on the wool rug and not enclosed. |
+| SC-10 | Returns with the final materials, finds the house burning and searches for Moss. | Materials dropped outside, water and breaking tools; Atlas recoverable after the search. | Gone from the burned sitting position and surrounding searched area; exact fate unconfirmed. |
+| SC-11 | Believes R0 is the only documented reality where Moss is certainly alive and accepts incomplete blast evidence. | Full crying-frame inventory, charged anchor materials, Atlas and damaged post-fire equipment. | Absent from R4 viewpoint. |
+| SC-12 | Directly triggers the anchor and dies before the field forms. | Ordinary drops may remain, burn or be obscured; their final disposition is not a clue requirement. | Absent. |
+| SC-13 | Earlier R0 self knows only that the clearing is suitable and a hum comes from below. | Clean, mostly blank survey journal and original expedition kit. | Alive, following and sitting at the overlook before the first discovery. |
+
+Narration may state belief but not unsupported certainty. Before SC-10 the narrator cannot say Moss died. After SC-10 he may say Moss was gone or that he could not find Moss, but not that he witnessed dea
+
+CODEX STRUCTURED-OUTPUT OVERRIDE
+For this Codex transport, encode files as an array of objects with exactly two string keys: path and content. Use an empty array when there are no files. All other top-level keys remain unchanged.
+
+**Identifying blocking lack of authoritative script**
+codex
+{"summary":"No Story artefacts were changed because the authoritative 03-script/script.md was not supplied, while the existing Story document and several internal templates are truncated. Updating the protagonist’s discovery and naming of Moss, the revised opening/ending loop, and the creeper-triggered activation without the exact script would risk inventing canon or contradicting approved decisions.","document":"","files":[],"questions":["Please supply the complete approved 03-script/script.md and the untruncated current contents of 02-story/story-plan.md, .studio/internal/story/story-model.json, .studio/internal/story/scene-cards.csv and .studio/internal/story/continuity-bible.md so complete replacement artefacts can be produced faithfully."],"warnings":["The supplied Story material currently says Moss is already tamed, uses a fire cold open and ending, and makes a directly discharged respawn anchor activate the portal; these appear to conflict with the authoritative script changes described in the request.","Returning guessed replacement content would violate the requirement to preserve everything already consistent with the script and could silently alter approved canon."]}
+tokens used
+39,550

@@ -1,0 +1,200 @@
+{
+  "schema_version": 2,
+  "position": "This doctrine operationalises professional recommendations, not a universal formula. Automated checks may verify recorded decisions, references, consistency, and process evidence; they must not pretend to measure artistic greatness.",
+  "governing_principle": "AI may propose possibilities, compare alternatives, diagnose weaknesses, and draft unlocked artefacts. It must not silently decide canon, theme, character motivation, factual claims, or structural changes.",
+  "development_sequence": [
+    "research",
+    "concept_generation",
+    "concept_evaluation",
+    "premise",
+    "thematic_model",
+    "character_system",
+    "ending_design",
+    "causal_spine",
+    "sequence_outline",
+    "beat_sheet",
+    "scene_cards",
+    "treatment_or_story_outline",
+    "screenplay",
+    "table_read_or_animatic",
+    "specialised_revision_passes",
+    "production_validation",
+    "publication",
+    "evidence_based_postmortem"
+  ],
+  "strong_doctrine": [
+    {
+      "id": "audience_promise",
+      "principle": "Define the novel situation, human problem, pressure source, and expected audience pleasure; packaging and opening must honour the same promise.",
+      "enforcement": "required evidence and human review"
+    },
+    {
+      "id": "story_plot_discourse",
+      "principle": "Keep chronological story, causal plot, and audience presentation distinct.",
+      "enforcement": "required structured fields"
+    },
+    {
+      "id": "causal_chain",
+      "principle": "Major events require traceable causes, consequences, state changes, and deletion/counterfactual tests.",
+      "enforcement": "deterministic reference and graph validation"
+    },
+    {
+      "id": "character_agency",
+      "principle": "Characters, especially the protagonist and opposition, should make consequential decisions that alter later events.",
+      "enforcement": "required character records plus advisory agency ratio"
+    },
+    {
+      "id": "opposition_and_constraints",
+      "principle": "Opposition must have an active goal, advantage, vulnerability, and costs for confrontation or avoidance.",
+      "enforcement": "required structured fields"
+    },
+    {
+      "id": "meaningful_change",
+      "principle": "Scenes and causal events must record what changes or what other story value earns their place.",
+      "enforcement": "required state/value evidence; conventions remain advisory"
+    },
+    {
+      "id": "information_design",
+      "principle": "Track audience knowledge, questions, expectations, emotional orientation, and character knowledge around important reveals.",
+      "enforcement": "required information map"
+    },
+    {
+      "id": "setup_payoff",
+      "principle": "Every major setup has a planned payoff, explicit reinterpretation, or justified intentionally open status.",
+      "enforcement": "deterministic ledger validation"
+    },
+    {
+      "id": "earned_climax",
+      "principle": "The climax resolves the central dramatic question through earlier causes and a consequential action or value choice.",
+      "enforcement": "required ending design and human review"
+    },
+    {
+      "id": "minecraft_causality",
+      "principle": "Minecraft mechanics, geography, construction, resources, and world rules should influence goals, strategies, reversals, climax, or visual design rather than merely decorate the story.",
+      "enforcement": "required story-engine fields and production review"
+    },
+    {
+      "id": "specialised_revision",
+      "principle": "Revision uses a small core of always-required checks plus additional passes activated only when relevant to the script.",
+      "enforcement": "adaptive deterministic pass-status validation"
+    },
+    {
+      "id": "traceable_human_control",
+      "principle": "Canon, theme, motivation, factual claims, and structural changes remain versioned and human-approved; locked evidence cannot change silently.",
+      "enforcement": "existing stage approvals and fingerprints"
+    }
+  ],
+  "flexible_conventions": [
+    {
+      "id": "three_act_structure",
+      "use": "Optional organising lens; require only a chosen framework and rationale."
+    },
+    {
+      "id": "midpoint",
+      "use": "Advisory recontextualisation device when supported by the material."
+    },
+    {
+      "id": "protagonist_arc",
+      "use": "May be positive, negative, flat, collective, tragic, or deliberately minimal."
+    },
+    {
+      "id": "scene_objective",
+      "use": "Useful diagnostic for most dramatic scenes; omissions create warnings, not gate failures."
+    },
+    {
+      "id": "act_climax",
+      "use": "Optional structural convention, never a mandatory timestamp."
+    },
+    {
+      "id": "opening_and_closing_image",
+      "use": "Useful visual comparison when meaningful, not compulsory."
+    },
+    {
+      "id": "sequence_length",
+      "use": "Production and pacing aid, not a fixed count or percentage."
+    },
+    {
+      "id": "subplot_count",
+      "use": "Determined by story need and solo production capacity."
+    }
+  ],
+  "must_not_enforce": [
+    "exact page numbers",
+    "fixed beat percentages",
+    "exactly fifteen beats",
+    "mandatory Hero's Journey stages",
+    "a twist at a predetermined timestamp",
+    "a likeable protagonist",
+    "constant action",
+    "dialogue-free exposition",
+    "a mandatory happy ending",
+    "one prescribed emotional arc"
+  ],
+  "audit": {
+    "protagonist_decision_warning_ratio": 0.35,
+    "counterfactual_results": [
+      "pass",
+      "weak",
+      "not_applicable"
+    ],
+    "setup_statuses": [
+      "planned",
+      "paid_off",
+      "intentionally_open",
+      "cut"
+    ],
+    "payoff_types": [
+      "confirmation",
+      "reversal",
+      "escalation",
+      "reinterpretation",
+      "tragic_fulfilment",
+      "comic_return",
+      "character_choice",
+      "visual_transformation"
+    ],
+    "revision_statuses": [
+      "complete",
+      "not_applicable",
+      "not_required",
+      "blocked"
+    ],
+    "revision_pass_ids": [
+      "promise",
+      "causality",
+      "dialogue_and_subtext",
+      "visual_storytelling",
+      "production_feasibility",
+      "continuity_and_canon",
+      "character_agency",
+      "escalation",
+      "theme_and_change",
+      "information",
+      "scene_necessity",
+      "audience_results_plan"
+    ],
+    "cause_types": [
+      "initial_state",
+      "prior_event",
+      "external_disruption",
+      "background_condition",
+      "parallel_cause"
+    ],
+    "core_revision_pass_ids": [
+      "promise",
+      "causality",
+      "dialogue_and_subtext",
+      "visual_storytelling",
+      "production_feasibility",
+      "continuity_and_canon"
+    ],
+    "optional_revision_pass_ids": [
+      "character_agency",
+      "escalation",
+      "theme_and_change",
+      "information",
+      "scene_necessity",
+      "audience_results_plan"
+    ]
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "audience_promise": {
+    "novel_situation": "A lone Hardcore player finds a burned cabin and an active portal in an unvisited ravine, enters it, and is thrown back to the untouched place where he will build the cabin, tame a wolf and eventually create the portal himself.",
+    "human_problem": "Foreknowledge convinces him that careful preparation can protect Moss, but after the wolf dies his grief turns a possible return mechanism into an urgent compulsion.",
+    "pressure_source": "A remembered ruin, a concealed lava path, a seated wolf, lost equipment, a dark cave branch and an approaching creeper compress his choices through ordinary Minecraft conditions.",
+    "expected_pleasure": [
+      "Recognising future ruins in practical building decisions",
+      "Reinterpreting blast damage, block gaps and portal asymmetry as consequences of normal play",
+      "Watching the protagonist and Moss develop an ordinary working relationship before danger",
+      "Discovering that the failed attempt to light the portal is what activates the portal from the opening"
+    ],
+    "disappointment_test": "The promise fails if a visible other player supplies the mystery, the timeline invisibly corrects events, Moss is kept in an invented pen, the protagonist chooses blocks over the wolf, the fire lacks a readable block path, or the creeper explosion is falsely treated as direct fire generation."
+  },
+  "premise": {
+    "disruption": "In an unvisited region of his private world, the protagonist finds a burned player-built cabin and a complete active portal beside fresh blast damage.",
+    "protagonist_id": "PROTAGONIST",
+    "difficult_goal": "Understand the portal, survive its one-way displacement and prevent the future ruin from taking Moss.",
+    "central_opposition": "His grief-driven later objective conflicts with his earlier safety plan while lava, fire, wolf behaviour, darkness and a creeper make delay consequential.",
+    "meaningful_consequence": "His attempt to neutralise the future fire exposes its hidden path; after Moss dies, his attempt to return creates and activates the portal that began the journey.",
+    "logline": "After an impossible portal throws a lone Minecraft player into the past of the same ravine, he builds a home and bonds with a wolf, only to discover that his efforts to prevent a remembered fire will create it; when the wolf dies, his desperate return portal becomes both his grave and the mystery his earlier self will find."
+  },
+  "theme": {
+    "subject": "Foreknowledge, grief and the limits of control",
+    "question": "When knowledge of a loss cannot guarantee control, does acting faster protect what matters or complete the pattern one fears?",
+    "provisional_argument": "Foreknowledge is not control, and grief can make a technically possible action feel compulsory even when care would require pause, uncertainty or departure.",
+    "competing_values": [
+      "Care expressed through present attention",
+      "Control pursued through reversal",
+      "Patient safety and incomplete knowledge",
+      "Urgent action and the promise of another chance"
+    ]
+  },
+  "characters": [
+    {
+      "character_id": "PROTAGONIST",
+      "role": "protagonist",
+      "want": "Identify the portal, return to his proper time and keep Moss from becoming part of the burned future.",
+      "need": "Recognise that technical possibility does not make immediate action safe or loss reversible.",
+      "fear": "That the ruined cabin is evidence of a future he will reproduce regardless of his skill.",
+      "belief": "If he can map every surviving block and remove the apparent hazard, foreknowledge will let him control the outcome.",
+      "limitation": "After Moss dies, grief narrows his attention until reconstructing the portal feels more urgent than healing, relighting the cave or obtaining a safer ignition tool.",
+      "strategy": "Inspect persistent geography, build efficiently around terrain, establish a stone firebreak, neutralise the lava shelf and reconstruct the remembered portal from local materials.",
+      "contradiction": "His patience creates a genuine home with Moss, but his later urgency sacrifices the same caution that made that life possible.",
+      "boundary": "Once Moss is threatened, he will abandon every block and stored resource to reach the wolf.",
+      "pressure_point": "The hidden support ignites while Moss is seated inside and the protagonist is below the cabin with one water source.",
+      "relationship_function": "Moss turns the portal from an abstract authorship puzzle into a life the protagonist has made and cannot accept losing.",
+      "agency": "He enters the portal, camps at the ravine, tames Moss, chooses the cabin footprint, prepares to leave, neutralises and mines the lava, races directly to Moss, rebuilds the frame and attempts immediate lava ignition."
+    },
+    {
+      "character_id": "WOLF",
+      "role": "companion",
+      "want": "Expressed behaviourally, to follow the protagonist when standing and remain near the shared home.",
+      "need": "The protagonist must reach and release it from sitting before fire reaches the room.",
+      "fear": "Expressed behaviourally through distress and fire damage rather than humanised thought.",
+      "belief": "No abstract belief is assigned; its trained behaviour is to wait when seated and follow when released.",
+      "limitation": "It cannot interpret the ruined future, assess the firebreak or cancel a sit command.",
+      "strategy": "Follow during ordinary work, accept food and wait beside the bed during dangerous ravine mining.",
+      "contradiction": "The obedience that keeps it away from lava during normal play prevents autonomous evacuation during the fire.",
+      "boundary": "It is not placed in a pen, given human reasoning or used to solve the temporal mystery.",
+      "pressure_point": "Fire reaches its familiar sitting place before the protagonist can cross the burning route and interact.",
+      "relationship_function": "Moss makes the stranded interval a life rather than a puzzle and gives the protagonist’s final attempt its tragic motive.",
+      "agency": "Limited diegetic agency: Moss follows, obstructs building, accepts food and responds to commands, but cannot override the final sit state."
+    }
+  ],
+  "opposition": {
+    "opposing_goal": "After Moss dies, the protagonist’s grief-driven self seeks to activate the remembered portal immediately; once detected, the creeper seeks to approach and detonate before that attempt is safe.",
+    "why_neither_side_can_withdraw": "The protagonist treats the portal as the only remaining route to Moss before the fire, while the creeper’s ordinary hostile behaviour continues once it has acquired him at close range.",
+    "advantage": "The portal memory supplies an exact tempting plan, the protagonist has lost safer tools, rescue water has darkened the branch, and close cave geometry favours the creeper.",
+    "vulnerability": "The protagonist could relight the branch, heal, replace his shield, mine iron or abandon immediate ignition; the creeper is vulnerable to light, distance and prepared defence.",
+    "cost_of_confrontation": "Stopping to make the cave safe means accepting Moss’s death long enough to delay the apparent second chance.",
+    "cost_of_avoidance": "Continuing in haste leaves the protagonist exposed, creates the lethal blast geometry and completes the portal found at the beginning."
+  },
+  "stakes": {
+    "immediate": "Survive the one-way displacement and determine whether the ravine is the same place at another time.",
+    "practical": "The cabin, stored resources, safe stair and only known temporal route can be destroyed.",
+    "personal": "The protagonist’s confidence that careful play can master every visible system is dismantled.",
+    "relational": "Moss will remain seated in the burning room unless the protagonist reaches it in time.",
+    "moral": "The tragedy must not arise from preferring property over the wolf; it arises from prior safety choices and grief-driven haste.",
+    "existential": "The protagonist learns that remembering an effect does not grant freedom from becoming its cause.",
+    "systemic": "The consequences remain confined to one solo world, one ravine, one player and one wolf."
+  },
+  "story_layers": {
+    "chronological_story": "The travelling protagonist arrives in the ravine while his pre-travel self is far away, builds a cabin, tames Moss, exposes a lava path that causes the fire, loses Moss, builds the portal and dies in a creeper blast that enables its activation; later his earlier personal self reaches the ruin and enters that portal.",
+    "causal_plot": "The impossible portal prompts entry; displacement prompts shelter; shelter and taming create attachment; remembered ruins prompt prevention; prevention exposes lava; the sit routine and fire timing cause loss; loss prompts portal construction; unsafe ignition and darkness enable the creeper; the blast enables fire to activate the opening frame.",
+    "audience_presentation": "A fragment of the failed rescue opens the film, followed by portal discovery, displacement, relationship building, environmental recognition, prevention, completed loss, construction, death and a final match cut to the opening entry."
+  },
+  "ending_design": {
+    "final_choice": "Reconstruct and attempt to ignite the remembered frame immediately rather than pause to heal, restore lighting and obtain a safe ignition tool.",
+    "climax_mechanism": "The protagonist places a lava-and-spruce emergency ignition; a creeper from the dark branch kills him and breaks the retaining lip, after which lava ignites the remaining spruce and ordinary fire activates the valid portal.",
+    "emotional_result": "The builder mystery resolves at the same moment grief, fatal haste and the closed personal journey become fully legible.",
+    "thematic_consequence": "The portal offers temporal knowledge but not mastery; the attempt to force another chance becomes the cause of the first chance.",
+    "final_relationship_state": "Moss is dead and the protagonist’s last construction is motivated by the life they shared rather than by attachment to the lost cabin.",
+    "final_image": "The active portal stands alone beside the blast cavity before a match cut returns to the earlier protagonist entering it.",
+    "unresolved_element": "The first external origin of the frame’s temporal routing remains intentionally open and does not substitute for any practical cause."
+  },
+  "minecraft_story_engine": {
+    "persistent_blocks": "The foundation bend, granite notch, chest recess, cobblestone portal foot, hidden support gap, blast cavity and remaining ignition plank are effects shown before their causes.",
+    "repeatable_geography": "One west-rim shelf, north-wall cave, lava shelf, stone rib and lateral dark branch remain recognisable across pristine, built, burning and ruined states.",
+    "resource_constraints": "Bones, spruce, cobblestone, water and obsidian have local origins; one water source and lost iron constrain the fire response and final ignition.",
+    "mob_and_animal_behaviour": "Moss follows ordinary sit and follow states; a skeleton supplies taming bones; a creeper approaches from darkness and detonates at close range.",
+    "portal_rule": "The temporal route is invented canon, while the physical frame, lava ignition and fire activation are intended to use ordinary Minecraft behaviours.",
+    "production_expression": "The design avoids duplicate-avatar shots and relies mainly on recorded exploration, taming, building, mining, water, fire, wolf interaction and mob gameplay."
+  },
+  "narrative_decisions": {
+    "structure_framework": "A closed-loop tragedy organised by causal revelation and character consequence, not by a mandatory beat formula.",
+    "timeline_model": "One self-consistent world history with the protagonist’s personal order crossing from a later ruin to an earlier pristine ravine.",
+    "opening_strategy": "A short honest fire fragment supplies immediate danger before the portal discovery and early relationship-building movement.",
+    "mystery_strategy": "No other self is seen; identity and chronology are communicated through environment, materials, damage and matched actions.",
+    "protagonist_overlap": "The pre-travel and travelling versions exist at distant locations for part of world chronology but never meet, see or hear one another.",
+    "relationship_strategy": "Moss shares the cabin and ordinary work routine; no pen, doghouse or symbolic confinement is used.",
+    "fire_and_death_chain": "Obsidian mining exposes lateral lava to a hidden support; later a creeper blast changes a separate lava ignition geometry and kills the protagonist.",
+    "ending_principle": "The wolf and protagonist both die, and the failed return attempt creates the active portal from the opening.",
+    "narration_policy": "Narration may withhold by viewpoint or cut but may not lie, assert unobserved mechanics or imply another player.",
+    "scope_choice": "Approximately twenty minutes, one narrator, one avatar, one wolf, one ravine complex and four reusable environment states."
+  }
+}

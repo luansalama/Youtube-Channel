@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "minecraft-narrative-studio"
+version = "0.3.6"
+description = "Dashboard-first, video-at-a-time operating harness for a story-driven Minecraft YouTube channel."
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Luan Salama Martins"}]
+dependencies = []
+
+[project.optional-dependencies]
+youtube = [
+  "google-api-python-client>=2.0",
+  "google-auth-oauthlib>=1.0",
+  "google-auth-httplib2>=0.2",
+]
+
+[project.scripts]
+mcstudio = "mcstudio.cli:main"
+
+[tool.setuptools]
+packages = ["mcstudio"]

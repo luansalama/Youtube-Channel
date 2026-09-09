@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "runner": "codex",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "max",
+  "status": "success",
+  "started_at": "2026-07-17T01:11:16+00:00",
+  "finished_at": "2026-07-17T01:17:37+00:00",
+  "timeout_seconds": 3600,
+  "output_mode": "full-native",
+  "web_search": false,
+  "session_id": "019f6da0-b86c-78d0-a75a-d1405322e3bb",
+  "temporary_workspace": "C:\\Users\\Admin\\AppData\\Local\\Temp\\mcstudio-codex-8tx4eydq",
+  "archive_directory": "K:\\Minecraft Narrative Studio\\exports\\runner-runs\\20260717-011116-115090-studio-assistant-codex-gpt-5.6-sol",
+  "final_proposal": "K:\\Minecraft Narrative Studio\\exports\\runner-runs\\20260717-011116-115090-studio-assistant-codex-gpt-5.6-sol\\final-proposal.json",
+  "partial_response": "K:\\Minecraft Narrative Studio\\exports\\runner-runs\\20260717-011116-115090-studio-assistant-codex-gpt-5.6-sol\\partial-response.txt",
+  "resume_script": "",
+  "error": "",
+  "exit_code": 0
+}

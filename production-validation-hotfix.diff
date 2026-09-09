@@ -1,0 +1,229 @@
+--- /mnt/data/mns_baseline_check/mcstudio/core.py	2026-07-15 16:23:18.000000000 +0000
++++ /mnt/data/mns_patch_work/mcstudio/core.py	2026-07-17 10:00:09.249012620 +0000
+@@ -378,7 +378,21 @@
+             CheckResult(bool(technically_ok), "technically usable selected take", f"{len(technically_ok)} usable selected take(s)" if technically_ok else "no selected take marked technically usable")]
+ 
+ 
+-def _run_stage_validators(root: Path, video_dir: Path, stage: dict[str, Any]) -> list[CheckResult]:
++def _required_for_validation_scope(item: dict[str, Any], validation_scope: str) -> bool:
++    """Return whether a configured check belongs to the requested validation scope."""
++    if validation_scope == "completion":
++        return True
++    if validation_scope == "proposal":
++        return bool(item.get("proposal_required", True))
++    raise StudioError(f"Unknown validation scope: {validation_scope}")
++
++
++def _run_stage_validators(
++    root: Path,
++    video_dir: Path,
++    stage: dict[str, Any],
++    validation_scope: str = "completion",
++) -> list[CheckResult]:
+     validators = stage.get("validators", [])
+     if not validators:
+         return []
+@@ -387,7 +401,10 @@
+     project = read_json(video_dir / "project.json")
+     results: list[CheckResult] = []
+     for validator in validators:
+-        name = validator if isinstance(validator, str) else validator.get("name")
++        config = validator if isinstance(validator, dict) else {"name": validator}
++        if not _required_for_validation_scope(config, validation_scope):
++            continue
++        name = config.get("name")
+         if name == "story_outline":
+             findings = audit_outline(root, video_dir)
+             results.extend(CheckResult(item.ok, item.label, item.detail, item.severity) for item in findings)
+@@ -407,13 +424,23 @@
+     return results
+ 
+ 
+-def evaluate_stage(root: Path, slug: str, stage_name: str | None = None, include_approval: bool = True) -> list[CheckResult]:
++def evaluate_stage(
++    root: Path,
++    slug: str,
++    stage_name: str | None = None,
++    include_approval: bool = True,
++    validation_scope: str = "completion",
++) -> list[CheckResult]:
+     video_dir, project = load_project(root, slug)
+     stages = load_stages(root)
+     target_name = stage_name or project["stage"]
+     stage = get_stage(root, target_name)
+-    results = [_check_requirement(video_dir, req) for req in stage.get("requirements", [])]
+-    results.extend(_run_stage_validators(root, video_dir, stage))
++    requirements = [
++        req for req in stage.get("requirements", [])
++        if _required_for_validation_scope(req, validation_scope)
++    ]
++    results = [_check_requirement(video_dir, req) for req in requirements]
++    results.extend(_run_stage_validators(root, video_dir, stage, validation_scope))
+     if include_approval:
+         names = [item["name"] for item in stages]
+         if target_name not in names:
+--- /mnt/data/mns_baseline_check/mcstudio/assistant.py	2026-07-16 09:48:40.000000000 +0000
++++ /mnt/data/mns_patch_work/mcstudio/assistant.py	2026-07-17 10:00:09.249935381 +0000
+@@ -761,7 +761,9 @@
+             target.parent.mkdir(parents=True, exist_ok=True)
+             target.write_text(content, encoding="utf-8", newline="\n")
+ 
+-        findings = evaluate_stage(check_root, slug, include_approval=False)
++        findings = evaluate_stage(
++            check_root, slug, include_approval=False, validation_scope="proposal"
++        )
+     return [f"{item.label}: {item.detail}" for item in findings if not item.ok]
+ 
+ 
+--- /mnt/data/mns_baseline_check/studio/stages.json	2026-07-15 16:19:40.000000000 +0000
++++ /mnt/data/mns_patch_work/studio/stages.json	2026-07-17 10:00:09.250438240 +0000
+@@ -301,11 +301,15 @@
+           "selected",
+           "notes"
+         ],
+-        "label": "internal capture log"
++        "label": "internal capture log",
++        "proposal_required": false
+       }
+     ],
+     "validators": [
+-      "capture_evidence"
++      {
++        "name": "capture_evidence",
++        "proposal_required": false
++      }
+     ]
+   },
+   {
+--- /mnt/data/mns_baseline_check/tests/test_integrations.py	2026-07-16 09:50:22.000000000 +0000
++++ /mnt/data/mns_patch_work/tests/test_integrations.py	2026-07-17 10:02:49.939048200 +0000
+@@ -23,7 +23,7 @@
+     recover_latest_runner_proposal,
+     validate_proposal,
+ )
+-from mcstudio.core import StudioError, create_video, load_project, maintain_repository, save_project, write_json
++from mcstudio.core import StudioError, create_video, evaluate_stage, load_project, maintain_repository, save_project, write_json
+ from mcstudio.dashboard import dashboard_html, generate_dashboard, render_page
+ from mcstudio.server import StudioHTTPServer, StudioHandler
+ from mcstudio.runners import execute_runner, runner_candidates, _write_elevated_runner_script
+@@ -51,6 +51,7 @@
+         return f'"{sys.executable}" "{path}"'
+ 
+     def test_runner_manager_default_routes(self):
++        (self.root / "studio" / "local-settings.json").unlink(missing_ok=True)
+         settings = load_settings(self.root, include_secret=True)
+         self.assertEqual(runner_candidates(settings, "story", "develop")[0], "codex")
+         self.assertEqual(runner_candidates(settings, "production", "develop")[0], "opencode")
+@@ -389,6 +390,112 @@
+         self.assertIn("continuity-bible.md", request)
+         self.assertNotIn("continuity-register.csv", request)
+ 
++    def test_production_proposal_skips_capture_only_completion_checks(self):
++        video = create_video(self.root, "Production Proposal Scope")
++        project = json.loads((video / "project.json").read_text(encoding="utf-8"))
++        project["stage"] = "production"
++        write_json(video / "project.json", project)
++
++        def csv_text(fieldnames, rows):
++            buffer = io.StringIO(newline="")
++            writer = csv.DictWriter(buffer, fieldnames=fieldnames)
++            writer.writeheader()
++            writer.writerows(rows)
++            return buffer.getvalue()
++
++        proposal_payload = {
++            "summary": "Production planning proposal",
++            "document": "# Production plan\n\n" + (
++                "This plan defines the next honest build, staging, camera, asset and risk decisions "
++                "without claiming that capture has already happened. " * 18
++            ),
++            "files": {
++                ".studio/internal/production/shot-list.csv": csv_text(
++                    ["shot_id", "beat", "location", "framing", "camera_move", "action", "dialogue_or_vo", "duration_seconds", "capture_method", "assets", "status"],
++                    [
++                        {
++                            "shot_id": f"SH-{index:02d}",
++                            "beat": f"Beat {index}",
++                            "location": "Archive",
++                            "framing": "wide",
++                            "camera_move": "locked",
++                            "action": "Planned player action",
++                            "dialogue_or_vo": "Planned narration",
++                            "duration_seconds": "5",
++                            "capture_method": "Minecraft replay capture",
++                            "assets": "Archive set",
++                            "status": "planned",
++                        }
++                        for index in range(1, 7)
++                    ],
++                ),
++                ".studio/internal/production/asset-register.csv": csv_text(
++                    ["asset_id", "asset", "type", "source_or_owner", "licence", "version", "needed_for", "status", "notes"],
++                    [{
++                        "asset_id": "A-01",
++                        "asset": "Archive set",
++                        "type": "build",
++                        "source_or_owner": "project owner",
++                        "licence": "ownership to verify before use",
++                        "version": "planned",
++                        "needed_for": "all archive shots",
++                        "status": "planned",
++                        "notes": "No completion claim.",
++                    }],
++                ),
++                ".studio/internal/production/location-cards.csv": csv_text(
++                    ["location_id", "name", "story_function", "hero_angle", "modular_elements", "lighting_state", "completion", "notes"],
++                    [{
++                        "location_id": "L-01",
++                        "name": "Archive",
++                        "story_function": "Primary mystery location",
++                        "hero_angle": "Entrance towards central chamber",
++                        "modular_elements": "Corridor and chamber",
++                        "lighting_state": "Planned neutral and warning states",
++                        "completion": "planned",
++                        "notes": "Build state must be recorded by the user.",
++                    }],
++                ),
++            },
++            "questions": [],
++            "warnings": ["Capture evidence remains required before advancing to Edit."],
++        }
++        counter = self.root / "production-proposal-count.txt"
++        encoded_proposal = json.dumps(proposal_payload)
++        source = f'''
++import pathlib
++import sys
++count_path = pathlib.Path({str(counter)!r})
++count = int(count_path.read_text() or "0") if count_path.exists() else 0
++count_path.write_text(str(count + 1), encoding="utf-8")
++args = sys.argv[1:]
++sys.stdin.read()
++pathlib.Path(args[args.index("-o") + 1]).write_text({encoded_proposal!r}, encoding="utf-8")
++raise SystemExit(0)
++'''
++        command = self._write_runner_script("mock_production_scope.py", source)
++        settings = load_settings(self.root, include_secret=True)
++        settings["visible_runner_terminal"] = False
++        settings["routing_mode"] = "fixed"
++        settings["fixed_runner"] = "codex"
++        settings["fallback_enabled"] = False
++        settings["runners"]["codex"]["command"] = command
++        write_json(self.root / "studio" / "local-settings.json", settings)
++
++        proposal = create_proposal(self.root, "production-proposal-scope", "Plan production honestly.")
++
++        self.assertEqual(counter.read_text(encoding="utf-8"), "1")
++        self.assertEqual(proposal["deterministic_validation"], "passed")
++        self.assertFalse(proposal["repair_pass_used"])
++        completion_failures = {
++            item.label for item in evaluate_stage(
++                self.root, "production-proposal-scope", include_approval=False
++            ) if not item.ok
++        }
++        self.assertIn("internal capture log", completion_failures)
++        self.assertIn("selected captured take", completion_failures)
++        self.assertIn("technically usable selected take", completion_failures)
++
+     def test_proposal_gets_one_bounded_repair_after_failed_checks(self):
+         create_video(self.root, "Repair Proposal")
+         counter = self.root / "repair-count.txt"

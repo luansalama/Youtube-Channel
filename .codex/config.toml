@@ -1,0 +1,49 @@
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+web_search = "live"
+model_reasoning_effort = "high"
+
+[features]
+multi_agent = true
+shell_snapshot = true
+web_search = true
+
+[agents]
+max_threads = 4
+max_depth = 1
+
+[agents.researcher]
+description = "Evidence-first researcher for factual, tool, platform, rights, and market questions."
+config_file = "agents/researcher.toml"
+
+[agents.story_architect]
+description = "Designs causal story beats, clues, audience knowledge states, and continuity."
+config_file = "agents/story-architect.toml"
+
+[agents.script_editor]
+description = "Edits en-GB production scripts for spoken rhythm, clarity, originality, and feasibility."
+config_file = "agents/script-editor.toml"
+
+[agents.production_designer]
+description = "Converts locked stories into solo-feasible Minecraft and Blender production plans."
+config_file = "agents/production-designer.toml"
+
+[agents.post_supervisor]
+description = "Audits edit, sound, captions, exports, and final-master evidence."
+config_file = "agents/post-supervisor.toml"
+
+[agents.packaging_strategist]
+description = "Develops honest title, thumbnail, metadata, and social packaging from locked work."
+config_file = "agents/packaging-strategist.toml"
+
+[agents.growth_analyst]
+description = "Interprets recorded YouTube analytics without inventing causal certainty."
+config_file = "agents/growth-analyst.toml"
+
+[agents.business_producer]
+description = "Tracks costs, creator-hours, sponsorship risk, and commercial pipeline."
+config_file = "agents/business-producer.toml"
+
+[agents.qa_gatekeeper]
+description = "Read-only adversarial reviewer that separates blocking gate failures from suggestions."
+config_file = "agents/qa-gatekeeper.toml"

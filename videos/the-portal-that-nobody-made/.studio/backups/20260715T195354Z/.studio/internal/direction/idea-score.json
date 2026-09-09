@@ -1,0 +1,25 @@
+{
+  "premise": "A lone survival player discovers a fully-formed, lit nether portal in a brand-new single-player world. They definitely did not build it. The story follows their investigation as they gather clues to explain the impossible.",
+  "viewer_promise": "The viewer is promised a quiet, eerie mystery that plays fair â€” every clue is visible, every oddity has a natural explanation rooted in Minecraft mechanics. The pleasure comes from solving the puzzle alongside the player, not from supernatural shocks.",
+  "expected_pleasure": "Curiosity, deduction, the satisfaction of an 'aha' reveal, and the wonder of seeing familiar Minecraft rules combine into an unfamiliar result. The low-key tension of not knowing whether the mystery is benign or threatening.",
+  "hook": "The player descends into a ravine and the camera reveals â€” without warning â€” a fully-formed, active nether portal embedded in the stone wall. The player hasn't even crafted a pickaxe yet. It could not exist. But it does.",
+  "dramatic_engine": "The central dramatic question: 'Where did this portal come from?' drives every scene. Each clue eliminates wrong explanations and narrows toward the truth. Suspense is sustained by the possibility that the portal might have dangerous consequences (mobs, unknown forces).",
+  "thematic_question": "When something seems impossible, do we accept mystery or look for the mechanism?",
+  "minecraft_causality": "The entire story depends on three Minecraft mechanics: (1) ruined portal generation with variable frame completeness, (2) lightning ignition of nether portals, and (3) single-player world rules where the player is the only agent of construction. The 'impossible' event is actually a rare-but-valid combination of these systems.",
+  "climactic_choice": "The player must decide whether to accept the natural explanation and step through the portal into the Nether, or preserve the mystery by walking away. This is a choice about mindset â€” embracing discovery versus protecting uncertainty.",
+  "ending": "The player finds a lightning-struck tree adjacent to the portal frame, a flint and steel in a nearby generated chest, and the partial frame of a ruined portal whose missing block matches the active portal. The pieces click: this is a rare complete-frame ruined portal lit by a storm. The player steps through.",
+  "final_state": "The player crosses into the Nether for the first time on this world. The mystery is solved, but a new adventure â€” and a new dimension â€” begins. A hopeful, forward-looking close.",
+  "scope": "small",
+  "score": "7.8",
+  "score_dimensions": {
+    "clarity": 8,
+    "hook_strength": 9,
+    "visual_potential": 8,
+    "feasibility": 9,
+    "originality": 7,
+    "series_potential": 6
+  },
+  "decision": "develop",
+  "research_mode": "none",
+  "research_reason": "Original fiction relying on established vanilla Minecraft mechanics (ruined portals, lightning, nether portal behaviour). No real-world factual claims, cultural references, or external technical dependencies. A light research pass may be added during Story phase if specific generation rules need verification."
+}

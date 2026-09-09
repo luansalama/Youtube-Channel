@@ -1,0 +1,13 @@
+{
+  "title": "TODO",
+  "description": "TODO",
+  "tags": [
+    "TODO"
+  ],
+  "category_id": "20",
+  "default_language": "en-GB",
+  "made_for_kids": false,
+  "contains_synthetic_media": false,
+  "internal_slug": "{{VIDEO_SLUG}}",
+  "thumbnail_version": "TODO"
+}

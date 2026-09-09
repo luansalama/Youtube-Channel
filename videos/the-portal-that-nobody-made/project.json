@@ -1,0 +1,309 @@
+{
+  "schema_version": 2,
+  "slug": "the-portal-that-nobody-made",
+  "title": "The Portal That Nobody Made",
+  "stage": "production",
+  "state": "active",
+  "created_at": "2026-07-15T18:20:48+00:00",
+  "updated_at": "2026-07-17T12:47:18+00:00",
+  "approvals": {
+    "direction_lock": {
+      "by": "Luan",
+      "at": "2026-07-15T19:54:07+00:00",
+      "note": "Approved from dashboard",
+      "evidence": {
+        "01-direction/direction.md": "4adb6687d86dc657744bb1a4c70865bdb2416f2df313ed3b8aa90af9a959bebe",
+        ".studio/internal/direction/idea-score.json": "b8dd979f1771988f850d615884d822308b237c77375cc04b64a64271da7a6eb6"
+      }
+    },
+    "story_lock": {
+      "by": "Luan",
+      "at": "2026-07-16T13:31:17+00:00",
+      "note": "Approved from dashboard",
+      "evidence": {
+        "02-story/story-plan.md": "ee4c650d3ca436ce5dd4de1db374f7a3bf21d6d0db694561f3ffe14c7b061a1b",
+        ".studio/internal/story/story-model.json": "e1986cdda9aa4f3d7ae73819c266c108a5142a75ff84c3ba6bd00ae4d0a4687d",
+        ".studio/internal/story/causal-spine.csv": "356f51ec3e7d1015b211c2dbf3114a820533a47f00373729e7e441fc5e3e89d5",
+        ".studio/internal/story/sequence-outline.csv": "6cfe03c14bf2384476ce30d5db6000d2c4e519bfff5d313abc13959686edd979",
+        ".studio/internal/story/beat-sheet.csv": "d8566818a126eddf2ce9446c1dde7da5641b906a86d02018af23f82c08f13292",
+        ".studio/internal/story/scene-cards.csv": "d84db3786d41364f7f2379754d24459184e2752d0584fcd0d51c938992839657",
+        ".studio/internal/story/information-map.csv": "dfcb7276d5b2744343ed2a776e52f136d180ca802efc709cc4831afbf3265bc4",
+        ".studio/internal/story/setup-payoff-ledger.csv": "f6d149c06aea0cb705ad352d6d6c01b45f94d3c635e25dddaee064a62bf45890",
+        ".studio/internal/story/relationships.csv": "3273627f4634e2b49390b9dcad46ae335ca8ec730e87c6e3f6d838afda611b89"
+      }
+    },
+    "script_lock": {
+      "by": "Luan",
+      "at": "2026-07-16T23:39:25+00:00",
+      "note": "Approved from dashboard",
+      "evidence": {
+        "03-script/script.md": "3330fb8ee6efed2a8601510a670a5b7f97b9101f24092710ba200c0ce2235a53",
+        ".studio/internal/script/revision-pass-status.json": "e124c4ab747733fde2854241ed4b250e85fbd308a56b2887b7f31a337e55b40c",
+        ".studio/internal/script/table-read-notes.md": "d77a249cb96f566639323390860e511f972fca63cb4c3a1e935d6bb8d892d075"
+      }
+    }
+  },
+  "history": [
+    {
+      "at": "2026-07-15T18:20:48+00:00",
+      "event": "created",
+      "stage": "direction"
+    },
+    {
+      "at": "2026-07-15T19:13:31+00:00",
+      "event": "assistant_proposal_applied",
+      "proposal_id": "cddbda7b6231",
+      "phase": "direction",
+      "files": [
+        "01-direction/direction.md",
+        ".studio/internal/direction/idea-score.json",
+        ".studio/internal/research/inspiration-analysis.md",
+        ".studio/internal/research/source-ledger.csv",
+        ".studio/internal/research/claims.md"
+      ]
+    },
+    {
+      "at": "2026-07-15T19:14:03+00:00",
+      "event": "file_saved",
+      "path": "01-direction/direction.md"
+    },
+    {
+      "at": "2026-07-15T19:53:54+00:00",
+      "event": "assistant_proposal_applied",
+      "proposal_id": "66bed237bc79",
+      "phase": "direction",
+      "files": [
+        "01-direction/direction.md",
+        ".studio/internal/direction/idea-score.json",
+        ".studio/internal/research/inspiration-analysis.md",
+        ".studio/internal/research/source-ledger.csv",
+        ".studio/internal/research/claims.md"
+      ]
+    },
+    {
+      "at": "2026-07-15T19:53:57+00:00",
+      "event": "file_saved",
+      "path": "01-direction/direction.md"
+    },
+    {
+      "at": "2026-07-15T19:54:02+00:00",
+      "event": "file_saved",
+      "path": "01-direction/direction.md"
+    },
+    {
+      "at": "2026-07-15T19:54:07+00:00",
+      "event": "approved",
+      "gate": "direction_lock",
+      "by": "Luan"
+    },
+    {
+      "at": "2026-07-15T19:54:07+00:00",
+      "event": "advanced",
+      "from": "direction",
+      "to": "story"
+    },
+    {
+      "at": "2026-07-15T19:54:12+00:00",
+      "event": "file_saved",
+      "path": "02-story/story-plan.md"
+    },
+    {
+      "at": "2026-07-16T00:23:32+00:00",
+      "event": "assistant_proposal_applied",
+      "proposal_id": "43a411a139a7",
+      "phase": "story",
+      "files": [
+        "02-story/story-plan.md",
+        ".studio/internal/story/story-model.json",
+        ".studio/internal/story/causal-spine.csv",
+        ".studio/internal/story/sequence-outline.csv",
+        ".studio/internal/story/beat-sheet.csv",
+        ".studio/internal/story/scene-cards.csv",
+        ".studio/internal/story/information-map.csv",
+        ".studio/internal/story/setup-payoff-ledger.csv",
+        ".studio/internal/story/relationships.csv",
+        ".studio/internal/story/continuity-bible.md"
+      ]
+    },
+    {
+      "at": "2026-07-16T00:29:46+00:00",
+      "event": "file_saved",
+      "path": "02-story/story-plan.md"
+    },
+    {
+      "at": "2026-07-16T00:29:46+00:00",
+      "event": "file_saved",
+      "path": "02-story/story-plan.md"
+    },
+    {
+      "at": "2026-07-16T10:51:29+00:00",
+      "event": "assistant_proposal_applied",
+      "proposal_id": "b7aa0e0eb7d5",
+      "phase": "story",
+      "files": [
+        "02-story/story-plan.md",
+        ".studio/internal/story/story-model.json",
+        ".studio/internal/story/causal-spine.csv",
+        ".studio/internal/story/sequence-outline.csv",
+        ".studio/internal/story/beat-sheet.csv",
+        ".studio/internal/story/scene-cards.csv",
+        ".studio/internal/story/information-map.csv",
+        ".studio/internal/story/setup-payoff-ledger.csv",
+        ".studio/internal/story/relationships.csv",
+        ".studio/internal/story/continuity-bible.md"
+      ]
+    },
+    {
+      "at": "2026-07-16T13:31:00+00:00",
+      "event": "assistant_proposal_applied",
+      "proposal_id": "07c15bd99f79",
+      "phase": "story",
+      "files": [
+        "02-story/story-plan.md",
+        ".studio/internal/story/story-model.json",
+        ".studio/internal/story/causal-spine.csv",
+        ".studio/internal/story/sequence-outline.csv",
+        ".studio/internal/story/beat-sheet.csv",
+        ".studio/internal/story/scene-cards.csv",
+        ".studio/internal/story/information-map.csv",
+        ".studio/internal/story/setup-payoff-ledger.csv",
+        ".studio/internal/story/relationships.csv",
+        ".studio/internal/story/continuity-bible.md"
+      ]
+    },
+    {
+      "at": "2026-07-16T13:31:07+00:00",
+      "event": "file_saved",
+      "path": "02-story/story-plan.md"
+    },
+    {
+      "at": "2026-07-16T13:31:11+00:00",
+      "event": "file_saved",
+      "path": "02-story/story-plan.md"
+    },
+    {
+      "at": "2026-07-16T13:31:17+00:00",
+      "event": "approved",
+      "gate": "story_lock",
+      "by": "Luan"
+    },
+    {
+      "at": "2026-07-16T13:31:17+00:00",
+      "event": "advanced",
+      "from": "story",
+      "to": "script"
+    },
+    {
+      "at": "2026-07-16T15:39:58+00:00",
+      "event": "assistant_proposal_applied",
+      "proposal_id": "619c114c1159",
+      "phase": "script",
+      "files": [
+        "03-script/script.md",
+        ".studio/internal/script/revision-pass-status.json",
+        ".studio/internal/script/table-read-notes.md",
+        ".studio/internal/script/pronunciation-guide.md",
+        ".studio/internal/script/script-qc.md"
+      ]
+    },
+    {
+      "at": "2026-07-16T21:44:37+00:00",
+      "event": "file_saved",
+      "path": "03-script/script.md"
+    },
+    {
+      "at": "2026-07-16T23:39:10+00:00",
+      "event": "assistant_proposal_applied",
+      "proposal_id": "8215f90621c6",
+      "phase": "script",
+      "files": [
+        "03-script/script.md",
+        ".studio/internal/script/revision-pass-status.json",
+        ".studio/internal/script/table-read-notes.md",
+        ".studio/internal/script/pronunciation-guide.md",
+        ".studio/internal/script/script-qc.md"
+      ]
+    },
+    {
+      "at": "2026-07-16T23:39:14+00:00",
+      "event": "file_saved",
+      "path": "03-script/script.md"
+    },
+    {
+      "at": "2026-07-16T23:39:16+00:00",
+      "event": "file_saved",
+      "path": "03-script/script.md"
+    },
+    {
+      "at": "2026-07-16T23:39:20+00:00",
+      "event": "file_saved",
+      "path": "03-script/script.md"
+    },
+    {
+      "at": "2026-07-16T23:39:23+00:00",
+      "event": "file_saved",
+      "path": "03-script/script.md"
+    },
+    {
+      "at": "2026-07-16T23:39:25+00:00",
+      "event": "approved",
+      "gate": "script_lock",
+      "by": "Luan"
+    },
+    {
+      "at": "2026-07-16T23:39:25+00:00",
+      "event": "advanced",
+      "from": "script",
+      "to": "production"
+    },
+    {
+      "at": "2026-07-17T10:18:24+00:00",
+      "event": "assistant_proposal_applied",
+      "proposal_id": "771394dc9c50",
+      "phase": "production",
+      "files": [
+        "04-production/production-plan.md",
+        ".studio/internal/production/shot-list.csv",
+        ".studio/internal/production/asset-register.csv",
+        ".studio/internal/production/location-cards.csv",
+        ".studio/internal/production/risk-register.md",
+        ".studio/internal/production/build-log.md"
+      ]
+    },
+    {
+      "at": "2026-07-17T12:47:18+00:00",
+      "event": "assistant_proposal_applied",
+      "proposal_id": "de064a3c40fe",
+      "phase": "production",
+      "files": [
+        "04-production/production-plan.md",
+        ".studio/internal/production/storyboard-plan.md",
+        ".studio/internal/research/source-ledger.csv",
+        ".studio/internal/research/claims.md",
+        ".studio/internal/production/technical-research.md",
+        ".studio/internal/production/toolchain-matrix.csv",
+        ".studio/internal/production/scene-implementation-matrix.csv",
+        ".studio/internal/production/test-matrix.csv",
+        ".studio/internal/production/storyboard-panels.csv",
+        ".studio/internal/production/shot-list.csv",
+        ".studio/internal/production/camera-paths.csv",
+        ".studio/internal/production/asset-register.csv",
+        ".studio/internal/production/location-cards.csv",
+        ".studio/internal/production/location-plan.md",
+        ".studio/internal/production/build-budget.md",
+        ".studio/internal/production/risk-register.md",
+        ".studio/internal/production/build-log.md"
+      ]
+    }
+  ],
+  "youtube": {
+    "video_id": "",
+    "published_at": "",
+    "upload_status": "not_started"
+  },
+  "media": {
+    "master_file": "",
+    "thumbnail_file": "",
+    "youtube_client_secrets": ""
+  }
+}

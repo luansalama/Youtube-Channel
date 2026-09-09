@@ -1,0 +1,73 @@
+{
+  "provider": "runner_manager",
+  "routing_mode": "automatic",
+  "fixed_runner": "codex",
+  "fallback_enabled": false,
+  "fallback_order": [
+    "codex",
+    "opencode",
+    "openai"
+  ],
+  "routes": {
+    "creative": "codex",
+    "production": "codex",
+    "audit": "codex"
+  },
+  "web_search_default": true,
+  "visible_runner_terminal": true,
+  "runner_terminal_host": "windows_terminal",
+  "codex_full_output": true,
+  "runners": {
+    "codex": {
+      "enabled": true,
+      "command": "codex",
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "max",
+      "timeout_seconds": 3600
+    },
+    "opencode": {
+      "enabled": true,
+      "command": "opencode",
+      "model": "",
+      "variant": "",
+      "agent": "studio-assistant",
+      "timeout_seconds": 1800
+    },
+    "openai": {
+      "enabled": false,
+      "base_url": "https://api.openai.com/v1",
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "medium",
+      "api_key": "",
+      "remember_api_key": true,
+      "timeout_seconds": 600
+    }
+  },
+  "base_url": "https://api.openai.com/v1",
+  "model": "gpt-5.6-luna",
+  "reasoning_effort": "medium",
+  "api_key": "",
+  "remember_api_key": true,
+  "apps": {
+    "minecraft": {
+      "label": "Minecraft",
+      "command": "\"C:\\Users\\Admin\\AppData\\Local\\Programs\\PollyMC\\pollymc.exe\"",
+      "working_directory": "C:\\Users\\Admin\\AppData\\Local\\Programs\\PollyMC"
+    },
+    "blender": {
+      "label": "Blender",
+      "command": "\"K:\\Applications\\Blender\\Blender 5.2\\blender.exe\"",
+      "working_directory": "K:\\Applications\\Blender\\Blender 5.2"
+    },
+    "video_editor": {
+      "label": "Video editor",
+      "command": "",
+      "working_directory": ""
+    },
+    "audio_editor": {
+      "label": "Audio editor",
+      "command": "",
+      "working_directory": ""
+    }
+  }
+}

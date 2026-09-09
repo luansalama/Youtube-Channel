@@ -1,0 +1,1 @@
+TODO: Write the final YouTube description in en-GB. Lead with the viewer-facing premise, then credits, sources/attributions where necessary, chapters only after picture lock, and concise channel links.

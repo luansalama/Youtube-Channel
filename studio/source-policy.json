@@ -1,0 +1,14 @@
+{
+  "tiers": {
+    "A": "primary/official source or direct original evidence",
+    "B": "reputable secondary reporting or specialist documentation",
+    "C": "community source useful for discovery but not decisive support"
+  },
+  "rules": [
+    "log every factual claim that affects the story or business decision",
+    "keep URL, publisher, dates and access date",
+    "mark unresolved contradictions",
+    "do not cite AI summaries as sources",
+    "archive notes rather than copying large copyrighted passages"
+  ]
+}
