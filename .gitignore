@@ -1,20 +1,6 @@
-.venv/
 __pycache__/
-*.py[cod]
+*.pyc
 .pytest_cache/
-.coverage
-secrets/
-.env
-videos/*/assets/raw/
-videos/*/assets/project-files/
-videos/*/assets/renders/
-videos/*/assets/audio/
-videos/*/assets/masters/
-exports/*
-!exports/.gitkeep
-.DS_Store
-Thumbs.db
+exports/recovery/
+productions/*/assets/
 
-studio/local-settings.json
-imports/
-videos/*/.studio/proposals/

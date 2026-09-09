@@ -1,0 +1,17 @@
+HTTP/1.1 403 Forbidden
+Server: ESA
+Content-Type: application/json
+Content-Length: 30
+Connection: keep-alive
+Set-Cookie: acw_tc=800e74a117889359789478806ec754895ae37baf806033d6167c70f5d8;path=/;HttpOnly;Max-Age=3600
+Set-Cookie: cdn_sec_tc=800e74a117889359789478806ec754895ae37baf806033d6167c70f5d8;path=/;HttpOnly;Max-Age=3600
+Date: Wed, 09 Sep 2026 06:39:39 GMT
+Set-Cookie: acw_tc=0a094e9917889359791414157e393bf809b382edf84afcb2a3d0151fc8d004;path=/;HttpOnly;Max-Age=1800
+via: ens-cache45.l2sg7[47,0,DP], ens-cache10.l2hk7[86,0,DP], ens-cache13.br9[414,0,DP], ens-cache13.br9[415,0]
+x-site-cache-status: DYNAMIC
+x-process-time: 0
+x-trace-id: 1a084e4c08524221
+Timing-Allow-Origin: *
+EagleId: 800e74a117889359789478806e
+
+{"detail":"Not authenticated"}

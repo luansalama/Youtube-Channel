@@ -3,12 +3,12 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "minecraft-narrative-studio"
-version = "0.3.6"
-description = "Dashboard-first, video-at-a-time operating harness for a story-driven Minecraft YouTube channel."
+name = "cuts-studio"
+version = "0.1.0"
+description = "Local deterministic harness for Twitch-to-YouTube cuts/highlights production (proposal-gated)."
 requires-python = ">=3.11"
 license = {text = "MIT"}
-authors = [{name = "Luan Salama Martins"}]
+authors = [{name = "Cuts Studio"}]
 dependencies = []
 
 [project.optional-dependencies]
@@ -19,7 +19,7 @@ youtube = [
 ]
 
 [project.scripts]
-mcstudio = "mcstudio.cli:main"
+cstudio = "cstudio.cli:main"
 
 [tool.setuptools]
-packages = ["mcstudio"]
+packages = ["cstudio"]

@@ -1,29 +1,41 @@
-# Architecture — v0.3.6
+# Arquitetura — Cuts Studio
 
-The harness has six layers:
+Derivada do molde `Youtube-Channel` (`mcstudio`), reescrita para cortes Twitch → YouTube.
 
-1. **Hidden launcher** — starts the local Python service without a terminal.
-2. **Dashboard** — the complete user interface for production, runners, files, approvals, release, operations, and diagnostics.
-3. **Runner Manager** — routes Studio Assistant tasks to Codex, OpenCode, or the OpenAI API and normalises every response into one proposal schema.
-4. **Human documents** — seven readable phase records.
-5. **Internal evidence** — structured story, production, QC, release, proposal, backup, and analytics records.
-6. **Deterministic engine** — checks, fingerprints, transitions, packaging, integrations, maintenance, and recovery.
-
-## Trust boundary
-
-External AI runners never become the workflow authority. They receive context and return proposals. Codex runs in a read-only sandbox; OpenCode uses a bundled read-only agent. The Python server alone applies reviewed changes, records approvals, advances stages, and performs consequential integrations.
-
-## Adapter boundary
-
-All providers implement the same conceptual operation:
+## Fluxo obrigatório
 
 ```text
-instructions + project context
-→ structured proposal
-→ human review
-→ deterministic application
+runner externo (read-only) → contexto + instruções → proposal JSON
+→ validação determinística → revisão humana → aplicação determinística
+→ evidência + fingerprint → próximo gate
 ```
 
-This keeps the pipeline independent of any single model provider and allows routing or fallback changes without redesigning project files.
+## Stages (studio/stages.json)
 
-The server uses Python’s standard library, binds to `127.0.0.1`, and keeps consequential actions behind explicit forms and server-side validation.
+`config → ingest → analysis → sync → highlights → cutlist[cutlist_lock] → assembly → graphics[graphics_lock] → composition[master_lock] → metadata[rights_lock] → publish[publish_lock] → learn`
+
+Gates: `cutlist_lock`, `graphics_lock`, `master_lock`, `rights_lock`, `publish_lock`.
+
+## Módulos (cstudio/)
+
+| Módulo | Papel |
+|---|---|
+| `core.py` | produções, gates, fingerprints sha256, validação, packaging, recovery |
+| `proposals.py` | contrato `{summary,document,files,questions,warnings}`, store, apply humano |
+| `runners.py` | Codex/OpenCode/OpenAI/manual, mesma saída |
+| `workspace.py` | escrita sandbox por produção |
+| `session.py` | parsing Z.AI (árvore parent/children) → Markdown |
+| `timecode.py` | parse/format HH:MM:SS:FF, MM:SS, segundos |
+| `sync.py` | offset multi-POV (mediana nearest-neighbour) |
+| `cutlist.py` | CSV + validação (duração, overlap, ids) + timeline |
+| `rights.py` | registro explícito; gate bloqueia `sem_autorizacao_confirmada` |
+| `security.py` | conteúdo externo = DADO; quarentena de instruções |
+| `nle.py` | `NLEDriver` + `ResolveDriver` (xmeml + py/lua + runbook) |
+| `pipeline.py` | ingest/score/graphics/master/metadata/publish/learn |
+| `server.py` + `dashboard.py` | dashboard local 127.0.0.1 |
+
+## Decisões
+
+- `productions/` é o diretório canônico; `videos/` mantido como alias de leitura (compat. molde).
+- Publicação real nunca executa upload: `publish --execute` retorna package + motivo sem credenciais.
+- Resolve: scripts gerados, nunca "integração live" fictícia.
