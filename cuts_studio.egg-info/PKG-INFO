@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: cuts-studio
+Version: 0.1.0
+Summary: Local deterministic harness for Twitch-to-YouTube cuts/highlights production (proposal-gated).
+Author: Cuts Studio
+License: MIT
+Requires-Python: >=3.11
+Requires-Dist: numpy>=1.26
+Provides-Extra: youtube
+Requires-Dist: google-api-python-client>=2.0; extra == "youtube"
+Requires-Dist: google-auth-oauthlib>=1.0; extra == "youtube"
+Requires-Dist: google-auth-httplib2>=0.2; extra == "youtube"

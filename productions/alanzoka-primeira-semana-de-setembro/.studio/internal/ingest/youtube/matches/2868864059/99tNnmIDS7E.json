@@ -1,0 +1,297 @@
+{
+  "schema_version": 2,
+  "youtube_video_id": "99tNnmIDS7E",
+  "youtube": {
+    "schema_version": 2,
+    "video_id": "99tNnmIDS7E",
+    "url": "https://www.youtube.com/watch?v=99tNnmIDS7E",
+    "channel_id": "UCIwspRtKNszHhIhl36gREjQ",
+    "channel_name": "alanzoka",
+    "title": "ASSISTINDO AO EVENTO DE 40 ANOS DE ZELDA E VENDO O OCARINA OF TIME REMAKE!",
+    "description": "OS MAIORES DESCONTOS ESTÃO NO KABUM!:\nhttp://kb1.me/alanzokakabumyt\n\n💜 LIVE: https://www.twitch.tv/alanzoka\n📷 Instagram: https://www.instagram.com/alanzoka/\n📧 alanzoka@vandep.ag\n🐤 Twitter: https://twitter.com/alanzoka\n\n\n\n\n#Alanzoka",
+    "upload_date": "20260908",
+    "timestamp": 1788894040,
+    "duration": 2145.0,
+    "availability": "public",
+    "live_status": "not_live",
+    "thumbnail": "https://i.ytimg.com/vi/99tNnmIDS7E/maxresdefault.jpg",
+    "thumbnails": [
+      {
+        "url": "https://i.ytimg.com/vi/99tNnmIDS7E/hq720.jpg",
+        "height": 720,
+        "width": 1280,
+        "preference": -3,
+        "id": "38",
+        "resolution": "1280x720"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/99tNnmIDS7E/hq720.webp",
+        "preference": -2,
+        "id": "39"
+      },
+      {
+        "url": "https://i.ytimg.com/vi/99tNnmIDS7E/maxresdefault.jpg",
+        "height": 1080,
+        "width": 1920,
+        "preference": -1,
+        "id": "40",
+        "resolution": "1920x1080"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/99tNnmIDS7E/maxresdefault.webp",
+        "preference": 0,
+        "id": "41"
+      }
+    ],
+    "view_count": 564093,
+    "chapters": [],
+    "formats_summary": {
+      "max_height": 2160,
+      "max_fps": 60.0,
+      "heights": [
+        180,
+        240,
+        360,
+        480,
+        720,
+        1080,
+        1440,
+        2160
+      ]
+    },
+    "indexed_at": "2026-09-10T20:45:25Z",
+    "untrusted": true,
+    "injection_findings": [],
+    "streamer": "alanzoka",
+    "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+    "configured_channel_name": "alanzoka",
+    "playlist_index": null,
+    "playlist_autonumber": null
+  },
+  "twitch_vod_ids": [
+    "2868864059"
+  ],
+  "twitch": {
+    "vod_id": "2868864059",
+    "streamer": "alanzoka",
+    "title": "mais onimusha e blood of the dawnwalker",
+    "game": "Só Na Conversa",
+    "created_at": "2026-09-08T18:18:43Z",
+    "duration": 27292.0,
+    "chapters": [
+      {
+        "title": "Just Chatting",
+        "start": 0.0,
+        "duration": 2366.0
+      },
+      {
+        "title": "Onimusha: Way of the Sword",
+        "start": 2366.0,
+        "duration": 7276.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 9642.0,
+        "duration": 529.0
+      },
+      {
+        "title": "The Blood of Dawnwalker",
+        "start": 10171.0,
+        "duration": 16726.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 26897.0,
+        "duration": 395.0
+      }
+    ],
+    "path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\twitch\\alanzoka\\discovery\\2868864059.json",
+    "source_url": "https://www.twitch.tv/videos/2868864059",
+    "untrusted": true,
+    "injection_findings": []
+  },
+  "streamer": "alanzoka",
+  "state": "candidate",
+  "candidate_score": 0.3443,
+  "candidate_evidence": {
+    "candidate_score": 0.3443,
+    "signals": {
+      "channel": {
+        "score": 1.0,
+        "available": true,
+        "weight": 0.0,
+        "effective_weight": 0.0,
+        "detail": "configured mirror channel"
+      },
+      "date": {
+        "score": 0.9976,
+        "available": true,
+        "weight": 0.3,
+        "effective_weight": 0.3,
+        "detail": "upload delay +0.0d"
+      },
+      "duration": {
+        "score": 0.2043,
+        "available": true,
+        "weight": 0.22,
+        "effective_weight": 0.22,
+        "detail": "short subset ratio 0.08"
+      },
+      "title": {
+        "score": 0.0,
+        "available": true,
+        "weight": 0.28,
+        "effective_weight": 0.28,
+        "detail": "token similarity"
+      },
+      "chapters": {
+        "score": 0.0,
+        "available": true,
+        "weight": 0.2,
+        "effective_weight": 0.2,
+        "detail": "shared tokens: none"
+      }
+    },
+    "contributions": {
+      "channel": 0.0,
+      "date": 0.2993,
+      "duration": 0.045,
+      "title": 0.0,
+      "chapters": 0.0
+    }
+  },
+  "verification": {
+    "status": "complete",
+    "policy_version": "global-source-assignment-v1",
+    "matcher_engine": "numpy-exact",
+    "completed_at": "2026-09-10T20:46:55Z",
+    "mode": "global-audio+localized-text",
+    "providers": {
+      "metadata": "complete",
+      "audio": "complete",
+      "transcript": "localized_complete"
+    },
+    "transcript": {
+      "method": "whisper-localized-anchor-v2",
+      "anchors": [
+        {
+          "youtube_time": 200.5,
+          "twitch_time": 7612.0,
+          "audio_similarity": 0.8396,
+          "similarity": 0.0,
+          "youtube_tokens": 2,
+          "twitch_tokens": 32,
+          "youtube_text": "Carro refazer",
+          "twitch_text": "Acaba nunca não, mano. Essa porra não tá tão legal assim pra ser uma hora de show, gente. Vocês vão diminuir aí um pouco o tempo do show aí, velho, sinceramente. Né?",
+          "method": "whisper-localized-anchor-v2"
+        },
+        {
+          "youtube_time": 758.2,
+          "twitch_time": 11050.5,
+          "audio_similarity": 0.7763,
+          "similarity": 0.0435,
+          "youtube_tokens": 37,
+          "twitch_tokens": 55,
+          "youtube_text": "Na época do N64, havia apenas um joystick. Eu só tinha um, então não pude fazer isso. sim. sim. Ela é uma garota chamada Saria, minha amiga de infância. Eles sempre parecem se importar com o anel.",
+          "twitch_text": "Aqui. Até nós descer ali pra última torre, mano. Certo, Nilson? Eu não enxergo nada, tá muito escuro, baby. Meu Deus. Cara, perguntar isso pra mim é igual perguntar pro Edu se ele é horroroso em videogame, mano. A resposta é sim, né, cara? Meu Deus, eu tentei chupar um lobo e não consegui, mano.",
+          "method": "whisper-localized-anchor-v2"
+        },
+        {
+          "youtube_time": 1358.8,
+          "twitch_time": 25794.0,
+          "audio_similarity": 0.8028,
+          "similarity": 0.1143,
+          "youtube_tokens": 19,
+          "twitch_tokens": 16,
+          "youtube_text": "sim. Então, com isso, Vocês conseguem perceber que estou começando a ficar para baixo conforme a noite se aproxima?",
+          "twitch_text": "Essa é a última peça da escada. Mas ainda está faltando a hilt. Faltando uma punhadura.",
+          "method": "whisper-localized-anchor-v2"
+        }
+      ],
+      "assessment": {
+        "state": "insufficient",
+        "good_anchors": 0,
+        "total_anchors": 3,
+        "median_similarity": 0.0,
+        "timeline_consistency": "insufficient"
+      },
+      "strategy": "bounded-global-localized-tiebreak",
+      "full_source_whisper": false
+    },
+    "audio": {
+      "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+      "anchors": [
+        {
+          "youtube_time": 200.5,
+          "twitch_time": 7612.0,
+          "similarity": 0.8396,
+          "second_best_similarity": 0.8261,
+          "peak_margin": 0.0135,
+          "search_mode": "global",
+          "evaluated_windows": 54530,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 758.2,
+          "twitch_time": 11050.5,
+          "similarity": 0.7763,
+          "second_best_similarity": 0.7648,
+          "peak_margin": 0.0115,
+          "search_mode": "forward-fallback",
+          "evaluated_windows": 38749,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 1358.8,
+          "twitch_time": 25794.0,
+          "similarity": 0.8028,
+          "second_best_similarity": 0.7926,
+          "peak_margin": 0.0102,
+          "search_mode": "forward-fallback",
+          "evaluated_windows": 31829,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 1873.6,
+          "twitch_time": 26541.0,
+          "similarity": 0.7359,
+          "second_best_similarity": 0.7151,
+          "peak_margin": 0.0208,
+          "search_mode": "forward-fallback",
+          "evaluated_windows": 2428,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        }
+      ],
+      "assessment": {
+        "state": "candidate",
+        "good_anchors": 1,
+        "total_anchors": 4,
+        "median_similarity": 0.8396,
+        "ordered": false,
+        "timeline_consistency": "insufficient",
+        "slopes": [],
+        "offsets": [
+          7411.5
+        ],
+        "offset_deltas": [],
+        "backwards_offset_jumps": [],
+        "continuous_offset_pairs": 0,
+        "forward_cut_gaps": [],
+        "median_peak_margin": 0.0135,
+        "consistency_model": "piecewise-offset-v1"
+      }
+    }
+  },
+  "timeline_segments": [],
+  "download": {
+    "status": "not_downloaded",
+    "path": ""
+  },
+  "rights_status": "sem_autorizacao_confirmada",
+  "global_assignment": true,
+  "updated_at": "2026-09-10T20:46:55Z"
+}

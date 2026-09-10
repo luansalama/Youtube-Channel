@@ -15,6 +15,7 @@ A navegação foi reorganizada para refletir o harness em vez de um template gen
 - **Operação**
   - Visão geral
   - Captura Twitch
+  - YouTube Mirrors
 - **Revisão humana**
   - Propostas
   - Aprovações
@@ -39,7 +40,7 @@ cstudio/static/dashboard.css
     design system SnowUI/Cuts Studio, dark-only e responsivo
 
 cstudio/static/dashboard.js
-    drawers, confirmations, filtros, animações WAAPI e polling Twitch
+    drawers, confirmations, filtros, animações WAAPI e polling de jobs Twitch/YouTube
 
 cstudio/server.py
     ThreadingHTTPServer, static assets, CSP/headers, CSRF e actions/API
@@ -65,7 +66,8 @@ Sem JavaScript, o fluxo principal continua utilizável. Com JavaScript habilitad
 - confirmação via `<dialog>` para ações destrutivas;
 - filtro client-side da cutlist;
 - animações de entrada via Web Animations API;
-- atualização parcial do run Twitch.
+- atualização parcial dos runs Twitch/YouTube;
+- busca e filtros client-side dos assignments globais do YouTube.
 
 Nenhuma dessas camadas pode contornar validações do backend.
 
@@ -117,6 +119,22 @@ API JSON de observabilidade permanece disponível:
 GET /api/twitch-status?slug=<slug>
 ```
 
+## YouTube Mirrors
+
+A página **YouTube Mirrors** é operacional e usa a mesma camada `cstudio.youtube_resolver` da CLI. A apresentação é **assignment-global first**: cada vídeo YouTube possui uma decisão principal (`VERIFIED`, `NO MATCH` ou em progresso), e estados locais como `candidate`, `likely` e `ambiguous` aparecem somente dentro da evidência técnica de cada par VOD↔vídeo. Isso evita apresentar um par local como pendência quando o assignment global já terminou.
+
+A tela principal mostra KPIs de cobertura, busca e filtros por estado, uma lista compacta dos assignments e uma grade **VOD coverage** que contém apenas mirrors `VERIFIED`. `NO MATCH` é exibido como decisão terminal, nunca como “pendente”. A matriz de VODs, metadata prior, anchors, timeline, fallback textual e controles de reverificação/rejeição ficam em um painel expansível por vídeo. O catálogo de VODs pode ser reconstruído dos manifests YouTube persistidos, então a leitura histórica continua útil mesmo quando o ingest Twitch pesado não está presente no snapshot.
+
+O job atual fica compacto: durante execução o log abre para acompanhamento ao vivo; depois de concluído ele fica recolhido por padrão, preservando o log completo, scroll e botão de cópia. Configuração de canais também fica em painel recolhível para não competir com os resultados.
+
+Ações disponíveis: cadastrar/ativar/desativar canais, `Refresh index`, `Resolve production`, reverificar/rejeitar pares na área técnica, `Download master` e `Auto-download verified sources`. Operações longas iniciam jobs em background e atualizam somente o fragmento:
+
+```text
+GET /ui/youtube-run?slug=<slug>
+```
+
+Os jobs longos de YouTube iniciados pelo dashboard rodam em **processos destacados**, com PID e log persistidos. Além disso, `Resolve production` é incremental: cada vídeo relevante é comparado contra todos os VODs elegíveis e o assignment é salvo depois de cada par. Reexecutar o comando pula assignments concluídos e continua assignments parciais somente nos VODs faltantes; `--force` força recálculo. O polling para quando o job deixa `running`; um restart do servidor HTTP não encerra o worker, e o dashboard só marca um job antigo como falho quando o PID persistido realmente não está mais ativo. Falhas externas são persistidas como `failed`, nunca mascaradas como `completed`.
+
 ## Segurança do dashboard
 
 O servidor adiciona uma Content Security Policy sem `unsafe-inline`:
@@ -153,7 +171,9 @@ GET  /
 GET  /health
 GET  /api/status
 GET  /api/twitch-status
+GET  /api/youtube-status
 GET  /ui/twitch-run
+GET  /ui/youtube-run
 GET  /static/dashboard.css
 GET  /static/dashboard.js
 
@@ -166,6 +186,14 @@ POST /action/pause
 POST /action/resume
 POST /action/abandon
 POST /action/twitch-scrape
+POST /action/youtube-channel-set
+POST /action/youtube-channel-toggle
+POST /action/youtube-auto-download
+POST /action/youtube-index
+POST /action/youtube-resolve
+POST /action/youtube-verify
+POST /action/youtube-download
+POST /action/youtube-reject
 POST /action/maintain
 ```
 

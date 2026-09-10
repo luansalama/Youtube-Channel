@@ -37,6 +37,12 @@ def build_parser() -> argparse.ArgumentParser:
 
     s = sub.add_parser("ingest"); s.add_argument("slug"); s.add_argument("--asset-id", required=True); s.add_argument("--kind", required=True); s.add_argument("--path", required=True); s.add_argument("--rights", default="sem_autorizacao_confirmada")
     s = sub.add_parser("twitch-scrape"); s.add_argument("slug"); s.add_argument("--streamer", required=True); s.add_argument("--target", default="3"); s.add_argument("--threads", type=int, choices=(1, 2, 4, 8), default=4); s.add_argument("--force", action="store_true"); s.add_argument("--no-resume", action="store_true"); s.add_argument("--sequential", action="store_true")
+    s = sub.add_parser("youtube-channel-set"); s.add_argument("--streamer", required=True); s.add_argument("--name", required=True); s.add_argument("--url", required=True); s.add_argument("--channel-id", default=""); s.add_argument("--language", default="", help="Whisper language hint for this streamer, e.g. pt; empty keeps auto/default"); s.add_argument("--disabled", action="store_true")
+    s = sub.add_parser("youtube-index"); s.add_argument("slug"); s.add_argument("--streamer", default=""); s.add_argument("--refresh-index", action="store_true"); s.add_argument("--force", action="store_true")
+    s = sub.add_parser("youtube-resolve"); s.add_argument("slug"); s.add_argument("--streamer", default=""); s.add_argument("--vod-id", default=""); s.add_argument("--refresh-index", action="store_true"); s.add_argument("--download-verified", action="store_true"); s.add_argument("--no-download", action="store_true"); s.add_argument("--no-verify", action="store_true"); s.add_argument("--force", action="store_true")
+    s = sub.add_parser("youtube-verify"); s.add_argument("slug"); s.add_argument("--vod-id", required=True); s.add_argument("--video-id", required=True); s.add_argument("--force", action="store_true")
+    s = sub.add_parser("youtube-download"); s.add_argument("slug"); s.add_argument("--vod-id", required=True); s.add_argument("--video-id", required=True); s.add_argument("--force", action="store_true")
+    s = sub.add_parser("youtube-job-worker", help=argparse.SUPPRESS); s.add_argument("slug"); s.add_argument("--job-id", required=True)
     s = sub.add_parser("rights"); s.add_argument("slug"); s.add_argument("--asset", required=True); s.add_argument("--status", required=True); s.add_argument("--by", default=""); s.add_argument("--scope", default=""); s.add_argument("--evidence", default="")
     s = sub.add_parser("cutlist-validate"); s.add_argument("slug")
     s = sub.add_parser("nle-export"); s.add_argument("slug"); s.add_argument("--driver", default="davinci-resolve"); s.add_argument("--outdir", default="")
@@ -111,6 +117,35 @@ def main(argv=None) -> int:
             from . import twitch as TW
             rec = TW.run_scrape(root, args.slug, args.streamer, args.target, threads=args.threads, force=args.force, resume=not args.no_resume, sequential=args.sequential)
             print(json.dumps(rec, ensure_ascii=False, indent=2))
+            return 0 if rec.get("status") == "completed" else 1
+        elif args.cmd == "youtube-channel-set":
+            from . import youtube_resolver as YR
+            rec = YR.set_channel(root, args.streamer, name=args.name, url=args.url, channel_id=args.channel_id, enabled=not args.disabled, language=args.language)
+            print(json.dumps(rec, ensure_ascii=False, indent=2))
+        elif args.cmd == "youtube-index":
+            from . import youtube_resolver as YR
+            rec = YR.run_job(root, args.slug, "index", streamer=args.streamer, force=bool(args.force or args.refresh_index), command="youtube-index")
+            print(json.dumps(rec, ensure_ascii=False, indent=2))
+            return 0 if rec.get("status") == "completed" else 1
+        elif args.cmd == "youtube-resolve":
+            from . import youtube_resolver as YR
+            download = bool(args.download_verified and not args.no_download)
+            rec = YR.run_job(root, args.slug, "resolve", streamer=args.streamer, vod_id=args.vod_id, refresh_index=args.refresh_index, download=download, no_download=bool(args.no_download), force=args.force, verify=not args.no_verify, command="youtube-resolve")
+            print(json.dumps(rec, ensure_ascii=False, indent=2))
+            return 0 if rec.get("status") == "completed" else 1
+        elif args.cmd == "youtube-verify":
+            from . import youtube_resolver as YR
+            rec = YR.run_job(root, args.slug, "verify", vod_id=args.vod_id, video_id=args.video_id, force=args.force, command="youtube-verify")
+            print(json.dumps(rec, ensure_ascii=False, indent=2))
+            return 0 if rec.get("status") == "completed" else 1
+        elif args.cmd == "youtube-download":
+            from . import youtube_resolver as YR
+            rec = YR.run_job(root, args.slug, "download", vod_id=args.vod_id, video_id=args.video_id, force=args.force, command="youtube-download")
+            print(json.dumps(rec, ensure_ascii=False, indent=2))
+            return 0 if rec.get("status") == "completed" else 1
+        elif args.cmd == "youtube-job-worker":
+            from . import youtube_resolver as YR
+            rec = YR.run_persisted_job(root, args.slug, args.job_id)
             return 0 if rec.get("status") == "completed" else 1
         elif args.cmd == "rights":
             from . import rights as RT

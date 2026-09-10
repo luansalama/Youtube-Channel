@@ -1,0 +1,41 @@
+{
+  "schema_version": 2,
+  "auto_download_verified": false,
+  "transcription": {
+    "enabled": true,
+    "provider": "faster-whisper",
+    "backend": "auto",
+    "whisper_home": "",
+    "executable": "",
+    "model": "",
+    "faster_model": "",
+    "device": "",
+    "compute_type": "float16",
+    "batch_size": 8,
+    "language": "",
+    "language_by_streamer": {
+      "alanzoka": "pt"
+    }
+  },
+  "streamers": {
+    "alanzoka": {
+      "youtube_channels": [
+        {
+          "name": "alanzoka",
+          "channel_id": "",
+          "url": "https://www.youtube.com/@alanzoka/featured/videos",
+          "enabled": false,
+          "updated_at": "2026-09-10T04:14:31Z"
+        },
+        {
+          "name": "alanzoka",
+          "channel_id": "UCIwspRtKNszHhIhl36gREjQ",
+          "url": "https://www.youtube.com/@alanzoka/videos",
+          "enabled": true,
+          "updated_at": "2026-09-10T19:09:06Z"
+        }
+      ],
+      "transcription_language": "pt"
+    }
+  }
+}

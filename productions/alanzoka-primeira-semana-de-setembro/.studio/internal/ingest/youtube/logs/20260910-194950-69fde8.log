@@ -1,0 +1,242 @@
+[2026-09-10T19:49:50Z] YouTube Mirror Resolver job resolve pid=9504
+candidate vod=2861744268 youtube=SynOBrPYbV0 score=0.833 state=ambiguous
+candidate vod=2861744268 youtube=vt1HbScE_jM score=0.805 state=ambiguous
+candidate vod=2861744268 youtube=7GBn3uVeVb8 score=0.801 state=likely
+candidate vod=2861744268 youtube=muxOFHGOpZs score=0.784 state=verified
+candidate vod=2861744268 youtube=iEZOwN5xssU score=0.730 state=verified
+candidate vod=2861744268 youtube=nH8X1jAyoeQ score=0.540 state=candidate
+candidate vod=2861744268 youtube=CMrXO8qfoQw score=0.314 state=candidate
+candidate vod=2861744268 youtube=Wjl1p9MmI-k score=0.269 state=candidate
+candidate vod=2862622285 youtube=SynOBrPYbV0 score=0.762 state=ambiguous
+candidate vod=2862622285 youtube=vt1HbScE_jM score=0.734 state=ambiguous
+candidate vod=2862622285 youtube=7GBn3uVeVb8 score=0.730 state=likely
+candidate vod=2862622285 youtube=muxOFHGOpZs score=0.714 state=likely
+candidate vod=2862622285 youtube=iEZOwN5xssU score=0.679 state=candidate
+candidate vod=2862622285 youtube=nH8X1jAyoeQ score=0.614 state=candidate
+candidate vod=2862622285 youtube=nOj-aeb7haY score=0.398 state=candidate
+candidate vod=2862622285 youtube=6yZE6Xr2BZ0 score=0.389 state=candidate
+candidate vod=2863504919 youtube=Plcc-06LY-A score=0.618 state=candidate
+candidate vod=2863504919 youtube=XR0-lJLW_rs score=0.615 state=verified
+candidate vod=2863504919 youtube=QcJ0mjcA62k score=0.606 state=candidate
+candidate vod=2863504919 youtube=_Q-dV2V2g5s score=0.604 state=candidate
+candidate vod=2863504919 youtube=fSMIJVnlB_Y score=0.597 state=candidate
+candidate vod=2863504919 youtube=1CuVhBjs3ns score=0.381 state=candidate
+candidate vod=2863504919 youtube=1wACf-7QBE8 score=0.375 state=candidate
+candidate vod=2863504919 youtube=CMrXO8qfoQw score=0.314 state=candidate
+candidate vod=2864229186 youtube=TEHaNIT7eZs score=0.453 state=candidate
+candidate vod=2864229186 youtube=favxANUu9O4 score=0.449 state=candidate
+candidate vod=2864229186 youtube=OKO05-GPKyI score=0.448 state=candidate
+candidate vod=2864229186 youtube=XR0-lJLW_rs score=0.425 state=candidate
+candidate vod=2864229186 youtube=Plcc-06LY-A score=0.424 state=candidate
+candidate vod=2864229186 youtube=QcJ0mjcA62k score=0.412 state=candidate
+candidate vod=2864229186 youtube=_Q-dV2V2g5s score=0.410 state=candidate
+candidate vod=2864229186 youtube=fSMIJVnlB_Y score=0.404 state=candidate
+candidate vod=2865097583 youtube=Plcc-06LY-A score=0.611 state=candidate
+candidate vod=2865097583 youtube=XR0-lJLW_rs score=0.606 state=candidate
+candidate vod=2865097583 youtube=TEHaNIT7eZs score=0.593 state=candidate
+candidate vod=2865097583 youtube=QcJ0mjcA62k score=0.569 state=candidate
+candidate vod=2865097583 youtube=_Q-dV2V2g5s score=0.560 state=candidate
+candidate vod=2865097583 youtube=favxANUu9O4 score=0.551 state=candidate
+candidate vod=2865097583 youtube=OKO05-GPKyI score=0.546 state=candidate
+candidate vod=2865097583 youtube=fSMIJVnlB_Y score=0.527 state=candidate
+candidate vod=2868004694 youtube=Plcc-06LY-A score=0.753 state=ambiguous
+candidate vod=2868004694 youtube=QcJ0mjcA62k score=0.742 state=ambiguous
+candidate vod=2868004694 youtube=_Q-dV2V2g5s score=0.740 state=likely
+candidate vod=2868004694 youtube=XR0-lJLW_rs score=0.723 state=likely
+candidate vod=2868004694 youtube=TEHaNIT7eZs score=0.720 state=verified
+candidate vod=2868004694 youtube=favxANUu9O4 score=0.717 state=likely
+candidate vod=2868004694 youtube=OKO05-GPKyI score=0.716 state=likely
+candidate vod=2868004694 youtube=fSMIJVnlB_Y score=0.695 state=candidate
+candidate vod=2868864059 youtube=Plcc-06LY-A score=0.719 state=ambiguous
+candidate vod=2868864059 youtube=QcJ0mjcA62k score=0.708 state=ambiguous
+candidate vod=2868864059 youtube=_Q-dV2V2g5s score=0.706 state=likely
+candidate vod=2868864059 youtube=XR0-lJLW_rs score=0.697 state=candidate
+candidate vod=2868864059 youtube=TEHaNIT7eZs score=0.690 state=candidate
+candidate vod=2868864059 youtube=favxANUu9O4 score=0.687 state=candidate
+candidate vod=2868864059 youtube=OKO05-GPKyI score=0.686 state=candidate
+candidate vod=2868864059 youtube=fSMIJVnlB_Y score=0.659 state=candidate
+candidate vod=2869682753 youtube=Plcc-06LY-A score=0.671 state=candidate
+candidate vod=2869682753 youtube=QcJ0mjcA62k score=0.660 state=candidate
+candidate vod=2869682753 youtube=_Q-dV2V2g5s score=0.658 state=candidate
+candidate vod=2869682753 youtube=XR0-lJLW_rs score=0.658 state=candidate
+candidate vod=2869682753 youtube=TEHaNIT7eZs score=0.647 state=candidate
+candidate vod=2869682753 youtube=favxANUu9O4 score=0.644 state=candidate
+candidate vod=2869682753 youtube=OKO05-GPKyI score=0.643 state=candidate
+candidate vod=2869682753 youtube=fSMIJVnlB_Y score=0.607 state=candidate
+global source assignment: videos=19 vods=8 matcher=stdlib-coarse policy=global-source-assignment-v1
+assignment 1/19: youtube=SynOBrPYbV0 evaluated=4/8
+metadata cache hit: youtube/SynOBrPYbV0 age=2446s
+audio fallback anchor 1: yt=905.5s twitch=4113.5s similarity=0.7841 second=0.7501 margin=0.0340 search=global
+audio fallback anchor 2: yt=3296.2s twitch=18847.5s similarity=0.8325 second=0.8126 margin=0.0199 search=forward-fallback
+audio fallback anchor 3: yt=5870.8s twitch=21888.5s similarity=0.7681 second=0.7337 margin=0.0344 search=predicted-window
+audio fallback anchor 4: yt=8077.6s twitch=23901.0s similarity=0.7313 second=0.6964 margin=0.0349 search=forward-fallback
+audio fallback anchor 1: yt=905.5s twitch=28528.0s similarity=0.7643 second=0.7489 margin=0.0154 search=global
+audio fallback anchor 2: yt=3296.2s twitch=29847.0s similarity=0.7836 second=0.7642 margin=0.0194 search=forward-fallback
+audio fallback anchor 3: yt=5870.8s twitch=32203.5s similarity=0.8100 second=0.7692 margin=0.0408 search=forward-fallback
+audio fallback anchor 4: yt=8077.6s twitch=33306.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 1: yt=905.5s twitch=24452.0s similarity=0.7708 second=0.7563 margin=0.0145 search=global
+audio fallback anchor 2: yt=3296.2s twitch=26727.0s similarity=0.7537 second=0.7467 margin=0.0070 search=forward-fallback
+audio fallback anchor 3: yt=5870.8s twitch=28014.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 4: yt=8077.6s twitch=29117.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 1: yt=905.5s twitch=21482.0s similarity=0.7743 second=0.7658 margin=0.0085 search=global
+audio fallback anchor 2: yt=3296.2s twitch=24942.5s similarity=0.7877 second=0.7631 margin=0.0246 search=forward-fallback
+audio fallback anchor 3: yt=5870.8s twitch=26787.5s similarity=0.7440 second=0.7207 margin=0.0233 search=forward-fallback
+audio fallback anchor 4: yt=8077.6s twitch=27890.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+assignment result: youtube=SynOBrPYbV0 state=unmatched primary_vod=2864229186 assigned=-
+assignment 2/19: youtube=vt1HbScE_jM resume=completed -> skip all 8 VODs
+assignment 3/19: youtube=7GBn3uVeVb8 resume=completed -> skip all 8 VODs
+assignment 4/19: youtube=muxOFHGOpZs evaluated=4/8
+metadata cache hit: youtube/muxOFHGOpZs age=2391s
+audio fallback anchor 1: yt=829.3s twitch=2986.0s similarity=0.7722 second=0.7573 margin=0.0149 search=global
+audio fallback anchor 2: yt=3021.9s twitch=20997.5s similarity=0.7205 second=0.7179 margin=0.0026 search=forward-fallback
+audio fallback anchor 3: yt=5383.1s twitch=24647.0s similarity=0.7362 second=0.7071 margin=0.0291 search=forward-fallback
+audio fallback anchor 4: yt=7407.0s twitch=25658.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+assignment result: youtube=muxOFHGOpZs state=verified primary_vod=2861744268 assigned=2861744268
+assignment 5/19: youtube=Plcc-06LY-A evaluated=4/8
+metadata cache hit: youtube/Plcc-06LY-A age=2230s
+audio fallback anchor 1: yt=1045.5s twitch=11248.0s similarity=0.7091 second=0.7022 margin=0.0069 search=global
+audio fallback anchor 2: yt=3800.2s twitch=17249.0s similarity=0.8849 second=0.8632 margin=0.0217 search=forward-fallback
+audio fallback anchor 3: yt=6766.8s twitch=19074.0s similarity=0.7063 second=0.6966 margin=0.0097 search=forward-fallback
+audio fallback anchor 4: yt=9309.6s twitch=24473.0s similarity=0.7527 second=0.7396 margin=0.0131 search=forward-fallback
+audio fallback anchor 1: yt=1045.5s twitch=22432.0s similarity=0.9671 second=0.7141 margin=0.2530 search=global
+audio fallback anchor 2: yt=3800.2s twitch=25186.5s similarity=0.9523 second=0.8559 margin=0.0964 search=predicted-window
+audio fallback anchor 3: yt=6766.8s twitch=28153.0s similarity=0.9913 second=0.7181 margin=0.2732 search=predicted-window
+audio fallback anchor 4: yt=9309.6s twitch=31101.0s similarity=0.9637 second=0.7978 margin=0.1659 search=forward-fallback
+audio fallback anchor 1: yt=1045.5s twitch=12932.0s similarity=0.7093 second=0.6951 margin=0.0142 search=global
+audio fallback anchor 2: yt=3800.2s twitch=18015.0s similarity=0.8874 second=0.8492 margin=0.0382 search=forward-fallback
+audio fallback anchor 3: yt=6766.8s twitch=23588.5s similarity=0.7559 second=0.7339 margin=0.0220 search=forward-fallback
+audio fallback anchor 4: yt=9309.6s twitch=26575.0s similarity=0.7499 second=0.6905 margin=0.0594 search=predicted-window
+audio fallback anchor 1: yt=1045.5s twitch=27112.0s similarity=0.7127 second=0.6986 margin=0.0141 search=global
+audio fallback anchor 2: yt=3800.2s twitch=28489.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 3: yt=6766.8s twitch=29972.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 4: yt=9309.6s twitch=31243.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+assignment result: youtube=Plcc-06LY-A state=verified primary_vod=2865097583 assigned=2865097583
+assignment 6/19: youtube=QcJ0mjcA62k evaluated=4/8
+metadata cache hit: youtube/QcJ0mjcA62k age=2231s
+audio fallback anchor 1: yt=798.0s twitch=11594.0s similarity=0.7328 second=0.7133 margin=0.0195 search=global
+audio fallback anchor 2: yt=2909.2s twitch=21805.5s similarity=0.7447 second=0.7150 margin=0.0297 search=forward-fallback
+audio fallback anchor 3: yt=5182.8s twitch=23098.5s similarity=0.7354 second=0.6835 margin=0.0519 search=forward-fallback
+audio fallback anchor 4: yt=7131.6s twitch=24557.5s similarity=0.7740 second=0.7536 margin=0.0204 search=forward-fallback
+audio fallback anchor 1: yt=798.0s twitch=28262.0s similarity=0.7453 second=0.7087 margin=0.0366 search=global
+audio fallback anchor 2: yt=2909.2s twitch=30366.5s similarity=0.7536 second=0.7337 margin=0.0199 search=forward-fallback
+audio fallback anchor 3: yt=5182.8s twitch=32652.0s similarity=0.7125 second=0.6937 margin=0.0188 search=forward-fallback
+audio fallback anchor 4: yt=7131.6s twitch=33626.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 1: yt=798.0s twitch=11424.0s similarity=0.8826 second=0.7227 margin=0.1599 search=global
+audio fallback anchor 2: yt=2909.2s twitch=13535.0s similarity=0.9672 second=0.7336 margin=0.2336 search=predicted-window
+audio fallback anchor 3: yt=5182.8s twitch=15808.5s similarity=0.8835 second=0.7133 margin=0.1702 search=predicted-window
+audio fallback anchor 4: yt=7131.6s twitch=17757.5s similarity=0.9310 second=0.7501 margin=0.1809 search=predicted-window
+audio fallback anchor 1: yt=798.0s twitch=22414.0s similarity=0.7694 second=0.7309 margin=0.0385 search=global
+audio fallback anchor 2: yt=2909.2s twitch=25743.5s similarity=0.7372 second=0.7126 margin=0.0246 search=forward-fallback
+audio fallback anchor 3: yt=5182.8s twitch=27193.5s similarity=0.6718 second=0.6663 margin=0.0055 search=forward-fallback
+audio fallback anchor 4: yt=7131.6s twitch=28167.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+assignment result: youtube=QcJ0mjcA62k state=verified primary_vod=2868004694 assigned=2868004694
+assignment 7/19: youtube=_Q-dV2V2g5s evaluated=4/8
+metadata cache hit: youtube/_Q-dV2V2g5s age=2233s
+audio fallback anchor 1: yt=761.4s twitch=15320.0s similarity=0.7646 second=0.7568 margin=0.0078 search=global
+audio fallback anchor 2: yt=2777.4s twitch=17257.5s similarity=0.7802 second=0.7529 margin=0.0273 search=predicted-window
+audio fallback anchor 3: yt=4948.6s twitch=21734.5s similarity=0.6922 second=0.6902 margin=0.0020 search=forward-fallback
+audio fallback anchor 4: yt=6809.5s twitch=23493.0s similarity=0.8652 second=0.8121 margin=0.0531 search=predicted-window
+audio fallback anchor 1: yt=761.4s twitch=14700.0s similarity=0.7376 second=0.7348 margin=0.0028 search=global
+audio fallback anchor 2: yt=2777.4s twitch=17343.5s similarity=0.8130 second=0.7357 margin=0.0773 search=predicted-window
+audio fallback anchor 3: yt=4948.6s twitch=26673.0s similarity=0.7431 second=0.7097 margin=0.0334 search=forward-fallback
+audio fallback anchor 4: yt=6809.5s twitch=32031.0s similarity=0.8094 second=0.8071 margin=0.0023 search=forward-fallback
+audio fallback anchor 1: yt=761.4s twitch=12362.0s similarity=0.7674 second=0.7510 margin=0.0164 search=global
+audio fallback anchor 2: yt=2777.4s twitch=20489.5s similarity=0.8036 second=0.7886 margin=0.0150 search=forward-fallback
+audio fallback anchor 3: yt=4948.6s twitch=25911.5s similarity=0.6792 second=0.6783 margin=0.0009 search=forward-fallback
+audio fallback anchor 4: yt=6809.5s twitch=26998.0s similarity=0.7825 second=0.6933 margin=0.0892 search=forward-fallback
+assignment result: youtube=_Q-dV2V2g5s state=unmatched primary_vod=2864229186 assigned=-
+assignment 8/19: youtube=iEZOwN5xssU resume=completed -> skip all 8 VODs
+assignment 9/19: youtube=XR0-lJLW_rs resume=completed -> skip all 8 VODs
+assignment 10/19: youtube=TEHaNIT7eZs resume=completed -> skip all 8 VODs
+assignment 11/19: youtube=favxANUu9O4 evaluated=1/8
+metadata cache hit: youtube/favxANUu9O4 age=1034s
+transcript cache stale: twitch/2861744268 reason=quality=invalid/hallucination_loop dominant_ratio=0.9906 unique_ratio=0.0024; ignored during audio-first phase
+audio fallback anchor 1: yt=768.6s twitch=6004.0s similarity=0.8621 second=0.7998 margin=0.0623 search=global
+audio fallback anchor 2: yt=2803.4s twitch=16264.0s similarity=0.7680 second=0.7600 margin=0.0080 search=forward-fallback
+audio fallback anchor 3: yt=4994.6s twitch=18724.0s similarity=0.7861 second=0.7846 margin=0.0015 search=predicted-window
+audio fallback anchor 4: yt=6872.9s twitch=21409.5s similarity=0.8210 second=0.7794 margin=0.0416 search=predicted-window
+audio fallback anchor 1: yt=768.6s twitch=18504.0s similarity=0.7982 second=0.7947 margin=0.0035 search=global
+audio fallback anchor 2: yt=2803.4s twitch=20407.5s similarity=0.7448 second=0.7421 margin=0.0027 search=forward-fallback
+audio fallback anchor 3: yt=4994.6s twitch=22361.5s similarity=0.7978 second=0.7054 margin=0.0924 search=forward-fallback
+audio fallback anchor 4: yt=6872.9s twitch=23300.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 1: yt=768.6s twitch=18031.5s similarity=0.7997 second=0.7912 margin=0.0085 search=global
+audio fallback anchor 2: yt=2803.4s twitch=23080.5s similarity=0.7282 second=0.7199 margin=0.0083 search=forward-fallback
+audio fallback anchor 3: yt=4994.6s twitch=24643.5s similarity=0.7941 second=0.7677 margin=0.0264 search=forward-fallback
+audio fallback anchor 4: yt=6872.9s twitch=25582.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 1: yt=768.6s twitch=14024.0s similarity=0.8052 second=0.7999 margin=0.0053 search=global
+audio fallback anchor 2: yt=2803.4s twitch=18588.5s similarity=0.7514 second=0.7507 margin=0.0007 search=forward-fallback
+audio fallback anchor 3: yt=4994.6s twitch=20691.5s similarity=0.7920 second=0.7681 margin=0.0239 search=predicted-window
+audio fallback anchor 4: yt=6872.9s twitch=22756.0s similarity=0.8045 second=0.7831 margin=0.0214 search=predicted-window
+audio fallback anchor 1: yt=768.6s twitch=2390.0s similarity=0.8967 second=0.8051 margin=0.0916 search=global
+audio fallback anchor 2: yt=2803.4s twitch=4424.5s similarity=0.9016 second=0.7932 margin=0.1084 search=predicted-window
+audio fallback anchor 3: yt=4994.6s twitch=6615.5s similarity=0.9286 second=0.8127 margin=0.1159 search=predicted-window
+audio fallback anchor 4: yt=6872.9s twitch=8493.5s similarity=0.9372 second=0.7903 margin=0.1469 search=predicted-window
+audio fallback anchor 1: yt=768.6s twitch=8487.5s similarity=0.7969 second=0.7868 margin=0.0101 search=global
+audio fallback anchor 2: yt=2803.4s twitch=11957.0s similarity=0.7750 second=0.7672 margin=0.0078 search=forward-fallback
+audio fallback anchor 3: yt=4994.6s twitch=18017.5s similarity=0.8476 second=0.8448 margin=0.0028 search=forward-fallback
+audio fallback anchor 4: yt=6872.9s twitch=20306.5s similarity=0.7918 second=0.7869 margin=0.0049 search=predicted-window
+audio fallback anchor 1: yt=768.6s twitch=18432.0s similarity=0.7940 second=0.7905 margin=0.0035 search=global
+audio fallback anchor 2: yt=2803.4s twitch=26988.0s similarity=0.7679 second=0.7200 margin=0.0479 search=forward-fallback
+audio fallback anchor 3: yt=4994.6s twitch=28083.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 4: yt=6872.9s twitch=29022.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+assignment result: youtube=favxANUu9O4 state=verified primary_vod=2865097583 assigned=2865097583
+assignment 12/19: youtube=OKO05-GPKyI evaluated=1/8
+metadata cache hit: youtube/OKO05-GPKyI age=1022s
+audio fallback anchor 1: yt=746.8s twitch=13430.0s similarity=0.7788 second=0.7663 margin=0.0125 search=global
+audio fallback anchor 2: yt=2724.9s twitch=25727.5s similarity=0.8061 second=0.7569 margin=0.0492 search=forward-fallback
+audio fallback anchor 3: yt=4855.1s twitch=26792.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 4: yt=6681.0s twitch=27705.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 1: yt=746.8s twitch=4848.0s similarity=0.7689 second=0.7557 margin=0.0132 search=global
+audio fallback anchor 2: yt=2724.9s twitch=17984.0s similarity=0.7648 second=0.7456 margin=0.0192 search=forward-fallback
+audio fallback anchor 3: yt=4855.1s twitch=22380.5s similarity=0.7238 second=0.7122 margin=0.0116 search=forward-fallback
+audio fallback anchor 4: yt=6681.0s twitch=23293.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 1: yt=746.8s twitch=9160.0s similarity=0.7923 second=0.7699 margin=0.0224 search=global
+audio fallback anchor 2: yt=2724.9s twitch=18552.0s similarity=0.7787 second=0.7664 margin=0.0123 search=forward-fallback
+audio fallback anchor 3: yt=4855.1s twitch=19875.0s similarity=0.7240 second=0.7217 margin=0.0023 search=forward-fallback
+audio fallback anchor 4: yt=6681.0s twitch=21119.5s similarity=0.7814 second=0.7656 margin=0.0158 search=forward-fallback
+audio fallback anchor 1: yt=746.8s twitch=2386.0s similarity=0.9772 second=0.7873 margin=0.1899 search=global
+audio fallback anchor 2: yt=2724.9s twitch=4364.0s similarity=0.9646 second=0.7358 margin=0.2288 search=predicted-window
+audio fallback anchor 3: yt=4855.1s twitch=6508.5s similarity=0.9624 second=0.7482 margin=0.2142 search=predicted-window
+audio fallback anchor 4: yt=6681.0s twitch=8334.5s similarity=0.9924 second=0.7758 margin=0.2166 search=predicted-window
+audio fallback anchor 1: yt=746.8s twitch=23456.0s similarity=0.7710 second=0.7658 margin=0.0052 search=global
+audio fallback anchor 2: yt=2724.9s twitch=26998.0s similarity=0.7802 second=0.7654 margin=0.0148 search=forward-fallback
+audio fallback anchor 3: yt=4855.1s twitch=32510.5s similarity=0.7597 second=0.7501 margin=0.0096 search=forward-fallback
+audio fallback anchor 4: yt=6681.0s twitch=33423.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+assignment result: youtube=OKO05-GPKyI state=verified primary_vod=2864229186 assigned=2864229186
+assignment 13/19: youtube=fSMIJVnlB_Y evaluated=1/8
+metadata cache hit: youtube/fSMIJVnlB_Y age=1023s
+audio fallback anchor 1: yt=627.5s twitch=10321.5s similarity=0.7918 second=0.7742 margin=0.0176 search=global
+audio fallback anchor 2: yt=2295.4s twitch=12767.5s similarity=0.7808 second=0.7488 margin=0.0320 search=predicted-window
+audio fallback anchor 3: yt=4091.6s twitch=14886.5s similarity=0.7340 second=0.7296 margin=0.0044 search=forward-fallback
+audio fallback anchor 4: yt=5631.2s twitch=16499.5s similarity=0.7257 second=0.7256 margin=0.0001 search=predicted-window
+audio fallback anchor 1: yt=627.5s twitch=10670.0s similarity=0.7881 second=0.7844 margin=0.0037 search=global
+audio fallback anchor 2: yt=2295.4s twitch=12252.0s similarity=0.8150 second=0.7877 margin=0.0273 search=predicted-window
+audio fallback anchor 3: yt=4091.6s twitch=13736.5s similarity=0.7161 second=0.7114 margin=0.0047 search=forward-fallback
+audio fallback anchor 4: yt=5631.2s twitch=20201.5s similarity=0.7133 second=0.6943 margin=0.0190 search=forward-fallback
+audio fallback anchor 1: yt=627.5s twitch=84.5s similarity=0.7900 second=0.7867 margin=0.0033 search=global
+audio fallback anchor 2: yt=2295.4s twitch=2515.5s similarity=0.7918 second=0.7384 margin=0.0534 search=predicted-window
+audio fallback anchor 3: yt=4091.6s twitch=15670.0s similarity=0.7263 second=0.7188 margin=0.0075 search=forward-fallback
+audio fallback anchor 4: yt=5631.2s twitch=17957.5s similarity=0.7154 second=0.7123 margin=0.0031 search=forward-fallback
+audio fallback anchor 1: yt=627.5s twitch=15580.0s similarity=0.7967 second=0.7846 margin=0.0121 search=global
+audio fallback anchor 2: yt=2295.4s twitch=17272.0s similarity=0.8242 second=0.7504 margin=0.0738 search=predicted-window
+audio fallback anchor 3: yt=4091.6s twitch=22194.5s similarity=0.9604 second=0.7321 margin=0.2283 search=forward-fallback
+audio fallback anchor 4: yt=5631.2s twitch=23734.0s similarity=0.9596 second=0.6554 margin=0.3042 search=predicted-window
+audio fallback anchor 1: yt=627.5s twitch=84.0s similarity=0.7904 second=0.7896 margin=0.0008 search=global
+audio fallback anchor 2: yt=2295.4s twitch=2314.5s similarity=0.7889 second=0.7648 margin=0.0241 search=predicted-window
+audio fallback anchor 3: yt=4091.6s twitch=5233.0s similarity=0.7706 second=0.7363 margin=0.0343 search=forward-fallback
+audio fallback anchor 4: yt=5631.2s twitch=32053.0s similarity=0.7363 second=0.7137 margin=0.0226 search=forward-fallback
+audio fallback anchor 1: yt=627.5s twitch=84.0s similarity=0.7903 second=0.7891 margin=0.0012 search=global
+audio fallback anchor 2: yt=2295.4s twitch=2479.0s similarity=0.8050 second=0.7753 margin=0.0297 search=predicted-window
+audio fallback anchor 3: yt=4091.6s twitch=12861.5s similarity=0.7188 second=0.7152 margin=0.0036 search=forward-fallback
+audio fallback anchor 4: yt=5631.2s twitch=14399.0s similarity=0.7192 second=0.7167 margin=0.0025 search=forward-fallback
+audio fallback anchor 1: yt=627.5s twitch=85.0s similarity=0.7905 second=0.7707 margin=0.0198 search=global
+audio fallback anchor 2: yt=2295.4s twitch=1640.5s similarity=0.8425 second=0.7780 margin=0.0645 search=predicted-window
+audio fallback anchor 3: yt=4091.6s twitch=15546.5s similarity=0.7477 second=0.7342 margin=0.0135 search=forward-fallback
+audio fallback anchor 4: yt=5631.2s twitch=20828.0s similarity=0.7213 second=0.6975 margin=0.0238 search=forward-fallback
+assignment result: youtube=fSMIJVnlB_Y state=verified primary_vod=2864229186 assigned=2864229186
+assignment 14/19: youtube=nH8X1jAyoeQ resume=completed -> skip all 8 VODs
+assignment 15/19: youtube=1CuVhBjs3ns resume=completed -> skip all 8 VODs
+assignment 16/19: youtube=jcs6OmYZQ-o resume=completed -> skip all 8 VODs
+assignment 17/19: youtube=nOj-aeb7haY resume=completed -> skip all 8 VODs
+assignment 18/19: youtube=6yZE6Xr2BZ0 resume=completed -> skip all 8 VODs
+assignment 19/19: youtube=SqODx-TbN38 resume=completed -> skip all 8 VODs

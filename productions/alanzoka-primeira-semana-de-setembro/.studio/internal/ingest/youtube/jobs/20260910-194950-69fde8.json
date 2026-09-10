@@ -1,0 +1,40 @@
+{
+  "id": "20260910-194950-69fde8",
+  "type": "resolve",
+  "status": "completed",
+  "slug": "alanzoka-primeira-semana-de-setembro",
+  "streamer": "",
+  "vod_id": "",
+  "candidate_video_id": "",
+  "created_at": "2026-09-10T19:49:50Z",
+  "started_at": "2026-09-10T19:49:50Z",
+  "ended_at": "2026-09-10T19:51:16Z",
+  "command": "dashboard youtube-resolve",
+  "return_code": 0,
+  "error": "",
+  "artifacts": [],
+  "log_path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\youtube\\logs\\20260910-194950-69fde8.log",
+  "params": {
+    "streamer": "",
+    "vod_id": "",
+    "refresh_index": false,
+    "download": false,
+    "verify": true,
+    "force": false
+  },
+  "worker_pid": 9504,
+  "worker_mode": "process",
+  "result_summary": {
+    "candidates": 64,
+    "verified": 10,
+    "likely": 0,
+    "errors": [],
+    "resume": {
+      "videos": 19,
+      "completed": 19,
+      "resumed": 11,
+      "evaluated_pairs": 41,
+      "skipped_pairs": 23
+    }
+  }
+}

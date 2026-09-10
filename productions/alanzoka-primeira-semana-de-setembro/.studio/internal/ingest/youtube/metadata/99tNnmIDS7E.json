@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "provider": "yt-dlp-metadata-v2",
+  "video_id": "99tNnmIDS7E",
+  "fetched_at": "2026-09-10T20:45:25Z",
+  "video": {
+    "schema_version": 2,
+    "video_id": "99tNnmIDS7E",
+    "url": "https://www.youtube.com/watch?v=99tNnmIDS7E",
+    "channel_id": "UCIwspRtKNszHhIhl36gREjQ",
+    "channel_name": "alanzoka",
+    "title": "ASSISTINDO AO EVENTO DE 40 ANOS DE ZELDA E VENDO O OCARINA OF TIME REMAKE!",
+    "description": "OS MAIORES DESCONTOS ESTÃO NO KABUM!:\nhttp://kb1.me/alanzokakabumyt\n\n💜 LIVE: https://www.twitch.tv/alanzoka\n📷 Instagram: https://www.instagram.com/alanzoka/\n📧 alanzoka@vandep.ag\n🐤 Twitter: https://twitter.com/alanzoka\n\n\n\n\n#Alanzoka",
+    "upload_date": "20260908",
+    "timestamp": 1788894040,
+    "duration": 2145.0,
+    "availability": "public",
+    "live_status": "not_live",
+    "thumbnail": "https://i.ytimg.com/vi/99tNnmIDS7E/maxresdefault.jpg",
+    "thumbnails": [
+      {
+        "url": "https://i.ytimg.com/vi/99tNnmIDS7E/hq720.jpg",
+        "height": 720,
+        "width": 1280,
+        "preference": -3,
+        "id": "38",
+        "resolution": "1280x720"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/99tNnmIDS7E/hq720.webp",
+        "preference": -2,
+        "id": "39"
+      },
+      {
+        "url": "https://i.ytimg.com/vi/99tNnmIDS7E/maxresdefault.jpg",
+        "height": 1080,
+        "width": 1920,
+        "preference": -1,
+        "id": "40",
+        "resolution": "1920x1080"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/99tNnmIDS7E/maxresdefault.webp",
+        "preference": 0,
+        "id": "41"
+      }
+    ],
+    "view_count": 564093,
+    "chapters": [],
+    "formats_summary": {
+      "max_height": 2160,
+      "max_fps": 60.0,
+      "heights": [
+        180,
+        240,
+        360,
+        480,
+        720,
+        1080,
+        1440,
+        2160
+      ]
+    },
+    "indexed_at": "2026-09-10T20:45:25Z",
+    "untrusted": true,
+    "injection_findings": [],
+    "streamer": "alanzoka",
+    "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+    "configured_channel_name": "alanzoka",
+    "playlist_index": null,
+    "playlist_autonumber": null
+  }
+}

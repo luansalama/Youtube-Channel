@@ -1,0 +1,286 @@
+{
+  "schema_version": 2,
+  "youtube_video_id": "99tNnmIDS7E",
+  "youtube": {
+    "schema_version": 2,
+    "video_id": "99tNnmIDS7E",
+    "url": "https://www.youtube.com/watch?v=99tNnmIDS7E",
+    "channel_id": "UCIwspRtKNszHhIhl36gREjQ",
+    "channel_name": "alanzoka",
+    "title": "ASSISTINDO AO EVENTO DE 40 ANOS DE ZELDA E VENDO O OCARINA OF TIME REMAKE!",
+    "description": "OS MAIORES DESCONTOS ESTÃO NO KABUM!:\nhttp://kb1.me/alanzokakabumyt\n\n💜 LIVE: https://www.twitch.tv/alanzoka\n📷 Instagram: https://www.instagram.com/alanzoka/\n📧 alanzoka@vandep.ag\n🐤 Twitter: https://twitter.com/alanzoka\n\n\n\n\n#Alanzoka",
+    "upload_date": "20260908",
+    "timestamp": 1788894040,
+    "duration": 2145.0,
+    "availability": "public",
+    "live_status": "not_live",
+    "thumbnail": "https://i.ytimg.com/vi/99tNnmIDS7E/maxresdefault.jpg",
+    "thumbnails": [
+      {
+        "url": "https://i.ytimg.com/vi/99tNnmIDS7E/hq720.jpg",
+        "height": 720,
+        "width": 1280,
+        "preference": -3,
+        "id": "38",
+        "resolution": "1280x720"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/99tNnmIDS7E/hq720.webp",
+        "preference": -2,
+        "id": "39"
+      },
+      {
+        "url": "https://i.ytimg.com/vi/99tNnmIDS7E/maxresdefault.jpg",
+        "height": 1080,
+        "width": 1920,
+        "preference": -1,
+        "id": "40",
+        "resolution": "1920x1080"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/99tNnmIDS7E/maxresdefault.webp",
+        "preference": 0,
+        "id": "41"
+      }
+    ],
+    "view_count": 564093,
+    "chapters": [],
+    "formats_summary": {
+      "max_height": 2160,
+      "max_fps": 60.0,
+      "heights": [
+        180,
+        240,
+        360,
+        480,
+        720,
+        1080,
+        1440,
+        2160
+      ]
+    },
+    "indexed_at": "2026-09-10T20:45:25Z",
+    "untrusted": true,
+    "injection_findings": [],
+    "streamer": "alanzoka",
+    "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+    "configured_channel_name": "alanzoka",
+    "playlist_index": null,
+    "playlist_autonumber": null
+  },
+  "twitch_vod_ids": [
+    "2869682753"
+  ],
+  "twitch": {
+    "vod_id": "2869682753",
+    "streamer": "alanzoka",
+    "title": "mais onimusha e blood of the dawnwalker -> WARDOGS amanhã",
+    "game": "Só Na Conversa",
+    "created_at": "2026-09-09T17:31:06Z",
+    "duration": 28015.0,
+    "chapters": [
+      {
+        "title": "Just Chatting",
+        "start": 0.0,
+        "duration": 2751.0
+      },
+      {
+        "title": "Onimusha: Way of the Sword",
+        "start": 2751.0,
+        "duration": 10059.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 12810.0,
+        "duration": 86.0
+      },
+      {
+        "title": "The Blood of Dawnwalker",
+        "start": 12896.0,
+        "duration": 14613.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 27509.0,
+        "duration": 506.0
+      }
+    ],
+    "path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\twitch\\alanzoka\\discovery\\2869682753.json",
+    "source_url": "https://www.twitch.tv/videos/2869682753",
+    "untrusted": true,
+    "injection_findings": []
+  },
+  "streamer": "alanzoka",
+  "state": "candidate",
+  "candidate_score": 0.2388,
+  "candidate_evidence": {
+    "candidate_score": 0.2388,
+    "signals": {
+      "channel": {
+        "score": 1.0,
+        "available": true,
+        "weight": 0.0,
+        "effective_weight": 0.0,
+        "detail": "configured mirror channel"
+      },
+      "date": {
+        "score": 0.65,
+        "available": true,
+        "weight": 0.3,
+        "effective_weight": 0.3,
+        "detail": "upload delay -0.9d"
+      },
+      "duration": {
+        "score": 0.1991,
+        "available": true,
+        "weight": 0.22,
+        "effective_weight": 0.22,
+        "detail": "short subset ratio 0.08"
+      },
+      "title": {
+        "score": 0.0,
+        "available": true,
+        "weight": 0.28,
+        "effective_weight": 0.28,
+        "detail": "token similarity"
+      },
+      "chapters": {
+        "score": 0.0,
+        "available": true,
+        "weight": 0.2,
+        "effective_weight": 0.2,
+        "detail": "shared tokens: none"
+      }
+    },
+    "contributions": {
+      "channel": 0.0,
+      "date": 0.195,
+      "duration": 0.0438,
+      "title": 0.0,
+      "chapters": 0.0
+    }
+  },
+  "verification": {
+    "status": "complete",
+    "policy_version": "global-source-assignment-v1",
+    "matcher_engine": "numpy-exact",
+    "completed_at": "2026-09-10T20:46:38Z",
+    "mode": "global-audio+localized-text",
+    "providers": {
+      "metadata": "complete",
+      "audio": "complete",
+      "transcript": "localized_complete"
+    },
+    "transcript": {
+      "method": "whisper-localized-anchor-v2",
+      "anchors": [
+        {
+          "youtube_time": 200.5,
+          "twitch_time": 9538.5,
+          "audio_similarity": 0.8525,
+          "similarity": 0.0,
+          "youtube_tokens": 2,
+          "twitch_tokens": 40,
+          "youtube_text": "Carro refazer",
+          "twitch_text": "Rei dos Eterrenos, não sei, Brápolos 5 sub de presente, Eric Brápolos 31, Lulu Brápolos 2 meses. Isso deveria ser impossível. Por que é pior que os outros lugares cheios de miasma? O local sagrado de Arashima é protegido pela...",
+          "method": "whisper-localized-anchor-v2"
+        },
+        {
+          "youtube_time": 758.2,
+          "twitch_time": 27399.5,
+          "audio_similarity": 0.7676,
+          "similarity": 0.0183,
+          "youtube_tokens": 37,
+          "twitch_tokens": 72,
+          "youtube_text": "Na época do N64, havia apenas um joystick. Eu só tinha um, então não pude fazer isso. sim. sim. Ela é uma garota chamada Saria, minha amiga de infância. Eles sempre parecem se importar com o anel.",
+          "twitch_text": "Ego te absolvo a pecatis tuis, in nomine patris. Amen. I see that you trust in the Lord and are in dire need of guidance. I am willing to provide it, but not here, not right now. Tell me more, Father. There is a building near the western gate, adjacent to the city walls. You will recognize the place by a symbol. Eu ach",
+          "method": "whisper-localized-anchor-v2"
+        }
+      ],
+      "assessment": {
+        "state": "insufficient",
+        "good_anchors": 0,
+        "total_anchors": 2,
+        "median_similarity": 0.0,
+        "timeline_consistency": "insufficient"
+      },
+      "strategy": "bounded-global-localized-tiebreak",
+      "full_source_whisper": false
+    },
+    "audio": {
+      "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+      "anchors": [
+        {
+          "youtube_time": 200.5,
+          "twitch_time": 9538.5,
+          "similarity": 0.8525,
+          "second_best_similarity": 0.8055,
+          "peak_margin": 0.047,
+          "search_mode": "global",
+          "evaluated_windows": 55975,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 758.2,
+          "twitch_time": 27399.5,
+          "similarity": 0.7676,
+          "second_best_similarity": 0.7577,
+          "peak_margin": 0.0099,
+          "search_mode": "forward-fallback",
+          "evaluated_windows": 36341,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 1358.8,
+          "twitch_time": 27816.0,
+          "similarity": 0.7208,
+          "second_best_similarity": 0.6987,
+          "peak_margin": 0.0221,
+          "search_mode": "forward-fallback",
+          "evaluated_windows": 576,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 1873.6,
+          "twitch_time": 28073.0,
+          "similarity": 0.0,
+          "second_best_similarity": 0.0,
+          "peak_margin": 0.0,
+          "search_mode": "forward-fallback",
+          "evaluated_windows": 0,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        }
+      ],
+      "assessment": {
+        "state": "candidate",
+        "good_anchors": 1,
+        "total_anchors": 4,
+        "median_similarity": 0.8525,
+        "ordered": false,
+        "timeline_consistency": "insufficient",
+        "slopes": [],
+        "offsets": [
+          9338.0
+        ],
+        "offset_deltas": [],
+        "backwards_offset_jumps": [],
+        "continuous_offset_pairs": 0,
+        "forward_cut_gaps": [],
+        "median_peak_margin": 0.047,
+        "consistency_model": "piecewise-offset-v1"
+      }
+    }
+  },
+  "timeline_segments": [],
+  "download": {
+    "status": "not_downloaded",
+    "path": ""
+  },
+  "rights_status": "sem_autorizacao_confirmada",
+  "global_assignment": true,
+  "updated_at": "2026-09-10T20:46:38Z"
+}

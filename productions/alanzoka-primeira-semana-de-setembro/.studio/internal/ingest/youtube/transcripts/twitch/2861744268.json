@@ -1,0 +1,5203 @@
+{
+  "schema_version": 1,
+  "provider": "openai-whisper-turbo-segment-v2",
+  "source_kind": "twitch",
+  "source_id": "2861744268",
+  "model": "K:\\Applications\\LLMS\\Whisper\\large-v3-turbo.pt",
+  "device": "auto",
+  "language": "pt",
+  "language_requested": "pt",
+  "streamer": "alanzoka",
+  "timestamp_mode": "segment",
+  "created_at": "2026-09-10T05:54:37Z",
+  "text": " E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí E aí",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 29.98,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 30.0,
+      "end": 59.98,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 60.0,
+      "end": 89.98,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 89.98,
+      "end": 119.96,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 119.96,
+      "end": 149.94,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 149.94,
+      "end": 179.92,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 179.92,
+      "end": 209.9,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 209.9,
+      "end": 239.88,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 239.88,
+      "end": 269.86,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 269.86,
+      "end": 299.84,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 299.84,
+      "end": 329.82,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 329.82,
+      "end": 359.8,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 359.8,
+      "end": 389.78,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 389.78,
+      "end": 419.76,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 419.76,
+      "end": 449.74,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 449.74,
+      "end": 479.72,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 479.72,
+      "end": 509.7,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 509.7,
+      "end": 539.68,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 539.68,
+      "end": 569.66,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 569.66,
+      "end": 599.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 599.64,
+      "end": 629.62,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 629.62,
+      "end": 659.6,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 659.6,
+      "end": 689.58,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 689.58,
+      "end": 719.56,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 719.56,
+      "end": 749.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 749.54,
+      "end": 779.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 779.52,
+      "end": 809.5,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 809.5,
+      "end": 839.48,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 839.48,
+      "end": 869.46,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 869.46,
+      "end": 899.44,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 899.44,
+      "end": 929.42,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 929.42,
+      "end": 959.4,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 959.4,
+      "end": 989.38,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 989.38,
+      "end": 1019.36,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1019.38,
+      "end": 1049.36,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1049.36,
+      "end": 1079.34,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1079.34,
+      "end": 1109.32,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1109.32,
+      "end": 1139.3,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1139.3,
+      "end": 1169.28,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1169.28,
+      "end": 1199.26,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1199.26,
+      "end": 1229.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1229.26,
+      "end": 1259.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1259.26,
+      "end": 1289.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1289.24,
+      "end": 1319.22,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1319.24,
+      "end": 1349.22,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1349.22,
+      "end": 1379.2,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1379.2,
+      "end": 1409.18,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1409.2,
+      "end": 1439.18,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1439.18,
+      "end": 1469.16,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1469.18,
+      "end": 1499.16,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1499.16,
+      "end": 1529.14,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1529.16,
+      "end": 1559.14,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1559.16,
+      "end": 1589.14,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1589.14,
+      "end": 1619.12,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1619.14,
+      "end": 1649.12,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1649.12,
+      "end": 1679.12,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1679.12,
+      "end": 1709.1,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1709.12,
+      "end": 1739.1,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1739.12,
+      "end": 1769.1,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1769.12,
+      "end": 1799.1,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1799.12,
+      "end": 1829.1,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1829.12,
+      "end": 1859.12,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1859.12,
+      "end": 1889.1,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1889.1,
+      "end": 1919.08,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1919.1,
+      "end": 1949.08,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1949.1,
+      "end": 1979.08,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 1979.1,
+      "end": 2009.08,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2009.08,
+      "end": 2039.06,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2039.06,
+      "end": 2069.04,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2069.04,
+      "end": 2099.02,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2099.04,
+      "end": 2129.0,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2129.0,
+      "end": 2158.98,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2159.0,
+      "end": 2188.98,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2188.98,
+      "end": 2218.96,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2218.96,
+      "end": 2248.94,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2248.96,
+      "end": 2278.92,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2278.92,
+      "end": 2308.9,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2308.9,
+      "end": 2338.88,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2338.9,
+      "end": 2368.88,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2368.88,
+      "end": 2398.86,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2398.86,
+      "end": 2428.84,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2428.84,
+      "end": 2458.82,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2458.84,
+      "end": 2488.8,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2488.8,
+      "end": 2518.78,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2518.78,
+      "end": 2548.76,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2548.76,
+      "end": 2578.74,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2578.74,
+      "end": 2608.72,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2608.72,
+      "end": 2638.7,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2638.7,
+      "end": 2668.68,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2668.68,
+      "end": 2698.66,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2698.68,
+      "end": 2728.66,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2728.66,
+      "end": 2758.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2758.66,
+      "end": 2788.62,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2788.62,
+      "end": 2818.6,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2818.6,
+      "end": 2848.58,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2848.58,
+      "end": 2878.56,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2878.56,
+      "end": 2908.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2908.54,
+      "end": 2938.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2938.52,
+      "end": 2968.5,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2968.52,
+      "end": 2998.5,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 2998.52,
+      "end": 3028.5,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3028.52,
+      "end": 3058.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3058.52,
+      "end": 3088.5,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3088.5,
+      "end": 3118.48,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3118.48,
+      "end": 3148.46,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3148.46,
+      "end": 3178.44,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3178.44,
+      "end": 3208.42,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3208.42,
+      "end": 3238.4,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3238.4,
+      "end": 3268.38,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3268.38,
+      "end": 3298.36,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3298.36,
+      "end": 3328.34,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3328.34,
+      "end": 3358.32,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3358.32,
+      "end": 3388.3,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3388.3,
+      "end": 3418.28,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3418.28,
+      "end": 3448.26,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3448.26,
+      "end": 3478.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3478.24,
+      "end": 3508.22,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3508.22,
+      "end": 3538.2,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3538.2,
+      "end": 3568.18,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3568.18,
+      "end": 3598.16,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3598.18,
+      "end": 3628.18,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3628.18,
+      "end": 3658.16,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3658.16,
+      "end": 3688.16,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3688.16,
+      "end": 3718.14,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3718.14,
+      "end": 3748.12,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3748.12,
+      "end": 3778.1,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3778.1,
+      "end": 3808.08,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3808.08,
+      "end": 3838.06,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3838.06,
+      "end": 3868.04,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3868.04,
+      "end": 3898.02,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3898.02,
+      "end": 3928.0,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3928.0,
+      "end": 3957.98,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3957.98,
+      "end": 3987.96,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 3987.96,
+      "end": 4017.94,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4017.94,
+      "end": 4047.92,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4047.92,
+      "end": 4077.9,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4077.9,
+      "end": 4107.88,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4107.88,
+      "end": 4137.86,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4137.86,
+      "end": 4167.84,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4167.84,
+      "end": 4197.82,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4197.82,
+      "end": 4227.82,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4227.82,
+      "end": 4257.8,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4257.8,
+      "end": 4287.78,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4287.78,
+      "end": 4317.76,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4317.76,
+      "end": 4347.74,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4347.74,
+      "end": 4377.72,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4377.72,
+      "end": 4407.72,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4407.72,
+      "end": 4437.7,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4437.7,
+      "end": 4467.68,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4467.68,
+      "end": 4497.66,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4497.66,
+      "end": 4527.66,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4527.66,
+      "end": 4557.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4557.64,
+      "end": 4587.62,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4587.62,
+      "end": 4617.6,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4617.6,
+      "end": 4647.58,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4647.58,
+      "end": 4677.56,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4677.56,
+      "end": 4707.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4707.54,
+      "end": 4737.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4737.54,
+      "end": 4767.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4767.52,
+      "end": 4772.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4797.52,
+      "end": 4827.5,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4827.5,
+      "end": 4857.48,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4857.48,
+      "end": 4887.46,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4887.46,
+      "end": 4917.44,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4917.44,
+      "end": 4947.42,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4947.42,
+      "end": 4977.4,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 4977.4,
+      "end": 5007.38,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5007.38,
+      "end": 5037.36,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5037.36,
+      "end": 5067.34,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5067.34,
+      "end": 5097.34,
+      "text": "",
+      "words": []
+    },
+    {
+      "start": 5097.34,
+      "end": 5127.32,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5127.32,
+      "end": 5157.32,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5157.32,
+      "end": 5187.3,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5187.3,
+      "end": 5217.28,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5217.28,
+      "end": 5224.28,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5247.28,
+      "end": 5277.26,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5277.26,
+      "end": 5307.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5307.24,
+      "end": 5337.22,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5337.22,
+      "end": 5367.2,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5367.2,
+      "end": 5397.2,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5397.2,
+      "end": 5427.18,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5427.18,
+      "end": 5457.16,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5457.16,
+      "end": 5487.14,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5487.14,
+      "end": 5517.14,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5517.14,
+      "end": 5547.12,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5547.12,
+      "end": 5577.1,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5577.1,
+      "end": 5607.08,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5607.08,
+      "end": 5637.06,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5637.06,
+      "end": 5667.04,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5667.04,
+      "end": 5697.02,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5697.02,
+      "end": 5727.0,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5727.02,
+      "end": 5757.02,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5757.02,
+      "end": 5787.0,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5787.0,
+      "end": 5816.98,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5817.0,
+      "end": 5847.0,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5847.0,
+      "end": 5876.98,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5876.98,
+      "end": 5906.96,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5906.96,
+      "end": 5936.94,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5936.94,
+      "end": 5966.92,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5966.92,
+      "end": 5996.9,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 5996.9,
+      "end": 6026.88,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6026.88,
+      "end": 6032.0,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6056.88,
+      "end": 6086.88,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6086.88,
+      "end": 6116.88,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6116.88,
+      "end": 6146.86,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6146.86,
+      "end": 6176.86,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6176.86,
+      "end": 6206.84,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6206.84,
+      "end": 6236.82,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6236.82,
+      "end": 6266.8,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6266.8,
+      "end": 6296.78,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6296.78,
+      "end": 6326.76,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6326.76,
+      "end": 6356.74,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6356.74,
+      "end": 6386.72,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6386.72,
+      "end": 6416.7,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6416.7,
+      "end": 6446.7,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6446.7,
+      "end": 6476.68,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6476.68,
+      "end": 6506.66,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6506.66,
+      "end": 6536.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6536.66,
+      "end": 6566.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6566.64,
+      "end": 6596.62,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6596.64,
+      "end": 6626.62,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6626.62,
+      "end": 6656.6,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6656.6,
+      "end": 6686.58,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6686.6,
+      "end": 6716.6,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6716.6,
+      "end": 6746.58,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6746.58,
+      "end": 6776.56,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6776.56,
+      "end": 6806.56,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6806.56,
+      "end": 6836.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6836.54,
+      "end": 6866.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6866.52,
+      "end": 6896.5,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6896.5,
+      "end": 6926.48,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6926.48,
+      "end": 6956.46,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6956.46,
+      "end": 6986.44,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 6986.44,
+      "end": 7016.44,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7016.44,
+      "end": 7046.42,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7046.42,
+      "end": 7076.4,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7076.4,
+      "end": 7106.38,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7106.38,
+      "end": 7136.36,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7136.36,
+      "end": 7143.34,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7166.36,
+      "end": 7196.34,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7196.34,
+      "end": 7226.32,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7226.32,
+      "end": 7256.3,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7256.3,
+      "end": 7286.28,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7286.28,
+      "end": 7316.26,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7316.26,
+      "end": 7346.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7346.26,
+      "end": 7376.26,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7376.26,
+      "end": 7406.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7406.24,
+      "end": 7436.22,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7436.22,
+      "end": 7466.22,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7466.22,
+      "end": 7471.34,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7496.22,
+      "end": 7526.22,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7526.22,
+      "end": 7556.2,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7556.2,
+      "end": 7586.18,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7586.18,
+      "end": 7616.16,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7616.16,
+      "end": 7646.14,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7646.14,
+      "end": 7676.12,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7676.12,
+      "end": 7706.1,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7706.1,
+      "end": 7736.08,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7736.08,
+      "end": 7766.06,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7766.06,
+      "end": 7796.04,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7796.04,
+      "end": 7826.02,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7826.02,
+      "end": 7856.02,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7856.02,
+      "end": 7886.02,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7886.02,
+      "end": 7916.0,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7916.0,
+      "end": 7945.98,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7946.0,
+      "end": 7975.96,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 7975.96,
+      "end": 8005.94,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8005.96,
+      "end": 8035.94,
+      "text": " E aí E aí",
+      "words": []
+    },
+    {
+      "start": 8035.94,
+      "end": 8065.94,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8065.94,
+      "end": 8095.92,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8095.92,
+      "end": 8125.92,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8125.94,
+      "end": 8155.9,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8155.9,
+      "end": 8185.9,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8185.9,
+      "end": 8215.88,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8215.9,
+      "end": 8245.88,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8245.9,
+      "end": 8275.88,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8275.9,
+      "end": 8305.9,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8305.9,
+      "end": 8335.88,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8335.88,
+      "end": 8365.86,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8365.86,
+      "end": 8395.86,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8395.86,
+      "end": 8425.84,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8425.84,
+      "end": 8455.82,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8455.84,
+      "end": 8485.84,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8485.84,
+      "end": 8515.84,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8515.84,
+      "end": 8545.82,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8545.84,
+      "end": 8575.84,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8575.84,
+      "end": 8605.84,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8605.84,
+      "end": 8635.84,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8635.84,
+      "end": 8665.84,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8665.84,
+      "end": 8695.82,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8695.84,
+      "end": 8725.84,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8725.84,
+      "end": 8755.84,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8755.84,
+      "end": 8785.82,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8785.84,
+      "end": 8815.82,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8815.82,
+      "end": 8845.8,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8845.8,
+      "end": 8875.78,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8875.78,
+      "end": 8905.76,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8905.76,
+      "end": 8935.76,
+      "text": "",
+      "words": []
+    },
+    {
+      "start": 8935.76,
+      "end": 8965.74,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8965.74,
+      "end": 8995.74,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 8995.74,
+      "end": 9025.74,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9025.74,
+      "end": 9055.72,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9055.72,
+      "end": 9085.7,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9085.7,
+      "end": 9115.68,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9115.68,
+      "end": 9145.66,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9145.68,
+      "end": 9175.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9175.64,
+      "end": 9205.62,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9205.62,
+      "end": 9235.62,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9235.62,
+      "end": 9265.6,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9265.6,
+      "end": 9295.58,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9295.58,
+      "end": 9325.58,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9325.58,
+      "end": 9355.56,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9355.56,
+      "end": 9385.56,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9385.56,
+      "end": 9415.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9415.54,
+      "end": 9445.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9445.54,
+      "end": 9475.5,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9475.5,
+      "end": 9475.52,
+      "text": "",
+      "words": []
+    },
+    {
+      "start": 9505.5,
+      "end": 9535.48,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9535.48,
+      "end": 9565.48,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9565.48,
+      "end": 9595.46,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9595.46,
+      "end": 9625.44,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9625.44,
+      "end": 9655.44,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9655.44,
+      "end": 9685.44,
+      "text": "",
+      "words": []
+    },
+    {
+      "start": 9685.44,
+      "end": 9685.46,
+      "text": "",
+      "words": []
+    },
+    {
+      "start": 9715.44,
+      "end": 9745.42,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9745.42,
+      "end": 9775.42,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9775.42,
+      "end": 9805.42,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9805.42,
+      "end": 9835.4,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9835.4,
+      "end": 9865.4,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9865.4,
+      "end": 9895.38,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9895.38,
+      "end": 9925.36,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9925.36,
+      "end": 9955.34,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9955.34,
+      "end": 9985.34,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 9985.34,
+      "end": 10015.32,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10015.34,
+      "end": 10045.32,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10045.32,
+      "end": 10075.3,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10075.3,
+      "end": 10105.28,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10105.28,
+      "end": 10135.26,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10135.26,
+      "end": 10165.26,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10165.26,
+      "end": 10195.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10195.24,
+      "end": 10200.36,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10225.24,
+      "end": 10255.22,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10255.22,
+      "end": 10285.2,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10285.2,
+      "end": 10315.18,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10315.18,
+      "end": 10320.3,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10345.18,
+      "end": 10375.16,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10375.16,
+      "end": 10405.14,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10405.14,
+      "end": 10435.14,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10435.14,
+      "end": 10465.12,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10465.12,
+      "end": 10470.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10495.12,
+      "end": 10525.1,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10525.1,
+      "end": 10530.22,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10555.1,
+      "end": 10585.08,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10585.08,
+      "end": 10615.06,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10615.06,
+      "end": 10645.04,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10645.04,
+      "end": 10675.02,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10675.02,
+      "end": 10705.0,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10705.02,
+      "end": 10735.0,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10735.02,
+      "end": 10765.0,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10765.0,
+      "end": 10795.0,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10795.0,
+      "end": 10824.98,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10824.98,
+      "end": 10854.96,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10854.96,
+      "end": 10884.94,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10884.94,
+      "end": 10914.94,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10914.94,
+      "end": 10944.92,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10944.92,
+      "end": 10974.92,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 10974.92,
+      "end": 11004.9,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11004.9,
+      "end": 11010.02,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11034.9,
+      "end": 11064.88,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11064.88,
+      "end": 11094.86,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11094.86,
+      "end": 11124.86,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11124.86,
+      "end": 11154.84,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11154.84,
+      "end": 11184.82,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11184.82,
+      "end": 11214.8,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11214.82,
+      "end": 11244.82,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11244.82,
+      "end": 11274.8,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11274.82,
+      "end": 11304.8,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11304.8,
+      "end": 11334.8,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11334.8,
+      "end": 11364.78,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11364.78,
+      "end": 11394.76,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11394.76,
+      "end": 11424.76,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11424.76,
+      "end": 11454.74,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11454.74,
+      "end": 11484.72,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11484.72,
+      "end": 11514.7,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11514.7,
+      "end": 11544.68,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11544.7,
+      "end": 11574.7,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11574.7,
+      "end": 11604.7,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11604.7,
+      "end": 11634.68,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11634.68,
+      "end": 11664.66,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11664.68,
+      "end": 11694.68,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11694.68,
+      "end": 11724.68,
+      "text": "",
+      "words": []
+    },
+    {
+      "start": 11724.68,
+      "end": 11754.68,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11754.68,
+      "end": 11784.68,
+      "text": "",
+      "words": []
+    },
+    {
+      "start": 11784.68,
+      "end": 11814.66,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11814.66,
+      "end": 11844.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11844.66,
+      "end": 11874.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11874.64,
+      "end": 11904.62,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11904.64,
+      "end": 11934.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11934.64,
+      "end": 11964.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11964.64,
+      "end": 11994.62,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 11994.64,
+      "end": 12024.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12024.64,
+      "end": 12054.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12054.64,
+      "end": 12084.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12084.64,
+      "end": 12114.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12114.64,
+      "end": 12144.62,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12144.64,
+      "end": 12174.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12174.64,
+      "end": 12204.62,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12204.64,
+      "end": 12234.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12234.64,
+      "end": 12264.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12264.64,
+      "end": 12294.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12294.64,
+      "end": 12324.62,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12324.64,
+      "end": 12354.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12354.64,
+      "end": 12384.62,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12384.64,
+      "end": 12385.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12414.64,
+      "end": 12444.62,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12444.62,
+      "end": 12449.74,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12474.62,
+      "end": 12504.6,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12504.6,
+      "end": 12534.58,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12534.58,
+      "end": 12564.58,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12564.58,
+      "end": 12594.56,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12594.56,
+      "end": 12624.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12624.54,
+      "end": 12654.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12654.52,
+      "end": 12684.5,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12684.5,
+      "end": 12714.48,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12714.48,
+      "end": 12744.46,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12744.46,
+      "end": 12774.44,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12774.44,
+      "end": 12779.56,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12804.44,
+      "end": 12834.42,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12834.42,
+      "end": 12864.42,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12864.42,
+      "end": 12894.4,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12894.4,
+      "end": 12924.38,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12924.38,
+      "end": 12954.38,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12954.38,
+      "end": 12984.36,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 12984.36,
+      "end": 13014.36,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13014.36,
+      "end": 13015.36,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13044.36,
+      "end": 13074.34,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13074.34,
+      "end": 13104.32,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13104.32,
+      "end": 13134.3,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13134.3,
+      "end": 13164.3,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13164.3,
+      "end": 13169.42,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13194.3,
+      "end": 13224.28,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13224.28,
+      "end": 13254.28,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13254.28,
+      "end": 13284.26,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13284.26,
+      "end": 13314.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13314.24,
+      "end": 13344.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13344.24,
+      "end": 13374.22,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13374.22,
+      "end": 13404.22,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13404.22,
+      "end": 13434.2,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13434.2,
+      "end": 13439.32,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13464.2,
+      "end": 13469.32,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13494.2,
+      "end": 13524.18,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13524.18,
+      "end": 13554.16,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13554.16,
+      "end": 13584.14,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13584.14,
+      "end": 13614.12,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13614.12,
+      "end": 13644.1,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13644.1,
+      "end": 13674.08,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13674.08,
+      "end": 13704.08,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13704.08,
+      "end": 13734.06,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13734.06,
+      "end": 13764.04,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13764.04,
+      "end": 13794.02,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13794.02,
+      "end": 13824.02,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13824.02,
+      "end": 13854.02,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13854.02,
+      "end": 13884.0,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13884.0,
+      "end": 13913.98,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13913.98,
+      "end": 13943.96,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13943.96,
+      "end": 13949.08,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 13973.96,
+      "end": 14003.94,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14003.94,
+      "end": 14033.92,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14033.92,
+      "end": 14063.9,
+      "text": " E aí E aí",
+      "words": []
+    },
+    {
+      "start": 14063.9,
+      "end": 14093.88,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14093.88,
+      "end": 14123.86,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14123.86,
+      "end": 14153.86,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14153.86,
+      "end": 14183.84,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14183.84,
+      "end": 14213.82,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14213.82,
+      "end": 14243.8,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14243.8,
+      "end": 14273.78,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14273.78,
+      "end": 14303.76,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14303.76,
+      "end": 14333.74,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14333.74,
+      "end": 14363.74,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14363.74,
+      "end": 14393.72,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14393.72,
+      "end": 14423.7,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14423.7,
+      "end": 14453.68,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14453.68,
+      "end": 14458.8,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14483.68,
+      "end": 14513.66,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14513.66,
+      "end": 14543.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14543.64,
+      "end": 14573.62,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14573.62,
+      "end": 14603.6,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14603.6,
+      "end": 14633.6,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14633.6,
+      "end": 14663.6,
+      "text": "",
+      "words": []
+    },
+    {
+      "start": 14663.6,
+      "end": 14693.6,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14693.6,
+      "end": 14723.6,
+      "text": "",
+      "words": []
+    },
+    {
+      "start": 14723.6,
+      "end": 14753.58,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14753.58,
+      "end": 14783.58,
+      "text": "",
+      "words": []
+    },
+    {
+      "start": 14783.58,
+      "end": 14813.58,
+      "text": "",
+      "words": []
+    },
+    {
+      "start": 14813.58,
+      "end": 14843.56,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14843.56,
+      "end": 14873.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14873.54,
+      "end": 14903.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14903.52,
+      "end": 14933.5,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14933.52,
+      "end": 14963.48,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14963.48,
+      "end": 14993.46,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 14993.46,
+      "end": 15023.46,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15023.46,
+      "end": 15053.44,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15053.44,
+      "end": 15083.44,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15083.44,
+      "end": 15113.42,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15113.42,
+      "end": 15143.42,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15143.42,
+      "end": 15173.42,
+      "text": "",
+      "words": []
+    },
+    {
+      "start": 15173.42,
+      "end": 15203.4,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15203.4,
+      "end": 15233.38,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15233.38,
+      "end": 15263.36,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15263.36,
+      "end": 15293.34,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15293.34,
+      "end": 15298.46,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15323.34,
+      "end": 15353.34,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15353.34,
+      "end": 15383.34,
+      "text": "",
+      "words": []
+    },
+    {
+      "start": 15383.34,
+      "end": 15413.32,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15413.32,
+      "end": 15443.32,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15443.32,
+      "end": 15473.3,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15473.3,
+      "end": 15503.28,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15503.28,
+      "end": 15533.26,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15533.26,
+      "end": 15563.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15563.26,
+      "end": 15593.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15593.24,
+      "end": 15623.22,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15623.22,
+      "end": 15653.22,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15653.22,
+      "end": 15683.2,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15683.2,
+      "end": 15713.18,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15713.2,
+      "end": 15743.18,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15743.18,
+      "end": 15773.16,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15773.16,
+      "end": 15803.14,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15803.14,
+      "end": 15833.12,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15833.12,
+      "end": 15863.1,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15863.1,
+      "end": 15893.08,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15893.1,
+      "end": 15923.08,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15923.08,
+      "end": 15953.06,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15953.06,
+      "end": 15983.04,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 15983.06,
+      "end": 16013.04,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16013.04,
+      "end": 16043.02,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16043.02,
+      "end": 16073.0,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16073.0,
+      "end": 16102.98,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16102.98,
+      "end": 16132.96,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16132.98,
+      "end": 16162.96,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16162.96,
+      "end": 16192.94,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16192.94,
+      "end": 16222.92,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16222.92,
+      "end": 16252.9,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16252.9,
+      "end": 16282.88,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16282.88,
+      "end": 16312.86,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16312.86,
+      "end": 16342.84,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16342.84,
+      "end": 16372.82,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16372.82,
+      "end": 16402.8,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16402.8,
+      "end": 16432.78,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16432.78,
+      "end": 16462.76,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16462.76,
+      "end": 16492.76,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16492.76,
+      "end": 16522.74,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16522.74,
+      "end": 16552.72,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16552.72,
+      "end": 16582.72,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16582.72,
+      "end": 16612.7,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16612.72,
+      "end": 16642.7,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16642.72,
+      "end": 16672.7,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16672.7,
+      "end": 16702.68,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16702.68,
+      "end": 16732.68,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16732.68,
+      "end": 16762.66,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16762.66,
+      "end": 16792.66,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16792.66,
+      "end": 16822.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16822.64,
+      "end": 16852.62,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16852.62,
+      "end": 16882.6,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16882.6,
+      "end": 16912.58,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16912.58,
+      "end": 16942.56,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16942.56,
+      "end": 16972.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 16972.54,
+      "end": 17002.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17002.52,
+      "end": 17032.5,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17032.5,
+      "end": 17062.48,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17062.48,
+      "end": 17092.46,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17092.46,
+      "end": 17122.44,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17122.44,
+      "end": 17152.42,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17152.42,
+      "end": 17182.4,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17182.4,
+      "end": 17212.38,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17212.38,
+      "end": 17242.36,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17242.36,
+      "end": 17272.34,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17272.34,
+      "end": 17302.34,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17302.34,
+      "end": 17332.32,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17332.32,
+      "end": 17362.3,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17362.3,
+      "end": 17392.28,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17392.28,
+      "end": 17422.26,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17422.26,
+      "end": 17452.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17452.26,
+      "end": 17482.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17482.26,
+      "end": 17512.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17512.24,
+      "end": 17542.22,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17542.26,
+      "end": 17572.22,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17572.22,
+      "end": 17602.22,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17602.22,
+      "end": 17632.2,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17632.2,
+      "end": 17662.18,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17662.18,
+      "end": 17692.16,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17692.16,
+      "end": 17722.14,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17722.14,
+      "end": 17752.12,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17752.12,
+      "end": 17782.1,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17782.1,
+      "end": 17812.08,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17812.08,
+      "end": 17842.06,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17842.06,
+      "end": 17872.06,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17872.06,
+      "end": 17902.04,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17902.04,
+      "end": 17932.02,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17932.02,
+      "end": 17962.0,
+      "text": " E aí E aí",
+      "words": []
+    },
+    {
+      "start": 17962.0,
+      "end": 17991.98,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 17992.0,
+      "end": 18021.98,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18022.0,
+      "end": 18051.98,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18052.0,
+      "end": 18082.0,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18082.0,
+      "end": 18111.98,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18111.98,
+      "end": 18141.96,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18141.96,
+      "end": 18171.94,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18171.94,
+      "end": 18201.92,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18201.92,
+      "end": 18231.92,
+      "text": " E aí E aí",
+      "words": []
+    },
+    {
+      "start": 18231.92,
+      "end": 18261.9,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18261.9,
+      "end": 18291.88,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18291.9,
+      "end": 18321.88,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18321.9,
+      "end": 18351.88,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18351.88,
+      "end": 18381.86,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18381.86,
+      "end": 18411.84,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18411.84,
+      "end": 18441.82,
+      "text": " E aí E aí",
+      "words": []
+    },
+    {
+      "start": 18441.82,
+      "end": 18471.8,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18471.82,
+      "end": 18501.8,
+      "text": " E aí E aí",
+      "words": []
+    },
+    {
+      "start": 18501.8,
+      "end": 18531.78,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18531.78,
+      "end": 18561.76,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18561.8,
+      "end": 18591.76,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18591.76,
+      "end": 18621.76,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18621.76,
+      "end": 18651.74,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18651.74,
+      "end": 18681.72,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18681.74,
+      "end": 18711.72,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18711.72,
+      "end": 18741.7,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18741.7,
+      "end": 18771.68,
+      "text": " E aí E aí",
+      "words": []
+    },
+    {
+      "start": 18771.68,
+      "end": 18801.68,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18801.7,
+      "end": 18831.66,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18831.66,
+      "end": 18861.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18861.64,
+      "end": 18891.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18891.66,
+      "end": 18921.62,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18921.62,
+      "end": 18951.62,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18951.62,
+      "end": 18981.6,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 18981.6,
+      "end": 19011.58,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19011.58,
+      "end": 19041.56,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19041.56,
+      "end": 19071.56,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19071.56,
+      "end": 19101.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19101.54,
+      "end": 19131.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19131.54,
+      "end": 19161.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19161.54,
+      "end": 19191.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19191.54,
+      "end": 19221.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19221.54,
+      "end": 19251.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19251.54,
+      "end": 19281.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19281.54,
+      "end": 19311.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19311.54,
+      "end": 19341.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19341.54,
+      "end": 19371.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19371.54,
+      "end": 19401.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19401.54,
+      "end": 19431.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19431.54,
+      "end": 19461.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19461.54,
+      "end": 19491.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19491.54,
+      "end": 19521.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19521.54,
+      "end": 19551.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19551.54,
+      "end": 19581.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19581.54,
+      "end": 19611.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19611.54,
+      "end": 19641.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19641.54,
+      "end": 19671.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19671.54,
+      "end": 19701.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19701.54,
+      "end": 19731.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19731.54,
+      "end": 19761.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19761.54,
+      "end": 19791.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19791.54,
+      "end": 19821.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19821.54,
+      "end": 19851.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19851.54,
+      "end": 19881.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19881.54,
+      "end": 19911.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19911.54,
+      "end": 19941.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19941.54,
+      "end": 19971.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 19971.54,
+      "end": 20001.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20001.54,
+      "end": 20031.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20031.54,
+      "end": 20061.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20061.54,
+      "end": 20091.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20091.54,
+      "end": 20121.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20121.54,
+      "end": 20151.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20151.54,
+      "end": 20181.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20181.54,
+      "end": 20211.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20211.54,
+      "end": 20241.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20241.54,
+      "end": 20271.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20271.54,
+      "end": 20301.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20301.54,
+      "end": 20331.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20331.52,
+      "end": 20361.5,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20361.52,
+      "end": 20391.5,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20391.52,
+      "end": 20421.5,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20421.5,
+      "end": 20451.48,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20451.48,
+      "end": 20481.48,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20481.48,
+      "end": 20511.46,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20511.46,
+      "end": 20541.46,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20541.46,
+      "end": 20571.44,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20571.44,
+      "end": 20601.42,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20601.46,
+      "end": 20631.42,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20631.42,
+      "end": 20661.42,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20661.42,
+      "end": 20691.4,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20691.4,
+      "end": 20721.4,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20721.4,
+      "end": 20751.38,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20751.38,
+      "end": 20781.38,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20781.38,
+      "end": 20811.36,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20811.36,
+      "end": 20841.34,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20841.36,
+      "end": 20871.34,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20871.34,
+      "end": 20901.32,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20901.34,
+      "end": 20931.32,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20931.34,
+      "end": 20961.32,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20961.34,
+      "end": 20991.34,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 20991.34,
+      "end": 21021.32,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21021.32,
+      "end": 21051.3,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21051.3,
+      "end": 21081.3,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21081.3,
+      "end": 21111.28,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21111.28,
+      "end": 21141.26,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21141.26,
+      "end": 21171.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21171.26,
+      "end": 21201.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21201.24,
+      "end": 21231.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21231.24,
+      "end": 21261.22,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21261.22,
+      "end": 21291.2,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21291.2,
+      "end": 21321.18,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21321.18,
+      "end": 21351.16,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21351.16,
+      "end": 21381.14,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21381.14,
+      "end": 21411.12,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21411.12,
+      "end": 21416.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21441.12,
+      "end": 21471.1,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21471.1,
+      "end": 21501.08,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21501.08,
+      "end": 21531.06,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21531.06,
+      "end": 21561.04,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21561.04,
+      "end": 21591.02,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21591.02,
+      "end": 21621.02,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21621.02,
+      "end": 21651.0,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21651.0,
+      "end": 21680.98,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21681.0,
+      "end": 21710.98,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21710.98,
+      "end": 21740.96,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21740.96,
+      "end": 21770.94,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21770.96,
+      "end": 21800.94,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21800.94,
+      "end": 21830.92,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21830.92,
+      "end": 21860.9,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21860.9,
+      "end": 21890.88,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21890.88,
+      "end": 21920.88,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21920.88,
+      "end": 21950.86,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21950.86,
+      "end": 21980.86,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 21980.86,
+      "end": 22010.84,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22010.84,
+      "end": 22040.84,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22040.84,
+      "end": 22070.82,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22070.82,
+      "end": 22100.8,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22100.8,
+      "end": 22130.78,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22130.78,
+      "end": 22160.76,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22160.76,
+      "end": 22190.76,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22190.76,
+      "end": 22220.74,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22220.76,
+      "end": 22250.74,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22250.74,
+      "end": 22280.72,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22280.72,
+      "end": 22310.7,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22310.7,
+      "end": 22340.68,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22340.68,
+      "end": 22370.66,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22370.66,
+      "end": 22400.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22400.64,
+      "end": 22430.62,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22430.64,
+      "end": 22460.6,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22460.62,
+      "end": 22490.58,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22490.58,
+      "end": 22520.58,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22520.58,
+      "end": 22550.56,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22550.56,
+      "end": 22580.56,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22580.56,
+      "end": 22585.68,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22610.56,
+      "end": 22640.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22640.54,
+      "end": 22670.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22670.54,
+      "end": 22700.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22700.52,
+      "end": 22705.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22730.52,
+      "end": 22760.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22760.52,
+      "end": 22790.5,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22790.5,
+      "end": 22795.62,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22820.5,
+      "end": 22850.48,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22850.48,
+      "end": 22880.48,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22880.48,
+      "end": 22910.46,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22910.46,
+      "end": 22940.44,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22940.44,
+      "end": 22945.56,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 22970.44,
+      "end": 23000.42,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23000.42,
+      "end": 23030.4,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23030.4,
+      "end": 23060.38,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23060.38,
+      "end": 23090.36,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23090.38,
+      "end": 23095.5,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23120.38,
+      "end": 23125.5,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23150.38,
+      "end": 23180.36,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23180.36,
+      "end": 23210.34,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23210.34,
+      "end": 23240.32,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23240.32,
+      "end": 23270.3,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23270.3,
+      "end": 23300.28,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23300.28,
+      "end": 23330.26,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23330.26,
+      "end": 23360.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23360.24,
+      "end": 23390.22,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23390.22,
+      "end": 23420.2,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23420.22,
+      "end": 23450.2,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23450.22,
+      "end": 23480.2,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23480.2,
+      "end": 23510.2,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23510.2,
+      "end": 23540.18,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23540.18,
+      "end": 23570.18,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23570.18,
+      "end": 23600.16,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23600.16,
+      "end": 23630.14,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23630.16,
+      "end": 23660.14,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23660.14,
+      "end": 23690.14,
+      "text": "",
+      "words": []
+    },
+    {
+      "start": 23690.14,
+      "end": 23720.14,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23720.14,
+      "end": 23750.12,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23750.12,
+      "end": 23780.12,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23780.12,
+      "end": 23810.1,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23810.1,
+      "end": 23840.08,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23840.1,
+      "end": 23870.08,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23870.08,
+      "end": 23900.06,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23900.06,
+      "end": 23930.04,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23930.04,
+      "end": 23960.04,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23960.04,
+      "end": 23990.02,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 23990.02,
+      "end": 24020.0,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24020.0,
+      "end": 24050.0,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24050.0,
+      "end": 24079.98,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24079.98,
+      "end": 24109.96,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24109.96,
+      "end": 24139.96,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24139.96,
+      "end": 24169.94,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24169.96,
+      "end": 24199.96,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24199.96,
+      "end": 24229.94,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24229.94,
+      "end": 24235.06,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24259.94,
+      "end": 24289.92,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24289.92,
+      "end": 24319.92,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24319.92,
+      "end": 24349.9,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24349.9,
+      "end": 24379.88,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24379.88,
+      "end": 24409.86,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24409.86,
+      "end": 24439.84,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24439.84,
+      "end": 24469.84,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24469.84,
+      "end": 24474.96,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24499.84,
+      "end": 24529.82,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24529.82,
+      "end": 24559.8,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24559.8,
+      "end": 24589.78,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24589.78,
+      "end": 24619.76,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24619.76,
+      "end": 24649.74,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24649.74,
+      "end": 24679.74,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24679.74,
+      "end": 24684.86,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24709.74,
+      "end": 24739.72,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24739.72,
+      "end": 24769.7,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24769.7,
+      "end": 24799.68,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24799.68,
+      "end": 24829.66,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24829.66,
+      "end": 24859.64,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24859.64,
+      "end": 24889.62,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24889.62,
+      "end": 24919.6,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24919.6,
+      "end": 24949.58,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24949.58,
+      "end": 24979.56,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 24979.56,
+      "end": 25009.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25009.54,
+      "end": 25039.54,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25039.54,
+      "end": 25069.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25069.52,
+      "end": 25099.52,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25099.52,
+      "end": 25129.5,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25129.5,
+      "end": 25159.48,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25159.48,
+      "end": 25189.48,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25189.48,
+      "end": 25219.46,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25219.46,
+      "end": 25249.44,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25249.44,
+      "end": 25279.42,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25279.44,
+      "end": 25309.44,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25309.44,
+      "end": 25339.42,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25339.42,
+      "end": 25369.4,
+      "text": " E aí E aí",
+      "words": []
+    },
+    {
+      "start": 25369.4,
+      "end": 25399.38,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25399.38,
+      "end": 25429.36,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25429.36,
+      "end": 25459.34,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25459.36,
+      "end": 25489.34,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25489.34,
+      "end": 25519.32,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25519.32,
+      "end": 25549.3,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25549.3,
+      "end": 25579.28,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25579.28,
+      "end": 25609.26,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25609.28,
+      "end": 25639.26,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25639.28,
+      "end": 25669.26,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25669.28,
+      "end": 25699.26,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25699.26,
+      "end": 25729.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25729.26,
+      "end": 25759.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25759.24,
+      "end": 25789.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25789.24,
+      "end": 25819.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25819.24,
+      "end": 25849.22,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25849.24,
+      "end": 25879.24,
+      "text": " E aí",
+      "words": []
+    },
+    {
+      "start": 25879.24,
+      "end": 25909.22,
+      "text": " E aí",
+      "words": []
+    }
+  ],
+  "word_count": 1716,
+  "untrusted": true,
+  "injection_findings": []
+}

@@ -1,0 +1,167 @@
+{
+  "schema_version": 2,
+  "youtube_video_id": "XR0-lJLW_rs",
+  "youtube": {
+    "schema_version": 2,
+    "video_id": "XR0-lJLW_rs",
+    "url": "https://www.youtube.com/watch?v=XR0-lJLW_rs",
+    "channel_id": "",
+    "channel_name": "alanzoka",
+    "title": "ENTRE A VIDA E A MORTE! - THE BLOOD OF THE DAWNWALKER - Parte 1",
+    "description": "",
+    "upload_date": "",
+    "timestamp": null,
+    "duration": 11487.0,
+    "availability": null,
+    "live_status": null,
+    "thumbnail": "https://i.ytimg.com/vi/XR0-lJLW_rs/hq720_custom_1.jpg?sqp=CKjCidUG-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAoKtoa-VWA7WZhaY0Avtoe9AI2ow",
+    "thumbnails": [
+      {
+        "url": "https://i.ytimg.com/vi/XR0-lJLW_rs/hq720_custom_1.jpg?sqp=CKjCidUG-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDT0AChEXmiuDPS3DzeliWhZqi_4w",
+        "height": 202,
+        "width": 360
+      },
+      {
+        "url": "https://i.ytimg.com/vi/XR0-lJLW_rs/hq720_custom_1.jpg?sqp=CKjCidUG-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAoKtoa-VWA7WZhaY0Avtoe9AI2ow",
+        "height": 404,
+        "width": 720
+      }
+    ],
+    "view_count": 794000,
+    "chapters": [],
+    "formats_summary": {},
+    "indexed_at": "2026-09-10T07:50:34Z",
+    "untrusted": true,
+    "injection_findings": [],
+    "streamer": "alanzoka",
+    "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+    "configured_channel_name": "alanzoka"
+  },
+  "twitch_vod_ids": [
+    "2868864059"
+  ],
+  "twitch": {
+    "vod_id": "2868864059",
+    "streamer": "alanzoka",
+    "title": "mais onimusha e blood of the dawnwalker",
+    "game": "Só Na Conversa",
+    "created_at": "2026-09-08T18:18:43Z",
+    "duration": 27292.0,
+    "chapters": [
+      {
+        "title": "Just Chatting",
+        "start": 0.0,
+        "duration": 2366.0
+      },
+      {
+        "title": "Onimusha: Way of the Sword",
+        "start": 2366.0,
+        "duration": 7276.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 9642.0,
+        "duration": 529.0
+      },
+      {
+        "title": "The Blood of Dawnwalker",
+        "start": 10171.0,
+        "duration": 16726.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 26897.0,
+        "duration": 395.0
+      }
+    ],
+    "path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\twitch\\alanzoka\\discovery\\2868864059.json",
+    "source_url": "https://www.twitch.tv/videos/2868864059",
+    "untrusted": true,
+    "injection_findings": []
+  },
+  "streamer": "alanzoka",
+  "state": "candidate",
+  "candidate_score": 0.6967,
+  "candidate_evidence": {
+    "candidate_score": 0.6967,
+    "signals": {
+      "channel": {
+        "score": 1.0,
+        "available": true,
+        "weight": 0.0,
+        "effective_weight": 0.0,
+        "detail": "configured mirror channel"
+      },
+      "date": {
+        "score": null,
+        "available": false,
+        "weight": 0.3,
+        "effective_weight": 0.0,
+        "detail": "date unavailable on one side"
+      },
+      "duration": {
+        "score": 0.8137,
+        "available": true,
+        "weight": 0.22,
+        "effective_weight": 0.314286,
+        "detail": "subset-compatible ratio 0.42"
+      },
+      "title": {
+        "score": 0.65,
+        "available": true,
+        "weight": 0.28,
+        "effective_weight": 0.4,
+        "detail": "token similarity"
+      },
+      "chapters": {
+        "score": 0.6333,
+        "available": true,
+        "weight": 0.2,
+        "effective_weight": 0.285714,
+        "detail": "shared tokens: blood, dawnwalker"
+      }
+    },
+    "contributions": {
+      "channel": 0.0,
+      "date": 0.0,
+      "duration": 0.2557,
+      "title": 0.26,
+      "chapters": 0.181
+    }
+  },
+  "verification": {
+    "status": "complete",
+    "policy_version": "global-source-assignment-v1",
+    "completed_at": "2026-09-10T19:32:52Z",
+    "mode": "global-audio-assignment",
+    "providers": {
+      "metadata": "complete",
+      "audio": "not_run",
+      "transcript": "not_run"
+    },
+    "transcript": {
+      "method": "whisper-localized-anchor-v2",
+      "anchors": [],
+      "assessment": {
+        "state": "not_run"
+      },
+      "strategy": "winner-only-localized-on-demand",
+      "full_source_whisper": false
+    },
+    "audio": {
+      "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+      "anchors": [],
+      "assessment": {
+        "state": "not_run"
+      }
+    }
+  },
+  "timeline_segments": [],
+  "download": {
+    "status": "not_downloaded",
+    "path": ""
+  },
+  "rights_status": "sem_autorizacao_confirmada",
+  "updated_at": "2026-09-10T20:45:19Z",
+  "global_assignment": true
+}

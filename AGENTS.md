@@ -1067,6 +1067,11 @@ Antes de entregar:
 
 ---
 
+## YouTube Mirror Resolver
+
+`cstudio/youtube_resolver.py` segue a mesma fronteira de ingest do Twitch: pode descobrir/indexar/comparar/verificar/baixar/registrar assets, mas nunca aprova gates, rights, stage ou publicação. `candidate_score` é apenas filtro de custo. O verifier v2 usa Whisper Turbo para localizar anchors textuais e exige confirmação audiovisual localizada multi-anchor antes de `verified`; transcript sozinho nunca é clearance. Áudio de análise é temporário, transcripts/fingerprints são cacheados por source ID. Masters YouTube sempre entram como `sem_autorizacao_confirmada`. A associação streamer → canais é configurável em `studio/youtube-mirrors.json`; não hardcode canais nem paths absolutos de Whisper.
+
+
 # Checklist mental obrigatório
 
 Antes de qualquer alteração relevante, pergunte:

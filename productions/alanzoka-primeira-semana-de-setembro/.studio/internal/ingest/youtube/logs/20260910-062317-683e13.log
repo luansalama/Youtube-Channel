@@ -1,0 +1,265 @@
+[2026-09-10T06:23:17Z] YouTube Mirror Resolver job resolve
+candidate vod=2861744268 youtube=SynOBrPYbV0 score=0.728 state=ambiguous
+candidate vod=2861744268 youtube=vt1HbScE_jM score=0.710 state=ambiguous
+candidate vod=2861744268 youtube=7GBn3uVeVb8 score=0.708 state=likely
+candidate vod=2861744268 youtube=muxOFHGOpZs score=0.697 state=verified
+candidate vod=2861744268 youtube=iEZOwN5xssU score=0.662 state=candidate
+candidate vod=2861744268 youtube=nH8X1jAyoeQ score=0.538 state=candidate
+candidate vod=2861744268 youtube=CMrXO8qfoQw score=0.388 state=candidate
+candidate vod=2861744268 youtube=Wjl1p9MmI-k score=0.359 state=candidate
+candidate vod=2862622285 youtube=SynOBrPYbV0 score=0.685 state=candidate
+candidate vod=2862622285 youtube=vt1HbScE_jM score=0.667 state=candidate
+candidate vod=2862622285 youtube=7GBn3uVeVb8 score=0.664 state=candidate
+candidate vod=2862622285 youtube=muxOFHGOpZs score=0.654 state=candidate
+candidate vod=2862622285 youtube=iEZOwN5xssU score=0.632 state=candidate
+candidate vod=2862622285 youtube=nH8X1jAyoeQ score=0.584 state=candidate
+candidate vod=2862622285 youtube=nOj-aeb7haY score=0.451 state=candidate
+candidate vod=2862622285 youtube=6yZE6Xr2BZ0 score=0.445 state=candidate
+candidate vod=2863504919 youtube=Plcc-06LY-A score=0.589 state=candidate
+candidate vod=2863504919 youtube=XR0-lJLW_rs score=0.587 state=candidate
+candidate vod=2863504919 youtube=QcJ0mjcA62k score=0.581 state=candidate
+candidate vod=2863504919 youtube=_Q-dV2V2g5s score=0.580 state=candidate
+candidate vod=2863504919 youtube=fSMIJVnlB_Y score=0.576 state=candidate
+candidate vod=2863504919 youtube=1CuVhBjs3ns score=0.439 state=candidate
+candidate vod=2863504919 youtube=1wACf-7QBE8 score=0.435 state=candidate
+candidate vod=2863504919 youtube=mAp9CNpgnhg score=0.396 state=candidate
+candidate vod=2864229186 youtube=TEHaNIT7eZs score=0.489 state=candidate
+candidate vod=2864229186 youtube=favxANUu9O4 score=0.487 state=candidate
+candidate vod=2864229186 youtube=OKO05-GPKyI score=0.486 state=candidate
+candidate vod=2864229186 youtube=XR0-lJLW_rs score=0.469 state=candidate
+candidate vod=2864229186 youtube=Plcc-06LY-A score=0.468 state=candidate
+candidate vod=2864229186 youtube=QcJ0mjcA62k score=0.460 state=candidate
+candidate vod=2864229186 youtube=_Q-dV2V2g5s score=0.459 state=candidate
+candidate vod=2864229186 youtube=fSMIJVnlB_Y score=0.455 state=candidate
+candidate vod=2865097583 youtube=Plcc-06LY-A score=0.584 state=candidate
+candidate vod=2865097583 youtube=XR0-lJLW_rs score=0.581 state=candidate
+candidate vod=2865097583 youtube=TEHaNIT7eZs score=0.576 state=candidate
+candidate vod=2865097583 youtube=QcJ0mjcA62k score=0.557 state=candidate
+candidate vod=2865097583 youtube=_Q-dV2V2g5s score=0.552 state=candidate
+candidate vod=2865097583 youtube=favxANUu9O4 score=0.549 state=candidate
+candidate vod=2865097583 youtube=OKO05-GPKyI score=0.545 state=candidate
+candidate vod=2865097583 youtube=fSMIJVnlB_Y score=0.530 state=candidate
+candidate vod=2868004694 youtube=Plcc-06LY-A score=0.676 state=candidate
+candidate vod=2868004694 youtube=QcJ0mjcA62k score=0.669 state=candidate
+candidate vod=2868004694 youtube=_Q-dV2V2g5s score=0.667 state=candidate
+candidate vod=2868004694 youtube=TEHaNIT7eZs score=0.660 state=candidate
+candidate vod=2868004694 youtube=favxANUu9O4 score=0.658 state=candidate
+candidate vod=2868004694 youtube=OKO05-GPKyI score=0.658 state=candidate
+candidate vod=2868004694 youtube=XR0-lJLW_rs score=0.656 state=candidate
+candidate vod=2868004694 youtube=fSMIJVnlB_Y score=0.639 state=candidate
+candidate vod=2868864059 youtube=Plcc-06LY-A score=0.654 state=candidate
+candidate vod=2868864059 youtube=QcJ0mjcA62k score=0.646 state=candidate
+candidate vod=2868864059 youtube=_Q-dV2V2g5s score=0.645 state=candidate
+candidate vod=2868864059 youtube=TEHaNIT7eZs score=0.640 state=candidate
+candidate vod=2868864059 youtube=XR0-lJLW_rs score=0.639 state=candidate
+candidate vod=2868864059 youtube=favxANUu9O4 score=0.638 state=candidate
+candidate vod=2868864059 youtube=OKO05-GPKyI score=0.637 state=candidate
+candidate vod=2868864059 youtube=fSMIJVnlB_Y score=0.616 state=candidate
+candidate vod=2869682753 youtube=Plcc-06LY-A score=0.623 state=candidate
+candidate vod=2869682753 youtube=QcJ0mjcA62k score=0.616 state=candidate
+candidate vod=2869682753 youtube=_Q-dV2V2g5s score=0.615 state=candidate
+candidate vod=2869682753 youtube=XR0-lJLW_rs score=0.614 state=candidate
+candidate vod=2869682753 youtube=TEHaNIT7eZs score=0.611 state=candidate
+candidate vod=2869682753 youtube=favxANUu9O4 score=0.610 state=candidate
+candidate vod=2869682753 youtube=OKO05-GPKyI score=0.609 state=candidate
+candidate vod=2869682753 youtube=fSMIJVnlB_Y score=0.583 state=candidate
+verification shortlist: matches=28 unique_youtube=10 min_score=0.54
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=SynOBrPYbV0
+transcript cache stale: twitch/2861744268 reason=quality=invalid/hallucination_loop dominant_ratio=0.9906 unique_ratio=0.0024; regenerating
+whisper preflight: python=K:\Applications\LLMS\Whisper\.venv\Scripts\python.exe torch=2.6.0+cu124 whisper=20250625 cuda=True gpu=NVIDIA GeForce RTX 4070 SUPER device=cuda
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2861744268.%(ext)s https://www.twitch.tv/videos/2861744268
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2861744268
+[twitch:vod] 2861744268: Downloading stream metadata GraphQL
+[twitch:vod] 2861744268: Downloading video access token GraphQL
+[twitch:vod] 2861744268: Downloading m3u8 information
+[twitch:vod] 2861744268: Downloading storyboard metadata JSON
+[info] v2861744268: Downloading 1 format(s): Audio_Only
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 2591
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2861744268.mp4
+[download] v2861744268   0.0%    2.33KiB/s ETA Unknown frag 0/2591
+[download] v2861744268   1.4%   11.46MiB/s ETA Unknown frag 37/2591
+[download] v2861744268   6.3%   26.06MiB/s ETA 00:24 frag 164/2591
+[download] v2861744268  11.4%   28.63MiB/s ETA 00:21 frag 297/2591
+[download] v2861744268  16.0%   30.89MiB/s ETA 00:18 frag 414/2591
+[download] v2861744268  21.2%   31.81MiB/s ETA 00:16 frag 550/2591
+[download] v2861744268  26.4%   32.09MiB/s ETA 00:15 frag 683/2591
+[download] v2861744268  31.8%   33.83MiB/s ETA 00:13 frag 824/2591
+[download] v2861744268  37.0%   33.64MiB/s ETA 00:12 frag 958/2591
+[download] v2861744268  42.1%   33.88MiB/s ETA 00:11 frag 1090/2591
+[download] v2861744268  47.1%   32.65MiB/s ETA 00:10 frag 1220/2591
+[download] v2861744268  52.5%   33.13MiB/s ETA 00:09 frag 1360/2591
+[download] v2861744268  57.7%   32.87MiB/s ETA 00:08 frag 1494/2591
+[download] v2861744268  62.6%   33.43MiB/s ETA 00:07 frag 1623/2591
+[download] v2861744268  67.1%   31.73MiB/s ETA 00:06 frag 1739/2591
+[download] v2861744268  71.6%   30.08MiB/s ETA 00:06 frag 1855/2591
+[download] v2861744268  76.6%   29.54MiB/s ETA 00:05 frag 1985/2591
+[download] v2861744268  81.9%   31.02MiB/s ETA 00:04 frag 2122/2591
+[download] v2861744268  86.8%   32.20MiB/s ETA 00:03 frag 2250/2591
+[download] v2861744268  91.8%   32.44MiB/s ETA 00:02 frag 2377/2591
+[download] v2861744268  96.7%   31.76MiB/s ETA 00:01 frag 2505/2591
+[download] v2861744268 100.0% 31.33MiB/s ETA NA frag NA/NA
+whisper profile: streamer=alanzoka language=pt timestamps=segment condition_on_previous_text=false profile=matching-independent-segments-v1 model=turbo device=cuda
+transcribe twitch/2861744268: K:\Applications\LLMS\Whisper\.venv\Scripts\python.exe -m whisper K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2861744268.mp4 --model turbo --output_dir C:\Users\Admin\AppData\Local\Temp\cstudio-whisper-52qvqdsk --output_format json --verbose False --task transcribe --condition_on_previous_text False --model_dir K:\Applications\LLMS\Whisper --device cuda --language pt
+whisper media tools: ffmpeg=C:\Users\Admin\AppData\Local\ffmpeg\bin\ffmpeg.EXE ffprobe=C:\Users\Admin\AppData\Local\ffmpeg\bin\ffprobe.EXE
+[whisper]   0%|          | 0/2590278 [00:00<?, ?frames/s]
+[whisper]   0%|          | 3000/2590278 [00:01<20:08, 2141.23frames/s]
+[whisper]   0%|          | 6000/2590278 [00:01<09:42, 4434.27frames/s]
+[whisper]   0%|          | 9000/2590278 [00:01<06:58, 6166.86frames/s]
+[whisper]   0%|          | 12000/2590278 [00:02<05:32, 7743.84frames/s]
+[whisper]   1%|          | 14736/2590278 [00:03<11:35, 3705.80frames/s]
+[whisper]   1%|          | 17736/2590278 [00:03<08:23, 5106.98frames/s]
+[whisper]   1%|          | 20736/2590278 [00:03<06:42, 6387.04frames/s]
+[whisper]   1%|          | 23736/2590278 [00:04<05:40, 7543.50frames/s]
+[whisper]   1%|          | 26736/2590278 [00:05<07:28, 5716.05frames/s]
+[whisper]   1%|          | 29674/2590278 [00:08<18:56, 2253.37frames/s]
+[whisper]   1%|▏         | 32674/2590278 [00:12<32:43, 1302.90frames/s]
+[whisper]   1%|▏         | 35516/2590278 [00:15<35:26, 1201.37frames/s]
+[whisper]   1%|▏         | 38364/2590278 [00:18<36:36, 1161.60frames/s]
+[whisper]   2%|▏         | 40916/2590278 [00:20<39:19, 1080.53frames/s]
+[whisper]   2%|▏         | 43808/2590278 [00:24<45:03, 941.84frames/s] 
+[whisper]   2%|▏         | 46808/2590278 [00:27<41:37, 1018.52frames/s]
+[whisper]   2%|▏         | 49334/2590278 [00:28<37:39, 1124.55frames/s]
+[whisper]   2%|▏         | 52278/2590278 [00:31<35:56, 1177.10frames/s]
+[whisper]   2%|▏         | 55188/2590278 [00:34<41:15, 1023.87frames/s]
+[whisper]   2%|▏         | 58188/2590278 [00:37<39:35, 1065.93frames/s]
+[whisper]   2%|▏         | 61050/2590278 [00:39<38:30, 1094.90frames/s]
+[whisper]   2%|▏         | 63816/2590278 [00:43<41:54, 1004.73frames/s]
+[whisper]   3%|▎         | 66558/2590278 [00:46<45:00, 934.58frames/s] 
+[whisper]   3%|▎         | 69362/2590278 [00:48<40:33, 1035.72frames/s]
+[whisper]   3%|▎         | 72362/2590278 [00:50<37:05, 1131.53frames/s]
+[whisper]   3%|▎         | 75276/2590278 [00:54<42:16, 991.34frames/s] 
+[whisper]   3%|▎         | 77836/2590278 [00:58<48:49, 857.55frames/s]
+[whisper]   3%|▎         | 80666/2590278 [01:00<42:32, 983.16frames/s]
+[whisper]   3%|▎         | 83592/2590278 [01:04<47:25, 880.83frames/s]
+[whisper]   3%|▎         | 86168/2590278 [01:07<46:48, 891.64frames/s]
+[whisper]   3%|▎         | 89168/2590278 [01:09<41:37, 1001.42frames/s]
+[whisper]   4%|▎         | 92144/2590278 [01:12<40:38, 1024.37frames/s]
+[whisper]   4%|▎         | 94966/2590278 [01:14<38:09, 1090.03frames/s]
+[whisper]   4%|▍         | 97834/2590278 [01:16<37:54, 1095.69frames/s]
+[whisper]   4%|▍         | 100438/2590278 [01:19<38:36, 1074.77frames/s]
+[whisper]   4%|▍         | 103288/2590278 [01:21<35:40, 1161.74frames/s]
+[whisper]   4%|▍         | 106010/2590278 [01:23<32:18, 1281.44frames/s]
+[whisper]   4%|▍         | 108778/2590278 [01:25<31:27, 1314.91frames/s]
+[whisper]   4%|▍         | 111778/2590278 [01:29<40:01, 1032.25frames/s]
+[whisper]   4%|▍         | 114778/2590278 [01:31<38:10, 1080.94frames/s]
+[whisper]   5%|▍         | 117778/2590278 [01:34<38:21, 1074.39frames/s]
+[whisper]   5%|▍         | 120722/2590278 [01:36<35:46, 1150.47frames/s]
+[whisper]   5%|▍         | 123684/2590278 [01:40<41:40, 986.34frames/s] 
+[whisper]   5%|▍         | 126356/2590278 [01:44<46:31, 882.76frames/s]
+[whisper]   5%|▍         | 129356/2590278 [01:46<39:02, 1050.73frames/s]
+[whisper]   5%|▌         | 132356/2590278 [01:48<35:53, 1141.16frames/s]
+[whisper]   5%|▌         | 135278/2590278 [01:52<42:51, 954.55frames/s] 
+[whisper]   5%|▌         | 138278/2590278 [01:57<47:55, 852.87frames/s]
+[whisper]   5%|▌         | 141278/2590278 [01:59<45:05, 905.15frames/s]
+[whisper]   6%|▌         | 144278/2590278 [02:04<49:36, 821.79frames/s]
+[whisper]   6%|▌         | 145506/2590278 [02:06<51:42, 787.91frames/s]
+[whisper]   6%|▌         | 148336/2590278 [02:07<38:25, 1059.00frames/s]
+[whisper]   6%|▌         | 151336/2590278 [02:10<39:37, 1025.78frames/s]
+[whisper]   6%|▌         | 154336/2590278 [02:12<38:21, 1058.60frames/s]
+[whisper]   6%|▌         | 157322/2590278 [02:16<42:33, 952.93frames/s] 
+[whisper]   6%|▌         | 160322/2590278 [02:18<37:15, 1086.80frames/s]
+[whisper]   6%|▋         | 163322/2590278 [02:21<38:36, 1047.58frames/s]
+[whisper]   6%|▋         | 166322/2590278 [02:23<35:44, 1130.26frames/s]
+[whisper]   7%|▋         | 169236/2590278 [02:26<36:20, 1110.31frames/s]
+[whisper]   7%|▋         | 172058/2590278 [02:30<40:39, 991.29frames/s] 
+[whisper]   7%|▋         | 175058/2590278 [02:32<36:58, 1088.45frames/s]
+[whisper]   7%|▋         | 178058/2590278 [02:35<37:08, 1082.45frames/s]
+[whisper]   7%|▋         | 180608/2590278 [02:36<34:14, 1172.72frames/s]
+[whisper]   7%|▋         | 183608/2590278 [02:38<29:19, 1367.47frames/s]
+[whisper]   7%|▋         | 186472/2590278 [02:38<22:35, 1773.54frames/s]
+[whisper]   7%|▋         | 189300/2590278 [02:41<27:02, 1479.60frames/s]
+[whisper]   7%|▋         | 192300/2590278 [02:43<29:29, 1355.54frames/s]
+[whisper]   8%|▊         | 195154/2590278 [02:45<29:07, 1370.98frames/s]
+[whisper]   8%|▊         | 198154/2590278 [02:49<33:19, 1196.62frames/s]
+[whisper]   8%|▊         | 201110/2590278 [02:52<36:25, 1093.36frames/s]
+[whisper]   8%|▊         | 203986/2590278 [02:55<39:54, 996.59frames/s] 
+[whisper]   8%|▊         | 206986/2590278 [02:58<36:45, 1080.55frames/s]
+[whisper]   8%|▊         | 209850/2590278 [03:00<35:26, 1119.21frames/s]
+[whisper]   8%|▊         | 212644/2590278 [03:03<38:49, 1020.61frames/s]
+[whisper]   8%|▊         | 215474/2590278 [03:07<43:48, 903.64frames/s] 
+[whisper]   8%|▊         | 218474/2590278 [03:10<41:41, 948.33frames/s]
+[whisper]   9%|▊         | 221290/2590278 [03:12<39:11, 1007.25frames/s]
+[whisper]   9%|▊         | 224172/2590278 [03:15<36:50, 1070.44frames/s]
+[whisper]   9%|▉         | 227080/2590278 [03:19<42:16, 931.53frames/s] 
+[whisper]   9%|▉         | 229966/2590278 [03:22<43:23, 906.63frames/s]
+[whisper]   9%|▉         | 232966/2590278 [03:25<40:18, 974.77frames/s]
+[whisper]   9%|▉         | 235924/2590278 [03:28<40:04, 979.11frames/s]
+[whisper]   9%|▉         | 238880/2590278 [03:32<46:41, 839.43frames/s]
+[whisper]   9%|▉         | 241802/2590278 [03:36<47:34, 822.68frames/s]
+[whisper]   9%|▉         | 244632/2590278 [03:40<48:21, 808.38frames/s]
+[whisper]  10%|▉         | 247576/2590278 [03:43<46:43, 835.58frames/s]
+[whisper]  10%|▉         | 250320/2590278 [03:47<51:11, 761.74frames/s]
+[whisper]  10%|▉         | 253320/2590278 [03:52<52:11, 746.17frames/s]
+[whisper]  10%|▉         | 255658/2590278 [03:55<53:44, 724.05frames/s]
+[whisper]  10%|▉         | 258646/2590278 [03:58<48:38, 798.84frames/s]
+[whisper]  10%|█         | 261576/2590278 [04:02<47:59, 808.78frames/s]
+[whisper]  10%|█         | 264452/2590278 [04:06<51:13, 756.68frames/s]
+[whisper]  10%|█         | 267276/2590278 [04:08<44:12, 875.82frames/s]
+[whisper]  10%|█         | 270186/2590278 [04:12<45:48, 844.14frames/s]
+[whisper]  11%|█         | 272772/2590278 [04:15<45:02, 857.66frames/s]
+[whisper]  11%|█         | 272772/2590278 [04:15<36:07, 1069.19frames/s]
+[whisper] Traceback (most recent call last):
+[whisper]   File "<frozen runpy>", line 198, in _run_module_as_main
+[whisper]   File "<frozen runpy>", line 88, in _run_code
+[whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\whisper\__main__.py", line 3, in <module>
+[whisper]     cli()
+[whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\whisper\transcribe.py", line 615, in cli
+[whisper]     result = transcribe(model, audio_path, temperature=temperature, **args)
+[whisper]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\whisper\transcribe.py", line 295, in transcribe
+[whisper]     result: DecodingResult = decode_with_fallback(mel_segment)
+[whisper]                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\whisper\transcribe.py", line 201, in decode_with_fallback
+[whisper]     decode_result = model.decode(segment, options)
+[whisper]                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\torch\utils\_contextlib.py", line 116, in decorate_context
+[whisper]     return func(*args, **kwargs)
+[whisper]            ^^^^^^^^^^^^^^^^^^^^^
+[whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\whisper\decoding.py", line 824, in decode
+[whisper]     result = DecodingTask(model, options).run(mel)
+[whisper]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\torch\utils\_contextlib.py", line 116, in decorate_context
+[whisper]     return func(*args, **kwargs)
+[whisper]            ^^^^^^^^^^^^^^^^^^^^^
+[whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\whisper\decoding.py", line 718, in run
+[whisper]     audio_features: Tensor = self._get_audio_features(mel)  # encoder forward pass
+[whisper]                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\whisper\decoding.py", line 655, in _get_audio_features
+[whisper]     audio_features = self.model.encoder(mel)
+[whisper]                      ^^^^^^^^^^^^^^^^^^^^^^^
+[whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+[whisper]     return self._call_impl(*args, **kwargs)
+[whisper]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+[whisper]     return forward_call(*args, **kwargs)
+[whisper]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\whisper\model.py", line 201, in forward
+[whisper]     x = block(x)
+[whisper]         ^^^^^^^^
+[whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+[whisper]     return self._call_impl(*args, **kwargs)
+[whisper]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+[whisper]     return forward_call(*args, **kwargs)
+[whisper]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\whisper\model.py", line 167, in forward
+[whisper]     x = x + self.attn(self.attn_ln(x), mask=mask, kv_cache=kv_cache)[0]
+[whisper]                       ^^^^^^^^^^^^^^^
+[whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+[whisper]     return self._call_impl(*args, **kwargs)
+[whisper]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+[whisper]     return forward_call(*args, **kwargs)
+[whisper]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\whisper\model.py", line 41, in forward
+[whisper]     return super().forward(x.float()).type(x.dtype)
+[whisper]            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\torch\nn\modules\normalization.py", line 218, in forward
+[whisper]     input, self.normalized_shape, self.weight, self.bias, self.eps
+[whisper]                                   ^^^^^^^^^^^
+[whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1915, in __getattr__
+[whisper]     def __getattr__(self, name: str) -> Union[Tensor, "Module"]:
+[whisper] KeyboardInterrupt
+transcript unavailable for twitch/2861744268; audio fallback remains available and transcript retry is suppressed until restart/--force: Whisper transcription failed with code 3221225786:     return super().forward(x.float()).type(x.dtype) |            ^^^^^^^^^^^^^^^^^^^^^^^^^^ |   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\torch\nn\modules\normalization.py", line 218, in forward |     input, self.normalized_shape, self.weight, self.bias, self.eps |                                   ^^^^^^^^^^^ |   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1915, in __getattr__ |     def __getattr__(self, name: str) -> Union[Tensor, "Module"]: | KeyboardInterrupt
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-SynOBrPYbV0.%(ext)s https://www.youtube.com/watch?v=SynOBrPYbV0

@@ -156,6 +156,27 @@ class Handler(BaseHTTPRequestHandler):
                     + html.escape(str(exc)) + "</span></div></div>",
                     code=400,
                 )
+        if u.path == "/api/youtube-status":
+            try:
+                if not slug:
+                    raise ValueError("slug is required")
+                from . import youtube_resolver as YR
+                data = YR.dashboard_state(self.root, slug)
+                latest = data.get("latest_job") or {}
+                data["log_tail"] = YR.tail_job_log(self.root, slug, latest.get("id")) if latest else ""
+                return self._send(json.dumps(data, ensure_ascii=False), "application/json; charset=utf-8")
+            except Exception as exc:
+                return self._send(json.dumps({"error": str(exc)}), "application/json; charset=utf-8", 400)
+        if u.path == "/ui/youtube-run":
+            try:
+                if not slug:
+                    raise ValueError("slug is required")
+                return self._send(D.render_youtube_job(self.root, slug))
+            except Exception as exc:
+                return self._send(
+                    '<div class="notice notice-danger"><div><strong>Falha ao atualizar</strong><span>'
+                    + html.escape(str(exc)) + "</span></div></div>", code=400,
+                )
         if u.path in ("/", "/index.html"):
             try:
                 return self._send(D.render(self.root, page, slug, csrf_token=self.csrf_token))
@@ -270,6 +291,45 @@ class Handler(BaseHTTPRequestHandler):
                 if is_form:
                     return self._redirect(f"/?page=twitch&slug={_up.quote(slug)}")
                 return self._send(json.dumps({"ok": True, "run": rec}, ensure_ascii=False), "application/json; charset=utf-8")
+            if u.path == "/action/youtube-channel-set":
+                from . import youtube_resolver as YR
+                slug = str(payload.get("slug", "") or "").strip()
+                if not slug: raise ValueError("slug is required")
+                rec = YR.set_channel(self.root, str(payload.get("streamer", "") or ""), name=str(payload.get("name", "") or ""), url=str(payload.get("url", "") or ""), channel_id=str(payload.get("channel_id", "") or ""), enabled=True, language=str(payload.get("language", "") or ""))
+                if is_form: return self._redirect(f"/?page=youtube&slug={_up.quote(slug)}")
+                return self._send(json.dumps({"ok": True, "channel": rec}, ensure_ascii=False), "application/json; charset=utf-8")
+            if u.path == "/action/youtube-channel-toggle":
+                from . import youtube_resolver as YR
+                slug = str(payload.get("slug", "") or "").strip()
+                rec = YR.set_channel_enabled(self.root, str(payload.get("streamer", "") or ""), str(payload.get("channel_key", "") or ""), str(payload.get("enabled", "0")) in {"1", "true", "on", "yes"})
+                if is_form: return self._redirect(f"/?page=youtube&slug={_up.quote(slug)}")
+                return self._send(json.dumps({"ok": True, "channel": rec}, ensure_ascii=False), "application/json; charset=utf-8")
+            if u.path == "/action/youtube-auto-download":
+                from . import youtube_resolver as YR
+                slug = str(payload.get("slug", "") or "").strip()
+                cfg = YR.set_auto_download(self.root, str(payload.get("enabled", "0")) in {"1", "true", "on", "yes"})
+                if is_form: return self._redirect(f"/?page=youtube&slug={_up.quote(slug)}")
+                return self._send(json.dumps({"ok": True, "config": cfg}, ensure_ascii=False), "application/json; charset=utf-8")
+            if u.path in {"/action/youtube-index", "/action/youtube-resolve", "/action/youtube-verify", "/action/youtube-download"}:
+                from . import youtube_resolver as YR
+                slug = str(payload.get("slug", "") or "").strip()
+                if not slug: raise ValueError("slug is required")
+                if u.path.endswith("youtube-index"):
+                    rec = YR.start_job(self.root, slug, "index", streamer=str(payload.get("streamer", "") or ""), force=True, command="dashboard youtube-index")
+                elif u.path.endswith("youtube-resolve"):
+                    rec = YR.start_job(self.root, slug, "resolve", streamer=str(payload.get("streamer", "") or ""), vod_id=str(payload.get("vod_id", "") or ""), refresh_index=False, download=False, verify=True, force=False, command="dashboard youtube-resolve")
+                elif u.path.endswith("youtube-verify"):
+                    rec = YR.start_job(self.root, slug, "verify", vod_id=str(payload.get("vod_id", "") or ""), video_id=str(payload.get("video_id", "") or ""), force=False, command="dashboard youtube-verify")
+                else:
+                    rec = YR.start_job(self.root, slug, "download", vod_id=str(payload.get("vod_id", "") or ""), video_id=str(payload.get("video_id", "") or ""), force=False, command="dashboard youtube-download")
+                if is_form: return self._redirect(f"/?page=youtube&slug={_up.quote(slug)}")
+                return self._send(json.dumps({"ok": True, "job": rec}, ensure_ascii=False), "application/json; charset=utf-8")
+            if u.path == "/action/youtube-reject":
+                from . import youtube_resolver as YR
+                slug = str(payload.get("slug", "") or "").strip()
+                rec = YR.reject_match(self.root, slug, str(payload.get("vod_id", "") or ""), str(payload.get("video_id", "") or ""), reason=str(payload.get("reason", "manual dashboard rejection") or "manual dashboard rejection"))
+                if is_form: return self._redirect(f"/?page=youtube&slug={_up.quote(slug)}")
+                return self._send(json.dumps({"ok": True, "match": rec}, ensure_ascii=False), "application/json; charset=utf-8")
             if u.path == "/action/maintain":
                 report = C.maintain_repository(self.root)
                 if is_form:
@@ -286,6 +346,8 @@ class Handler(BaseHTTPRequestHandler):
                     page = "proposals"
                 elif u.path == "/action/twitch-scrape":
                     page = "twitch"
+                elif "/youtube-" in u.path:
+                    page = "youtube"
                 elif u.path in ("/action/new", "/action/pause", "/action/resume", "/action/abandon", "/action/maintain"):
                     page = "production"
                 else:
@@ -312,5 +374,10 @@ def run(root: str, host: str = "127.0.0.1", port: int = 8765, open_browser: bool
         try:
             from . import twitch as TW
             TW.shutdown_jobs()
+        except Exception:
+            pass
+        try:
+            from . import youtube_resolver as YR
+            YR.shutdown_jobs()
         except Exception:
             pass

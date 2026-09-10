@@ -1,0 +1,989 @@
+{
+  "youtube_video_id": "6yZE6Xr2BZ0",
+  "streamer": "alanzoka",
+  "status": "completed",
+  "created_at": "2026-09-10T19:11:42Z",
+  "evaluated_vod_ids": [
+    "2861744268",
+    "2862622285",
+    "2863504919",
+    "2864229186",
+    "2865097583",
+    "2868004694",
+    "2868864059",
+    "2869682753"
+  ],
+  "pair_results": {
+    "2862622285": {
+      "vod_id": "2862622285",
+      "state": "candidate",
+      "candidate_score": 0.4566,
+      "candidate_evidence": {
+        "candidate_score": 0.4566,
+        "signals": {
+          "channel": {
+            "score": 1.0,
+            "available": true,
+            "weight": 0.0,
+            "effective_weight": 0.0,
+            "detail": "configured mirror channel"
+          },
+          "date": {
+            "score": 0.65,
+            "available": true,
+            "weight": 0.3,
+            "effective_weight": 0.3,
+            "detail": "upload delay -0.9d"
+          },
+          "duration": {
+            "score": 0.7529,
+            "available": true,
+            "weight": 0.22,
+            "effective_weight": 0.22,
+            "detail": "subset-compatible ratio 0.26"
+          },
+          "title": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.28,
+            "effective_weight": 0.28,
+            "detail": "token similarity"
+          },
+          "chapters": {
+            "score": 0.48,
+            "available": true,
+            "weight": 0.2,
+            "effective_weight": 0.2,
+            "detail": "shared tokens: league, rocket"
+          }
+        },
+        "contributions": {
+          "channel": 0.0,
+          "date": 0.195,
+          "duration": 0.1656,
+          "title": 0.0,
+          "chapters": 0.096
+        }
+      },
+      "evaluated_at": "2026-09-10T20:24:50Z",
+      "policy_version": "global-source-assignment-v1",
+      "matcher_engine": "numpy-exact",
+      "timeline_segments": [],
+      "audio": {
+        "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+        "anchors": [
+          {
+            "youtube_time": 579.0,
+            "twitch_time": 16636.5,
+            "similarity": 0.768,
+            "second_best_similarity": 0.7674,
+            "peak_margin": 0.0006,
+            "search_mode": "global",
+            "evaluated_windows": 44773,
+            "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+            "duration": 28.0
+          },
+          {
+            "youtube_time": 2120.8,
+            "twitch_time": 21732.0,
+            "similarity": 0.7595,
+            "second_best_similarity": 0.7594,
+            "peak_margin": 0.0001,
+            "search_mode": "forward-fallback",
+            "evaluated_windows": 9959,
+            "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+            "duration": 28.0
+          },
+          {
+            "youtube_time": 3781.2,
+            "twitch_time": 22562.0,
+            "similarity": 0.0,
+            "second_best_similarity": 0.0,
+            "peak_margin": 0.0,
+            "search_mode": "forward-fallback",
+            "evaluated_windows": 0,
+            "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+            "duration": 28.0
+          },
+          {
+            "youtube_time": 5204.4,
+            "twitch_time": 23273.5,
+            "similarity": 0.0,
+            "second_best_similarity": 0.0,
+            "peak_margin": 0.0,
+            "search_mode": "forward-fallback",
+            "evaluated_windows": 0,
+            "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+            "duration": 28.0
+          }
+        ],
+        "assessment": {
+          "state": "candidate",
+          "good_anchors": 0,
+          "total_anchors": 4,
+          "median_similarity": 0.0,
+          "ordered": false,
+          "timeline_consistency": "insufficient",
+          "slopes": [],
+          "offsets": [],
+          "offset_deltas": [],
+          "backwards_offset_jumps": [],
+          "continuous_offset_pairs": 0,
+          "forward_cut_gaps": [],
+          "median_peak_margin": null,
+          "consistency_model": "piecewise-offset-v1"
+        }
+      },
+      "twitch_fingerprint": {
+        "provider": "ffmpeg-temporal-features-v1",
+        "frames": 44828,
+        "duration_seconds": 22414.0
+      },
+      "deep_audio_anchor_count": 2,
+      "deep_audio_median_similarity": 0.7637,
+      "transcript": {
+        "method": "whisper-localized-anchor-v2",
+        "anchors": [
+          {
+            "youtube_time": 579.0,
+            "twitch_time": 16636.5,
+            "audio_similarity": 0.768,
+            "similarity": 0.0988,
+            "youtube_tokens": 70,
+            "twitch_tokens": 92,
+            "youtube_text": "Só fazer Falcon. Você consegue? Bio meu aqui. Só dar um minuto. >> Vai, mano. Faz um gol, baby. Meu Deus, mano. Meu Deus, mano. Relaxa, mano. Relaxa que você sabe quem Relaxa, mano. Relaxa que você sabe quem faz aqui. [ __ ] o cara deu um predas, faz aqui. [ __ ] o cara deu um predas, mano. Assustador isso. Eu acho que",
+            "twitch_text": "Ah, que erro meu, mano. Eu achei que ele ia dar fake. Eu achei que ele ia dar fake, cara. Aqui eu vou bumpar, vou bumpar. Bumpa, bumpa. Bumpei meu pau, né? Pega lá. Nossa, Falcon. Que isso, mano? Gostei do jogo desse daqui. Esse daqui já tá melhor. Aqui eu vou bumpar de novo, tá? O cara não vai entender dois bump direi",
+            "method": "whisper-localized-anchor-v2"
+          },
+          {
+            "youtube_time": 2120.8,
+            "twitch_time": 21732.0,
+            "audio_similarity": 0.7595,
+            "similarity": 0.078,
+            "youtube_tokens": 130,
+            "twitch_tokens": 75,
+            "youtube_text": ">> Boa, boa. Errou, né? >> Boa, boa. Errou, né? >> Eu passo ainda. Tá. >> Eu passo ainda. Tá. >> Teu cu. >> Teu cu. É, fez mesmo. >> Ai, mas daí também é difícil, né, mano? Como que o cara faz um bagulho desse, Como que o cara faz um bagulho desse, mano? Ai meu Deus do céu, mano? Ai meu Deus do céu, >> na moral mano. >",
+            "twitch_text": "É gol, é gol, é gol, é gol. Esses caras tão muito cagão, mano. Que isso? Mano, eu vou saideira. Saideira porque... Infelizmente o Rocket League tá de baixo nível hoje, mano. Péssimo nível, pai. Tá louco, Falcon. Foi mal. Desculpa, eu esqueci. É costume. É costume. Precisava de mais positividade. Tá ruim. Se vocês quise",
+            "method": "whisper-localized-anchor-v2"
+          }
+        ],
+        "assessment": {
+          "state": "insufficient",
+          "good_anchors": 0,
+          "total_anchors": 2,
+          "median_similarity": 0.0,
+          "timeline_consistency": "insufficient"
+        }
+      }
+    },
+    "2861744268": {
+      "vod_id": "2861744268",
+      "state": "candidate",
+      "candidate_score": 0.4281,
+      "candidate_evidence": {
+        "candidate_score": 0.4281,
+        "signals": {
+          "channel": {
+            "score": 1.0,
+            "available": true,
+            "weight": 0.0,
+            "effective_weight": 0.0,
+            "detail": "configured mirror channel"
+          },
+          "date": {
+            "score": 0.9904,
+            "available": true,
+            "weight": 0.3,
+            "effective_weight": 0.3,
+            "detail": "upload delay +0.1d"
+          },
+          "duration": {
+            "score": 0.5952,
+            "available": true,
+            "weight": 0.22,
+            "effective_weight": 0.22,
+            "detail": "short subset ratio 0.23"
+          },
+          "title": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.28,
+            "effective_weight": 0.28,
+            "detail": "token similarity"
+          },
+          "chapters": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.2,
+            "effective_weight": 0.2,
+            "detail": "shared tokens: none"
+          }
+        },
+        "contributions": {
+          "channel": 0.0,
+          "date": 0.2971,
+          "duration": 0.131,
+          "title": 0.0,
+          "chapters": 0.0
+        }
+      },
+      "evaluated_at": "2026-09-10T20:24:50Z",
+      "policy_version": "global-source-assignment-v1",
+      "matcher_engine": "numpy-exact",
+      "timeline_segments": [],
+      "audio": {
+        "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+        "anchors": [
+          {
+            "youtube_time": 579.0,
+            "twitch_time": 6955.0,
+            "similarity": 0.7815,
+            "second_best_similarity": 0.7761,
+            "peak_margin": 0.0054,
+            "search_mode": "global",
+            "evaluated_windows": 51751,
+            "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+            "duration": 28.0
+          },
+          {
+            "youtube_time": 2120.8,
+            "twitch_time": 22220.5,
+            "similarity": 0.8184,
+            "second_best_similarity": 0.8091,
+            "peak_margin": 0.0093,
+            "search_mode": "forward-fallback",
+            "evaluated_windows": 36300,
+            "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+            "duration": 28.0
+          },
+          {
+            "youtube_time": 3781.2,
+            "twitch_time": 23265.0,
+            "similarity": 0.7398,
+            "second_best_similarity": 0.7384,
+            "peak_margin": 0.0014,
+            "search_mode": "forward-fallback",
+            "evaluated_windows": 5650,
+            "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+            "duration": 28.0
+          },
+          {
+            "youtube_time": 5204.4,
+            "twitch_time": 24428.0,
+            "similarity": 0.7563,
+            "second_best_similarity": 0.7538,
+            "peak_margin": 0.0025,
+            "search_mode": "forward-fallback",
+            "evaluated_windows": 3798,
+            "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+            "duration": 28.0
+          }
+        ],
+        "assessment": {
+          "state": "candidate",
+          "good_anchors": 0,
+          "total_anchors": 4,
+          "median_similarity": 0.0,
+          "ordered": false,
+          "timeline_consistency": "insufficient",
+          "slopes": [],
+          "offsets": [],
+          "offset_deltas": [],
+          "backwards_offset_jumps": [],
+          "continuous_offset_pairs": 0,
+          "forward_cut_gaps": [],
+          "median_peak_margin": null,
+          "consistency_model": "piecewise-offset-v1"
+        }
+      },
+      "twitch_fingerprint": {
+        "provider": "ffmpeg-temporal-features-v1",
+        "frames": 51806,
+        "duration_seconds": 25903.0
+      },
+      "deep_audio_anchor_count": 3,
+      "deep_audio_median_similarity": 0.7815,
+      "transcript": {
+        "method": "whisper-localized-anchor-v2",
+        "anchors": [
+          {
+            "youtube_time": 579.0,
+            "twitch_time": 6955.0,
+            "audio_similarity": 0.7815,
+            "similarity": 0.0652,
+            "youtube_tokens": 70,
+            "twitch_tokens": 22,
+            "youtube_text": "Só fazer Falcon. Você consegue? Bio meu aqui. Só dar um minuto. >> Vai, mano. Faz um gol, baby. Meu Deus, mano. Meu Deus, mano. Relaxa, mano. Relaxa que você sabe quem Relaxa, mano. Relaxa que você sabe quem faz aqui. [ __ ] o cara deu um predas, faz aqui. [ __ ] o cara deu um predas, mano. Assustador isso. Eu acho que",
+            "twitch_text": "Vou ficar na moral. Vou andar tranquilo. Ah, mano, fala sério que os caras me ouviram, velho. Não é possível isso, cara.",
+            "method": "whisper-localized-anchor-v2"
+          },
+          {
+            "youtube_time": 2120.8,
+            "twitch_time": 22220.5,
+            "audio_similarity": 0.8184,
+            "similarity": 0.0253,
+            "youtube_tokens": 130,
+            "twitch_tokens": 28,
+            "youtube_text": ">> Boa, boa. Errou, né? >> Boa, boa. Errou, né? >> Eu passo ainda. Tá. >> Eu passo ainda. Tá. >> Teu cu. >> Teu cu. É, fez mesmo. >> Ai, mas daí também é difícil, né, mano? Como que o cara faz um bagulho desse, Como que o cara faz um bagulho desse, mano? Ai meu Deus do céu, mano? Ai meu Deus do céu, >> na moral mano. >",
+            "twitch_text": "Mano, eu não tô prestando atenção na última luta, na outra luta. Infelizmente, não dá. E aí? A luta rolando lá, velho. Eu matei tudo. Eita, ele morreu!",
+            "method": "whisper-localized-anchor-v2"
+          },
+          {
+            "youtube_time": 5204.4,
+            "twitch_time": 24428.0,
+            "audio_similarity": 0.7563,
+            "similarity": 0.0177,
+            "youtube_tokens": 218,
+            "twitch_tokens": 8,
+            "youtube_text": ">> É, então >> mano. Você É verdade. A Ma veio me lembrar aqui que você come miojo com lembrar aqui que você come miojo com arroz e feijão, mano. Pelo amor de Deus. arroz e feijão, mano. Pelo amor de Deus. Ah, cara, isso é é proteína, mano. Ah, cara, isso é é proteína, mano. >> Cara, onde que tem proteína no arroz e >>",
+            "twitch_text": "Eu vou matar você. Eu vou matar você.",
+            "method": "whisper-localized-anchor-v2"
+          }
+        ],
+        "assessment": {
+          "state": "insufficient",
+          "good_anchors": 0,
+          "total_anchors": 3,
+          "median_similarity": 0.0,
+          "timeline_consistency": "insufficient"
+        }
+      }
+    },
+    "2863504919": {
+      "vod_id": "2863504919",
+      "state": "candidate",
+      "candidate_score": 0.3323,
+      "candidate_evidence": {
+        "candidate_score": 0.3323,
+        "signals": {
+          "channel": {
+            "score": 1.0,
+            "available": true,
+            "weight": 0.0,
+            "effective_weight": 0.0,
+            "detail": "configured mirror channel"
+          },
+          "date": {
+            "score": 0.65,
+            "available": true,
+            "weight": 0.3,
+            "effective_weight": 0.3,
+            "detail": "upload delay -1.9d"
+          },
+          "duration": {
+            "score": 0.6243,
+            "available": true,
+            "weight": 0.22,
+            "effective_weight": 0.22,
+            "detail": "short subset ratio 0.24"
+          },
+          "title": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.28,
+            "effective_weight": 0.28,
+            "detail": "token similarity"
+          },
+          "chapters": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.2,
+            "effective_weight": 0.2,
+            "detail": "shared tokens: none"
+          }
+        },
+        "contributions": {
+          "channel": 0.0,
+          "date": 0.195,
+          "duration": 0.1373,
+          "title": 0.0,
+          "chapters": 0.0
+        }
+      },
+      "evaluated_at": "2026-09-10T20:24:50Z",
+      "policy_version": "global-source-assignment-v1",
+      "matcher_engine": "numpy-exact",
+      "timeline_segments": [],
+      "audio": {
+        "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+        "anchors": [
+          {
+            "youtube_time": 579.0,
+            "twitch_time": 11832.5,
+            "similarity": 0.8075,
+            "second_best_similarity": 0.7736,
+            "peak_margin": 0.0339,
+            "search_mode": "global",
+            "evaluated_windows": 49338,
+            "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+            "duration": 28.0
+          },
+          {
+            "youtube_time": 2120.8,
+            "twitch_time": 20575.0,
+            "similarity": 0.8129,
+            "second_best_similarity": 0.7764,
+            "peak_margin": 0.0365,
+            "search_mode": "forward-fallback",
+            "evaluated_windows": 24132,
+            "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+            "duration": 28.0
+          },
+          {
+            "youtube_time": 3781.2,
+            "twitch_time": 22404.0,
+            "similarity": 0.7501,
+            "second_best_similarity": 0.7388,
+            "peak_margin": 0.0113,
+            "search_mode": "forward-fallback",
+            "evaluated_windows": 6528,
+            "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+            "duration": 28.0
+          },
+          {
+            "youtube_time": 5204.4,
+            "twitch_time": 24369.5,
+            "similarity": 0.7551,
+            "second_best_similarity": 0.7333,
+            "peak_margin": 0.0218,
+            "search_mode": "forward-fallback",
+            "evaluated_windows": 3107,
+            "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+            "duration": 28.0
+          }
+        ],
+        "assessment": {
+          "state": "candidate",
+          "good_anchors": 0,
+          "total_anchors": 4,
+          "median_similarity": 0.0,
+          "ordered": false,
+          "timeline_consistency": "insufficient",
+          "slopes": [],
+          "offsets": [],
+          "offset_deltas": [],
+          "backwards_offset_jumps": [],
+          "continuous_offset_pairs": 0,
+          "forward_cut_gaps": [],
+          "median_peak_margin": null,
+          "consistency_model": "piecewise-offset-v1"
+        }
+      },
+      "twitch_fingerprint": {
+        "provider": "ffmpeg-temporal-features-v1",
+        "frames": 49393,
+        "duration_seconds": 24696.5
+      },
+      "deep_audio_anchor_count": 4,
+      "deep_audio_median_similarity": 0.7813,
+      "transcript": {
+        "method": "whisper-localized-anchor-v2",
+        "anchors": [
+          {
+            "youtube_time": 579.0,
+            "twitch_time": 11832.5,
+            "audio_similarity": 0.8075,
+            "similarity": 0.0,
+            "youtube_tokens": 70,
+            "twitch_tokens": 1,
+            "youtube_text": "Só fazer Falcon. Você consegue? Bio meu aqui. Só dar um minuto. >> Vai, mano. Faz um gol, baby. Meu Deus, mano. Meu Deus, mano. Relaxa, mano. Relaxa que você sabe quem Relaxa, mano. Relaxa que você sabe quem faz aqui. [ __ ] o cara deu um predas, faz aqui. [ __ ] o cara deu um predas, mano. Assustador isso. Eu acho que",
+            "twitch_text": "Hum?",
+            "method": "whisper-localized-anchor-v2"
+          },
+          {
+            "youtube_time": 2120.8,
+            "twitch_time": 20575.0,
+            "audio_similarity": 0.8129,
+            "similarity": 0.0821,
+            "youtube_tokens": 130,
+            "twitch_tokens": 65,
+            "youtube_text": ">> Boa, boa. Errou, né? >> Boa, boa. Errou, né? >> Eu passo ainda. Tá. >> Eu passo ainda. Tá. >> Teu cu. >> Teu cu. É, fez mesmo. >> Ai, mas daí também é difícil, né, mano? Como que o cara faz um bagulho desse, Como que o cara faz um bagulho desse, mano? Ai meu Deus do céu, mano? Ai meu Deus do céu, >> na moral mano. >",
+            "twitch_text": "Por que que eu tô pelado? O cara tirou minha roupa, mano. Mano, o cara é mó carado, né? Ele tirou minha roupa pra mim curar, mano. Quem que faz isso, velho? Ah, eu faço, né? Eu fiz isso também mais cedo com a mina, né? Cara, é que é padrão, é procedimento padrão, mano. Da região aqui, é tirar a roupa pra se curar.",
+            "method": "whisper-localized-anchor-v2"
+          },
+          {
+            "youtube_time": 3781.2,
+            "twitch_time": 22404.0,
+            "audio_similarity": 0.7501,
+            "similarity": 0.0897,
+            "youtube_tokens": 101,
+            "twitch_tokens": 55,
+            "youtube_text": "Desculpulpa, mano. Tive que tirar de você porque você porque >> pode fazer. Eu sei que você quer fazer o >> pode fazer. Eu sei que você quer fazer o gol. Não peguei reset, senhor amado. gol. Não peguei reset, senhor amado. >> [ __ ] quase [risadas] fiz ainda. Nossa senhora. >> Horroroso, né? Horrível. >> Horroroso, né?",
+            "twitch_text": "O Vrakirfang não funcionou? Eu gostaria de ter mais respostas para você. Eu preciso saber o que aconteceu com eles. Eu disse, a cidade está descançada. Ficou. Eu preciso voltar a Láslea. Suas wounds, elas estão quase fechadas. Você deve restar mais. Você está em meu lugar? Eu vou com você. Talvez eu esqueci algo.",
+            "method": "whisper-localized-anchor-v2"
+          },
+          {
+            "youtube_time": 5204.4,
+            "twitch_time": 24369.5,
+            "audio_similarity": 0.7551,
+            "similarity": 0.0891,
+            "youtube_tokens": 218,
+            "twitch_tokens": 141,
+            "youtube_text": ">> É, então >> mano. Você É verdade. A Ma veio me lembrar aqui que você come miojo com lembrar aqui que você come miojo com arroz e feijão, mano. Pelo amor de Deus. arroz e feijão, mano. Pelo amor de Deus. Ah, cara, isso é é proteína, mano. Ah, cara, isso é é proteína, mano. >> Cara, onde que tem proteína no arroz e >>",
+            "twitch_text": "Cines. Ah, mano, não. Daí você tá de sacanagem, né? Pô, com todo respeito. Não, calma. Que porra de review é esse? Você compra a porra de um RPG, esquipa a porra das cutscenes e daí reclama que não tá se conectando com os personagens, mano. Você teve o cérebro corrompido já por TikTok, mano. Não tem explicação. Meu Deu",
+            "method": "whisper-localized-anchor-v2"
+          }
+        ],
+        "assessment": {
+          "state": "insufficient",
+          "good_anchors": 0,
+          "total_anchors": 4,
+          "median_similarity": 0.0,
+          "timeline_consistency": "insufficient"
+        }
+      }
+    },
+    "2864229186": {
+      "vod_id": "2864229186",
+      "state": "candidate",
+      "candidate_score": 0.1366,
+      "candidate_evidence": {
+        "candidate_score": 0.1366,
+        "signals": {
+          "channel": {
+            "score": 1.0,
+            "available": true,
+            "weight": 0.0,
+            "effective_weight": 0.0,
+            "detail": "configured mirror channel"
+          },
+          "date": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.3,
+            "effective_weight": 0.3,
+            "detail": "YouTube predates Twitch by 2.8d"
+          },
+          "duration": {
+            "score": 0.6209,
+            "available": true,
+            "weight": 0.22,
+            "effective_weight": 0.22,
+            "detail": "short subset ratio 0.24"
+          },
+          "title": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.28,
+            "effective_weight": 0.28,
+            "detail": "token similarity"
+          },
+          "chapters": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.2,
+            "effective_weight": 0.2,
+            "detail": "shared tokens: none"
+          }
+        },
+        "contributions": {
+          "channel": 0.0,
+          "date": 0.0,
+          "duration": 0.1366,
+          "title": 0.0,
+          "chapters": 0.0
+        }
+      },
+      "reason": "known upload date predates this Twitch VOD",
+      "evaluated_at": "2026-09-10T19:35:43Z",
+      "policy_version": "global-source-assignment-v1",
+      "timeline_segments": [],
+      "audio": {
+        "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+        "anchors": [],
+        "assessment": {
+          "state": "not_run"
+        }
+      }
+    },
+    "2865097583": {
+      "vod_id": "2865097583",
+      "state": "candidate",
+      "candidate_score": 0.1029,
+      "candidate_evidence": {
+        "candidate_score": 0.1029,
+        "signals": {
+          "channel": {
+            "score": 1.0,
+            "available": true,
+            "weight": 0.0,
+            "effective_weight": 0.0,
+            "detail": "configured mirror channel"
+          },
+          "date": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.3,
+            "effective_weight": 0.3,
+            "detail": "YouTube predates Twitch by 3.8d"
+          },
+          "duration": {
+            "score": 0.4679,
+            "available": true,
+            "weight": 0.22,
+            "effective_weight": 0.22,
+            "detail": "short subset ratio 0.18"
+          },
+          "title": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.28,
+            "effective_weight": 0.28,
+            "detail": "token similarity"
+          },
+          "chapters": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.2,
+            "effective_weight": 0.2,
+            "detail": "shared tokens: none"
+          }
+        },
+        "contributions": {
+          "channel": 0.0,
+          "date": 0.0,
+          "duration": 0.1029,
+          "title": 0.0,
+          "chapters": 0.0
+        }
+      },
+      "reason": "known upload date predates this Twitch VOD",
+      "evaluated_at": "2026-09-10T19:35:43Z",
+      "policy_version": "global-source-assignment-v1",
+      "timeline_segments": [],
+      "audio": {
+        "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+        "anchors": [],
+        "assessment": {
+          "state": "not_run"
+        }
+      }
+    },
+    "2868004694": {
+      "vod_id": "2868004694",
+      "state": "candidate",
+      "candidate_score": 0.1255,
+      "candidate_evidence": {
+        "candidate_score": 0.1255,
+        "signals": {
+          "channel": {
+            "score": 1.0,
+            "available": true,
+            "weight": 0.0,
+            "effective_weight": 0.0,
+            "detail": "configured mirror channel"
+          },
+          "date": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.3,
+            "effective_weight": 0.3,
+            "detail": "YouTube predates Twitch by 6.9d"
+          },
+          "duration": {
+            "score": 0.5704,
+            "available": true,
+            "weight": 0.22,
+            "effective_weight": 0.22,
+            "detail": "short subset ratio 0.22"
+          },
+          "title": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.28,
+            "effective_weight": 0.28,
+            "detail": "token similarity"
+          },
+          "chapters": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.2,
+            "effective_weight": 0.2,
+            "detail": "shared tokens: none"
+          }
+        },
+        "contributions": {
+          "channel": 0.0,
+          "date": 0.0,
+          "duration": 0.1255,
+          "title": 0.0,
+          "chapters": 0.0
+        }
+      },
+      "reason": "known upload date predates this Twitch VOD",
+      "evaluated_at": "2026-09-10T19:35:43Z",
+      "policy_version": "global-source-assignment-v1",
+      "timeline_segments": [],
+      "audio": {
+        "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+        "anchors": [],
+        "assessment": {
+          "state": "not_run"
+        }
+      }
+    },
+    "2868864059": {
+      "vod_id": "2868864059",
+      "state": "candidate",
+      "candidate_score": 0.1243,
+      "candidate_evidence": {
+        "candidate_score": 0.1243,
+        "signals": {
+          "channel": {
+            "score": 1.0,
+            "available": true,
+            "weight": 0.0,
+            "effective_weight": 0.0,
+            "detail": "configured mirror channel"
+          },
+          "date": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.3,
+            "effective_weight": 0.3,
+            "detail": "YouTube predates Twitch by 7.9d"
+          },
+          "duration": {
+            "score": 0.5649,
+            "available": true,
+            "weight": 0.22,
+            "effective_weight": 0.22,
+            "detail": "short subset ratio 0.22"
+          },
+          "title": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.28,
+            "effective_weight": 0.28,
+            "detail": "token similarity"
+          },
+          "chapters": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.2,
+            "effective_weight": 0.2,
+            "detail": "shared tokens: none"
+          }
+        },
+        "contributions": {
+          "channel": 0.0,
+          "date": 0.0,
+          "duration": 0.1243,
+          "title": 0.0,
+          "chapters": 0.0
+        }
+      },
+      "reason": "known upload date predates this Twitch VOD",
+      "evaluated_at": "2026-09-10T19:35:43Z",
+      "policy_version": "global-source-assignment-v1",
+      "timeline_segments": [],
+      "audio": {
+        "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+        "anchors": [],
+        "assessment": {
+          "state": "not_run"
+        }
+      }
+    },
+    "2869682753": {
+      "vod_id": "2869682753",
+      "state": "candidate",
+      "candidate_score": 0.1211,
+      "candidate_evidence": {
+        "candidate_score": 0.1211,
+        "signals": {
+          "channel": {
+            "score": 1.0,
+            "available": true,
+            "weight": 0.0,
+            "effective_weight": 0.0,
+            "detail": "configured mirror channel"
+          },
+          "date": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.3,
+            "effective_weight": 0.3,
+            "detail": "YouTube predates Twitch by 8.9d"
+          },
+          "duration": {
+            "score": 0.5503,
+            "available": true,
+            "weight": 0.22,
+            "effective_weight": 0.22,
+            "detail": "short subset ratio 0.21"
+          },
+          "title": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.28,
+            "effective_weight": 0.28,
+            "detail": "token similarity"
+          },
+          "chapters": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.2,
+            "effective_weight": 0.2,
+            "detail": "shared tokens: none"
+          }
+        },
+        "contributions": {
+          "channel": 0.0,
+          "date": 0.0,
+          "duration": 0.1211,
+          "title": 0.0,
+          "chapters": 0.0
+        }
+      },
+      "reason": "known upload date predates this Twitch VOD",
+      "evaluated_at": "2026-09-10T19:35:43Z",
+      "policy_version": "global-source-assignment-v1",
+      "timeline_segments": [],
+      "audio": {
+        "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+        "anchors": [],
+        "assessment": {
+          "state": "not_run"
+        }
+      }
+    }
+  },
+  "youtube": {
+    "schema_version": 2,
+    "video_id": "6yZE6Xr2BZ0",
+    "url": "https://www.youtube.com/watch?v=6yZE6Xr2BZ0",
+    "channel_id": "UCIwspRtKNszHhIhl36gREjQ",
+    "channel_name": "alanzoka",
+    "title": "JOGUEI O MELHOR ROCKET LEAGUE DA MINHA VIDA COM A MERCEDES DO FIUK! - ROCKET LEAGUE COM O FALCON",
+    "description": "OS MAIORES DESCONTOS ESTÃO NO KABUM!:\nhttp://kb1.me/alanzokakabumyt\n\n💜 LIVE: https://www.twitch.tv/alanzoka\n📷 Instagram: https://www.instagram.com/alanzoka/\n📧 alanzoka@vandep.ag\n🐤 Twitter: https://twitter.com/alanzoka\n\n\n\n\n#Alanzoka",
+    "upload_date": "20260831",
+    "timestamp": 1788210009,
+    "duration": 5930.0,
+    "availability": "public",
+    "live_status": "not_live",
+    "thumbnail": "https://i.ytimg.com/vi_webp/6yZE6Xr2BZ0/maxresdefault.webp",
+    "thumbnails": [
+      {
+        "url": "https://i.ytimg.com/vi/6yZE6Xr2BZ0/hq720.jpg",
+        "height": 720,
+        "width": 1280,
+        "preference": -3,
+        "id": "38",
+        "resolution": "1280x720"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/6yZE6Xr2BZ0/hq720.webp",
+        "preference": -2,
+        "id": "39"
+      },
+      {
+        "url": "https://i.ytimg.com/vi/6yZE6Xr2BZ0/maxresdefault.jpg",
+        "height": 720,
+        "width": 1280,
+        "preference": -1,
+        "id": "40",
+        "resolution": "1280x720"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/6yZE6Xr2BZ0/maxresdefault.webp",
+        "height": 1080,
+        "width": 1920,
+        "preference": 0,
+        "id": "41",
+        "resolution": "1920x1080"
+      }
+    ],
+    "view_count": 589401,
+    "chapters": [],
+    "formats_summary": {
+      "max_height": 2160,
+      "max_fps": 60.0,
+      "heights": [
+        180,
+        240,
+        360,
+        480,
+        720,
+        1080,
+        1440,
+        2160
+      ]
+    },
+    "indexed_at": "2026-09-10T19:11:45Z",
+    "untrusted": true,
+    "injection_findings": [],
+    "streamer": "alanzoka",
+    "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+    "configured_channel_name": "alanzoka"
+  },
+  "candidate_discovery": {
+    "best_candidate_score": 0.389,
+    "best_candidate_vod_id": "2862622285",
+    "best_chapter_shared_tokens": 2
+  },
+  "schema_version": 2,
+  "policy_version": "global-source-assignment-v1",
+  "updated_at": "2026-09-10T20:25:48Z",
+  "youtube_fingerprint": {
+    "provider": "ffmpeg-temporal-features-v1",
+    "frames": 11859,
+    "duration_seconds": 5929.5
+  },
+  "state": "unmatched",
+  "primary_vod_id": "2862622285",
+  "assigned_vod_ids": [],
+  "completed_at": "2026-09-10T20:25:48Z",
+  "matcher_engine": "numpy-exact",
+  "deep_resolution": {
+    "policy_version": "localized-global-tiebreak-v1",
+    "status": "completed",
+    "attempted_vod_ids": [
+      "2861744268",
+      "2862622285",
+      "2863504919"
+    ],
+    "candidate_vod_ids": [
+      "2862622285",
+      "2861744268",
+      "2863504919"
+    ],
+    "attempts": {
+      "2862622285": {
+        "state": "candidate",
+        "assessment": {
+          "state": "insufficient",
+          "good_anchors": 0,
+          "total_anchors": 2,
+          "median_similarity": 0.0,
+          "timeline_consistency": "insufficient"
+        },
+        "attempted_at": "2026-09-10T20:25:12Z"
+      },
+      "2861744268": {
+        "state": "candidate",
+        "assessment": {
+          "state": "insufficient",
+          "good_anchors": 0,
+          "total_anchors": 3,
+          "median_similarity": 0.0,
+          "timeline_consistency": "insufficient"
+        },
+        "attempted_at": "2026-09-10T20:25:27Z"
+      },
+      "2863504919": {
+        "state": "candidate",
+        "assessment": {
+          "state": "insufficient",
+          "good_anchors": 0,
+          "total_anchors": 4,
+          "median_similarity": 0.0,
+          "timeline_consistency": "insufficient"
+        },
+        "attempted_at": "2026-09-10T20:25:48Z"
+      }
+    },
+    "reason": "all bounded deep-resolution candidates exhausted",
+    "completed_at": "2026-09-10T20:25:48Z"
+  }
+}

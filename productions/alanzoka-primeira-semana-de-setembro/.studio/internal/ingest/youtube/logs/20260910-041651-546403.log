@@ -1,0 +1,344 @@
+[2026-09-10T04:16:51Z] YouTube Mirror Resolver job resolve
+candidate vod=2861744268 youtube=SynOBrPYbV0 score=0.728 state=ambiguous
+candidate vod=2861744268 youtube=vt1HbScE_jM score=0.710 state=ambiguous
+candidate vod=2861744268 youtube=muxOFHGOpZs score=0.697 state=candidate
+candidate vod=2861744268 youtube=7GBn3uVeVb8 score=0.694 state=candidate
+candidate vod=2861744268 youtube=iEZOwN5xssU score=0.662 state=candidate
+candidate vod=2861744268 youtube=nH8X1jAyoeQ score=0.538 state=candidate
+candidate vod=2861744268 youtube=CMrXO8qfoQw score=0.388 state=candidate
+candidate vod=2861744268 youtube=Wjl1p9MmI-k score=0.359 state=candidate
+candidate vod=2862622285 youtube=SynOBrPYbV0 score=0.685 state=candidate
+candidate vod=2862622285 youtube=vt1HbScE_jM score=0.667 state=candidate
+candidate vod=2862622285 youtube=muxOFHGOpZs score=0.654 state=candidate
+candidate vod=2862622285 youtube=7GBn3uVeVb8 score=0.651 state=candidate
+candidate vod=2862622285 youtube=iEZOwN5xssU score=0.632 state=candidate
+candidate vod=2862622285 youtube=nH8X1jAyoeQ score=0.584 state=candidate
+candidate vod=2862622285 youtube=nOj-aeb7haY score=0.451 state=candidate
+candidate vod=2862622285 youtube=6yZE6Xr2BZ0 score=0.445 state=candidate
+candidate vod=2863504919 youtube=Plcc-06LY-A score=0.589 state=candidate
+candidate vod=2863504919 youtube=XR0-lJLW_rs score=0.587 state=candidate
+candidate vod=2863504919 youtube=QcJ0mjcA62k score=0.581 state=candidate
+candidate vod=2863504919 youtube=_Q-dV2V2g5s score=0.580 state=candidate
+candidate vod=2863504919 youtube=fSMIJVnlB_Y score=0.576 state=candidate
+candidate vod=2863504919 youtube=1CuVhBjs3ns score=0.439 state=candidate
+candidate vod=2863504919 youtube=1wACf-7QBE8 score=0.435 state=candidate
+candidate vod=2863504919 youtube=mAp9CNpgnhg score=0.396 state=candidate
+candidate vod=2864229186 youtube=TEHaNIT7eZs score=0.489 state=candidate
+candidate vod=2864229186 youtube=favxANUu9O4 score=0.487 state=candidate
+candidate vod=2864229186 youtube=OKO05-GPKyI score=0.486 state=candidate
+candidate vod=2864229186 youtube=XR0-lJLW_rs score=0.469 state=candidate
+candidate vod=2864229186 youtube=Plcc-06LY-A score=0.468 state=candidate
+candidate vod=2864229186 youtube=QcJ0mjcA62k score=0.460 state=candidate
+candidate vod=2864229186 youtube=_Q-dV2V2g5s score=0.459 state=candidate
+candidate vod=2864229186 youtube=fSMIJVnlB_Y score=0.455 state=candidate
+candidate vod=2865097583 youtube=Plcc-06LY-A score=0.584 state=candidate
+candidate vod=2865097583 youtube=XR0-lJLW_rs score=0.581 state=candidate
+candidate vod=2865097583 youtube=TEHaNIT7eZs score=0.576 state=candidate
+candidate vod=2865097583 youtube=QcJ0mjcA62k score=0.557 state=candidate
+candidate vod=2865097583 youtube=_Q-dV2V2g5s score=0.552 state=candidate
+candidate vod=2865097583 youtube=favxANUu9O4 score=0.549 state=candidate
+candidate vod=2865097583 youtube=OKO05-GPKyI score=0.545 state=candidate
+candidate vod=2865097583 youtube=fSMIJVnlB_Y score=0.530 state=candidate
+candidate vod=2868004694 youtube=Plcc-06LY-A score=0.676 state=candidate
+candidate vod=2868004694 youtube=QcJ0mjcA62k score=0.669 state=candidate
+candidate vod=2868004694 youtube=_Q-dV2V2g5s score=0.667 state=candidate
+candidate vod=2868004694 youtube=TEHaNIT7eZs score=0.660 state=candidate
+candidate vod=2868004694 youtube=favxANUu9O4 score=0.658 state=candidate
+candidate vod=2868004694 youtube=OKO05-GPKyI score=0.658 state=candidate
+candidate vod=2868004694 youtube=XR0-lJLW_rs score=0.656 state=candidate
+candidate vod=2868004694 youtube=fSMIJVnlB_Y score=0.639 state=candidate
+candidate vod=2868864059 youtube=Plcc-06LY-A score=0.654 state=candidate
+candidate vod=2868864059 youtube=QcJ0mjcA62k score=0.646 state=candidate
+candidate vod=2868864059 youtube=_Q-dV2V2g5s score=0.645 state=candidate
+candidate vod=2868864059 youtube=TEHaNIT7eZs score=0.640 state=candidate
+candidate vod=2868864059 youtube=XR0-lJLW_rs score=0.639 state=candidate
+candidate vod=2868864059 youtube=favxANUu9O4 score=0.638 state=candidate
+candidate vod=2868864059 youtube=OKO05-GPKyI score=0.637 state=candidate
+candidate vod=2868864059 youtube=fSMIJVnlB_Y score=0.616 state=candidate
+candidate vod=2869682753 youtube=Plcc-06LY-A score=0.623 state=candidate
+candidate vod=2869682753 youtube=QcJ0mjcA62k score=0.616 state=candidate
+candidate vod=2869682753 youtube=_Q-dV2V2g5s score=0.615 state=candidate
+candidate vod=2869682753 youtube=XR0-lJLW_rs score=0.614 state=candidate
+candidate vod=2869682753 youtube=TEHaNIT7eZs score=0.611 state=candidate
+candidate vod=2869682753 youtube=favxANUu9O4 score=0.610 state=candidate
+candidate vod=2869682753 youtube=OKO05-GPKyI score=0.609 state=candidate
+candidate vod=2869682753 youtube=fSMIJVnlB_Y score=0.583 state=candidate
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist https://www.youtube.com/watch?v=SynOBrPYbV0
+audio fetch: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2861744268.%(ext)s https://www.twitch.tv/videos/2861744268
+70MiB at  448.68KiB/s ETA 00:04 (frag 2586/2591)
+[download]  99.8% of ~ 640.76MiB at  448.68KiB/s ETA 00:04 (frag 2586/2591)
+[download]  99.8% of ~ 640.89MiB at  448.68KiB/s ETA 00:04 (frag 2586/2591)
+[download]  99.8% of ~ 640.89MiB at  448.68KiB/s ETA 00:04 (frag 2587/2591)
+[download]  99.8% of ~ 640.64MiB at  473.09KiB/s ETA 00:04 (frag 2587/2591)
+[download]  99.8% of ~ 640.64MiB at  473.09KiB/s ETA 00:04 (frag 2587/2591)
+[download]  99.8% of ~ 640.64MiB at  473.09KiB/s ETA 00:04 (frag 2587/2591)
+[download]  99.8% of ~ 640.64MiB at  473.09KiB/s ETA 00:04 (frag 2587/2591)
+[download]  99.8% of ~ 640.65MiB at  473.09KiB/s ETA 00:04 (frag 2587/2591)
+[download]  99.9% of ~ 640.67MiB at  473.09KiB/s ETA 00:04 (frag 2587/2591)
+[download]  99.9% of ~ 640.70MiB at  473.09KiB/s ETA 00:04 (frag 2587/2591)
+[download]  99.9% of ~ 640.76MiB at  473.09KiB/s ETA 00:04 (frag 2587/2591)
+[download]  99.8% of ~ 640.88MiB at  473.09KiB/s ETA 00:04 (frag 2588/2591)
+[download]  99.9% of ~ 640.64MiB at  484.16KiB/s ETA 00:04 (frag 2588/2591)
+[download]  99.9% of ~ 640.64MiB at  484.16KiB/s ETA 00:04 (frag 2588/2591)
+[download]  99.9% of ~ 640.64MiB at  484.16KiB/s ETA 00:04 (frag 2588/2591)
+[download]  99.9% of ~ 640.64MiB at  484.16KiB/s ETA 00:04 (frag 2588/2591)
+[download]  99.9% of ~ 640.65MiB at  498.68KiB/s ETA 00:03 (frag 2588/2591)
+[download]  99.9% of ~ 640.67MiB at  498.68KiB/s ETA 00:03 (frag 2588/2591)
+[download]  99.9% of ~ 640.70MiB at  500.89KiB/s ETA 00:03 (frag 2588/2591)
+[download]  99.9% of ~ 640.76MiB at  508.79KiB/s ETA 00:03 (frag 2588/2591)
+[download]  99.9% of ~ 640.88MiB at  508.79KiB/s ETA 00:03 (frag 2589/2591)
+[download]  99.9% of ~ 640.63MiB at  506.39KiB/s ETA 00:03 (frag 2589/2591)
+[download]  99.9% of ~ 640.64MiB at  506.39KiB/s ETA 00:03 (frag 2589/2591)
+[download]  99.9% of ~ 640.64MiB at  506.39KiB/s ETA 00:03 (frag 2589/2591)
+[download]  99.9% of ~ 640.64MiB at  506.39KiB/s ETA 00:03 (frag 2589/2591)
+[download]  99.9% of ~ 640.65MiB at  506.39KiB/s ETA 00:03 (frag 2589/2591)
+[download]  99.9% of ~ 640.67MiB at  506.39KiB/s ETA 00:03 (frag 2589/2591)
+[download]  99.9% of ~ 640.70MiB at  506.39KiB/s ETA 00:03 (frag 2589/2591)
+[download]  99.9% of ~ 640.76MiB at  506.39KiB/s ETA 00:03 (frag 2589/2591)
+[download]  99.9% of ~ 640.88MiB at  506.39KiB/s ETA 00:03 (frag 2590/2591)
+[download] 100.0% of ~ 640.63MiB at  507.74KiB/s ETA 00:02 (frag 2590/2591)
+[download] 100.0% of ~ 640.63MiB at  507.74KiB/s ETA 00:02 (frag 2590/2591)
+[download] 100.0% of ~ 640.64MiB at  507.74KiB/s ETA 00:02 (frag 2590/2591)
+[download] 100.0% of ~ 640.64MiB at  507.74KiB/s ETA 00:02 (frag 2590/2591)
+[download] 100.0% of ~ 640.65MiB at  507.74KiB/s ETA 00:02 (frag 2590/2591)
+[download] 100.0% of ~ 640.66MiB at  507.74KiB/s ETA 00:02 (frag 2590/2591)
+[download] 100.0% of ~ 640.69MiB at  507.74KiB/s ETA 00:02 (frag 2590/2591)
+[download] 100.0% of ~ 640.76MiB at  507.74KiB/s ETA 00:02 (frag 2590/2591)
+[download] 100.0% of ~ 640.88MiB at  507.74KiB/s ETA 00:02 (frag 2591/2591)
+[download] 100.0% of ~ 640.63MiB at  529.11KiB/s ETA 00:02 (frag 2591/2591)
+[download] 100.0% of ~ 640.64MiB at  529.11KiB/s ETA 00:02 (frag 2591/2591)
+[download] 100.0% of ~ 640.64MiB at  529.11KiB/s ETA 00:02 (frag 2591/2591)
+[download] 100.0% of ~ 640.65MiB at  529.11KiB/s ETA 00:02 (frag 2591/2591)
+[download] 100.0% of ~ 640.66MiB at  537.47KiB/s ETA 00:02 (frag 2591/2591)
+[download] 100.0% of ~ 640.69MiB at  537.47KiB/s ETA 00:02 (frag 2591/2591)
+[download] 100.0% of ~ 640.70MiB at  537.47KiB/s ETA 00:02 (frag 2591/2591)
+[download] 100.0% of ~ 640.70MiB at  537.47KiB/s ETA 00:02 (frag 2592/2591)
+[download] 100% of  640.70MiB in 00:21:52 at 500.02KiB/s                   
+WARNING: Unable to extract metadata: ffprobe not found. Please install or provide the path using --ffmpeg-location
+[FixupM3u8] Fixing MPEG-TS in MP4 container of "K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2861744268.mp4"
+
+audio fetch: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\yt-SynOBrPYbV0-a0.%(ext)s --download-sections *905.500-933.500 --force-keyframes-at-cuts https://www.youtube.com/watch?v=SynOBrPYbV0
+[youtube] Extracting URL: https://www.youtube.com/watch?v=SynOBrPYbV0
+[youtube] SynOBrPYbV0: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] SynOBrPYbV0: Downloading visionos player API JSON
+[youtube] SynOBrPYbV0: Downloading m3u8 information
+[info] SynOBrPYbV0: Downloading 1 format(s): 251
+[info] SynOBrPYbV0: Downloading 1 time ranges: 905.5-933.5
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\yt-SynOBrPYbV0-a0.webm
+[tcp @ 0000023235ea8cc0] Connection to tcp://rr1---sn-u0moxucg-4xjl.googlevideo.com:443 failed: Error number -138 occurred
+[in#0 @ 0000023235ea66c0] Error opening input: Error number -138 occurred
+Error opening input file https://rr1---sn-u0moxucg-4xjl.googlevideo.com/videoplayback?expire=1789036850&ei=0jSiaqSvEvue-LAPyPq94Aw&ip=186.195.1.150&id=o-AI33XRtJvFvjnxlZlEWZU1cilhldA2hWqFiUza1LiXQI&itag=251&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=609&met=1789015250%2C&mh=eJ&mm=18%2C29&mn=sn-u0moxucg-4xjl%2Csn-bg0s7nls&ms=aub%2Crdu&mv=m&mvi=1&pl=24&rms=aub%2Caub&initcwndbps=1763500&bui=AR3QkAk2MLtmbsEQDw_uy8vOCzctooL0TkHNB0bXVaXygmIPjfzYYmPJyT48740su2C1PX1enjfwgKjK&spc=I-rgIW1xG1A6TNSHZ3k0bcz8aCdUYstYX-HGOMqC30fcd7Sbd67CHuHV7w&vprv=1&svpuc=1&mime=audio%2Fwebm&rqh=1&gir=yes&clen=144213191&dur=9194.861&lmt=1788316825932353&mt=1789014778&fvip=1&keepalive=yes&fexp=51565115%2C52135441%2C52178456&c=VISIONOS&txp=3308224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AE0s2JYwRQIhALrsIScKtCyH5nBwAztefagoXrCmHwR8wsTYKCz7vbCJAiB0SElJU-sDb7L2BZepR1gm1rsFfsDlAoQJwtk6VWPPaA%3D%3D&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRgIhAJ6HF4UdAp58F-1OCOs0ilLjWaUDCB8Nmkx19IUN820FAiEA_8efbsCpXdzsZq4PHlfkdWBXUDeEpv1miJxGFo-PslU%3D.
+Error opening input files: Error number -138 occurred
+
+
+ERROR: ffmpeg exited with code 4294967158
+
+
+verify skipped/failed: yt-dlp audio fetch failed with code 1: audio%2Fwebm&rqh=1&gir=yes&clen=144213191&dur=9194.861&lmt=1788316825932353&mt=1789014778&fvip=1&keepalive=yes&fexp=51565115%2C52135441%2C52178456&c=VISIONOS&txp=3308224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AE0s2JYwRQIhALrsIScKtCyH5nBwAztefagoXrCmHwR8wsTYKCz7vbCJAiB0SElJU-sDb7L2BZepR1gm1rsFfsDlAoQJwtk6VWPPaA%3D%3D&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRgIhAJ6HF4UdAp58F-1OCOs0ilLjWaUDCB8Nmkx19IUN820FAiEA_8efbsCpXdzsZq4PHlfkdWBXUDeEpv1miJxGFo-PslU%3D.
+Error opening input files: Error number -138 occurred
+
+
+ERROR: ffmpeg exited with code 4294967158
+
+
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist https://www.youtube.com/watch?v=vt1HbScE_jM
+audio fetch: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\yt-vt1HbScE_jM-a0.%(ext)s --download-sections *835.900-863.900 --force-keyframes-at-cuts https://www.youtube.com/watch?v=vt1HbScE_jM
+24&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AE0s2JYwRQIhANM6y3jPlOKfgtG0piu-YE1svcwE1iWy7IAL9aaGwQXCAiAja8F0YIZrQoWXNlLTUKhzqmYqxdv6LrcR5qy87KdnLw%3D%3D&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRQIgf6inM1OUHG9qPptKlbQsXGZMvO033IPk85zDL7tKzx0CIQC7WDRUgHClYRhW66MljejLvs4V1FeU4P2sskv0iMT6Ow%3D%3D':
+  Metadata:
+    encoder         : google/video-file
+  Duration: 02:21:38.52, start: -0.007000, bitrate: 124 kb/s
+  Stream #0:0(eng): Audio: opus, 48000 Hz, stereo, fltp, start -0.007000 (default)
+Stream mapping:
+  Stream #0:0 -> #0:0 (opus (native) -> opus (libopus))
+Press [q] to stop, [?] for help
+[libopus @ 0000021e182e3680] No bit rate set. Defaulting to 96000 bps.
+Output #0, webm, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\yt-vt1HbScE_jM-a0.webm.part':
+  Metadata:
+    encoder         : Lavf62.3.100
+  Stream #0:0(eng): Audio: opus, 48000 Hz, stereo, flt, 96 kb/s (default)
+    Metadata:
+      encoder         : Lavc62.11.100 libopus
+size=       0KiB time=00:00:00.45 bitrate=   8.7kbits/s speed=0.147x elapsed=0:00:03.08    
+size=       0KiB time=00:00:01.49 bitrate=   2.6kbits/s speed=0.415x elapsed=0:00:03.60    
+size=       0KiB time=00:00:02.55 bitrate=   1.5kbits/s speed=0.62x elapsed=0:00:04.11    
+size=       0KiB time=00:00:02.55 bitrate=   1.5kbits/s speed=0.551x elapsed=0:00:04.63    
+size=       0KiB time=00:00:03.59 bitrate=   1.1kbits/s speed=0.698x elapsed=0:00:05.14    
+size=       0KiB time=00:00:04.63 bitrate=   0.9kbits/s speed=0.818x elapsed=0:00:05.66    
+size=      57KiB time=00:00:05.69 bitrate=  82.2kbits/s speed=0.922x elapsed=0:00:06.17    
+size=      57KiB time=00:00:06.73 bitrate=  69.5kbits/s speed=1.01x elapsed=0:00:06.69    
+size=      57KiB time=00:00:07.79 bitrate=  60.0kbits/s speed=1.08x elapsed=0:00:07.20    
+size=      57KiB time=00:00:08.85 bitrate=  52.9kbits/s speed=1.15x elapsed=0:00:07.72    
+size=     113KiB time=00:00:10.93 bitrate=  84.7kbits/s speed=1.33x elapsed=0:00:08.23    
+size=     113KiB time=00:00:10.93 bitrate=  84.7kbits/s speed=1.25x elapsed=0:00:08.75    
+size=     113KiB time=00:00:11.95 bitrate=  77.5kbits/s speed=1.29x elapsed=0:00:09.27    
+size=     113KiB time=00:00:13.01 bitrate=  71.2kbits/s speed=1.33x elapsed=0:00:09.78    
+size=     113KiB time=00:00:14.05 bitrate=  65.9kbits/s speed=1.36x elapsed=0:00:10.30    
+size=     170KiB time=00:00:15.13 bitrate=  91.9kbits/s speed= 1.4x elapsed=0:00:10.81    
+size=     170KiB time=00:00:16.19 bitrate=  85.8kbits/s speed=1.43x elapsed=0:00:11.33    
+size=     170KiB time=00:00:17.25 bitrate=  80.6kbits/s speed=1.46x elapsed=0:00:11.84    
+size=     170KiB time=00:00:18.27 bitrate=  76.1kbits/s speed=1.48x elapsed=0:00:12.36    
+size=     170KiB time=00:00:19.31 bitrate=  72.0kbits/s speed= 1.5x elapsed=0:00:12.88    
+size=     226KiB time=00:00:20.37 bitrate=  90.8kbits/s speed=1.52x elapsed=0:00:13.39    
+size=     226KiB time=00:00:21.45 bitrate=  86.2kbits/s speed=1.54x elapsed=0:00:13.91    
+size=     226KiB time=00:00:22.55 bitrate=  82.0kbits/s speed=1.56x elapsed=0:00:14.42    
+size=     226KiB time=00:00:23.59 bitrate=  78.4kbits/s speed=1.58x elapsed=0:00:14.94    
+size=     226KiB time=00:00:24.59 bitrate=  75.2kbits/s speed=1.59x elapsed=0:00:15.45    
+size=     256KiB time=00:00:25.65 bitrate=  81.7kbits/s speed=1.61x elapsed=0:00:15.97    
+size=     256KiB time=00:00:26.65 bitrate=  78.7kbits/s speed=1.62x elapsed=0:00:16.49    
+size=     256KiB time=00:00:27.69 bitrate=  75.7kbits/s speed=1.63x elapsed=0:00:17.00    
+[out#0/webm @ 0000021e181e1cc0] video:0KiB audio:308KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 3.327994%
+size=     318KiB time=00:00:28.00 bitrate=  93.1kbits/s speed=1.63x elapsed=0:00:17.18    
+
+[download] 100% of  318.12KiB in 00:00:17 at 17.80KiB/s
+
+anchor 1: yt=835.9s twitch=8184.0s similarity=0.7671
+audio fetch: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\yt-vt1HbScE_jM-a1.%(ext)s --download-sections *3045.640-3073.640 --force-keyframes-at-cuts https://www.youtube.com/watch?v=vt1HbScE_jM
+vprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AE0s2JYwRQIge-b23_t9tO41Xu4ic0j3Ncvj-T8k04ctf60VF-wI6OYCIQCI4JOSGEZSOSYX4kPIB4NqAAxMTrj98ULl_NW4qWOzjw%3D%3D&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRAIgPJ7cuRdk6EibB0v_51CKnQ2zWFqaKLNOY3K9fnRBo_ECIGhVlMIadBuYVN82LWk1wC757NK97CabZ_-tDhrHq75m':
+  Metadata:
+    encoder         : google/video-file
+  Duration: 02:21:38.52, start: -0.007000, bitrate: 124 kb/s
+  Stream #0:0(eng): Audio: opus, 48000 Hz, stereo, fltp, start -0.007000 (default)
+Stream mapping:
+  Stream #0:0 -> #0:0 (opus (native) -> opus (libopus))
+Press [q] to stop, [?] for help
+[libopus @ 000001ead2964a00] No bit rate set. Defaulting to 96000 bps.
+Output #0, webm, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\yt-vt1HbScE_jM-a1.webm.part':
+  Metadata:
+    encoder         : Lavf62.3.100
+  Stream #0:0(eng): Audio: opus, 48000 Hz, stereo, flt, 96 kb/s (default)
+    Metadata:
+      encoder         : Lavc62.11.100 libopus
+size=       0KiB time=00:00:00.57 bitrate=   6.9kbits/s speed=0.185x elapsed=0:00:03.09    
+size=       0KiB time=00:00:01.63 bitrate=   2.4kbits/s speed=0.453x elapsed=0:00:03.60    
+size=       0KiB time=00:00:02.53 bitrate=   1.6kbits/s speed=0.614x elapsed=0:00:04.12    
+size=       0KiB time=00:00:03.63 bitrate=   1.1kbits/s speed=0.783x elapsed=0:00:04.63    
+size=       0KiB time=00:00:04.61 bitrate=   0.9kbits/s speed=0.895x elapsed=0:00:05.15    
+size=      57KiB time=00:00:05.61 bitrate=  83.4kbits/s speed=0.99x elapsed=0:00:05.67    
+size=      57KiB time=00:00:06.67 bitrate=  70.2kbits/s speed=1.08x elapsed=0:00:06.18    
+size=      57KiB time=00:00:07.73 bitrate=  60.6kbits/s speed=1.15x elapsed=0:00:06.70    
+size=      57KiB time=00:00:08.63 bitrate=  54.2kbits/s speed= 1.2x elapsed=0:00:07.21    
+size=      57KiB time=00:00:09.59 bitrate=  48.8kbits/s speed=1.24x elapsed=0:00:07.73    
+size=     114KiB time=00:00:10.59 bitrate=  88.5kbits/s speed=1.28x elapsed=0:00:08.24    
+size=     114KiB time=00:00:11.57 bitrate=  81.0kbits/s speed=1.32x elapsed=0:00:08.76    
+size=     114KiB time=00:00:12.59 bitrate=  74.4kbits/s speed=1.36x elapsed=0:00:09.27    
+size=     114KiB time=00:00:13.63 bitrate=  68.8kbits/s speed=1.39x elapsed=0:00:09.79    
+size=     114KiB time=00:00:14.63 bitrate=  64.1kbits/s speed=1.42x elapsed=0:00:10.31    
+size=     173KiB time=00:00:15.57 bitrate=  90.8kbits/s speed=1.44x elapsed=0:00:10.82    
+size=     173KiB time=00:00:15.57 bitrate=  90.8kbits/s speed=1.37x elapsed=0:00:11.34    
+size=     173KiB time=00:00:16.57 bitrate=  85.3kbits/s speed= 1.4x elapsed=0:00:11.85    
+size=     173KiB time=00:00:18.51 bitrate=  76.4kbits/s speed= 1.5x elapsed=0:00:12.37    
+size=     173KiB time=00:00:19.49 bitrate=  72.6kbits/s speed=1.51x elapsed=0:00:12.88    
+size=     233KiB time=00:00:20.49 bitrate=  93.3kbits/s speed=1.53x elapsed=0:00:13.40    
+size=     233KiB time=00:00:21.43 bitrate=  89.2kbits/s speed=1.54x elapsed=0:00:13.91    
+size=     233KiB time=00:00:22.39 bitrate=  85.4kbits/s speed=1.55x elapsed=0:00:14.43    
+size=     233KiB time=00:00:22.39 bitrate=  85.4kbits/s speed= 1.5x elapsed=0:00:14.95    
+size=     233KiB time=00:00:23.29 bitrate=  82.1kbits/s speed=1.51x elapsed=0:00:15.46    
+size=     233KiB time=00:00:24.21 bitrate=  79.0kbits/s speed=1.51x elapsed=0:00:15.98    
+size=     256KiB time=00:00:25.13 bitrate=  83.4kbits/s speed=1.52x elapsed=0:00:16.49    
+size=     256KiB time=00:00:26.05 bitrate=  80.5kbits/s speed=1.53x elapsed=0:00:17.01    
+size=     256KiB time=00:00:27.03 bitrate=  77.6kbits/s speed=1.54x elapsed=0:00:17.52    
+[out#0/webm @ 000001ead259ec00] video:0KiB audio:325KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 3.156258%
+size=     335KiB time=00:00:28.00 bitrate=  98.0kbits/s speed=1.54x elapsed=0:00:18.22    
+
+[download] 100% of  334.87KiB in 00:00:18 at 17.76KiB/s
+
+anchor 2: yt=3045.6s twitch=20038.0s similarity=0.7525
+audio fetch: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\yt-vt1HbScE_jM-a2.%(ext)s --download-sections *5425.360-5453.360 --force-keyframes-at-cuts https://www.youtube.com/watch?v=vt1HbScE_jM
+vzpZbqfLS-Vp2YkDw&vprv=1&svpuc=1&mime=audio%2Fwebm&rqh=1&gir=yes&clen=132001207&dur=8498.521&lmt=1787976550478662&mt=1789014778&fvip=2&keepalive=yes&fexp=51565116%2C52135441&c=VISIONOS&txp=3308224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AE0s2JYwRAIgL0Nqzc4LtyvhNWs8wn-xkZ7Fes5iawl5EhPHzDOXr40CIEUnfGTa6RRI-nItCpj7OKGOkQMK1poGP3IsrNSjUThW&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRgIhALHHnDQSu1rAB6UndI_skD9PN8FSKfBEPIVQ2P7DFSk5AiEArRWKfBJ-nLeG7A1mtDRXXVtRhDQBZmTjnmK7k4gqVro%3D':
+  Metadata:
+    encoder         : google/video-file
+  Duration: 02:21:38.52, start: -0.007000, bitrate: 124 kb/s
+  Stream #0:0(eng): Audio: opus, 48000 Hz, stereo, fltp, start -0.007000 (default)
+Stream mapping:
+  Stream #0:0 -> #0:0 (opus (native) -> opus (libopus))
+Press [q] to stop, [?] for help
+[libopus @ 0000024404e84a00] No bit rate set. Defaulting to 96000 bps.
+Output #0, webm, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\yt-vt1HbScE_jM-a2.webm.part':
+  Metadata:
+    encoder         : Lavf62.3.100
+  Stream #0:0(eng): Audio: opus, 48000 Hz, stereo, flt, 96 kb/s (default)
+    Metadata:
+      encoder         : Lavc62.11.100 libopus
+size=       0KiB time=00:00:00.73 bitrate=   5.4kbits/s speed=0.238x elapsed=0:00:03.08    
+size=       0KiB time=00:00:01.77 bitrate=   2.2kbits/s speed=0.493x elapsed=0:00:03.59    
+size=       0KiB time=00:00:02.89 bitrate=   1.4kbits/s speed=0.704x elapsed=0:00:04.11    
+size=       0KiB time=00:00:04.03 bitrate=   1.0kbits/s speed=0.872x elapsed=0:00:04.62    
+size=      53KiB time=00:00:05.15 bitrate=  83.7kbits/s speed=   1x elapsed=0:00:05.14    
+size=      53KiB time=00:00:06.29 bitrate=  68.5kbits/s speed=1.11x elapsed=0:00:05.65    
+size=      53KiB time=00:00:07.41 bitrate=  58.2kbits/s speed= 1.2x elapsed=0:00:06.17    
+size=      53KiB time=00:00:08.47 bitrate=  50.9kbits/s speed=1.27x elapsed=0:00:06.69    
+size=      53KiB time=00:00:09.59 bitrate=  44.9kbits/s speed=1.33x elapsed=0:00:07.20    
+size=     105KiB time=00:00:10.67 bitrate=  80.8kbits/s speed=1.38x elapsed=0:00:07.72    
+size=     105KiB time=00:00:11.83 bitrate=  72.9kbits/s speed=1.44x elapsed=0:00:08.23    
+size=     105KiB time=00:00:12.85 bitrate=  67.1kbits/s speed=1.47x elapsed=0:00:08.75    
+size=     105KiB time=00:00:13.95 bitrate=  61.8kbits/s speed=1.51x elapsed=0:00:09.26    
+size=     105KiB time=00:00:14.99 bitrate=  57.5kbits/s speed=1.53x elapsed=0:00:09.78    
+size=     160KiB time=00:00:16.11 bitrate=  81.2kbits/s speed=1.56x elapsed=0:00:10.29    
+size=     160KiB time=00:00:17.13 bitrate=  76.3kbits/s speed=1.58x elapsed=0:00:10.81    
+size=     160KiB time=00:00:18.23 bitrate=  71.7kbits/s speed=1.61x elapsed=0:00:11.33    
+size=     160KiB time=00:00:19.31 bitrate=  67.7kbits/s speed=1.63x elapsed=0:00:11.84    
+size=     213KiB time=00:00:20.47 bitrate=  85.3kbits/s speed=1.66x elapsed=0:00:12.36    
+size=     213KiB time=00:00:21.57 bitrate=  80.9kbits/s speed=1.68x elapsed=0:00:12.87    
+size=     213KiB time=00:00:22.61 bitrate=  77.2kbits/s speed=1.69x elapsed=0:00:13.39    
+size=     213KiB time=00:00:23.65 bitrate=  73.8kbits/s speed= 1.7x elapsed=0:00:13.90    
+size=     213KiB time=00:00:24.73 bitrate=  70.6kbits/s speed=1.71x elapsed=0:00:14.42    
+size=     213KiB time=00:00:24.73 bitrate=  70.6kbits/s speed=1.66x elapsed=0:00:14.93    
+size=     256KiB time=00:00:26.73 bitrate=  78.4kbits/s speed=1.73x elapsed=0:00:15.45    
+size=     256KiB time=00:00:27.91 bitrate=  75.1kbits/s speed=1.75x elapsed=0:00:15.97    
+[out#0/webm @ 0000024404ac0140] video:0KiB audio:291KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 3.523170%
+size=     301KiB time=00:00:28.00 bitrate=  88.1kbits/s speed=1.71x elapsed=0:00:16.40    
+
+[download] 100% of  301.07KiB in 00:00:16 at 17.72KiB/s
+
+anchor 3: yt=5425.4s twitch=24266.0s similarity=0.7561
+audio fetch: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\yt-vt1HbScE_jM-a3.%(ext)s --download-sections *7465.120-7493.120 --force-keyframes-at-cuts https://www.youtube.com/watch?v=vt1HbScE_jM
+24&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AE0s2JYwRQIhAP_VcOO1MKgo1LYK4Kr_YyE3nfG4JH_9fceVWPLS5oXeAiBOj4AS5XrAxzK7BMPwJm3-sXlOOGoDGS9dn8VRIkrzXA%3D%3D&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRQIgZ2hx3Gozq6z4JfzJhZezyt0KITDq2IafJU4RRZ6aSrICIQDWKXp0BLngsmOkknf2w7MQEGgx7f4pULVO4bEnDtvlHA%3D%3D':
+  Metadata:
+    encoder         : google/video-file
+  Duration: 02:21:38.52, start: -0.007000, bitrate: 124 kb/s
+  Stream #0:0(eng): Audio: opus, 48000 Hz, stereo, fltp, start -0.007000 (default)
+Stream mapping:
+  Stream #0:0 -> #0:0 (opus (native) -> opus (libopus))
+Press [q] to stop, [?] for help
+[libopus @ 000002834f0cd9c0] No bit rate set. Defaulting to 96000 bps.
+Output #0, webm, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\yt-vt1HbScE_jM-a3.webm.part':
+  Metadata:
+    encoder         : Lavf62.3.100
+  Stream #0:0(eng): Audio: opus, 48000 Hz, stereo, flt, 96 kb/s (default)
+    Metadata:
+      encoder         : Lavc62.11.100 libopus
+size=       0KiB time=00:00:00.07 bitrate=  53.8kbits/s speed=0.0286x elapsed=0:00:02.56    
+size=       0KiB time=00:00:01.09 bitrate=   3.6kbits/s speed=0.354x elapsed=0:00:03.08    
+size=       0KiB time=00:00:02.17 bitrate=   1.8kbits/s speed=0.604x elapsed=0:00:03.60    
+size=       0KiB time=00:00:03.19 bitrate=   1.2kbits/s speed=0.776x elapsed=0:00:04.11    
+size=       0KiB time=00:00:04.29 bitrate=   0.9kbits/s speed=0.927x elapsed=0:00:04.63    
+size=      54KiB time=00:00:05.41 bitrate=  81.2kbits/s speed=1.05x elapsed=0:00:05.14    
+size=      54KiB time=00:00:06.47 bitrate=  67.9kbits/s speed=1.14x elapsed=0:00:05.66    
+size=      54KiB time=00:00:07.59 bitrate=  57.9kbits/s speed=1.23x elapsed=0:00:06.17    
+size=      54KiB time=00:00:08.63 bitrate=  50.9kbits/s speed=1.29x elapsed=0:00:06.69    
+size=      54KiB time=00:00:09.63 bitrate=  45.7kbits/s speed=1.34x elapsed=0:00:07.20    
+size=     110KiB time=00:00:10.67 bitrate=  84.5kbits/s speed=1.38x elapsed=0:00:07.72    
+size=     110KiB time=00:00:11.71 bitrate=  77.0kbits/s speed=1.42x elapsed=0:00:08.24    
+size=     110KiB time=00:00:12.75 bitrate=  70.7kbits/s speed=1.46x elapsed=0:00:08.75    
+size=     110KiB time=00:00:13.83 bitrate=  65.2kbits/s speed=1.49x elapsed=0:00:09.27    
+size=     110KiB time=00:00:14.85 bitrate=  60.7kbits/s speed=1.52x elapsed=0:00:09.78    
+size=     166KiB time=00:00:16.01 bitrate=  84.9kbits/s speed=1.55x elapsed=0:00:10.30    
+size=     166KiB time=00:00:16.41 bitrate=  82.8kbits/s speed=1.52x elapsed=0:00:10.81    
+size=     166KiB time=00:00:18.25 bitrate=  74.5kbits/s speed=1.61x elapsed=0:00:11.33    
+size=     166KiB time=00:00:19.33 bitrate=  70.3kbits/s speed=1.63x elapsed=0:00:11.84    
+size=     219KiB time=00:00:20.39 bitrate=  88.2kbits/s speed=1.65x elapsed=0:00:12.36    
+size=     219KiB time=00:00:21.47 bitrate=  83.7kbits/s speed=1.67x elapsed=0:00:12.88    
+size=     219KiB time=00:00:22.55 bitrate=  79.7kbits/s speed=1.68x elapsed=0:00:13.39    
+size=     219KiB time=00:00:23.13 bitrate=  77.7kbits/s speed=1.66x elapsed=0:00:13.91    
+size=     219KiB time=00:00:23.67 bitrate=  75.9kbits/s speed=1.64x elapsed=0:00:14.42    
+size=     219KiB time=00:00:24.85 bitrate=  72.3kbits/s speed=1.66x elapsed=0:00:14.94    
+size=     256KiB time=00:00:25.93 bitrate=  80.9kbits/s speed=1.68x elapsed=0:00:15.45    
+size=     256KiB time=00:00:26.93 bitrate=  77.9kbits/s speed=1.69x elapsed=0:00:15.97    
+size=     256KiB time=00:00:27.89 bitrate=  75.2kbits/s speed=1.69x elapsed=0:00:16.49    
+[out#0/webm @ 000002834efd4040] video:0KiB audio:297KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 3.448673%
+size=     307KiB time=00:00:28.00 bitrate=  89.9kbits/s speed=1.68x elapsed=0:00:16.63    
+
+[download] 100% of  307.35KiB in 00:00:17 at 17.81KiB/s
+
+anchor 4: yt=7465.1s twitch=25713.0s similarity=0.7332

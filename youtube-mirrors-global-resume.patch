@@ -1,0 +1,3313 @@
+--- a/README.md
++++ b/README.md
+@@ -11,7 +11,7 @@
+ ## Requisitos
+ 
+ - Python 3.11+
+-- Sem dependências Python obrigatórias no harness (stdlib). Mirror Resolver usa executáveis locais `yt-dlp`, `ffmpeg`, `ffprobe` e, quando disponível, um runtime `openai-whisper` isolado
++- O harness permanece majoritariamente stdlib, mas o Mirror Resolver usa **NumPy** para correlação acústica exata e rápida, além de `yt-dlp`, `ffmpeg`/`ffprobe`; recomenda **Deno >= 2.3** para o runtime JavaScript/EJS atual do YouTube e usa `faster-whisper` isolado somente como fallback textual localizado; `openai-whisper` permanece como fallback compatível
+ - Twitch ingest: [Bun](https://bun.sh/) no `PATH`; Playwright/Chromium são preparados automaticamente no primeiro scrape
+ 
+ ## Início rápido
+@@ -39,7 +39,7 @@
+ 
+ ## YouTube Mirror Resolver
+ 
+-O resolver usa metadata apenas para **gerar candidatos**; a V2 alinha transcrições Whisper Turbo e exige confirmação audiovisual localizada multi-anchor antes de `verified`. Os manifests e masters ficam em `productions/<slug>/.studio/internal/ingest/youtube/`, e downloads registrados entram em `assets.csv` como `video-source` + `sem_autorizacao_confirmada`.
++O resolver usa metadata apenas para **descobrir fontes plausíveis** e mantém a autoridade em evidência audiovisual. A fase cara é orientada por fonte: cada vídeo YouTube relevante é fingerprintado uma vez e comparado contra **todos os VODs elegíveis do streamer**, usando correlação NumPy exata em vez de uma shortlist fixa por VOD. Cada comparação é checkpointada em `assignments/`; uma nova rodada continua somente nos pares faltantes. Resultados borderline podem usar captions do YouTube e `faster-whisper` localizado como confirmação adicional, nunca como prova isolada. Os manifests e masters ficam em `productions/<slug>/.studio/internal/ingest/youtube/`, e downloads registrados entram em `assets.csv` como `video-source` + `sem_autorizacao_confirmada`.
+ 
+ ```powershell
+ python -m cstudio --root . youtube-channel-set --streamer alanzoka --name alanzoka --url https://www.youtube.com/@alanzoka
+@@ -47,7 +47,7 @@
+ python -m cstudio --root . youtube-resolve MEU-CORTE --download-verified
+ ```
+ 
+-`--no-download` bloqueia download mesmo quando o auto-download estiver habilitado. Áudios de análise são temporários; transcripts/fingerprints ficam em cache e downloads HLS/DASH usam 8 fragments concorrentes por padrão. Detalhes: `integrations/youtube.md`.
++`--no-download` bloqueia download mesmo quando o auto-download estiver habilitado. Fingerprints, metadata, captions, assignments e o áudio YouTube já adquirido para análise são reutilizados entre rodadas; `--force` é a forma explícita de invalidar essa retomada. Jobs iniciados pelo dashboard rodam em processo destacado e sobrevivem a restart do servidor. Downloads HLS/DASH usam 8 fragments concorrentes por padrão. Detalhes: `integrations/youtube.md`.
+ 
+ ## Fluxo (12 stages)
+ 
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -9,7 +9,9 @@
+ requires-python = ">=3.11"
+ license = {text = "MIT"}
+ authors = [{name = "Cuts Studio"}]
+-dependencies = []
++dependencies = [
++  "numpy>=1.26",
++]
+ 
+ [project.optional-dependencies]
+ youtube = [
+--- a/cstudio/cli.py
++++ b/cstudio/cli.py
+@@ -42,6 +42,7 @@
+     s = sub.add_parser("youtube-resolve"); s.add_argument("slug"); s.add_argument("--streamer", default=""); s.add_argument("--vod-id", default=""); s.add_argument("--refresh-index", action="store_true"); s.add_argument("--download-verified", action="store_true"); s.add_argument("--no-download", action="store_true"); s.add_argument("--no-verify", action="store_true"); s.add_argument("--force", action="store_true")
+     s = sub.add_parser("youtube-verify"); s.add_argument("slug"); s.add_argument("--vod-id", required=True); s.add_argument("--video-id", required=True); s.add_argument("--force", action="store_true")
+     s = sub.add_parser("youtube-download"); s.add_argument("slug"); s.add_argument("--vod-id", required=True); s.add_argument("--video-id", required=True); s.add_argument("--force", action="store_true")
++    s = sub.add_parser("youtube-job-worker", help=argparse.SUPPRESS); s.add_argument("slug"); s.add_argument("--job-id", required=True)
+     s = sub.add_parser("rights"); s.add_argument("slug"); s.add_argument("--asset", required=True); s.add_argument("--status", required=True); s.add_argument("--by", default=""); s.add_argument("--scope", default=""); s.add_argument("--evidence", default="")
+     s = sub.add_parser("cutlist-validate"); s.add_argument("slug")
+     s = sub.add_parser("nle-export"); s.add_argument("slug"); s.add_argument("--driver", default="davinci-resolve"); s.add_argument("--outdir", default="")
+@@ -142,6 +143,10 @@
+             rec = YR.run_job(root, args.slug, "download", vod_id=args.vod_id, video_id=args.video_id, force=args.force, command="youtube-download")
+             print(json.dumps(rec, ensure_ascii=False, indent=2))
+             return 0 if rec.get("status") == "completed" else 1
++        elif args.cmd == "youtube-job-worker":
++            from . import youtube_resolver as YR
++            rec = YR.run_persisted_job(root, args.slug, args.job_id)
++            return 0 if rec.get("status") == "completed" else 1
+         elif args.cmd == "rights":
+             from . import rights as RT
+             print(json.dumps(RT.set_asset_rights(root, args.slug, args.asset, args.status, args.by, args.scope, args.evidence), ensure_ascii=False))
+--- a/cstudio/dashboard.py
++++ b/cstudio/dashboard.py
+@@ -815,6 +815,7 @@
+     index = state["index"]
+     vods = state["vods"]
+     matches = state["matches"]
++    assignments = state.get("assignments") or []
+     latest = state.get("latest_job") or {}
+     running = latest.get("status") == "running"
+     configured = len(channels)
+@@ -839,6 +840,10 @@
+         "Resolve mirrors oficiais/permitidos de VODs Twitch com verificação audiovisual primeiro e Whisper localizado somente quando necessário — sem alterar direitos ou gates.",
+         _badge("yt-dlp pronto" if health.get("yt_dlp_available") else "yt-dlp ausente", "ok" if health.get("yt_dlp_available") else "danger") +
+         _badge("FFmpeg pronto" if health.get("ffmpeg_available") else "FFmpeg ausente", "ok" if health.get("ffmpeg_available") else "danger") +
++        _badge(
++            "Deno/EJS pronto" if health.get("deno_supported") else "Deno/EJS recomendado",
++            "ok" if health.get("deno_supported") else "warn",
++        ) +
+         transcription_badge
+     )
+     channel_rows = []
+@@ -860,8 +865,10 @@
+         '<form class="form-row resolver-channel-form" method="post" action="/action/youtube-channel-set">' + _csrf(csrf_token) + f'<input type="hidden" name="slug" value="{_e(slug)}">'
+         '<label><span>Twitch streamer</span><input name="streamer" placeholder="alanzoka" required></label><label><span>Nome do canal</span><input name="name" placeholder="alanzoka" required></label><label class="grow"><span>YouTube channel URL</span><input name="url" placeholder="https://youtube.com/@alanzoka" required></label><label><span>Channel ID</span><input name="channel_id" placeholder="opcional"></label><label><span>Whisper lang</span><input name="language" placeholder="pt / auto"></label><button class="button button-primary" type="submit">Adicionar</button></form></section>'
+         '<section class="panel resolver-control"><div class="panel-head"><div><span class="eyebrow">Operations</span><h2>Index & resolve</h2></div></div>'
+-        '<div class="metric-grid metric-grid-3">' + _metric("Index", str(index.get("videos") or 0), str(index.get("last_indexed_at") or "nunca"), "blue", "youtube") + _metric("Twitch VODs", str(len(vods)), "na produção", "purple", "twitch") + _metric("Matches", str(len(matches)), "manifests persistidos", "teal", "sync") + '</div>'
+-        f'<p class="muted-cell">Verifier: <strong>{_e(health.get("verification_provider") or "—")}</strong> · yt-dlp fragments <strong>{_e(health.get("concurrent_fragments") or 1)}</strong> · Transcript backend <strong>{_e(transcription_runtime)}</strong> · model <code>{_e(transcription_model)}</code> · languages <code>{_e(", ".join(f"{k}={v}" for k, v in (health.get("whisper_languages") or {}).items()) or "auto")}</code></p>'
++        '<div class="metric-grid metric-grid-3">' + _metric("Index", str(index.get("videos") or 0), str(index.get("last_indexed_at") or "nunca"), "blue", "youtube") + _metric("Twitch VODs", str(len(vods)), "na produção", "purple", "twitch") + _metric("Assignments", str(len(assignments)), f"{len(matches)} manifests de pares", "teal", "sync") + '</div>'
++        f'<p class="muted-cell">Verifier: <strong>{_e(health.get("verification_provider") or "—")}</strong> · matcher <strong>{_e(health.get("matcher_engine") or "stdlib-coarse")}</strong> · policy <code>{_e(health.get("verification_policy") or "—")}</code> · yt-dlp fragments <strong>{_e(health.get("concurrent_fragments") or 1)}</strong> · JS runtime <strong>{_e(health.get("deno_version") or "ausente")}</strong> · Transcript backend <strong>{_e(transcription_runtime)}</strong> · model <code>{_e(transcription_model)}</code> · languages <code>{_e(", ".join(f"{k}={v}" for k, v in (health.get("whisper_languages") or {}).items()) or "auto")}</code></p>'
++        '<p class="muted-cell"><strong>Resolve production é incremental:</strong> cada vídeo YouTube é comparado contra todos os VODs elegíveis uma vez; resultados são checkpointados por par e uma nova rodada continua somente no que falta.</p>'
++        '<p class="muted-cell">Fallback textual: <strong>captions YouTube cacheadas primeiro</strong>; faster-whisper localizado só quando captions não existem. Áudio de análise do YouTube é reaproveitado localmente após o primeiro fingerprint.</p>'
+         '<div class="resolver-command-row"><form method="post" action="/action/youtube-index">' + _csrf(csrf_token) + f'<input type="hidden" name="slug" value="{_e(slug)}"><button class="button button-ghost" type="submit"{disabled}>Refresh index</button></form>'
+         '<form method="post" action="/action/youtube-resolve">' + _csrf(csrf_token) + f'<input type="hidden" name="slug" value="{_e(slug)}"><button class="button button-primary" type="submit"{disabled}>Resolve production</button></form></div>'
+         '<form class="check-option resolver-auto" method="post" action="/action/youtube-auto-download">' + _csrf(csrf_token) + f'<input type="hidden" name="slug" value="{_e(slug)}"><input type="hidden" name="enabled" value="{"0" if state["config"].get("auto_download_verified") else "1"}"><button class="toggle-button" type="submit" aria-pressed="{"true" if state["config"].get("auto_download_verified") else "false"}"><span class="toggle-dot"></span></button><span><strong>Auto-download verified sources</strong><small>Somente estado VERIFIED; ambiguous nunca baixa automaticamente.</small></span></form>'
+--- a/cstudio/youtube_resolver.py
++++ b/cstudio/youtube_resolver.py
+@@ -13,6 +13,7 @@
+ 
+ import csv
+ import difflib
++import html
+ import json
+ import math
+ import os
+@@ -21,6 +22,7 @@
+ import statistics
+ import struct
+ import subprocess
++import sys
+ import tempfile
+ import threading
+ import time
+@@ -36,6 +38,11 @@
+ from . import pipeline as PL
+ from .security import scan_text
+ 
++try:  # Optional fast path; resolver remains functional without NumPy.
++    import numpy as _np  # type: ignore
++except Exception:  # pragma: no cover - exercised on minimal installs
++    _np = None
++
+ SCHEMA_VERSION = 2
+ MATCH_STATES = ("unmatched", "candidate", "likely", "verified", "rejected", "ambiguous")
+ STREAMER_RE = re.compile(r"^[A-Za-z0-9_]{1,40}$")
+@@ -46,10 +53,12 @@
+ # Conservative defaults. Metadata gets a candidate into the expensive verifier;
+ # it never directly establishes verified state.
+ CANDIDATE_WEIGHTS = {
+-    "channel": 0.10,
+-    "date": 0.25,
+-    "duration": 0.20,
+-    "title": 0.25,
++    # Channel membership is a hard gate when an immutable channel ID is known;
++    # it should not add a constant bonus to every row in an already scoped index.
++    "channel": 0.00,
++    "date": 0.30,
++    "duration": 0.22,
++    "title": 0.28,
+     "chapters": 0.20,
+ }
+ LIKELY_THRESHOLD = 0.70
+@@ -89,9 +98,26 @@
+ DEFAULT_FASTER_WHISPER_BATCH_SIZE = 8
+ DEFAULT_FASTER_WHISPER_COMPUTE_TYPE = "float16"
+ DEFAULT_STREAMER_LANGUAGES = {"alanzoka": "pt"}
++METADATA_CACHE_SECONDS = 7 * 24 * 60 * 60
++CAPTION_CACHE_SECONDS = 7 * 24 * 60 * 60
++AUDIO_SEARCH_BACKTRACK_SECONDS = 120.0
++AUDIO_SEARCH_FORWARD_SECONDS = 15 * 60.0
++OFFSET_BACKTRACK_TOLERANCE_SECONDS = 20.0
++OFFSET_CONTINUITY_TOLERANCE_SECONDS = 30.0
++PEAK_EXCLUSION_SECONDS = 45.0
++DEFAULT_ANALYSIS_AUDIO_CACHE_GB = 4.0
++CHROMAPRINT_SAMPLE_STRIDE = 4
++AUDIO_FINGERPRINT_PROVIDER = "ffmpeg-temporal-features-v1"
++AUDIO_VERIFIER_PROVIDER = "ffmpeg-temporal-features-v3-piecewise-offset"
++VERIFICATION_POLICY_VERSION = "global-source-assignment-v1"
++GLOBAL_DISCOVERY_MIN_SCORE = 0.45
++GLOBAL_DISCOVERY_MIN_CHAPTER_SHARED = 2
++GLOBAL_DISCOVERY_MAX_VIDEOS = 64
++GLOBAL_TEXT_PROMOTION_AUDIO_MEDIAN_MIN = 0.88
++GLOBAL_TEXT_PROMOTION_MIN_AUDIO_ANCHORS = 2
+ 
+ _LOCK = threading.RLock()
+-_RUNNING: dict[tuple[str, str], threading.Thread] = {}
++_RUNNING: dict[tuple[str, str], Any] = {}
+ # Avoid re-downloading the same large source repeatedly when an external Whisper
+ # invocation fails during one server lifetime. Restart/--force retries it.
+ _TRANSCRIPT_FAILURES: dict[tuple[str, ...], str] = {}
+@@ -99,6 +125,7 @@
+ _WHISPER_PREFLIGHTS: dict[str, dict[str, Any]] = {}
+ _FASTER_WHISPER_PREFLIGHTS: dict[str, dict[str, Any]] = {}
+ _FASTER_WHISPER_FAILURES: dict[str, str] = {}
++_DENO_STATUS: dict[str, tuple[str, bool]] = {}
+ 
+ 
+ class _TranscriptContentError(C.StudioError):
+@@ -116,7 +143,7 @@
+ 
+ def _ensure_layout(root: str, slug: str) -> str:
+     base = youtube_dir(root, slug)
+-    for rel in ("index", "fingerprints", "matches", "jobs", "logs", "media", "tmp",
++    for rel in ("index", "fingerprints", "matches", "assignments", "jobs", "logs", "media", "tmp", "metadata", "captions", "analysis-audio",
+                 os.path.join("transcripts", "twitch"), os.path.join("transcripts", "youtube")):
+         os.makedirs(os.path.join(base, rel), exist_ok=True)
+     return base
+@@ -132,7 +159,7 @@
+         "auto_download_verified": False,
+         "transcription": {
+             "enabled": True,
+-            "provider": "openai-whisper",
++            "provider": "faster-whisper",
+             # ``backend`` is the runtime selector. Existing configs that predate
+             # faster-whisper inherit ``auto`` without rewriting user settings.
+             "backend": "auto",
+@@ -164,6 +191,9 @@
+     lang_defaults = dict(tdefaults.get("language_by_streamer") or {})
+     lang_raw = traw.get("language_by_streamer") if isinstance(traw.get("language_by_streamer"), dict) else {}
+     out["transcription"]["language_by_streamer"] = {**lang_defaults, **lang_raw}
++    out["schema_version"] = SCHEMA_VERSION
++    backend_hint = str(out["transcription"].get("backend") or "auto").strip().lower()
++    out["transcription"]["provider"] = "faster-whisper" if backend_hint in {"", "auto", "faster-whisper"} else "openai-whisper"
+     return out
+ 
+ 
+@@ -276,6 +306,47 @@
+     return rows
+ 
+ 
++def _configured_channel_ids(root: str, streamer: str) -> set[str]:
++    return {
++        str(row.get("channel_id") or "")
++        for row in configured_channels(root, streamer, enabled_only=True)
++        if CHANNEL_ID_RE.fullmatch(str(row.get("channel_id") or ""))
++    }
++
++
++def _channel_allowed_for_video(root: str, streamer: str, video: dict[str, Any]) -> bool:
++    allowed = _configured_channel_ids(root, streamer)
++    actual = str(video.get("channel_id") or "")
++    # Until an immutable ID has been learned/configured we preserve the existing
++    # URL-scoped behavior. Once IDs are available, mismatches fail closed.
++    if not allowed or not CHANNEL_ID_RE.fullmatch(actual):
++        return True
++    return actual in allowed
++
++
++def _remember_channel_id(root: str, streamer: str, configured_url: str, observed_channel_id: str) -> None:
++    observed_channel_id = str(observed_channel_id or "")
++    if not CHANNEL_ID_RE.fullmatch(observed_channel_id):
++        return
++    cfg = load_config(root)
++    entry = ((cfg.get("streamers") or {}).get(streamer) or {})
++    changed = False
++    for row in list(entry.get("youtube_channels") or []):
++        if normalize_youtube_url(str(row.get("url") or "")) != normalize_youtube_url(configured_url):
++            continue
++        current = str(row.get("channel_id") or "")
++        if current and current != observed_channel_id:
++            return
++        if not current:
++            row["channel_id"] = observed_channel_id
++            row["updated_at"] = C.utc_now()
++            changed = True
++        break
++    if changed:
++        cfg["schema_version"] = SCHEMA_VERSION
++        C.write_json(config_path(root), cfg)
++
++
+ def _resolve_tool(env_name: str, executable: str, *, required: bool = True) -> str:
+     override = str(os.environ.get(env_name, "") or "").strip()
+     if override:
+@@ -304,6 +375,61 @@
+ 
+ def resolve_fpcalc(required: bool = False) -> str:
+     return _resolve_tool("CSTUDIO_FPCALC", "fpcalc", required=required)
++
++
++def resolve_deno(required: bool = False) -> str:
++    return _resolve_tool("CSTUDIO_DENO", "deno", required=required)
++
++
++def _tool_version(executable: str, *args: str) -> str:
++    if not executable:
++        return ""
++    try:
++        proc = subprocess.run(
++            [executable, *args], stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
++            text=True, encoding="utf-8", errors="replace", timeout=8, check=False,
++        )
++    except Exception:
++        return ""
++    return (proc.stdout or "").splitlines()[0].strip()[:200]
++
++
++def _deno_status(executable: str) -> tuple[str, bool]:
++    if not executable:
++        return "", False
++    with _LOCK:
++        cached = _DENO_STATUS.get(executable)
++    if cached is not None:
++        return cached
++    text = _tool_version(executable, "--version")
++    match = re.search(r"(?:deno\s+)?(\d+)\.(\d+)(?:\.(\d+))?", text, re.I)
++    version = (0, 0, 0) if not match else (int(match.group(1)), int(match.group(2)), int(match.group(3) or 0))
++    result = (text, version >= (2, 3, 0))
++    with _LOCK:
++        _DENO_STATUS[executable] = result
++    return result
++
++
++def _deno_supported(executable: str) -> bool:
++    return _deno_status(executable)[1]
++
++
++def _yt_dlp_runtime_args() -> list[str]:
++    """Use yt-dlp's recommended Deno EJS runtime when available.
++
++    yt-dlp can still execute without this flag on versions/environments that do
++    not require challenge solving, so absence remains a health degradation rather
++    than a hard failure. This keeps offline/unit workflows portable while making
++    production extraction explicit and diagnosable.
++    """
++    deno = resolve_deno(False)
++    return ["--js-runtimes", f"deno:{deno}"] if deno and _deno_supported(deno) else []
++
++
++def _yt_dlp_youtube_metadata_args() -> list[str]:
++    # Metadata-only calls do not need HLS/DASH manifests; avoiding them saves
++    # round-trips and reduces exposure to extractor changes.
++    return ["--extractor-args", "youtube:skip=hls,dash"]
+ 
+ 
+ def _candidate_whisper_homes(root: str = "") -> list[str]:
+@@ -637,11 +763,17 @@
+     model = resolve_whisper_model(root) if root else str(os.environ.get("CSTUDIO_WHISPER_MODEL") or "turbo")
+     faster_model = resolve_faster_whisper_model(root, False) if root else str(os.environ.get("CSTUDIO_FASTER_WHISPER_MODEL") or "")
+     backend = transcription_backend(root) if root else ("faster-whisper" if faster_model else ("openai-whisper" if whisper else ""))
++    deno = resolve_deno(False)
++    deno_version, deno_supported = _deno_status(deno)
+     return {
+         "yt_dlp": resolve_ytdlp(False),
+         "ffmpeg": resolve_ffmpeg(False),
+         "ffprobe": resolve_ffprobe(False),
+         "fpcalc": resolve_fpcalc(False),
++        "deno": deno,
++        "deno_version": deno_version,
++        "deno_supported": deno_supported,
++        "deno_minimum": "2.3.0",
+         "whisper": whisper,
+         "whisper_model": model,
+         "whisper_device": whisper_device(root),
+@@ -655,10 +787,16 @@
+         "ffmpeg_available": bool(resolve_ffmpeg(False)),
+         "ffprobe_available": bool(resolve_ffprobe(False)),
+         "fpcalc_available": bool(resolve_fpcalc(False)),
++        "deno_available": bool(deno),
++        "youtube_js_runtime_status": "ready" if deno_supported else "degraded",
+         "whisper_available": bool(whisper or faster_model),
+         "transcript_enabled": transcript_enabled(root) if root else True,
+         "concurrent_fragments": concurrent_fragments(),
+-        "verification_provider": "audio-first ffmpeg temporal features + localized batched Whisper on demand",
++        "analysis_audio_cache_gb": round(_analysis_audio_cache_limit_bytes() / (1024**3), 2),
++        "numpy_acceleration": bool(_np is not None),
++        "matcher_engine": "numpy-exact" if _np is not None else "stdlib-coarse",
++        "verification_policy": VERIFICATION_POLICY_VERSION,
++        "verification_provider": "global all-VOD audio assignment + piecewise offsets + localized text fallback",
+         "transcript_provider": TRANSCRIPT_PROVIDER_FASTER if backend == "faster-whisper" else TRANSCRIPT_PROVIDER,
+     }
+ 
+@@ -708,6 +846,8 @@
+     url = normalize_youtube_url(channel_url)
+     return [
+         ytdlp, "--flat-playlist", "--dump-json", "--skip-download", "--ignore-errors",
++        *_yt_dlp_runtime_args(),
++        "--extractor-args", "youtubetab:approximate_date",
+         "--playlist-end", str(max(1, int(playlist_end))), url,
+     ]
+ 
+@@ -829,6 +969,7 @@
+         if proc.returncode != 0 and not proc.stdout.strip():
+             raise C.StudioError(f"yt-dlp index failed for {channel.get('name')}: {proc.stderr[-600:]}")
+         channel_count = 0
++        observed_channel_id = ""
+         for line in proc.stdout.splitlines():
+             if not line.strip():
+                 continue
+@@ -840,9 +981,13 @@
+             row["streamer"] = streamer
+             row["configured_channel_url"] = channel["url"]
+             row["configured_channel_name"] = channel.get("name", "")
++            if not observed_channel_id and CHANNEL_ID_RE.fullmatch(str(row.get("channel_id") or "")):
++                observed_channel_id = str(row["channel_id"])
+             existing[row["video_id"]] = {**existing.get(row["video_id"], {}), **row}
+             seen.add(row["video_id"])
+             channel_count += 1
++        if observed_channel_id:
++            _remember_channel_id(root, streamer, str(channel["url"]), observed_channel_id)
+         indexed_channels.append({"name": channel.get("name"), "url": channel.get("url"), "seen": channel_count})
+     videos = sorted(existing.values(), key=_video_sort_key, reverse=True)
+     doc = {
+@@ -995,9 +1140,9 @@
+         return None
+ 
+ 
+-def _date_score(vod: dict[str, Any], video: dict[str, Any]) -> tuple[float, str]:
++def _date_score(vod: dict[str, Any], video: dict[str, Any]) -> tuple[float | None, str]:
+     a = _parse_date(vod.get("created_at")); b = _parse_date(video.get("timestamp") or video.get("upload_date"))
+-    if not a or not b: return 0.35, "date unavailable on one side"
++    if not a or not b: return None, "date unavailable on one side"
+     days = (b - a).total_seconds() / 86400.0
+     if days < -2: return 0.0, f"YouTube predates Twitch by {abs(days):.1f}d"
+     # Uploads between same-day and two weeks later are normal; decay beyond that.
+@@ -1006,10 +1151,10 @@
+     return max(0.0, min(1.0, score)), f"upload delay {days:+.1f}d"
+ 
+ 
+-def _duration_score(vod: dict[str, Any], video: dict[str, Any]) -> tuple[float, str]:
++def _duration_score(vod: dict[str, Any], video: dict[str, Any]) -> tuple[float | None, str]:
+     try: tv = float(vod.get("duration") or 0); yv = float(video.get("duration") or 0)
+-    except Exception: return 0.35, "duration unavailable"
+-    if tv <= 0 or yv <= 0: return 0.35, "duration unavailable"
++    except Exception: return None, "duration unavailable"
++    if tv <= 0 or yv <= 0: return None, "duration unavailable"
+     ratio = yv / tv
+     # Mirrors may be a subset of a VOD. Longer-than-VOD is suspicious; short subsets remain plausible.
+     if ratio > 1.15: return max(0.0, 1.0 - (ratio - 1.15) * 2.5), f"YouTube/Twitch duration ratio {ratio:.2f}"
+@@ -1029,19 +1174,42 @@
+ 
+ 
+ def score_candidate(vod: dict[str, Any], video: dict[str, Any], configured_channel: bool = True) -> dict[str, Any]:
+-    title_score = _jaccard(_tokens(str(vod.get("title") or "") + " " + str(vod.get("game") or "")), _tokens(str(video.get("title") or "")))
+-    if title_score > 0: title_score = min(1.0, 0.3 + 1.4 * title_score)
++    title_tokens = _tokens(str(video.get("title") or ""))
++    vod_title_tokens = _tokens(str(vod.get("title") or "") + " " + str(vod.get("game") or ""))
++    title_score: float | None = _jaccard(vod_title_tokens, title_tokens) if title_tokens and vod_title_tokens else None
++    if title_score is not None and title_score > 0:
++        title_score = min(1.0, 0.3 + 1.4 * title_score)
+     date_score, date_detail = _date_score(vod, video)
+     duration_score, duration_detail = _duration_score(vod, video)
+     chapter_score, chapter_detail = _chapter_score(vod, video)
+-    signals = {
+-        "channel": {"score": 1.0 if configured_channel else 0.0, "weight": CANDIDATE_WEIGHTS["channel"], "detail": "configured mirror channel" if configured_channel else "channel mismatch"},
+-        "date": {"score": round(date_score, 4), "weight": CANDIDATE_WEIGHTS["date"], "detail": date_detail},
+-        "duration": {"score": round(duration_score, 4), "weight": CANDIDATE_WEIGHTS["duration"], "detail": duration_detail},
+-        "title": {"score": round(title_score, 4), "weight": CANDIDATE_WEIGHTS["title"], "detail": "token similarity"},
+-        "chapters": {"score": round(chapter_score, 4), "weight": CANDIDATE_WEIGHTS["chapters"], "detail": chapter_detail},
++    if not (_tokens(str(video.get("title") or "") + " " + str(video.get("description") or ""))):
++        chapter_score = None
++        chapter_detail = "title/description unavailable"
++
++    raw = {
++        "channel": (1.0 if configured_channel else 0.0, "configured mirror channel" if configured_channel else "channel mismatch"),
++        "date": (date_score, date_detail),
++        "duration": (duration_score, duration_detail),
++        "title": (title_score, "token similarity" if title_score is not None else "title unavailable"),
++        "chapters": (chapter_score, chapter_detail),
+     }
+-    contributions = {k: round(v["score"] * v["weight"], 4) for k, v in signals.items()}
++    available_weight = sum(
++        CANDIDATE_WEIGHTS[key] for key, (value, _detail) in raw.items()
++        if value is not None and CANDIDATE_WEIGHTS[key] > 0
++    )
++    signals: dict[str, dict[str, Any]] = {}
++    contributions: dict[str, float] = {}
++    for key, (value, detail) in raw.items():
++        base_weight = CANDIDATE_WEIGHTS[key]
++        effective_weight = (base_weight / available_weight) if value is not None and available_weight > 0 and base_weight > 0 else 0.0
++        signals[key] = {
++            "score": round(float(value), 4) if value is not None else None,
++            "available": value is not None,
++            "weight": base_weight,
++            "effective_weight": round(effective_weight, 6),
++            "detail": detail,
++        }
++        contributions[key] = round((float(value) if value is not None else 0.0) * effective_weight, 4)
+     score = round(sum(contributions.values()), 4)
+     return {"candidate_score": score, "signals": signals, "contributions": contributions}
+ 
+@@ -1078,6 +1246,58 @@
+     return sorted(rows, key=lambda r: (str((r.get("twitch_vod_ids") or [""])[0]), -float(r.get("candidate_score") or 0)))
+ 
+ 
++def _assignment_file(root: str, slug: str, video_id: str) -> str:
++    safe_video = re.sub(r"[^A-Za-z0-9_-]", "", str(video_id))
++    return os.path.join(_ensure_layout(root, slug), "assignments", f"{safe_video}.json")
++
++
++def load_assignment(root: str, slug: str, video_id: str) -> dict[str, Any] | None:
++    return C.read_json(_assignment_file(root, slug, video_id), None)
++
++
++def save_assignment(root: str, slug: str, assignment: dict[str, Any]) -> str:
++    assignment["schema_version"] = SCHEMA_VERSION
++    assignment["policy_version"] = VERIFICATION_POLICY_VERSION
++    assignment["updated_at"] = C.utc_now()
++    path = _assignment_file(root, slug, str(assignment.get("youtube_video_id") or ""))
++    C.write_json(path, assignment)
++    return path
++
++
++def list_assignments(root: str, slug: str) -> list[dict[str, Any]]:
++    base = os.path.join(_ensure_layout(root, slug), "assignments")
++    rows: list[dict[str, Any]] = []
++    for name in os.listdir(base):
++        if not name.endswith(".json"):
++            continue
++        rec = C.read_json(os.path.join(base, name), None)
++        if isinstance(rec, dict):
++            rows.append(rec)
++    rows.sort(key=lambda r: (str(r.get("streamer") or ""), str(r.get("youtube_video_id") or "")))
++    return rows
++
++
++def _fingerprint_signature(fp: dict[str, Any] | None) -> dict[str, Any]:
++    if not isinstance(fp, dict):
++        return {}
++    return {
++        "provider": str(fp.get("provider") or ""),
++        "frames": len(fp.get("features") or []),
++        "duration_seconds": round(float(fp.get("duration_seconds") or 0.0), 3),
++    }
++
++
++def _assignment_complete_for_vods(assignment: dict[str, Any] | None, vod_ids: Iterable[str]) -> bool:
++    if not isinstance(assignment, dict):
++        return False
++    if str(assignment.get("policy_version") or "") != VERIFICATION_POLICY_VERSION:
++        return False
++    if str(assignment.get("status") or "") != "completed":
++        return False
++    evaluated = {str(x) for x in (assignment.get("evaluated_vod_ids") or [])}
++    return set(map(str, vod_ids)).issubset(evaluated)
++
++
+ def generate_candidates(root: str, slug: str, *, streamer: str = "", vod_id: str = "",
+                         max_candidates: int = 8, log=None) -> dict[str, Any]:
+     vods = list_twitch_vods(root, slug, streamer)
+@@ -1089,9 +1309,18 @@
+         videos = [v for v in load_index(root, slug, vod["streamer"]) if str(v.get("streamer") or vod["streamer"]) == vod["streamer"]]
+         scored = []
+         for video in videos:
++            if not _channel_allowed_for_video(root, vod["streamer"], video):
++                if log:
++                    log.write(
++                        f"candidate hard gate: skip youtube={video.get('video_id')} "
++                        f"channel_id={video.get('channel_id') or 'unknown'} not in configured channel IDs\n"
++                    )
++                continue
+             ds, _ = _date_score(vod, video)
+-            # Cheap prefilter: very stale videos do not enter full scoring.
+-            if ds <= 0.02: continue
++            # Cheap prefilter: only a known and clearly impossible date rejects.
++            # Missing date remains neutral and is resolved by later metadata.
++            if ds is not None and ds <= 0.02:
++                continue
+             rec = score_candidate(vod, video, configured_channel=True)
+             scored.append((rec["candidate_score"], video, rec))
+         scored.sort(key=lambda x: x[0], reverse=True)
+@@ -1101,6 +1330,12 @@
+             prior = load_match(root, slug, vod["vod_id"], video["video_id"]) or {}
+             prior_state = str(prior.get("state") or "")
+             if prior_state in {"verified", "rejected"}:
++                state = prior_state
++            elif (
++                prior.get("global_assignment")
++                and str((prior.get("verification") or {}).get("policy_version") or "") == VERIFICATION_POLICY_VERSION
++                and prior_state in {"likely", "ambiguous"}
++            ):
+                 state = prior_state
+             elif rank <= 2 and ambiguous_top:
+                 state = "ambiguous"
+@@ -1117,7 +1352,7 @@
+                 "state": state,
+                 "candidate_score": score,
+                 "candidate_evidence": evidence,
+-                "verification": prior.get("verification") or {"mode": "pending", "providers": {"metadata": "complete", "audio": "pending", "transcript": "pending"}, "transcript": {"method": TRANSCRIPT_ALIGNMENT_PROVIDER, "anchors": []}, "audio": {"method": "ffmpeg-temporal-features-v2", "anchors": []}},
++                "verification": prior.get("verification") or {"mode": "pending", "providers": {"metadata": "complete", "audio": "pending", "transcript": "pending"}, "transcript": {"method": TRANSCRIPT_ALIGNMENT_PROVIDER, "anchors": []}, "audio": {"method": AUDIO_VERIFIER_PROVIDER, "anchors": []}},
+                 "timeline_segments": prior.get("timeline_segments") or [],
+                 "download": prior.get("download") or {"status": "not_downloaded", "path": ""},
+                 "rights_status": "sem_autorizacao_confirmada",
+@@ -1132,7 +1367,10 @@
+ def enrich_video_metadata(video: dict[str, Any], *, log=None) -> dict[str, Any]:
+     ytdlp = resolve_ytdlp()
+     url = str(video.get("url") or f"https://www.youtube.com/watch?v={video.get('video_id','')}")
+-    cmd = [ytdlp, "--dump-single-json", "--skip-download", "--no-playlist", *_ffmpeg_location_args(), url]
++    cmd = [
++        ytdlp, "--dump-single-json", "--skip-download", "--no-playlist",
++        *_yt_dlp_runtime_args(), *_yt_dlp_youtube_metadata_args(), *_ffmpeg_location_args(), url,
++    ]
+     if log: log.write(f"metadata: {_display_cmd(cmd)}\n"); log.flush()
+     proc = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding="utf-8", errors="replace", check=False)
+     if proc.returncode != 0:
+@@ -1142,8 +1380,151 @@
+     return {**video, **normalize_ytdlp_entry(raw, {"name": video.get("channel_name"), "channel_id": video.get("channel_id")})}
+ 
+ 
++def _metadata_cache_file(root: str, slug: str, video_id: str) -> str:
++    safe = re.sub(r"[^A-Za-z0-9_-]", "", str(video_id))
++    return os.path.join(_ensure_layout(root, slug), "metadata", f"{safe}.json")
++
++
++def _cache_age_seconds(record: dict[str, Any]) -> float:
++    stamp = _parse_date(record.get("fetched_at") or record.get("created_at") or record.get("indexed_at"))
++    if not stamp:
++        return float("inf")
++    return max(0.0, (datetime.now(timezone.utc) - stamp).total_seconds())
++
++
++def enrich_video_metadata_cached(root: str, slug: str, video: dict[str, Any], *, force: bool = False, log=None) -> dict[str, Any]:
++    video_id = str(video.get("video_id") or "")
++    if not VIDEO_ID_RE.fullmatch(video_id):
++        return enrich_video_metadata(video, log=log)
++    path = _metadata_cache_file(root, slug, video_id)
++    cached = C.read_json(path, None) if os.path.isfile(path) and not force else None
++    if isinstance(cached, dict) and isinstance(cached.get("video"), dict) and _cache_age_seconds(cached) <= METADATA_CACHE_SECONDS:
++        merged = {**video, **dict(cached["video"])}
++        streamer = str(merged.get("streamer") or "").strip().lower()
++        configured_url = str(merged.get("configured_channel_url") or "")
++        if streamer and configured_url and CHANNEL_ID_RE.fullmatch(str(merged.get("channel_id") or "")):
++            _remember_channel_id(root, streamer, configured_url, str(merged["channel_id"]))
++        if log:
++            log.write(f"metadata cache hit: youtube/{video_id} age={_cache_age_seconds(cached):.0f}s\n")
++            log.flush()
++        return merged
++    enriched = enrich_video_metadata(video, log=log)
++    streamer = str(enriched.get("streamer") or video.get("streamer") or "").strip().lower()
++    configured_url = str(enriched.get("configured_channel_url") or video.get("configured_channel_url") or "")
++    if streamer and configured_url and CHANNEL_ID_RE.fullmatch(str(enriched.get("channel_id") or "")):
++        _remember_channel_id(root, streamer, configured_url, str(enriched["channel_id"]))
++    C.write_json(path, {
++        "schema_version": SCHEMA_VERSION,
++        "provider": "yt-dlp-metadata-v2",
++        "video_id": video_id,
++        "fetched_at": C.utc_now(),
++        "video": enriched,
++    })
++    return enriched
++
++
+ def _audio_cache_file(root: str, slug: str, vod_id: str) -> str:
+     return os.path.join(_ensure_layout(root, slug), "fingerprints", f"twitch-{vod_id}.features.json")
++
++
++def _analysis_audio_cached(root: str, slug: str, source_kind: str, source_id: str) -> str:
++    base = Path(_ensure_layout(root, slug)) / "analysis-audio"
++    safe = re.sub(r"[^A-Za-z0-9_-]", "", str(source_id))
++    prefix = f"{source_kind}-{safe}."
++    rows = [
++        str(p) for p in base.iterdir()
++        if p.is_file() and p.name.startswith(prefix) and not p.name.endswith((".part", ".ytdl", ".json"))
++    ] if base.is_dir() else []
++    if not rows:
++        return ""
++    chosen = max(rows, key=os.path.getmtime)
++    try:
++        os.utime(chosen, None)  # true LRU: successful reuse refreshes recency
++    except OSError:
++        pass
++    return chosen
++
++
++def _is_analysis_audio_path(root: str, slug: str, path: str) -> bool:
++    if not path:
++        return False
++    try:
++        base = os.path.abspath(os.path.join(_ensure_layout(root, slug), "analysis-audio"))
++        candidate = os.path.abspath(path)
++        return os.path.commonpath([base, candidate]) == base
++    except (ValueError, OSError):
++        return False
++
++
++def _analysis_audio_cache_limit_bytes() -> int:
++    raw = str(os.environ.get("CSTUDIO_YOUTUBE_ANALYSIS_CACHE_GB", DEFAULT_ANALYSIS_AUDIO_CACHE_GB) or DEFAULT_ANALYSIS_AUDIO_CACHE_GB)
++    try:
++        gb = max(0.25, min(100.0, float(raw)))
++    except ValueError:
++        gb = DEFAULT_ANALYSIS_AUDIO_CACHE_GB
++    return int(gb * 1024 * 1024 * 1024)
++
++
++def _prune_analysis_audio_cache(root: str, slug: str, *, keep: str = "", log=None) -> None:
++    base = Path(_ensure_layout(root, slug)) / "analysis-audio"
++    if not base.is_dir():
++        return
++    rows = [p for p in base.iterdir() if p.is_file() and not p.name.endswith((".part", ".ytdl", ".json"))]
++    total = sum(p.stat().st_size for p in rows)
++    limit = _analysis_audio_cache_limit_bytes()
++    keep_abs = os.path.abspath(keep) if keep else ""
++    for path in sorted(rows, key=lambda p: p.stat().st_mtime):
++        if total <= limit:
++            break
++        if keep_abs and os.path.abspath(str(path)) == keep_abs:
++            continue
++        try:
++            size = path.stat().st_size
++            path.unlink()
++            total -= size
++            if log:
++                log.write(f"analysis audio cache prune: removed={path.name} bytes={size}\n")
++                log.flush()
++        except OSError:
++            continue
++
++
++def _persist_youtube_analysis_audio(root: str, slug: str, video_id: str, audio_path: str, *, log=None) -> str:
++    """Keep the already-downloaded YouTube bestaudio for cheap local clipping.
++
++    Twitch HLS range fetches are already fast in the observed workload, while
++    YouTube section seeks were the dominant localized-transcript cost. Persisting
++    only YouTube analysis audio avoids a multi-GB Twitch cache and adds no second
++    transcode/decode pass. The cache is technical evidence only, never a master.
++    """
++    if not audio_path or not os.path.isfile(audio_path):
++        return ""
++    base = Path(_ensure_layout(root, slug)) / "analysis-audio"
++    base.mkdir(parents=True, exist_ok=True)
++    safe = re.sub(r"[^A-Za-z0-9_-]", "", str(video_id))
++    suffix = Path(audio_path).suffix or ".audio"
++    dest = base / f"youtube-{safe}{suffix}"
++    if os.path.abspath(audio_path) != os.path.abspath(str(dest)):
++        for old in base.glob(f"youtube-{safe}.*"):
++            if old == dest:
++                continue
++            try:
++                old.unlink()
++            except OSError:
++                pass
++        try:
++            os.replace(audio_path, dest)
++        except OSError:
++            shutil.copy2(audio_path, dest)
++            try:
++                os.remove(audio_path)
++            except OSError:
++                pass
++    if log:
++        log.write(f"analysis audio cached: youtube/{video_id} path={dest.name}\n")
++        log.flush()
++    _prune_analysis_audio_cache(root, slug, keep=str(dest), log=log)
++    return str(dest)
+ 
+ 
+ def _download_audio(url: str, out_template: str, *, section: tuple[float, float] | None = None, log=None,
+@@ -1160,7 +1541,7 @@
+         "--newline", "--progress", "--progress-delta", "1",
+         "--progress-template",
+         "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s",
+-        *_ffmpeg_location_args(),
++        *_yt_dlp_runtime_args(), *_ffmpeg_location_args(),
+         "-f", "ba", "-o", out_template,
+     ]
+     if section:
+@@ -1215,6 +1596,24 @@
+     return [rms, zero, diff]
+ 
+ 
++def _frame_feature_numpy(data: bytes) -> list[float]:
++    """Vectorized equivalent of ``_frame_feature`` for decoded s16le PCM."""
++    if _np is None:
++        count = len(data) // 2
++        return _frame_feature(struct.unpack("<" + "h" * count, data[:count * 2]))
++    samples = _np.frombuffer(data, dtype="<i2").astype(_np.float64, copy=False)
++    n = int(samples.size)
++    if n < 8:
++        return [0.0, 0.0, 0.0]
++    rms = math.log1p(math.sqrt(float(_np.mean(samples * samples))))
++    signs = samples >= 0
++    zero = float(_np.count_nonzero(signs[1:] != signs[:-1])) / max(1, n - 1)
++    lag = 8
++    delta = samples[lag:] - samples[:-lag]
++    diff = math.log1p(math.sqrt(float(_np.mean(delta * delta))))
++    return [rms, zero, diff]
++
++
+ def extract_audio_features(media_path: str, *, start: float = 0.0, duration: float | None = None) -> list[list[float]]:
+     ffmpeg = resolve_ffmpeg()
+     cmd = [ffmpeg, "-v", "error"]
+@@ -1231,8 +1630,12 @@
+         if not data: break
+         if len(data) < bytes_per_frame // 2: break
+         count = len(data) // 2
+-        samples = struct.unpack("<" + "h" * count, data[:count*2])
+-        features.append(_frame_feature(samples))
++        raw = data[:count * 2]
++        if _np is not None:
++            features.append(_frame_feature_numpy(raw))
++        else:
++            samples = struct.unpack("<" + "h" * count, raw)
++            features.append(_frame_feature(samples))
+     stderr = proc.stderr.read().decode("utf-8", errors="replace") if proc.stderr else ""
+     rc = proc.wait()
+     if rc != 0:
+@@ -1265,23 +1668,121 @@
+     return round(max(0.0, min(1.0, (raw + 1.0) / 2.0)), 4)
+ 
+ 
+-def match_feature_window(query: list[list[float]], target: list[list[float]], *, step_frames: int = 2,
+-                         min_start: int = 0, max_start: int | None = None) -> tuple[int, float]:
++def _match_feature_window_details_numpy(query: list[list[float]], target: list[list[float]], *,
++                                        min_start: int = 0, max_start: int | None = None) -> dict[str, Any]:
++    """Exact normalized cross-correlation for all candidate frames.
++
++    The legacy matcher sampled every N frames and refined only around the coarse
++    winner. Narrow true peaks could therefore be skipped entirely. NumPy lets us
++    evaluate every 0.5 s frame much faster while preserving the same three-feature
++    weighted correlation semantics.
++    """
++    assert _np is not None
+     qn = len(query)
+-    if qn < 8 or len(target) < qn: return 0, 0.0
++    if qn < 8 or len(target) < qn:
++        return {"start_frame": 0, "similarity": 0.0, "second_best": 0.0, "peak_margin": 0.0,
++                "evaluated": 0, "engine": "numpy-exact"}
++    max_valid = len(target) - qn
++    lo = max(0, int(min_start))
++    hi = max_valid if max_start is None else min(int(max_start), max_valid)
++    if hi < lo:
++        return {"start_frame": lo, "similarity": 0.0, "second_best": 0.0, "peak_margin": 0.0,
++                "evaluated": 0, "engine": "numpy-exact"}
++
++    q = _np.asarray(query, dtype=_np.float32)
++    # Include qn-1 look-ahead samples so mode='valid' yields one score per
++    # candidate start in [lo, hi].
++    t = _np.asarray(target[lo:hi + qn], dtype=_np.float32)
++    scores_raw = _np.zeros(hi - lo + 1, dtype=_np.float32)
++    weights = (0.62, 0.16, 0.22)
++    for col, weight in enumerate(weights):
++        qc = q[:, col]
++        qmean = float(qc.mean())
++        qstd = float(qc.std())
++        if qstd < 1e-9:
++            continue
++        qnorm = (qc - qmean) / qstd
++        tc = t[:, col]
++        csum = _np.concatenate((_np.array([0.0], dtype=_np.float64), _np.cumsum(tc, dtype=_np.float64)))
++        csum2 = _np.concatenate((_np.array([0.0], dtype=_np.float64), _np.cumsum(tc * tc, dtype=_np.float64)))
++        sums = csum[qn:] - csum[:-qn]
++        sums2 = csum2[qn:] - csum2[:-qn]
++        means = sums / qn
++        variances = _np.maximum(0.0, sums2 / qn - means * means)
++        stds = _np.sqrt(variances)
++        dots = _np.correlate(tc, qnorm, mode="valid")
++        corr = _np.divide(
++            dots,
++            qn * stds,
++            out=_np.zeros_like(dots, dtype=_np.float64),
++            where=stds > 1e-9,
++        )
++        scores_raw += float(weight) * _np.clip(corr, -1.0, 1.0).astype(_np.float32)
++
++    similarities = _np.clip((scores_raw + 1.0) / 2.0, 0.0, 1.0)
++    best_local = int(_np.argmax(similarities))
++    best = float(similarities[best_local])
++    exclusion = max(1, int(PEAK_EXCLUSION_SECONDS / FRAME_SECONDS))
++    mask = _np.ones(similarities.shape[0], dtype=bool)
++    mask[max(0, best_local - exclusion + 1):min(len(mask), best_local + exclusion)] = False
++    second = float(similarities[mask].max()) if bool(mask.any()) else 0.0
++    best = max(0.0, round(best, 4))
++    second = max(0.0, round(second, 4))
++    return {
++        "start_frame": lo + best_local,
++        "similarity": best,
++        "second_best": second,
++        "peak_margin": round(max(0.0, best - second), 4),
++        "evaluated": int(similarities.size),
++        "engine": "numpy-exact",
++    }
++
++
++def match_feature_window_details(query: list[list[float]], target: list[list[float]], *, step_frames: int = 2,
++                                 min_start: int = 0, max_start: int | None = None) -> dict[str, Any]:
++    if _np is not None:
++        return _match_feature_window_details_numpy(
++            query, target, min_start=min_start, max_start=max_start,
++        )
++    qn = len(query)
++    if qn < 8 or len(target) < qn:
++        return {"start_frame": 0, "similarity": 0.0, "second_best": 0.0, "peak_margin": 0.0, "evaluated": 0}
+     hi = len(target) - qn if max_start is None else min(int(max_start), len(target)-qn)
+     lo = max(0, int(min_start))
++    if hi < lo:
++        return {"start_frame": lo, "similarity": 0.0, "second_best": 0.0, "peak_margin": 0.0, "evaluated": 0}
++    step = max(1, int(step_frames))
++    scored: list[tuple[float, int]] = []
+     best_i = lo; best = -1.0
+-    for i in range(lo, hi + 1, max(1, int(step_frames))):
++    for i in range(lo, hi + 1, step):
+         score = feature_similarity(query, target[i:i+qn])
++        scored.append((score, i))
+         if score > best:
+             best_i, best = i, score
+     # Refine around the coarse winner frame-by-frame.
+-    lo2 = max(lo, best_i - max(2, step_frames*2)); hi2 = min(hi, best_i + max(2, step_frames*2))
++    lo2 = max(lo, best_i - max(2, step*2)); hi2 = min(hi, best_i + max(2, step*2))
+     for i in range(lo2, hi2 + 1):
+         score = feature_similarity(query, target[i:i+qn])
+-        if score > best: best_i, best = i, score
+-    return best_i, max(0.0, round(best, 4))
++        scored.append((score, i))
++        if score > best:
++            best_i, best = i, score
++    exclusion = max(1, int(PEAK_EXCLUSION_SECONDS / FRAME_SECONDS))
++    second = max((score for score, frame in scored if abs(frame-best_i) >= exclusion), default=0.0)
++    best = max(0.0, round(best, 4))
++    second = max(0.0, round(second, 4))
++    return {
++        "start_frame": best_i, "similarity": best, "second_best": second,
++        "peak_margin": round(max(0.0, best-second), 4), "evaluated": len(scored),
++        "engine": "stdlib-coarse",
++    }
++
++
++def match_feature_window(query: list[list[float]], target: list[list[float]], *, step_frames: int = 2,
++                         min_start: int = 0, max_start: int | None = None) -> tuple[int, float]:
++    details = match_feature_window_details(
++        query, target, step_frames=step_frames, min_start=min_start, max_start=max_start,
++    )
++    return int(details["start_frame"]), float(details["similarity"])
+ 
+ 
+ 
+@@ -1289,6 +1790,162 @@
+ def _youtube_audio_cache_file(root: str, slug: str, video_id: str) -> str:
+     safe = re.sub(r"[^A-Za-z0-9_-]", "", str(video_id))
+     return os.path.join(_ensure_layout(root, slug), "fingerprints", f"youtube-{safe}.features.json")
++
++
++def _chromaprint_cache_file(root: str, slug: str, source_kind: str, source_id: str) -> str:
++    safe = re.sub(r"[^A-Za-z0-9_-]", "", str(source_id))
++    return os.path.join(_ensure_layout(root, slug), "fingerprints", f"{source_kind}-{safe}.chromaprint.json")
++
++
++def _normalize_chromaprint_values(value: Any) -> list[int]:
++    if isinstance(value, list):
++        rows = value
++    elif isinstance(value, str):
++        rows = [x.strip() for x in value.strip().strip("[]").split(",") if x.strip()]
++    else:
++        rows = []
++    out: list[int] = []
++    for item in rows:
++        try:
++            out.append(int(item) & 0xFFFFFFFF)
++        except (TypeError, ValueError):
++            continue
++    return out
++
++
++def _build_chromaprint(media_path: str, source_kind: str, source_id: str, *, log=None) -> dict[str, Any] | None:
++    fpcalc = resolve_fpcalc(False)
++    if not fpcalc or not media_path or not os.path.isfile(media_path):
++        return None
++    cmd = [fpcalc, "-json", "-raw", media_path]
++    if log:
++        log.write(f"chromaprint shadow: {_display_cmd(cmd)}\n")
++        log.flush()
++    proc = subprocess.run(
++        cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
++        encoding="utf-8", errors="replace", check=False,
++    )
++    if proc.returncode != 0:
++        if log:
++            log.write(f"chromaprint shadow unavailable: {(proc.stderr or '')[-500:]}\n")
++            log.flush()
++        return None
++    try:
++        raw = json.loads(proc.stdout)
++    except Exception:
++        return None
++    values = _normalize_chromaprint_values(raw.get("fingerprint"))
++    if not values:
++        return None
++    try:
++        duration = float(raw.get("duration") or 0.0)
++    except (TypeError, ValueError):
++        duration = 0.0
++    frame_seconds = (duration / len(values)) if duration > 0 else 0.1238
++    return {
++        "schema_version": SCHEMA_VERSION,
++        "provider": "chromaprint-fpcalc-shadow-v1",
++        "source_kind": source_kind,
++        "source_id": str(source_id),
++        "created_at": C.utc_now(),
++        "duration_seconds": round(duration, 3),
++        "frame_seconds": round(frame_seconds, 8),
++        "fingerprint": values,
++    }
++
++
++def _ensure_chromaprint(root: str, slug: str, source_kind: str, source_id: str, media_path: str = "", *, force: bool = False, log=None) -> dict[str, Any] | None:
++    path = _chromaprint_cache_file(root, slug, source_kind, source_id)
++    cached = C.read_json(path, None) if os.path.isfile(path) and not force else None
++    if isinstance(cached, dict) and cached.get("provider") == "chromaprint-fpcalc-shadow-v1" and cached.get("fingerprint"):
++        return cached
++    built = _build_chromaprint(media_path, source_kind, source_id, log=log)
++    if built:
++        C.write_json(path, built)
++    return built
++
++
++def _chromaprint_similarity(query: list[int], target: list[int], *, stride: int = CHROMAPRINT_SAMPLE_STRIDE) -> float:
++    n = min(len(query), len(target))
++    if n < 12:
++        return 0.0
++    step = max(1, int(stride))
++    bits = 0
++    count = 0
++    for i in range(0, n, step):
++        bits += ((int(query[i]) ^ int(target[i])) & 0xFFFFFFFF).bit_count()
++        count += 1
++    if not count:
++        return 0.0
++    return round(max(0.0, min(1.0, 1.0 - bits / (32.0 * count))), 4)
++
++
++def _match_chromaprint_window(query: list[int], target: list[int], *, min_start: int = 0, max_start: int | None = None) -> tuple[int, float]:
++    qn = len(query)
++    if qn < 12 or len(target) < qn:
++        return 0, 0.0
++    lo = max(0, int(min_start))
++    hi = len(target)-qn if max_start is None else min(len(target)-qn, int(max_start))
++    if hi < lo:
++        return lo, 0.0
++    coarse = max(2, CHROMAPRINT_SAMPLE_STRIDE * 2)
++    best_i = lo
++    best = -1.0
++    for i in range(lo, hi+1, coarse):
++        score = _chromaprint_similarity(query, target[i:i+qn])
++        if score > best:
++            best_i, best = i, score
++    for i in range(max(lo, best_i-coarse), min(hi, best_i+coarse)+1):
++        score = _chromaprint_similarity(query, target[i:i+qn], stride=2)
++        if score > best:
++            best_i, best = i, score
++    return best_i, max(0.0, round(best, 4))
++
++
++def _chromaprint_shadow_anchors(duration: float, youtube_cp: dict[str, Any] | None, twitch_cp: dict[str, Any] | None) -> dict[str, Any]:
++    if not isinstance(youtube_cp, dict) or not isinstance(twitch_cp, dict):
++        return {"provider": "chromaprint-fpcalc-shadow-v1", "status": "unavailable", "anchors": []}
++    yf = _normalize_chromaprint_values(youtube_cp.get("fingerprint"))
++    tf = _normalize_chromaprint_values(twitch_cp.get("fingerprint"))
++    try:
++        ystep = float(youtube_cp.get("frame_seconds") or 0.1238)
++        tstep = float(twitch_cp.get("frame_seconds") or 0.1238)
++    except (TypeError, ValueError):
++        return {"provider": "chromaprint-fpcalc-shadow-v1", "status": "invalid", "anchors": []}
++    if not yf or not tf or ystep <= 0 or tstep <= 0:
++        return {"provider": "chromaprint-fpcalc-shadow-v1", "status": "unavailable", "anchors": []}
++    anchors: list[dict[str, Any]] = []
++    last_twitch = 0
++    for idx, yt_start in enumerate(_anchor_times(duration)):
++        y0 = max(0, int(yt_start/ystep))
++        qn = max(12, int(ANCHOR_SECONDS/ystep))
++        query = yf[y0:y0+qn]
++        if len(query) < 12:
++            continue
++        if idx == 0 or not anchors:
++            frame, score = _match_chromaprint_window(query, tf)
++        else:
++            delta = yt_start - float(anchors[-1]["youtube_time"])
++            predicted = last_twitch + int(max(0.0, delta)/tstep)
++            lo = max(0, predicted-int(AUDIO_SEARCH_BACKTRACK_SECONDS/tstep))
++            hi = min(max(0, len(tf)-len(query)), predicted+int(AUDIO_SEARCH_FORWARD_SECONDS/tstep))
++            frame, score = _match_chromaprint_window(query, tf, min_start=lo, max_start=hi)
++            if score < 0.70:
++                frame, score = _match_chromaprint_window(query, tf, min_start=max(0, last_twitch))
++        last_twitch = frame
++        anchors.append({
++            "youtube_time": round(yt_start, 3),
++            "twitch_time": round(frame*tstep, 3),
++            "similarity": score,
++        })
++    scores = [float(a.get("similarity") or 0.0) for a in anchors]
++    return {
++        "provider": "chromaprint-fpcalc-shadow-v1",
++        "status": "complete" if anchors else "unavailable",
++        "anchors": anchors,
++        "median_similarity": round(statistics.median(scores), 4) if scores else 0.0,
++        "authority": False,
++    }
+ 
+ 
+ def _transcript_file(root: str, slug: str, source_kind: str, source_id: str) -> str:
+@@ -1296,6 +1953,175 @@
+         raise C.StudioError("invalid transcript source kind")
+     safe = re.sub(r"[^A-Za-z0-9_-]", "", str(source_id))
+     return os.path.join(_ensure_layout(root, slug), "transcripts", source_kind, f"{safe}.json")
++
++
++def _caption_cache_file(root: str, slug: str, video_id: str) -> str:
++    safe = re.sub(r"[^A-Za-z0-9_-]", "", str(video_id))
++    return os.path.join(_ensure_layout(root, slug), "captions", f"{safe}.captions.json")
++
++
++def _parse_vtt_time(value: str) -> float:
++    text = str(value or "").strip().split()[0]
++    parts = text.replace(",", ".").split(":")
++    try:
++        if len(parts) == 3:
++            h, m, sec = parts
++            return float(h) * 3600 + float(m) * 60 + float(sec)
++        if len(parts) == 2:
++            m, sec = parts
++            return float(m) * 60 + float(sec)
++    except ValueError:
++        return 0.0
++    return 0.0
++
++
++def _parse_webvtt(path: str, *, video_id: str, language: str = "") -> dict[str, Any]:
++    lines = Path(path).read_text(encoding="utf-8", errors="replace").splitlines()
++    segments: list[dict[str, Any]] = []
++    i = 0
++    previous_full = ""
++    while i < len(lines):
++        line = lines[i].strip()
++        if "-->" not in line:
++            i += 1
++            continue
++        left, right = line.split("-->", 1)
++        start = _parse_vtt_time(left)
++        end = _parse_vtt_time(right)
++        i += 1
++        text_lines: list[str] = []
++        while i < len(lines) and lines[i].strip():
++            text_lines.append(lines[i].strip())
++            i += 1
++        raw_text = " ".join(text_lines)
++        clean_full = html.unescape(re.sub(r"<[^>]+>", "", raw_text))
++        clean_full = re.sub(r"\s+", " ", clean_full).strip()
++        if not clean_full or clean_full == previous_full or end <= start:
++            continue
++        # YouTube auto-captions may emit cumulative cues. Compare against the
++        # previous *full* cue, not the previously emitted suffix, otherwise the
++        # third and later cumulative cues can duplicate text.
++        clean = clean_full
++        if previous_full and clean_full.startswith(previous_full) and len(clean_full) > len(previous_full):
++            clean = clean_full[len(previous_full):].strip() or clean_full
++        previous_full = clean_full
++        segments.append({"start": round(start, 3), "end": round(end, 3), "text": clean, "words": []})
++    full_text = " ".join(str(x.get("text") or "") for x in segments).strip()
++    return {
++        "schema_version": TRANSCRIPT_SCHEMA_VERSION,
++        "provider": "yt-dlp-youtube-captions-v1",
++        "source_kind": "youtube",
++        "source_id": str(video_id),
++        "language": language or "unknown",
++        "timestamp_mode": "segment",
++        "scope": "full",
++        "created_at": C.utc_now(),
++        "duration_seconds": max((float(x.get("end") or 0) for x in segments), default=0.0),
++        "segment_count": len(segments),
++        "text": full_text,
++        "segments": segments,
++        "word_count": len(full_text.split()),
++        "untrusted": True,
++        "injection_findings": scan_text(full_text[:20000]),
++    }
++
++
++def _youtube_caption_transcript(root: str, slug: str, video_id: str, url: str, *, streamer: str = "", log=None, force: bool = False) -> dict[str, Any] | None:
++    """Return cached YouTube captions, preferring them over audio transcription.
++
++    A negative result is cached as well so borderline candidates do not repeatedly
++    query the same video. This is evidence only; it never clears rights or creates
++    VERIFIED without the acoustic policy.
++    """
++    cache_path = _caption_cache_file(root, slug, video_id)
++    cached = C.read_json(cache_path, None) if os.path.isfile(cache_path) and not force else None
++    if isinstance(cached, dict) and _cache_age_seconds(cached) <= CAPTION_CACHE_SECONDS:
++        transcript = cached.get("transcript")
++        if log:
++            log.write(
++                f"caption cache hit: youtube/{video_id} status={cached.get('status') or 'unknown'} "
++                f"age={_cache_age_seconds(cached):.0f}s\n"
++            )
++            log.flush()
++        return dict(transcript) if isinstance(transcript, dict) and transcript.get("segments") else None
++
++    language = whisper_language(root, streamer) or "auto"
++    # With no language hint we cannot reliably choose among YouTube's original,
++    # translated and auto-generated tracks. Skip this optimization rather than
++    # compare text in the wrong language; Whisper auto-detection remains fallback.
++    if language == "auto":
++        record = {
++            "schema_version": SCHEMA_VERSION,
++            "provider": "yt-dlp-youtube-captions-v1",
++            "video_id": video_id,
++            "fetched_at": C.utc_now(),
++            "status": "skipped_auto_language",
++            "language_requested": "auto",
++            "return_code": None,
++            "error": "caption lookup skipped because transcription language is auto",
++            "transcript": None,
++        }
++        C.write_json(cache_path, record)
++        return None
++    ytdlp = resolve_ytdlp()
++    sub_pattern = f"{language}.*, {language}".replace(" ", "")
++    base = os.path.join(_ensure_layout(root, slug), "captions")
++    safe = re.sub(r"[^A-Za-z0-9_-]", "", str(video_id))
++    out_template = os.path.join(base, f"{safe}.%(ext)s")
++    # Clear stale temporary subtitle files while preserving the normalized cache.
++    for stale in Path(base).glob(f"{safe}.*.vtt"):
++        try:
++            stale.unlink()
++        except OSError:
++            pass
++    cmd = [
++        ytdlp, "--skip-download", "--no-playlist", "--ignore-errors",
++        "--write-subs", "--write-auto-subs", "--sub-langs", sub_pattern, "--sub-format", "vtt",
++        "--no-write-info-json", *_yt_dlp_runtime_args(), *_yt_dlp_youtube_metadata_args(),
++        "-o", out_template, url,
++    ]
++    if log:
++        log.write(f"youtube captions: {_display_cmd(cmd)}\n")
++        log.flush()
++    proc = subprocess.run(
++        cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
++        encoding="utf-8", errors="replace", check=False,
++    )
++    files = sorted(Path(base).glob(f"{safe}.*.vtt"), key=lambda x: (f".{language}.vtt" not in x.name, len(x.name)))
++    transcript: dict[str, Any] | None = None
++    if files:
++        chosen = files[0]
++        lang_match = re.match(re.escape(safe) + r"\.(.+)\.vtt$", chosen.name)
++        detected_language = lang_match.group(1) if lang_match else language
++        try:
++            parsed = _parse_webvtt(str(chosen), video_id=video_id, language=detected_language)
++            if parsed.get("segments"):
++                transcript = parsed
++        finally:
++            for item in files:
++                try:
++                    item.unlink()
++                except OSError:
++                    pass
++    record = {
++        "schema_version": SCHEMA_VERSION,
++        "provider": "yt-dlp-youtube-captions-v1",
++        "video_id": video_id,
++        "fetched_at": C.utc_now(),
++        "status": "available" if transcript else "unavailable",
++        "language_requested": language,
++        "return_code": proc.returncode,
++        "error": (proc.stderr or "")[-900:] if proc.returncode else "",
++        "transcript": transcript,
++    }
++    C.write_json(cache_path, record)
++    if log:
++        log.write(
++            f"youtube captions result: video={video_id} status={record['status']} "
++            f"segments={len((transcript or {}).get('segments') or [])}\n"
++        )
++        log.flush()
++    return transcript
+ 
+ 
+ def resolve_whisper_python(root: str = "", required: bool = False) -> str:
+@@ -1879,7 +2705,7 @@
+ def _fingerprint_record(source_kind: str, source_id: str, features: list[list[float]]) -> dict[str, Any]:
+     return {
+         "schema_version": SCHEMA_VERSION,
+-        "provider": "ffmpeg-temporal-features-v1",
++        "provider": AUDIO_FINGERPRINT_PROVIDER,
+         "source_kind": source_kind,
+         "source_id": str(source_id),
+         "frame_seconds": FRAME_SECONDS,
+@@ -1913,6 +2739,13 @@
+             log.flush()
+         transcript = None
+     fp = C.read_json(fp_path, None) if os.path.isfile(fp_path) and not force else None
++    cached_analysis_audio = _analysis_audio_cached(root, slug, source_kind, source_id) if source_kind == "youtube" and not force else ""
++    chromaprint_path = _chromaprint_cache_file(root, slug, source_kind, source_id)
++    chromaprint = C.read_json(chromaprint_path, None) if os.path.isfile(chromaprint_path) and not force else None
++    if not isinstance(chromaprint, dict) and cached_analysis_audio and resolve_fpcalc(False):
++        chromaprint = _ensure_chromaprint(
++            root, slug, source_kind, source_id, cached_analysis_audio, force=force, log=log,
++        )
+     failure_key = (
+         _abs_root(root), str(slug), str(source_kind), str(source_id), str(streamer or ""),
+         whisper_language(root, streamer) or "auto",
+@@ -1953,15 +2786,17 @@
+             )
+             log.flush()
+         return {
+-            "transcript": transcript, "fingerprint": fp, "cache_hit": True,
+-            "transcript_failure": prior_transcript_failure, "media_path": "",
++            "transcript": transcript, "fingerprint": fp, "chromaprint": chromaprint, "cache_hit": True,
++            "transcript_failure": prior_transcript_failure,
++            "media_path": cached_analysis_audio if keep_media and cached_analysis_audio else "",
+         }
+ 
+     base = _ensure_layout(root, slug)
+     tmpdir = os.path.join(base, "tmp")
+     os.makedirs(tmpdir, exist_ok=True)
+     template = os.path.join(tmpdir, f"{source_kind}-{source_id}.%(ext)s")
+-    audio = _download_audio(source_url, template, log=log)
++    audio = cached_analysis_audio if cached_analysis_audio and os.path.isfile(cached_analysis_audio) else _download_audio(source_url, template, log=log)
++    persistent_audio = bool(cached_analysis_audio and os.path.abspath(audio) == os.path.abspath(cached_analysis_audio))
+     try:
+         if need_transcript:
+             try:
+@@ -1993,14 +2828,21 @@
+             if log:
+                 log.write(f"audio fingerprint cached: {source_kind}/{source_id} frames={len(features)}\n")
+                 log.flush()
++        if not isinstance(chromaprint, dict) and resolve_fpcalc(False):
++            chromaprint = _ensure_chromaprint(
++                root, slug, source_kind, source_id, audio, force=force, log=log,
++            )
++        if source_kind == "youtube" and not persistent_audio and os.path.isfile(audio):
++            audio = _persist_youtube_analysis_audio(root, slug, source_id, audio, log=log) or audio
++            persistent_audio = _analysis_audio_cached(root, slug, source_kind, source_id) == audio
+     finally:
+-        if not keep_media:
++        if not keep_media and not persistent_audio:
+             try:
+                 os.remove(audio)
+             except OSError:
+                 pass
+     return {
+-        "transcript": transcript, "fingerprint": fp, "cache_hit": False,
++        "transcript": transcript, "fingerprint": fp, "chromaprint": chromaprint, "cache_hit": False,
+         "media_path": audio if keep_media and os.path.isfile(audio) else "",
+     }
+ 
+@@ -2202,7 +3044,7 @@
+ def _audio_only_anchors_from_caches(duration: float, youtube_fp: dict[str, Any], twitch_fp: dict[str, Any], *, log=None) -> list[dict[str, Any]]:
+     yf = list(youtube_fp.get("features") or [])
+     tf = list(twitch_fp.get("features") or [])
+-    anchors = []
++    anchors: list[dict[str, Any]] = []
+     last_twitch_frame = 0
+     for idx, yt_start in enumerate(_anchor_times(duration)):
+         start_frame = int(yt_start / FRAME_SECONDS)
+@@ -2210,16 +3052,48 @@
+         query = yf[start_frame:start_frame+count]
+         if not query:
+             continue
+-        if idx == 0:
+-            min_start = 0; step = 4
++        search_mode = "global"
++        if idx == 0 or not anchors:
++            details = match_feature_window_details(query, tf, step_frames=4, min_start=0)
+         else:
+-            min_start = max(0, last_twitch_frame + int((yt_start - anchors[-1]["youtube_time"]) / FRAME_SECONDS * 0.6)); step = 3
+-        frame, sim = match_feature_window(query, tf, step_frames=step, min_start=min_start)
++            delta_seconds = max(0.0, yt_start - float(anchors[-1]["youtube_time"]))
++            predicted = last_twitch_frame + int(delta_seconds / FRAME_SECONDS)
++            lo = max(0, predicted - int(AUDIO_SEARCH_BACKTRACK_SECONDS / FRAME_SECONDS))
++            hi = min(
++                max(0, len(tf)-len(query)),
++                predicted + int(AUDIO_SEARCH_FORWARD_SECONDS / FRAME_SECONDS),
++            )
++            details = match_feature_window_details(query, tf, step_frames=3, min_start=lo, max_start=hi)
++            search_mode = "predicted-window"
++            # A weak local maximum may simply mean a long removed Twitch interval.
++            # Fall back to the old broad forward search rather than losing recall.
++            if float(details.get("similarity") or 0.0) < max(0.76, ANCHOR_SIMILARITY_MIN - 0.04):
++                broad_min = max(0, last_twitch_frame + int(delta_seconds / FRAME_SECONDS * 0.5))
++                broad = match_feature_window_details(query, tf, step_frames=3, min_start=broad_min)
++                if float(broad.get("similarity") or 0.0) >= float(details.get("similarity") or 0.0):
++                    details = broad
++                    search_mode = "forward-fallback"
++        frame = int(details.get("start_frame") or 0)
++        sim = float(details.get("similarity") or 0.0)
+         last_twitch_frame = frame
+-        anchor = {"youtube_time": round(yt_start, 3), "twitch_time": round(frame * FRAME_SECONDS, 3), "similarity": sim, "method": "ffmpeg-temporal-features-v2", "duration": ANCHOR_SECONDS}
++        anchor = {
++            "youtube_time": round(yt_start, 3),
++            "twitch_time": round(frame * FRAME_SECONDS, 3),
++            "similarity": sim,
++            "second_best_similarity": float(details.get("second_best") or 0.0),
++            "peak_margin": float(details.get("peak_margin") or 0.0),
++            "search_mode": search_mode,
++            "evaluated_windows": int(details.get("evaluated") or 0),
++            "method": AUDIO_VERIFIER_PROVIDER,
++            "duration": ANCHOR_SECONDS,
++        }
+         anchors.append(anchor)
+         if log:
+-            log.write(f"audio fallback anchor {idx+1}: yt={yt_start:.1f}s twitch={anchor['twitch_time']:.1f}s similarity={sim:.4f}\n")
++            log.write(
++                f"audio fallback anchor {idx+1}: yt={yt_start:.1f}s twitch={anchor['twitch_time']:.1f}s "
++                f"similarity={sim:.4f} second={anchor['second_best_similarity']:.4f} "
++                f"margin={anchor['peak_margin']:.4f} search={search_mode}\n"
++            )
+             log.flush()
+     return anchors
+ 
+@@ -2245,10 +3119,15 @@
+         # Huge jumps indicate a removed section; preserve piecewise mapping but do not bridge absurd matches.
+         if slope > 4.0 or slope < 0.75: continue
+         conf = min(float(a["similarity"]), float(b["similarity"]))
++        offset_start = float(a["twitch_time"]) - float(a["youtube_time"])
++        offset_end = float(b["twitch_time"]) - float(b["youtube_time"])
+         segments.append({
+             "youtube_start": float(a["youtube_time"]), "youtube_end": float(b["youtube_time"]),
+             "twitch_start": float(a["twitch_time"]), "twitch_end": float(b["twitch_time"]),
+             "slope": round(slope, 5), "confidence": round(conf, 4),
++            "offset_start": round(offset_start, 3), "offset_end": round(offset_end, 3),
++            "offset_delta": round(offset_end-offset_start, 3),
++            "kind": "cut-gap" if offset_end-offset_start > OFFSET_CONTINUITY_TOLERANCE_SECONDS else "continuous",
+         })
+     return segments
+ 
+@@ -2256,15 +3135,34 @@
+ def assess_verification(anchors: list[dict[str, Any]]) -> dict[str, Any]:
+     good = [a for a in anchors if float(a.get("similarity") or 0) >= ANCHOR_SIMILARITY_MIN]
+     similarities = [float(a.get("similarity") or 0) for a in good]
+-    ordered = all(float(b["twitch_time"]) > float(a["twitch_time"]) for a,b in zip(sorted(good,key=lambda x: float(x["youtube_time"])), sorted(good,key=lambda x: float(x["youtube_time"]))[1:])) if len(good) > 1 else False
+-    slopes = []
+     ordered_good = sorted(good, key=lambda x: float(x["youtube_time"]))
++    ordered = (
++        len(ordered_good) > 1 and
++        all(float(b["twitch_time"]) > float(a["twitch_time"]) for a,b in zip(ordered_good, ordered_good[1:]))
++    )
++    slopes: list[float] = []
++    offsets = [float(a["twitch_time"]) - float(a["youtube_time"]) for a in ordered_good]
++    offset_deltas = [b-a for a,b in zip(offsets, offsets[1:])]
+     for a,b in zip(ordered_good, ordered_good[1:]):
+         yd=float(b["youtube_time"])-float(a["youtube_time"]); td=float(b["twitch_time"])-float(a["twitch_time"])
+-        if yd > 0: slopes.append(td/yd)
+-    consistent = bool(slopes) and sum(1 for s in slopes if 0.78 <= s <= 3.0) >= max(1, math.ceil(len(slopes)*0.75))
++        if yd > 0:
++            slopes.append(td/yd)
++    # For raw/near-raw uploads the mapping is naturally piecewise offset: within
++    # a contiguous region TW-YT stays stable; removed Twitch material makes the
++    # offset jump forward. Large backwards jumps are much stronger evidence of a
++    # false peak than accepting arbitrary slopes up to 3x.
++    backwards = [delta for delta in offset_deltas if delta < -OFFSET_BACKTRACK_TOLERANCE_SECONDS]
++    continuous = [delta for delta in offset_deltas if abs(delta) <= OFFSET_CONTINUITY_TOLERANCE_SECONDS]
++    forward_cuts = [delta for delta in offset_deltas if delta > OFFSET_CONTINUITY_TOLERANCE_SECONDS]
++    consistent = bool(offset_deltas) and not backwards and ordered
+     median = statistics.median(similarities) if similarities else 0.0
+-    if len(good) >= 3 and median >= VERIFY_MEDIAN_MIN and ordered and consistent:
++    margins = [float(a.get("peak_margin") or 0.0) for a in good if "peak_margin" in a]
++    median_margin = statistics.median(margins) if margins else None
++    # A raw/near-raw mirror should contain at least one adjacent anchor pair
++    # with a stable offset. Positive jumps between other pairs are allowed as
++    # removed Twitch material, but three unrelated forward peaks must not become
++    # VERIFIED merely because they happen to be ordered.
++    if len(good) >= 3 and median >= VERIFY_MEDIAN_MIN and ordered and consistent and continuous:
+         state = "verified"
+     elif len(good) >= 2 and ordered:
+         state = "likely"
+@@ -2275,8 +3173,15 @@
+     return {
+         "state": state, "good_anchors": len(good), "total_anchors": len(anchors),
+         "median_similarity": round(median, 4), "ordered": ordered,
+-        "timeline_consistency": "strong" if consistent and ordered else ("weak" if len(good) >= 2 else "insufficient"),
++        "timeline_consistency": "strong" if consistent else ("weak" if len(good) >= 2 else "insufficient"),
+         "slopes": [round(x, 4) for x in slopes],
++        "offsets": [round(x, 3) for x in offsets],
++        "offset_deltas": [round(x, 3) for x in offset_deltas],
++        "backwards_offset_jumps": [round(x, 3) for x in backwards],
++        "continuous_offset_pairs": len(continuous),
++        "forward_cut_gaps": [round(x, 3) for x in forward_cuts],
++        "median_peak_margin": round(median_margin, 4) if median_margin is not None else None,
++        "consistency_model": "piecewise-offset-v1",
+     }
+ 
+ 
+@@ -2491,6 +3396,49 @@
+ def _localized_transcript_for_source(root: str, slug: str, *, source_kind: str, source_id: str,
+                                      source_url: str, streamer: str, ranges: list[tuple[float, float]],
+                                      existing_media: str = "", log=None) -> dict[str, Any]:
++    if source_kind == "youtube":
++        captions = _youtube_caption_transcript(
++            root, slug, str(source_id), source_url, streamer=streamer, log=log,
++        )
++        if isinstance(captions, dict) and captions.get("segments"):
++            if log:
++                log.write(
++                    f"localized transcript: using YouTube captions for {source_id}; "
++                    f"Whisper/audio clip download skipped\n"
++                )
++                log.flush()
++            return captions
++
++        # Old fingerprint caches predate analysis-audio persistence. For two or
++        # more localized anchors, repeatedly seeking three/four tiny YouTube
++        # sections is commonly much slower than fetching bestaudio once. Migrate
++        # that candidate lazily into the bounded local analysis cache; if the full
++        # fetch fails, retain the previous range-download fallback below.
++        if not (existing_media and os.path.isfile(existing_media)) and len(ranges) >= 2:
++            existing_media = _analysis_audio_cached(root, slug, "youtube", str(source_id))
++            if not existing_media:
++                base = _ensure_layout(root, slug)
++                template = os.path.join(base, "tmp", f"localized-full-youtube-{source_id}.%(ext)s")
++                try:
++                    if log:
++                        log.write(
++                            f"localized transcript: warming full YouTube analysis audio for {source_id}; "
++                            f"clips={len(ranges)}\n"
++                        )
++                        log.flush()
++                    fetched = _download_audio(source_url, template, log=log)
++                    existing_media = _persist_youtube_analysis_audio(
++                        root, slug, str(source_id), fetched, log=log,
++                    ) or fetched
++                except Exception as exc:
++                    existing_media = ""
++                    if log:
++                        log.write(
++                            f"localized transcript: full YouTube audio warmup failed; "
++                            f"falling back to section downloads: {exc}\n"
++                        )
++                        log.flush()
++
+     if existing_media and os.path.isfile(existing_media):
+         if log:
+             log.write(
+@@ -2583,8 +3531,18 @@
+     if manifest.get("state") == "rejected" and not force:
+         raise C.StudioError("candidate was rejected; use --force to verify it again")
+ 
+-    video = enrich_video_metadata(dict(manifest.get("youtube") or {}), log=log)
++    video = enrich_video_metadata_cached(root, slug, dict(manifest.get("youtube") or {}), force=force, log=log)
+     manifest["youtube"] = video
++    manifest_streamer = str((manifest.get("twitch") or {}).get("streamer") or manifest.get("streamer") or video.get("streamer") or "").strip().lower()
++    if manifest_streamer and not _channel_allowed_for_video(root, manifest_streamer, video):
++        manifest["state"] = "candidate"
++        manifest["verification"] = {
++            "mode": "metadata-rejected-before-media",
++            "providers": {"metadata": "complete", "transcript": "not_run", "audio": "not_run"},
++            "reason": "YouTube channel ID does not match configured mirror channel",
++        }
++        save_match(root, slug, manifest)
++        return manifest
+     duration = float(video.get("duration") or 0)
+     if duration <= 0:
+         raise C.StudioError("YouTube duration unavailable; cannot verify candidate")
+@@ -2599,19 +3557,21 @@
+     manifest["candidate_score"] = refined["candidate_score"]
+     manifest["candidate_evidence"] = refined
+     manifest["metadata_enriched_at"] = C.utc_now()
+-    date_score = float((refined.get("signals") or {}).get("date", {}).get("score") or 0)
+-    if not force and (date_score <= 0.02 or float(refined["candidate_score"]) < 0.40):
++    date_signal = (refined.get("signals") or {}).get("date", {})
++    date_score = float(date_signal.get("score")) if date_signal.get("available") and date_signal.get("score") is not None else None
++    if not force and ((date_score is not None and date_score <= 0.02) or float(refined["candidate_score"]) < 0.40):
+         manifest["state"] = "candidate"
+         manifest["verification"] = {
+             "mode": "metadata-rejected-before-media",
+             "providers": {"metadata": "complete", "transcript": "not_run", "audio": "not_run"},
+             "transcript": {"method": LOCALIZED_TRANSCRIPT_PROVIDER, "anchors": [], "assessment": {"state": "not_run"}},
+-            "audio": {"method": "ffmpeg-temporal-features-v2", "anchors": [], "assessment": {"state": "not_run"}},
++            "audio": {"method": AUDIO_VERIFIER_PROVIDER, "anchors": [], "assessment": {"state": "not_run"}},
+             "reason": "enriched metadata fell below verification gate",
+         }
+         save_match(root, slug, manifest)
+         if log:
+-            log.write(f"metadata gate: skip media vod={vod_id} youtube={video_id} score={float(refined['candidate_score']):.3f} date={date_score:.3f}\n")
++            date_label = f"{date_score:.3f}" if date_score is not None else "unknown"
++            log.write(f"metadata gate: skip media vod={vod_id} youtube={video_id} score={float(refined['candidate_score']):.3f} date={date_label}\n")
+             log.flush()
+         return manifest
+ 
+@@ -2638,6 +3598,15 @@
+ 
+         audio_anchors = _audio_only_anchors_from_caches(duration, youtube_fp, twitch_fp, log=log)
+         audio_assessment = assess_verification(audio_anchors)
++        chromaprint_shadow = _chromaprint_shadow_anchors(
++            duration, youtube_analysis.get("chromaprint"), twitch_analysis.get("chromaprint"),
++        )
++        if log and chromaprint_shadow.get("status") == "complete":
++            log.write(
++                f"chromaprint shadow assessment: anchors={len(chromaprint_shadow.get('anchors') or [])} "
++                f"median={float(chromaprint_shadow.get('median_similarity') or 0):.4f} authority=false\n"
++            )
++            log.flush()
+         audio_state = str(audio_assessment.get("state") or "candidate")
+         mode = "audio-first"
+         state = audio_state
+@@ -2730,9 +3699,10 @@
+                 "youtube_cache": os.path.relpath(_transcript_file(root, slug, "youtube", video_id), C.prod_path(root, slug)).replace(os.sep, "/") if isinstance(youtube_transcript, dict) else "",
+             },
+             "audio": {
+-                "method": "ffmpeg-temporal-features-v2",
++                "method": AUDIO_VERIFIER_PROVIDER,
+                 "anchors": audio_anchors,
+                 "assessment": audio_assessment,
++                "chromaprint_shadow": chromaprint_shadow,
+                 "twitch_fingerprint_cache": os.path.relpath(_audio_cache_file(root, slug, vod_id), C.prod_path(root, slug)).replace(os.sep, "/"),
+                 "youtube_fingerprint_cache": os.path.relpath(_youtube_audio_cache_file(root, slug, video_id), C.prod_path(root, slug)).replace(os.sep, "/"),
+             },
+@@ -2742,7 +3712,7 @@
+         return manifest
+     finally:
+         for media in kept_media:
+-            if media:
++            if media and not _is_analysis_audio_path(root, slug, media):
+                 try:
+                     os.remove(media)
+                 except OSError:
+@@ -2772,6 +3742,17 @@
+     rec["state"] = "rejected"
+     rec["rejection"] = {"at": C.utc_now(), "reason": str(reason or "manual rejection")[:1000]}
+     save_match(root, slug, rec)
++    assignment = load_assignment(root, slug, video_id)
++    if isinstance(assignment, dict):
++        pair_results = dict(assignment.get("pair_results") or {})
++        prior_pair = dict(pair_results.get(str(vod_id)) or {})
++        prior_pair.update({"vod_id": str(vod_id), "state": "rejected", "reason": rec["rejection"]["reason"]})
++        pair_results[str(vod_id)] = prior_pair
++        assignment["pair_results"] = pair_results
++        assignment["status"] = "partial"
++        assignment["state"] = "pending"
++        assignment["primary_vod_id"] = ""
++        save_assignment(root, slug, assignment)
+     return rec
+ 
+ 
+@@ -2779,7 +3760,7 @@
+     ytdlp = resolve_ytdlp()
+     ffmpeg = resolve_ffmpeg()
+     ffmpeg_dir = os.path.dirname(ffmpeg) if os.path.isfile(ffmpeg) else ffmpeg
+-    cmd = [ytdlp, "--no-playlist", "-f", "bv*+ba/b", "--merge-output-format", "mkv"]
++    cmd = [ytdlp, "--no-playlist", *_yt_dlp_runtime_args(), "-f", "bv*+ba/b", "--merge-output-format", "mkv"]
+     if ffmpeg_dir: cmd += ["--ffmpeg-location", ffmpeg_dir]
+     if info_json: cmd += ["--write-info-json"]
+     cmd += ["-o", output_template, url]
+@@ -2869,6 +3850,471 @@
+     return manifest
+ 
+ 
++def _chapter_shared_token_count(vod: dict[str, Any], video: dict[str, Any]) -> int:
++    vt = _tokens(str(video.get("title") or "") + " " + str(video.get("description") or ""))
++    if not vt:
++        return 0
++    return max(
++        [len(vt & _tokens(str(ch.get("title") or ""))) for ch in (vod.get("chapters") or []) if isinstance(ch, dict)]
++        or [0]
++    )
++
++
++def _discover_global_video_pool(root: str, slug: str, *, streamer: str = "", vod_id: str = "", log=None) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
++    """Return relevant YouTube sources once, rather than N candidates per VOD.
++
++    Discovery is intentionally generous: a video enters if metadata scoring is
++    reasonably plausible, if it shares at least two game/chapter tokens, or if
++    an earlier run already paid to fingerprint it. Expensive verification then
++    compares that source against every VOD from the same streamer.
++    """
++    vods = list_twitch_vods(root, slug, streamer)
++    if vod_id:
++        vods = [v for v in vods if str(v.get("vod_id") or "") == str(vod_id)]
++        if not vods:
++            raise C.StudioError(f"Twitch VOD not found in production: {vod_id}")
++    by_streamer: dict[str, list[dict[str, Any]]] = {}
++    for vod in vods:
++        by_streamer.setdefault(str(vod.get("streamer") or "").lower(), []).append(vod)
++
++    prior_video_ids = {
++        str(rec.get("youtube_video_id") or "")
++        for rec in list_matches(root, slug)
++        if str(rec.get("state") or "") in {"likely", "verified", "ambiguous"}
++    }
++    selected: dict[str, dict[str, Any]] = {}
++    for st, streamer_vods in by_streamer.items():
++        for video in load_index(root, slug, st):
++            if not isinstance(video, dict):
++                continue
++            video_id = str(video.get("video_id") or "")
++            if not video_id or not _channel_allowed_for_video(root, st, video):
++                continue
++            scores = [(score_candidate(vod, video, configured_channel=True), vod) for vod in streamer_vods]
++            if not scores:
++                continue
++            best_evidence, best_vod = max(scores, key=lambda row: float(row[0].get("candidate_score") or 0.0))
++            best_score = float(best_evidence.get("candidate_score") or 0.0)
++            shared = max(_chapter_shared_token_count(vod, video) for vod in streamer_vods)
++            cached_fp = os.path.isfile(_youtube_audio_cache_file(root, slug, video_id))
++            if (
++                best_score < GLOBAL_DISCOVERY_MIN_SCORE
++                and shared < GLOBAL_DISCOVERY_MIN_CHAPTER_SHARED
++                and not cached_fp
++                and video_id not in prior_video_ids
++            ):
++                continue
++            selected[video_id] = {
++                "video": dict(video),
++                "best_candidate_score": round(best_score, 4),
++                "best_candidate_vod_id": str(best_vod.get("vod_id") or ""),
++                "best_chapter_shared_tokens": int(shared),
++                "streamer": st,
++            }
++
++    rows = sorted(
++        selected.values(),
++        key=lambda row: (
++            -float(row.get("best_candidate_score") or 0.0),
++            -int(row.get("best_chapter_shared_tokens") or 0),
++            str((row.get("video") or {}).get("video_id") or ""),
++        ),
++    )
++    if len(rows) > GLOBAL_DISCOVERY_MAX_VIDEOS:
++        if log:
++            log.write(
++                f"global discovery safety cap: selected={len(rows)} cap={GLOBAL_DISCOVERY_MAX_VIDEOS}; "
++                "raise GLOBAL_DISCOVERY_MAX_VIDEOS only for unusually large productions\n"
++            )
++            log.flush()
++        rows = rows[:GLOBAL_DISCOVERY_MAX_VIDEOS]
++    return vods, rows
++
++
++def _pair_result_rank(result: dict[str, Any]) -> tuple[int, int, float, int, float]:
++    assessment = ((result.get("audio") or {}).get("assessment") or {})
++    state_rank = {"verified": 4, "likely": 3, "ambiguous": 2, "candidate": 1, "rejected": 0}.get(str(result.get("state") or ""), 0)
++    return (
++        state_rank,
++        int(assessment.get("good_anchors") or 0),
++        float(assessment.get("median_similarity") or 0.0),
++        int(assessment.get("continuous_offset_pairs") or 0),
++        float(result.get("candidate_score") or 0.0),
++    )
++
++
++def _evaluate_global_audio_pair(vod: dict[str, Any], video: dict[str, Any], youtube_fp: dict[str, Any], twitch_fp: dict[str, Any], *, log=None) -> dict[str, Any]:
++    evidence = score_candidate(vod, video, configured_channel=True)
++    date_signal = (evidence.get("signals") or {}).get("date") or {}
++    date_score = float(date_signal.get("score")) if date_signal.get("available") and date_signal.get("score") is not None else None
++    result: dict[str, Any] = {
++        "vod_id": str(vod.get("vod_id") or ""),
++        "state": "candidate",
++        "candidate_score": float(evidence.get("candidate_score") or 0.0),
++        "candidate_evidence": evidence,
++        "evaluated_at": C.utc_now(),
++        "policy_version": VERIFICATION_POLICY_VERSION,
++        "timeline_segments": [],
++        "audio": {"method": AUDIO_VERIFIER_PROVIDER, "anchors": [], "assessment": {"state": "not_run"}},
++    }
++    # Exact upload metadata may cheaply exclude a later VOD. Unknown dates stay
++    # eligible; audio is the authority for every plausible source.
++    if date_score is not None and date_score <= 0.02:
++        result["reason"] = "known upload date predates this Twitch VOD"
++        result["audio"]["assessment"] = {"state": "not_run", "reason": result["reason"]}
++        return result
++    duration = float(video.get("duration") or youtube_fp.get("duration_seconds") or 0.0)
++    if duration <= 0:
++        result["reason"] = "YouTube duration unavailable"
++        result["audio"]["assessment"] = {"state": "not_run", "reason": result["reason"]}
++        return result
++    anchors = _audio_only_anchors_from_caches(duration, youtube_fp, twitch_fp, log=log)
++    assessment = assess_verification(anchors)
++    result["state"] = str(assessment.get("state") or "candidate")
++    result["audio"] = {"method": AUDIO_VERIFIER_PROVIDER, "anchors": anchors, "assessment": assessment}
++    result["timeline_segments"] = _piecewise_segments(anchors)
++    return result
++
++
++def _persist_global_pair_result(root: str, slug: str, vod: dict[str, Any], video: dict[str, Any], result: dict[str, Any], *, force: bool = False, create_candidate: bool = False) -> dict[str, Any] | None:
++    vod_id = str(vod.get("vod_id") or "")
++    video_id = str(video.get("video_id") or "")
++    prior = load_match(root, slug, vod_id, video_id) or {}
++    if prior.get("state") == "rejected" and not force:
++        return prior
++    state = str(result.get("state") or "candidate")
++    if not prior and state == "candidate" and not create_candidate:
++        return None
++    transcript_evidence = result.get("transcript") if isinstance(result.get("transcript"), dict) else None
++    audio_assessment = ((result.get("audio") or {}).get("assessment") or {})
++    audio_ran = str(audio_assessment.get("state") or "") != "not_run"
++    verification = {
++        "status": "complete",
++        "policy_version": VERIFICATION_POLICY_VERSION,
++        "completed_at": C.utc_now(),
++        "mode": "global-audio+localized-text" if transcript_evidence else "global-audio-assignment",
++        "providers": {"metadata": "complete", "audio": "complete" if audio_ran else "not_run", "transcript": "localized_complete" if transcript_evidence else "not_run"},
++        "transcript": ({
++            **transcript_evidence,
++            "strategy": "winner-only-localized-on-demand",
++            "full_source_whisper": False,
++        } if transcript_evidence else {
++            "method": LOCALIZED_TRANSCRIPT_PROVIDER, "anchors": [], "assessment": {"state": "not_run"},
++            "strategy": "winner-only-localized-on-demand", "full_source_whisper": False,
++        }),
++        "audio": result.get("audio") or {},
++    }
++    manifest = {
++        **prior,
++        "schema_version": SCHEMA_VERSION,
++        "youtube_video_id": video_id,
++        "youtube": dict(video),
++        "twitch_vod_ids": [vod_id],
++        "twitch": dict(vod),
++        "streamer": str(vod.get("streamer") or video.get("streamer") or ""),
++        "state": state,
++        "candidate_score": float(result.get("candidate_score") or 0.0),
++        "candidate_evidence": result.get("candidate_evidence") or {},
++        "verification": verification,
++        "timeline_segments": list(result.get("timeline_segments") or []),
++        "download": prior.get("download") or {"status": "not_downloaded", "path": ""},
++        "rights_status": "sem_autorizacao_confirmada",
++        "global_assignment": True,
++    }
++    save_match(root, slug, manifest)
++    return manifest
++
++
++def _maybe_localized_confirm_global_pair(root: str, slug: str, *, vod: dict[str, Any], video: dict[str, Any],
++                                         pair_result: dict[str, Any], youtube_analysis: dict[str, Any],
++                                         twitch_analysis: dict[str, Any], log=None) -> dict[str, Any]:
++    """Use captions/Whisper only for the best unresolved global assignment."""
++    assessment = ((pair_result.get("audio") or {}).get("assessment") or {})
++    if str(pair_result.get("state") or "") != "likely":
++        return pair_result
++    if int(assessment.get("good_anchors") or 0) < GLOBAL_TEXT_PROMOTION_MIN_AUDIO_ANCHORS:
++        return pair_result
++    if float(assessment.get("median_similarity") or 0.0) < GLOBAL_TEXT_PROMOTION_AUDIO_MEDIAN_MIN:
++        return pair_result
++    if not transcript_enabled(root) or not transcription_backend(root):
++        return pair_result
++    try:
++        evidence = confirm_audio_anchors_with_localized_transcripts(
++            root, slug,
++            vod_id=str(vod.get("vod_id") or ""),
++            video_id=str(video.get("video_id") or ""),
++            streamer=str(vod.get("streamer") or ""),
++            twitch_url=str(vod.get("source_url") or ""),
++            youtube_url=str(video.get("url") or f"https://www.youtube.com/watch?v={video.get('video_id','')}"),
++            anchors=list((pair_result.get("audio") or {}).get("anchors") or []),
++            twitch_fp=twitch_analysis.get("fingerprint") or {},
++            youtube_fp=youtube_analysis.get("fingerprint") or {},
++            twitch_media=str(twitch_analysis.get("media_path") or ""),
++            youtube_media=str(youtube_analysis.get("media_path") or ""),
++            log=log,
++        )
++    except Exception as exc:
++        if log:
++            log.write(f"global localized confirmation unavailable: {exc}\n")
++            log.flush()
++        return pair_result
++    pair_result = dict(pair_result)
++    pair_result["transcript"] = evidence
++    text_assessment = evidence.get("assessment") or {}
++    if str(text_assessment.get("state") or "") in {"strong", "likely"} and int(text_assessment.get("good_anchors") or 0) >= 2:
++        # Two independent acoustic anchors plus two localized text confirmations
++        # are sufficient only after global all-VOD competition has reduced the
++        # risk of a local false peak.
++        pair_result["state"] = "verified"
++        pair_result["verification_basis"] = "global-audio+localized-text"
++    return pair_result
++
++
++def _resolve_global_assignments(root: str, slug: str, *, streamer: str = "", vod_id: str = "",
++                                download: bool = False, no_download: bool = False, force: bool = False, log=None) -> dict[str, Any]:
++    vods, pool = _discover_global_video_pool(root, slug, streamer=streamer, vod_id=vod_id, log=log)
++    vods_by_streamer: dict[str, list[dict[str, Any]]] = {}
++    for vod in vods:
++        vods_by_streamer.setdefault(str(vod.get("streamer") or "").lower(), []).append(vod)
++    for rows in vods_by_streamer.values():
++        rows.sort(key=lambda v: str(v.get("created_at") or ""))
++
++    errors: list[dict[str, Any]] = []
++    completed: list[dict[str, Any]] = []
++    resumed = 0
++    evaluated_pairs = 0
++    skipped_pairs = 0
++    twitch_analysis_cache: dict[str, dict[str, Any]] = {}
++    total = len(pool)
++    if log:
++        log.write(
++            f"global source assignment: videos={total} vods={len(vods)} matcher={'numpy-exact' if _np is not None else 'stdlib-coarse'} "
++            f"policy={VERIFICATION_POLICY_VERSION}\n"
++        )
++        log.flush()
++
++    for number, item in enumerate(pool, 1):
++        video = dict(item.get("video") or {})
++        video_id = str(video.get("video_id") or "")
++        st = str(item.get("streamer") or video.get("streamer") or "").lower()
++        eligible_vods = vods_by_streamer.get(st, [])
++        eligible_ids = [str(v.get("vod_id") or "") for v in eligible_vods]
++        if not video_id or not eligible_ids:
++            continue
++        assignment = load_assignment(root, slug, video_id)
++        if not force and _assignment_complete_for_vods(assignment, eligible_ids):
++            resumed += 1
++            completed.append(dict(assignment or {}))
++            if not no_download and str((assignment or {}).get("state") or "") == "verified":
++                cfg = load_config(root)
++                if download or cfg.get("auto_download_verified"):
++                    primary_vod_id = str((assignment or {}).get("primary_vod_id") or "")
++                    manifest = load_match(root, slug, primary_vod_id, video_id) if primary_vod_id else None
++                    if manifest and str((manifest.get("download") or {}).get("status") or "") != "completed":
++                        download_verified(root, slug, primary_vod_id, video_id, log=log)
++            if log:
++                log.write(f"assignment {number}/{total}: youtube={video_id} resume=completed -> skip all {len(eligible_ids)} VODs\n")
++                log.flush()
++            continue
++        if not isinstance(assignment, dict) or force or str(assignment.get("policy_version") or "") != VERIFICATION_POLICY_VERSION:
++            assignment = {
++                "youtube_video_id": video_id,
++                "streamer": st,
++                "status": "running",
++                "created_at": C.utc_now(),
++                "evaluated_vod_ids": [],
++                "pair_results": {},
++            }
++        else:
++            assignment["status"] = "running"
++        assignment["youtube"] = video
++        assignment["candidate_discovery"] = {
++            "best_candidate_score": item.get("best_candidate_score"),
++            "best_candidate_vod_id": item.get("best_candidate_vod_id"),
++            "best_chapter_shared_tokens": item.get("best_chapter_shared_tokens"),
++        }
++        save_assignment(root, slug, assignment)
++        if log:
++            already = len(set(map(str, assignment.get("evaluated_vod_ids") or [])) & set(eligible_ids))
++            log.write(f"assignment {number}/{total}: youtube={video_id} evaluated={already}/{len(eligible_ids)}\n")
++            log.flush()
++        try:
++            try:
++                video = enrich_video_metadata_cached(root, slug, video, force=force, log=log)
++            except Exception as exc:
++                if log:
++                    log.write(f"metadata enrichment unavailable for youtube={video_id}; continuing with index metadata: {exc}\n")
++                    log.flush()
++            youtube_analysis = _ensure_media_analysis(
++                root, slug, source_kind="youtube", source_id=video_id,
++                source_url=str(video.get("url") or f"https://www.youtube.com/watch?v={video_id}"),
++                streamer=st, force=force, log=log, want_transcript=False, keep_media=False,
++            )
++            youtube_fp = youtube_analysis.get("fingerprint") or {}
++            if not youtube_fp.get("features"):
++                raise C.StudioError("YouTube audio fingerprint unavailable")
++            assignment["youtube"] = video
++            assignment["youtube_fingerprint"] = _fingerprint_signature(youtube_fp)
++            pair_results = dict(assignment.get("pair_results") or {})
++            evaluated_ids = {str(x) for x in (assignment.get("evaluated_vod_ids") or [])}
++
++            for vod in eligible_vods:
++                current_vod_id = str(vod.get("vod_id") or "")
++                if not force and current_vod_id in evaluated_ids and isinstance(pair_results.get(current_vod_id), dict):
++                    skipped_pairs += 1
++                    continue
++                prior = load_match(root, slug, current_vod_id, video_id)
++                if prior and prior.get("state") == "rejected" and not force:
++                    pair_result = {
++                        "vod_id": current_vod_id, "state": "rejected", "candidate_score": float(prior.get("candidate_score") or 0.0),
++                        "reason": "manual rejection preserved", "evaluated_at": C.utc_now(), "policy_version": VERIFICATION_POLICY_VERSION,
++                    }
++                else:
++                    # Cheap date scoring can avoid preparing a Twitch fingerprint
++                    # for a pair that is chronologically impossible.
++                    evidence = score_candidate(vod, video, configured_channel=True)
++                    date_signal = (evidence.get("signals") or {}).get("date") or {}
++                    date_score = float(date_signal.get("score")) if date_signal.get("available") and date_signal.get("score") is not None else None
++                    if date_score is not None and date_score <= 0.02:
++                        pair_result = {
++                            "vod_id": current_vod_id, "state": "candidate", "candidate_score": float(evidence.get("candidate_score") or 0.0),
++                            "candidate_evidence": evidence, "reason": "known upload date predates this Twitch VOD",
++                            "evaluated_at": C.utc_now(), "policy_version": VERIFICATION_POLICY_VERSION,
++                            "timeline_segments": [], "audio": {"method": AUDIO_VERIFIER_PROVIDER, "anchors": [], "assessment": {"state": "not_run"}},
++                        }
++                    else:
++                        twitch_analysis = twitch_analysis_cache.get(current_vod_id)
++                        if twitch_analysis is None:
++                            twitch_analysis = _ensure_media_analysis(
++                                root, slug, source_kind="twitch", source_id=current_vod_id,
++                                source_url=str(vod.get("source_url") or ""), streamer=st,
++                                force=force, log=log, want_transcript=False, keep_media=False,
++                            )
++                            twitch_analysis_cache[current_vod_id] = twitch_analysis
++                        twitch_fp = twitch_analysis.get("fingerprint") or {}
++                        if not twitch_fp.get("features"):
++                            raise C.StudioError(f"Twitch audio fingerprint unavailable: {current_vod_id}")
++                        pair_result = _evaluate_global_audio_pair(vod, video, youtube_fp, twitch_fp, log=log)
++                        pair_result["twitch_fingerprint"] = _fingerprint_signature(twitch_fp)
++                    evaluated_pairs += 1
++
++                pair_results[current_vod_id] = pair_result
++                evaluated_ids.add(current_vod_id)
++                assignment["pair_results"] = pair_results
++                assignment["evaluated_vod_ids"] = sorted(evaluated_ids)
++                save_assignment(root, slug, assignment)
++                _persist_global_pair_result(root, slug, vod, video, pair_result, force=force)
++
++            ranked = sorted(
++                [r for r in pair_results.values() if isinstance(r, dict) and str(r.get("state") or "") != "rejected"],
++                key=_pair_result_rank,
++                reverse=True,
++            )
++            top = ranked[0] if ranked else None
++            # Text is paid only once, for the globally strongest unresolved VOD.
++            if top and str(top.get("state") or "") == "likely":
++                second = ranked[1] if len(ranked) > 1 else None
++                top_assessment = ((top.get("audio") or {}).get("assessment") or {})
++                second_assessment = ((second.get("audio") or {}).get("assessment") or {}) if second else {}
++                clear_global_winner = (
++                    second is None
++                    or str(second.get("state") or "") != "likely"
++                    or int(top_assessment.get("good_anchors") or 0) > int(second_assessment.get("good_anchors") or 0)
++                    or float(top_assessment.get("median_similarity") or 0.0) - float(second_assessment.get("median_similarity") or 0.0) >= 0.04
++                )
++                top_vod_id = str(top.get("vod_id") or "")
++                top_vod = next((v for v in eligible_vods if str(v.get("vod_id") or "") == top_vod_id), None)
++                top_twitch = twitch_analysis_cache.get(top_vod_id)
++                if top_vod and top_twitch is None:
++                    top_twitch = _ensure_media_analysis(
++                        root, slug, source_kind="twitch", source_id=top_vod_id,
++                        source_url=str(top_vod.get("source_url") or ""), streamer=st,
++                        force=False, log=log, want_transcript=False, keep_media=False,
++                    )
++                    twitch_analysis_cache[top_vod_id] = top_twitch
++                if top_vod and top_twitch and clear_global_winner:
++                    confirmed = _maybe_localized_confirm_global_pair(
++                        root, slug, vod=top_vod, video=video, pair_result=top,
++                        youtube_analysis=youtube_analysis, twitch_analysis=top_twitch, log=log,
++                    )
++                    pair_results[top_vod_id] = confirmed
++                    top = confirmed
++                    _persist_global_pair_result(root, slug, top_vod, video, confirmed, force=force, create_candidate=True)
++                elif log and not clear_global_winner:
++                    log.write(
++                        f"global localized confirmation skipped: youtube={video_id} has competing likely VODs; preserving ambiguity\n"
++                    )
++                    log.flush()
++
++            ranked = sorted(
++                [r for r in pair_results.values() if isinstance(r, dict) and str(r.get("state") or "") != "rejected"],
++                key=_pair_result_rank,
++                reverse=True,
++            )
++            top = ranked[0] if ranked else None
++            verified_rows = [r for r in ranked if str(r.get("state") or "") == "verified"]
++            if verified_rows:
++                primary = verified_rows[0]
++                assignment_state = "verified"
++                assigned_ids = [str(r.get("vod_id") or "") for r in verified_rows]
++            elif top and str(top.get("state") or "") == "likely":
++                primary = top
++                assignment_state = "likely"
++                assigned_ids = [str(top.get("vod_id") or "")]
++            else:
++                primary = top
++                assignment_state = "unmatched"
++                assigned_ids = []
++            assignment.update({
++                "status": "completed",
++                "state": assignment_state,
++                "primary_vod_id": str(primary.get("vod_id") or "") if primary else "",
++                "assigned_vod_ids": assigned_ids,
++                "pair_results": pair_results,
++                "evaluated_vod_ids": sorted(evaluated_ids),
++                "completed_at": C.utc_now(),
++            })
++            save_assignment(root, slug, assignment)
++            completed.append(dict(assignment))
++            if primary and assignment_state in {"verified", "likely"}:
++                primary_vod = next((v for v in eligible_vods if str(v.get("vod_id") or "") == str(primary.get("vod_id") or "")), None)
++                if primary_vod:
++                    manifest = _persist_global_pair_result(
++                        root, slug, primary_vod, video, primary, force=force, create_candidate=True,
++                    )
++                    if manifest and assignment_state == "verified" and not no_download:
++                        cfg = load_config(root)
++                        if download or cfg.get("auto_download_verified"):
++                            if str((manifest.get("download") or {}).get("status") or "") != "completed":
++                                download_verified(root, slug, str(primary.get("vod_id") or ""), video_id, log=log)
++            if log:
++                log.write(
++                    f"assignment result: youtube={video_id} state={assignment_state} "
++                    f"primary_vod={assignment.get('primary_vod_id') or '-'} assigned={','.join(assigned_ids) or '-'}\n"
++                )
++                log.flush()
++        except Exception as exc:
++            assignment["status"] = "partial"
++            assignment["error"] = str(exc)[:1500]
++            save_assignment(root, slug, assignment)
++            errors.append({"video_id": video_id, "error": str(exc)})
++            if log:
++                log.write(f"assignment failed/partial youtube={video_id}: {exc}\n")
++                log.flush()
++
++    return {
++        "videos": total,
++        "completed": len(completed),
++        "resumed": resumed,
++        "evaluated_pairs": evaluated_pairs,
++        "skipped_pairs": skipped_pairs,
++        "verified": sum(1 for a in completed if str(a.get("state") or "") == "verified"),
++        "likely": sum(1 for a in completed if str(a.get("state") or "") == "likely"),
++        "errors": errors,
++        "assignments": completed,
++    }
++
++
+ def resolve(root: str, slug: str, *, streamer: str = "", vod_id: str = "", refresh_index: bool = False,
+             download: bool = False, no_download: bool = False, force: bool = False, verify_likely: bool = True, log=None) -> dict[str, Any]:
+     if refresh_index:
+@@ -2876,42 +4322,26 @@
+     candidates = generate_candidates(root, slug, streamer=streamer, vod_id=vod_id, log=log)
+     verified=[]; errors=[]
+     if verify_likely:
+-        # Transcript verification is useful below the old LIKELY threshold because
+-        # flat-playlist metadata often lacks dates. Cap work per VOD and let cache
+-        # de-duplication ensure each YouTube audio/transcript is produced once.
+-        grouped: dict[str, list[dict[str, Any]]] = {}
+-        for rec in candidates["matches"]:
+-            vid = str((rec.get("twitch_vod_ids") or [""])[0])
+-            grouped.setdefault(vid, []).append(rec)
+-        selected: list[dict[str, Any]] = []
+-        for _, rows in grouped.items():
+-            rows = sorted(rows, key=lambda r: float(r.get("candidate_score") or 0), reverse=True)
+-            count = 0
+-            for rec in rows:
+-                if rec.get("state") in {"verified", "rejected"} and not force:
+-                    continue
+-                score = float(rec.get("candidate_score") or 0)
+-                if score < TRANSCRIPT_VERIFY_MIN_SCORE and rec.get("state") not in {"likely", "ambiguous"}:
+-                    continue
+-                selected.append(rec)
+-                count += 1
+-                if count >= TRANSCRIPT_VERIFY_PER_VOD:
+-                    break
+-        if log:
+-            unique_videos = len({str(r.get("youtube_video_id") or "") for r in selected})
+-            log.write(f"verification shortlist: matches={len(selected)} unique_youtube={unique_videos} min_score={TRANSCRIPT_VERIFY_MIN_SCORE:.2f}\n")
+-            log.flush()
+-        for rec in selected:
+-            try:
+-                checked=verify_match(root,slug,(rec.get("twitch_vod_ids") or [""])[0],rec["youtube_video_id"],force=force,log=log)
+-                if checked.get("state")=="verified":
+-                    verified.append(checked)
+-                    cfg=load_config(root)
+-                    if not no_download and (download or cfg.get("auto_download_verified")):
+-                        download_verified(root,slug,(checked.get("twitch_vod_ids") or [""])[0],checked["youtube_video_id"],log=log)
+-            except Exception as exc:
+-                errors.append({"vod_id":(rec.get("twitch_vod_ids") or [""])[0],"video_id":rec.get("youtube_video_id"),"error":str(exc)})
+-                if log: log.write(f"verify skipped/failed: {exc}\n"); log.flush()
++        global_result = _resolve_global_assignments(
++            root, slug, streamer=streamer, vod_id=vod_id,
++            download=download, no_download=no_download, force=force, log=log,
++        )
++        errors.extend(global_result.get("errors") or [])
++        return {
++            "candidates": candidates["candidates"],
++            "verified": int(global_result.get("verified") or 0),
++            "likely": int(global_result.get("likely") or 0),
++            "errors": errors,
++            "resume": {
++                "videos": int(global_result.get("videos") or 0),
++                "completed": int(global_result.get("completed") or 0),
++                "resumed": int(global_result.get("resumed") or 0),
++                "evaluated_pairs": int(global_result.get("evaluated_pairs") or 0),
++                "skipped_pairs": int(global_result.get("skipped_pairs") or 0),
++            },
++            "assignments": global_result.get("assignments") or [],
++            "matches": list_matches(root,slug,vod_id),
++        }
+     return {"candidates": candidates["candidates"], "verified": len(verified), "errors": errors, "matches": list_matches(root,slug,vod_id)}
+ 
+ def _job_path(root: str, slug: str, job_id: str) -> str:
+@@ -2959,9 +4389,12 @@
+ def _job_worker(root: str, slug: str, rec: dict[str, Any], params: dict[str, Any]) -> None:
+     key=(_abs_root(root),slug)
+     log_path=rec["log_path"]
++    rec["worker_pid"] = os.getpid()
++    rec["worker_mode"] = str(rec.get("worker_mode") or "process")
++    _write_job(root, slug, rec)
+     try:
+         with open(log_path,"a",encoding="utf-8",errors="replace") as log:
+-            log.write(f"[{C.utc_now()}] YouTube Mirror Resolver job {rec['type']}\n")
++            log.write(f"[{C.utc_now()}] YouTube Mirror Resolver job {rec['type']} pid={os.getpid()}\n")
+             typ=rec["type"]
+             if typ=="index": result=index_all(root,slug,streamer=params.get("streamer","") or "",force=bool(params.get("force")),log=log)
+             elif typ=="resolve": result=resolve(root,slug,streamer=params.get("streamer","") or "",vod_id=params.get("vod_id","") or "",refresh_index=bool(params.get("refresh_index")),download=bool(params.get("download")),no_download=bool(params.get("no_download")),force=bool(params.get("force")),verify_likely=bool(params.get("verify",True)),log=log)
+@@ -2969,7 +4402,7 @@
+             elif typ=="download": result=download_verified(root,slug,str(params["vod_id"]),str(params["video_id"]),force=bool(params.get("force")),log=log)
+             else: raise C.StudioError(f"unknown YouTube resolver job type: {typ}")
+             rec["result_summary"] = _compact_result(result)
+-            rec["status"]="completed"; rec["return_code"]=0
++            rec["status"]="completed"; rec["return_code"]=0; rec["error"]=""
+     except Exception as exc:
+         rec["status"]="failed"; rec["return_code"]=1; rec["error"]=str(exc)
+         try:
+@@ -2984,47 +4417,202 @@
+     if not isinstance(result,dict): return str(result)[:1000]
+     keep={}
+     for k,v in result.items():
+-        if k in {"matches","youtube","twitch","features"}: continue
++        if k in {"matches","assignments","youtube","twitch","features"}: continue
+         keep[k]=v
+     return keep
+ 
+ 
++def _new_job_record(root: str, slug: str, job_type: str, params: dict[str, Any]) -> dict[str, Any]:
++    job_id=C.utc_now().replace("-","").replace(":","").replace("T","-").replace("Z","")+"-"+uuid.uuid4().hex[:6]
++    return {
++        "id":job_id,"type":job_type,"status":"running","slug":slug,
++        "streamer":str(params.get("streamer") or ""),"vod_id":str(params.get("vod_id") or ""),
++        "candidate_video_id":str(params.get("video_id") or ""),"created_at":C.utc_now(),
++        "started_at":C.utc_now(),"ended_at":"","command":str(params.get("command") or job_type),
++        "return_code":None,"error":"","artifacts":[],"log_path":_job_log_path(root,slug,job_id),
++        "params":{k:v for k,v in params.items() if k!="command"},"worker_pid":0,"worker_mode":"process",
++    }
++
++
++def _handle_alive(handle: Any) -> bool:
++    if handle is None:
++        return False
++    poll = getattr(handle, "poll", None)
++    if callable(poll):
++        try:
++            return poll() is None
++        except Exception:
++            return False
++    alive = getattr(handle, "is_alive", None)
++    if callable(alive):
++        try:
++            return bool(alive())
++        except Exception:
++            return False
++    return False
++
++
++def _pid_alive_windows(pid: int) -> bool:
++    """Check a Windows PID without sending it a signal.
++
++    ``os.kill(pid, 0)`` is the conventional POSIX liveness probe, but on
++    Windows non-console signals are implemented with TerminateProcess.  Use the
++    native process handle API so a dashboard health check can never terminate
++    its own detached resolver worker.
++    """
++    try:
++        import ctypes
++        from ctypes import wintypes
++
++        process_query_limited_information = 0x1000
++        still_active = 259
++        kernel32 = ctypes.WinDLL("kernel32", use_last_error=True)
++        kernel32.OpenProcess.argtypes = [wintypes.DWORD, wintypes.BOOL, wintypes.DWORD]
++        kernel32.OpenProcess.restype = wintypes.HANDLE
++        kernel32.GetExitCodeProcess.argtypes = [wintypes.HANDLE, ctypes.POINTER(wintypes.DWORD)]
++        kernel32.GetExitCodeProcess.restype = wintypes.BOOL
++        kernel32.CloseHandle.argtypes = [wintypes.HANDLE]
++        kernel32.CloseHandle.restype = wintypes.BOOL
++        handle = kernel32.OpenProcess(process_query_limited_information, False, int(pid))
++        if not handle:
++            # ERROR_ACCESS_DENIED still proves that a process owns this PID.
++            return ctypes.get_last_error() == 5
++        try:
++            code = wintypes.DWORD()
++            return bool(kernel32.GetExitCodeProcess(handle, ctypes.byref(code)) and code.value == still_active)
++        finally:
++            kernel32.CloseHandle(handle)
++    except Exception:
++        return False
++
++
++def _pid_alive(pid: Any) -> bool:
++    try:
++        value = int(pid or 0)
++    except (TypeError, ValueError):
++        return False
++    if value <= 0:
++        return False
++    if value == os.getpid():
++        return True
++    if os.name == "nt":
++        return _pid_alive_windows(value)
++    try:
++        os.kill(value, 0)
++        return True
++    except PermissionError:
++        return True
++    except (ProcessLookupError, OSError):
++        return False
++
++
++def _worker_command(root: str, slug: str, job_id: str) -> list[str]:
++    return [
++        sys.executable, "-m", "cstudio", "--root", _abs_root(root),
++        "youtube-job-worker", slug, "--job-id", job_id,
++    ]
++
++
++def _spawn_job_process(root: str, slug: str, job_id: str) -> subprocess.Popen:
++    kwargs: dict[str, Any] = {
++        "cwd": _abs_root(root),
++        "stdin": subprocess.DEVNULL,
++        "stdout": subprocess.DEVNULL,
++        "stderr": subprocess.DEVNULL,
++        "close_fds": True,
++        "env": _media_subprocess_env(),
++    }
++    if os.name == "nt":
++        flags = int(getattr(subprocess, "DETACHED_PROCESS", 0)) | int(getattr(subprocess, "CREATE_NEW_PROCESS_GROUP", 0))
++        if getattr(subprocess, "CREATE_NO_WINDOW", 0):
++            flags |= int(subprocess.CREATE_NO_WINDOW)
++        kwargs["creationflags"] = flags
++    else:
++        kwargs["start_new_session"] = True
++    return subprocess.Popen(_worker_command(root, slug, job_id), **kwargs)
++
++
++def run_persisted_job(root: str, slug: str, job_id: str) -> dict[str, Any]:
++    """Entrypoint used by the detached worker process."""
++    rec = read_job(root, slug, job_id)
++    if not isinstance(rec, dict):
++        raise C.StudioError(f"YouTube resolver job not found: {job_id}")
++    if rec.get("status") != "running":
++        return rec
++    params = dict(rec.get("params") or {})
++    rec["worker_pid"] = os.getpid()
++    rec["worker_mode"] = "process"
++    _write_job(root, slug, rec)
++    _job_worker(root, slug, rec, params)
++    return read_job(root, slug, job_id) or rec
++
++
+ def start_job(root: str, slug: str, job_type: str, **params: Any) -> dict[str, Any]:
++    """Start a dashboard job in a detached process that survives server restarts."""
+     C.load_project(root,slug); _ensure_layout(root,slug)
+     if job_type not in {"index","resolve","verify","download"}: raise C.StudioError("invalid YouTube resolver job type")
+     mark_stale_jobs_failed(root, slug)
+     key=(_abs_root(root),slug)
+     with _LOCK:
+         existing=_RUNNING.get(key)
+-        if existing and existing.is_alive(): raise C.StudioError("a YouTube resolver job is already running for this production")
+-        disk_running=[j for j in list_jobs(root,slug,20) if j.get("status")=="running"]
+-        if disk_running: raise C.StudioError("a persisted YouTube resolver job is still marked running; inspect logs before starting another")
+-        job_id=C.utc_now().replace("-","").replace(":","").replace("T","-").replace("Z","")+"-"+uuid.uuid4().hex[:6]
+-        rec={"id":job_id,"type":job_type,"status":"running","slug":slug,"streamer":str(params.get("streamer") or ""),"vod_id":str(params.get("vod_id") or ""),"candidate_video_id":str(params.get("video_id") or ""),"created_at":C.utc_now(),"started_at":C.utc_now(),"ended_at":"","command":str(params.get("command") or job_type),"return_code":None,"error":"","artifacts":[],"log_path":_job_log_path(root,slug,job_id),"params":{k:v for k,v in params.items() if k!="command"}}
++        if _handle_alive(existing): raise C.StudioError("a YouTube resolver job is already running for this production")
++        disk_running=[j for j in list_jobs(root,slug,100) if j.get("status")=="running" and _pid_alive(j.get("worker_pid"))]
++        if disk_running: raise C.StudioError("a YouTube resolver job is already running for this production")
++        rec=_new_job_record(root, slug, job_type, params)
+         _write_job(root,slug,rec)
+-        thread=threading.Thread(target=_job_worker,args=(root,slug,rec,params),name=f"youtube-{job_type}-{slug}",daemon=True)
+-        _RUNNING[key]=thread; thread.start(); return dict(rec)
++        try:
++            proc=_spawn_job_process(root, slug, rec["id"])
++        except Exception as exc:
++            rec["status"]="failed"; rec["ended_at"]=C.utc_now(); rec["return_code"]=1
++            rec["error"]=f"could not start resolver worker: {exc}"
++            _write_job(root,slug,rec)
++            raise C.StudioError(rec["error"]) from exc
++        _RUNNING[key]=proc
++        # Merge only the PID into the latest on-disk record so a very fast worker
++        # cannot be overwritten back to RUNNING by the launcher.
++        current=read_job(root,slug,rec["id"]) or rec
++        if current.get("status")=="running":
++            current["worker_pid"]=proc.pid
++            current["worker_mode"]="process"
++            _write_job(root,slug,current)
++        returned=dict(current)
++        returned["worker_pid"]=int(returned.get("worker_pid") or proc.pid)
++        return returned
+ 
+ 
+ def run_job(root: str, slug: str, job_type: str, **params: Any) -> dict[str, Any]:
+-    rec=start_job(root,slug,job_type,**params)
+-    key=(_abs_root(root),slug)
+-    with _LOCK: thread=_RUNNING.get(key)
+-    if thread: thread.join()
++    """Synchronous CLI path; records the same job schema without forking twice."""
++    C.load_project(root,slug); _ensure_layout(root,slug)
++    if job_type not in {"index","resolve","verify","download"}: raise C.StudioError("invalid YouTube resolver job type")
++    mark_stale_jobs_failed(root, slug)
++    running=[j for j in list_jobs(root,slug,100) if j.get("status")=="running" and _pid_alive(j.get("worker_pid"))]
++    if running:
++        raise C.StudioError("a YouTube resolver job is already running for this production")
++    rec=_new_job_record(root,slug,job_type,params)
++    rec["worker_mode"]="inline-cli"; rec["worker_pid"]=os.getpid()
++    _write_job(root,slug,rec)
++    _job_worker(root,slug,rec,dict(rec.get("params") or {}))
+     return read_job(root,slug,rec["id"]) or rec
+ 
+ 
+ def mark_stale_jobs_failed(root: str, slug: str) -> int:
+-    """Recover jobs left 'running' after a process crash; never report them completed."""
++    """Fail only jobs whose persisted worker process is actually gone."""
+     fixed=0
+     key=(_abs_root(root),slug)
+     with _LOCK:
+         live=_RUNNING.get(key)
+-        if live and live.is_alive(): return 0
++        if _handle_alive(live):
++            return 0
++        if live is not None:
++            _RUNNING.pop(key,None)
+     for rec in list_jobs(root,slug,100):
+-        if rec.get("status")=="running":
+-            rec["status"]="failed"; rec["ended_at"]=C.utc_now(); rec["return_code"]=1; rec["error"]="resolver process ended before job completion"
+-            _write_job(root,slug,rec); fixed+=1
++        if rec.get("status")!="running":
++            continue
++        if _pid_alive(rec.get("worker_pid")):
++            continue
++        rec["status"]="failed"; rec["ended_at"]=C.utc_now(); rec["return_code"]=1
++        rec["error"]="resolver worker process is no longer running before job completion"
++        _write_job(root,slug,rec); fixed+=1
+     return fixed
+ 
+ 
+@@ -3037,18 +4625,15 @@
+         "index": index_status(root,slug),
+         "vods": list_twitch_vods(root,slug),
+         "matches": list_matches(root,slug),
++        "assignments": list_assignments(root,slug),
+         "jobs": list_jobs(root,slug,10),
+         "latest_job": latest_job(root,slug),
+     }
+ 
+ 
+ def shutdown_jobs(timeout: float = 1.0) -> None:
+-    # Resolver workers use subprocess.run rather than retained Popen handles. Daemon
+-    # threads terminate with the local server process; persisted state is recovered
+-    # as failed on next dashboard_state/start.
+-    with _LOCK: threads=list(_RUNNING.values())
+-    deadline=time.time()+max(0.0,float(timeout))
+-    for thread in threads:
+-        remaining=deadline-time.time()
+-        if remaining<=0: break
+-        thread.join(timeout=remaining)
++    # Detached YouTube workers intentionally survive dashboard shutdown. Dropping
++    # local Popen handles is enough; persisted PID/status lets the next server
++    # instance reattach logically without killing useful work.
++    with _LOCK:
++        _RUNNING.clear()
+--- a/docs/ARCHITECTURE.md
++++ b/docs/ARCHITECTURE.md
+@@ -53,9 +53,9 @@
+ 
+ ### Fronteira do YouTube Mirror Resolver
+ 
+-`youtube_resolver.py` é outro **ingestor**, não uma etapa editorial. A cadeia V2 é `Twitch VOD → metadata shortlist → full-audio cache pass → Whisper transcript alignment → localized audio confirmation → timeline segments → optional master download → register_asset`. Metadata score e evidência audiovisual são conceitos separados. `verified` exige múltiplos anchors; conteúdo do YouTube continua não confiável.
++`youtube_resolver.py` é outro **ingestor**, não uma etapa editorial. A cadeia atual é `Twitch VODs + índice YouTube → discovery global de fontes plausíveis → fingerprint por fonte → comparação all-VOD → consistência por offsets piecewise → captions/Whisper localizado somente se borderline → optional master download → register_asset`. Metadata score e evidência audiovisual são conceitos separados. A comparação usa correlação NumPy exata quando disponível e mantém fallback stdlib. `verified` exige evidência acústica coerente ou, em um único vencedor global borderline, áudio forte + confirmação textual localizada; texto sozinho nunca basta.
+ 
+-Persistência pesada é por produção em `.studio/internal/ingest/youtube/`; somente a associação streamer → canais e a preferência de auto-download são globais em `studio/youtube-mirrors.json`. Cada relação Twitch/YouTube tem manifest próprio, o que preserva mapeamentos piecewise em cenários 1→N e N→1. Assets resultantes continuam `sem_autorizacao_confirmada`, portanto o `rights_lock` permanece fail-closed. Whisper roda em runtime externo/isolado e seu transcript nunca é suficiente sozinho para `verified`; a evidência audiovisual continua obrigatória.
++Persistência pesada é por produção em `.studio/internal/ingest/youtube/`; somente a associação streamer → canais e a preferência de auto-download são globais em `studio/youtube-mirrors.json`. Metadata, captions, fingerprints, áudio de análise YouTube e `assignments/<video_id>.json` são caches/checkpoints reproduzíveis; o áudio de análise não é registrado como asset. Cada assignment registra os VODs já avaliados e é salvo após cada par, permitindo retomada sem refazer trabalho concluído. Cada relação Twitch/YouTube continua com manifest próprio, preservando mapeamentos piecewise em cenários 1→N e N→1. Jobs do dashboard usam workers de processo com PID persistido, separados da vida do servidor HTTP. Assets resultantes continuam `sem_autorizacao_confirmada`, portanto o `rights_lock` permanece fail-closed.
+ 
+ ### Fronteira da UI
+ 
+--- a/docs/DASHBOARD-GUIDE.md
++++ b/docs/DASHBOARD-GUIDE.md
+@@ -120,7 +120,7 @@
+ 
+ ## YouTube Mirrors
+ 
+-A página **YouTube Mirrors** é operacional e usa a mesma camada `cstudio.youtube_resolver` da CLI. Ela mostra health de `yt-dlp`/FFmpeg/Whisper, canais configurados, status do índice, VODs Twitch, candidatos, contribuições do score, anchors de transcript e confirmação de áudio, timeline piecewise, qualidade conhecida, download/path e logs. O log de `yt-dlp` agora recebe progresso por fragmento em tempo real.
++A página **YouTube Mirrors** é operacional e usa a mesma camada `cstudio.youtube_resolver` da CLI. Ela mostra health de `yt-dlp`/FFmpeg/Deno-EJS/Whisper, engine do matcher (`numpy-exact` ou fallback), quantidade de assignments persistidos, VODs Twitch, candidatos, contribuições do score, anchors, timeline piecewise, qualidade conhecida, download/path e logs. O log de `yt-dlp` recebe progresso por fragmento em tempo real; ausência de Deno suportado aparece como degradação explícita em vez de ficar escondida no log.
+ 
+ Ações disponíveis: cadastrar/ativar/desativar canais, `Refresh index`, `Resolve`, resolver um VOD, `Verify`, `Reject`, `Download master` e `Auto-download verified sources`. Operações longas iniciam jobs em background e atualizam somente o fragmento:
+ 
+@@ -128,7 +128,7 @@
+ GET /ui/youtube-run?slug=<slug>
+ ```
+ 
+-O polling para quando o job deixa `running`; falhas externas são persistidas como `failed`, nunca mascaradas como `completed`. O dashboard não pode transformar metadata em `verified` nem alterar rights/gates.
++Os jobs longos de YouTube iniciados pelo dashboard rodam em **processos destacados**, com PID e log persistidos. Além disso, `Resolve production` é incremental: cada vídeo relevante é comparado contra todos os VODs elegíveis e o assignment é salvo depois de cada par. Reexecutar o comando pula assignments concluídos e continua assignments parciais somente nos VODs faltantes; `--force` força recálculo. O polling para quando o job deixa `running`; um restart do servidor HTTP não encerra o worker, e o dashboard só marca um job antigo como falho quando o PID persistido realmente não está mais ativo. Falhas externas são persistidas como `failed`, nunca mascaradas como `completed`.
+ 
+ ## Segurança do dashboard
+ 
+--- a/integrations/youtube.md
++++ b/integrations/youtube.md
+@@ -9,21 +9,35 @@
+ 
+ Obrigatórias para uso real:
+ 
+-- `yt-dlp` — catálogo, metadata, áudio de verificação e download do master;
+-- `ffmpeg` — extração/normalização do áudio;
++- `numpy` — correlação acústica exata/vetorizada e extração de features acelerada;
++- `yt-dlp` — catálogo, metadata, captions, áudio de verificação e download do master;
++- `ffmpeg` — decode/normalização do áudio;
+ - `ffprobe` — inspeção da mídia baixada.
+-- `faster-whisper` + CTranslate2 com modelo `large-v3-turbo` convertido — backend preferido para transcrição localizada batched; `openai-whisper` permanece no mesmo venv como fallback.
++
++Fortemente recomendado para a extração YouTube atual:
++
++- **Deno >= 2.3.0** — runtime JavaScript/EJS recomendado pelo yt-dlp. Quando disponível, o
++  resolver injeta explicitamente `--js-runtimes deno:<path>` em index, metadata, captions,
++  áudio e master. Sem Deno suportado o health fica degradado, mas o resolver mantém fallback
++  para instalações/extrações do yt-dlp que ainda funcionem sem challenge solving.
++
++Backend textual, usado somente quando necessário:
++
++- `faster-whisper` + CTranslate2 + `large-v3-turbo` — preferido;
++- `openai-whisper` — fallback compatível no mesmo ambiente.
+ 
+ Opcional:
+ 
+-- `fpcalc`/Chromaprint — detectado e exposto em health, mas não é requisito do verifier.
+-
+-Overrides de executáveis:
++- `fpcalc`/Chromaprint — **shadow verifier**. Pode gerar evidência acústica paralela quando o
++  áudio já está local, mas não participa da decisão `verified`.
++
++Overrides relevantes:
+ 
+ ```text
+ CSTUDIO_YTDLP
+ CSTUDIO_FFMPEG
+ CSTUDIO_FFPROBE
++CSTUDIO_DENO
+ CSTUDIO_FPCALC
+ CSTUDIO_WHISPER
+ CSTUDIO_TRANSCRIPTION_BACKEND
+@@ -38,9 +52,11 @@
+ CSTUDIO_WHISPER_LANGUAGE_<STREAMER>
+ CSTUDIO_WHISPER_ENABLED
+ CSTUDIO_YTDLP_FRAGMENTS
+-```
+-
+-Nenhum comando externo usa `shell=True`; argumentos são passados como lista.
++CSTUDIO_YOUTUBE_ANALYSIS_CACHE_GB
++```
++
++Nenhum comando externo usa `shell=True`; argumentos são passados como lista. Conteúdo retornado
++por YouTube/Twitch é dado não confiável e nunca vira instrução para o harness.
+ 
+ ## Configuração de canais
+ 
+@@ -51,99 +67,218 @@
+ ```
+ 
+ Ela aceita vários canais por streamer e cada canal pode ser desabilitado sem alterar código.
+-URLs/canais nunca são hardcoded. A V2.3 também aceita um **hint de idioma Whisper por streamer**;
+-`alanzoka` tem default conservador `pt` porque VODs podem começar com diálogo inglês do jogo e
+-enganar a detecção global. O hint pode ser sobrescrito por config/env ou definido como `auto`.
+-
+-CLI:
++URLs/canais nunca são hardcoded. Quando um `channel_id` imutável (`UC...`) é conhecido, ele é
++**hard gate**: um vídeo que revele outro channel ID é descartado antes de mídia cara. Se a config
++só tiver URL/handle, o resolver pode aprender e persistir o channel ID observado para aquela URL
++sem sobrescrever um ID conflitante já salvo.
++
++O hint de idioma Whisper é configurável por streamer. `alanzoka` usa `pt` como default; `auto`
++remove o hint.
+ 
+ ```powershell
+ python -m cstudio --root . youtube-channel-set --streamer alanzoka --name alanzoka --url https://www.youtube.com/@alanzoka --language pt
+ ```
+ 
+-A mesma configuração pode ser feita em **YouTube Mirrors** no dashboard. O campo `Whisper lang`
+-é opcional (`pt`, `en`, `es`, etc.); `auto` desliga qualquer hint do streamer.
+-
+-## Indexação
++## Indexação barata
+ 
+ ```powershell
+ python -m cstudio --root . youtube-index <slug> --streamer alanzoka
+ python -m cstudio --root . youtube-index <slug> --streamer alanzoka --refresh-index
+ ```
+ 
+-O indexador usa `yt-dlp --flat-playlist --dump-json --skip-download` e mantém um catálogo
+-incremental por produção/streamer. A fase de índice não baixa vídeo. Metadata externa é tratada
+-como dado não confiável e passa pelo scanner de segurança antes de ser persistida/renderizada.
+-
+-## Resolução e estados
+-
+-```powershell
+-python -m cstudio --root . youtube-resolve <slug>
+-python -m cstudio --root . youtube-resolve <slug> --vod-id 1234567890
+-python -m cstudio --root . youtube-resolve <slug> --download-verified
+-python -m cstudio --root . youtube-resolve <slug> --no-download
+-```
+-
+-Estados persistidos:
+-
+-```text
+-unmatched → candidate → likely → verified
+-                    ↘ ambiguous
+-                    ↘ rejected
+-```
+-
+-`candidate_score` serve somente para decidir quais vídeos valem uma verificação cara. O score é
+-explicável e separa contribuições de identidade de canal, proximidade de data, duração, título e
+-overlap de jogo/chapters. Ele não é uma probabilidade e nunca produz `verified` sozinho.
+-
+-## Verificação audiovisual v2.6 — audio-first + faster-whisper localizado
+-
+-O verifier usa metadata somente para criar uma shortlist. Para cada VOD/candidato selecionado:
+-
+-1. `yt-dlp` baixa/reusa **best audio** apenas quando o fingerprint ainda não existe;
+-2. o arquivo gera features temporais FFmpeg e o fingerprint fica persistente;
+-3. o verifier audiovisual multi-anchor roda **antes** de qualquer transcrição;
+-4. se o áudio já atingir `VERIFIED`, o job encerra esse candidato com `Whisper skipped`;
+-5. somente um resultado audiovisual `likely` pode pedir texto novo, limitado a até quatro janelas de 48 s por fonte;
+-6. faster-whisper batched é preferido para essas janelas; OpenAI Whisper permanece como fallback;
+-7. texto localizado funciona somente como confirmação secundária e nunca promove sozinho para `VERIFIED`.
+-
+-Isso evita transcrever horas de Twitch e cada candidato YouTube integralmente. Repetições/frases comuns ainda passam pelo quality gate, e qualquer falha de runtime preserva o verifier audiovisual já existente.
+-
+-### Runtime Whisper
+-
+-A V2.6 separa **backend** de transcrição do provider histórico de cache. `transcription.backend=auto` é o default e também é herdado por configs antigas: se existir um modelo CTranslate2 local, o resolver prefere faster-whisper; se o preflight/model load falhar, OpenAI Whisper continua disponível como fallback. `CSTUDIO_TRANSCRIPTION_BACKEND=faster-whisper|openai-whisper` pode fixar explicitamente um backend.
+-
+-O faster-whisper é executado pelo `python.exe` do mesmo venv descoberto em `Applications/LLMS/Whisper`, mas através de um runner isolado do Python do dashboard. O modelo é procurado em `CSTUDIO_FASTER_WHISPER_MODEL`, `transcription.faster_model` ou `<Whisper home>/faster-whisper-large-v3-turbo`. O default GPU é `compute_type=float16`, `batch_size=8`, beam 5, `condition_on_previous_text=False`, sem word timestamps e com `BatchedInferencePipeline`. Para clips baixados separadamente, Silero VAD remove silêncio; para ranges no arquivo completo, `clip_timestamps` limita diretamente as regiões decodificadas. Overrides: `CSTUDIO_FASTER_WHISPER_COMPUTE_TYPE` e `CSTUDIO_FASTER_WHISPER_BATCH_SIZE`.
+-
+-No Windows, o subprocesso adiciona automaticamente `torch\lib` do venv ao `PATH` quando presente, permitindo ao CTranslate2 reutilizar as DLLs CUDA/cuBLAS/cuDNN já instaladas no ambiente. O preflight registra versões de faster-whisper/CTranslate2, número de devices CUDA, modelo, compute type e batch. Uma falha do faster-whisper é memorizada durante a vida do servidor para impedir que cada candidato repita o mesmo erro; o backend OpenAI é então usado quando disponível.
+-
+-O OpenAI Whisper antigo continua usando `python -m whisper`, `large-v3-turbo.pt`, FFmpeg injetado no `PATH` e `--condition_on_previous_text False`. Ele não foi removido.
+-
+-Na V2.4 o passe completo usa **somente timestamps de segmento** e passa explicitamente `--condition_on_previous_text False`. Para matching de VOD longo, janelas independentes são preferíveis a continuidade editorial: isso reduz a chance de uma frase ruim se propagar de janela em janela e virar loop de repetição. `word_timestamps` continua desligado, evitando o DTW/median fallback muito lento observado em Windows quando Triton não está disponível. O alinhador distribui tokens aproximadamente dentro de cada segmento e a confirmação final continua sendo audiovisual localizada. O subprocesso recebe `PYTHONUTF8=1` e `PYTHONIOENCODING=utf-8` explicitamente, então não depende do code page/terminal do Windows para iniciar o Whisper ou emitir logs.
+-
+-Todo transcript persistente passa por um **quality gate para matching**. O cache registra schema/provider, idioma solicitado, decoding profile, duração, quantidade de segmentos, `quality_state` e métricas como proporção do texto dominante, diversidade de segmentos, repetição consecutiva, diversidade lexical, vazios e caracteres úteis por hora. Loops evidentes (por exemplo, centenas de segmentos dominados pela mesma frase curta) são rejeitados como `hallucination_loop` antes de serem aceitos/persistidos para alignment. Caches antigos sem o profile/quality atuais ficam stale automaticamente; fingerprints de áudio compatíveis continuam reutilizáveis e o verifier audiovisual V1 permanece como fallback.
+-
+-Idioma segue esta precedência: `CSTUDIO_WHISPER_LANGUAGE` global → `CSTUDIO_WHISPER_LANGUAGE_<STREAMER>` → `streamers.<nome>.transcription_language` → `transcription.language_by_streamer` → idioma global → auto. `alanzoka=pt` vem como default de V2.3, mas `auto` pode desligá-lo.
+-
+-### Progresso e concorrência
+-
+-Downloads de áudio usam `yt-dlp --newline --progress-template` e o log do job recebe progresso em tempo real. HLS/DASH usa `CSTUDIO_YTDLP_FRAGMENTS` (default `8`, limitado a 1–32).
+-
+-### Cache persistente
+-
+-```text
+-transcripts/twitch/<vod_id>.json
+-transcripts/youtube/<video_id>.json
+-fingerprints/twitch-<vod_id>.features.json
+-fingerprints/youtube-<video_id>.features.json
+-```
+-
+-O mesmo vídeo YouTube candidato a vários VODs é transcrito/fingerprintado uma única vez. O mesmo vale para o VOD Twitch. Transcripts antigos/incompatíveis são invalidados quando o provider/timestamp profile muda ou quando o idioma solicitado muda; fingerprints de áudio continuam reutilizáveis.
++O indexador usa `yt-dlp --flat-playlist --dump-json --skip-download` e acrescenta
++`youtubetab:approximate_date`. Isso mantém o catálogo barato, mas recupera data/timestamp
++aproximados quando o extractor consegue fornecê-los; a data é apenas filtro de shortlist, nunca
++prova de identidade.
++
++O baseline de catálogo continua limitado e previsível. O índice não baixa vídeo. Metadata
++externa passa pelo scanner de segurança antes de persistência/renderização.
++
++## Candidate score e metadata cache
++
++`candidate_score` existe apenas para descobrir quais **fontes YouTube** são plausíveis para a
++produção. Ele combina
++quando disponíveis:
++
++- proximidade de data;
++- compatibilidade de duração/subset;
++- similaridade do título;
++- overlap semântico simples de jogo/chapters.
++
++Canal não recebe mais bônus constante: channel ID conhecido é gate.
++
++Campos desconhecidos são **neutros**. O resolver não concede score artificial para `date` ou
++`duration` ausentes; ele renormaliza os pesos dos sinais realmente disponíveis. O score não é
++probabilidade e nunca produz `verified` sozinho.
++
++Antes da mídia, metadata detalhada de cada YouTube ID é cacheada por produção e reutilizada entre
++VODs. Consultas metadata-only usam `youtube:skip=hls,dash` para não buscar manifests que não são
++necessários. O TTL padrão é sete dias.
++
++## Assignment global — uma fonte contra todos os VODs
++
++O resolver não limita mais a fase cara aos `N` melhores candidatos de cada VOD. Esse modelo
++perdia episódios que ficavam em 5º/6º lugar quando vários vídeos do mesmo jogo tinham metadata
++parecida.
++
++O fluxo atual é orientado por fonte:
++
++1. percorre o índice e monta um conjunto deduplicado de vídeos relevantes usando score, overlap
++   de capítulos/jogos e caches existentes;
++2. enriquece metadata de cada YouTube ID no máximo uma vez por TTL;
++3. cria/reutiliza o fingerprint do vídeo YouTube uma vez;
++4. compara essa fonte contra **todos os VODs do mesmo streamer** que não forem impossíveis por
++   data;
++5. persiste o resultado depois de cada `(youtube_id, vod_id)`;
++6. escolhe o melhor VOD globalmente, em vez de escolher os melhores vídeos dentro de cada VOD;
++7. se o melhor resultado for `likely` e não houver outro VOD `likely` competitivo, o texto
++   localizado pode completar a confirmação.
++
++Isso transforma o custo de rede em custo **por fonte**, não por par. Depois que fingerprints
++existem, comparar dezenas de pares é cálculo local.
++
++## Resume/checkpoint
++
++Cada vídeo recebe:
++
++```text
++assignments/<youtube_video_id>.json
++```
++
++O arquivo contém `policy_version`, `evaluated_vod_ids`, `pair_results`, `primary_vod_id` e estado
++final. Ele é salvo após **cada par**, não apenas no final do job. Portanto:
++
++- processo encerrado no meio → a próxima rodada continua nos VODs que faltam;
++- vídeo já comparado contra todos os VODs atuais → é pulado inteiro;
++- novo VOD adicionado → somente o novo VOD é comparado aos assignments existentes;
++- novo vídeo no índice → apenas esse vídeo cria trabalho novo;
++- `--force` invalida intencionalmente o reaproveitamento e recalcula.
++
++Rejeição manual também invalida o resumo final do assignment para que a próxima rodada escolha o
++próximo melhor VOD sem refazer os pares já avaliados.
++
++## Verificação acústica — autoridade do match
++
++A autoridade continua sendo áudio multi-anchor. O fingerprint de features permanece compatível
++com os caches existentes (`ffmpeg-temporal-features-v1`); a política de matching é versionada
++separadamente como `ffmpeg-temporal-features-v3-piecewise-offset`.
++
++Para cada par avaliado no assignment global:
++
++1. o resolver reutiliza fingerprint existente quando possível;
++2. se o YouTube ainda precisa de áudio completo para gerar fingerprint, o bestaudio adquirido é
++   guardado em `analysis-audio/` para reuso local;
++3. quatro anchors distribuídos no vídeo YouTube são comparados com o VOD Twitch;
++4. o primeiro anchor pode fazer busca global;
++5. anchors seguintes começam em uma janela prevista a partir do alinhamento anterior;
++6. se a janela prevista for fraca, existe fallback de busca para frente para não perder matches
++   com cortes longos;
++7. com NumPy disponível, a correlação avalia **todos os frames de 0,5 s**, sem o sampling coarse
++   que podia saltar um pico verdadeiro; o fallback stdlib preserva compatibilidade;
++8. cada busca registra melhor pico, segundo melhor pico e `peak_margin` para observabilidade;
++9. a decisão temporal usa `offset = twitch_time - youtube_time`: offsets aproximadamente estáveis
++   representam continuidade, e saltos positivos podem representar material removido do upload;
++10. salto grande para trás enfraquece a consistência e impede `VERIFIED`.
++
++`peak_margin` ainda é métrica de diagnóstico, não threshold de autoridade: ele precisa ser
++calibrado com ground truth real antes de participar da decisão.
++
++### Chromaprint em shadow mode
++
++Se `fpcalc` estiver instalado e a mídia necessária já estiver local, o resolver também pode gerar
++um fingerprint Chromaprint e calcular anchors paralelos. O resultado aparece em:
++
++```text
++verification.audio.chromaprint_shadow
++```
++
++com `authority=false`. A ausência de `fpcalc` não muda o resultado, e Chromaprint nunca causa
++um download extra apenas para alimentar o shadow verifier. Isso permite coletar comparação real
++antes de qualquer futura promoção de provider.
++
++## Texto localizado: captions primeiro, Whisper depois
++
++Texto só entra quando o **melhor VOD global** ficou borderline (`likely`) e não existe outro VOD
++`likely` competitivo, ou quando existe cache compatível de uma execução anterior. Ele é um
++**gate secundário**: texto sozinho nunca cria `VERIFIED`. A política global admite completar
++`VERIFIED` quando já existem pelo menos dois anchors acústicos fortes e coerentes e pelo menos
++dois anchors textuais localizados confirmam o mesmo VOD.
++
++Para YouTube, a ordem é:
++
++1. procurar cache de captions;
++2. se não houver, tentar subtitles/auto-subs via yt-dlp sem baixar vídeo;
++3. converter WebVTT em segmentos timestamped, removendo duplicação cumulativa comum em auto-captions;
++4. usar apenas o texto da janela correspondente ao anchor;
++5. se captions não existirem, cair no fluxo de clip de áudio + faster-whisper.
++
++Para Twitch, o resolver usa as janelas acústicas localizadas e faster-whisper. Isso evita pagar
++o custo de três/quatro downloads pequenos do YouTube quando o próprio YouTube já oferece
++transcrição timestamped.
++
++### Runtime faster-whisper
++
++`transcription.backend=auto` prefere faster-whisper quando existe modelo CTranslate2 local. O
++default permanece:
++
++```text
++model = large-v3-turbo
++device = cuda
++compute_type = float16
++batch_size = 8
++beam_size = 5
++vad = on
++condition_on_previous_text = false
++timestamps = segment
++```
++
++O runner é isolado do Python do dashboard. No Windows ele adiciona `torch\lib` do venv ao `PATH`
++quando presente para reutilizar DLLs CUDA/cuBLAS/cuDNN do ambiente. Um único processo carrega o
++modelo uma vez para o batch de clips da fonte.
++
++OpenAI Whisper permanece fallback e também usa `--condition_on_previous_text False`. O quality
++gate continua rejeitando loops/hallucination caches e caches antigos incompatíveis.
++
++## Cache persistente
++
++Dados técnicos ficam sob:
++
++```text
++productions/<slug>/.studio/internal/ingest/youtube/
++    index/
++    metadata/
++    captions/
++    fingerprints/
++        twitch-<vod_id>.features.json
++        youtube-<video_id>.features.json
++        twitch-<vod_id>.chromaprint.json        # opcional
++        youtube-<video_id>.chromaprint.json     # opcional
++    transcripts/twitch/
++    transcripts/youtube/
++    analysis-audio/
++    assignments/
++    matches/
++    jobs/
++    logs/
++    media/<streamer>/<video_id>/
++    tmp/
++```
++
++`analysis-audio/` é cache técnico, nunca asset/master. O default de limite é **4 GiB**, ajustável
++por `CSTUDIO_YOUTUBE_ANALYSIS_CACHE_GB`; o pruning usa recência de acesso. Isso permite que uma
++segunda verificação recorte localmente em vez de reabrir o YouTube para cada janela.
++
++Metadata e captions têm TTL padrão de sete dias e também possuem negative cache para captions
++indisponíveis, evitando consultas repetidas do mesmo candidato.
++
++`assignments/` não tem TTL: é checkpoint do trabalho concluído. A validade é controlada por
++`policy_version`; uma mudança incompatível do algoritmo deve incrementar essa versão para que os
++pares sejam recalculados uma única vez.
+ 
+ ## Timeline mapping
+ 
+-Cada par Twitch/YouTube mantém anchors e segmentos piecewise, não apenas um offset global:
++Cada par Twitch/YouTube mantém anchors e segmentos piecewise. Além de slope/confidence, os
++segmentos registram offsets inicial/final e classificam saltos compatíveis com cut gap:
+ 
+ ```json
+ {
+@@ -152,14 +287,36 @@
+   "twitch_start": 4385.0,
+   "twitch_end": 5168.0,
+   "slope": 1.00385,
+-  "confidence": 0.94
++  "confidence": 0.94,
++  "offset_start": 4265.0,
++  "offset_end": 4268.0,
++  "offset_delta": 3.0,
++  "kind": "continuous"
+ }
+ ```
+ 
+ Helpers de domínio fazem `youtube_time → twitch_time` e `twitch_time → youtube_time` apenas
+ quando o instante cai em um segmento conhecido. Lacunas/cortes permanecem sem mapeamento.
+-Par-manifests independentes permitem 1 VOD → N vídeos, partes em vídeos diferentes e N VODs →
+-1 master YouTube sem destruir os mapas individuais.
++Par-manifests independentes preservam 1 VOD → N vídeos e N VODs → 1 master.
++
++## Jobs resilientes do dashboard
++
++CLI explícita (`youtube-index`, `youtube-resolve`, `youtube-verify`, `youtube-download`) continua
++síncrona e retorna código de saída normal.
++
++O dashboard, porém, não executa mais jobs longos em daemon thread. `start_job()`:
++
++1. persiste o registro do job;
++2. inicia `python -m cstudio ... youtube-job-worker` como processo destacado;
++3. persiste `worker_pid` e `worker_mode=process`;
++4. o worker escreve diretamente status/log/result no job;
++5. restart/encerramento do servidor HTTP não mata o worker;
++6. ao reabrir, jobs `running` só viram `failed` se o PID persistido não estiver ativo.
++
++No Windows a checagem de PID usa a API de processo do sistema, não `os.kill(pid, 0)`, evitando
++que uma simples health check possa sinalizar/encerrar o worker.
++
++Continua existindo no máximo um job YouTube incompatível por produção.
+ 
+ ## Download do master
+ 
+@@ -170,30 +327,8 @@
+ ```
+ 
+ O comando usa `bv*+ba/b` e merge via FFmpeg, sem limite artificial de 1080p; 2160p/4K é usado
+-quando for a melhor qualidade disponível.
+-
+-## Persistência
+-
+-Dados de uma produção ficam isolados em:
+-
+-```text
+-productions/<slug>/.studio/internal/ingest/youtube/
+-    index/
+-    fingerprints/
+-    transcripts/twitch/
+-    transcripts/youtube/
+-    matches/
+-    jobs/
+-    logs/
+-    media/<streamer>/<video_id>/
+-    tmp/
+-```
+-
+-Match manifests têm `schema_version`, score/evidência de metadata, anchors de transcript e áudio, assessments separados, modo de verificação, segmentos de timeline, download e metadata do asset.
+-
+-O master validado é registrado através de `pipeline.register_asset()` como `video-source`.
+-Campos avançados permanecem no manifest auxiliar para não quebrar o schema existente de
+-`assets.csv`.
++quando for a melhor qualidade disponível. As mesmas opções de runtime Deno/EJS são aplicadas ao
++master.
+ 
+ ## Direitos
+ 
+@@ -206,29 +341,16 @@
+ Encontrar a mesma live em um canal oficial **não** é clearance para republicação. O resolver não
+ chama `approve_gate`, não altera `rights_lock`, não avança stage e não publica.
+ 
+-## Dashboard e jobs
+-
+-A página **YouTube Mirrors** permite configurar canais, atualizar índice, resolver produção/VOD,
+-verificar/rejeitar candidatos, baixar master, alternar auto-download e inspecionar logs/evidência.
+-Indexação, verificação e downloads rodam em thread de background com estado/log persistidos; o
+-browser consulta `GET /ui/youtube-run` enquanto houver job ativo. Jobs incompatíveis não podem
+-rodar simultaneamente na mesma produção.
++## Dashboard
++
++A página **YouTube Mirrors** exibe health de yt-dlp/FFmpeg/Deno/Whisper, canais, índice, VODs,
++candidatos, score, anchors, consistência temporal, Chromaprint shadow quando existir, qualidade
++do master e logs. Ausência de Deno suportado aparece como degradação explícita.
++
++O browser consulta `GET /ui/youtube-run` enquanto houver job ativo. Falhas ficam persistidas como
++`failed`; restart do dashboard não é tratado como falha se o worker continua vivo.
+ 
+ ## Upload/publicação
+ 
+ Este resolver não implementa upload para o YouTube. A publicação continua sob o fluxo existente
+ de package/gates/credenciais e permanece separada deste ingestor.
+-
+-
+-### Estratégia de performance v2.6
+-
+-O resolver não transcreve mais VODs Twitch ou candidatos YouTube completos no caminho padrão. A ordem é:
+-
+-1. metadata enrich/gate;
+-2. fingerprint audiovisual persistente;
+-3. verifier audiovisual V1/V2 com múltiplos anchors;
+-4. se o áudio já atingir `VERIFIED`, encerrar sem iniciar Whisper;
+-5. somente para resultado audiovisual `likely`, opcionalmente transcrever até quatro janelas de 48 s ao redor dos anchors já localizados;
+-6. o texto localizado é confirmação secundária e **não pode promover sozinho** um match para `VERIFIED`.
+-
+-Quando o áudio completo acabou de ser baixado para gerar fingerprint, as janelas usam `clip_timestamps` no mesmo arquivo. Quando apenas o fingerprint está em cache, o resolver baixa somente os pequenos ranges necessários via `yt-dlp --download-sections`, sem `--force-keyframes-at-cuts`. No backend faster-whisper, um único processo carrega o modelo CTranslate2 uma vez e processa todos os clips da fonte; batching trabalha sobre chunks do áudio e VAD evita gastar GPU em silêncio. O cache de transcript completo antigo continua legível se for compatível, mas não é regenerado pelo fluxo normal.
+--- a/tests/test_youtube_resolver.py
++++ b/tests/test_youtube_resolver.py
+@@ -3,6 +3,7 @@
+ import os
+ import shutil
+ import subprocess
++import struct
+ import threading
+ import time
+ from pathlib import Path
+@@ -124,6 +125,7 @@
+     assert "--flat-playlist" in cmd and "--dump-json" in cmd and "--skip-download" in cmd
+     assert cmd[cmd.index("--playlist-end") + 1] == "77"
+     assert "--extract-audio" not in cmd
++    assert "youtubetab:approximate_date" in cmd
+ 
+ 
+ def test_twitch_parser_extracts_title_duration_date_and_chapters(tmp_path):
+@@ -151,6 +153,16 @@
+     good = {"upload_date": "20260906", "duration": 6000, "title": "A"}
+     stale = {"upload_date": "20250101", "duration": 30000, "title": "A"}
+     assert YR.score_candidate(vod, good)["candidate_score"] > YR.score_candidate(vod, stale)["candidate_score"]
++
++
++def test_missing_metadata_is_neutral_and_weights_are_renormalized():
++    vod = {"created_at": "2026-09-04T12:00:00Z", "duration": 10000, "title": "Onimusha", "chapters": []}
++    video = {"title": "Onimusha gameplay", "description": ""}
++    scored = YR.score_candidate(vod, video)
++    assert scored["signals"]["date"]["available"] is False
++    assert scored["signals"]["duration"]["available"] is False
++    assert scored["signals"]["channel"]["effective_weight"] == 0
++    assert pytest.approx(sum(scored["contributions"].values()), abs=1e-4) == scored["candidate_score"]
+ 
+ 
+ def test_generate_candidates_filters_old_index_and_persists_manifest(tmp_path):
+@@ -204,6 +216,18 @@
+         {"youtube_time": 900, "twitch_time": 1500, "similarity": 0.91},
+     ]
+     assert YR.assess_verification(anchors)["state"] == "ambiguous"
++
++
++def test_offset_consistency_rejects_large_backwards_jump_from_verified():
++    anchors = [
++        {"youtube_time": 100, "twitch_time": 1100, "similarity": 0.94},
++        {"youtube_time": 500, "twitch_time": 1510, "similarity": 0.93},
++        {"youtube_time": 900, "twitch_time": 1650, "similarity": 0.92},
++    ]
++    assessment = YR.assess_verification(anchors)
++    assert assessment["state"] == "likely"
++    assert assessment["timeline_consistency"] == "weak"
++    assert assessment["backwards_offset_jumps"]
+ 
+ 
+ def test_piecewise_mapping_helpers_support_gaps():
+@@ -278,19 +302,17 @@
+     root = _harness(tmp_path)
+     _write_vod(root); _write_index(root)
+     YR.set_auto_download(root, True)
+-    calls = []
+-
+-    def fake_verify(root, slug, vod_id, video_id, **kwargs):
+-        rec = YR.load_match(root, slug, vod_id, video_id)
+-        rec["state"] = "verified"
+-        YR.save_match(root, slug, rec)
+-        return rec
+-
+-    monkeypatch.setattr(YR, "verify_match", fake_verify)
+-    monkeypatch.setattr(YR, "download_verified", lambda *a, **k: calls.append((a, k)))
++    seen = []
++
++    def fake_global(*args, **kwargs):
++        seen.append(bool(kwargs.get("no_download")))
++        return {"verified": 1, "likely": 0, "errors": [], "videos": 1, "completed": 1,
++                "resumed": 0, "evaluated_pairs": 1, "skipped_pairs": 0, "assignments": []}
++
++    monkeypatch.setattr(YR, "_resolve_global_assignments", fake_global)
+     out = YR.resolve(root, "yt", no_download=True)
+     assert out["verified"] >= 1
+-    assert calls == []
++    assert seen == [True]
+ 
+ def test_path_isolation_is_per_production(tmp_path):
+     root = _harness(tmp_path, slug="one")
+@@ -346,22 +368,20 @@
+ def test_job_duplicate_protection(tmp_path, monkeypatch):
+     root = _harness(tmp_path)
+     YR.set_channel(root, "alanzoka", name="alanzoka", url="https://youtube.com/@alanzoka")
+-    started = threading.Event(); release = threading.Event()
+-
+-    def slow(*args, **kwargs):
+-        started.set(); release.wait(2); return {"ok": True}
+-
+-    monkeypatch.setattr(YR, "index_all", slow)
++
++    class Worker:
++        pid = 424242
++        def poll(self):
++            return None
++
++    monkeypatch.setattr(YR, "_spawn_job_process", lambda *a, **k: Worker())
+     first = YR.start_job(root, "yt", "index")
+-    assert started.wait(1)
++    assert first["worker_pid"] == 424242
++    assert first["worker_mode"] == "process"
+     with pytest.raises(C.StudioError, match="already running"):
+         YR.start_job(root, "yt", "resolve")
+-    release.set()
+-    for _ in range(50):
+-        rec = YR.read_job(root, "yt", first["id"])
+-        if rec and rec.get("status") != "running": break
+-        time.sleep(.02)
+-    assert YR.read_job(root, "yt", first["id"])["status"] == "completed"
++    with YR._LOCK:
++        YR._RUNNING.clear()
+ 
+ 
+ def test_job_failure_is_persisted_not_completed(tmp_path, monkeypatch):
+@@ -371,6 +391,21 @@
+     assert rec["status"] == "failed"
+     assert rec["return_code"] == 1
+     assert "boom" in rec["error"]
++
++
++def test_mark_stale_jobs_respects_live_persisted_pid(tmp_path, monkeypatch):
++    root = _harness(tmp_path)
++    rec = YR._new_job_record(root, "yt", "index", {})
++    rec["worker_pid"] = 12345
++    YR._write_job(root, "yt", rec)
++    monkeypatch.setattr(YR, "_pid_alive", lambda pid: int(pid or 0) == 12345)
++    assert YR.mark_stale_jobs_failed(root, "yt") == 0
++    assert YR.read_job(root, "yt", rec["id"])["status"] == "running"
++    monkeypatch.setattr(YR, "_pid_alive", lambda pid: False)
++    assert YR.mark_stale_jobs_failed(root, "yt") == 1
++    failed = YR.read_job(root, "yt", rec["id"])
++    assert failed["status"] == "failed"
++    assert "worker process" in failed["error"]
+ 
+ 
+ @pytest.mark.skipif(not shutil.which("ffmpeg"), reason="ffmpeg not installed")
+@@ -820,20 +855,20 @@
+     assert quality["metrics"]["duration_seconds"] == pytest.approx(144.0)
+ 
+ 
+-def test_resolve_shortlists_metadata_candidates_below_old_likely_threshold(tmp_path, monkeypatch):
++def test_resolve_uses_global_source_assignment_instead_of_per_vod_shortlist(tmp_path, monkeypatch):
+     root = _harness(tmp_path)
+     _write_vod(root); _write_index(root)
+     candidate = YR.generate_candidates(root, "yt")["matches"][0]
+-    candidate["candidate_score"] = 0.60
+-    candidate["state"] = "candidate"
+     monkeypatch.setattr(YR, "generate_candidates", lambda *a, **k: {"candidates": 1, "matches": [candidate]})
+     calls = []
+-    def verify(*args, **kwargs):
+-        calls.append(args)
+-        out = dict(candidate); out["state"] = "likely"; return out
+-    monkeypatch.setattr(YR, "verify_match", verify)
+-    YR.resolve(root, "yt")
+-    assert calls, "transcript-first shortlist should verify plausible candidates below 0.70"
++    def global_assign(*args, **kwargs):
++        calls.append((args, kwargs))
++        return {"verified": 0, "likely": 1, "errors": [], "videos": 1, "completed": 1,
++                "resumed": 0, "evaluated_pairs": 1, "skipped_pairs": 0, "assignments": []}
++    monkeypatch.setattr(YR, "_resolve_global_assignments", global_assign)
++    out = YR.resolve(root, "yt")
++    assert calls
++    assert out["likely"] == 1
+ 
+ def test_enriched_metadata_can_skip_expensive_media(tmp_path, monkeypatch):
+     root = _harness(tmp_path)
+@@ -1018,3 +1053,227 @@
+     )
+     with pytest.raises(YR._TranscriptContentError):
+         YR._run_whisper(root, str(media), source_kind="youtube", source_id="silent1")
++
++
++def test_webvtt_parser_creates_timestamped_caption_transcript(tmp_path):
++    path = tmp_path / "x.pt.vtt"
++    path.write_text(
++        "WEBVTT\n\n00:00:10.000 --> 00:00:12.500\n<c>fala de teste</c>\n\n"
++        "00:00:13.000 --> 00:00:15.000\nsegunda fala\n",
++        encoding="utf-8",
++    )
++    rec = YR._parse_webvtt(str(path), video_id="abcDEF12345", language="pt")
++    assert rec["provider"] == "yt-dlp-youtube-captions-v1"
++    assert rec["segments"][0]["start"] == 10.0
++    assert rec["segments"][0]["text"] == "fala de teste"
++    assert YR._transcript_text_in_range(rec, 9.0, 12.9) == "fala de teste"
++
++
++def test_metadata_cache_deduplicates_ytdlp_calls(tmp_path, monkeypatch):
++    root = _harness(tmp_path)
++    calls = []
++    def enrich(video, log=None):
++        calls.append(video["video_id"])
++        return {**video, "duration": 123.0, "channel_id": "UC1111111111111111111111"}
++    monkeypatch.setattr(YR, "enrich_video_metadata", enrich)
++    video = {"video_id": "abcDEF12345", "url": "https://youtube.com/watch?v=abcDEF12345"}
++    first = YR.enrich_video_metadata_cached(root, "yt", video)
++    second = YR.enrich_video_metadata_cached(root, "yt", video)
++    assert first["duration"] == second["duration"] == 123.0
++    assert calls == ["abcDEF12345"]
++
++
++def test_match_window_details_reports_competing_peak_margin():
++    query = [[float(i % 5), float((i * 2) % 7), float((i * 3) % 11)] for i in range(20)]
++    target = [[0.0, 0.0, 0.0] for _ in range(200)]
++    target[20:40] = query
++    target[120:140] = query
++    details = YR.match_feature_window_details(query, target, step_frames=1)
++    assert details["similarity"] > 0.99
++    assert details["second_best"] > 0.99
++    assert details["peak_margin"] < 0.01
++
++
++def test_ytdlp_runtime_args_enable_supported_deno(monkeypatch):
++    monkeypatch.setattr(YR, "resolve_deno", lambda required=False: "/tools/deno")
++    monkeypatch.setattr(YR, "_deno_supported", lambda executable: executable == "/tools/deno")
++    assert YR._yt_dlp_runtime_args() == ["--js-runtimes", "deno:/tools/deno"]
++
++
++def test_webvtt_parser_deduplicates_cumulative_auto_captions(tmp_path):
++    path = tmp_path / "cumulative.pt.vtt"
++    path.write_text(
++        "WEBVTT\n\n"
++        "00:00:01.000 --> 00:00:02.000\nolá\n\n"
++        "00:00:02.000 --> 00:00:03.000\nolá mundo\n\n"
++        "00:00:03.000 --> 00:00:04.000\nolá mundo de novo\n",
++        encoding="utf-8",
++    )
++    rec = YR._parse_webvtt(str(path), video_id="abcDEF12345", language="pt")
++    assert [row["text"] for row in rec["segments"]] == ["olá", "mundo", "de novo"]
++    assert rec["text"] == "olá mundo de novo"
++
++
++def test_chromaprint_shadow_match_locates_exact_raw_fingerprint():
++    query = [((i * 2654435761) ^ (i << 11)) & 0xFFFFFFFF for i in range(160)]
++    target = [((i * 2246822519) ^ 0x9E3779B9) & 0xFFFFFFFF for i in range(900)]
++    offset = 376
++    target[offset:offset + len(query)] = query
++    start, similarity = YR._match_chromaprint_window(query, target)
++    assert start == offset
++    assert similarity > 0.99
++
++
++def test_caption_lookup_with_auto_language_skips_external_call(tmp_path, monkeypatch):
++    root = _harness(tmp_path)
++    monkeypatch.setattr(YR, "whisper_language", lambda root, streamer="": "auto")
++    monkeypatch.setattr(YR, "resolve_ytdlp", lambda required=True: (_ for _ in ()).throw(AssertionError("yt-dlp should not run")))
++    assert YR._youtube_caption_transcript(
++        root, "yt", "abcDEF12345", "https://youtube.com/watch?v=abcDEF12345", streamer="other"
++    ) is None
++    cached = C.read_json(YR._caption_cache_file(root, "yt", "abcDEF12345"), {})
++    assert cached["status"] == "skipped_auto_language"
++
++
++def test_localized_youtube_fallback_warms_full_analysis_audio_once(tmp_path, monkeypatch):
++    root = _harness(tmp_path)
++    media = tmp_path / "youtube-full.webm"
++    calls = []
++    monkeypatch.setattr(YR, "_youtube_caption_transcript", lambda *a, **k: None)
++    monkeypatch.setattr(YR, "_analysis_audio_cached", lambda *a, **k: "")
++
++    def download(url, template, **kwargs):
++        calls.append((url, template, kwargs.get("section")))
++        media.write_bytes(b"audio")
++        return str(media)
++
++    monkeypatch.setattr(YR, "_download_audio", download)
++    monkeypatch.setattr(YR, "_persist_youtube_analysis_audio", lambda *a, **k: str(media))
++    monkeypatch.setattr(YR, "_download_localized_clips", lambda *a, **k: (_ for _ in ()).throw(AssertionError("range downloads should be skipped")))
++    monkeypatch.setattr(YR, "_run_whisper", lambda *a, **k: {"segments": [{"start": 1.0, "end": 2.0, "text": "ok"}]})
++    out = YR._localized_transcript_for_source(
++        root, "yt", source_kind="youtube", source_id="abcDEF12345",
++        source_url="https://youtube.com/watch?v=abcDEF12345", streamer="alanzoka",
++        ranges=[(100.0, 148.0), (500.0, 548.0)], existing_media="",
++    )
++    assert out["segments"]
++    assert len(calls) == 1
++    assert calls[0][2] is None
++
++
++def test_verified_requires_at_least_one_stable_offset_pair():
++    anchors = [
++        {"youtube_time": 100.0, "twitch_time": 1100.0, "similarity": .94},
++        {"youtube_time": 1100.0, "twitch_time": 4100.0, "similarity": .93},
++        {"youtube_time": 2100.0, "twitch_time": 7100.0, "similarity": .92},
++    ]
++    assessment = YR.assess_verification(anchors)
++    assert assessment["continuous_offset_pairs"] == 0
++    assert assessment["state"] == "likely"
++
++
++def test_verified_allows_forward_cut_gap_with_one_continuous_pair():
++    anchors = [
++        {"youtube_time": 100.0, "twitch_time": 1100.0, "similarity": .94},
++        {"youtube_time": 1100.0, "twitch_time": 2470.0, "similarity": .93},
++        {"youtube_time": 2100.0, "twitch_time": 3474.0, "similarity": .92},
++    ]
++    assessment = YR.assess_verification(anchors)
++    assert assessment["forward_cut_gaps"]
++    assert assessment["continuous_offset_pairs"] == 1
++    assert assessment["state"] == "verified"
++
++
++def test_numpy_frame_feature_matches_stdlib_formula():
++    if YR._np is None:
++        pytest.skip("NumPy fast path not installed")
++    samples = tuple(((i * 7919) % 65535) - 32768 for i in range(4000))
++    raw = struct.pack("<" + "h" * len(samples), *samples)
++    slow = YR._frame_feature(samples)
++    fast = YR._frame_feature_numpy(raw)
++    assert fast == pytest.approx(slow, rel=1e-10, abs=1e-10)
++
++
++def test_numpy_exact_matcher_finds_inserted_peak_at_exact_frame():
++    if YR._np is None:
++        pytest.skip("NumPy fast path not installed")
++    query = [[float((i * 7) % 19), float((i * 11) % 23), float((i * 13) % 29)] for i in range(56)]
++    target = [[float((i * 5) % 31), float((i * 3) % 17), float((i * 2) % 37)] for i in range(700)]
++    offset = 123
++    target[offset:offset + len(query)] = query
++    details = YR.match_feature_window_details(query, target, step_frames=8)
++    assert details["engine"] == "numpy-exact"
++    assert details["start_frame"] == offset
++    assert details["similarity"] > 0.999
++
++
++def test_global_discovery_keeps_low_metadata_video_with_strong_chapter_overlap(tmp_path, monkeypatch):
++    root = _harness(tmp_path)
++    vod = {
++        "vod_id": "1111111111", "streamer": "alanzoka", "title": "live", "game": "Just Chatting",
++        "created_at": "2026-09-01T10:00:00Z", "duration": 25000,
++        "source_url": "https://www.twitch.tv/videos/1111111111",
++        "chapters": [{"title": "Rocket League", "start": 1000.0, "duration": 8000.0}],
++    }
++    video = {
++        "video_id": "rocketABC123", "streamer": "alanzoka", "title": "ROCKET LEAGUE COM OS AMIGOS",
++        "description": "", "duration": 1000.0, "url": "https://youtube.com/watch?v=rocketABC123",
++    }
++    monkeypatch.setattr(YR, "list_twitch_vods", lambda *a, **k: [vod])
++    monkeypatch.setattr(YR, "load_index", lambda *a, **k: [video])
++    monkeypatch.setattr(YR, "_channel_allowed_for_video", lambda *a, **k: True)
++    monkeypatch.setattr(YR, "GLOBAL_DISCOVERY_MIN_SCORE", 0.99)
++    vods, pool = YR._discover_global_video_pool(root, "yt")
++    assert len(vods) == 1
++    assert [row["video"]["video_id"] for row in pool] == ["rocketABC123"]
++    assert pool[0]["best_chapter_shared_tokens"] >= 2
++
++
++def test_completed_assignment_skips_all_media_work_on_next_run(tmp_path, monkeypatch):
++    root = _harness(tmp_path)
++    vod = {"vod_id": "1111111111", "streamer": "alanzoka", "created_at": "2026-09-01T10:00:00Z"}
++    video = {"video_id": "abcDEF12345", "streamer": "alanzoka", "title": "Onimusha", "url": "https://youtube.com/watch?v=abcDEF12345"}
++    YR.save_assignment(root, "yt", {
++        "youtube_video_id": video["video_id"], "streamer": "alanzoka", "status": "completed",
++        "state": "verified", "primary_vod_id": vod["vod_id"], "assigned_vod_ids": [vod["vod_id"]],
++        "evaluated_vod_ids": [vod["vod_id"]], "pair_results": {vod["vod_id"]: {"vod_id": vod["vod_id"], "state": "verified"}},
++    })
++    monkeypatch.setattr(YR, "_discover_global_video_pool", lambda *a, **k: ([vod], [{"video": video, "streamer": "alanzoka"}]))
++    monkeypatch.setattr(YR, "_ensure_media_analysis", lambda *a, **k: (_ for _ in ()).throw(AssertionError("completed assignment must resume without media work")))
++    out = YR._resolve_global_assignments(root, "yt", no_download=True)
++    assert out["resumed"] == 1
++    assert out["evaluated_pairs"] == 0
++    assert out["verified"] == 1
++
++
++def test_partial_assignment_resumes_only_missing_vod_pairs(tmp_path, monkeypatch):
++    root = _harness(tmp_path)
++    video = {"video_id": "abcDEF12345", "streamer": "alanzoka", "title": "Onimusha", "duration": 400.0, "url": "https://youtube.com/watch?v=abcDEF12345"}
++    vod1 = {"vod_id": "1111111111", "streamer": "alanzoka", "created_at": "2026-09-01T10:00:00Z", "duration": 1000.0, "source_url": "https://www.twitch.tv/videos/1111111111", "chapters": []}
++    vod2 = {"vod_id": "2222222222", "streamer": "alanzoka", "created_at": "2026-09-02T10:00:00Z", "duration": 1000.0, "source_url": "https://www.twitch.tv/videos/2222222222", "chapters": []}
++    prior_result = {"vod_id": vod1["vod_id"], "state": "candidate", "candidate_score": 0.5, "policy_version": YR.VERIFICATION_POLICY_VERSION}
++    YR.save_assignment(root, "yt", {
++        "youtube_video_id": video["video_id"], "streamer": "alanzoka", "status": "partial",
++        "evaluated_vod_ids": [vod1["vod_id"]], "pair_results": {vod1["vod_id"]: prior_result},
++    })
++    monkeypatch.setattr(YR, "_discover_global_video_pool", lambda *a, **k: ([vod1, vod2], [{"video": video, "streamer": "alanzoka", "best_candidate_score": .7}]))
++    monkeypatch.setattr(YR, "enrich_video_metadata_cached", lambda *a, **k: video)
++    fp = {"provider": YR.AUDIO_FINGERPRINT_PROVIDER, "duration_seconds": 400.0, "features": [[float(i % 17), float(i % 13), float(i % 11)] for i in range(900)]}
++    media_calls = []
++    def ensure(*args, **kwargs):
++        media_calls.append((kwargs["source_kind"], kwargs["source_id"]))
++        return {"fingerprint": fp, "media_path": ""}
++    monkeypatch.setattr(YR, "_ensure_media_analysis", ensure)
++    eval_calls = []
++    def evaluate(vod, video, youtube_fp, twitch_fp, log=None):
++        eval_calls.append(vod["vod_id"])
++        return {"vod_id": vod["vod_id"], "state": "candidate", "candidate_score": .5,
++                "candidate_evidence": {}, "audio": {"method": YR.AUDIO_VERIFIER_PROVIDER, "anchors": [], "assessment": {"state": "candidate"}},
++                "timeline_segments": [], "policy_version": YR.VERIFICATION_POLICY_VERSION}
++    monkeypatch.setattr(YR, "_evaluate_global_audio_pair", evaluate)
++    out = YR._resolve_global_assignments(root, "yt", no_download=True)
++    assert eval_calls == [vod2["vod_id"]]
++    assert out["skipped_pairs"] == 1
++    saved = YR.load_assignment(root, "yt", video["video_id"])
++    assert saved["status"] == "completed"
++    assert set(saved["evaluated_vod_ids"]) == {vod1["vod_id"], vod2["vod_id"]}

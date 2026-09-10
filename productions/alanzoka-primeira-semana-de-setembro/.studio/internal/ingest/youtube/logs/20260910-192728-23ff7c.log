@@ -1,0 +1,609 @@
+[2026-09-10T19:27:29Z] YouTube Mirror Resolver job resolve pid=5244
+candidate vod=2861744268 youtube=SynOBrPYbV0 score=0.833 state=ambiguous
+candidate vod=2861744268 youtube=vt1HbScE_jM score=0.805 state=ambiguous
+candidate vod=2861744268 youtube=7GBn3uVeVb8 score=0.801 state=likely
+candidate vod=2861744268 youtube=muxOFHGOpZs score=0.784 state=verified
+candidate vod=2861744268 youtube=iEZOwN5xssU score=0.730 state=likely
+candidate vod=2861744268 youtube=nH8X1jAyoeQ score=0.540 state=candidate
+candidate vod=2861744268 youtube=CMrXO8qfoQw score=0.314 state=candidate
+candidate vod=2861744268 youtube=Wjl1p9MmI-k score=0.269 state=candidate
+candidate vod=2862622285 youtube=SynOBrPYbV0 score=0.762 state=ambiguous
+candidate vod=2862622285 youtube=vt1HbScE_jM score=0.734 state=ambiguous
+candidate vod=2862622285 youtube=7GBn3uVeVb8 score=0.730 state=likely
+candidate vod=2862622285 youtube=muxOFHGOpZs score=0.714 state=likely
+candidate vod=2862622285 youtube=iEZOwN5xssU score=0.679 state=candidate
+candidate vod=2862622285 youtube=nH8X1jAyoeQ score=0.614 state=candidate
+candidate vod=2862622285 youtube=nOj-aeb7haY score=0.398 state=candidate
+candidate vod=2862622285 youtube=6yZE6Xr2BZ0 score=0.389 state=candidate
+candidate vod=2863504919 youtube=Plcc-06LY-A score=0.618 state=candidate
+candidate vod=2863504919 youtube=XR0-lJLW_rs score=0.615 state=candidate
+candidate vod=2863504919 youtube=QcJ0mjcA62k score=0.606 state=candidate
+candidate vod=2863504919 youtube=_Q-dV2V2g5s score=0.604 state=candidate
+candidate vod=2863504919 youtube=fSMIJVnlB_Y score=0.597 state=candidate
+candidate vod=2863504919 youtube=1CuVhBjs3ns score=0.381 state=candidate
+candidate vod=2863504919 youtube=1wACf-7QBE8 score=0.375 state=candidate
+candidate vod=2863504919 youtube=CMrXO8qfoQw score=0.314 state=candidate
+candidate vod=2864229186 youtube=TEHaNIT7eZs score=0.453 state=candidate
+candidate vod=2864229186 youtube=favxANUu9O4 score=0.449 state=candidate
+candidate vod=2864229186 youtube=OKO05-GPKyI score=0.448 state=candidate
+candidate vod=2864229186 youtube=XR0-lJLW_rs score=0.425 state=candidate
+candidate vod=2864229186 youtube=Plcc-06LY-A score=0.424 state=candidate
+candidate vod=2864229186 youtube=QcJ0mjcA62k score=0.412 state=candidate
+candidate vod=2864229186 youtube=_Q-dV2V2g5s score=0.410 state=candidate
+candidate vod=2864229186 youtube=fSMIJVnlB_Y score=0.404 state=candidate
+candidate vod=2865097583 youtube=Plcc-06LY-A score=0.611 state=candidate
+candidate vod=2865097583 youtube=XR0-lJLW_rs score=0.606 state=candidate
+candidate vod=2865097583 youtube=TEHaNIT7eZs score=0.593 state=candidate
+candidate vod=2865097583 youtube=QcJ0mjcA62k score=0.569 state=candidate
+candidate vod=2865097583 youtube=_Q-dV2V2g5s score=0.560 state=candidate
+candidate vod=2865097583 youtube=favxANUu9O4 score=0.551 state=candidate
+candidate vod=2865097583 youtube=OKO05-GPKyI score=0.546 state=candidate
+candidate vod=2865097583 youtube=fSMIJVnlB_Y score=0.527 state=candidate
+candidate vod=2868004694 youtube=Plcc-06LY-A score=0.753 state=ambiguous
+candidate vod=2868004694 youtube=QcJ0mjcA62k score=0.742 state=ambiguous
+candidate vod=2868004694 youtube=_Q-dV2V2g5s score=0.740 state=likely
+candidate vod=2868004694 youtube=XR0-lJLW_rs score=0.723 state=likely
+candidate vod=2868004694 youtube=TEHaNIT7eZs score=0.720 state=verified
+candidate vod=2868004694 youtube=favxANUu9O4 score=0.717 state=likely
+candidate vod=2868004694 youtube=OKO05-GPKyI score=0.716 state=likely
+candidate vod=2868004694 youtube=fSMIJVnlB_Y score=0.695 state=candidate
+candidate vod=2868864059 youtube=Plcc-06LY-A score=0.719 state=ambiguous
+candidate vod=2868864059 youtube=QcJ0mjcA62k score=0.708 state=ambiguous
+candidate vod=2868864059 youtube=_Q-dV2V2g5s score=0.706 state=likely
+candidate vod=2868864059 youtube=XR0-lJLW_rs score=0.697 state=candidate
+candidate vod=2868864059 youtube=TEHaNIT7eZs score=0.690 state=candidate
+candidate vod=2868864059 youtube=favxANUu9O4 score=0.687 state=candidate
+candidate vod=2868864059 youtube=OKO05-GPKyI score=0.686 state=candidate
+candidate vod=2868864059 youtube=fSMIJVnlB_Y score=0.659 state=candidate
+candidate vod=2869682753 youtube=Plcc-06LY-A score=0.671 state=candidate
+candidate vod=2869682753 youtube=QcJ0mjcA62k score=0.660 state=candidate
+candidate vod=2869682753 youtube=_Q-dV2V2g5s score=0.658 state=candidate
+candidate vod=2869682753 youtube=XR0-lJLW_rs score=0.658 state=candidate
+candidate vod=2869682753 youtube=TEHaNIT7eZs score=0.647 state=candidate
+candidate vod=2869682753 youtube=favxANUu9O4 score=0.644 state=candidate
+candidate vod=2869682753 youtube=OKO05-GPKyI score=0.643 state=candidate
+candidate vod=2869682753 youtube=fSMIJVnlB_Y score=0.607 state=candidate
+global source assignment: videos=19 vods=8 matcher=stdlib-coarse policy=global-source-assignment-v1
+assignment 1/19: youtube=SynOBrPYbV0 evaluated=1/8
+metadata cache hit: youtube/SynOBrPYbV0 age=1105s
+transcript cache stale: twitch/2861744268 reason=quality=invalid/hallucination_loop dominant_ratio=0.9906 unique_ratio=0.0024; ignored during audio-first phase
+audio fallback anchor 1: yt=905.5s twitch=23008.0s similarity=0.7392 second=0.7361 margin=0.0031 search=global
+audio fallback anchor 2: yt=3296.2s twitch=24626.5s similarity=0.8267 second=0.7717 margin=0.0550 search=forward-fallback
+audio fallback anchor 3: yt=5870.8s twitch=25913.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 4: yt=8077.6s twitch=27016.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 1: yt=905.5s twitch=7080.5s similarity=0.7987 second=0.7365 margin=0.0622 search=global
+audio fallback anchor 2: yt=3296.2s twitch=20752.5s similarity=0.7948 second=0.7878 margin=0.0070 search=forward-fallback
+audio fallback anchor 3: yt=5870.8s twitch=22561.5s similarity=0.7427 second=0.7294 margin=0.0133 search=forward-fallback
+audio fallback anchor 4: yt=8077.6s twitch=23948.0s similarity=0.7425 second=0.7192 margin=0.0233 search=forward-fallback
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2864229186.%(ext)s https://www.twitch.tv/videos/2864229186
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2864229186
+[twitch:vod] 2864229186: Downloading stream metadata GraphQL
+[twitch:vod] 2864229186: Downloading video access token GraphQL
+assignment failed/partial youtube=SynOBrPYbV0: yt-dlp audio fetch failed with code 3221225786: [twitch:vod] Extracting URL: https://www.twitch.tv/videos/2864229186
+[twitch:vod] 2864229186: Downloading stream metadata GraphQL
+[twitch:vod] 2864229186: Downloading video access token GraphQL
+assignment 2/19: youtube=vt1HbScE_jM evaluated=1/8
+metadata cache hit: youtube/vt1HbScE_jM age=1106s
+assignment result: youtube=vt1HbScE_jM state=unmatched primary_vod=2861744268 assigned=-
+assignment 3/19: youtube=7GBn3uVeVb8 evaluated=1/8
+metadata cache hit: youtube/7GBn3uVeVb8 age=1053s
+audio fallback anchor 1: yt=749.8s twitch=20910.0s similarity=0.8050 second=0.8022 margin=0.0028 search=global
+audio fallback anchor 2: yt=2735.7s twitch=25676.5s similarity=0.7526 second=0.7506 margin=0.0020 search=forward-fallback
+audio fallback anchor 3: yt=4874.3s twitch=26745.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 4: yt=6707.4s twitch=27662.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+assignment result: youtube=7GBn3uVeVb8 state=unmatched primary_vod=2861744268 assigned=-
+assignment 4/19: youtube=muxOFHGOpZs evaluated=1/8
+metadata cache hit: youtube/muxOFHGOpZs age=1049s
+audio fallback anchor 1: yt=829.3s twitch=3880.0s similarity=0.9240 second=0.8007 margin=0.1233 search=global
+audio fallback anchor 2: yt=3021.9s twitch=6072.5s similarity=0.8521 second=0.6347 margin=0.2174 search=predicted-window
+audio fallback anchor 3: yt=5383.1s twitch=8808.5s similarity=0.9554 second=0.6854 margin=0.2700 search=predicted-window
+audio fallback anchor 4: yt=7407.0s twitch=10832.5s similarity=0.9610 second=0.6986 margin=0.2624 search=predicted-window
+audio fallback anchor 1: yt=829.3s twitch=9930.0s similarity=0.7788 second=0.7711 margin=0.0077 search=global
+audio fallback anchor 2: yt=3021.9s twitch=22357.0s similarity=0.7001 second=0.6907 margin=0.0094 search=forward-fallback
+audio fallback anchor 3: yt=5383.1s twitch=24109.5s similarity=0.6913 second=0.6804 margin=0.0109 search=forward-fallback
+audio fallback anchor 4: yt=7407.0s twitch=25121.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2864229186.%(ext)s https://www.twitch.tv/videos/2864229186
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2864229186
+[twitch:vod] 2864229186: Downloading stream metadata GraphQL
+[twitch:vod] 2864229186: Downloading video access token GraphQL
+assignment failed/partial youtube=muxOFHGOpZs: yt-dlp audio fetch failed with code 3221225786: [twitch:vod] Extracting URL: https://www.twitch.tv/videos/2864229186
+[twitch:vod] 2864229186: Downloading stream metadata GraphQL
+[twitch:vod] 2864229186: Downloading video access token GraphQL
+assignment 5/19: youtube=Plcc-06LY-A evaluated=1/8
+metadata cache hit: youtube/Plcc-06LY-A age=891s
+audio fallback anchor 1: yt=1045.5s twitch=22558.0s similarity=0.7173 second=0.7072 margin=0.0101 search=global
+audio fallback anchor 2: yt=3800.2s twitch=25399.5s similarity=0.8303 second=0.8243 margin=0.0060 search=predicted-window
+audio fallback anchor 3: yt=6766.8s twitch=26882.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 4: yt=9309.6s twitch=28153.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 1: yt=1045.5s twitch=13418.0s similarity=0.7249 second=0.6984 margin=0.0265 search=global
+audio fallback anchor 2: yt=3800.2s twitch=20099.0s similarity=0.8432 second=0.8408 margin=0.0024 search=forward-fallback
+audio fallback anchor 3: yt=6766.8s twitch=21778.5s similarity=0.7074 second=0.6951 margin=0.0123 search=forward-fallback
+audio fallback anchor 4: yt=9309.6s twitch=24370.0s similarity=0.7544 second=0.6705 margin=0.0839 search=predicted-window
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2864229186.%(ext)s https://www.twitch.tv/videos/2864229186
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2864229186
+[twitch:vod] 2864229186: Downloading stream metadata GraphQL
+[twitch:vod] 2864229186: Downloading video access token GraphQL
+[twitch:vod] 2864229186: Downloading m3u8 information
+[twitch:vod] 2864229186: Downloading storyboard metadata JSON
+[info] v2864229186: Downloading 1 format(s): Audio_Only
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 2484
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2864229186.mp4
+assignment failed/partial youtube=Plcc-06LY-A: yt-dlp audio fetch failed with code 3221225786: [twitch:vod] Extracting URL: https://www.twitch.tv/videos/2864229186
+[twitch:vod] 2864229186: Downloading stream metadata GraphQL
+[twitch:vod] 2864229186: Downloading video access token GraphQL
+[twitch:vod] 2864229186: Downloading m3u8 information
+[twitch:vod] 2864229186: Downloading storyboard metadata JSON
+[info] v2864229186: Downloading 1 format(s): Audio_Only
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 2484
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2864229186.mp4
+assignment 6/19: youtube=QcJ0mjcA62k evaluated=1/8
+metadata cache hit: youtube/QcJ0mjcA62k age=890s
+audio fallback anchor 1: yt=798.0s twitch=4872.0s similarity=0.7028 second=0.7018 margin=0.0010 search=global
+audio fallback anchor 2: yt=2909.2s twitch=7267.5s similarity=0.7438 second=0.6932 margin=0.0506 search=predicted-window
+audio fallback anchor 3: yt=5182.8s twitch=15287.5s similarity=0.7305 second=0.7274 margin=0.0031 search=forward-fallback
+audio fallback anchor 4: yt=7131.6s twitch=25135.5s similarity=0.8091 second=0.7745 margin=0.0346 search=forward-fallback
+audio fallback anchor 1: yt=798.0s twitch=18704.0s similarity=0.7148 second=0.7143 margin=0.0005 search=global
+audio fallback anchor 2: yt=2909.2s twitch=21838.5s similarity=0.7298 second=0.7041 margin=0.0257 search=forward-fallback
+audio fallback anchor 3: yt=5182.8s twitch=23431.5s similarity=0.6980 second=0.6675 margin=0.0305 search=forward-fallback
+audio fallback anchor 4: yt=7131.6s twitch=24498.5s similarity=0.7254 second=0.6871 margin=0.0383 search=forward-fallback
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2864229186.%(ext)s https://www.twitch.tv/videos/2864229186
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2864229186
+[twitch:vod] 2864229186: Downloading stream metadata GraphQL
+[twitch:vod] 2864229186: Downloading video access token GraphQL
+[twitch:vod] 2864229186: Downloading m3u8 information
+[twitch:vod] 2864229186: Downloading storyboard metadata JSON
+[info] v2864229186: Downloading 1 format(s): Audio_Only
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 2484
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2864229186.mp4
+[download] v2864229186   0.0%    849.32B/s ETA Unknown frag 0/2484
+[download] v2864229186   0.3%    1.31MiB/s ETA Unknown frag 7/2484
+[download] v2864229186   0.9%    2.77MiB/s ETA 04:03 frag 23/2484
+[download] v2864229186   1.4%    3.02MiB/s ETA 03:31 frag 36/2484
+[download] v2864229186   1.9%    3.35MiB/s ETA 03:09 frag 47/2484
+[download] v2864229186   2.5%    3.38MiB/s ETA 03:00 frag 63/2484
+[download] v2864229186   3.1%    3.47MiB/s ETA 02:55 frag 78/2484
+[download] v2864229186   3.8%    3.87MiB/s ETA 02:40 frag 94/2484
+[download] v2864229186   4.5%    3.94MiB/s ETA 02:32 frag 112/2484
+[download] v2864229186   5.1%    4.05MiB/s ETA 02:26 frag 126/2484
+[download] v2864229186   5.7%    3.95MiB/s ETA 02:28 frag 142/2484
+[download] v2864229186   6.2%    3.61MiB/s ETA 02:35 frag 155/2484
+[download] v2864229186   6.8%    3.61MiB/s ETA 02:38 frag 170/2484
+[download] v2864229186   7.3%    3.41MiB/s ETA 02:43 frag 182/2484
+[download] v2864229186   8.1%    3.89MiB/s ETA 02:33 frag 202/2484
+[download] v2864229186   8.8%    3.97MiB/s ETA 02:25 frag 219/2484
+[download] v2864229186   9.5%    4.25MiB/s ETA 02:14 frag 235/2484
+[download] v2864229186  10.2%    4.30MiB/s ETA 02:10 frag 255/2484
+[download] v2864229186  11.0%    4.51MiB/s ETA 02:04 frag 273/2484
+[download] v2864229186  11.5%    4.20MiB/s ETA 02:09 frag 286/2484
+[download] v2864229186  12.0%    3.70MiB/s ETA 02:20 frag 299/2484
+[download] v2864229186  12.6%    3.26MiB/s ETA 02:36 frag 312/2484
+[download] v2864229186  13.4%    3.81MiB/s ETA 02:28 frag 333/2484
+[download] v2864229186  14.2%    4.39MiB/s ETA 02:10 frag 351/2484
+[download] v2864229186  14.8%    4.36MiB/s ETA 02:03 frag 367/2484
+[download] v2864229186  15.3%    3.91MiB/s ETA 02:08 frag 380/2484
+[download] v2864229186  15.8%    3.46MiB/s ETA 02:23 frag 393/2484
+[download] v2864229186  16.6%    3.69MiB/s ETA 02:21 frag 412/2484
+[download] v2864229186  17.4%    4.14MiB/s ETA 02:11 frag 432/2484
+[download] v2864229186  18.0%    4.33MiB/s ETA 02:00 frag 448/2484
+[download] v2864229186  18.6%    4.29MiB/s ETA 01:56 frag 462/2484
+[download] v2864229186  19.3%    4.08MiB/s ETA 01:59 frag 479/2484
+[download] v2864229186  20.0%    4.19MiB/s ETA 01:58 frag 497/2484
+[download] v2864229186  20.7%    4.23MiB/s ETA 01:56 frag 513/2484
+[download] v2864229186  21.3%    4.00MiB/s ETA 01:59 frag 529/2484
+[download] v2864229186  21.8%    3.66MiB/s ETA 02:05 frag 541/2484
+[download] v2864229186  22.3%    3.38MiB/s ETA 02:17 frag 555/2484
+[download] v2864229186  23.1%    3.70MiB/s ETA 02:12 frag 575/2484
+[download] v2864229186  23.8%    4.01MiB/s ETA 02:03 frag 591/2484
+[download] v2864229186  24.5%    4.28MiB/s ETA 01:53 frag 608/2484
+[download] v2864229186  25.1%    4.04MiB/s ETA 01:51 frag 623/2484
+[download] v2864229186  25.8%    3.99MiB/s ETA 01:54 frag 640/2484
+[download] v2864229186  26.4%    4.14MiB/s ETA 01:50 frag 657/2484
+[download] v2864229186  27.0%    4.03MiB/s ETA 01:51 frag 671/2484
+[download] v2864229186  27.5%    3.79MiB/s ETA 01:55 frag 684/2484
+[download] v2864229186  28.2%    3.51MiB/s ETA 02:02 frag 700/2484
+[download] v2864229186  28.8%    3.60MiB/s ETA 02:02 frag 715/2484
+[download] v2864229186  29.3%    3.53MiB/s ETA 02:01 frag 728/2484
+[download] v2864229186  29.8%    3.40MiB/s ETA 02:05 frag 741/2484
+[download] v2864229186  30.4%    3.31MiB/s ETA 02:06 frag 754/2484
+[download] v2864229186  31.0%    3.44MiB/s ETA 02:03 frag 769/2484
+[download] v2864229186  31.5%    3.51MiB/s ETA 02:00 frag 783/2484
+[download] v2864229186  32.1%    3.55MiB/s ETA 01:59 frag 797/2484
+[download] v2864229186  32.7%    3.59MiB/s ETA 01:56 frag 812/2484
+[download] v2864229186  33.3%    3.59MiB/s ETA 01:54 frag 827/2484
+[download] v2864229186  33.8%    3.43MiB/s ETA 01:57 frag 839/2484
+[download] v2864229186  34.4%    3.37MiB/s ETA 02:00 frag 854/2484
+[download] v2864229186  34.9%    3.29MiB/s ETA 02:01 frag 867/2484
+[download] v2864229186  35.5%    3.55MiB/s ETA 01:54 frag 883/2484
+[download] v2864229186  36.2%    3.64MiB/s ETA 01:50 frag 900/2484
+[download] v2864229186  36.8%    3.74MiB/s ETA 01:44 frag 914/2484
+[download] v2864229186  37.5%    3.99MiB/s ETA 01:39 frag 932/2484
+[download] v2864229186  38.1%    3.89MiB/s ETA 01:37 frag 946/2484
+[download] v2864229186  38.7%    3.84MiB/s ETA 01:38 frag 961/2484
+[download] v2864229186  39.3%    3.83MiB/s ETA 01:36 frag 977/2484
+[download] v2864229186  40.1%    4.03MiB/s ETA 01:34 frag 996/2484
+[download] v2864229186  40.6%    4.02MiB/s ETA 01:31 frag 1009/2484
+[download] v2864229186  41.2%    3.87MiB/s ETA 01:32 frag 1024/2484
+[download] v2864229186  41.9%    3.70MiB/s ETA 01:34 frag 1041/2484
+[download] v2864229186  42.5%    3.86MiB/s ETA 01:31 frag 1054/2484
+[download] v2864229186  43.2%    3.99MiB/s ETA 01:29 frag 1072/2484
+[download] v2864229186  43.7%    3.82MiB/s ETA 01:29 frag 1085/2484
+[download] v2864229186  44.2%    3.60MiB/s ETA 01:34 frag 1097/2484
+[download] v2864229186  44.9%    3.43MiB/s ETA 01:38 frag 1115/2484
+[download] v2864229186  45.4%    3.54MiB/s ETA 01:36 frag 1128/2484
+[download] v2864229186  46.0%    3.53MiB/s ETA 01:34 frag 1142/2484
+[download] v2864229186  46.5%    3.31MiB/s ETA 01:36 frag 1154/2484
+[download] v2864229186  47.3%    3.69MiB/s ETA 01:32 frag 1175/2484
+[download] v2864229186  47.8%    3.80MiB/s ETA 01:26 frag 1188/2484
+[download] v2864229186  48.5%    4.13MiB/s ETA 01:20 frag 1205/2484
+[download] v2864229186  49.1%    3.77MiB/s ETA 01:20 frag 1220/2484
+[download] v2864229186  49.6%    3.55MiB/s ETA 01:25 frag 1231/2484
+[download] v2864229186  50.1%    3.32MiB/s ETA 01:31 frag 1245/2484
+[download] v2864229186  50.7%    3.42MiB/s ETA 01:29 frag 1260/2484
+[download] v2864229186  51.4%    3.83MiB/s ETA 01:22 frag 1278/2484
+[download] v2864229186  52.0%    3.80MiB/s ETA 01:18 frag 1292/2484
+[download] v2864229186  52.7%    3.91MiB/s ETA 01:15 frag 1308/2484
+[download] v2864229186  53.2%    3.74MiB/s ETA 01:15 frag 1322/2484
+[download] v2864229186  53.9%    3.84MiB/s ETA 01:15 frag 1338/2484
+assignment failed/partial youtube=QcJ0mjcA62k: yt-dlp audio fetch failed with code 3221225786: 4 frag 1142/2484
+[download] v2864229186  46.5%    3.31MiB/s ETA 01:36 frag 1154/2484
+[download] v2864229186  47.3%    3.69MiB/s ETA 01:32 frag 1175/2484
+[download] v2864229186  47.8%    3.80MiB/s ETA 01:26 frag 1188/2484
+[download] v2864229186  48.5%    4.13MiB/s ETA 01:20 frag 1205/2484
+[download] v2864229186  49.1%    3.77MiB/s ETA 01:20 frag 1220/2484
+[download] v2864229186  49.6%    3.55MiB/s ETA 01:25 frag 1231/2484
+[download] v2864229186  50.1%    3.32MiB/s ETA 01:31 frag 1245/2484
+[download] v2864229186  50.7%    3.42MiB/s ETA 01:29 frag 1260/2484
+[download] v2864229186  51.4%    3.83MiB/s ETA 01:22 frag 1278/2484
+[download] v2864229186  52.0%    3.80MiB/s ETA 01:18 frag 1292/2484
+[download] v2864229186  52.7%    3.91MiB/s ETA 01:15 frag 1308/2484
+[download] v2864229186  53.2%    3.74MiB/s ETA 01:15 frag 1322/2484
+[download] v2864229186  53.9%    3.84MiB/s ETA 01:15 frag 1338/2484
+assignment 7/19: youtube=_Q-dV2V2g5s evaluated=1/8
+metadata cache hit: youtube/_Q-dV2V2g5s age=983s
+audio fallback anchor 1: yt=761.4s twitch=23648.0s similarity=0.7227 second=0.7210 margin=0.0017 search=global
+audio fallback anchor 2: yt=2777.4s twitch=24864.0s similarity=0.8096 second=0.7604 margin=0.0492 search=forward-fallback
+audio fallback anchor 3: yt=4948.6s twitch=25949.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 4: yt=6809.5s twitch=26879.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 1: yt=761.4s twitch=2956.0s similarity=0.7404 second=0.7390 margin=0.0014 search=global
+audio fallback anchor 2: yt=2777.4s twitch=13738.0s similarity=0.7970 second=0.7952 margin=0.0018 search=forward-fallback
+audio fallback anchor 3: yt=4948.6s twitch=16113.0s similarity=0.7101 second=0.6551 margin=0.0550 search=predicted-window
+audio fallback anchor 4: yt=6809.5s twitch=18803.0s similarity=0.8224 second=0.7727 margin=0.0497 search=predicted-window
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2864229186.%(ext)s https://www.twitch.tv/videos/2864229186
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2864229186
+[twitch:vod] 2864229186: Downloading stream metadata GraphQL
+[twitch:vod] 2864229186: Downloading video access token GraphQL
+[twitch:vod] 2864229186: Downloading m3u8 information
+[twitch:vod] 2864229186: Downloading storyboard metadata JSON
+[info] v2864229186: Downloading 1 format(s): Audio_Only
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 2484
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2864229186.mp4
+[download] K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2864229186.mp4.part-Frag1345 has already been downloaded
+[download] K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2864229186.mp4.part-Frag1346 has already been downloaded
+[download] v2864229186  54.0%      0.00B/s ETA Unknown frag 1342/2484
+[download] K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2864229186.mp4.part-Frag1347 has already been downloaded
+[download] v2864229186  54.5%    2.61MiB/s ETA Unknown frag 1353/2484
+[download] v2864229186  55.2%    3.45MiB/s ETA 01:22 frag 1370/2484
+[download] v2864229186  55.9%    3.65MiB/s ETA 01:18 frag 1388/2484
+[download] v2864229186  56.5%    4.15MiB/s ETA 01:09 frag 1404/2484
+[download] v2864229186  57.3%    4.21MiB/s ETA 01:05 frag 1423/2484
+[download] v2864229186  58.0%    4.35MiB/s ETA 00:59 frag 1440/2484
+[download] v2864229186  58.5%    4.07MiB/s ETA 01:01 frag 1454/2484
+assignment failed/partial youtube=_Q-dV2V2g5s: yt-dlp audio fetch failed with code 3221225786: ube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2864229186.mp4.part-Frag1346 has already been downloaded
+[download] v2864229186  54.0%      0.00B/s ETA Unknown frag 1342/2484
+[download] K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2864229186.mp4.part-Frag1347 has already been downloaded
+[download] v2864229186  54.5%    2.61MiB/s ETA Unknown frag 1353/2484
+[download] v2864229186  55.2%    3.45MiB/s ETA 01:22 frag 1370/2484
+[download] v2864229186  55.9%    3.65MiB/s ETA 01:18 frag 1388/2484
+[download] v2864229186  56.5%    4.15MiB/s ETA 01:09 frag 1404/2484
+[download] v2864229186  57.3%    4.21MiB/s ETA 01:05 frag 1423/2484
+[download] v2864229186  58.0%    4.35MiB/s ETA 00:59 frag 1440/2484
+[download] v2864229186  58.5%    4.07MiB/s ETA 01:01 frag 1454/2484
+assignment 8/19: youtube=iEZOwN5xssU evaluated=1/8
+metadata cache hit: youtube/iEZOwN5xssU age=1169s
+audio fallback anchor 1: yt=521.5s twitch=20760.5s similarity=0.9588 second=0.7844 margin=0.1744 search=global
+audio fallback anchor 2: yt=1913.8s twitch=22152.5s similarity=0.9240 second=0.7705 margin=0.1535 search=predicted-window
+audio fallback anchor 3: yt=3413.2s twitch=23652.0s similarity=0.9797 second=0.7685 margin=0.2112 search=predicted-window
+audio fallback anchor 4: yt=4698.4s twitch=24937.0s similarity=0.9788 second=0.7620 margin=0.2168 search=predicted-window
+audio fallback anchor 1: yt=521.5s twitch=4686.0s similarity=0.7949 second=0.7899 margin=0.0050 search=global
+audio fallback anchor 2: yt=1913.8s twitch=21375.0s similarity=0.8052 second=0.7962 margin=0.0090 search=forward-fallback
+audio fallback anchor 3: yt=3413.2s twitch=22198.5s similarity=0.7743 second=0.7490 margin=0.0253 search=forward-fallback
+audio fallback anchor 4: yt=4698.4s twitch=24324.0s similarity=0.8215 second=0.7366 margin=0.0849 search=predicted-window
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2864229186.%(ext)s https://www.twitch.tv/videos/2864229186
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2864229186
+[twitch:vod] 2864229186: Downloading stream metadata GraphQL
+[twitch:vod] 2864229186: Downloading video access token GraphQL
+[twitch:vod] 2864229186: Downloading m3u8 information
+[twitch:vod] 2864229186: Downloading storyboard metadata JSON
+[info] v2864229186: Downloading 1 format(s): Audio_Only
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 2484
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2864229186.mp4
+[download] K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2864229186.mp4.part-Frag1457 has already been downloaded
+[download] v2864229186  58.6%      0.00B/s ETA Unknown frag 1456/2484
+[download] K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2864229186.mp4.part-Frag1459 has already been downloaded
+[download] K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2864229186.mp4.part-Frag1460 has already been downloaded
+[download] v2864229186  59.2%    3.06MiB/s ETA Unknown frag 1471/2484
+[download] v2864229186  60.0%    4.04MiB/s ETA 01:04 frag 1491/2484
+[download] v2864229186  60.9%    4.52MiB/s ETA 00:56 frag 1512/2484
+[download] v2864229186  61.5%    4.65MiB/s ETA 00:51 frag 1526/2484
+[download] v2864229186  62.1%    4.39MiB/s ETA 00:52 frag 1543/2484
+[download] v2864229186  62.9%    4.21MiB/s ETA 00:54 frag 1562/2484
+[download] v2864229186  63.4%    3.97MiB/s ETA 00:56 frag 1576/2484
+[download] v2864229186  64.0%    3.90MiB/s ETA 00:56 frag 1590/2484
+[download] v2864229186  64.9%    3.90MiB/s ETA 00:55 frag 1611/2484
+[download] v2864229186  65.5%    4.10MiB/s ETA 00:52 frag 1626/2484
+[download] v2864229186  66.1%    4.25MiB/s ETA 00:49 frag 1641/2484
+[download] v2864229186  66.6%    3.75MiB/s ETA 00:52 frag 1655/2484
+[download] v2864229186  67.3%    3.90MiB/s ETA 00:52 frag 1671/2484
+[download] v2864229186  68.1%    3.93MiB/s ETA 00:52 frag 1691/2484
+[download] v2864229186  68.7%    4.15MiB/s ETA 00:47 frag 1705/2484
+[download] v2864229186  69.3%    4.08MiB/s ETA 00:47 frag 1722/2484
+[download] v2864229186  69.9%    3.92MiB/s ETA 00:46 frag 1737/2484
+[download] v2864229186  70.6%    3.79MiB/s ETA 00:48 frag 1753/2484
+[download] v2864229186  71.2%    3.69MiB/s ETA 00:48 frag 1769/2484
+[download] v2864229186  71.8%    3.73MiB/s ETA 00:47 frag 1783/2484
+[download] v2864229186  72.4%    3.71MiB/s ETA 00:46 frag 1799/2484
+[download] v2864229186  73.2%    4.11MiB/s ETA 00:41 frag 1818/2484
+[download] v2864229186  73.8%    4.13MiB/s ETA 00:39 frag 1832/2484
+[download] v2864229186  74.4%    4.21MiB/s ETA 00:38 frag 1849/2484
+[download] v2864229186  74.9%    3.56MiB/s ETA 00:41 frag 1860/2484
+[download] v2864229186  75.5%    3.44MiB/s ETA 00:43 frag 1875/2484
+[download] v2864229186  76.3%    3.79MiB/s ETA 00:40 frag 1896/2484
+[download] v2864229186  76.9%    4.10MiB/s ETA 00:35 frag 1909/2484
+[download] v2864229186  77.5%    4.23MiB/s ETA 00:33 frag 1926/2484
+[download] v2864229186  78.1%    3.75MiB/s ETA 00:34 frag 1940/2484
+[download] v2864229186  78.9%    4.04MiB/s ETA 00:33 frag 1959/2484
+[download] v2864229186  79.5%    4.00MiB/s ETA 00:32 frag 1975/2484
+[download] v2864229186  79.9%    3.83MiB/s ETA 00:32 frag 1984/2484
+[download] v2864229186  80.4%    3.29MiB/s ETA 00:34 frag 1997/2484
+[download] v2864229186  81.1%    3.20MiB/s ETA 00:36 frag 2014/2484
+[download] v2864229186  81.6%    3.44MiB/s ETA 00:34 frag 2027/2484
+[download] v2864229186  82.2%    3.56MiB/s ETA 00:31 frag 2043/2484
+[download] v2864229186  82.8%    3.39MiB/s ETA 00:31 frag 2056/2484
+[download] v2864229186  83.4%    3.46MiB/s ETA 00:30 frag 2071/2484
+[download] v2864229186  84.0%    3.54MiB/s ETA 00:28 frag 2086/2484
+[download] v2864229186  84.8%    4.15MiB/s ETA 00:24 frag 2105/2484
+[download] v2864229186  85.4%    4.16MiB/s ETA 00:22 frag 2121/2484
+[download] v2864229186  86.1%    4.33MiB/s ETA 00:20 frag 2139/2484
+[download] v2864229186  86.9%    4.16MiB/s ETA 00:20 frag 2159/2484
+[download] v2864229186  87.5%    4.24MiB/s ETA 00:18 frag 2173/2484
+[download] v2864229186  88.3%    4.43MiB/s ETA 00:17 frag 2193/2484
+[download] v2864229186  89.1%    4.41MiB/s ETA 00:15 frag 2213/2484
+[download] v2864229186  89.7%    4.31MiB/s ETA 00:15 frag 2227/2484
+[download] v2864229186  90.3%    4.15MiB/s ETA 00:14 frag 2243/2484
+[download] v2864229186  91.0%    4.09MiB/s ETA 00:13 frag 2261/2484
+[download] v2864229186  91.6%    3.95MiB/s ETA 00:13 frag 2274/2484
+[download] v2864229186  92.1%    3.76MiB/s ETA 00:13 frag 2290/2484
+[download] v2864229186  92.8%    3.71MiB/s ETA 00:12 frag 2306/2484
+[download] v2864229186  93.5%    4.10MiB/s ETA 00:10 frag 2323/2484
+[download] v2864229186  94.1%    4.09MiB/s ETA 00:09 frag 2338/2484
+[download] v2864229186  94.9%    4.10MiB/s ETA 00:08 frag 2357/2484
+[download] v2864229186  95.5%    3.98MiB/s ETA 00:07 frag 2372/2484
+[download] v2864229186  96.1%    4.11MiB/s ETA 00:06 frag 2387/2484
+[download] v2864229186  96.7%    3.97MiB/s ETA 00:05 frag 2403/2484
+[download] v2864229186  97.3%    3.69MiB/s ETA 00:04 frag 2417/2484
+[download] v2864229186  98.0%    3.74MiB/s ETA 00:04 frag 2434/2484
+[download] v2864229186  98.4%    3.57MiB/s ETA 00:03 frag 2445/2484
+[download] v2864229186  98.9%    3.45MiB/s ETA 00:02 frag 2457/2484
+[download] v2864229186  99.6%    3.28MiB/s ETA 00:01 frag 2475/2484
+[download] v2864229186 100.0% 9.47MiB/s ETA NA frag NA/NA
+audio fingerprint cached: twitch/2864229186 frames=49666
+audio fallback anchor 1: yt=521.5s twitch=22640.5s similarity=0.7961 second=0.7748 margin=0.0213 search=global
+audio fallback anchor 2: yt=1913.8s twitch=23909.5s similarity=0.8022 second=0.7545 margin=0.0477 search=forward-fallback
+audio fallback anchor 3: yt=3413.2s twitch=24664.5s similarity=0.7510 second=0.7106 margin=0.0404 search=forward-fallback
+audio fallback anchor 4: yt=4698.4s twitch=25307.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 1: yt=521.5s twitch=13268.0s similarity=0.7856 second=0.7756 margin=0.0100 search=global
+audio fallback anchor 2: yt=1913.8s twitch=24348.5s similarity=0.7903 second=0.7859 margin=0.0044 search=forward-fallback
+audio fallback anchor 3: yt=3413.2s twitch=30162.5s similarity=0.8025 second=0.7734 margin=0.0291 search=forward-fallback
+audio fallback anchor 4: yt=4698.4s twitch=32043.0s similarity=0.7959 second=0.7753 margin=0.0206 search=predicted-window
+audio fallback anchor 1: yt=521.5s twitch=21864.0s similarity=0.8092 second=0.7801 margin=0.0291 search=global
+audio fallback anchor 2: yt=1913.8s twitch=24125.5s similarity=0.7614 second=0.7437 margin=0.0177 search=predicted-window
+audio fallback anchor 3: yt=3413.2s twitch=26547.5s similarity=0.8396 second=0.7656 margin=0.0740 search=forward-fallback
+audio fallback anchor 4: yt=4698.4s twitch=27190.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+assignment result: youtube=iEZOwN5xssU state=verified primary_vod=2861744268 assigned=2861744268
+assignment 9/19: youtube=XR0-lJLW_rs evaluated=1/8
+metadata cache hit: youtube/XR0-lJLW_rs age=1195s
+audio fallback anchor 1: yt=1134.6s twitch=9082.0s similarity=0.7361 second=0.7198 margin=0.0163 search=global
+audio fallback anchor 2: yt=4121.0s twitch=13159.5s similarity=0.7290 second=0.7021 margin=0.0269 search=forward-fallback
+audio fallback anchor 3: yt=7337.0s twitch=22644.0s similarity=0.7676 second=0.7582 margin=0.0094 search=forward-fallback
+audio fallback anchor 4: yt=10093.7s twitch=24538.0s similarity=0.7648 second=0.7600 margin=0.0048 search=forward-fallback
+audio fallback anchor 1: yt=1134.6s twitch=13814.0s similarity=0.9736 second=0.7105 margin=0.2631 search=global
+audio fallback anchor 2: yt=4121.0s twitch=16800.0s similarity=0.9641 second=0.6917 margin=0.2724 search=predicted-window
+audio fallback anchor 3: yt=7337.0s twitch=20169.0s similarity=0.9230 second=0.6963 margin=0.2267 search=predicted-window
+audio fallback anchor 4: yt=10093.7s twitch=22925.5s similarity=0.9835 second=0.7710 margin=0.2125 search=predicted-window
+audio fallback anchor 1: yt=1134.6s twitch=12148.0s similarity=0.7282 second=0.7186 margin=0.0096 search=global
+audio fallback anchor 2: yt=4121.0s twitch=22851.5s similarity=0.7104 second=0.7054 margin=0.0050 search=forward-fallback
+audio fallback anchor 3: yt=7337.0s twitch=24583.0s similarity=0.7340 second=0.7073 margin=0.0267 search=forward-fallback
+audio fallback anchor 4: yt=10093.7s twitch=25961.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 1: yt=1134.6s twitch=19708.0s similarity=0.7120 second=0.7098 margin=0.0022 search=global
+audio fallback anchor 2: yt=4121.0s twitch=24874.5s similarity=0.7151 second=0.7022 margin=0.0129 search=forward-fallback
+audio fallback anchor 3: yt=7337.0s twitch=28325.0s similarity=0.7406 second=0.7274 margin=0.0132 search=predicted-window
+audio fallback anchor 4: yt=10093.7s twitch=30879.0s similarity=0.7764 second=0.7587 margin=0.0177 search=forward-fallback
+assignment result: youtube=XR0-lJLW_rs state=verified primary_vod=2863504919 assigned=2863504919
+assignment 10/19: youtube=TEHaNIT7eZs evaluated=1/8
+metadata cache hit: youtube/TEHaNIT7eZs age=1194s
+audio fallback anchor 1: yt=835.3s twitch=18123.5s similarity=0.7720 second=0.7543 margin=0.0177 search=global
+audio fallback anchor 2: yt=3043.5s twitch=19931.0s similarity=0.7626 second=0.7602 margin=0.0024 search=forward-fallback
+audio fallback anchor 3: yt=5421.5s twitch=22048.5s similarity=0.7682 second=0.7667 margin=0.0015 search=forward-fallback
+audio fallback anchor 4: yt=7459.8s twitch=25117.5s similarity=0.7266 second=0.7196 margin=0.0070 search=forward-fallback
+audio fallback anchor 1: yt=835.3s twitch=3080.0s similarity=0.7755 second=0.7717 margin=0.0038 search=global
+audio fallback anchor 2: yt=3043.5s twitch=18931.5s similarity=0.7678 second=0.7535 margin=0.0143 search=forward-fallback
+audio fallback anchor 3: yt=5421.5s twitch=23800.0s similarity=0.8114 second=0.7725 margin=0.0389 search=forward-fallback
+audio fallback anchor 4: yt=7459.8s twitch=24819.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 1: yt=835.3s twitch=24598.0s similarity=0.7810 second=0.7606 margin=0.0204 search=global
+audio fallback anchor 2: yt=3043.5s twitch=25702.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 3: yt=5421.5s twitch=26891.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 4: yt=7459.8s twitch=27910.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 1: yt=835.3s twitch=3504.0s similarity=0.7858 second=0.7797 margin=0.0061 search=global
+audio fallback anchor 2: yt=3043.5s twitch=28536.0s similarity=0.7885 second=0.7653 margin=0.0232 search=forward-fallback
+audio fallback anchor 3: yt=5421.5s twitch=31808.0s similarity=0.8154 second=0.7540 margin=0.0614 search=predicted-window
+audio fallback anchor 4: yt=7459.8s twitch=32913.5s similarity=0.6841 second=0.6321 margin=0.0520 search=forward-fallback
+audio fallback anchor 1: yt=835.3s twitch=2379.5s similarity=0.9921 second=0.7870 margin=0.2051 search=global
+audio fallback anchor 2: yt=3043.5s twitch=4587.5s similarity=0.9928 second=0.7615 margin=0.2313 search=predicted-window
+audio fallback anchor 3: yt=5421.5s twitch=6966.0s similarity=0.9957 second=0.7484 margin=0.2473 search=predicted-window
+audio fallback anchor 4: yt=7459.8s twitch=9312.5s similarity=0.8975 second=0.7543 margin=0.1432 search=forward-fallback
+audio fallback anchor 1: yt=835.3s twitch=14074.0s similarity=0.7763 second=0.7603 margin=0.0160 search=global
+audio fallback anchor 2: yt=3043.5s twitch=17944.5s similarity=0.7469 second=0.7444 margin=0.0025 search=forward-fallback
+audio fallback anchor 3: yt=5421.5s twitch=26050.0s similarity=0.7670 second=0.7655 margin=0.0015 search=forward-fallback
+audio fallback anchor 4: yt=7459.8s twitch=27126.0s similarity=0.7176 second=0.6754 margin=0.0422 search=forward-fallback
+audio fallback anchor 1: yt=835.3s twitch=2708.0s similarity=0.7702 second=0.7590 margin=0.0112 search=global
+audio fallback anchor 2: yt=3043.5s twitch=15651.5s similarity=0.7562 second=0.7520 margin=0.0042 search=forward-fallback
+audio fallback anchor 3: yt=5421.5s twitch=20868.0s similarity=0.8036 second=0.7968 margin=0.0068 search=forward-fallback
+audio fallback anchor 4: yt=7459.8s twitch=27095.0s similarity=0.7467 second=0.7381 margin=0.0086 search=forward-fallback
+assignment result: youtube=TEHaNIT7eZs state=verified primary_vod=2868004694 assigned=2868004694
+assignment 11/19: youtube=favxANUu9O4 evaluated=0/8
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=favxANUu9O4
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-favxANUu9O4.%(ext)s https://www.youtube.com/watch?v=favxANUu9O4
+[youtube] Extracting URL: https://www.youtube.com/watch?v=favxANUu9O4
+[youtube] favxANUu9O4: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] favxANUu9O4: Downloading visionos player API JSON
+[youtube] favxANUu9O4: Downloading m3u8 information
+[info] favxANUu9O4: Downloading 1 format(s): 251
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-favxANUu9O4.webm
+[download] favxANUu9O4   0.0%  986.66KiB/s ETA 01:53 frag NA/NA
+[download] favxANUu9O4  33.7%   19.80MiB/s ETA 00:03 frag NA/NA
+[download] favxANUu9O4  62.4%    3.55MiB/s ETA 00:11 frag NA/NA
+[download] favxANUu9O4  81.3%   19.00MiB/s ETA 00:01 frag NA/NA
+[download] favxANUu9O4 100.0% 29.38MiB/s ETA NA frag NA/NA
+assignment failed/partial youtube=favxANUu9O4: ffmpeg feature extraction failed: 
+assignment 12/19: youtube=OKO05-GPKyI evaluated=0/8
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=OKO05-GPKyI
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-OKO05-GPKyI.%(ext)s https://www.youtube.com/watch?v=OKO05-GPKyI
+[youtube] Extracting URL: https://www.youtube.com/watch?v=OKO05-GPKyI
+[youtube] OKO05-GPKyI: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] OKO05-GPKyI: Downloading visionos player API JSON
+[youtube] OKO05-GPKyI: Downloading m3u8 information
+[info] OKO05-GPKyI: Downloading 1 format(s): 251
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-OKO05-GPKyI.webm
+[download] OKO05-GPKyI   0.0%  Unknown B/s ETA Unknown frag NA/NA
+[download] OKO05-GPKyI  18.6%    8.79MiB/s ETA 00:09 frag NA/NA
+[download] OKO05-GPKyI  36.5%   18.00MiB/s ETA 00:03 frag NA/NA
+[download] OKO05-GPKyI  52.8%   21.10MiB/s ETA 00:02 frag NA/NA
+assignment failed/partial youtube=OKO05-GPKyI: yt-dlp audio fetch failed with code 9: ript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] OKO05-GPKyI: Downloading visionos player API JSON
+[youtube] OKO05-GPKyI: Downloading m3u8 information
+[info] OKO05-GPKyI: Downloading 1 format(s): 251
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-OKO05-GPKyI.webm
+[download] OKO05-GPKyI   0.0%  Unknown B/s ETA Unknown frag NA/NA
+[download] OKO05-GPKyI  18.6%    8.79MiB/s ETA 00:09 frag NA/NA
+[download] OKO05-GPKyI  36.5%   18.00MiB/s ETA 00:03 frag NA/NA
+[download] OKO05-GPKyI  52.8%   21.10MiB/s ETA 00:02 frag NA/NA
+assignment 13/19: youtube=fSMIJVnlB_Y evaluated=0/8
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=fSMIJVnlB_Y
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-fSMIJVnlB_Y.%(ext)s https://www.youtube.com/watch?v=fSMIJVnlB_Y
+[youtube] Extracting URL: https://www.youtube.com/watch?v=fSMIJVnlB_Y
+[youtube] fSMIJVnlB_Y: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] fSMIJVnlB_Y: Downloading visionos player API JSON
+[youtube] fSMIJVnlB_Y: Downloading m3u8 information
+[info] fSMIJVnlB_Y: Downloading 1 format(s): 251-1
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-fSMIJVnlB_Y.webm
+[download] fSMIJVnlB_Y   0.0%  Unknown B/s ETA Unknown frag NA/NA
+[download] fSMIJVnlB_Y   8.7%    8.21MiB/s ETA 00:10 frag NA/NA
+[download] fSMIJVnlB_Y  20.9%    9.62MiB/s ETA 00:07 frag NA/NA
+[download] fSMIJVnlB_Y  29.6%    9.56MiB/s ETA 00:06 frag NA/NA
+[download] fSMIJVnlB_Y  40.2%    8.20MiB/s ETA 00:06 frag NA/NA
+[download] fSMIJVnlB_Y  44.1%   10.31MiB/s ETA 00:04 frag NA/NA
+[download] fSMIJVnlB_Y  50.6%    6.25MiB/s ETA 00:07 frag NA/NA
+[download] fSMIJVnlB_Y  61.4%    5.97MiB/s ETA 00:05 frag NA/NA
+[download] fSMIJVnlB_Y  65.8%    5.51MiB/s ETA 00:05 frag NA/NA
+assignment failed/partial youtube=fSMIJVnlB_Y: yt-dlp audio fetch failed with code 3221225786: be] fSMIJVnlB_Y: Downloading visionos player API JSON
+[youtube] fSMIJVnlB_Y: Downloading m3u8 information
+[info] fSMIJVnlB_Y: Downloading 1 format(s): 251-1
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-fSMIJVnlB_Y.webm
+[download] fSMIJVnlB_Y   0.0%  Unknown B/s ETA Unknown frag NA/NA
+[download] fSMIJVnlB_Y   8.7%    8.21MiB/s ETA 00:10 frag NA/NA
+[download] fSMIJVnlB_Y  20.9%    9.62MiB/s ETA 00:07 frag NA/NA
+[download] fSMIJVnlB_Y  29.6%    9.56MiB/s ETA 00:06 frag NA/NA
+[download] fSMIJVnlB_Y  40.2%    8.20MiB/s ETA 00:06 frag NA/NA
+[download] fSMIJVnlB_Y  44.1%   10.31MiB/s ETA 00:04 frag NA/NA
+[download] fSMIJVnlB_Y  50.6%    6.25MiB/s ETA 00:07 frag NA/NA
+[download] fSMIJVnlB_Y  61.4%    5.97MiB/s ETA 00:05 frag NA/NA
+[download] fSMIJVnlB_Y  65.8%    5.51MiB/s ETA 00:05 frag NA/NA
+assignment 14/19: youtube=nH8X1jAyoeQ evaluated=1/8
+metadata cache hit: youtube/nH8X1jAyoeQ age=1420s
+assignment result: youtube=nH8X1jAyoeQ state=unmatched primary_vod=2862622285 assigned=-
+assignment 15/19: youtube=1CuVhBjs3ns evaluated=0/8
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=1CuVhBjs3ns
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-1CuVhBjs3ns.%(ext)s https://www.youtube.com/watch?v=1CuVhBjs3ns
+[youtube] Extracting URL: https://www.youtube.com/watch?v=1CuVhBjs3ns
+[youtube] 1CuVhBjs3ns: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] 1CuVhBjs3ns: Downloading visionos player API JSON
+[youtube] 1CuVhBjs3ns: Downloading m3u8 information
+[info] 1CuVhBjs3ns: Downloading 1 format(s): 251
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-1CuVhBjs3ns.webm
+[download] 1CuVhBjs3ns   0.0%  850.60KiB/s ETA 02:06 frag NA/NA
+[download] 1CuVhBjs3ns   9.4%   11.04MiB/s ETA 00:08 frag NA/NA
+[download] 1CuVhBjs3ns  17.0%    8.35MiB/s ETA 00:10 frag NA/NA
+[download] 1CuVhBjs3ns  27.9%   10.95MiB/s ETA 00:06 frag NA/NA
+[download] 1CuVhBjs3ns  37.3%    9.39MiB/s ETA 00:07 frag NA/NA
+[download] 1CuVhBjs3ns  46.4%   10.04MiB/s ETA 00:05 frag NA/NA
+[download] 1CuVhBjs3ns  59.4%   19.16MiB/s ETA 00:02 frag NA/NA
+[download] 1CuVhBjs3ns  68.7%    7.25MiB/s ETA 00:04 frag NA/NA
+[download] 1CuVhBjs3ns  82.0%   10.33MiB/s ETA 00:01 frag NA/NA
+[download] 1CuVhBjs3ns  91.5%   11.13MiB/s ETA 00:00 frag NA/NA
+[download] 1CuVhBjs3ns 100.0% 10.75MiB/s ETA NA frag NA/NA
+audio fingerprint cached: youtube/1CuVhBjs3ns frames=16192
+analysis audio cached: youtube/1CuVhBjs3ns path=youtube-1CuVhBjs3ns.webm
+assignment result: youtube=1CuVhBjs3ns state=unmatched primary_vod=2865097583 assigned=-
+assignment 16/19: youtube=jcs6OmYZQ-o evaluated=0/8
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=jcs6OmYZQ-o
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-jcs6OmYZQ-o.%(ext)s https://www.youtube.com/watch?v=jcs6OmYZQ-o
+[youtube] Extracting URL: https://www.youtube.com/watch?v=jcs6OmYZQ-o
+[youtube] jcs6OmYZQ-o: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] jcs6OmYZQ-o: Downloading visionos player API JSON
+[youtube] jcs6OmYZQ-o: Downloading m3u8 information
+[info] jcs6OmYZQ-o: Downloading 1 format(s): 251
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-jcs6OmYZQ-o.webm
+[download] jcs6OmYZQ-o   0.0%  Unknown B/s ETA Unknown frag NA/NA
+[download] jcs6OmYZQ-o  43.5%   48.43MiB/s ETA 00:01 frag NA/NA
+[download] jcs6OmYZQ-o  97.3%   52.32MiB/s ETA 00:00 frag NA/NA
+[download] jcs6OmYZQ-o 100.0% 50.78MiB/s ETA NA frag NA/NA
+audio fingerprint cached: youtube/jcs6OmYZQ-o frames=15713
+analysis audio cached: youtube/jcs6OmYZQ-o path=youtube-jcs6OmYZQ-o.webm
+audio fallback anchor 1: yt=771.7s twitch=17023.0s similarity=0.8588 second=0.7698 margin=0.0890 search=global
+audio fallback anchor 2: yt=2814.5s twitch=20502.5s similarity=0.8027 second=0.8020 margin=0.0007 search=forward-fallback
+audio fallback anchor 3: yt=5014.5s twitch=22855.5s similarity=0.7980 second=0.7607 margin=0.0373 search=predicted-window
+audio fallback anchor 4: yt=6900.2s twitch=24963.5s similarity=0.7848 second=0.7740 margin=0.0108 search=predicted-window
+audio fallback anchor 1: yt=771.7s twitch=15926.0s similarity=0.8149 second=0.7778 margin=0.0371 search=global
+audio fallback anchor 2: yt=2814.5s twitch=19843.0s similarity=0.7891 second=0.7672 margin=0.0219 search=forward-fallback
+audio fallback anchor 3: yt=5014.5s twitch=20962.0s similarity=0.7515 second=0.7372 margin=0.0143 search=forward-fallback
+audio fallback anchor 4: yt=6900.2s twitch=21904.5s similarity=0.7018 second=0.6915 margin=0.0103 search=forward-fallback
+audio fallback anchor 1: yt=771.7s twitch=1848.0s similarity=0.8080 second=0.7874 margin=0.0206 search=global
+audio fallback anchor 2: yt=2814.5s twitch=4019.5s similarity=0.7966 second=0.7729 margin=0.0237 search=predicted-window
+audio fallback anchor 3: yt=5014.5s twitch=8908.0s similarity=0.7996 second=0.7992 margin=0.0004 search=forward-fallback
+audio fallback anchor 4: yt=6900.2s twitch=11635.0s similarity=0.8149 second=0.8122 margin=0.0027 search=predicted-window
+audio fallback anchor 1: yt=771.7s twitch=19222.0s similarity=0.7861 second=0.7705 margin=0.0156 search=global
+audio fallback anchor 2: yt=2814.5s twitch=23575.0s similarity=0.7873 second=0.7682 margin=0.0191 search=forward-fallback
+audio fallback anchor 3: yt=5014.5s twitch=24796.0s similarity=0.6901 second=0.6371 margin=0.0530 search=forward-fallback
+audio fallback anchor 4: yt=6900.2s twitch=25738.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 1: yt=771.7s twitch=12184.0s similarity=0.9875 second=0.8121 margin=0.1754 search=global
+audio fallback anchor 2: yt=2814.5s twitch=14227.0s similarity=0.9938 second=0.7945 margin=0.1993 search=predicted-window
+audio fallback anchor 3: yt=5014.5s twitch=16426.5s similarity=0.9954 second=0.7681 margin=0.2273 search=predicted-window
+audio fallback anchor 4: yt=6900.2s twitch=18495.5s similarity=0.9605 second=0.7890 margin=0.1715 search=predicted-window
+assignment result: youtube=jcs6OmYZQ-o state=verified primary_vod=2865097583 assigned=2865097583
+assignment 17/19: youtube=nOj-aeb7haY evaluated=1/8
+metadata cache hit: youtube/nOj-aeb7haY age=1474s
+assignment result: youtube=nOj-aeb7haY state=unmatched primary_vod=2862622285 assigned=-
+assignment 18/19: youtube=6yZE6Xr2BZ0 evaluated=1/8
+metadata cache hit: youtube/6yZE6Xr2BZ0 age=1434s
+audio fallback anchor 1: yt=579.0s twitch=18662.0s similarity=0.7550 second=0.7483 margin=0.0067 search=global
+audio fallback anchor 2: yt=2120.8s twitch=21283.5s similarity=0.7874 second=0.7554 margin=0.0320 search=forward-fallback
+audio fallback anchor 3: yt=3781.2s twitch=23037.5s similarity=0.7490 second=0.7259 margin=0.0231 search=forward-fallback
+audio fallback anchor 4: yt=5204.4s twitch=24428.0s similarity=0.7563 second=0.7263 margin=0.0300 search=forward-fallback
+audio fallback anchor 1: yt=579.0s twitch=18652.0s similarity=0.7572 second=0.7488 margin=0.0084 search=global
+audio fallback anchor 2: yt=2120.8s twitch=20575.0s similarity=0.8129 second=0.7231 margin=0.0898 search=predicted-window
+audio fallback anchor 3: yt=3781.2s twitch=22404.0s similarity=0.7501 second=0.7388 margin=0.0113 search=forward-fallback
+audio fallback anchor 4: yt=5204.4s twitch=24369.5s similarity=0.7551 second=0.7333 margin=0.0218 search=forward-fallback
+assignment result: youtube=6yZE6Xr2BZ0 state=unmatched primary_vod=2862622285 assigned=-
+assignment 19/19: youtube=SqODx-TbN38 evaluated=1/8
+metadata cache hit: youtube/SqODx-TbN38 age=1407s
+assignment result: youtube=SqODx-TbN38 state=unmatched primary_vod=2862622285 assigned=-

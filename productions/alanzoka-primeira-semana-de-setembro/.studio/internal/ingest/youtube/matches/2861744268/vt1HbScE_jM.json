@@ -1,0 +1,159 @@
+{
+  "schema_version": 2,
+  "youtube_video_id": "vt1HbScE_jM",
+  "youtube": {
+    "schema_version": 2,
+    "video_id": "vt1HbScE_jM",
+    "url": "https://www.youtube.com/watch?v=vt1HbScE_jM",
+    "channel_id": "",
+    "channel_name": "alanzoka",
+    "title": "A GUERRA MUDOU. - METAL GEAR SOLID 4: GUNS OF THE PATRIOTS - Parte 1",
+    "description": "",
+    "upload_date": "",
+    "timestamp": null,
+    "duration": 8499.0,
+    "availability": null,
+    "live_status": null,
+    "thumbnail": "https://i.ytimg.com/vi/vt1HbScE_jM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDcMroVOWZkVShoPy6qyAWyfExgUA",
+    "thumbnails": [
+      {
+        "url": "https://i.ytimg.com/vi/vt1HbScE_jM/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAZmAIMQvpgNTwtb0lsc3n2v9MzkQ",
+        "height": 202,
+        "width": 360
+      },
+      {
+        "url": "https://i.ytimg.com/vi/vt1HbScE_jM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDcMroVOWZkVShoPy6qyAWyfExgUA",
+        "height": 404,
+        "width": 720
+      }
+    ],
+    "view_count": 325000,
+    "chapters": [],
+    "formats_summary": {},
+    "indexed_at": "2026-09-10T07:50:34Z",
+    "untrusted": true,
+    "injection_findings": [],
+    "streamer": "alanzoka",
+    "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+    "configured_channel_name": "alanzoka"
+  },
+  "twitch_vod_ids": [
+    "2861744268"
+  ],
+  "twitch": {
+    "vod_id": "2861744268",
+    "streamer": "alanzoka",
+    "title": "METAL GEAR SOLID 4: GUNS OF THE PATRIOTS - continunando nossa saga metal gear, o 1, 2 e o 3 tao no youtube",
+    "game": "Só Na Conversa",
+    "created_at": "2026-08-31T18:13:55Z",
+    "duration": 25902.0,
+    "chapters": [
+      {
+        "title": "Just Chatting",
+        "start": 0.0,
+        "duration": 2967.0
+      },
+      {
+        "title": "Metal Gear Solid 4: Guns of the Patriots - Master Collection Version",
+        "start": 2967.0,
+        "duration": 22639.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 25606.0,
+        "duration": 296.0
+      }
+    ],
+    "path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\twitch\\alanzoka\\discovery\\2861744268.json",
+    "source_url": "https://www.twitch.tv/videos/2861744268",
+    "untrusted": true,
+    "injection_findings": []
+  },
+  "streamer": "alanzoka",
+  "state": "ambiguous",
+  "candidate_score": 0.8052,
+  "candidate_evidence": {
+    "candidate_score": 0.8052,
+    "signals": {
+      "channel": {
+        "score": 1.0,
+        "available": true,
+        "weight": 0.0,
+        "effective_weight": 0.0,
+        "detail": "configured mirror channel"
+      },
+      "date": {
+        "score": null,
+        "available": false,
+        "weight": 0.3,
+        "effective_weight": 0.0,
+        "detail": "date unavailable on one side"
+      },
+      "duration": {
+        "score": 0.7776,
+        "available": true,
+        "weight": 0.22,
+        "effective_weight": 0.314286,
+        "detail": "subset-compatible ratio 0.33"
+      },
+      "title": {
+        "score": 0.8385,
+        "available": true,
+        "weight": 0.28,
+        "effective_weight": 0.4,
+        "detail": "token similarity"
+      },
+      "chapters": {
+        "score": 0.7889,
+        "available": true,
+        "weight": 0.2,
+        "effective_weight": 0.285714,
+        "detail": "shared tokens: gear, guns, metal, patriots, solid"
+      }
+    },
+    "contributions": {
+      "channel": 0.0,
+      "date": 0.0,
+      "duration": 0.2444,
+      "title": 0.3354,
+      "chapters": 0.2254
+    }
+  },
+  "verification": {
+    "status": "complete",
+    "policy_version": "global-source-assignment-v1",
+    "completed_at": "2026-09-10T19:27:37Z",
+    "mode": "global-audio-assignment",
+    "providers": {
+      "metadata": "complete",
+      "audio": "not_run",
+      "transcript": "not_run"
+    },
+    "transcript": {
+      "method": "whisper-localized-anchor-v2",
+      "anchors": [],
+      "assessment": {
+        "state": "not_run"
+      },
+      "strategy": "winner-only-localized-on-demand",
+      "full_source_whisper": false
+    },
+    "audio": {
+      "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+      "anchors": [],
+      "assessment": {
+        "state": "not_run"
+      }
+    }
+  },
+  "timeline_segments": [],
+  "download": {
+    "status": "not_downloaded",
+    "path": ""
+  },
+  "rights_status": "sem_autorizacao_confirmada",
+  "updated_at": "2026-09-10T20:45:19Z",
+  "candidate_score_initial": 0.7104,
+  "metadata_enriched_at": "2026-09-10T07:50:46Z",
+  "global_assignment": true
+}

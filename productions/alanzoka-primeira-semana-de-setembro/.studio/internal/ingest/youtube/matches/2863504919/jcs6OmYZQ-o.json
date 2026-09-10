@@ -1,0 +1,277 @@
+{
+  "schema_version": 2,
+  "youtube_video_id": "jcs6OmYZQ-o",
+  "youtube": {
+    "schema_version": 2,
+    "video_id": "jcs6OmYZQ-o",
+    "url": "https://www.youtube.com/watch?v=jcs6OmYZQ-o",
+    "channel_id": "UCIwspRtKNszHhIhl36gREjQ",
+    "channel_name": "alanzoka",
+    "title": "FUGINDO DO MICHAEL MYERS! - HALLOWEEN: THE GAME COM OS AMIGOS",
+    "description": "OS MAIORES DESCONTOS ESTÃO NO KABUM!:\nhttp://kb1.me/alanzokakabumyt\n\n💜 LIVE: https://www.twitch.tv/alanzoka\n📷 Instagram: https://www.instagram.com/alanzoka/\n📧 alanzoka@vandep.ag\n🐤 Twitter: https://twitter.com/alanzoka\n\n\n\n\n#Alanzoka",
+    "upload_date": "20260905",
+    "timestamp": 1788620418,
+    "duration": 7857.0,
+    "availability": "public",
+    "live_status": "not_live",
+    "thumbnail": "https://i.ytimg.com/vi_webp/jcs6OmYZQ-o/maxresdefault.webp",
+    "thumbnails": [
+      {
+        "url": "https://i.ytimg.com/vi/jcs6OmYZQ-o/hq720.jpg",
+        "height": 720,
+        "width": 1280,
+        "preference": -3,
+        "id": "38",
+        "resolution": "1280x720"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/jcs6OmYZQ-o/hq720.webp",
+        "preference": -2,
+        "id": "39"
+      },
+      {
+        "url": "https://i.ytimg.com/vi/jcs6OmYZQ-o/maxresdefault.jpg",
+        "height": 720,
+        "width": 1280,
+        "preference": -1,
+        "id": "40",
+        "resolution": "1280x720"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/jcs6OmYZQ-o/maxresdefault.webp",
+        "height": 1080,
+        "width": 1920,
+        "preference": 0,
+        "id": "41",
+        "resolution": "1920x1080"
+      }
+    ],
+    "view_count": 2765391,
+    "chapters": [],
+    "formats_summary": {
+      "max_height": 2160,
+      "max_fps": 60.0,
+      "heights": [
+        180,
+        240,
+        360,
+        480,
+        720,
+        1080,
+        1440,
+        2160
+      ]
+    },
+    "indexed_at": "2026-09-10T19:34:51Z",
+    "untrusted": true,
+    "injection_findings": [],
+    "streamer": "alanzoka",
+    "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+    "configured_channel_name": "alanzoka"
+  },
+  "twitch_vod_ids": [
+    "2863504919"
+  ],
+  "twitch": {
+    "vod_id": "2863504919",
+    "streamer": "alanzoka",
+    "title": "!live vai dar uma atrasada - blood of the dawnwalker as 19h, antes disso nao sei descubra",
+    "game": "Só Na Conversa",
+    "created_at": "2026-09-02T18:53:16Z",
+    "duration": 24696.0,
+    "chapters": [
+      {
+        "title": "Just Chatting",
+        "start": 0.0,
+        "duration": 3827.0
+      },
+      {
+        "title": "S.T.A.L.K.E.R. G.A.M.M.A.",
+        "start": 3827.0,
+        "duration": 185.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 4012.0,
+        "duration": 175.0
+      },
+      {
+        "title": "Battlefield 1",
+        "start": 4187.0,
+        "duration": 6509.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 10696.0,
+        "duration": 1742.0
+      },
+      {
+        "title": "The Blood of Dawnwalker",
+        "start": 12438.0,
+        "duration": 11893.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 24331.0,
+        "duration": 365.0
+      }
+    ],
+    "path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\twitch\\alanzoka\\discovery\\2863504919.json",
+    "source_url": "https://www.twitch.tv/videos/2863504919",
+    "untrusted": true,
+    "injection_findings": []
+  },
+  "streamer": "alanzoka",
+  "state": "likely",
+  "candidate_score": 0.407,
+  "candidate_evidence": {
+    "candidate_score": 0.407,
+    "signals": {
+      "channel": {
+        "score": 1.0,
+        "available": true,
+        "weight": 0.0,
+        "effective_weight": 0.0,
+        "detail": "configured mirror channel"
+      },
+      "date": {
+        "score": 0.7894,
+        "available": true,
+        "weight": 0.3,
+        "effective_weight": 0.3,
+        "detail": "upload delay +2.8d"
+      },
+      "duration": {
+        "score": 0.7737,
+        "available": true,
+        "weight": 0.22,
+        "effective_weight": 0.22,
+        "detail": "subset-compatible ratio 0.32"
+      },
+      "title": {
+        "score": 0.0,
+        "available": true,
+        "weight": 0.28,
+        "effective_weight": 0.28,
+        "detail": "token similarity"
+      },
+      "chapters": {
+        "score": 0.0,
+        "available": true,
+        "weight": 0.2,
+        "effective_weight": 0.2,
+        "detail": "shared tokens: none"
+      }
+    },
+    "contributions": {
+      "channel": 0.0,
+      "date": 0.2368,
+      "duration": 0.1702,
+      "title": 0.0,
+      "chapters": 0.0
+    }
+  },
+  "verification": {
+    "status": "complete",
+    "policy_version": "global-source-assignment-v1",
+    "matcher_engine": "numpy-exact",
+    "completed_at": "2026-09-10T20:24:50Z",
+    "mode": "global-audio-assignment",
+    "providers": {
+      "metadata": "complete",
+      "audio": "complete",
+      "transcript": "not_run"
+    },
+    "transcript": {
+      "method": "whisper-localized-anchor-v2",
+      "anchors": [],
+      "assessment": {
+        "state": "not_run"
+      },
+      "strategy": "bounded-global-localized-tiebreak",
+      "full_source_whisper": false
+    },
+    "audio": {
+      "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+      "anchors": [
+        {
+          "youtube_time": 771.7,
+          "twitch_time": 1848.0,
+          "similarity": 0.808,
+          "second_best_similarity": 0.7874,
+          "peak_margin": 0.0206,
+          "search_mode": "global",
+          "evaluated_windows": 49338,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 2814.52,
+          "twitch_time": 4195.5,
+          "similarity": 0.8003,
+          "second_best_similarity": 0.7966,
+          "peak_margin": 0.0037,
+          "search_mode": "predicted-window",
+          "evaluated_windows": 2041,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 5014.48,
+          "twitch_time": 11864.0,
+          "similarity": 0.8424,
+          "second_best_similarity": 0.8415,
+          "peak_margin": 0.0009,
+          "search_mode": "forward-fallback",
+          "evaluated_windows": 38748,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 6900.16,
+          "twitch_time": 19958.0,
+          "similarity": 0.8205,
+          "second_best_similarity": 0.815,
+          "peak_margin": 0.0055,
+          "search_mode": "forward-fallback",
+          "evaluated_windows": 23725,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        }
+      ],
+      "assessment": {
+        "state": "likely",
+        "good_anchors": 2,
+        "total_anchors": 4,
+        "median_similarity": 0.8315,
+        "ordered": true,
+        "timeline_consistency": "strong",
+        "slopes": [
+          4.2924
+        ],
+        "offsets": [
+          6849.52,
+          13057.84
+        ],
+        "offset_deltas": [
+          6208.32
+        ],
+        "backwards_offset_jumps": [],
+        "continuous_offset_pairs": 0,
+        "forward_cut_gaps": [
+          6208.32
+        ],
+        "median_peak_margin": 0.0032,
+        "consistency_model": "piecewise-offset-v1"
+      }
+    }
+  },
+  "timeline_segments": [],
+  "download": {
+    "status": "not_downloaded",
+    "path": ""
+  },
+  "rights_status": "sem_autorizacao_confirmada",
+  "global_assignment": true,
+  "updated_at": "2026-09-10T20:24:50Z"
+}

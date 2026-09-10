@@ -1,0 +1,2 @@
+[console_scripts]
+cstudio = cstudio.cli:main

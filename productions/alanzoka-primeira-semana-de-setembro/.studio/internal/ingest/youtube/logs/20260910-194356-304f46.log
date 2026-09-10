@@ -1,0 +1,99 @@
+[2026-09-10T19:43:56Z] YouTube Mirror Resolver job resolve pid=2924
+candidate vod=2869682753 youtube=Plcc-06LY-A score=0.671 state=candidate
+candidate vod=2869682753 youtube=QcJ0mjcA62k score=0.660 state=candidate
+candidate vod=2869682753 youtube=_Q-dV2V2g5s score=0.658 state=candidate
+candidate vod=2869682753 youtube=XR0-lJLW_rs score=0.658 state=candidate
+candidate vod=2869682753 youtube=TEHaNIT7eZs score=0.647 state=candidate
+candidate vod=2869682753 youtube=favxANUu9O4 score=0.644 state=candidate
+candidate vod=2869682753 youtube=OKO05-GPKyI score=0.643 state=candidate
+candidate vod=2869682753 youtube=fSMIJVnlB_Y score=0.607 state=candidate
+global source assignment: videos=19 vods=1 matcher=stdlib-coarse policy=global-source-assignment-v1
+assignment 1/19: youtube=Plcc-06LY-A evaluated=0/1
+metadata cache hit: youtube/Plcc-06LY-A age=1863s
+audio fallback anchor 1: yt=1045.5s twitch=8262.0s similarity=0.7219 second=0.6976 margin=0.0243 search=global
+audio fallback anchor 2: yt=3800.2s twitch=11240.0s similarity=0.8184 second=0.7609 margin=0.0575 search=predicted-window
+audio fallback anchor 3: yt=6766.8s twitch=16404.0s similarity=0.7505 second=0.7326 margin=0.0179 search=forward-fallback
+audio fallback anchor 4: yt=9309.6s twitch=22900.0s similarity=0.7742 second=0.7515 margin=0.0227 search=forward-fallback
+assignment result: youtube=Plcc-06LY-A state=unmatched primary_vod=2862622285 assigned=-
+assignment 2/19: youtube=QcJ0mjcA62k evaluated=0/1
+metadata cache hit: youtube/QcJ0mjcA62k age=1858s
+audio fallback anchor 1: yt=798.0s twitch=19650.0s similarity=0.7176 second=0.7026 margin=0.0150 search=global
+audio fallback anchor 2: yt=2909.2s twitch=24887.5s similarity=0.7416 second=0.7372 margin=0.0044 search=forward-fallback
+audio fallback anchor 3: yt=5182.8s twitch=27560.0s similarity=0.7166 second=0.6994 margin=0.0172 search=forward-fallback
+audio fallback anchor 4: yt=7131.6s twitch=28534.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+assignment result: youtube=QcJ0mjcA62k state=unmatched primary_vod=2869682753 assigned=-
+assignment 3/19: youtube=_Q-dV2V2g5s evaluated=0/1
+metadata cache hit: youtube/_Q-dV2V2g5s age=1856s
+assignment result: youtube=_Q-dV2V2g5s state=unmatched primary_vod=2863504919 assigned=-
+assignment 4/19: youtube=XR0-lJLW_rs resume=completed -> skip all 1 VODs
+assignment 5/19: youtube=TEHaNIT7eZs resume=completed -> skip all 1 VODs
+assignment 6/19: youtube=favxANUu9O4 evaluated=0/1
+metadata cache hit: youtube/favxANUu9O4 age=650s
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-favxANUu9O4.%(ext)s https://www.youtube.com/watch?v=favxANUu9O4
+[youtube] Extracting URL: https://www.youtube.com/watch?v=favxANUu9O4
+[youtube] favxANUu9O4: Downloading webpage
+[youtube] favxANUu9O4: Downloading visionos player API JSON
+[youtube] favxANUu9O4: Downloading m3u8 information
+[info] favxANUu9O4: Downloading 1 format(s): 251
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-favxANUu9O4.webm
+[download] favxANUu9O4   0.0%  Unknown B/s ETA Unknown frag NA/NA
+[download] favxANUu9O4  51.9%   71.88MiB/s ETA 00:00 frag NA/NA
+[download] favxANUu9O4  92.8%   27.77MiB/s ETA 00:00 frag NA/NA
+[download] favxANUu9O4 100.0% 50.23MiB/s ETA NA frag NA/NA
+audio fingerprint cached: youtube/favxANUu9O4 frames=15653
+analysis audio cached: youtube/favxANUu9O4 path=youtube-favxANUu9O4.webm
+audio fallback anchor 1: yt=768.6s twitch=16850.0s similarity=0.7944 second=0.7931 margin=0.0013 search=global
+audio fallback anchor 2: yt=2803.4s twitch=19244.0s similarity=0.7606 second=0.7343 margin=0.0263 search=forward-fallback
+audio fallback anchor 3: yt=4994.6s twitch=21361.0s similarity=0.8090 second=0.7868 margin=0.0222 search=predicted-window
+audio fallback anchor 4: yt=6872.9s twitch=24725.5s similarity=0.8297 second=0.7823 margin=0.0474 search=forward-fallback
+assignment result: youtube=favxANUu9O4 state=unmatched primary_vod=2869682753 assigned=-
+assignment 7/19: youtube=OKO05-GPKyI evaluated=0/1
+metadata cache hit: youtube/OKO05-GPKyI age=659s
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-OKO05-GPKyI.%(ext)s https://www.youtube.com/watch?v=OKO05-GPKyI
+[youtube] Extracting URL: https://www.youtube.com/watch?v=OKO05-GPKyI
+[youtube] OKO05-GPKyI: Downloading webpage
+[youtube] OKO05-GPKyI: Downloading visionos player API JSON
+[youtube] OKO05-GPKyI: Downloading m3u8 information
+[info] OKO05-GPKyI: Downloading 1 format(s): 251
+[download] Resuming download at byte 69753043
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-OKO05-GPKyI.webm
+[download] OKO05-GPKyI  61.8%  Unknown B/s ETA Unknown frag NA/NA
+[download] OKO05-GPKyI  81.6%   13.66MiB/s ETA 00:01 frag NA/NA
+[download] OKO05-GPKyI  97.6%   14.73MiB/s ETA 00:00 frag NA/NA
+[download] OKO05-GPKyI 100.0% 48.21MiB/s ETA NA frag NA/NA
+audio fingerprint cached: youtube/OKO05-GPKyI frames=15215
+analysis audio cached: youtube/OKO05-GPKyI path=youtube-OKO05-GPKyI.webm
+assignment result: youtube=OKO05-GPKyI state=unmatched primary_vod=2869682753 assigned=-
+assignment 8/19: youtube=fSMIJVnlB_Y evaluated=0/1
+metadata cache hit: youtube/fSMIJVnlB_Y age=680s
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-fSMIJVnlB_Y.%(ext)s https://www.youtube.com/watch?v=fSMIJVnlB_Y
+[youtube] Extracting URL: https://www.youtube.com/watch?v=fSMIJVnlB_Y
+[youtube] fSMIJVnlB_Y: Downloading webpage
+[youtube] fSMIJVnlB_Y: Downloading visionos player API JSON
+[youtube] fSMIJVnlB_Y: Downloading m3u8 information
+[info] fSMIJVnlB_Y: Downloading 1 format(s): 251-1
+[download] Resuming download at byte 73800597
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-fSMIJVnlB_Y.webm
+[download] fSMIJVnlB_Y  76.5%  903.56KiB/s ETA 00:24 frag NA/NA
+[download] fSMIJVnlB_Y  87.3%    6.83MiB/s ETA 00:01 frag NA/NA
+[download] fSMIJVnlB_Y  96.0%    9.34MiB/s ETA 00:00 frag NA/NA
+[download] fSMIJVnlB_Y  97.9%  203.67KiB/s ETA 00:09 frag NA/NA
+[download] fSMIJVnlB_Y 100.0% 29.35MiB/s ETA NA frag NA/NA
+audio fingerprint cached: youtube/fSMIJVnlB_Y frames=12831
+analysis audio cached: youtube/fSMIJVnlB_Y path=youtube-fSMIJVnlB_Y.webm
+assignment result: youtube=fSMIJVnlB_Y state=unmatched primary_vod=2869682753 assigned=-
+assignment 9/19: youtube=SynOBrPYbV0 evaluated=0/1
+metadata cache hit: youtube/SynOBrPYbV0 age=2192s
+assignment result: youtube=SynOBrPYbV0 state=unmatched primary_vod=2861744268 assigned=-
+assignment 10/19: youtube=vt1HbScE_jM resume=completed -> skip all 1 VODs
+assignment 11/19: youtube=muxOFHGOpZs evaluated=0/1
+metadata cache hit: youtube/muxOFHGOpZs age=2129s
+assignment result: youtube=muxOFHGOpZs state=verified primary_vod=2861744268 assigned=2861744268
+assignment 12/19: youtube=1CuVhBjs3ns resume=completed -> skip all 1 VODs
+assignment 13/19: youtube=jcs6OmYZQ-o resume=completed -> skip all 1 VODs
+assignment 14/19: youtube=7GBn3uVeVb8 resume=completed -> skip all 1 VODs
+assignment 15/19: youtube=nOj-aeb7haY resume=completed -> skip all 1 VODs
+assignment 16/19: youtube=nH8X1jAyoeQ resume=completed -> skip all 1 VODs
+assignment 17/19: youtube=6yZE6Xr2BZ0 resume=completed -> skip all 1 VODs
+assignment 18/19: youtube=SqODx-TbN38 resume=completed -> skip all 1 VODs
+assignment 19/19: youtube=iEZOwN5xssU resume=completed -> skip all 1 VODs

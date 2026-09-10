@@ -1,0 +1,308 @@
+{
+  "schema_version": 2,
+  "youtube_video_id": "CMrXO8qfoQw",
+  "youtube": {
+    "schema_version": 2,
+    "video_id": "CMrXO8qfoQw",
+    "url": "https://www.youtube.com/watch?v=CMrXO8qfoQw",
+    "channel_id": "UCIwspRtKNszHhIhl36gREjQ",
+    "channel_name": "alanzoka",
+    "title": "UM CLÁSSICO! - THE DARKNESS",
+    "description": "OS MAIORES DESCONTOS ESTÃO NO KABUM!:\nhttp://kb1.me/alanzokakabumyt\n\n💜 LIVE: https://www.twitch.tv/alanzoka\n📷 Instagram: https://www.instagram.com/alanzoka/\n📧 alanzoka@vandep.ag\n🐤 Twitter: https://twitter.com/alanzoka\n\n\n\n\n#Alanzoka",
+    "upload_date": "20260901",
+    "timestamp": 1788274839,
+    "duration": 23380.0,
+    "availability": "public",
+    "live_status": "not_live",
+    "thumbnail": "https://i.ytimg.com/vi_webp/CMrXO8qfoQw/maxresdefault.webp",
+    "thumbnails": [
+      {
+        "url": "https://i.ytimg.com/vi/CMrXO8qfoQw/hq720.jpg",
+        "height": 720,
+        "width": 1280,
+        "preference": -3,
+        "id": "38",
+        "resolution": "1280x720"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/CMrXO8qfoQw/hq720.webp",
+        "preference": -2,
+        "id": "39"
+      },
+      {
+        "url": "https://i.ytimg.com/vi/CMrXO8qfoQw/maxresdefault.jpg",
+        "height": 720,
+        "width": 1280,
+        "preference": -1,
+        "id": "40",
+        "resolution": "1280x720"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/CMrXO8qfoQw/maxresdefault.webp",
+        "height": 1080,
+        "width": 1920,
+        "preference": 0,
+        "id": "41",
+        "resolution": "1920x1080"
+      }
+    ],
+    "view_count": 378720,
+    "chapters": [],
+    "formats_summary": {
+      "max_height": 2160,
+      "max_fps": 60.0,
+      "heights": [
+        180,
+        240,
+        360,
+        480,
+        720,
+        1080,
+        1440,
+        2160
+      ]
+    },
+    "indexed_at": "2026-09-10T20:45:31Z",
+    "untrusted": true,
+    "injection_findings": [],
+    "streamer": "alanzoka",
+    "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+    "configured_channel_name": "alanzoka",
+    "playlist_index": null,
+    "playlist_autonumber": null
+  },
+  "twitch_vod_ids": [
+    "2863504919"
+  ],
+  "twitch": {
+    "vod_id": "2863504919",
+    "streamer": "alanzoka",
+    "title": "!live vai dar uma atrasada - blood of the dawnwalker as 19h, antes disso nao sei descubra",
+    "game": "Só Na Conversa",
+    "created_at": "2026-09-02T18:53:16Z",
+    "duration": 24696.0,
+    "chapters": [
+      {
+        "title": "Just Chatting",
+        "start": 0.0,
+        "duration": 3827.0
+      },
+      {
+        "title": "S.T.A.L.K.E.R. G.A.M.M.A.",
+        "start": 3827.0,
+        "duration": 185.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 4012.0,
+        "duration": 175.0
+      },
+      {
+        "title": "Battlefield 1",
+        "start": 4187.0,
+        "duration": 6509.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 10696.0,
+        "duration": 1742.0
+      },
+      {
+        "title": "The Blood of Dawnwalker",
+        "start": 12438.0,
+        "duration": 11893.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 24331.0,
+        "duration": 365.0
+      }
+    ],
+    "path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\twitch\\alanzoka\\discovery\\2863504919.json",
+    "source_url": "https://www.twitch.tv/videos/2863504919",
+    "untrusted": true,
+    "injection_findings": []
+  },
+  "streamer": "alanzoka",
+  "state": "candidate",
+  "candidate_score": 0.415,
+  "candidate_evidence": {
+    "candidate_score": 0.415,
+    "signals": {
+      "channel": {
+        "score": 1.0,
+        "available": true,
+        "weight": 0.0,
+        "effective_weight": 0.0,
+        "detail": "configured mirror channel"
+      },
+      "date": {
+        "score": 0.65,
+        "available": true,
+        "weight": 0.3,
+        "effective_weight": 0.3,
+        "detail": "upload delay -1.2d"
+      },
+      "duration": {
+        "score": 1.0,
+        "available": true,
+        "weight": 0.22,
+        "effective_weight": 0.22,
+        "detail": "subset-compatible ratio 0.95"
+      },
+      "title": {
+        "score": 0.0,
+        "available": true,
+        "weight": 0.28,
+        "effective_weight": 0.28,
+        "detail": "token similarity"
+      },
+      "chapters": {
+        "score": 0.0,
+        "available": true,
+        "weight": 0.2,
+        "effective_weight": 0.2,
+        "detail": "shared tokens: none"
+      }
+    },
+    "contributions": {
+      "channel": 0.0,
+      "date": 0.195,
+      "duration": 0.22,
+      "title": 0.0,
+      "chapters": 0.0
+    }
+  },
+  "verification": {
+    "status": "complete",
+    "policy_version": "global-source-assignment-v1",
+    "matcher_engine": "numpy-exact",
+    "completed_at": "2026-09-10T20:50:03Z",
+    "mode": "global-audio+localized-text",
+    "providers": {
+      "metadata": "complete",
+      "audio": "complete",
+      "transcript": "localized_complete"
+    },
+    "transcript": {
+      "method": "whisper-localized-anchor-v2",
+      "anchors": [
+        {
+          "youtube_time": 2324.0,
+          "twitch_time": 3476.0,
+          "audio_similarity": 0.8062,
+          "similarity": 0.1242,
+          "youtube_tokens": 62,
+          "twitch_tokens": 99,
+          "youtube_text": "TV de tubo estão voltando forte. TV de tubo estão voltando forte. Novo objetivo. >> Vocês viram a física do sofá? Parecia GTA 6. GTA 6. Como é que eu sento para as TV, bebê? Como é que eu sento para as TV, bebê? >> Eu não sei sentar. Ah, vou dizer que a >> Eu não sei sentar. Ah, vou dizer que a amo.",
+          "twitch_text": "É muito ruim, mano. Você me deixa ruim. Só de estar no meu chat, velho. Vai tocar violino, porra. Ai, brincadeira. Sumiu a vontade de Geogaster? Ah, mano, é que Geogaster eu tenho que pagar, né? Eu não quero pagar, mano. Alguém tem um cupom aí de Geogaster grátis, mano? Tô duro, mano. Tô duro. Ô, é R$8,00 por mês. De o",
+          "method": "whisper-localized-anchor-v2"
+        },
+        {
+          "youtube_time": 8402.8,
+          "twitch_time": 20235.5,
+          "audio_similarity": 0.7835,
+          "similarity": 0.0571,
+          "youtube_tokens": 25,
+          "twitch_tokens": 10,
+          "youtube_text": "É verdade, mano. Onde que é a igreja, mano? Eu nunca fui pra igreja, [ __ ] Ah, isso é a igreja. Ah, isso é a igreja. Ah,",
+          "twitch_text": "Vai dar merda, hein? Vai dar merda. Cara, que escuro.",
+          "method": "whisper-localized-anchor-v2"
+        },
+        {
+          "youtube_time": 14949.2,
+          "twitch_time": 23605.0,
+          "audio_similarity": 0.7516,
+          "similarity": 0.086,
+          "youtube_tokens": 30,
+          "twitch_tokens": 63,
+          "youtube_text": "Coraçãozinho, coraçãozinho. Come tudo, come tudo que deve tá delicioso. come tudo que deve tá delicioso. Coraçãozinho. Não, para, para. Se voltar tudo eu desinstalo o jogo. Desinstalo o jogo,",
+          "twitch_text": "Para impor alma, segura e plau para entrar no modo foco. Imposição de alma. Vou tentar impor alma. Cara, mas tudo envolve se cortar, mano. Não é muito legal, né, se pá? Não tem um poder que a gente se beija na boca, um bagulho mais diferente? Eu não posso! Por Deus do céu! Eu não posso! F***, você ouviu isso? Eu fiz.",
+          "method": "whisper-localized-anchor-v2"
+        }
+      ],
+      "assessment": {
+        "state": "insufficient",
+        "good_anchors": 0,
+        "total_anchors": 3,
+        "median_similarity": 0.0,
+        "timeline_consistency": "insufficient"
+      },
+      "strategy": "bounded-global-localized-tiebreak",
+      "full_source_whisper": false
+    },
+    "audio": {
+      "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+      "anchors": [
+        {
+          "youtube_time": 2324.0,
+          "twitch_time": 3476.0,
+          "similarity": 0.8062,
+          "second_best_similarity": 0.8034,
+          "peak_margin": 0.0028,
+          "search_mode": "global",
+          "evaluated_windows": 49338,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 8402.8,
+          "twitch_time": 20235.5,
+          "similarity": 0.7835,
+          "second_best_similarity": 0.7485,
+          "peak_margin": 0.035,
+          "search_mode": "forward-fallback",
+          "evaluated_windows": 36308,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 14949.2,
+          "twitch_time": 23605.0,
+          "similarity": 0.7516,
+          "second_best_similarity": 0.7346,
+          "peak_margin": 0.017,
+          "search_mode": "forward-fallback",
+          "evaluated_windows": 2321,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 20560.4,
+          "twitch_time": 26410.5,
+          "similarity": 0.0,
+          "second_best_similarity": 0.0,
+          "peak_margin": 0.0,
+          "search_mode": "forward-fallback",
+          "evaluated_windows": 0,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        }
+      ],
+      "assessment": {
+        "state": "candidate",
+        "good_anchors": 0,
+        "total_anchors": 4,
+        "median_similarity": 0.0,
+        "ordered": false,
+        "timeline_consistency": "insufficient",
+        "slopes": [],
+        "offsets": [],
+        "offset_deltas": [],
+        "backwards_offset_jumps": [],
+        "continuous_offset_pairs": 0,
+        "forward_cut_gaps": [],
+        "median_peak_margin": null,
+        "consistency_model": "piecewise-offset-v1"
+      }
+    }
+  },
+  "timeline_segments": [],
+  "download": {
+    "status": "not_downloaded",
+    "path": ""
+  },
+  "rights_status": "sem_autorizacao_confirmada",
+  "updated_at": "2026-09-10T20:50:03Z",
+  "global_assignment": true
+}

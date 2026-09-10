@@ -1,0 +1,1953 @@
+[2026-09-10T20:45:18Z] YouTube Mirror Resolver job resolve pid=9912
+candidate vod=2861744268 youtube=SynOBrPYbV0 score=0.833 state=candidate
+candidate vod=2861744268 youtube=vt1HbScE_jM score=0.805 state=ambiguous
+candidate vod=2861744268 youtube=7GBn3uVeVb8 score=0.801 state=candidate
+candidate vod=2861744268 youtube=muxOFHGOpZs score=0.784 state=verified
+candidate vod=2861744268 youtube=iEZOwN5xssU score=0.730 state=verified
+candidate vod=2861744268 youtube=nH8X1jAyoeQ score=0.540 state=candidate
+candidate vod=2861744268 youtube=CMrXO8qfoQw score=0.314 state=candidate
+candidate vod=2861744268 youtube=Wjl1p9MmI-k score=0.269 state=candidate
+candidate vod=2862622285 youtube=SynOBrPYbV0 score=0.762 state=verified
+candidate vod=2862622285 youtube=vt1HbScE_jM score=0.734 state=ambiguous
+candidate vod=2862622285 youtube=7GBn3uVeVb8 score=0.730 state=candidate
+candidate vod=2862622285 youtube=muxOFHGOpZs score=0.714 state=candidate
+candidate vod=2862622285 youtube=iEZOwN5xssU score=0.679 state=candidate
+candidate vod=2862622285 youtube=nH8X1jAyoeQ score=0.614 state=candidate
+candidate vod=2862622285 youtube=nOj-aeb7haY score=0.398 state=candidate
+candidate vod=2862622285 youtube=6yZE6Xr2BZ0 score=0.389 state=candidate
+candidate vod=2863504919 youtube=Plcc-06LY-A score=0.618 state=candidate
+candidate vod=2863504919 youtube=XR0-lJLW_rs score=0.615 state=verified
+candidate vod=2863504919 youtube=QcJ0mjcA62k score=0.606 state=candidate
+candidate vod=2863504919 youtube=_Q-dV2V2g5s score=0.604 state=candidate
+candidate vod=2863504919 youtube=fSMIJVnlB_Y score=0.597 state=candidate
+candidate vod=2863504919 youtube=1CuVhBjs3ns score=0.381 state=candidate
+candidate vod=2863504919 youtube=1wACf-7QBE8 score=0.375 state=candidate
+candidate vod=2863504919 youtube=CMrXO8qfoQw score=0.314 state=candidate
+candidate vod=2864229186 youtube=TEHaNIT7eZs score=0.453 state=candidate
+candidate vod=2864229186 youtube=favxANUu9O4 score=0.449 state=candidate
+candidate vod=2864229186 youtube=OKO05-GPKyI score=0.448 state=verified
+candidate vod=2864229186 youtube=XR0-lJLW_rs score=0.425 state=candidate
+candidate vod=2864229186 youtube=Plcc-06LY-A score=0.424 state=candidate
+candidate vod=2864229186 youtube=QcJ0mjcA62k score=0.412 state=candidate
+candidate vod=2864229186 youtube=_Q-dV2V2g5s score=0.410 state=verified
+candidate vod=2864229186 youtube=fSMIJVnlB_Y score=0.404 state=verified
+candidate vod=2865097583 youtube=Plcc-06LY-A score=0.611 state=verified
+candidate vod=2865097583 youtube=XR0-lJLW_rs score=0.606 state=candidate
+candidate vod=2865097583 youtube=TEHaNIT7eZs score=0.593 state=candidate
+candidate vod=2865097583 youtube=QcJ0mjcA62k score=0.569 state=candidate
+candidate vod=2865097583 youtube=_Q-dV2V2g5s score=0.560 state=candidate
+candidate vod=2865097583 youtube=favxANUu9O4 score=0.551 state=verified
+candidate vod=2865097583 youtube=OKO05-GPKyI score=0.546 state=candidate
+candidate vod=2865097583 youtube=fSMIJVnlB_Y score=0.527 state=candidate
+candidate vod=2868004694 youtube=Plcc-06LY-A score=0.753 state=candidate
+candidate vod=2868004694 youtube=QcJ0mjcA62k score=0.742 state=verified
+candidate vod=2868004694 youtube=_Q-dV2V2g5s score=0.740 state=candidate
+candidate vod=2868004694 youtube=XR0-lJLW_rs score=0.723 state=likely
+candidate vod=2868004694 youtube=TEHaNIT7eZs score=0.720 state=verified
+candidate vod=2868004694 youtube=favxANUu9O4 score=0.717 state=candidate
+candidate vod=2868004694 youtube=OKO05-GPKyI score=0.716 state=candidate
+candidate vod=2868004694 youtube=fSMIJVnlB_Y score=0.695 state=candidate
+candidate vod=2868864059 youtube=Plcc-06LY-A score=0.719 state=candidate
+candidate vod=2868864059 youtube=QcJ0mjcA62k score=0.708 state=candidate
+candidate vod=2868864059 youtube=_Q-dV2V2g5s score=0.706 state=candidate
+candidate vod=2868864059 youtube=XR0-lJLW_rs score=0.697 state=candidate
+candidate vod=2868864059 youtube=TEHaNIT7eZs score=0.690 state=candidate
+candidate vod=2868864059 youtube=favxANUu9O4 score=0.687 state=candidate
+candidate vod=2868864059 youtube=OKO05-GPKyI score=0.686 state=candidate
+candidate vod=2868864059 youtube=fSMIJVnlB_Y score=0.659 state=candidate
+candidate vod=2869682753 youtube=Plcc-06LY-A score=0.671 state=candidate
+candidate vod=2869682753 youtube=QcJ0mjcA62k score=0.660 state=candidate
+candidate vod=2869682753 youtube=_Q-dV2V2g5s score=0.658 state=candidate
+candidate vod=2869682753 youtube=XR0-lJLW_rs score=0.658 state=candidate
+candidate vod=2869682753 youtube=TEHaNIT7eZs score=0.647 state=candidate
+candidate vod=2869682753 youtube=favxANUu9O4 score=0.644 state=candidate
+candidate vod=2869682753 youtube=OKO05-GPKyI score=0.643 state=candidate
+candidate vod=2869682753 youtube=fSMIJVnlB_Y score=0.607 state=candidate
+metadata cache hit: youtube/TEHaNIT7eZs age=5543s
+metadata cache hit: youtube/QcJ0mjcA62k age=5539s
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=Bnzb0zhWGmE
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=99tNnmIDS7E
+metadata cache hit: youtube/Plcc-06LY-A age=5552s
+metadata cache hit: youtube/favxANUu9O4 age=4333s
+metadata cache hit: youtube/fSMIJVnlB_Y age=4296s
+metadata cache hit: youtube/SynOBrPYbV0 age=5780s
+metadata cache hit: youtube/_Q-dV2V2g5s age=5539s
+metadata cache hit: youtube/iEZOwN5xssU age=5710s
+metadata cache hit: youtube/jcs6OmYZQ-o age=4235s
+metadata cache hit: youtube/OKO05-GPKyI age=4306s
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=S_mY0ESbwMY
+metadata cache hit: youtube/XR0-lJLW_rs age=5561s
+metadata cache hit: youtube/muxOFHGOpZs age=5719s
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=CMrXO8qfoQw
+metadata cache hit: youtube/6yZE6Xr2BZ0 age=5627s
+metadata cache hit: youtube/7GBn3uVeVb8 age=5728s
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=-2A5lJmH6hI
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=lwZDxy_uLj8
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=2g8Gex_RiMo
+metadata cache hit: youtube/vt1HbScE_jM age=5790s
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=x1-EfCGHTd4
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=X6gr-4jUb-g
+global discovery coverage: streamer=alanzoka indexed=120 metadata_scanned=24 time_window=21 unknown_recent=0 selected=26
+global source assignment: videos=26 vods=8 matcher=numpy-exact policy=global-source-assignment-v1
+assignment 1/26: youtube=TEHaNIT7eZs resume=completed -> skip all 8 VODs
+assignment 2/26: youtube=QcJ0mjcA62k resume=completed -> skip all 8 VODs
+assignment 3/26: youtube=Bnzb0zhWGmE evaluated=0/8
+metadata cache hit: youtube/Bnzb0zhWGmE age=23s
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-Bnzb0zhWGmE.%(ext)s https://www.youtube.com/watch?v=Bnzb0zhWGmE
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Bnzb0zhWGmE
+[youtube] Bnzb0zhWGmE: Downloading webpage
+[youtube] Bnzb0zhWGmE: Downloading visionos player API JSON
+[youtube] Bnzb0zhWGmE: Downloading m3u8 information
+[info] Bnzb0zhWGmE: Downloading 1 format(s): 251
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-Bnzb0zhWGmE.webm
+[download] Bnzb0zhWGmE   0.0%  Unknown B/s ETA Unknown frag NA/NA
+[download] Bnzb0zhWGmE  19.0%   20.96MiB/s ETA 00:03 frag NA/NA
+[download] Bnzb0zhWGmE  35.9%   26.71MiB/s ETA 00:02 frag NA/NA
+[download] Bnzb0zhWGmE  50.9%   12.44MiB/s ETA 00:03 frag NA/NA
+[download] Bnzb0zhWGmE  64.6%    5.15MiB/s ETA 00:06 frag NA/NA
+[download] Bnzb0zhWGmE  88.8%   28.26MiB/s ETA 00:00 frag NA/NA
+[download] Bnzb0zhWGmE 100.0% 16.87MiB/s ETA NA frag NA/NA
+audio fingerprint cached: youtube/Bnzb0zhWGmE frames=12314
+analysis audio cached: youtube/Bnzb0zhWGmE path=youtube-Bnzb0zhWGmE.webm
+transcript cache stale: twitch/2861744268 reason=quality=invalid/hallucination_loop dominant_ratio=0.9906 unique_ratio=0.0024; ignored during audio-first phase
+audio fallback anchor 1: yt=601.7s twitch=12978.0s similarity=0.8154 second=0.7920 margin=0.0234 search=global
+audio fallback anchor 2: yt=2202.5s twitch=15609.5s similarity=0.7978 second=0.7946 margin=0.0032 search=forward-fallback
+audio fallback anchor 3: yt=3926.5s twitch=17015.0s similarity=0.7664 second=0.7574 margin=0.0090 search=forward-fallback
+audio fallback anchor 4: yt=5404.2s twitch=25116.0s similarity=0.7511 second=0.7406 margin=0.0105 search=forward-fallback
+audio fallback anchor 1: yt=601.7s twitch=913.5s similarity=0.7981 second=0.7969 margin=0.0012 search=global
+audio fallback anchor 2: yt=2202.5s twitch=2622.0s similarity=0.7905 second=0.7703 margin=0.0202 search=predicted-window
+audio fallback anchor 3: yt=3926.5s twitch=5591.0s similarity=0.7537 second=0.7505 margin=0.0032 search=forward-fallback
+audio fallback anchor 4: yt=5404.2s twitch=6922.5s similarity=0.7638 second=0.7494 margin=0.0144 search=forward-fallback
+audio fallback anchor 1: yt=601.7s twitch=4901.0s similarity=0.9828 second=0.8173 margin=0.1655 search=global
+audio fallback anchor 2: yt=2202.5s twitch=6502.0s similarity=0.9959 second=0.8081 margin=0.1878 search=predicted-window
+audio fallback anchor 3: yt=3926.5s twitch=8225.5s similarity=0.9804 second=0.7586 margin=0.2218 search=predicted-window
+audio fallback anchor 4: yt=5404.2s twitch=9703.5s similarity=0.9805 second=0.7426 margin=0.2379 search=predicted-window
+audio fallback anchor 1: yt=601.7s twitch=1536.5s similarity=0.8117 second=0.7972 margin=0.0145 search=global
+audio fallback anchor 2: yt=2202.5s twitch=19509.0s similarity=0.8156 second=0.8104 margin=0.0052 search=forward-fallback
+audio fallback anchor 3: yt=3926.5s twitch=20385.0s similarity=0.7440 second=0.7263 margin=0.0177 search=forward-fallback
+audio fallback anchor 4: yt=5404.2s twitch=24327.5s similarity=0.7610 second=0.7564 margin=0.0046 search=forward-fallback
+audio fallback anchor 1: yt=601.7s twitch=1419.5s similarity=0.8027 second=0.7904 margin=0.0123 search=global
+audio fallback anchor 2: yt=2202.5s twitch=14568.0s similarity=0.8228 second=0.8195 margin=0.0033 search=forward-fallback
+audio fallback anchor 3: yt=3926.5s twitch=32477.0s similarity=0.7884 second=0.7770 margin=0.0114 search=forward-fallback
+audio fallback anchor 4: yt=5404.2s twitch=33215.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 1: yt=601.7s twitch=6813.0s similarity=0.8087 second=0.7980 margin=0.0107 search=global
+audio fallback anchor 2: yt=2202.5s twitch=8431.5s similarity=0.8059 second=0.8045 margin=0.0014 search=predicted-window
+audio fallback anchor 3: yt=3926.5s twitch=10894.0s similarity=0.7849 second=0.7671 margin=0.0178 search=predicted-window
+audio fallback anchor 4: yt=5404.2s twitch=26206.5s similarity=0.7526 second=0.7501 margin=0.0025 search=forward-fallback
+audio fallback anchor 1: yt=601.7s twitch=827.0s similarity=0.8062 second=0.8028 margin=0.0034 search=global
+audio fallback anchor 2: yt=2202.5s twitch=5280.0s similarity=0.8062 second=0.8028 margin=0.0034 search=forward-fallback
+audio fallback anchor 3: yt=3926.5s twitch=21892.5s similarity=0.7630 second=0.7619 margin=0.0011 search=forward-fallback
+audio fallback anchor 4: yt=5404.2s twitch=24250.5s similarity=0.7663 second=0.7381 margin=0.0282 search=forward-fallback
+audio fallback anchor 1: yt=601.7s twitch=9255.0s similarity=0.7994 second=0.7966 margin=0.0028 search=global
+audio fallback anchor 2: yt=2202.5s twitch=13264.0s similarity=0.8173 second=0.8068 margin=0.0105 search=forward-fallback
+audio fallback anchor 3: yt=3926.5s twitch=27601.5s similarity=0.8021 second=0.7522 margin=0.0499 search=forward-fallback
+audio fallback anchor 4: yt=5404.2s twitch=28340.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+assignment result: youtube=Bnzb0zhWGmE state=verified primary_vod=2863504919 assigned=2863504919
+assignment 4/26: youtube=99tNnmIDS7E evaluated=0/8
+metadata cache hit: youtube/99tNnmIDS7E age=47s
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-99tNnmIDS7E.%(ext)s https://www.youtube.com/watch?v=99tNnmIDS7E
+[youtube] Extracting URL: https://www.youtube.com/watch?v=99tNnmIDS7E
+[youtube] 99tNnmIDS7E: Downloading webpage
+[youtube] 99tNnmIDS7E: Downloading visionos player API JSON
+[youtube] 99tNnmIDS7E: Downloading m3u8 information
+[info] 99tNnmIDS7E: Downloading 1 format(s): 251
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-99tNnmIDS7E.webm
+[download] 99tNnmIDS7E   0.0%  993.44KiB/s ETA 00:34 frag NA/NA
+[download] 99tNnmIDS7E 100.0% 44.45MiB/s ETA NA frag NA/NA
+audio fingerprint cached: youtube/99tNnmIDS7E frames=4291
+analysis audio cached: youtube/99tNnmIDS7E path=youtube-99tNnmIDS7E.webm
+audio fallback anchor 1: yt=200.5s twitch=24880.5s similarity=0.8481 second=0.8341 margin=0.0140 search=global
+audio fallback anchor 2: yt=758.2s twitch=25626.5s similarity=0.7297 second=0.7280 margin=0.0017 search=forward-fallback
+audio fallback anchor 3: yt=1358.8s twitch=25926.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 4: yt=1873.6s twitch=26183.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 1: yt=200.5s twitch=6466.5s similarity=0.8297 second=0.8204 margin=0.0093 search=global
+audio fallback anchor 2: yt=758.2s twitch=19003.5s similarity=0.7906 second=0.7734 margin=0.0172 search=forward-fallback
+audio fallback anchor 3: yt=1358.8s twitch=21840.0s similarity=0.7625 second=0.7541 margin=0.0084 search=forward-fallback
+audio fallback anchor 4: yt=1873.6s twitch=22237.5s similarity=0.7439 second=0.7135 margin=0.0304 search=forward-fallback
+audio fallback anchor 1: yt=200.5s twitch=12177.5s similarity=0.8160 second=0.8138 margin=0.0022 search=global
+audio fallback anchor 2: yt=758.2s twitch=19708.5s similarity=0.7688 second=0.7659 margin=0.0029 search=forward-fallback
+audio fallback anchor 3: yt=1358.8s twitch=24477.5s similarity=0.7761 second=0.7707 margin=0.0054 search=forward-fallback
+audio fallback anchor 4: yt=1873.6s twitch=24734.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 1: yt=200.5s twitch=23262.5s similarity=0.8064 second=0.7982 margin=0.0082 search=global
+audio fallback anchor 2: yt=758.2s twitch=24324.0s similarity=0.7175 second=0.7094 margin=0.0081 search=forward-fallback
+audio fallback anchor 3: yt=1358.8s twitch=24636.5s similarity=0.7099 second=0.6977 margin=0.0122 search=forward-fallback
+audio fallback anchor 4: yt=1873.6s twitch=24893.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 1: yt=200.5s twitch=16867.5s similarity=0.8210 second=0.8203 margin=0.0007 search=global
+audio fallback anchor 2: yt=758.2s twitch=23599.0s similarity=0.7756 second=0.7521 margin=0.0235 search=forward-fallback
+audio fallback anchor 3: yt=1358.8s twitch=31960.0s similarity=0.7888 second=0.7734 margin=0.0154 search=forward-fallback
+audio fallback anchor 4: yt=1873.6s twitch=32307.0s similarity=0.7469 second=0.7332 margin=0.0137 search=forward-fallback
+audio fallback anchor 1: yt=200.5s twitch=23234.0s similarity=0.8128 second=0.8056 margin=0.0072 search=global
+audio fallback anchor 2: yt=758.2s twitch=26406.5s similarity=0.7591 second=0.7383 margin=0.0208 search=forward-fallback
+audio fallback anchor 3: yt=1358.8s twitch=26746.0s similarity=0.7368 second=0.7240 margin=0.0128 search=forward-fallback
+audio fallback anchor 4: yt=1873.6s twitch=27003.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 1: yt=200.5s twitch=7612.0s similarity=0.8396 second=0.8261 margin=0.0135 search=global
+audio fallback anchor 2: yt=758.2s twitch=11050.5s similarity=0.7763 second=0.7648 margin=0.0115 search=forward-fallback
+audio fallback anchor 3: yt=1358.8s twitch=25794.0s similarity=0.8028 second=0.7926 margin=0.0102 search=forward-fallback
+audio fallback anchor 4: yt=1873.6s twitch=26541.0s similarity=0.7359 second=0.7151 margin=0.0208 search=forward-fallback
+audio fallback anchor 1: yt=200.5s twitch=9538.5s similarity=0.8525 second=0.8055 margin=0.0470 search=global
+audio fallback anchor 2: yt=758.2s twitch=27399.5s similarity=0.7676 second=0.7577 margin=0.0099 search=forward-fallback
+audio fallback anchor 3: yt=1358.8s twitch=27816.0s similarity=0.7208 second=0.6987 margin=0.0221 search=forward-fallback
+audio fallback anchor 4: yt=1873.6s twitch=28073.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+youtube captions: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --skip-download --no-playlist --ignore-errors --write-subs --write-auto-subs --sub-langs pt.*,pt --sub-format vtt --no-write-info-json --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --extractor-args youtube:skip=hls,dash -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\captions\99tNnmIDS7E.%(ext)s https://www.youtube.com/watch?v=99tNnmIDS7E
+youtube captions result: video=99tNnmIDS7E status=available segments=396
+localized transcript: using YouTube captions for 99tNnmIDS7E; Whisper/audio clip download skipped
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2869682753-330227-1.%(ext)s --download-sections *9528.500-9576.500 https://www.twitch.tv/videos/2869682753
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2869682753
+[twitch:vod] 2869682753: Downloading stream metadata GraphQL
+[twitch:vod] 2869682753: Downloading video access token GraphQL
+[twitch:vod] 2869682753: Downloading m3u8 information
+[twitch:vod] 2869682753: Downloading storyboard metadata JSON
+[info] v2869682753: Downloading 1 format(s): Audio_Only
+[info] v2869682753: Downloading 1 time ranges: 9528.5-9576.5
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2869682753-330227-1.mp4
+[in#0 @ 0000027334639980] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/01a2206b93c88b856d38_alanzoka_318924193013_1788975059/audio_only/init-0.mp4' for reading
+[in#0 @ 0000027334639980] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/01a2206b93c88b856d38_alanzoka_318924193013_1788975059/audio_only/0.mp4' for reading
+[in#0 @ 0000027334639980] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/01a2206b93c88b856d38_alanzoka_318924193013_1788975059/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/01a2206b93c88b856d38_alanzoka_318924193013_1788975059/audio_only/index-muted-AIH35351WV.m3u8':
+  Duration: 07:46:55.18, start: 64.000333, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s, start 64.000333 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2869682753-330227-1.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 0000027334639980] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/01a2206b93c88b856d38_alanzoka_318924193013_1788975059/audio_only/init-0.mp4' for reading
+[in#0/hls @ 0000027334639980] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/01a2206b93c88b856d38_alanzoka_318924193013_1788975059/audio_only/952.mp4' for reading
+[in#0/hls @ 0000027334639980] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/01a2206b93c88b856d38_alanzoka_318924193013_1788975059/audio_only/953.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000027336719cc0] Found duplicated MOOV Atom. Skipped it
+[https @ 0000027336aa5200] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/01a2206b93c88b856d38_alanzoka_318924193013_1788975059/audio_only/954.mp4' for reading
+[https @ 0000027336b2e040] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/01a2206b93c88b856d38_alanzoka_318924193013_1788975059/audio_only/955.mp4' for reading
+[https @ 0000027336aa5200] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/01a2206b93c88b856d38_alanzoka_318924193013_1788975059/audio_only/956.mp4' for reading
+[https @ 0000027336b2e040] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/01a2206b93c88b856d38_alanzoka_318924193013_1788975059/audio_only/957.mp4' for reading
+size=     512KiB time=00:00:31.54 bitrate= 133.0kbits/s speed=62.6x elapsed=0:00:00.50    
+[https @ 0000027336aa5200] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/01a2206b93c88b856d38_alanzoka_318924193013_1788975059/audio_only/958.mp4' for reading
+[out#0/mp4 @ 0000027336e24a00] video:0KiB audio:1156KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.831221%
+size=    1166KiB time=00:00:48.01 bitrate= 199.0kbits/s speed=88.8x elapsed=0:00:00.54    
+[download] v2869682753 100.0% 837.95KiB/s ETA NA frag NA/NA
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2869682753-330227-2.%(ext)s --download-sections *27389.500-27437.500 https://www.twitch.tv/videos/2869682753
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2869682753
+[twitch:vod] 2869682753: Downloading stream metadata GraphQL
+[twitch:vod] 2869682753: Downloading video access token GraphQL
+[twitch:vod] 2869682753: Downloading m3u8 information
+[twitch:vod] 2869682753: Downloading storyboard metadata JSON
+[info] v2869682753: Downloading 1 format(s): Audio_Only
+[info] v2869682753: Downloading 1 time ranges: 27389.5-27437.5
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2869682753-330227-2.mp4
+[in#0 @ 00000159c8203480] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/01a2206b93c88b856d38_alanzoka_318924193013_1788975059/audio_only/init-0.mp4' for reading
+[in#0 @ 00000159c8203480] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/01a2206b93c88b856d38_alanzoka_318924193013_1788975059/audio_only/0.mp4' for reading
+[in#0 @ 00000159c8203480] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/01a2206b93c88b856d38_alanzoka_318924193013_1788975059/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/01a2206b93c88b856d38_alanzoka_318924193013_1788975059/audio_only/index-muted-AIH35351WV.m3u8':
+  Duration: 07:46:55.18, start: 64.000333, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s, start 64.000333 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2869682753-330227-2.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 00000159c8203480] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/01a2206b93c88b856d38_alanzoka_318924193013_1788975059/audio_only/init-0.mp4' for reading
+[in#0/hls @ 00000159c8203480] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/01a2206b93c88b856d38_alanzoka_318924193013_1788975059/audio_only/2738.mp4' for reading
+[in#0/hls @ 00000159c8203480] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/01a2206b93c88b856d38_alanzoka_318924193013_1788975059/audio_only/2739.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000159c8286ac0] Found duplicated MOOV Atom. Skipped it
+[https @ 00000159ca46a140] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/01a2206b93c88b856d38_alanzoka_318924193013_1788975059/audio_only/2740.mp4' for reading
+[https @ 00000159ca86f040] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/01a2206b93c88b856d38_alanzoka_318924193013_1788975059/audio_only/2741.mp4' for reading
+[https @ 00000159ca46a140] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/01a2206b93c88b856d38_alanzoka_318924193013_1788975059/audio_only/2742.mp4' for reading
+[https @ 00000159ca86f040] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/01a2206b93c88b856d38_alanzoka_318924193013_1788975059/audio_only/2743.mp4' for reading
+size=     512KiB time=00:00:30.55 bitrate= 137.3kbits/s speed=60.1x elapsed=0:00:00.50    
+[https @ 00000159ca46a140] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/01a2206b93c88b856d38_alanzoka_318924193013_1788975059/audio_only/2744.mp4' for reading
+[out#0/mp4 @ 00000159ca599880] video:0KiB audio:1150KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.835557%
+size=    1160KiB time=00:00:48.00 bitrate= 198.0kbits/s speed=88.3x elapsed=0:00:00.54    
+[download] v2869682753 100.0% 1.01MiB/s ETA NA frag NA/NA
+faster-whisper preflight: python=K:\Applications\LLMS\Whisper\.venv\Scripts\python.exe faster_whisper=1.2.1 ctranslate2=4.8.2 cuda_devices=1 device=cuda compute=float16 batch=8 model=faster-whisper-large-v3-turbo
+faster-whisper profile: streamer=alanzoka language=pt timestamps=segment condition_on_previous_text=false scope=localized processed_seconds=96.0 model=faster-whisper-large-v3-turbo device=cuda compute=float16 batch=8 beam=5 vad=on
+transcribe twitch/2869682753: K:\Applications\LLMS\Whisper\.venv\Scripts\python.exe K:\Applications\Youtube-Channel\cstudio\faster_whisper_runner.py --spec C:\Users\Admin\AppData\Local\Temp\cstudio-faster-whisper-fl5i7l3k\spec.json --output C:\Users\Admin\AppData\Local\Temp\cstudio-faster-whisper-fl5i7l3k\transcript.json
+[faster-whisper] CSTUDIO_FW {"event": "runtime", "faster_whisper": "1.2.1", "ctranslate2": "4.8.2", "cuda_devices": 1, "device": "cuda", "compute_type": "float16", "batch_size": 8}
+[faster-whisper] CSTUDIO_FW {"event": "model_ready", "seconds": 1.716, "model": "K:\\Applications\\LLMS\\Whisper\\faster-whisper-large-v3-turbo"}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 1, "inputs": 2, "file": "localized-twitch-2869682753-330227-1.mp4", "ranges": 0, "offset": 9528.5}
+[faster-whisper]   0%|          | 0/2 [00:00<?, ?it/s]
+[faster-whisper]  50%|█████     | 1/2 [00:00<00:00,  1.71it/s]
+[faster-whisper] 100%|██████████| 2/2 [00:00<00:00,  3.43it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 1, "segments": 2, "seconds": 0.884, "language": "pt", "duration": 48.0, "duration_after_vad": 37.04}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 2, "inputs": 2, "file": "localized-twitch-2869682753-330227-2.mp4", "ranges": 0, "offset": 27389.5}
+[faster-whisper]   0%|          | 0/2 [00:00<?, ?it/s]
+[faster-whisper]  50%|█████     | 1/2 [00:00<00:00,  2.21it/s]
+[faster-whisper] 100%|██████████| 2/2 [00:00<00:00,  4.42it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 2, "segments": 2, "seconds": 0.659, "language": "pt", "duration": 48.0, "duration_after_vad": 43.232}
+[faster-whisper] CSTUDIO_FW {"event": "done", "segments": 4, "seconds": 3.259}
+transcript quality: backend=faster-whisper state=valid classification=usable segments=4 unique_ratio=1.0 dominant_ratio=0.25 repeat_ratio=0.0 chars_per_hour=21037.5
+localized transcript anchor: yt=200.5s tw=9538.5s audio=0.8525 text=0.0000 tokens=2/40
+localized transcript anchor: yt=758.2s tw=27399.5s audio=0.7676 text=0.0183 tokens=37/72
+caption cache hit: youtube/99tNnmIDS7E status=available age=12s
+localized transcript: using YouTube captions for 99tNnmIDS7E; Whisper/audio clip download skipped
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2868864059-369fff-1.%(ext)s --download-sections *7602.000-7650.000 https://www.twitch.tv/videos/2868864059
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2868864059
+[twitch:vod] 2868864059: Downloading stream metadata GraphQL
+[twitch:vod] 2868864059: Downloading video access token GraphQL
+[twitch:vod] 2868864059: Downloading m3u8 information
+[twitch:vod] 2868864059: Downloading storyboard metadata JSON
+[info] v2868864059: Downloading 1 format(s): Audio_Only
+[info] v2868864059: Downloading 1 time ranges: 7602.0-7650.0
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2868864059-369fff-1.mp4
+[in#0 @ 00000195a66a3c00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/init-0.mp4' for reading
+[in#0 @ 00000195a66a3c00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/0.mp4' for reading
+[in#0 @ 00000195a66a3c00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/index-dvr.m3u8':
+  Duration: 07:34:52.62, start: 64.001000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s, start 64.001000 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2868864059-369fff-1.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 00000195a66a3c00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/init-0.mp4' for reading
+[in#0/hls @ 00000195a66a3c00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/760.mp4' for reading
+[in#0/hls @ 00000195a66a3c00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/761.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000195a6731440] Found duplicated MOOV Atom. Skipped it
+[https @ 00000195a8e3c400] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/762.mp4' for reading
+[https @ 00000195a8a00f40] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/763.mp4' for reading
+size=     256KiB time=00:00:18.03 bitrate= 116.3kbits/s speed=35.1x elapsed=0:00:00.51    
+[https @ 00000195a8e3c400] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/764.mp4' for reading
+size=     512KiB time=00:00:30.53 bitrate= 137.4kbits/s speed=29.7x elapsed=0:00:01.02    
+[https @ 00000195a8a00f40] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/765.mp4' for reading
+[out#0/mp4 @ 00000195a8923380] video:0KiB audio:1154KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.833171%
+size=    1163KiB time=00:00:48.00 bitrate= 198.5kbits/s speed=  38x elapsed=0:00:01.26    
+[download] v2868864059 100.0% 370.05KiB/s ETA NA frag NA/NA
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2868864059-369fff-2.%(ext)s --download-sections *11040.500-11088.500 https://www.twitch.tv/videos/2868864059
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2868864059
+[twitch:vod] 2868864059: Downloading stream metadata GraphQL
+[twitch:vod] 2868864059: Downloading video access token GraphQL
+[twitch:vod] 2868864059: Downloading m3u8 information
+[twitch:vod] 2868864059: Downloading storyboard metadata JSON
+[info] v2868864059: Downloading 1 format(s): Audio_Only
+[info] v2868864059: Downloading 1 time ranges: 11040.5-11088.5
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2868864059-369fff-2.mp4
+[in#0 @ 00000196c3cf8180] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/init-0.mp4' for reading
+[in#0 @ 00000196c3cf8180] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/0.mp4' for reading
+[in#0 @ 00000196c3cf8180] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/index-dvr.m3u8':
+  Duration: 07:34:52.62, start: 64.001000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s, start 64.001000 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2868864059-369fff-2.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 00000196c3cf8180] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/init-0.mp4' for reading
+[in#0/hls @ 00000196c3cf8180] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/1104.mp4' for reading
+[in#0/hls @ 00000196c3cf8180] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/1105.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000196c5d9f040] Found duplicated MOOV Atom. Skipped it
+[https @ 00000196c5e3a9c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/1106.mp4' for reading
+[https @ 00000196c64aaac0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/1107.mp4' for reading
+[https @ 00000196c5e3a9c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/1108.mp4' for reading
+[https @ 00000196c64aaac0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/1109.mp4' for reading
+[out#0/mp4 @ 00000196c5f55f00] video:0KiB audio:1143KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.841225%
+size=    1152KiB time=00:00:48.01 bitrate= 196.6kbits/s speed=95.7x elapsed=0:00:00.50    
+[download] v2868864059 100.0% 1.05MiB/s ETA NA frag NA/NA
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2868864059-369fff-3.%(ext)s --download-sections *25784.000-25832.000 https://www.twitch.tv/videos/2868864059
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2868864059
+[twitch:vod] 2868864059: Downloading stream metadata GraphQL
+[twitch:vod] 2868864059: Downloading video access token GraphQL
+[twitch:vod] 2868864059: Downloading m3u8 information
+[twitch:vod] 2868864059: Downloading storyboard metadata JSON
+[info] v2868864059: Downloading 1 format(s): Audio_Only
+[info] v2868864059: Downloading 1 time ranges: 25784.0-25832.0
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2868864059-369fff-3.mp4
+[in#0 @ 000001bdf21e43c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/init-0.mp4' for reading
+[in#0 @ 000001bdf21e43c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/0.mp4' for reading
+[in#0 @ 000001bdf21e43c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/index-dvr.m3u8':
+  Duration: 07:34:52.62, start: 64.001000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s, start 64.001000 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2868864059-369fff-3.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 000001bdf21e43c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/init-0.mp4' for reading
+[in#0/hls @ 000001bdf21e43c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/2578.mp4' for reading
+[in#0/hls @ 000001bdf21e43c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/2579.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 000001bdf22abfc0] Found duplicated MOOV Atom. Skipped it
+[https @ 000001bdf44aa1c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/2580.mp4' for reading
+[https @ 000001bdf4c46040] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/2581.mp4' for reading
+[https @ 000001bdf44aa1c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/2582.mp4' for reading
+[https @ 000001bdf4c46040] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/2583.mp4' for reading
+[https @ 000001bdf44aa1c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/f11334ed9888d639ee47_alanzoka_318987747828_1788891516/audio_only/2584.mp4' for reading
+size=    1024KiB time=00:00:46.03 bitrate= 182.2kbits/s speed=89.8x elapsed=0:00:00.51    
+[out#0/mp4 @ 000001bdf45a3dc0] video:0KiB audio:1140KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.842300%
+size=    1149KiB time=00:00:48.00 bitrate= 196.2kbits/s speed=88.5x elapsed=0:00:00.54    
+[download] v2868864059 100.0% 1.01MiB/s ETA NA frag NA/NA
+faster-whisper profile: streamer=alanzoka language=pt timestamps=segment condition_on_previous_text=false scope=localized processed_seconds=144.0 model=faster-whisper-large-v3-turbo device=cuda compute=float16 batch=8 beam=5 vad=on
+transcribe twitch/2868864059: K:\Applications\LLMS\Whisper\.venv\Scripts\python.exe K:\Applications\Youtube-Channel\cstudio\faster_whisper_runner.py --spec C:\Users\Admin\AppData\Local\Temp\cstudio-faster-whisper-h0wjlsh8\spec.json --output C:\Users\Admin\AppData\Local\Temp\cstudio-faster-whisper-h0wjlsh8\transcript.json
+[faster-whisper] CSTUDIO_FW {"event": "runtime", "faster_whisper": "1.2.1", "ctranslate2": "4.8.2", "cuda_devices": 1, "device": "cuda", "compute_type": "float16", "batch_size": 8}
+[faster-whisper] CSTUDIO_FW {"event": "model_ready", "seconds": 1.733, "model": "K:\\Applications\\LLMS\\Whisper\\faster-whisper-large-v3-turbo"}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 1, "inputs": 3, "file": "localized-twitch-2868864059-369fff-1.mp4", "ranges": 0, "offset": 7602.0}
+[faster-whisper]   0%|          | 0/1 [00:00<?, ?it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  1.90it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  1.90it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 1, "segments": 1, "seconds": 0.82, "language": "pt", "duration": 48.0, "duration_after_vad": 7.84}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 2, "inputs": 3, "file": "localized-twitch-2868864059-369fff-2.mp4", "ranges": 0, "offset": 11040.5}
+[faster-whisper]   0%|          | 0/1 [00:00<?, ?it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  2.51it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  2.51it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 2, "segments": 1, "seconds": 0.59, "language": "pt", "duration": 48.0, "duration_after_vad": 18.672}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 3, "inputs": 3, "file": "localized-twitch-2868864059-369fff-3.mp4", "ranges": 0, "offset": 25784.0}
+[faster-whisper]   0%|          | 0/2 [00:00<?, ?it/s]
+[faster-whisper]  50%|█████     | 1/2 [00:00<00:00,  3.43it/s]
+[faster-whisper] 100%|██████████| 2/2 [00:00<00:00,  6.85it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 3, "segments": 2, "seconds": 0.5, "language": "pt", "duration": 48.0, "duration_after_vad": 32.32}
+[faster-whisper] CSTUDIO_FW {"event": "done", "segments": 4, "seconds": 3.645}
+transcript quality: backend=faster-whisper state=valid classification=usable segments=4 unique_ratio=1.0 dominant_ratio=0.25 repeat_ratio=0.0 chars_per_hour=12950.0
+localized transcript anchor: yt=200.5s tw=7612.0s audio=0.8396 text=0.0000 tokens=2/32
+localized transcript anchor: yt=758.2s tw=11050.5s audio=0.7763 text=0.0435 tokens=37/55
+localized transcript anchor: yt=1358.8s tw=25794.0s audio=0.8028 text=0.1143 tokens=19/16
+caption cache hit: youtube/99tNnmIDS7E status=available age=30s
+localized transcript: using YouTube captions for 99tNnmIDS7E; Whisper/audio clip download skipped
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-5e1971-1.%(ext)s --download-sections *6456.500-6504.500 https://www.twitch.tv/videos/2862622285
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2862622285
+[twitch:vod] 2862622285: Downloading stream metadata GraphQL
+[twitch:vod] 2862622285: Downloading video access token GraphQL
+[twitch:vod] 2862622285: Downloading m3u8 information
+[twitch:vod] 2862622285: Downloading storyboard metadata JSON
+[info] v2862622285: Downloading 1 format(s): Audio_Only
+[info] v2862622285: Downloading 1 time ranges: 6456.5-6504.5
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-5e1971-1.mp4
+[in#0 @ 00000188a0f54400] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/init-0.mp4' for reading
+[in#0 @ 00000188a0f54400] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/0.mp4' for reading
+[in#0 @ 00000188a0f54400] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/index-dvr.m3u8':
+  Duration: 06:13:33.88, start: 64.001000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s, start 64.001000 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-5e1971-1.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 00000188a0f54400] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/init-0.mp4' for reading
+[in#0/hls @ 00000188a0f54400] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/645.mp4' for reading
+[in#0/hls @ 00000188a0f54400] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/646.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000188a3072f80] Found duplicated MOOV Atom. Skipped it
+[https @ 00000188a32f1b00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/647.mp4' for reading
+[https @ 00000188a35f6500] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/648.mp4' for reading
+[https @ 00000188a32f1b00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/649.mp4' for reading
+[https @ 00000188a35f6500] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/650.mp4' for reading
+[https @ 00000188a32f1b00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/651.mp4' for reading
+size=    1024KiB time=00:00:43.53 bitrate= 192.7kbits/s speed=85.8x elapsed=0:00:00.50    
+[out#0/mp4 @ 00000188a3439140] video:0KiB audio:1139KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.843638%
+size=    1149KiB time=00:00:48.01 bitrate= 196.0kbits/s speed=90.6x elapsed=0:00:00.52    
+[download] v2862622285 100.0% 925.74KiB/s ETA NA frag NA/NA
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-5e1971-2.%(ext)s --download-sections *18993.500-19041.500 https://www.twitch.tv/videos/2862622285
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2862622285
+[twitch:vod] 2862622285: Downloading stream metadata GraphQL
+[twitch:vod] 2862622285: Downloading video access token GraphQL
+[twitch:vod] 2862622285: Downloading m3u8 information
+[twitch:vod] 2862622285: Downloading storyboard metadata JSON
+[info] v2862622285: Downloading 1 format(s): Audio_Only
+[info] v2862622285: Downloading 1 time ranges: 18993.5-19041.5
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-5e1971-2.mp4
+[in#0 @ 000001980cd93cc0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/init-0.mp4' for reading
+[in#0 @ 000001980cd93cc0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/0.mp4' for reading
+[in#0 @ 000001980cd93cc0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/index-dvr.m3u8':
+  Duration: 06:13:33.88, start: 64.001000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s, start 64.001000 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-5e1971-2.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 000001980cd93cc0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/init-0.mp4' for reading
+[in#0/hls @ 000001980cd93cc0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/1899.mp4' for reading
+[in#0/hls @ 000001980cd93cc0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/1900.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 000001980ce35480] Found duplicated MOOV Atom. Skipped it
+[https @ 000001980f349a00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/1901.mp4' for reading
+[https @ 000001980f32de00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/1902.mp4' for reading
+[https @ 000001980f349a00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/1903.mp4' for reading
+[https @ 000001980f32de00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/1904.mp4' for reading
+[https @ 000001980f349a00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/1905.mp4' for reading
+size=    1024KiB time=00:00:46.54 bitrate= 180.2kbits/s speed=91.4x elapsed=0:00:00.50    
+[out#0/mp4 @ 000001980f0ec180] video:0KiB audio:1143KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.841276%
+size=    1152KiB time=00:00:48.01 bitrate= 196.6kbits/s speed=89.6x elapsed=0:00:00.53    
+[download] v2862622285 100.0% 1.01MiB/s ETA NA frag NA/NA
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-5e1971-3.%(ext)s --download-sections *21830.000-21878.000 https://www.twitch.tv/videos/2862622285
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2862622285
+[twitch:vod] 2862622285: Downloading stream metadata GraphQL
+[twitch:vod] 2862622285: Downloading video access token GraphQL
+[twitch:vod] 2862622285: Downloading m3u8 information
+[twitch:vod] 2862622285: Downloading storyboard metadata JSON
+[info] v2862622285: Downloading 1 format(s): Audio_Only
+[info] v2862622285: Downloading 1 time ranges: 21830.0-21878.0
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-5e1971-3.mp4
+[in#0 @ 000001c0f90548c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/init-0.mp4' for reading
+[in#0 @ 000001c0f90548c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/0.mp4' for reading
+[in#0 @ 000001c0f90548c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/index-dvr.m3u8':
+  Duration: 06:13:33.88, start: 64.001000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s, start 64.001000 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-5e1971-3.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 000001c0f90548c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/init-0.mp4' for reading
+[in#0/hls @ 000001c0f90548c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2183.mp4' for reading
+[in#0/hls @ 000001c0f90548c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2184.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 000001c0f9108940] Found duplicated MOOV Atom. Skipped it
+[https @ 000001c0fb48ab80] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2185.mp4' for reading
+[https @ 000001c0fb311700] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2186.mp4' for reading
+[https @ 000001c0fb48ab80] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2187.mp4' for reading
+[https @ 000001c0fb311700] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2188.mp4' for reading
+[out#0/mp4 @ 000001c0fb644b80] video:0KiB audio:1134KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.847590%
+size=    1143KiB time=00:00:48.01 bitrate= 195.0kbits/s speed=95.4x elapsed=0:00:00.50    
+[download] v2862622285 100.0% 1.05MiB/s ETA NA frag NA/NA
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-5e1971-4.%(ext)s --download-sections *22227.500-22275.500 https://www.twitch.tv/videos/2862622285
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2862622285
+[twitch:vod] 2862622285: Downloading stream metadata GraphQL
+[twitch:vod] 2862622285: Downloading video access token GraphQL
+[twitch:vod] 2862622285: Downloading m3u8 information
+[twitch:vod] 2862622285: Downloading storyboard metadata JSON
+[info] v2862622285: Downloading 1 format(s): Audio_Only
+[info] v2862622285: Downloading 1 time ranges: 22227.5-22275.5
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-5e1971-4.mp4
+[in#0 @ 000001f495e93580] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/init-0.mp4' for reading
+[in#0 @ 000001f495e93580] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/0.mp4' for reading
+[in#0 @ 000001f495e93580] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/index-dvr.m3u8':
+  Duration: 06:13:33.88, start: 64.001000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s, start 64.001000 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-5e1971-4.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 000001f495e93580] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/init-0.mp4' for reading
+[in#0/hls @ 000001f495e93580] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2222.mp4' for reading
+[in#0/hls @ 000001f495e93580] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2223.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 000001f497f6d880] Found duplicated MOOV Atom. Skipped it
+[https @ 000001f49838d7c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2224.mp4' for reading
+[https @ 000001f4985d5840] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2225.mp4' for reading
+[https @ 000001f49838d7c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2226.mp4' for reading
+[https @ 000001f4985d5840] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2227.mp4' for reading
+[https @ 000001f49838d7c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2228.mp4' for reading
+size=     768KiB time=00:00:42.53 bitrate= 147.9kbits/s speed=83.9x elapsed=0:00:00.50    
+[out#0/mp4 @ 000001f4985db980] video:0KiB audio:1137KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.845147%
+size=    1147KiB time=00:00:48.02 bitrate= 195.7kbits/s speed=91.8x elapsed=0:00:00.52    
+[download] v2862622285 100.0% 1.02MiB/s ETA NA frag NA/NA
+faster-whisper profile: streamer=alanzoka language=pt timestamps=segment condition_on_previous_text=false scope=localized processed_seconds=192.0 model=faster-whisper-large-v3-turbo device=cuda compute=float16 batch=8 beam=5 vad=on
+transcribe twitch/2862622285: K:\Applications\LLMS\Whisper\.venv\Scripts\python.exe K:\Applications\Youtube-Channel\cstudio\faster_whisper_runner.py --spec C:\Users\Admin\AppData\Local\Temp\cstudio-faster-whisper-zcgr0h_4\spec.json --output C:\Users\Admin\AppData\Local\Temp\cstudio-faster-whisper-zcgr0h_4\transcript.json
+[faster-whisper] CSTUDIO_FW {"event": "runtime", "faster_whisper": "1.2.1", "ctranslate2": "4.8.2", "cuda_devices": 1, "device": "cuda", "compute_type": "float16", "batch_size": 8}
+[faster-whisper] CSTUDIO_FW {"event": "model_ready", "seconds": 1.726, "model": "K:\\Applications\\LLMS\\Whisper\\faster-whisper-large-v3-turbo"}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 1, "inputs": 4, "file": "localized-twitch-2862622285-5e1971-1.mp4", "ranges": 0, "offset": 6456.5}
+[faster-whisper]   0%|          | 0/1 [00:00<?, ?it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  2.35it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  2.35it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 1, "segments": 1, "seconds": 0.688, "language": "pt", "duration": 48.0, "duration_after_vad": 5.664}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 2, "inputs": 4, "file": "localized-twitch-2862622285-5e1971-2.mp4", "ranges": 0, "offset": 18993.5}
+[faster-whisper]   0%|          | 0/2 [00:00<?, ?it/s]
+[faster-whisper]  50%|█████     | 1/2 [00:00<00:00,  1.47it/s]
+[faster-whisper] 100%|██████████| 2/2 [00:00<00:00,  2.93it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 2, "segments": 2, "seconds": 0.884, "language": "pt", "duration": 48.0, "duration_after_vad": 38.0}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 3, "inputs": 4, "file": "localized-twitch-2862622285-5e1971-3.mp4", "ranges": 0, "offset": 21830.0}
+[faster-whisper]   0%|          | 0/2 [00:00<?, ?it/s]
+[faster-whisper]  50%|█████     | 1/2 [00:00<00:00,  1.74it/s]
+[faster-whisper] 100%|██████████| 2/2 [00:00<00:00,  3.48it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 3, "segments": 2, "seconds": 0.797, "language": "pt", "duration": 47.979, "duration_after_vad": 39.499}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 4, "inputs": 4, "file": "localized-twitch-2862622285-5e1971-4.mp4", "ranges": 0, "offset": 22227.5}
+[faster-whisper]   0%|          | 0/1 [00:00<?, ?it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  7.66it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  7.66it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 4, "segments": 1, "seconds": 0.335, "language": "pt", "duration": 48.0, "duration_after_vad": 24.88}
+[faster-whisper] CSTUDIO_FW {"event": "done", "segments": 6, "seconds": 4.431}
+transcript quality: backend=faster-whisper state=valid classification=usable segments=6 unique_ratio=1.0 dominant_ratio=0.1667 repeat_ratio=0.0 chars_per_hour=22987.5
+localized transcript anchor: yt=200.5s tw=6466.5s audio=0.8297 text=0.0000 tokens=2/16
+localized transcript anchor: yt=758.2s tw=19003.5s audio=0.7906 text=0.0473 tokens=37/132
+localized transcript anchor: yt=1358.8s tw=21840.0s audio=0.7625 text=0.0156 tokens=19/109
+localized transcript anchor: yt=1873.6s tw=22237.5s audio=0.7439 text=0.0000 tokens=29/4
+assignment result: youtube=99tNnmIDS7E state=unmatched primary_vod=2869682753 assigned=-
+assignment 5/26: youtube=Plcc-06LY-A resume=completed -> skip all 8 VODs
+assignment 6/26: youtube=favxANUu9O4 resume=completed -> skip all 8 VODs
+assignment 7/26: youtube=fSMIJVnlB_Y resume=completed -> skip all 8 VODs
+assignment 8/26: youtube=SynOBrPYbV0 resume=completed -> skip all 8 VODs
+assignment 9/26: youtube=_Q-dV2V2g5s resume=completed -> skip all 8 VODs
+assignment 10/26: youtube=iEZOwN5xssU resume=completed -> skip all 8 VODs
+assignment 11/26: youtube=jcs6OmYZQ-o resume=completed -> skip all 8 VODs
+assignment 12/26: youtube=OKO05-GPKyI resume=completed -> skip all 8 VODs
+assignment 13/26: youtube=S_mY0ESbwMY evaluated=0/8
+metadata cache hit: youtube/S_mY0ESbwMY age=109s
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-S_mY0ESbwMY.%(ext)s https://www.youtube.com/watch?v=S_mY0ESbwMY
+[youtube] Extracting URL: https://www.youtube.com/watch?v=S_mY0ESbwMY
+[youtube] S_mY0ESbwMY: Downloading webpage
+[youtube] S_mY0ESbwMY: Downloading visionos player API JSON
+[youtube] S_mY0ESbwMY: Downloading m3u8 information
+[info] S_mY0ESbwMY: Downloading 1 format(s): 251-1
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-S_mY0ESbwMY.webm
+[download] S_mY0ESbwMY   0.0%  Unknown B/s ETA Unknown frag NA/NA
+[download] S_mY0ESbwMY   8.2%    6.93MiB/s ETA 00:12 frag NA/NA
+[download] S_mY0ESbwMY  18.3%   11.76MiB/s ETA 00:06 frag NA/NA
+[download] S_mY0ESbwMY  28.2%    5.04MiB/s ETA 00:13 frag NA/NA
+[download] S_mY0ESbwMY  30.2%    5.52MiB/s ETA 00:12 frag NA/NA
+[download] S_mY0ESbwMY  38.4%    6.61MiB/s ETA 00:09 frag NA/NA
+[download] S_mY0ESbwMY  48.3%    6.10MiB/s ETA 00:08 frag NA/NA
+[download] S_mY0ESbwMY  49.9%    5.59MiB/s ETA 00:08 frag NA/NA
+[download] S_mY0ESbwMY  60.0%    5.54MiB/s ETA 00:07 frag NA/NA
+[download] S_mY0ESbwMY  62.0%    2.34MiB/s ETA 00:15 frag NA/NA
+[download] S_mY0ESbwMY  65.7%    4.67MiB/s ETA 00:07 frag NA/NA
+[download] S_mY0ESbwMY  74.3%    3.95MiB/s ETA 00:06 frag NA/NA
+[download] S_mY0ESbwMY  79.9%    6.06MiB/s ETA 00:03 frag NA/NA
+[download] S_mY0ESbwMY  87.3%    7.60MiB/s ETA 00:01 frag NA/NA
+[download] S_mY0ESbwMY  90.0%    5.09MiB/s ETA 00:01 frag NA/NA
+[download] S_mY0ESbwMY  95.7%    5.55MiB/s ETA 00:00 frag NA/NA
+[download] S_mY0ESbwMY 100.0% 6.23MiB/s ETA NA frag NA/NA
+audio fingerprint cached: youtube/S_mY0ESbwMY frames=13443
+analysis audio cached: youtube/S_mY0ESbwMY path=youtube-S_mY0ESbwMY.webm
+audio fallback anchor 1: yt=658.2s twitch=13036.0s similarity=0.9804 second=0.7922 margin=0.1882 search=global
+audio fallback anchor 2: yt=2405.9s twitch=14783.5s similarity=0.9571 second=0.7386 margin=0.2185 search=predicted-window
+audio fallback anchor 3: yt=4288.1s twitch=16666.0s similarity=0.9022 second=0.7498 margin=0.1524 search=predicted-window
+audio fallback anchor 4: yt=5901.4s twitch=18279.0s similarity=0.9716 second=0.7382 margin=0.2334 search=predicted-window
+audio fallback anchor 1: yt=658.2s twitch=2434.0s similarity=0.7936 second=0.7744 margin=0.0192 search=global
+audio fallback anchor 2: yt=2405.9s twitch=15714.0s similarity=0.7678 second=0.7617 margin=0.0061 search=forward-fallback
+audio fallback anchor 3: yt=4288.1s twitch=21710.5s similarity=0.7915 second=0.7482 margin=0.0433 search=forward-fallback
+audio fallback anchor 4: yt=5901.4s twitch=22517.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 1: yt=658.2s twitch=8928.5s similarity=0.7855 second=0.7824 margin=0.0031 search=global
+audio fallback anchor 2: yt=2405.9s twitch=12350.5s similarity=0.7819 second=0.7815 margin=0.0004 search=forward-fallback
+audio fallback anchor 3: yt=4288.1s twitch=18801.5s similarity=0.7535 second=0.7493 margin=0.0042 search=forward-fallback
+audio fallback anchor 4: yt=5901.4s twitch=22596.0s similarity=0.7180 second=0.7148 margin=0.0032 search=forward-fallback
+audio fallback anchor 1: yt=658.2s twitch=6191.5s similarity=0.7859 second=0.7778 margin=0.0081 search=global
+audio fallback anchor 2: yt=2405.9s twitch=20074.0s similarity=0.7766 second=0.7755 margin=0.0011 search=forward-fallback
+audio fallback anchor 3: yt=4288.1s twitch=21390.5s similarity=0.7432 second=0.7380 margin=0.0052 search=forward-fallback
+audio fallback anchor 4: yt=5901.4s twitch=23917.0s similarity=0.7424 second=0.7203 margin=0.0221 search=forward-fallback
+audio fallback anchor 1: yt=658.2s twitch=12928.5s similarity=0.7918 second=0.7810 margin=0.0108 search=global
+audio fallback anchor 2: yt=2405.9s twitch=24182.0s similarity=0.7772 second=0.7700 margin=0.0072 search=forward-fallback
+audio fallback anchor 3: yt=4288.1s twitch=31603.5s similarity=0.7869 second=0.7512 margin=0.0357 search=forward-fallback
+audio fallback anchor 4: yt=5901.4s twitch=32824.5s similarity=0.6997 second=0.6929 margin=0.0068 search=forward-fallback
+assignment result: youtube=S_mY0ESbwMY state=verified primary_vod=2861744268 assigned=2861744268
+assignment 14/26: youtube=XR0-lJLW_rs resume=completed -> skip all 8 VODs
+assignment 15/26: youtube=muxOFHGOpZs resume=completed -> skip all 8 VODs
+assignment 16/26: youtube=CMrXO8qfoQw evaluated=0/8
+metadata cache hit: youtube/CMrXO8qfoQw age=140s
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-CMrXO8qfoQw.%(ext)s https://www.youtube.com/watch?v=CMrXO8qfoQw
+[youtube] Extracting URL: https://www.youtube.com/watch?v=CMrXO8qfoQw
+[youtube] CMrXO8qfoQw: Downloading webpage
+[youtube] CMrXO8qfoQw: Downloading visionos player API JSON
+[youtube] CMrXO8qfoQw: Downloading m3u8 information
+[info] CMrXO8qfoQw: Downloading 1 format(s): 251
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-CMrXO8qfoQw.webm
+[download] CMrXO8qfoQw   0.0%  872.18KiB/s ETA 06:49 frag NA/NA
+[download] CMrXO8qfoQw   2.3%    6.81MiB/s ETA 00:50 frag NA/NA
+[download] CMrXO8qfoQw   5.1%    9.65MiB/s ETA 00:34 frag NA/NA
+[download] CMrXO8qfoQw   6.9%    3.21MiB/s ETA 01:41 frag NA/NA
+[download] CMrXO8qfoQw   8.3%    5.00MiB/s ETA 01:04 frag NA/NA
+[download] CMrXO8qfoQw  10.8%    8.15MiB/s ETA 00:38 frag NA/NA
+[download] CMrXO8qfoQw  11.6%    2.34MiB/s ETA 02:11 frag NA/NA
+[download] CMrXO8qfoQw  14.1%    5.56MiB/s ETA 00:53 frag NA/NA
+[download] CMrXO8qfoQw  14.3%    3.05MiB/s ETA 01:38 frag NA/NA
+[download] CMrXO8qfoQw  16.9%    5.47MiB/s ETA 00:53 frag NA/NA
+[download] CMrXO8qfoQw  18.0%    7.82MiB/s ETA 00:36 frag NA/NA
+[download] CMrXO8qfoQw  19.7%    4.95MiB/s ETA 00:56 frag NA/NA
+[download] CMrXO8qfoQw  20.2%    2.81MiB/s ETA 01:38 frag NA/NA
+[download] CMrXO8qfoQw  23.0%    5.97MiB/s ETA 00:44 frag NA/NA
+[download] CMrXO8qfoQw  25.2%    7.03MiB/s ETA 00:37 frag NA/NA
+[download] CMrXO8qfoQw  27.5%    7.29MiB/s ETA 00:34 frag NA/NA
+[download] CMrXO8qfoQw  28.1%  673.79KiB/s ETA 06:21 frag NA/NA
+[download] CMrXO8qfoQw  29.5%    3.49MiB/s ETA 01:10 frag NA/NA
+[download] CMrXO8qfoQw  32.0%   13.39MiB/s ETA 00:17 frag NA/NA
+[download] CMrXO8qfoQw  33.6%    7.27MiB/s ETA 00:31 frag NA/NA
+[download] CMrXO8qfoQw  35.2%    3.94MiB/s ETA 00:57 frag NA/NA
+[download] CMrXO8qfoQw  36.9%    3.58MiB/s ETA 01:01 frag NA/NA
+[download] CMrXO8qfoQw  37.4%    2.60MiB/s ETA 01:23 frag NA/NA
+[download] CMrXO8qfoQw  39.1%    4.06MiB/s ETA 00:52 frag NA/NA
+[download] CMrXO8qfoQw  41.5%    9.85MiB/s ETA 00:20 frag NA/NA
+[download] CMrXO8qfoQw  44.2%    9.10MiB/s ETA 00:21 frag NA/NA
+[download] CMrXO8qfoQw  45.9%    6.49MiB/s ETA 00:29 frag NA/NA
+[download] CMrXO8qfoQw  48.1%   97.66MiB/s ETA 00:01 frag NA/NA
+[download] CMrXO8qfoQw  49.6%    5.59MiB/s ETA 00:31 frag NA/NA
+[download] CMrXO8qfoQw  52.6%    7.62MiB/s ETA 00:21 frag NA/NA
+[download] CMrXO8qfoQw  53.2%    4.09MiB/s ETA 00:39 frag NA/NA
+[download] CMrXO8qfoQw  53.3%  862.96KiB/s ETA 03:13 frag NA/NA
+[download] CMrXO8qfoQw  55.2%    5.76MiB/s ETA 00:27 frag NA/NA
+[download] CMrXO8qfoQw  58.2%    6.54MiB/s ETA 00:22 frag NA/NA
+[download] CMrXO8qfoQw  59.3%    5.69MiB/s ETA 00:24 frag NA/NA
+[download] CMrXO8qfoQw  61.0%    7.42MiB/s ETA 00:18 frag NA/NA
+[download] CMrXO8qfoQw  62.6%    4.70MiB/s ETA 00:27 frag NA/NA
+[download] CMrXO8qfoQw  64.4%    5.79MiB/s ETA 00:21 frag NA/NA
+[download] CMrXO8qfoQw  67.1%    7.58MiB/s ETA 00:15 frag NA/NA
+[download] CMrXO8qfoQw  69.4%    6.62MiB/s ETA 00:16 frag NA/NA
+[download] CMrXO8qfoQw  70.2%    2.00MiB/s ETA 00:51 frag NA/NA
+[download] CMrXO8qfoQw  72.6%    6.29MiB/s ETA 00:15 frag NA/NA
+[download] CMrXO8qfoQw  75.5%    9.10MiB/s ETA 00:09 frag NA/NA
+[download] CMrXO8qfoQw  77.8%    7.15MiB/s ETA 00:10 frag NA/NA
+[download] CMrXO8qfoQw  78.8%    9.41MiB/s ETA 00:07 frag NA/NA
+[download] CMrXO8qfoQw  82.1%   17.10MiB/s ETA 00:03 frag NA/NA
+[download] CMrXO8qfoQw  84.4%    7.31MiB/s ETA 00:07 frag NA/NA
+[download] CMrXO8qfoQw  86.6%    5.22MiB/s ETA 00:08 frag NA/NA
+[download] CMrXO8qfoQw  87.7%   11.54MiB/s ETA 00:03 frag NA/NA
+[download] CMrXO8qfoQw  89.4%  183.67KiB/s ETA 03:25 frag NA/NA
+[download] CMrXO8qfoQw  91.1%    4.03MiB/s ETA 00:07 frag NA/NA
+[download] CMrXO8qfoQw  92.2%    4.64MiB/s ETA 00:05 frag NA/NA
+[download] CMrXO8qfoQw  95.3%    3.19MiB/s ETA 00:05 frag NA/NA
+[download] CMrXO8qfoQw  98.1%    3.53MiB/s ETA 00:01 frag NA/NA
+[download] CMrXO8qfoQw 100.0% 6.49MiB/s ETA NA frag NA/NA
+audio fingerprint cached: youtube/CMrXO8qfoQw frames=46759
+analysis audio cached: youtube/CMrXO8qfoQw path=youtube-CMrXO8qfoQw.webm
+audio fallback anchor 1: yt=2324.0s twitch=15829.0s similarity=0.8156 second=0.8041 margin=0.0115 search=global
+audio fallback anchor 2: yt=8402.8s twitch=21427.5s similarity=0.7381 second=0.7291 margin=0.0090 search=forward-fallback
+audio fallback anchor 3: yt=14949.2s twitch=25742.5s similarity=0.7372 second=0.7194 margin=0.0178 search=forward-fallback
+audio fallback anchor 4: yt=20560.4s twitch=28548.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 1: yt=2324.0s twitch=7212.5s similarity=0.8116 second=0.8025 margin=0.0091 search=global
+audio fallback anchor 2: yt=8402.8s twitch=14486.0s similarity=0.7528 second=0.7515 margin=0.0013 search=forward-fallback
+audio fallback anchor 3: yt=14949.2s twitch=20508.5s similarity=0.7762 second=0.7651 margin=0.0111 search=forward-fallback
+audio fallback anchor 4: yt=20560.4s twitch=23314.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 1: yt=2324.0s twitch=3476.0s similarity=0.8062 second=0.8034 margin=0.0028 search=global
+audio fallback anchor 2: yt=8402.8s twitch=20235.5s similarity=0.7835 second=0.7485 margin=0.0350 search=forward-fallback
+audio fallback anchor 3: yt=14949.2s twitch=23605.0s similarity=0.7516 second=0.7346 margin=0.0170 search=forward-fallback
+audio fallback anchor 4: yt=20560.4s twitch=26410.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+youtube captions: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --skip-download --no-playlist --ignore-errors --write-subs --write-auto-subs --sub-langs pt.*,pt --sub-format vtt --no-write-info-json --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --extractor-args youtube:skip=hls,dash -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\captions\CMrXO8qfoQw.%(ext)s https://www.youtube.com/watch?v=CMrXO8qfoQw
+youtube captions result: video=CMrXO8qfoQw status=available segments=5220
+localized transcript: using YouTube captions for CMrXO8qfoQw; Whisper/audio clip download skipped
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2863504919-61949f-1.%(ext)s --download-sections *3466.000-3514.000 https://www.twitch.tv/videos/2863504919
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2863504919
+[twitch:vod] 2863504919: Downloading stream metadata GraphQL
+[twitch:vod] 2863504919: Downloading video access token GraphQL
+[twitch:vod] 2863504919: Downloading m3u8 information
+[twitch:vod] 2863504919: Downloading storyboard metadata JSON
+[info] v2863504919: Downloading 1 format(s): Audio_Only
+[info] v2863504919: Downloading 1 time ranges: 3466.0-3514.0
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2863504919-61949f-1.mp4
+[in#0 @ 000001a055343780] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/init-0.mp4' for reading
+[in#0 @ 000001a055343780] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/0.mp4' for reading
+[in#0 @ 000001a055343780] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/index-dvr.m3u8':
+  Duration: 06:51:36.35, start: 64.001000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s, start 64.001000 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2863504919-61949f-1.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 000001a055343780] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/init-0.mp4' for reading
+[in#0/hls @ 000001a055343780] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/346.mp4' for reading
+[in#0/hls @ 000001a055343780] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/347.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 000001a0574c9c00] Found duplicated MOOV Atom. Skipped it
+[https @ 000001a0575fbd00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/348.mp4' for reading
+[https @ 000001a0579ef7c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/349.mp4' for reading
+[https @ 000001a0575fbd00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/350.mp4' for reading
+[https @ 000001a0579ef7c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/351.mp4' for reading
+[https @ 000001a0575fbd00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/352.mp4' for reading
+size=    1024KiB time=00:00:44.03 bitrate= 190.5kbits/s speed=86.6x elapsed=0:00:00.50    
+[out#0/mp4 @ 000001a057b650c0] video:0KiB audio:1153KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.833710%
+size=    1163KiB time=00:00:48.00 bitrate= 198.4kbits/s speed=89.1x elapsed=0:00:00.53    
+[download] v2863504919 100.0% 775.70KiB/s ETA NA frag NA/NA
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2863504919-61949f-2.%(ext)s --download-sections *20225.500-20273.500 https://www.twitch.tv/videos/2863504919
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2863504919
+[twitch:vod] 2863504919: Downloading stream metadata GraphQL
+[twitch:vod] 2863504919: Downloading video access token GraphQL
+[twitch:vod] 2863504919: Downloading m3u8 information
+[twitch:vod] 2863504919: Downloading storyboard metadata JSON
+[info] v2863504919: Downloading 1 format(s): Audio_Only
+[info] v2863504919: Downloading 1 time ranges: 20225.5-20273.5
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2863504919-61949f-2.mp4
+[in#0 @ 0000027404fe5700] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/init-0.mp4' for reading
+[in#0 @ 0000027404fe5700] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/0.mp4' for reading
+[in#0 @ 0000027404fe5700] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/index-dvr.m3u8':
+  Duration: 06:51:36.35, start: 64.001000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s, start 64.001000 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2863504919-61949f-2.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 0000027404fe5700] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/init-0.mp4' for reading
+[in#0/hls @ 0000027404fe5700] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/2022.mp4' for reading
+[in#0/hls @ 0000027404fe5700] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/2023.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 000002740507abc0] Found duplicated MOOV Atom. Skipped it
+[https @ 00000274072da180] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/2024.mp4' for reading
+[https @ 00000274073c5400] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/2025.mp4' for reading
+[https @ 00000274072da180] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/2026.mp4' for reading
+[https @ 00000274073c5400] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/2027.mp4' for reading
+[https @ 00000274072da180] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/2028.mp4' for reading
+size=    1024KiB time=00:00:44.53 bitrate= 188.4kbits/s speed=87.2x elapsed=0:00:00.51    
+[out#0/mp4 @ 000002740758cc40] video:0KiB audio:1142KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.841920%
+size=    1151KiB time=00:00:48.01 bitrate= 196.4kbits/s speed=89.1x elapsed=0:00:00.53    
+[download] v2863504919 100.0% 1.01MiB/s ETA NA frag NA/NA
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2863504919-61949f-3.%(ext)s --download-sections *23595.000-23643.000 https://www.twitch.tv/videos/2863504919
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2863504919
+[twitch:vod] 2863504919: Downloading stream metadata GraphQL
+[twitch:vod] 2863504919: Downloading video access token GraphQL
+[twitch:vod] 2863504919: Downloading m3u8 information
+[twitch:vod] 2863504919: Downloading storyboard metadata JSON
+[info] v2863504919: Downloading 1 format(s): Audio_Only
+[info] v2863504919: Downloading 1 time ranges: 23595.0-23643.0
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2863504919-61949f-3.mp4
+[in#0 @ 0000022dbdcc3c80] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/init-0.mp4' for reading
+[in#0 @ 0000022dbdcc3c80] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/0.mp4' for reading
+[in#0 @ 0000022dbdcc3c80] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/index-dvr.m3u8':
+  Duration: 06:51:36.35, start: 64.001000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s, start 64.001000 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2863504919-61949f-3.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 0000022dbdcc3c80] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/init-0.mp4' for reading
+[in#0/hls @ 0000022dbdcc3c80] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/2359.mp4' for reading
+[in#0/hls @ 0000022dbdcc3c80] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/2360.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000022dbfd73d80] Found duplicated MOOV Atom. Skipped it
+[https @ 0000022dbff4cc40] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/2361.mp4' for reading
+[https @ 0000022dc0131080] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/2362.mp4' for reading
+[https @ 0000022dbff4cc40] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/2363.mp4' for reading
+[https @ 0000022dc0131080] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/2364.mp4' for reading
+[https @ 0000022dbff4cc40] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/d7a8df1a64befa5b16fd_alanzoka_318804715766_1788375188/audio_only/2365.mp4' for reading
+size=    1024KiB time=00:00:45.04 bitrate= 186.2kbits/s speed=88.3x elapsed=0:00:00.50    
+[out#0/mp4 @ 0000022dc0077000] video:0KiB audio:1154KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.833201%
+size=    1163KiB time=00:00:48.00 bitrate= 198.5kbits/s speed=90.4x elapsed=0:00:00.53    
+[download] v2863504919 100.0% 1.02MiB/s ETA NA frag NA/NA
+faster-whisper profile: streamer=alanzoka language=pt timestamps=segment condition_on_previous_text=false scope=localized processed_seconds=144.0 model=faster-whisper-large-v3-turbo device=cuda compute=float16 batch=8 beam=5 vad=on
+transcribe twitch/2863504919: K:\Applications\LLMS\Whisper\.venv\Scripts\python.exe K:\Applications\Youtube-Channel\cstudio\faster_whisper_runner.py --spec C:\Users\Admin\AppData\Local\Temp\cstudio-faster-whisper-3_835xjg\spec.json --output C:\Users\Admin\AppData\Local\Temp\cstudio-faster-whisper-3_835xjg\transcript.json
+[faster-whisper] CSTUDIO_FW {"event": "runtime", "faster_whisper": "1.2.1", "ctranslate2": "4.8.2", "cuda_devices": 1, "device": "cuda", "compute_type": "float16", "batch_size": 8}
+[faster-whisper] CSTUDIO_FW {"event": "model_ready", "seconds": 1.76, "model": "K:\\Applications\\LLMS\\Whisper\\faster-whisper-large-v3-turbo"}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 1, "inputs": 3, "file": "localized-twitch-2863504919-61949f-1.mp4", "ranges": 0, "offset": 3466.0}
+[faster-whisper]   0%|          | 0/1 [00:00<?, ?it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  1.17it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  1.17it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 1, "segments": 1, "seconds": 1.148, "language": "pt", "duration": 48.0, "duration_after_vad": 29.568}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 2, "inputs": 3, "file": "localized-twitch-2863504919-61949f-2.mp4", "ranges": 0, "offset": 20225.5}
+[faster-whisper]   0%|          | 0/1 [00:00<?, ?it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  6.21it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  6.21it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 2, "segments": 1, "seconds": 0.351, "language": "pt", "duration": 48.0, "duration_after_vad": 4.224}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 3, "inputs": 3, "file": "localized-twitch-2863504919-61949f-3.mp4", "ranges": 0, "offset": 23595.0}
+[faster-whisper]   0%|          | 0/1 [00:00<?, ?it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  2.56it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  2.56it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 3, "segments": 1, "seconds": 0.58, "language": "pt", "duration": 48.0, "duration_after_vad": 29.904}
+[faster-whisper] CSTUDIO_FW {"event": "done", "segments": 3, "seconds": 3.84}
+transcript quality: backend=faster-whisper state=valid classification=usable segments=3 unique_ratio=1.0 dominant_ratio=0.3333 repeat_ratio=0.0 chars_per_hour=20450.0
+localized transcript anchor: yt=2324.0s tw=3476.0s audio=0.8062 text=0.1242 tokens=62/99
+localized transcript anchor: yt=8402.8s tw=20235.5s audio=0.7835 text=0.0571 tokens=25/10
+localized transcript anchor: yt=14949.2s tw=23605.0s audio=0.7516 text=0.0860 tokens=30/63
+caption cache hit: youtube/CMrXO8qfoQw status=available age=17s
+localized transcript: using YouTube captions for CMrXO8qfoQw; Whisper/audio clip download skipped
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-601279-1.%(ext)s --download-sections *7202.500-7250.500 https://www.twitch.tv/videos/2862622285
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2862622285
+[twitch:vod] 2862622285: Downloading stream metadata GraphQL
+[twitch:vod] 2862622285: Downloading video access token GraphQL
+[twitch:vod] 2862622285: Downloading m3u8 information
+[twitch:vod] 2862622285: Downloading storyboard metadata JSON
+[info] v2862622285: Downloading 1 format(s): Audio_Only
+[info] v2862622285: Downloading 1 time ranges: 7202.5-7250.5
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-601279-1.mp4
+[in#0 @ 0000027ec7567300] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/init-0.mp4' for reading
+[in#0 @ 0000027ec7567300] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/0.mp4' for reading
+[in#0 @ 0000027ec7567300] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/index-dvr.m3u8':
+  Duration: 06:13:33.88, start: 64.001000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s, start 64.001000 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-601279-1.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 0000027ec7567300] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/init-0.mp4' for reading
+[in#0/hls @ 0000027ec7567300] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/720.mp4' for reading
+[in#0/hls @ 0000027ec7567300] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/721.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000027ec758c400] Found duplicated MOOV Atom. Skipped it
+[https @ 0000027ec987c140] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/722.mp4' for reading
+[https @ 0000027ec9c41040] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/723.mp4' for reading
+[https @ 0000027ec987c140] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/724.mp4' for reading
+[https @ 0000027ec9c41040] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/725.mp4' for reading
+[https @ 0000027ec987c140] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/726.mp4' for reading
+size=    1024KiB time=00:00:47.54 bitrate= 176.4kbits/s speed=93.9x elapsed=0:00:00.50    
+[out#0/mp4 @ 0000027ec9bf9640] video:0KiB audio:1127KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.852957%
+size=    1137KiB time=00:00:48.01 bitrate= 193.9kbits/s speed=90.5x elapsed=0:00:00.53    
+[download] v2862622285 100.0% 1.01MiB/s ETA NA frag NA/NA
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-601279-2.%(ext)s --download-sections *14476.000-14524.000 https://www.twitch.tv/videos/2862622285
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2862622285
+[twitch:vod] 2862622285: Downloading stream metadata GraphQL
+[twitch:vod] 2862622285: Downloading video access token GraphQL
+[twitch:vod] 2862622285: Downloading m3u8 information
+[twitch:vod] 2862622285: Downloading storyboard metadata JSON
+[info] v2862622285: Downloading 1 format(s): Audio_Only
+[info] v2862622285: Downloading 1 time ranges: 14476.0-14524.0
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-601279-2.mp4
+[in#0 @ 0000013e44ca4580] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/init-0.mp4' for reading
+[in#0 @ 0000013e44ca4580] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/0.mp4' for reading
+[in#0 @ 0000013e44ca4580] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/index-dvr.m3u8':
+  Duration: 06:13:33.88, start: 64.001000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s, start 64.001000 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-601279-2.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 0000013e44ca4580] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/init-0.mp4' for reading
+[in#0/hls @ 0000013e44ca4580] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/1447.mp4' for reading
+[in#0/hls @ 0000013e44ca4580] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/1448.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000013e44d2efc0] Found duplicated MOOV Atom. Skipped it
+[https @ 0000013e46ebbf40] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/1449.mp4' for reading
+[https @ 0000013e47296040] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/1450.mp4' for reading
+[https @ 0000013e46ebbf40] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/1451.mp4' for reading
+[https @ 0000013e47296040] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/1452.mp4' for reading
+[https @ 0000013e46ebbf40] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/1453.mp4' for reading
+size=    1024KiB time=00:00:44.04 bitrate= 190.5kbits/s speed=  87x elapsed=0:00:00.50    
+[out#0/mp4 @ 0000013e470ef880] video:0KiB audio:1142KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.841887%
+size=    1151KiB time=00:00:48.01 bitrate= 196.5kbits/s speed=90.4x elapsed=0:00:00.53    
+[download] v2862622285 100.0% 1.03MiB/s ETA NA frag NA/NA
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-601279-3.%(ext)s --download-sections *20498.500-20546.500 https://www.twitch.tv/videos/2862622285
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2862622285
+[twitch:vod] 2862622285: Downloading stream metadata GraphQL
+[twitch:vod] 2862622285: Downloading video access token GraphQL
+[twitch:vod] 2862622285: Downloading m3u8 information
+[twitch:vod] 2862622285: Downloading storyboard metadata JSON
+[info] v2862622285: Downloading 1 format(s): Audio_Only
+[info] v2862622285: Downloading 1 time ranges: 20498.5-20546.5
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-601279-3.mp4
+[in#0 @ 0000027d88b33200] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/init-0.mp4' for reading
+[in#0 @ 0000027d88b33200] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/0.mp4' for reading
+[in#0 @ 0000027d88b33200] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/index-dvr.m3u8':
+  Duration: 06:13:33.88, start: 64.001000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s, start 64.001000 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-601279-3.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 0000027d88b33200] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/init-0.mp4' for reading
+[in#0/hls @ 0000027d88b33200] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2049.mp4' for reading
+[in#0/hls @ 0000027d88b33200] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2050.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000027d8aca6140] Found duplicated MOOV Atom. Skipped it
+[https @ 0000027d8aebb2c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2051.mp4' for reading
+[https @ 0000027d8af89a00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2052.mp4' for reading
+[https @ 0000027d8aebb2c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2053.mp4' for reading
+[https @ 0000027d8af89a00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2054.mp4' for reading
+[https @ 0000027d8aebb2c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2055.mp4' for reading
+size=     768KiB time=00:00:41.53 bitrate= 151.5kbits/s speed=81.3x elapsed=0:00:00.51    
+[out#0/mp4 @ 0000027d8b025240] video:0KiB audio:1144KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.840225%
+size=    1154KiB time=00:00:48.01 bitrate= 196.8kbits/s speed=89.9x elapsed=0:00:00.53    
+[download] v2862622285 100.0% 1.02MiB/s ETA NA frag NA/NA
+faster-whisper profile: streamer=alanzoka language=pt timestamps=segment condition_on_previous_text=false scope=localized processed_seconds=144.0 model=faster-whisper-large-v3-turbo device=cuda compute=float16 batch=8 beam=5 vad=on
+transcribe twitch/2862622285: K:\Applications\LLMS\Whisper\.venv\Scripts\python.exe K:\Applications\Youtube-Channel\cstudio\faster_whisper_runner.py --spec C:\Users\Admin\AppData\Local\Temp\cstudio-faster-whisper-8yz2rqn3\spec.json --output C:\Users\Admin\AppData\Local\Temp\cstudio-faster-whisper-8yz2rqn3\transcript.json
+[faster-whisper] CSTUDIO_FW {"event": "runtime", "faster_whisper": "1.2.1", "ctranslate2": "4.8.2", "cuda_devices": 1, "device": "cuda", "compute_type": "float16", "batch_size": 8}
+[faster-whisper] CSTUDIO_FW {"event": "model_ready", "seconds": 1.756, "model": "K:\\Applications\\LLMS\\Whisper\\faster-whisper-large-v3-turbo"}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 1, "inputs": 3, "file": "localized-twitch-2862622285-601279-1.mp4", "ranges": 0, "offset": 7202.5}
+[faster-whisper]   0%|          | 0/1 [00:00<?, ?it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  1.81it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  1.81it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 1, "segments": 1, "seconds": 0.834, "language": "pt", "duration": 48.0, "duration_after_vad": 22.16}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 2, "inputs": 3, "file": "localized-twitch-2862622285-601279-2.mp4", "ranges": 0, "offset": 14476.0}
+[faster-whisper]   0%|          | 0/2 [00:00<?, ?it/s]
+[faster-whisper]  50%|█████     | 1/2 [00:00<00:00,  1.67it/s]
+[faster-whisper] 100%|██████████| 2/2 [00:00<00:00,  3.34it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 2, "segments": 2, "seconds": 0.795, "language": "pt", "duration": 48.0, "duration_after_vad": 36.64}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 3, "inputs": 3, "file": "localized-twitch-2862622285-601279-3.mp4", "ranges": 0, "offset": 20498.5}
+[faster-whisper]   0%|          | 0/2 [00:00<?, ?it/s]
+[faster-whisper]  50%|█████     | 1/2 [00:00<00:00,  1.39it/s]
+[faster-whisper] 100%|██████████| 2/2 [00:00<00:00,  2.78it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 3, "segments": 2, "seconds": 0.939, "language": "pt", "duration": 48.0, "duration_after_vad": 37.728}
+[faster-whisper] CSTUDIO_FW {"event": "done", "segments": 5, "seconds": 4.325}
+transcript quality: backend=faster-whisper state=valid classification=usable segments=5 unique_ratio=1.0 dominant_ratio=0.2 repeat_ratio=0.0 chars_per_hour=34550.0
+localized transcript anchor: yt=2324.0s tw=7212.5s audio=0.8116 text=0.0545 tokens=62/48
+localized transcript anchor: yt=8402.8s tw=14486.0s audio=0.7528 text=0.1008 tokens=25/94
+localized transcript anchor: yt=14949.2s tw=20508.5s audio=0.7762 text=0.0341 tokens=30/146
+assignment result: youtube=CMrXO8qfoQw state=unmatched primary_vod=2861744268 assigned=-
+assignment 17/26: youtube=6yZE6Xr2BZ0 resume=completed -> skip all 8 VODs
+assignment 18/26: youtube=7GBn3uVeVb8 resume=completed -> skip all 8 VODs
+assignment 19/26: youtube=-2A5lJmH6hI evaluated=0/8
+metadata cache hit: youtube/-2A5lJmH6hI age=286s
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube--2A5lJmH6hI.%(ext)s https://www.youtube.com/watch?v=-2A5lJmH6hI
+[youtube] Extracting URL: https://www.youtube.com/watch?v=-2A5lJmH6hI
+[youtube] -2A5lJmH6hI: Downloading webpage
+[youtube] -2A5lJmH6hI: Downloading visionos player API JSON
+[youtube] -2A5lJmH6hI: Downloading m3u8 information
+[info] -2A5lJmH6hI: Downloading 1 format(s): 251-1
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube--2A5lJmH6hI.webm
+[download] -2A5lJmH6hI   0.0%  Unknown B/s ETA Unknown frag NA/NA
+[download] -2A5lJmH6hI  10.9%   14.63MiB/s ETA 00:05 frag NA/NA
+[download] -2A5lJmH6hI  19.6%    5.34MiB/s ETA 00:13 frag NA/NA
+[download] -2A5lJmH6hI  22.1%    5.16MiB/s ETA 00:13 frag NA/NA
+[download] -2A5lJmH6hI  29.8%    5.92MiB/s ETA 00:10 frag NA/NA
+[download] -2A5lJmH6hI  34.3%    1.39MiB/s ETA 00:41 frag NA/NA
+[download] -2A5lJmH6hI  44.4%    5.43MiB/s ETA 00:09 frag NA/NA
+[download] -2A5lJmH6hI  45.5%    1.63MiB/s ETA 00:29 frag NA/NA
+[download] -2A5lJmH6hI  55.6%    6.78MiB/s ETA 00:05 frag NA/NA
+[download] -2A5lJmH6hI  64.7%    6.67MiB/s ETA 00:04 frag NA/NA
+[download] -2A5lJmH6hI  68.9%    2.09MiB/s ETA 00:13 frag NA/NA
+[download] -2A5lJmH6hI  77.1%    6.26MiB/s ETA 00:03 frag NA/NA
+[download] -2A5lJmH6hI  87.0%   11.89MiB/s ETA 00:00 frag NA/NA
+[download] -2A5lJmH6hI  98.3%    8.36MiB/s ETA 00:00 frag NA/NA
+[download] -2A5lJmH6hI 100.0% 6.51MiB/s ETA NA frag NA/NA
+audio fingerprint cached: youtube/-2A5lJmH6hI frames=12586
+analysis audio cached: youtube/-2A5lJmH6hI path=youtube--2A5lJmH6hI.webm
+audio fallback anchor 1: yt=615.3s twitch=12580.5s similarity=0.7685 second=0.7666 margin=0.0019 search=global
+audio fallback anchor 2: yt=2251.5s twitch=25473.5s similarity=0.7886 second=0.7850 margin=0.0036 search=forward-fallback
+audio fallback anchor 3: yt=4013.5s twitch=26354.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 4: yt=5523.8s twitch=27109.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 1: yt=615.3s twitch=5131.0s similarity=0.7490 second=0.7485 margin=0.0005 search=global
+audio fallback anchor 2: yt=2251.5s twitch=8337.0s similarity=0.7730 second=0.7723 margin=0.0007 search=forward-fallback
+audio fallback anchor 3: yt=4013.5s twitch=22110.0s similarity=0.7663 second=0.7632 margin=0.0031 search=forward-fallback
+audio fallback anchor 4: yt=5523.8s twitch=22865.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+youtube captions: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --skip-download --no-playlist --ignore-errors --write-subs --write-auto-subs --sub-langs pt.*,pt --sub-format vtt --no-write-info-json --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --extractor-args youtube:skip=hls,dash -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\captions\-2A5lJmH6hI.%(ext)s https://www.youtube.com/watch?v=-2A5lJmH6hI
+youtube captions result: video=-2A5lJmH6hI status=available segments=5434
+localized transcript: using YouTube captions for -2A5lJmH6hI; Whisper/audio clip download skipped
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-24a0a1-1.%(ext)s --download-sections *5121.000-5169.000 https://www.twitch.tv/videos/2862622285
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2862622285
+[twitch:vod] 2862622285: Downloading stream metadata GraphQL
+[twitch:vod] 2862622285: Downloading video access token GraphQL
+[twitch:vod] 2862622285: Downloading m3u8 information
+[twitch:vod] 2862622285: Downloading storyboard metadata JSON
+[info] v2862622285: Downloading 1 format(s): Audio_Only
+[info] v2862622285: Downloading 1 time ranges: 5121.0-5169.0
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-24a0a1-1.mp4
+[in#0 @ 000001c50c195180] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/init-0.mp4' for reading
+[in#0 @ 000001c50c195180] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/0.mp4' for reading
+[in#0 @ 000001c50c195180] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/index-dvr.m3u8':
+  Duration: 06:13:33.88, start: 64.001000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s, start 64.001000 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-24a0a1-1.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 000001c50c195180] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/init-0.mp4' for reading
+[in#0/hls @ 000001c50c195180] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/512.mp4' for reading
+[in#0/hls @ 000001c50c195180] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/513.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 000001c50e40ed40] Found duplicated MOOV Atom. Skipped it
+[https @ 000001c50e524600] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/514.mp4' for reading
+[https @ 000001c50e5b3080] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/515.mp4' for reading
+[https @ 000001c50e524600] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/516.mp4' for reading
+[https @ 000001c50e5b3080] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/517.mp4' for reading
+size=     768KiB time=00:00:39.04 bitrate= 161.2kbits/s speed=76.3x elapsed=0:00:00.51    
+[out#0/mp4 @ 000001c50e4d2600] video:0KiB audio:1151KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.835376%
+size=    1160KiB time=00:00:48.00 bitrate= 198.0kbits/s speed=51.1x elapsed=0:00:00.93    
+[download] v2862622285 100.0% 778.30KiB/s ETA NA frag NA/NA
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-24a0a1-2.%(ext)s --download-sections *8327.000-8375.000 https://www.twitch.tv/videos/2862622285
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2862622285
+[twitch:vod] 2862622285: Downloading stream metadata GraphQL
+[twitch:vod] 2862622285: Downloading video access token GraphQL
+[twitch:vod] 2862622285: Downloading m3u8 information
+[twitch:vod] 2862622285: Downloading storyboard metadata JSON
+[info] v2862622285: Downloading 1 format(s): Audio_Only
+[info] v2862622285: Downloading 1 time ranges: 8327.0-8375.0
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-24a0a1-2.mp4
+[in#0 @ 000001e4a72a4680] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/init-0.mp4' for reading
+[in#0 @ 000001e4a72a4680] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/0.mp4' for reading
+[in#0 @ 000001e4a72a4680] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/index-dvr.m3u8':
+  Duration: 06:13:33.88, start: 64.001000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s, start 64.001000 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-24a0a1-2.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 000001e4a72a4680] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/init-0.mp4' for reading
+[in#0/hls @ 000001e4a72a4680] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/832.mp4' for reading
+[in#0/hls @ 000001e4a72a4680] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/833.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 000001e4a733c080] Found duplicated MOOV Atom. Skipped it
+[https @ 000001e4a956ad40] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/834.mp4' for reading
+[https @ 000001e4a9d11080] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/835.mp4' for reading
+[https @ 000001e4a956ad40] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/836.mp4' for reading
+[https @ 000001e4a9d11080] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/837.mp4' for reading
+size=     768KiB time=00:00:33.04 bitrate= 190.4kbits/s speed=  65x elapsed=0:00:00.50    
+[https @ 000001e4a956ad40] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/838.mp4' for reading
+[out#0/mp4 @ 000001e4a9966d80] video:0KiB audio:1153KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.833487%
+size=    1163KiB time=00:00:48.01 bitrate= 198.4kbits/s speed=87.8x elapsed=0:00:00.54    
+[download] v2862622285 100.0% 1.01MiB/s ETA NA frag NA/NA
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-24a0a1-3.%(ext)s --download-sections *22100.000-22148.000 https://www.twitch.tv/videos/2862622285
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2862622285
+[twitch:vod] 2862622285: Downloading stream metadata GraphQL
+[twitch:vod] 2862622285: Downloading video access token GraphQL
+[twitch:vod] 2862622285: Downloading m3u8 information
+[twitch:vod] 2862622285: Downloading storyboard metadata JSON
+[info] v2862622285: Downloading 1 format(s): Audio_Only
+[info] v2862622285: Downloading 1 time ranges: 22100.0-22148.0
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-24a0a1-3.mp4
+[in#0 @ 0000027a139e35c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/init-0.mp4' for reading
+[in#0 @ 0000027a139e35c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/0.mp4' for reading
+[in#0 @ 0000027a139e35c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/index-dvr.m3u8':
+  Duration: 06:13:33.88, start: 64.001000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s, start 64.001000 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2862622285-24a0a1-3.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 190 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 0000027a139e35c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/init-0.mp4' for reading
+[in#0/hls @ 0000027a139e35c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2210.mp4' for reading
+[in#0/hls @ 0000027a139e35c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2211.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000027a15990400] Found duplicated MOOV Atom. Skipped it
+[https @ 0000027a15b86b00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2212.mp4' for reading
+[https @ 0000027a15ded040] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2213.mp4' for reading
+[https @ 0000027a15b86b00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2214.mp4' for reading
+[https @ 0000027a15ded040] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/992466af3aaac28bbc0f_alanzoka_318796433654_1788287365/audio_only/2215.mp4' for reading
+[out#0/mp4 @ 0000027a15ed1600] video:0KiB audio:1143KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.840722%
+size=    1152KiB time=00:00:48.01 bitrate= 196.6kbits/s speed=96.3x elapsed=0:00:00.49    
+[download] v2862622285 100.0% 1.07MiB/s ETA NA frag NA/NA
+faster-whisper profile: streamer=alanzoka language=pt timestamps=segment condition_on_previous_text=false scope=localized processed_seconds=144.0 model=faster-whisper-large-v3-turbo device=cuda compute=float16 batch=8 beam=5 vad=on
+transcribe twitch/2862622285: K:\Applications\LLMS\Whisper\.venv\Scripts\python.exe K:\Applications\Youtube-Channel\cstudio\faster_whisper_runner.py --spec C:\Users\Admin\AppData\Local\Temp\cstudio-faster-whisper-0b8o4tpb\spec.json --output C:\Users\Admin\AppData\Local\Temp\cstudio-faster-whisper-0b8o4tpb\transcript.json
+[faster-whisper] CSTUDIO_FW {"event": "runtime", "faster_whisper": "1.2.1", "ctranslate2": "4.8.2", "cuda_devices": 1, "device": "cuda", "compute_type": "float16", "batch_size": 8}
+[faster-whisper] CSTUDIO_FW {"event": "model_ready", "seconds": 1.776, "model": "K:\\Applications\\LLMS\\Whisper\\faster-whisper-large-v3-turbo"}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 1, "inputs": 3, "file": "localized-twitch-2862622285-24a0a1-1.mp4", "ranges": 0, "offset": 5121.0}
+[faster-whisper]   0%|          | 0/1 [00:00<?, ?it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  1.91it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  1.91it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 1, "segments": 1, "seconds": 0.79, "language": "pt", "duration": 48.0, "duration_after_vad": 8.8}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 2, "inputs": 3, "file": "localized-twitch-2862622285-24a0a1-2.mp4", "ranges": 0, "offset": 8327.0}
+[faster-whisper]   0%|          | 0/1 [00:00<?, ?it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  3.20it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  3.20it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 2, "segments": 1, "seconds": 0.495, "language": "pt", "duration": 48.0, "duration_after_vad": 21.024}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 3, "inputs": 3, "file": "localized-twitch-2862622285-24a0a1-3.mp4", "ranges": 0, "offset": 22100.0}
+[faster-whisper]   0%|          | 0/2 [00:00<?, ?it/s]
+[faster-whisper]  50%|█████     | 1/2 [00:00<00:00,  1.42it/s]
+[faster-whisper] 100%|██████████| 2/2 [00:00<00:00,  2.84it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 3, "segments": 2, "seconds": 0.917, "language": "pt", "duration": 47.979, "duration_after_vad": 41.355}
+[faster-whisper] CSTUDIO_FW {"event": "done", "segments": 4, "seconds": 3.979}
+transcript quality: backend=faster-whisper state=valid classification=usable segments=4 unique_ratio=1.0 dominant_ratio=0.25 repeat_ratio=0.0 chars_per_hour=24200.0
+localized transcript anchor: yt=615.3s tw=5131.0s audio=0.7490 text=0.0184 tokens=186/31
+localized transcript anchor: yt=2251.5s tw=8337.0s audio=0.7730 text=0.0215 tokens=340/32
+localized transcript anchor: yt=4013.5s tw=22110.0s audio=0.7663 text=0.0710 tokens=305/146
+caption cache hit: youtube/-2A5lJmH6hI status=available age=17s
+localized transcript: using YouTube captions for -2A5lJmH6hI; Whisper/audio clip download skipped
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2861744268-e22934-1.%(ext)s --download-sections *12570.500-12618.500 https://www.twitch.tv/videos/2861744268
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2861744268
+[twitch:vod] 2861744268: Downloading stream metadata GraphQL
+[twitch:vod] 2861744268: Downloading video access token GraphQL
+[twitch:vod] 2861744268: Downloading m3u8 information
+[twitch:vod] 2861744268: Downloading storyboard metadata JSON
+[info] v2861744268: Downloading 1 format(s): Audio_Only
+[info] v2861744268: Downloading 1 time ranges: 12570.5-12618.5
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2861744268-e22934-1.mp4
+[in#0 @ 0000023526573700] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/init-0.mp4' for reading
+[in#0 @ 0000023526573700] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/0.mp4' for reading
+[in#0 @ 0000023526573700] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/index-dvr.m3u8':
+  Duration: 07:11:42.73, start: 64.001000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 191 kb/s, start 64.001000 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2861744268-e22934-1.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 191 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 0000023526573700] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/init-0.mp4' for reading
+[in#0/hls @ 0000023526573700] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1257.mp4' for reading
+[in#0/hls @ 0000023526573700] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1258.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000023526c58b80] Found duplicated MOOV Atom. Skipped it
+[https @ 0000023528b6a140] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1259.mp4' for reading
+[https @ 0000023528c3fc00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1260.mp4' for reading
+[https @ 0000023528b6a140] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1261.mp4' for reading
+[https @ 0000023528c3fc00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1262.mp4' for reading
+[out#0/mp4 @ 0000023528d55800] video:0KiB audio:1146KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.838997%
+size=    1155KiB time=00:00:48.01 bitrate= 197.1kbits/s speed=94.2x elapsed=0:00:00.50    
+[download] v2861744268 100.0% 784.32KiB/s ETA NA frag NA/NA
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2861744268-e22934-2.%(ext)s --download-sections *25463.500-25511.500 https://www.twitch.tv/videos/2861744268
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2861744268
+[twitch:vod] 2861744268: Downloading stream metadata GraphQL
+[twitch:vod] 2861744268: Downloading video access token GraphQL
+[twitch:vod] 2861744268: Downloading m3u8 information
+[twitch:vod] 2861744268: Downloading storyboard metadata JSON
+[info] v2861744268: Downloading 1 format(s): Audio_Only
+[info] v2861744268: Downloading 1 time ranges: 25463.5-25511.5
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2861744268-e22934-2.mp4
+[in#0 @ 0000018b4cb53480] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/init-0.mp4' for reading
+[in#0 @ 0000018b4cb53480] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/0.mp4' for reading
+[in#0 @ 0000018b4cb53480] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/index-dvr.m3u8':
+  Duration: 07:11:42.73, start: 64.001000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 191 kb/s, start 64.001000 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2861744268-e22934-2.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 191 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 0000018b4cb53480] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/init-0.mp4' for reading
+[in#0/hls @ 0000018b4cb53480] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/2546.mp4' for reading
+[in#0/hls @ 0000018b4cb53480] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/2547.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000018b4cbfb0c0] Found duplicated MOOV Atom. Skipped it
+[https @ 0000018b4f017180] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/2548.mp4' for reading
+[https @ 0000018b4f1e6e80] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/2549.mp4' for reading
+[https @ 0000018b4f017180] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/2550.mp4' for reading
+[https @ 0000018b4f1e6e80] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/2551.mp4' for reading
+size=     768KiB time=00:00:36.53 bitrate= 172.2kbits/s speed=72.4x elapsed=0:00:00.50    
+[https @ 0000018b4f017180] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/2552.mp4' for reading
+[out#0/mp4 @ 0000018b4efb9ac0] video:0KiB audio:1144KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.840430%
+size=    1153KiB time=00:00:48.00 bitrate= 196.8kbits/s speed=89.1x elapsed=0:00:00.53    
+[download] v2861744268 100.0% 1.03MiB/s ETA NA frag NA/NA
+faster-whisper profile: streamer=alanzoka language=pt timestamps=segment condition_on_previous_text=false scope=localized processed_seconds=96.0 model=faster-whisper-large-v3-turbo device=cuda compute=float16 batch=8 beam=5 vad=on
+transcribe twitch/2861744268: K:\Applications\LLMS\Whisper\.venv\Scripts\python.exe K:\Applications\Youtube-Channel\cstudio\faster_whisper_runner.py --spec C:\Users\Admin\AppData\Local\Temp\cstudio-faster-whisper-dde7wz3v\spec.json --output C:\Users\Admin\AppData\Local\Temp\cstudio-faster-whisper-dde7wz3v\transcript.json
+[faster-whisper] CSTUDIO_FW {"event": "runtime", "faster_whisper": "1.2.1", "ctranslate2": "4.8.2", "cuda_devices": 1, "device": "cuda", "compute_type": "float16", "batch_size": 8}
+[faster-whisper] CSTUDIO_FW {"event": "model_ready", "seconds": 1.892, "model": "K:\\Applications\\LLMS\\Whisper\\faster-whisper-large-v3-turbo"}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 1, "inputs": 2, "file": "localized-twitch-2861744268-e22934-1.mp4", "ranges": 0, "offset": 12570.5}
+[faster-whisper]   0%|          | 0/1 [00:00<?, ?it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  2.07it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  2.07it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 1, "segments": 1, "seconds": 0.767, "language": "pt", "duration": 48.0, "duration_after_vad": 11.488}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 2, "inputs": 2, "file": "localized-twitch-2861744268-e22934-2.mp4", "ranges": 0, "offset": 25463.5}
+[faster-whisper]   0%|          | 0/1 [00:00<?, ?it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  5.60it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  5.60it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 2, "segments": 1, "seconds": 0.372, "language": "pt", "duration": 48.0, "duration_after_vad": 13.12}
+[faster-whisper] CSTUDIO_FW {"event": "done", "segments": 2, "seconds": 3.032}
+transcript quality: backend=faster-whisper state=valid classification=usable segments=2 unique_ratio=1.0 dominant_ratio=0.5 repeat_ratio=0.0 chars_per_hour=5962.5
+localized transcript anchor: yt=615.3s tw=12580.5s audio=0.7685 text=0.0386 tokens=186/21
+localized transcript anchor: yt=2251.5s tw=25473.5s audio=0.7886 text=0.0114 tokens=340/12
+assignment result: youtube=-2A5lJmH6hI state=unmatched primary_vod=2862622285 assigned=-
+assignment 20/26: youtube=lwZDxy_uLj8 evaluated=0/8
+metadata cache hit: youtube/lwZDxy_uLj8 age=349s
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-lwZDxy_uLj8.%(ext)s https://www.youtube.com/watch?v=lwZDxy_uLj8
+[youtube] Extracting URL: https://www.youtube.com/watch?v=lwZDxy_uLj8
+[youtube] lwZDxy_uLj8: Downloading webpage
+[youtube] lwZDxy_uLj8: Downloading visionos player API JSON
+[youtube] lwZDxy_uLj8: Downloading m3u8 information
+[info] lwZDxy_uLj8: Downloading 1 format(s): 251-1
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-lwZDxy_uLj8.webm
+[download] lwZDxy_uLj8   0.0%  978.15KiB/s ETA 01:31 frag NA/NA
+[download] lwZDxy_uLj8   9.1%    7.88MiB/s ETA 00:10 frag NA/NA
+[download] lwZDxy_uLj8  15.7%    5.47MiB/s ETA 00:13 frag NA/NA
+[download] lwZDxy_uLj8  23.2%    1.31MiB/s ETA 00:51 frag NA/NA
+[download] lwZDxy_uLj8  28.4%    4.44MiB/s ETA 00:14 frag NA/NA
+[download] lwZDxy_uLj8  35.4%    2.60MiB/s ETA 00:21 frag NA/NA
+[download] lwZDxy_uLj8  39.9%    3.78MiB/s ETA 00:13 frag NA/NA
+[download] lwZDxy_uLj8  44.5%    4.39MiB/s ETA 00:11 frag NA/NA
+[download] lwZDxy_uLj8  53.6%    5.51MiB/s ETA 00:07 frag NA/NA
+[download] lwZDxy_uLj8  57.7%    3.11MiB/s ETA 00:11 frag NA/NA
+[download] lwZDxy_uLj8  66.4%    7.86MiB/s ETA 00:03 frag NA/NA
+[download] lwZDxy_uLj8  75.6%    6.88MiB/s ETA 00:03 frag NA/NA
+[download] lwZDxy_uLj8  80.0%    4.81MiB/s ETA 00:03 frag NA/NA
+[download] lwZDxy_uLj8  93.2%    6.16MiB/s ETA 00:00 frag NA/NA
+[download] lwZDxy_uLj8 100.0%    6.51MiB/s ETA 00:00 frag NA/NA
+[download] lwZDxy_uLj8 100.0% 6.23MiB/s ETA NA frag NA/NA
+audio fingerprint cached: youtube/lwZDxy_uLj8 frames=11961
+analysis audio cached: youtube/lwZDxy_uLj8 path=youtube-lwZDxy_uLj8.webm
+audio fallback anchor 1: yt=584.0s twitch=24675.5s similarity=0.8313 second=0.8111 margin=0.0202 search=global
+audio fallback anchor 2: yt=2138.8s twitch=25480.5s similarity=0.7875 second=0.7617 margin=0.0258 search=forward-fallback
+audio fallback anchor 3: yt=3813.2s twitch=26317.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 4: yt=5248.4s twitch=27035.0s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+youtube captions: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --skip-download --no-playlist --ignore-errors --write-subs --write-auto-subs --sub-langs pt.*,pt --sub-format vtt --no-write-info-json --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --extractor-args youtube:skip=hls,dash -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\captions\lwZDxy_uLj8.%(ext)s https://www.youtube.com/watch?v=lwZDxy_uLj8
+youtube captions result: video=lwZDxy_uLj8 status=available segments=1284
+localized transcript: using YouTube captions for lwZDxy_uLj8; Whisper/audio clip download skipped
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2861744268-02b83f-1.%(ext)s --download-sections *24665.500-24713.500 https://www.twitch.tv/videos/2861744268
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2861744268
+[twitch:vod] 2861744268: Downloading stream metadata GraphQL
+[twitch:vod] 2861744268: Downloading video access token GraphQL
+[twitch:vod] 2861744268: Downloading m3u8 information
+[twitch:vod] 2861744268: Downloading storyboard metadata JSON
+[info] v2861744268: Downloading 1 format(s): Audio_Only
+[info] v2861744268: Downloading 1 time ranges: 24665.5-24713.5
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2861744268-02b83f-1.mp4
+[in#0 @ 000002d50f8e3000] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/init-0.mp4' for reading
+[in#0 @ 000002d50f8e3000] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/0.mp4' for reading
+[in#0 @ 000002d50f8e3000] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/index-dvr.m3u8':
+  Duration: 07:11:42.73, start: 64.001000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 191 kb/s, start 64.001000 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2861744268-02b83f-1.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 191 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 000002d50f8e3000] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/init-0.mp4' for reading
+[in#0/hls @ 000002d50f8e3000] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/2466.mp4' for reading
+[in#0/hls @ 000002d50f8e3000] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/2467.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 000002d511c1ed40] Found duplicated MOOV Atom. Skipped it
+[https @ 000002d511e93d80] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/2468.mp4' for reading
+[https @ 000002d511e50200] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/2469.mp4' for reading
+[https @ 000002d511e93d80] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/2470.mp4' for reading
+[https @ 000002d511e50200] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/2471.mp4' for reading
+[https @ 000002d511e93d80] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/2472.mp4' for reading
+size=    1024KiB time=00:00:44.53 bitrate= 188.4kbits/s speed=86.7x elapsed=0:00:00.51    
+[out#0/mp4 @ 000002d511fb06c0] video:0KiB audio:1151KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.835060%
+size=    1161KiB time=00:00:48.01 bitrate= 198.0kbits/s speed=  92x elapsed=0:00:00.52    
+[download] v2861744268 100.0% 1.03MiB/s ETA NA frag NA/NA
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2861744268-02b83f-2.%(ext)s --download-sections *25470.500-25518.500 https://www.twitch.tv/videos/2861744268
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2861744268
+[twitch:vod] 2861744268: Downloading stream metadata GraphQL
+[twitch:vod] 2861744268: Downloading video access token GraphQL
+[twitch:vod] 2861744268: Downloading m3u8 information
+[twitch:vod] 2861744268: Downloading storyboard metadata JSON
+[info] v2861744268: Downloading 1 format(s): Audio_Only
+[info] v2861744268: Downloading 1 time ranges: 25470.5-25518.5
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2861744268-02b83f-2.mp4
+[in#0 @ 000002908e993840] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/init-0.mp4' for reading
+[in#0 @ 000002908e993840] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/0.mp4' for reading
+[in#0 @ 000002908e993840] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/index-dvr.m3u8':
+  Duration: 07:11:42.73, start: 64.001000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 191 kb/s, start 64.001000 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2861744268-02b83f-2.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 191 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 000002908e993840] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/init-0.mp4' for reading
+[in#0/hls @ 000002908e993840] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/2547.mp4' for reading
+[in#0/hls @ 000002908e993840] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/2548.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000290906385c0] Found duplicated MOOV Atom. Skipped it
+[https @ 0000029091065140] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/2549.mp4' for reading
+[https @ 00000290912d0080] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/2550.mp4' for reading
+[https @ 0000029091065140] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/2551.mp4' for reading
+[https @ 00000290912d0080] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/2552.mp4' for reading
+[out#0/mp4 @ 00000290911f39c0] video:0KiB audio:1142KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.841361%
+size=    1152KiB time=00:00:48.00 bitrate= 196.6kbits/s speed=97.4x elapsed=0:00:00.49    
+[download] v2861744268 100.0% 1.05MiB/s ETA NA frag NA/NA
+faster-whisper profile: streamer=alanzoka language=pt timestamps=segment condition_on_previous_text=false scope=localized processed_seconds=96.0 model=faster-whisper-large-v3-turbo device=cuda compute=float16 batch=8 beam=5 vad=on
+transcribe twitch/2861744268: K:\Applications\LLMS\Whisper\.venv\Scripts\python.exe K:\Applications\Youtube-Channel\cstudio\faster_whisper_runner.py --spec C:\Users\Admin\AppData\Local\Temp\cstudio-faster-whisper-tfug5bk7\spec.json --output C:\Users\Admin\AppData\Local\Temp\cstudio-faster-whisper-tfug5bk7\transcript.json
+[faster-whisper] CSTUDIO_FW {"event": "runtime", "faster_whisper": "1.2.1", "ctranslate2": "4.8.2", "cuda_devices": 1, "device": "cuda", "compute_type": "float16", "batch_size": 8}
+[faster-whisper] CSTUDIO_FW {"event": "model_ready", "seconds": 1.819, "model": "K:\\Applications\\LLMS\\Whisper\\faster-whisper-large-v3-turbo"}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 1, "inputs": 2, "file": "localized-twitch-2861744268-02b83f-1.mp4", "ranges": 0, "offset": 24665.5}
+[faster-whisper]   0%|          | 0/1 [00:00<?, ?it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  2.69it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  2.68it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 1, "segments": 1, "seconds": 0.659, "language": "pt", "duration": 48.0, "duration_after_vad": 18.0}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 2, "inputs": 2, "file": "localized-twitch-2861744268-02b83f-2.mp4", "ranges": 0, "offset": 25470.5}
+[faster-whisper]   0%|          | 0/1 [00:00<?, ?it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  6.80it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  6.80it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 2, "segments": 1, "seconds": 0.345, "language": "pt", "duration": 48.0, "duration_after_vad": 13.472}
+[faster-whisper] CSTUDIO_FW {"event": "done", "segments": 2, "seconds": 2.824}
+transcript quality: backend=faster-whisper state=valid classification=usable segments=2 unique_ratio=1.0 dominant_ratio=0.5 repeat_ratio=0.0 chars_per_hour=1950.0
+localized transcript anchor: yt=584.0s tw=24675.5s audio=0.8313 text=0.0000 tokens=108/2
+localized transcript anchor: yt=2138.8s tw=25480.5s audio=0.7875 text=0.0000 tokens=4/8
+assignment result: youtube=lwZDxy_uLj8 state=unmatched primary_vod=2861744268 assigned=-
+assignment 21/26: youtube=2g8Gex_RiMo evaluated=0/8
+metadata cache hit: youtube/2g8Gex_RiMo age=392s
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-2g8Gex_RiMo.%(ext)s https://www.youtube.com/watch?v=2g8Gex_RiMo
+[youtube] Extracting URL: https://www.youtube.com/watch?v=2g8Gex_RiMo
+[youtube] 2g8Gex_RiMo: Downloading webpage
+[youtube] 2g8Gex_RiMo: Downloading visionos player API JSON
+[youtube] 2g8Gex_RiMo: Downloading m3u8 information
+[info] 2g8Gex_RiMo: Downloading 1 format(s): 251
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-2g8Gex_RiMo.webm
+[download] 2g8Gex_RiMo   0.0%  978.83KiB/s ETA 02:24 frag NA/NA
+[download] 2g8Gex_RiMo   5.8%   32.07MiB/s ETA 00:04 frag NA/NA
+[download] 2g8Gex_RiMo  13.8%   12.43MiB/s ETA 00:09 frag NA/NA
+[download] 2g8Gex_RiMo  20.9%   44.47MiB/s ETA 00:02 frag NA/NA
+[download] 2g8Gex_RiMo  41.0%   69.81MiB/s ETA 00:01 frag NA/NA
+[download] 2g8Gex_RiMo  65.9%   16.64MiB/s ETA 00:02 frag NA/NA
+[download] 2g8Gex_RiMo  75.9%    8.82MiB/s ETA 00:03 frag NA/NA
+[download] 2g8Gex_RiMo  82.9%   10.63MiB/s ETA 00:02 frag NA/NA
+[download] 2g8Gex_RiMo  85.6%    3.35MiB/s ETA 00:05 frag NA/NA
+[download] 2g8Gex_RiMo  91.9%   93.49MiB/s ETA 00:00 frag NA/NA
+[download] 2g8Gex_RiMo  96.9%    6.45MiB/s ETA 00:00 frag NA/NA
+[download] 2g8Gex_RiMo 100.0% 13.12MiB/s ETA NA frag NA/NA
+audio fingerprint cached: youtube/2g8Gex_RiMo frames=20109
+analysis audio cached: youtube/2g8Gex_RiMo path=youtube-2g8Gex_RiMo.webm
+audio fallback anchor 1: yt=991.5s twitch=6969.0s similarity=0.8204 second=0.8151 margin=0.0053 search=global
+audio fallback anchor 2: yt=3605.8s twitch=10172.0s similarity=0.7813 second=0.7505 margin=0.0308 search=predicted-window
+audio fallback anchor 3: yt=6421.2s twitch=12858.0s similarity=0.8088 second=0.7979 margin=0.0109 search=forward-fallback
+audio fallback anchor 4: yt=8834.4s twitch=17512.5s similarity=0.7959 second=0.7844 margin=0.0115 search=forward-fallback
+youtube captions: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --skip-download --no-playlist --ignore-errors --write-subs --write-auto-subs --sub-langs pt.*,pt --sub-format vtt --no-write-info-json --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --extractor-args youtube:skip=hls,dash -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\captions\2g8Gex_RiMo.%(ext)s https://www.youtube.com/watch?v=2g8Gex_RiMo
+youtube captions result: video=2g8Gex_RiMo status=available segments=2958
+localized transcript: using YouTube captions for 2g8Gex_RiMo; Whisper/audio clip download skipped
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2861744268-f1a844-1.%(ext)s --download-sections *6959.000-7007.000 https://www.twitch.tv/videos/2861744268
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2861744268
+[twitch:vod] 2861744268: Downloading stream metadata GraphQL
+[twitch:vod] 2861744268: Downloading video access token GraphQL
+[twitch:vod] 2861744268: Downloading m3u8 information
+[twitch:vod] 2861744268: Downloading storyboard metadata JSON
+[info] v2861744268: Downloading 1 format(s): Audio_Only
+[info] v2861744268: Downloading 1 time ranges: 6959.0-7007.0
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2861744268-f1a844-1.mp4
+[in#0 @ 000001dab0358b40] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/init-0.mp4' for reading
+[in#0 @ 000001dab0358b40] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/0.mp4' for reading
+[in#0 @ 000001dab0358b40] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/index-dvr.m3u8':
+  Duration: 07:11:42.73, start: 64.001000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 191 kb/s, start 64.001000 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2861744268-f1a844-1.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 191 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 000001dab0358b40] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/init-0.mp4' for reading
+[in#0/hls @ 000001dab0358b40] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/695.mp4' for reading
+[in#0/hls @ 000001dab0358b40] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/696.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 000001dab0372a40] Found duplicated MOOV Atom. Skipped it
+[https @ 000001dab27f1000] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/697.mp4' for reading
+[https @ 000001dab27e5040] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/698.mp4' for reading
+[https @ 000001dab27f1000] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/699.mp4' for reading
+[https @ 000001dab27e5040] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/700.mp4' for reading
+size=     512KiB time=00:00:31.03 bitrate= 135.1kbits/s speed=60.7x elapsed=0:00:00.51    
+[https @ 000001dab27f1000] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/701.mp4' for reading
+[out#0/mp4 @ 000001dab2b51200] video:0KiB audio:1149KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.836228%
+size=    1159KiB time=00:00:48.01 bitrate= 197.7kbits/s speed=87.9x elapsed=0:00:00.54    
+[download] v2861744268 100.0% 1.00MiB/s ETA NA frag NA/NA
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2861744268-f1a844-2.%(ext)s --download-sections *10162.000-10210.000 https://www.twitch.tv/videos/2861744268
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2861744268
+[twitch:vod] 2861744268: Downloading stream metadata GraphQL
+[twitch:vod] 2861744268: Downloading video access token GraphQL
+[twitch:vod] 2861744268: Downloading m3u8 information
+[twitch:vod] 2861744268: Downloading storyboard metadata JSON
+[info] v2861744268: Downloading 1 format(s): Audio_Only
+[info] v2861744268: Downloading 1 time ranges: 10162.0-10210.0
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2861744268-f1a844-2.mp4
+[in#0 @ 000001b5cf0e3500] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/init-0.mp4' for reading
+[in#0 @ 000001b5cf0e3500] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/0.mp4' for reading
+[in#0 @ 000001b5cf0e3500] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/index-dvr.m3u8':
+  Duration: 07:11:42.73, start: 64.001000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 191 kb/s, start 64.001000 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2861744268-f1a844-2.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 191 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 000001b5cf0e3500] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/init-0.mp4' for reading
+[in#0/hls @ 000001b5cf0e3500] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1016.mp4' for reading
+[in#0/hls @ 000001b5cf0e3500] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1017.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 000001b5cf185980] Found duplicated MOOV Atom. Skipped it
+[https @ 000001b5d15ab640] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1018.mp4' for reading
+[https @ 000001b5d18b2d00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1019.mp4' for reading
+[https @ 000001b5d15ab640] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1020.mp4' for reading
+[https @ 000001b5d18b2d00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1021.mp4' for reading
+size=     768KiB time=00:00:38.04 bitrate= 165.4kbits/s speed=74.9x elapsed=0:00:00.50    
+[out#0/mp4 @ 000001b5d1777a80] video:0KiB audio:1142KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.841558%
+size=    1152KiB time=00:00:48.00 bitrate= 196.6kbits/s speed=92.7x elapsed=0:00:00.51    
+[download] v2861744268 100.0% 1.05MiB/s ETA NA frag NA/NA
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2861744268-f1a844-3.%(ext)s --download-sections *12848.000-12896.000 https://www.twitch.tv/videos/2861744268
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2861744268
+[twitch:vod] 2861744268: Downloading stream metadata GraphQL
+[twitch:vod] 2861744268: Downloading video access token GraphQL
+[twitch:vod] 2861744268: Downloading m3u8 information
+[twitch:vod] 2861744268: Downloading storyboard metadata JSON
+[info] v2861744268: Downloading 1 format(s): Audio_Only
+[info] v2861744268: Downloading 1 time ranges: 12848.0-12896.0
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2861744268-f1a844-3.mp4
+[in#0 @ 0000022954a43f00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/init-0.mp4' for reading
+[in#0 @ 0000022954a43f00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/0.mp4' for reading
+[in#0 @ 0000022954a43f00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/index-dvr.m3u8':
+  Duration: 07:11:42.73, start: 64.001000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 191 kb/s, start 64.001000 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2861744268-f1a844-3.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 191 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 0000022954a43f00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/init-0.mp4' for reading
+[in#0/hls @ 0000022954a43f00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1284.mp4' for reading
+[in#0/hls @ 0000022954a43f00] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1285.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000022956b72880] Found duplicated MOOV Atom. Skipped it
+[https @ 000002295725ea80] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1286.mp4' for reading
+[https @ 0000022957603080] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1287.mp4' for reading
+[https @ 000002295725ea80] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1288.mp4' for reading
+[https @ 0000022957603080] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1289.mp4' for reading
+[https @ 000002295725ea80] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1290.mp4' for reading
+size=     768KiB time=00:00:42.04 bitrate= 149.6kbits/s speed=81.9x elapsed=0:00:00.51    
+[out#0/mp4 @ 00000229573e9a80] video:0KiB audio:1157KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.830069%
+size=    1166KiB time=00:00:48.00 bitrate= 199.0kbits/s speed=88.9x elapsed=0:00:00.54    
+[download] v2861744268 100.0% 1.03MiB/s ETA NA frag NA/NA
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --js-runtimes deno:C:\Users\Admin\.deno\bin\deno.exe --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2861744268-f1a844-4.%(ext)s --download-sections *17502.500-17550.500 https://www.twitch.tv/videos/2861744268
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2861744268
+[twitch:vod] 2861744268: Downloading stream metadata GraphQL
+[twitch:vod] 2861744268: Downloading video access token GraphQL
+[twitch:vod] 2861744268: Downloading m3u8 information
+[twitch:vod] 2861744268: Downloading storyboard metadata JSON
+[info] v2861744268: Downloading 1 format(s): Audio_Only
+[info] v2861744268: Downloading 1 time ranges: 17502.5-17550.5
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2861744268-f1a844-4.mp4
+[in#0 @ 0000026fd4ba8600] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/init-0.mp4' for reading
+[in#0 @ 0000026fd4ba8600] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/0.mp4' for reading
+[in#0 @ 0000026fd4ba8600] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1.mp4' for reading
+Input #0, hls, from 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/index-dvr.m3u8':
+  Duration: 07:11:42.73, start: 64.001000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0[0x0](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 191 kb/s, start 64.001000 (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'file:K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\localized-twitch-2861744268-f1a844-4.mp4.part':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 191 kb/s (default)
+    Metadata:
+      variant_bitrate : 0
+      handler_name    : SoundHandler
+      major_brand     : mp42
+      minor_version   : 1
+      compatible_brands: isommp42dashavc1iso6hlsf
+Press [q] to stop, [?] for help
+[in#0/hls @ 0000026fd4ba8600] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/init-0.mp4' for reading
+[in#0/hls @ 0000026fd4ba8600] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1750.mp4' for reading
+[in#0/hls @ 0000026fd4ba8600] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1751.mp4' for reading
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000026fd4bec9c0] Found duplicated MOOV Atom. Skipped it
+[https @ 0000026fd6f6c0c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1752.mp4' for reading
+[https @ 0000026fd7184f40] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1753.mp4' for reading
+[https @ 0000026fd6f6c0c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1754.mp4' for reading
+[https @ 0000026fd7184f40] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1755.mp4' for reading
+size=     768KiB time=00:00:37.53 bitrate= 167.6kbits/s speed=73.4x elapsed=0:00:00.51    
+[https @ 0000026fd6f6c0c0] Opening 'https://d1m7jfoe9zdc1j.cloudfront.net/528f8b58fdc00e027763_alanzoka_318849617141_1788200028/audio_only/1756.mp4' for reading
+[out#0/mp4 @ 0000026fd7417800] video:0KiB audio:1142KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.841494%
+size=    1152KiB time=00:00:48.00 bitrate= 196.6kbits/s speed=88.3x elapsed=0:00:00.54    
+[download] v2861744268 100.0% 1.02MiB/s ETA NA frag NA/NA
+faster-whisper profile: streamer=alanzoka language=pt timestamps=segment condition_on_previous_text=false scope=localized processed_seconds=192.0 model=faster-whisper-large-v3-turbo device=cuda compute=float16 batch=8 beam=5 vad=on
+transcribe twitch/2861744268: K:\Applications\LLMS\Whisper\.venv\Scripts\python.exe K:\Applications\Youtube-Channel\cstudio\faster_whisper_runner.py --spec C:\Users\Admin\AppData\Local\Temp\cstudio-faster-whisper-gl2w3hyn\spec.json --output C:\Users\Admin\AppData\Local\Temp\cstudio-faster-whisper-gl2w3hyn\transcript.json
+[faster-whisper] CSTUDIO_FW {"event": "runtime", "faster_whisper": "1.2.1", "ctranslate2": "4.8.2", "cuda_devices": 1, "device": "cuda", "compute_type": "float16", "batch_size": 8}
+[faster-whisper] CSTUDIO_FW {"event": "model_ready", "seconds": 1.795, "model": "K:\\Applications\\LLMS\\Whisper\\faster-whisper-large-v3-turbo"}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 1, "inputs": 4, "file": "localized-twitch-2861744268-f1a844-1.mp4", "ranges": 0, "offset": 6959.0}
+[faster-whisper]   0%|          | 0/1 [00:00<?, ?it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  2.16it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  2.15it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 1, "segments": 1, "seconds": 0.75, "language": "pt", "duration": 48.0, "duration_after_vad": 10.544}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 2, "inputs": 4, "file": "localized-twitch-2861744268-f1a844-2.mp4", "ranges": 0, "offset": 10162.0}
+[faster-whisper]   0%|          | 0/1 [00:00<?, ?it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  7.08it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  7.08it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 2, "segments": 1, "seconds": 0.318, "language": "pt", "duration": 48.0, "duration_after_vad": 8.96}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 3, "inputs": 4, "file": "localized-twitch-2861744268-f1a844-3.mp4", "ranges": 0, "offset": 12848.0}
+[faster-whisper]   0%|          | 0/1 [00:00<?, ?it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  8.63it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  8.63it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 3, "segments": 1, "seconds": 0.309, "language": "pt", "duration": 48.0, "duration_after_vad": 24.208}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 4, "inputs": 4, "file": "localized-twitch-2861744268-f1a844-4.mp4", "ranges": 0, "offset": 17502.5}
+[faster-whisper]   0%|          | 0/1 [00:00<?, ?it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  6.17it/s]
+[faster-whisper] 100%|██████████| 1/1 [00:00<00:00,  6.17it/s]
+[faster-whisper] CSTUDIO_FW {"event": "input_done", "index": 4, "segments": 1, "seconds": 0.347, "language": "pt", "duration": 48.0, "duration_after_vad": 22.336}
+[faster-whisper] CSTUDIO_FW {"event": "done", "segments": 4, "seconds": 3.52}
+transcript quality: backend=faster-whisper state=valid classification=usable segments=4 unique_ratio=1.0 dominant_ratio=0.3333 repeat_ratio=0.0 chars_per_hour=3300.0
+localized transcript anchor: yt=991.5s tw=6969.0s audio=0.8204 text=0.0706 tokens=70/15
+localized transcript anchor: yt=3605.8s tw=10172.0s audio=0.7813 text=0.0000 tokens=23/5
+localized transcript anchor: yt=6421.2s tw=12858.0s audio=0.8088 text=0.0000 tokens=174/0
+localized transcript anchor: yt=8834.4s tw=17512.5s audio=0.7959 text=0.0131 tokens=141/12
+assignment result: youtube=2g8Gex_RiMo state=unmatched primary_vod=2861744268 assigned=-
+assignment 22/26: youtube=vt1HbScE_jM resume=completed -> skip all 8 VODs
+assignment 23/26: youtube=nOj-aeb7haY resume=completed -> skip all 8 VODs
+assignment 24/26: youtube=1CuVhBjs3ns resume=completed -> skip all 8 VODs
+assignment 25/26: youtube=nH8X1jAyoeQ resume=completed -> skip all 8 VODs
+assignment 26/26: youtube=SqODx-TbN38 resume=completed -> skip all 8 VODs

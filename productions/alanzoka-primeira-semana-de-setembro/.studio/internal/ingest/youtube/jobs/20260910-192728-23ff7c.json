@@ -1,0 +1,73 @@
+{
+  "id": "20260910-192728-23ff7c",
+  "type": "resolve",
+  "status": "completed",
+  "slug": "alanzoka-primeira-semana-de-setembro",
+  "streamer": "",
+  "vod_id": "",
+  "candidate_video_id": "",
+  "created_at": "2026-09-10T19:27:28Z",
+  "started_at": "2026-09-10T19:27:28Z",
+  "ended_at": "2026-09-10T19:35:44Z",
+  "command": "dashboard youtube-resolve",
+  "return_code": 0,
+  "error": "",
+  "artifacts": [],
+  "log_path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\youtube\\logs\\20260910-192728-23ff7c.log",
+  "params": {
+    "streamer": "",
+    "vod_id": "",
+    "refresh_index": false,
+    "download": false,
+    "verify": true,
+    "force": false
+  },
+  "worker_pid": 5244,
+  "worker_mode": "process",
+  "result_summary": {
+    "candidates": 64,
+    "verified": 4,
+    "likely": 0,
+    "errors": [
+      {
+        "video_id": "SynOBrPYbV0",
+        "error": "yt-dlp audio fetch failed with code 3221225786: [twitch:vod] Extracting URL: https://www.twitch.tv/videos/2864229186\n[twitch:vod] 2864229186: Downloading stream metadata GraphQL\n[twitch:vod] 2864229186: Downloading video access token GraphQL"
+      },
+      {
+        "video_id": "muxOFHGOpZs",
+        "error": "yt-dlp audio fetch failed with code 3221225786: [twitch:vod] Extracting URL: https://www.twitch.tv/videos/2864229186\n[twitch:vod] 2864229186: Downloading stream metadata GraphQL\n[twitch:vod] 2864229186: Downloading video access token GraphQL"
+      },
+      {
+        "video_id": "Plcc-06LY-A",
+        "error": "yt-dlp audio fetch failed with code 3221225786: [twitch:vod] Extracting URL: https://www.twitch.tv/videos/2864229186\n[twitch:vod] 2864229186: Downloading stream metadata GraphQL\n[twitch:vod] 2864229186: Downloading video access token GraphQL\n[twitch:vod] 2864229186: Downloading m3u8 information\n[twitch:vod] 2864229186: Downloading storyboard metadata JSON\n[info] v2864229186: Downloading 1 format(s): Audio_Only\n[hlsnative] Downloading m3u8 manifest\n[hlsnative] Total fragments: 2484\n[download] Destination: K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\youtube\\tmp\\twitch-2864229186.mp4"
+      },
+      {
+        "video_id": "QcJ0mjcA62k",
+        "error": "yt-dlp audio fetch failed with code 3221225786: 4 frag 1142/2484\n[download] v2864229186  46.5%    3.31MiB/s ETA 01:36 frag 1154/2484\n[download] v2864229186  47.3%    3.69MiB/s ETA 01:32 frag 1175/2484\n[download] v2864229186  47.8%    3.80MiB/s ETA 01:26 frag 1188/2484\n[download] v2864229186  48.5%    4.13MiB/s ETA 01:20 frag 1205/2484\n[download] v2864229186  49.1%    3.77MiB/s ETA 01:20 frag 1220/2484\n[download] v2864229186  49.6%    3.55MiB/s ETA 01:25 frag 1231/2484\n[download] v2864229186  50.1%    3.32MiB/s ETA 01:31 frag 1245/2484\n[download] v2864229186  50.7%    3.42MiB/s ETA 01:29 frag 1260/2484\n[download] v2864229186  51.4%    3.83MiB/s ETA 01:22 frag 1278/2484\n[download] v2864229186  52.0%    3.80MiB/s ETA 01:18 frag 1292/2484\n[download] v2864229186  52.7%    3.91MiB/s ETA 01:15 frag 1308/2484\n[download] v2864229186  53.2%    3.74MiB/s ETA 01:15 frag 1322/2484\n[download] v2864229186  53.9%    3.84MiB/s ETA 01:15 frag 1338/2484"
+      },
+      {
+        "video_id": "_Q-dV2V2g5s",
+        "error": "yt-dlp audio fetch failed with code 3221225786: ube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\youtube\\tmp\\twitch-2864229186.mp4.part-Frag1346 has already been downloaded\n[download] v2864229186  54.0%      0.00B/s ETA Unknown frag 1342/2484\n[download] K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\youtube\\tmp\\twitch-2864229186.mp4.part-Frag1347 has already been downloaded\n[download] v2864229186  54.5%    2.61MiB/s ETA Unknown frag 1353/2484\n[download] v2864229186  55.2%    3.45MiB/s ETA 01:22 frag 1370/2484\n[download] v2864229186  55.9%    3.65MiB/s ETA 01:18 frag 1388/2484\n[download] v2864229186  56.5%    4.15MiB/s ETA 01:09 frag 1404/2484\n[download] v2864229186  57.3%    4.21MiB/s ETA 01:05 frag 1423/2484\n[download] v2864229186  58.0%    4.35MiB/s ETA 00:59 frag 1440/2484\n[download] v2864229186  58.5%    4.07MiB/s ETA 01:01 frag 1454/2484"
+      },
+      {
+        "video_id": "favxANUu9O4",
+        "error": "ffmpeg feature extraction failed: "
+      },
+      {
+        "video_id": "OKO05-GPKyI",
+        "error": "yt-dlp audio fetch failed with code 9: ript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one\n[youtube] OKO05-GPKyI: Downloading visionos player API JSON\n[youtube] OKO05-GPKyI: Downloading m3u8 information\n[info] OKO05-GPKyI: Downloading 1 format(s): 251\n[download] Destination: K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\youtube\\tmp\\youtube-OKO05-GPKyI.webm\n[download] OKO05-GPKyI   0.0%  Unknown B/s ETA Unknown frag NA/NA\n[download] OKO05-GPKyI  18.6%    8.79MiB/s ETA 00:09 frag NA/NA\n[download] OKO05-GPKyI  36.5%   18.00MiB/s ETA 00:03 frag NA/NA\n[download] OKO05-GPKyI  52.8%   21.10MiB/s ETA 00:02 frag NA/NA"
+      },
+      {
+        "video_id": "fSMIJVnlB_Y",
+        "error": "yt-dlp audio fetch failed with code 3221225786: be] fSMIJVnlB_Y: Downloading visionos player API JSON\n[youtube] fSMIJVnlB_Y: Downloading m3u8 information\n[info] fSMIJVnlB_Y: Downloading 1 format(s): 251-1\n[download] Destination: K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\youtube\\tmp\\youtube-fSMIJVnlB_Y.webm\n[download] fSMIJVnlB_Y   0.0%  Unknown B/s ETA Unknown frag NA/NA\n[download] fSMIJVnlB_Y   8.7%    8.21MiB/s ETA 00:10 frag NA/NA\n[download] fSMIJVnlB_Y  20.9%    9.62MiB/s ETA 00:07 frag NA/NA\n[download] fSMIJVnlB_Y  29.6%    9.56MiB/s ETA 00:06 frag NA/NA\n[download] fSMIJVnlB_Y  40.2%    8.20MiB/s ETA 00:06 frag NA/NA\n[download] fSMIJVnlB_Y  44.1%   10.31MiB/s ETA 00:04 frag NA/NA\n[download] fSMIJVnlB_Y  50.6%    6.25MiB/s ETA 00:07 frag NA/NA\n[download] fSMIJVnlB_Y  61.4%    5.97MiB/s ETA 00:05 frag NA/NA\n[download] fSMIJVnlB_Y  65.8%    5.51MiB/s ETA 00:05 frag NA/NA"
+      }
+    ],
+    "resume": {
+      "videos": 19,
+      "completed": 11,
+      "resumed": 0,
+      "evaluated_pairs": 89,
+      "skipped_pairs": 14
+    }
+  }
+}

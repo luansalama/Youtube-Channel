@@ -1,0 +1,41 @@
+{
+  "patch": "youtube-resolver-temporal-coverage",
+  "base": "youtube-resolver-terminal-resume-patch",
+  "files": [
+    {
+      "path": "PATCH-README.md",
+      "sha256": "20aaa4ff9fb5de87c7bc25ae2d21d018aa49a2ed8fb2d3cc326bc79a72776f7e",
+      "bytes": 2568
+    },
+    {
+      "path": "README.md",
+      "sha256": "6d462d4177b71d20b01e365bd42af0cc2facf044910913c229fa90fea11eb109",
+      "bytes": 6150
+    },
+    {
+      "path": "cstudio/dashboard.py",
+      "sha256": "2b209a84d057b82eef12bc0e2d55b2d24c132a8fd61f250ead1b3a083f5929aa",
+      "bytes": 65424
+    },
+    {
+      "path": "cstudio/youtube_resolver.py",
+      "sha256": "7c1905d75f32a577a29084e96c69a4356986c46042da74f2b53b7f1b3e3b61a6",
+      "bytes": 238096
+    },
+    {
+      "path": "integrations/youtube.md",
+      "sha256": "2592a6ea636b4f492a2918825f03b25674d2b029a0ec957f89575691aaf85850",
+      "bytes": 15622
+    },
+    {
+      "path": "tests/test_youtube_resolver.py",
+      "sha256": "d146da40095f8f9b1a027793596ce4bfaa7a8b92690a7590693db8e81f5bce3b",
+      "bytes": 79555
+    },
+    {
+      "path": "youtube-resolver-temporal-coverage.patch",
+      "sha256": "38f8dc5f4fb3dedb80a817f6764208e3b44dc7d2dd0520721ef8f13117d112f0",
+      "bytes": 23531
+    }
+  ]
+}

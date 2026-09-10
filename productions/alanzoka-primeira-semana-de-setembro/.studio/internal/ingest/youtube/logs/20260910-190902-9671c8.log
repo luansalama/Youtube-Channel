@@ -1,0 +1,207 @@
+[2026-09-10T19:09:02Z] YouTube Mirror Resolver job resolve pid=2184
+candidate vod=2862622285 youtube=SynOBrPYbV0 score=0.762 state=ambiguous
+candidate vod=2862622285 youtube=vt1HbScE_jM score=0.734 state=ambiguous
+candidate vod=2862622285 youtube=7GBn3uVeVb8 score=0.730 state=likely
+candidate vod=2862622285 youtube=muxOFHGOpZs score=0.714 state=likely
+candidate vod=2862622285 youtube=iEZOwN5xssU score=0.679 state=candidate
+candidate vod=2862622285 youtube=nH8X1jAyoeQ score=0.614 state=candidate
+candidate vod=2862622285 youtube=nOj-aeb7haY score=0.398 state=candidate
+candidate vod=2862622285 youtube=6yZE6Xr2BZ0 score=0.389 state=candidate
+global source assignment: videos=14 vods=1 matcher=stdlib-coarse policy=global-source-assignment-v1
+assignment 1/14: youtube=SynOBrPYbV0 evaluated=0/1
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=SynOBrPYbV0
+audio fallback anchor 1: yt=905.5s twitch=9606.0s similarity=0.7787 second=0.7456 margin=0.0331 search=global
+audio fallback anchor 2: yt=3296.2s twitch=12503.5s similarity=0.7858 second=0.7797 margin=0.0061 search=predicted-window
+audio fallback anchor 3: yt=5870.8s twitch=18794.5s similarity=0.7701 second=0.7611 margin=0.0090 search=forward-fallback
+audio fallback anchor 4: yt=8077.6s twitch=21725.5s similarity=0.7321 second=0.7080 margin=0.0241 search=predicted-window
+assignment result: youtube=SynOBrPYbV0 state=unmatched primary_vod=2862622285 assigned=-
+assignment 2/14: youtube=vt1HbScE_jM evaluated=0/1
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=vt1HbScE_jM
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-vt1HbScE_jM.%(ext)s https://www.youtube.com/watch?v=vt1HbScE_jM
+[youtube] Extracting URL: https://www.youtube.com/watch?v=vt1HbScE_jM
+[youtube] vt1HbScE_jM: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] vt1HbScE_jM: Downloading visionos player API JSON
+[youtube] vt1HbScE_jM: Downloading m3u8 information
+[info] vt1HbScE_jM: Downloading 1 format(s): 251
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-vt1HbScE_jM.webm
+[download] vt1HbScE_jM   0.0%  985.74KiB/s ETA 02:10 frag NA/NA
+[download] vt1HbScE_jM   7.7%    6.70MiB/s ETA 00:17 frag NA/NA
+[download] vt1HbScE_jM  15.3%    9.96MiB/s ETA 00:10 frag NA/NA
+[download] vt1HbScE_jM  21.7%    6.12MiB/s ETA 00:16 frag NA/NA
+[download] vt1HbScE_jM  23.2%    5.40MiB/s ETA 00:17 frag NA/NA
+[download] vt1HbScE_jM  24.0%    1.44MiB/s ETA 01:06 frag NA/NA
+[download] vt1HbScE_jM  31.1%    5.74MiB/s ETA 00:15 frag NA/NA
+[download] vt1HbScE_jM  40.4%    4.87MiB/s ETA 00:15 frag NA/NA
+[download] vt1HbScE_jM  46.7%    9.24MiB/s ETA 00:07 frag NA/NA
+[download] vt1HbScE_jM  52.0%    3.68MiB/s ETA 00:16 frag NA/NA
+[download] vt1HbScE_jM  54.3%    4.63MiB/s ETA 00:12 frag NA/NA
+[download] vt1HbScE_jM  60.9%    4.62MiB/s ETA 00:10 frag NA/NA
+[download] vt1HbScE_jM  62.5%    5.46MiB/s ETA 00:08 frag NA/NA
+[download] vt1HbScE_jM  70.0%    6.96MiB/s ETA 00:05 frag NA/NA
+[download] vt1HbScE_jM  76.4%    6.45MiB/s ETA 00:04 frag NA/NA
+[download] vt1HbScE_jM  78.5%    4.94MiB/s ETA 00:05 frag NA/NA
+[download] vt1HbScE_jM  84.0%    6.00MiB/s ETA 00:03 frag NA/NA
+[download] vt1HbScE_jM  94.0%    1.81MiB/s ETA 00:04 frag NA/NA
+[download] vt1HbScE_jM  99.1%    4.79MiB/s ETA 00:00 frag NA/NA
+[download] vt1HbScE_jM 100.0% 6.84MiB/s ETA NA frag NA/NA
+audio fingerprint cached: youtube/vt1HbScE_jM frames=16997
+analysis audio cached: youtube/vt1HbScE_jM path=youtube-vt1HbScE_jM.webm
+assignment result: youtube=vt1HbScE_jM state=unmatched primary_vod=2862622285 assigned=-
+assignment 3/14: youtube=7GBn3uVeVb8 evaluated=0/1
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=7GBn3uVeVb8
+audio fallback anchor 1: yt=749.8s twitch=2694.0s similarity=0.7966 second=0.7928 margin=0.0038 search=global
+audio fallback anchor 2: yt=2735.7s twitch=10499.5s similarity=0.7664 second=0.7557 margin=0.0107 search=forward-fallback
+audio fallback anchor 3: yt=4874.3s twitch=12797.0s similarity=0.7819 second=0.7710 margin=0.0109 search=predicted-window
+audio fallback anchor 4: yt=6707.4s twitch=21041.0s similarity=0.7585 second=0.7519 margin=0.0066 search=forward-fallback
+assignment result: youtube=7GBn3uVeVb8 state=unmatched primary_vod=2862622285 assigned=-
+assignment 4/14: youtube=muxOFHGOpZs evaluated=0/1
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=muxOFHGOpZs
+audio fallback anchor 1: yt=829.3s twitch=9582.0s similarity=0.7625 second=0.7612 margin=0.0013 search=global
+audio fallback anchor 2: yt=3021.9s twitch=13763.5s similarity=0.6883 second=0.6833 margin=0.0050 search=forward-fallback
+audio fallback anchor 3: yt=5383.1s twitch=20932.0s similarity=0.7328 second=0.7287 margin=0.0041 search=forward-fallback
+audio fallback anchor 4: yt=7407.0s twitch=22311.0s similarity=0.6840 second=0.6707 margin=0.0133 search=forward-fallback
+assignment result: youtube=muxOFHGOpZs state=unmatched primary_vod=2862622285 assigned=-
+assignment 5/14: youtube=iEZOwN5xssU evaluated=0/1
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=iEZOwN5xssU
+audio fallback anchor 1: yt=521.5s twitch=6850.0s similarity=0.8069 second=0.7822 margin=0.0247 search=global
+audio fallback anchor 2: yt=1913.8s twitch=10118.5s similarity=0.7812 second=0.7739 margin=0.0073 search=forward-fallback
+audio fallback anchor 3: yt=3413.2s twitch=15272.0s similarity=0.8224 second=0.7830 margin=0.0394 search=forward-fallback
+audio fallback anchor 4: yt=4698.4s twitch=19216.0s similarity=0.7538 second=0.7392 margin=0.0146 search=forward-fallback
+assignment result: youtube=iEZOwN5xssU state=unmatched primary_vod=2862622285 assigned=-
+assignment 6/14: youtube=nH8X1jAyoeQ evaluated=0/1
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=nH8X1jAyoeQ
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-nH8X1jAyoeQ.%(ext)s https://www.youtube.com/watch?v=nH8X1jAyoeQ
+[youtube] Extracting URL: https://www.youtube.com/watch?v=nH8X1jAyoeQ
+[youtube] nH8X1jAyoeQ: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] nH8X1jAyoeQ: Downloading visionos player API JSON
+[youtube] nH8X1jAyoeQ: Downloading m3u8 information
+[info] nH8X1jAyoeQ: Downloading 1 format(s): 251-1
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-nH8X1jAyoeQ.webm
+[download] nH8X1jAyoeQ   0.0%  Unknown B/s ETA Unknown frag NA/NA
+[download] nH8X1jAyoeQ   8.5%    9.16MiB/s ETA 00:09 frag NA/NA
+[download] nH8X1jAyoeQ  18.8%    7.09MiB/s ETA 00:10 frag NA/NA
+[download] nH8X1jAyoeQ  20.9%    5.40MiB/s ETA 00:13 frag NA/NA
+[download] nH8X1jAyoeQ  25.1%    4.74MiB/s ETA 00:14 frag NA/NA
+[download] nH8X1jAyoeQ  35.3%    4.78MiB/s ETA 00:12 frag NA/NA
+[download] nH8X1jAyoeQ  39.5%    4.07MiB/s ETA 00:14 frag NA/NA
+[download] nH8X1jAyoeQ  45.5%    9.48MiB/s ETA 00:05 frag NA/NA
+[download] nH8X1jAyoeQ  49.7%    4.42MiB/s ETA 00:10 frag NA/NA
+[download] nH8X1jAyoeQ  55.7%    9.97MiB/s ETA 00:04 frag NA/NA
+[download] nH8X1jAyoeQ  61.8%    5.43MiB/s ETA 00:06 frag NA/NA
+[download] nH8X1jAyoeQ  63.9%    3.07MiB/s ETA 00:11 frag NA/NA
+[download] nH8X1jAyoeQ  68.9%    3.58MiB/s ETA 00:08 frag NA/NA
+[download] nH8X1jAyoeQ  74.4%    9.15MiB/s ETA 00:02 frag NA/NA
+[download] nH8X1jAyoeQ  82.8%    6.18MiB/s ETA 00:02 frag NA/NA
+[download] nH8X1jAyoeQ  84.9%    3.66MiB/s ETA 00:03 frag NA/NA
+[download] nH8X1jAyoeQ  97.4%    7.36MiB/s ETA 00:00 frag NA/NA
+[download] nH8X1jAyoeQ 100.0% 5.59MiB/s ETA NA frag NA/NA
+audio fingerprint cached: youtube/nH8X1jAyoeQ frames=13385
+analysis audio cached: youtube/nH8X1jAyoeQ path=youtube-nH8X1jAyoeQ.webm
+assignment result: youtube=nH8X1jAyoeQ state=unmatched primary_vod=2862622285 assigned=-
+assignment 7/14: youtube=nOj-aeb7haY evaluated=0/1
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=nOj-aeb7haY
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-nOj-aeb7haY.%(ext)s https://www.youtube.com/watch?v=nOj-aeb7haY
+[youtube] Extracting URL: https://www.youtube.com/watch?v=nOj-aeb7haY
+[youtube] nOj-aeb7haY: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] nOj-aeb7haY: Downloading visionos player API JSON
+[youtube] nOj-aeb7haY: Downloading m3u8 information
+[info] nOj-aeb7haY: Downloading 1 format(s): 251-1
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-nOj-aeb7haY.webm
+[download] nOj-aeb7haY   0.0%  997.22KiB/s ETA 01:37 frag NA/NA
+[download] nOj-aeb7haY   8.4%   11.53MiB/s ETA 00:07 frag NA/NA
+[download] nOj-aeb7haY  10.5%  321.86KiB/s ETA 04:31 frag NA/NA
+[download] nOj-aeb7haY  19.9%    4.37MiB/s ETA 00:17 frag NA/NA
+[download] nOj-aeb7haY  28.9%   11.24MiB/s ETA 00:06 frag NA/NA
+[download] nOj-aeb7haY  41.1%   10.67MiB/s ETA 00:05 frag NA/NA
+[download] nOj-aeb7haY  49.5%    7.63MiB/s ETA 00:06 frag NA/NA
+[download] nOj-aeb7haY  55.6%   10.01MiB/s ETA 00:04 frag NA/NA
+[download] nOj-aeb7haY  61.8%    7.09MiB/s ETA 00:05 frag NA/NA
+[download] nOj-aeb7haY  72.1%    9.00MiB/s ETA 00:02 frag NA/NA
+[download] nOj-aeb7haY  80.5%    9.72MiB/s ETA 00:01 frag NA/NA
+[download] nOj-aeb7haY  91.0%    6.55MiB/s ETA 00:01 frag NA/NA
+[download] nOj-aeb7haY  95.0%    4.22MiB/s ETA 00:01 frag NA/NA
+[download] nOj-aeb7haY 100.0% 7.35MiB/s ETA NA frag NA/NA
+audio fingerprint cached: youtube/nOj-aeb7haY frames=13577
+analysis audio cached: youtube/nOj-aeb7haY path=youtube-nOj-aeb7haY.webm
+assignment result: youtube=nOj-aeb7haY state=unmatched primary_vod=2862622285 assigned=-
+assignment 8/14: youtube=6yZE6Xr2BZ0 evaluated=0/1
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=6yZE6Xr2BZ0
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-6yZE6Xr2BZ0.%(ext)s https://www.youtube.com/watch?v=6yZE6Xr2BZ0
+[youtube] Extracting URL: https://www.youtube.com/watch?v=6yZE6Xr2BZ0
+[youtube] 6yZE6Xr2BZ0: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] 6yZE6Xr2BZ0: Downloading visionos player API JSON
+[youtube] 6yZE6Xr2BZ0: Downloading m3u8 information
+[info] 6yZE6Xr2BZ0: Downloading 1 format(s): 251-1
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-6yZE6Xr2BZ0.webm
+[download] 6yZE6Xr2BZ0   0.0%  990.62KiB/s ETA 01:26 frag NA/NA
+[download] 6yZE6Xr2BZ0  46.8%   11.28MiB/s ETA 00:03 frag NA/NA
+[download] 6yZE6Xr2BZ0  51.6%    7.25MiB/s ETA 00:05 frag NA/NA
+[download] 6yZE6Xr2BZ0  70.6%   11.09MiB/s ETA 00:02 frag NA/NA
+[download] 6yZE6Xr2BZ0 100.0% 23.48MiB/s ETA NA frag NA/NA
+audio fingerprint cached: youtube/6yZE6Xr2BZ0 frames=11859
+analysis audio cached: youtube/6yZE6Xr2BZ0 path=youtube-6yZE6Xr2BZ0.webm
+audio fallback anchor 1: yt=579.0s twitch=16636.5s similarity=0.7680 second=0.7373 margin=0.0307 search=global
+audio fallback anchor 2: yt=2120.8s twitch=21472.0s similarity=0.7594 second=0.7497 margin=0.0097 search=forward-fallback
+audio fallback anchor 3: yt=3781.2s twitch=22333.0s similarity=0.6801 second=0.5265 margin=0.1536 search=forward-fallback
+audio fallback anchor 4: yt=5204.4s twitch=23044.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+assignment result: youtube=6yZE6Xr2BZ0 state=unmatched primary_vod=2862622285 assigned=-
+assignment 9/14: youtube=SqODx-TbN38 evaluated=0/1
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=SqODx-TbN38
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-SqODx-TbN38.%(ext)s https://www.youtube.com/watch?v=SqODx-TbN38
+[youtube] Extracting URL: https://www.youtube.com/watch?v=SqODx-TbN38
+[youtube] SqODx-TbN38: Downloading webpage
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[youtube] SqODx-TbN38: Downloading visionos player API JSON
+[youtube] SqODx-TbN38: Downloading m3u8 information
+[info] SqODx-TbN38: Downloading 1 format(s): 251-1
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\youtube-SqODx-TbN38.webm
+[download] SqODx-TbN38   0.0%  399.08KiB/s ETA 03:12 frag NA/NA
+[download] SqODx-TbN38  67.4%    2.73MiB/s ETA 00:08 frag NA/NA
+[download] SqODx-TbN38  72.9%    3.60MiB/s ETA 00:05 frag NA/NA
+[download] SqODx-TbN38  78.0%    4.23MiB/s ETA 00:03 frag NA/NA
+[download] SqODx-TbN38  80.7%    2.14MiB/s ETA 00:06 frag NA/NA
+[download] SqODx-TbN38  90.3%    4.97MiB/s ETA 00:01 frag NA/NA
+[download] SqODx-TbN38  96.5%    5.03MiB/s ETA 00:00 frag NA/NA
+[download] SqODx-TbN38 100.0% 11.25MiB/s ETA NA frag NA/NA
+audio fingerprint cached: youtube/SqODx-TbN38 frames=10882
+analysis audio cached: youtube/SqODx-TbN38 path=youtube-SqODx-TbN38.webm
+assignment result: youtube=SqODx-TbN38 state=unmatched primary_vod=2862622285 assigned=-
+assignment 10/14: youtube=XR0-lJLW_rs evaluated=0/1
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=XR0-lJLW_rs
+audio fallback anchor 1: yt=1134.6s twitch=18182.0s similarity=0.7244 second=0.7151 margin=0.0093 search=global
+audio fallback anchor 2: yt=4121.0s twitch=21796.5s similarity=0.7404 second=0.7080 margin=0.0324 search=predicted-window
+audio fallback anchor 3: yt=7337.0s twitch=23404.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 4: yt=10093.7s twitch=24782.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+assignment result: youtube=XR0-lJLW_rs state=unmatched primary_vod=2862622285 assigned=-
+assignment 11/14: youtube=Plcc-06LY-A evaluated=0/1
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=Plcc-06LY-A
+audio fallback anchor 1: yt=1045.5s twitch=15066.0s similarity=0.7041 second=0.6921 margin=0.0120 search=global
+audio fallback anchor 2: yt=3800.2s twitch=20491.5s similarity=0.8455 second=0.8036 margin=0.0419 search=forward-fallback
+audio fallback anchor 3: yt=6766.8s twitch=22157.5s similarity=0.7013 second=0.6616 margin=0.0397 search=forward-fallback
+audio fallback anchor 4: yt=9309.6s twitch=23428.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+assignment result: youtube=Plcc-06LY-A state=unmatched primary_vod=2862622285 assigned=-
+assignment 12/14: youtube=TEHaNIT7eZs evaluated=0/1
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=TEHaNIT7eZs
+audio fallback anchor 1: yt=835.3s twitch=19300.5s similarity=0.7583 second=0.7335 margin=0.0248 search=global
+audio fallback anchor 2: yt=3043.5s twitch=22132.5s similarity=0.7229 second=0.7109 margin=0.0120 search=forward-fallback
+audio fallback anchor 3: yt=5421.5s twitch=23321.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+audio fallback anchor 4: yt=7459.8s twitch=24340.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+assignment result: youtube=TEHaNIT7eZs state=unmatched primary_vod=2862622285 assigned=-
+assignment 13/14: youtube=QcJ0mjcA62k evaluated=0/1
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=QcJ0mjcA62k
+audio fallback anchor 1: yt=798.0s twitch=4636.0s similarity=0.7331 second=0.7328 margin=0.0003 search=global
+audio fallback anchor 2: yt=2909.2s twitch=20759.0s similarity=0.7586 second=0.7287 margin=0.0299 search=forward-fallback
+audio fallback anchor 3: yt=5182.8s twitch=22308.5s similarity=0.6691 second=0.6579 margin=0.0112 search=forward-fallback
+audio fallback anchor 4: yt=7131.6s twitch=23282.5s similarity=0.0000 second=0.0000 margin=0.0000 search=forward-fallback
+assignment result: youtube=QcJ0mjcA62k state=unmatched primary_vod=2862622285 assigned=-
+assignment 14/14: youtube=_Q-dV2V2g5s evaluated=0/1
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --extractor-args youtube:skip=hls,dash --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=_Q-dV2V2g5s
+audio fallback anchor 1: yt=761.4s twitch=15701.5s similarity=0.8064 second=0.7584 margin=0.0480 search=global
+audio fallback anchor 2: yt=2777.4s twitch=18277.0s similarity=0.8026 second=0.7754 margin=0.0272 search=predicted-window
+audio fallback anchor 3: yt=4948.6s twitch=20405.0s similarity=0.7042 second=0.6908 margin=0.0134 search=forward-fallback
+audio fallback anchor 4: yt=6809.5s twitch=22385.0s similarity=0.7840 second=0.7016 margin=0.0824 search=predicted-window
+assignment result: youtube=_Q-dV2V2g5s state=unmatched primary_vod=2862622285 assigned=-

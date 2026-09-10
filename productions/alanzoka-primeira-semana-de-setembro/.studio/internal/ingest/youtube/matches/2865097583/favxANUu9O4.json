@@ -1,0 +1,318 @@
+{
+  "schema_version": 2,
+  "youtube_video_id": "favxANUu9O4",
+  "youtube": {
+    "schema_version": 2,
+    "video_id": "favxANUu9O4",
+    "url": "https://www.youtube.com/watch?v=favxANUu9O4",
+    "channel_id": "UCIwspRtKNszHhIhl36gREjQ",
+    "channel_name": "alanzoka",
+    "title": "ONIMUSHA: WAY OF THE SWORD - Parte 2",
+    "description": "OS MAIORES DESCONTOS ESTÃO NO KABUM!:\nhttp://kb1.me/alanzokakabumyt\n\n💜 LIVE: https://www.twitch.tv/alanzoka\n📷 Instagram: https://www.instagram.com/alanzoka/\n📧 alanzoka@vandep.ag\n🐤 Twitter: https://twitter.com/alanzoka\n\n\n\n\n#Alanzoka",
+    "upload_date": "20260907",
+    "timestamp": 1788814828,
+    "duration": 7826.0,
+    "availability": "public",
+    "live_status": "not_live",
+    "thumbnail": "https://i.ytimg.com/vi_webp/favxANUu9O4/maxresdefault.webp",
+    "thumbnails": [
+      {
+        "url": "https://i.ytimg.com/vi/favxANUu9O4/hq720.jpg",
+        "height": 720,
+        "width": 1280,
+        "preference": -3,
+        "id": "38",
+        "resolution": "1280x720"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/favxANUu9O4/hq720.webp",
+        "preference": -2,
+        "id": "39"
+      },
+      {
+        "url": "https://i.ytimg.com/vi/favxANUu9O4/maxresdefault.jpg",
+        "height": 720,
+        "width": 1280,
+        "preference": -1,
+        "id": "40",
+        "resolution": "1280x720"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/favxANUu9O4/maxresdefault.webp",
+        "height": 1080,
+        "width": 1920,
+        "preference": 0,
+        "id": "41",
+        "resolution": "1920x1080"
+      }
+    ],
+    "view_count": 264871,
+    "chapters": [],
+    "formats_summary": {
+      "max_height": 2160,
+      "max_fps": 60.0,
+      "heights": [
+        180,
+        240,
+        360,
+        480,
+        720,
+        1080,
+        1440,
+        2160
+      ]
+    },
+    "indexed_at": "2026-09-10T19:33:13Z",
+    "untrusted": true,
+    "injection_findings": [],
+    "streamer": "alanzoka",
+    "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+    "configured_channel_name": "alanzoka"
+  },
+  "twitch_vod_ids": [
+    "2865097583"
+  ],
+  "twitch": {
+    "vod_id": "2865097583",
+    "streamer": "alanzoka",
+    "title": "live mais cedo de novo sexta la pra 13h -> onimusha - halloween - blood of the dawnwalker",
+    "game": "Só Na Conversa",
+    "created_at": "2026-09-04T16:09:03Z",
+    "duration": 32949.0,
+    "chapters": [
+      {
+        "title": "Just Chatting",
+        "start": 0.0,
+        "duration": 1492.0
+      },
+      {
+        "title": "Onimusha: Way of the Sword",
+        "start": 1492.0,
+        "duration": 7971.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 9463.0,
+        "duration": 785.0
+      },
+      {
+        "title": "Halloween: The Game",
+        "start": 10248.0,
+        "duration": 9216.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 19464.0,
+        "duration": 710.0
+      },
+      {
+        "title": "The Blood of Dawnwalker",
+        "start": 20174.0,
+        "duration": 12235.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 32409.0,
+        "duration": 540.0
+      }
+    ],
+    "path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\twitch\\alanzoka\\discovery\\2865097583.json",
+    "source_url": "https://www.twitch.tv/videos/2865097583",
+    "untrusted": true,
+    "injection_findings": []
+  },
+  "streamer": "alanzoka",
+  "state": "verified",
+  "candidate_score": 0.5888,
+  "candidate_evidence": {
+    "candidate_score": 0.5888,
+    "signals": {
+      "channel": {
+        "score": 1.0,
+        "available": true,
+        "weight": 0.0,
+        "effective_weight": 0.0,
+        "detail": "configured mirror channel"
+      },
+      "date": {
+        "score": 0.7658,
+        "available": true,
+        "weight": 0.3,
+        "effective_weight": 0.3,
+        "detail": "upload delay +3.2d"
+      },
+      "duration": {
+        "score": 0.6175,
+        "available": true,
+        "weight": 0.22,
+        "effective_weight": 0.22,
+        "detail": "short subset ratio 0.24"
+      },
+      "title": {
+        "score": 0.4077,
+        "available": true,
+        "weight": 0.28,
+        "effective_weight": 0.28,
+        "detail": "token similarity"
+      },
+      "chapters": {
+        "score": 0.5448,
+        "available": true,
+        "weight": 0.2,
+        "effective_weight": 0.2,
+        "detail": "shared tokens: onimusha, sword, way"
+      }
+    },
+    "contributions": {
+      "channel": 0.0,
+      "date": 0.2297,
+      "duration": 0.1359,
+      "title": 0.1142,
+      "chapters": 0.109
+    }
+  },
+  "verification": {
+    "status": "complete",
+    "policy_version": "global-source-assignment-v1",
+    "matcher_engine": "numpy-exact",
+    "completed_at": "2026-09-10T20:24:48Z",
+    "mode": "global-audio-assignment",
+    "providers": {
+      "metadata": "complete",
+      "audio": "complete",
+      "transcript": "not_run"
+    },
+    "transcript": {
+      "method": "whisper-localized-anchor-v2",
+      "anchors": [],
+      "assessment": {
+        "state": "not_run"
+      },
+      "strategy": "bounded-global-localized-tiebreak",
+      "full_source_whisper": false
+    },
+    "audio": {
+      "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+      "anchors": [
+        {
+          "youtube_time": 768.6,
+          "twitch_time": 2390.0,
+          "similarity": 0.8967,
+          "second_best_similarity": 0.8088,
+          "peak_margin": 0.0879,
+          "search_mode": "global",
+          "evaluated_windows": 65844,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 2803.36,
+          "twitch_time": 4424.5,
+          "similarity": 0.9016,
+          "second_best_similarity": 0.7932,
+          "peak_margin": 0.1084,
+          "search_mode": "predicted-window",
+          "evaluated_windows": 2041,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 4994.64,
+          "twitch_time": 6615.5,
+          "similarity": 0.9286,
+          "second_best_similarity": 0.8277,
+          "peak_margin": 0.1009,
+          "search_mode": "predicted-window",
+          "evaluated_windows": 2041,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 6872.88,
+          "twitch_time": 8493.5,
+          "similarity": 0.9372,
+          "second_best_similarity": 0.7903,
+          "peak_margin": 0.1469,
+          "search_mode": "predicted-window",
+          "evaluated_windows": 2041,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        }
+      ],
+      "assessment": {
+        "state": "verified",
+        "good_anchors": 4,
+        "total_anchors": 4,
+        "median_similarity": 0.9151,
+        "ordered": true,
+        "timeline_consistency": "strong",
+        "slopes": [
+          0.9999,
+          0.9999,
+          0.9999
+        ],
+        "offsets": [
+          1621.4,
+          1621.14,
+          1620.86,
+          1620.62
+        ],
+        "offset_deltas": [
+          -0.26,
+          -0.28,
+          -0.24
+        ],
+        "backwards_offset_jumps": [],
+        "continuous_offset_pairs": 3,
+        "forward_cut_gaps": [],
+        "median_peak_margin": 0.1046,
+        "consistency_model": "piecewise-offset-v1"
+      }
+    }
+  },
+  "timeline_segments": [
+    {
+      "youtube_start": 768.6,
+      "youtube_end": 2803.36,
+      "twitch_start": 2390.0,
+      "twitch_end": 4424.5,
+      "slope": 0.99987,
+      "confidence": 0.8967,
+      "offset_start": 1621.4,
+      "offset_end": 1621.14,
+      "offset_delta": -0.26,
+      "kind": "continuous"
+    },
+    {
+      "youtube_start": 2803.36,
+      "youtube_end": 4994.64,
+      "twitch_start": 4424.5,
+      "twitch_end": 6615.5,
+      "slope": 0.99987,
+      "confidence": 0.9016,
+      "offset_start": 1621.14,
+      "offset_end": 1620.86,
+      "offset_delta": -0.28,
+      "kind": "continuous"
+    },
+    {
+      "youtube_start": 4994.64,
+      "youtube_end": 6872.88,
+      "twitch_start": 6615.5,
+      "twitch_end": 8493.5,
+      "slope": 0.99987,
+      "confidence": 0.9286,
+      "offset_start": 1620.86,
+      "offset_end": 1620.62,
+      "offset_delta": -0.24,
+      "kind": "continuous"
+    }
+  ],
+  "download": {
+    "status": "not_downloaded",
+    "path": ""
+  },
+  "rights_status": "sem_autorizacao_confirmada",
+  "updated_at": "2026-09-10T20:45:19Z",
+  "global_assignment": true
+}

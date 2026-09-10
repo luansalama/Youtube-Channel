@@ -1,0 +1,942 @@
+{
+  "youtube_video_id": "CMrXO8qfoQw",
+  "streamer": "alanzoka",
+  "status": "completed",
+  "created_at": "2026-09-10T20:47:50Z",
+  "evaluated_vod_ids": [
+    "2861744268",
+    "2862622285",
+    "2863504919",
+    "2864229186",
+    "2865097583",
+    "2868004694",
+    "2868864059",
+    "2869682753"
+  ],
+  "pair_results": {
+    "2861744268": {
+      "vod_id": "2861744268",
+      "state": "candidate",
+      "candidate_score": 0.4991,
+      "candidate_evidence": {
+        "candidate_score": 0.4991,
+        "signals": {
+          "channel": {
+            "score": 1.0,
+            "available": true,
+            "weight": 0.0,
+            "effective_weight": 0.0,
+            "detail": "configured mirror channel"
+          },
+          "date": {
+            "score": 0.9304,
+            "available": true,
+            "weight": 0.3,
+            "effective_weight": 0.3,
+            "detail": "upload delay +0.9d"
+          },
+          "duration": {
+            "score": 1.0,
+            "available": true,
+            "weight": 0.22,
+            "effective_weight": 0.22,
+            "detail": "subset-compatible ratio 0.90"
+          },
+          "title": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.28,
+            "effective_weight": 0.28,
+            "detail": "token similarity"
+          },
+          "chapters": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.2,
+            "effective_weight": 0.2,
+            "detail": "shared tokens: none"
+          }
+        },
+        "contributions": {
+          "channel": 0.0,
+          "date": 0.2791,
+          "duration": 0.22,
+          "title": 0.0,
+          "chapters": 0.0
+        }
+      },
+      "evaluated_at": "2026-09-10T20:49:42Z",
+      "policy_version": "global-source-assignment-v1",
+      "matcher_engine": "numpy-exact",
+      "timeline_segments": [],
+      "audio": {
+        "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+        "anchors": [
+          {
+            "youtube_time": 2324.0,
+            "twitch_time": 15829.0,
+            "similarity": 0.8156,
+            "second_best_similarity": 0.8041,
+            "peak_margin": 0.0115,
+            "search_mode": "global",
+            "evaluated_windows": 51751,
+            "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+            "duration": 28.0
+          },
+          {
+            "youtube_time": 8402.8,
+            "twitch_time": 21427.5,
+            "similarity": 0.7381,
+            "second_best_similarity": 0.7291,
+            "peak_margin": 0.009,
+            "search_mode": "forward-fallback",
+            "evaluated_windows": 14015,
+            "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+            "duration": 28.0
+          },
+          {
+            "youtube_time": 14949.2,
+            "twitch_time": 25742.5,
+            "similarity": 0.7372,
+            "second_best_similarity": 0.7194,
+            "peak_margin": 0.0178,
+            "search_mode": "forward-fallback",
+            "evaluated_windows": 2350,
+            "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+            "duration": 28.0
+          },
+          {
+            "youtube_time": 20560.4,
+            "twitch_time": 28548.0,
+            "similarity": 0.0,
+            "second_best_similarity": 0.0,
+            "peak_margin": 0.0,
+            "search_mode": "forward-fallback",
+            "evaluated_windows": 0,
+            "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+            "duration": 28.0
+          }
+        ],
+        "assessment": {
+          "state": "candidate",
+          "good_anchors": 0,
+          "total_anchors": 4,
+          "median_similarity": 0.0,
+          "ordered": false,
+          "timeline_consistency": "insufficient",
+          "slopes": [],
+          "offsets": [],
+          "offset_deltas": [],
+          "backwards_offset_jumps": [],
+          "continuous_offset_pairs": 0,
+          "forward_cut_gaps": [],
+          "median_peak_margin": null,
+          "consistency_model": "piecewise-offset-v1"
+        }
+      },
+      "twitch_fingerprint": {
+        "provider": "ffmpeg-temporal-features-v1",
+        "frames": 51806,
+        "duration_seconds": 25903.0
+      }
+    },
+    "2862622285": {
+      "vod_id": "2862622285",
+      "state": "candidate",
+      "candidate_score": 0.415,
+      "candidate_evidence": {
+        "candidate_score": 0.415,
+        "signals": {
+          "channel": {
+            "score": 1.0,
+            "available": true,
+            "weight": 0.0,
+            "effective_weight": 0.0,
+            "detail": "configured mirror channel"
+          },
+          "date": {
+            "score": 0.65,
+            "available": true,
+            "weight": 0.3,
+            "effective_weight": 0.3,
+            "detail": "upload delay -0.1d"
+          },
+          "duration": {
+            "score": 1.0,
+            "available": true,
+            "weight": 0.22,
+            "effective_weight": 0.22,
+            "detail": "subset-compatible ratio 1.04"
+          },
+          "title": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.28,
+            "effective_weight": 0.28,
+            "detail": "token similarity"
+          },
+          "chapters": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.2,
+            "effective_weight": 0.2,
+            "detail": "shared tokens: none"
+          }
+        },
+        "contributions": {
+          "channel": 0.0,
+          "date": 0.195,
+          "duration": 0.22,
+          "title": 0.0,
+          "chapters": 0.0
+        }
+      },
+      "evaluated_at": "2026-09-10T20:49:42Z",
+      "policy_version": "global-source-assignment-v1",
+      "matcher_engine": "numpy-exact",
+      "timeline_segments": [],
+      "audio": {
+        "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+        "anchors": [
+          {
+            "youtube_time": 2324.0,
+            "twitch_time": 7212.5,
+            "similarity": 0.8116,
+            "second_best_similarity": 0.8025,
+            "peak_margin": 0.0091,
+            "search_mode": "global",
+            "evaluated_windows": 44773,
+            "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+            "duration": 28.0
+          },
+          {
+            "youtube_time": 8402.8,
+            "twitch_time": 14486.0,
+            "similarity": 0.7528,
+            "second_best_similarity": 0.7515,
+            "peak_margin": 0.0013,
+            "search_mode": "forward-fallback",
+            "evaluated_windows": 24270,
+            "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+            "duration": 28.0
+          },
+          {
+            "youtube_time": 14949.2,
+            "twitch_time": 20508.5,
+            "similarity": 0.7762,
+            "second_best_similarity": 0.7651,
+            "peak_margin": 0.0111,
+            "search_mode": "forward-fallback",
+            "evaluated_windows": 9255,
+            "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+            "duration": 28.0
+          },
+          {
+            "youtube_time": 20560.4,
+            "twitch_time": 23314.0,
+            "similarity": 0.0,
+            "second_best_similarity": 0.0,
+            "peak_margin": 0.0,
+            "search_mode": "forward-fallback",
+            "evaluated_windows": 0,
+            "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+            "duration": 28.0
+          }
+        ],
+        "assessment": {
+          "state": "candidate",
+          "good_anchors": 0,
+          "total_anchors": 4,
+          "median_similarity": 0.0,
+          "ordered": false,
+          "timeline_consistency": "insufficient",
+          "slopes": [],
+          "offsets": [],
+          "offset_deltas": [],
+          "backwards_offset_jumps": [],
+          "continuous_offset_pairs": 0,
+          "forward_cut_gaps": [],
+          "median_peak_margin": null,
+          "consistency_model": "piecewise-offset-v1"
+        }
+      },
+      "twitch_fingerprint": {
+        "provider": "ffmpeg-temporal-features-v1",
+        "frames": 44828,
+        "duration_seconds": 22414.0
+      },
+      "deep_audio_anchor_count": 3,
+      "deep_audio_median_similarity": 0.7762,
+      "transcript": {
+        "method": "whisper-localized-anchor-v2",
+        "anchors": [
+          {
+            "youtube_time": 2324.0,
+            "twitch_time": 7212.5,
+            "audio_similarity": 0.8116,
+            "similarity": 0.0545,
+            "youtube_tokens": 62,
+            "twitch_tokens": 48,
+            "youtube_text": "TV de tubo estão voltando forte. TV de tubo estão voltando forte. Novo objetivo. >> Vocês viram a física do sofá? Parecia GTA 6. GTA 6. Como é que eu sento para as TV, bebê? Como é que eu sento para as TV, bebê? >> Eu não sei sentar. Ah, vou dizer que a >> Eu não sei sentar. Ah, vou dizer que a amo.",
+            "twitch_text": "Vai cortar o vídeo, não? Vou, né, pô? Pode que eu vou, né, gente? Calma, pô. Vocês já estão me cobrando de cortar o vídeo aqui, mano. Vocês já estão cobrando a hora do futuro de editar o vídeo? Calma, pô. Fala do futuro que edita o vídeo.",
+            "method": "whisper-localized-anchor-v2"
+          },
+          {
+            "youtube_time": 8402.8,
+            "twitch_time": 14486.0,
+            "audio_similarity": 0.7528,
+            "similarity": 0.1008,
+            "youtube_tokens": 25,
+            "twitch_tokens": 94,
+            "youtube_text": "É verdade, mano. Onde que é a igreja, mano? Eu nunca fui pra igreja, [ __ ] Ah, isso é a igreja. Ah, isso é a igreja. Ah,",
+            "twitch_text": "Brincadeira, mano. É um bagulho, assim, assustador pensar que você tem 10 mil horas de jogo. Você cresceu arrozinha, né, mano? Não, eu tô soltinho, igual arroz. Ó, já tirei do meu aqui, ó, bampei. Ai! Nossa, parecia o Link tomando dano. Ai, o que que é isso? Boa, boa, gostei. Calma, não, segurei. O cara vai me bampar, ",
+            "method": "whisper-localized-anchor-v2"
+          },
+          {
+            "youtube_time": 14949.2,
+            "twitch_time": 20508.5,
+            "audio_similarity": 0.7762,
+            "similarity": 0.0341,
+            "youtube_tokens": 30,
+            "twitch_tokens": 146,
+            "youtube_text": "Coraçãozinho, coraçãozinho. Come tudo, come tudo que deve tá delicioso. come tudo que deve tá delicioso. Coraçãozinho. Não, para, para. Se voltar tudo eu desinstalo o jogo. Desinstalo o jogo,",
+            "twitch_text": "Dá pra fazer mais um, dá pra fazer mais um. Eu não tô esperando aqui. Valeu time, valeu time, valeu time, valeu time. Valeu time, era isso, a gente precisava de... Pô, a Julinha Rabudinha pediu pra eu assinar a Steam e eu esqueci, porque eu tava tiltado com o Falcon, mano, agora eu não lembro, mano. Não, não lembro. Pô",
+            "method": "whisper-localized-anchor-v2"
+          }
+        ],
+        "assessment": {
+          "state": "insufficient",
+          "good_anchors": 0,
+          "total_anchors": 3,
+          "median_similarity": 0.0,
+          "timeline_consistency": "insufficient"
+        }
+      }
+    },
+    "2863504919": {
+      "vod_id": "2863504919",
+      "state": "candidate",
+      "candidate_score": 0.415,
+      "candidate_evidence": {
+        "candidate_score": 0.415,
+        "signals": {
+          "channel": {
+            "score": 1.0,
+            "available": true,
+            "weight": 0.0,
+            "effective_weight": 0.0,
+            "detail": "configured mirror channel"
+          },
+          "date": {
+            "score": 0.65,
+            "available": true,
+            "weight": 0.3,
+            "effective_weight": 0.3,
+            "detail": "upload delay -1.2d"
+          },
+          "duration": {
+            "score": 1.0,
+            "available": true,
+            "weight": 0.22,
+            "effective_weight": 0.22,
+            "detail": "subset-compatible ratio 0.95"
+          },
+          "title": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.28,
+            "effective_weight": 0.28,
+            "detail": "token similarity"
+          },
+          "chapters": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.2,
+            "effective_weight": 0.2,
+            "detail": "shared tokens: none"
+          }
+        },
+        "contributions": {
+          "channel": 0.0,
+          "date": 0.195,
+          "duration": 0.22,
+          "title": 0.0,
+          "chapters": 0.0
+        }
+      },
+      "evaluated_at": "2026-09-10T20:49:42Z",
+      "policy_version": "global-source-assignment-v1",
+      "matcher_engine": "numpy-exact",
+      "timeline_segments": [],
+      "audio": {
+        "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+        "anchors": [
+          {
+            "youtube_time": 2324.0,
+            "twitch_time": 3476.0,
+            "similarity": 0.8062,
+            "second_best_similarity": 0.8034,
+            "peak_margin": 0.0028,
+            "search_mode": "global",
+            "evaluated_windows": 49338,
+            "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+            "duration": 28.0
+          },
+          {
+            "youtube_time": 8402.8,
+            "twitch_time": 20235.5,
+            "similarity": 0.7835,
+            "second_best_similarity": 0.7485,
+            "peak_margin": 0.035,
+            "search_mode": "forward-fallback",
+            "evaluated_windows": 36308,
+            "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+            "duration": 28.0
+          },
+          {
+            "youtube_time": 14949.2,
+            "twitch_time": 23605.0,
+            "similarity": 0.7516,
+            "second_best_similarity": 0.7346,
+            "peak_margin": 0.017,
+            "search_mode": "forward-fallback",
+            "evaluated_windows": 2321,
+            "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+            "duration": 28.0
+          },
+          {
+            "youtube_time": 20560.4,
+            "twitch_time": 26410.5,
+            "similarity": 0.0,
+            "second_best_similarity": 0.0,
+            "peak_margin": 0.0,
+            "search_mode": "forward-fallback",
+            "evaluated_windows": 0,
+            "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+            "duration": 28.0
+          }
+        ],
+        "assessment": {
+          "state": "candidate",
+          "good_anchors": 0,
+          "total_anchors": 4,
+          "median_similarity": 0.0,
+          "ordered": false,
+          "timeline_consistency": "insufficient",
+          "slopes": [],
+          "offsets": [],
+          "offset_deltas": [],
+          "backwards_offset_jumps": [],
+          "continuous_offset_pairs": 0,
+          "forward_cut_gaps": [],
+          "median_peak_margin": null,
+          "consistency_model": "piecewise-offset-v1"
+        }
+      },
+      "twitch_fingerprint": {
+        "provider": "ffmpeg-temporal-features-v1",
+        "frames": 49393,
+        "duration_seconds": 24696.5
+      },
+      "deep_audio_anchor_count": 3,
+      "deep_audio_median_similarity": 0.7835,
+      "transcript": {
+        "method": "whisper-localized-anchor-v2",
+        "anchors": [
+          {
+            "youtube_time": 2324.0,
+            "twitch_time": 3476.0,
+            "audio_similarity": 0.8062,
+            "similarity": 0.1242,
+            "youtube_tokens": 62,
+            "twitch_tokens": 99,
+            "youtube_text": "TV de tubo estão voltando forte. TV de tubo estão voltando forte. Novo objetivo. >> Vocês viram a física do sofá? Parecia GTA 6. GTA 6. Como é que eu sento para as TV, bebê? Como é que eu sento para as TV, bebê? >> Eu não sei sentar. Ah, vou dizer que a >> Eu não sei sentar. Ah, vou dizer que a amo.",
+            "twitch_text": "É muito ruim, mano. Você me deixa ruim. Só de estar no meu chat, velho. Vai tocar violino, porra. Ai, brincadeira. Sumiu a vontade de Geogaster? Ah, mano, é que Geogaster eu tenho que pagar, né? Eu não quero pagar, mano. Alguém tem um cupom aí de Geogaster grátis, mano? Tô duro, mano. Tô duro. Ô, é R$8,00 por mês. De o",
+            "method": "whisper-localized-anchor-v2"
+          },
+          {
+            "youtube_time": 8402.8,
+            "twitch_time": 20235.5,
+            "audio_similarity": 0.7835,
+            "similarity": 0.0571,
+            "youtube_tokens": 25,
+            "twitch_tokens": 10,
+            "youtube_text": "É verdade, mano. Onde que é a igreja, mano? Eu nunca fui pra igreja, [ __ ] Ah, isso é a igreja. Ah, isso é a igreja. Ah,",
+            "twitch_text": "Vai dar merda, hein? Vai dar merda. Cara, que escuro.",
+            "method": "whisper-localized-anchor-v2"
+          },
+          {
+            "youtube_time": 14949.2,
+            "twitch_time": 23605.0,
+            "audio_similarity": 0.7516,
+            "similarity": 0.086,
+            "youtube_tokens": 30,
+            "twitch_tokens": 63,
+            "youtube_text": "Coraçãozinho, coraçãozinho. Come tudo, come tudo que deve tá delicioso. come tudo que deve tá delicioso. Coraçãozinho. Não, para, para. Se voltar tudo eu desinstalo o jogo. Desinstalo o jogo,",
+            "twitch_text": "Para impor alma, segura e plau para entrar no modo foco. Imposição de alma. Vou tentar impor alma. Cara, mas tudo envolve se cortar, mano. Não é muito legal, né, se pá? Não tem um poder que a gente se beija na boca, um bagulho mais diferente? Eu não posso! Por Deus do céu! Eu não posso! F***, você ouviu isso? Eu fiz.",
+            "method": "whisper-localized-anchor-v2"
+          }
+        ],
+        "assessment": {
+          "state": "insufficient",
+          "good_anchors": 0,
+          "total_anchors": 3,
+          "median_similarity": 0.0,
+          "timeline_consistency": "insufficient"
+        }
+      }
+    },
+    "2864229186": {
+      "vod_id": "2864229186",
+      "state": "candidate",
+      "candidate_score": 0.22,
+      "candidate_evidence": {
+        "candidate_score": 0.22,
+        "signals": {
+          "channel": {
+            "score": 1.0,
+            "available": true,
+            "weight": 0.0,
+            "effective_weight": 0.0,
+            "detail": "configured mirror channel"
+          },
+          "date": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.3,
+            "effective_weight": 0.3,
+            "detail": "YouTube predates Twitch by 2.0d"
+          },
+          "duration": {
+            "score": 1.0,
+            "available": true,
+            "weight": 0.22,
+            "effective_weight": 0.22,
+            "detail": "subset-compatible ratio 0.94"
+          },
+          "title": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.28,
+            "effective_weight": 0.28,
+            "detail": "token similarity"
+          },
+          "chapters": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.2,
+            "effective_weight": 0.2,
+            "detail": "shared tokens: none"
+          }
+        },
+        "contributions": {
+          "channel": 0.0,
+          "date": 0.0,
+          "duration": 0.22,
+          "title": 0.0,
+          "chapters": 0.0
+        }
+      },
+      "reason": "known upload date predates this Twitch VOD",
+      "evaluated_at": "2026-09-10T20:49:42Z",
+      "policy_version": "global-source-assignment-v1",
+      "matcher_engine": "not_run",
+      "timeline_segments": [],
+      "audio": {
+        "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+        "anchors": [],
+        "assessment": {
+          "state": "not_run"
+        }
+      }
+    },
+    "2865097583": {
+      "vod_id": "2865097583",
+      "state": "candidate",
+      "candidate_score": 0.2037,
+      "candidate_evidence": {
+        "candidate_score": 0.2037,
+        "signals": {
+          "channel": {
+            "score": 1.0,
+            "available": true,
+            "weight": 0.0,
+            "effective_weight": 0.0,
+            "detail": "configured mirror channel"
+          },
+          "date": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.3,
+            "effective_weight": 0.3,
+            "detail": "YouTube predates Twitch by 3.0d"
+          },
+          "duration": {
+            "score": 0.9259,
+            "available": true,
+            "weight": 0.22,
+            "effective_weight": 0.22,
+            "detail": "subset-compatible ratio 0.71"
+          },
+          "title": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.28,
+            "effective_weight": 0.28,
+            "detail": "token similarity"
+          },
+          "chapters": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.2,
+            "effective_weight": 0.2,
+            "detail": "shared tokens: none"
+          }
+        },
+        "contributions": {
+          "channel": 0.0,
+          "date": 0.0,
+          "duration": 0.2037,
+          "title": 0.0,
+          "chapters": 0.0
+        }
+      },
+      "reason": "known upload date predates this Twitch VOD",
+      "evaluated_at": "2026-09-10T20:49:42Z",
+      "policy_version": "global-source-assignment-v1",
+      "matcher_engine": "not_run",
+      "timeline_segments": [],
+      "audio": {
+        "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+        "anchors": [],
+        "assessment": {
+          "state": "not_run"
+        }
+      }
+    },
+    "2868004694": {
+      "vod_id": "2868004694",
+      "state": "candidate",
+      "candidate_score": 0.217,
+      "candidate_evidence": {
+        "candidate_score": 0.217,
+        "signals": {
+          "channel": {
+            "score": 1.0,
+            "available": true,
+            "weight": 0.0,
+            "effective_weight": 0.0,
+            "detail": "configured mirror channel"
+          },
+          "date": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.3,
+            "effective_weight": 0.3,
+            "detail": "YouTube predates Twitch by 6.1d"
+          },
+          "duration": {
+            "score": 0.9864,
+            "available": true,
+            "weight": 0.22,
+            "effective_weight": 0.22,
+            "detail": "subset-compatible ratio 0.87"
+          },
+          "title": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.28,
+            "effective_weight": 0.28,
+            "detail": "token similarity"
+          },
+          "chapters": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.2,
+            "effective_weight": 0.2,
+            "detail": "shared tokens: none"
+          }
+        },
+        "contributions": {
+          "channel": 0.0,
+          "date": 0.0,
+          "duration": 0.217,
+          "title": 0.0,
+          "chapters": 0.0
+        }
+      },
+      "reason": "known upload date predates this Twitch VOD",
+      "evaluated_at": "2026-09-10T20:49:42Z",
+      "policy_version": "global-source-assignment-v1",
+      "matcher_engine": "not_run",
+      "timeline_segments": [],
+      "audio": {
+        "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+        "anchors": [],
+        "assessment": {
+          "state": "not_run"
+        }
+      }
+    },
+    "2868864059": {
+      "vod_id": "2868864059",
+      "state": "candidate",
+      "candidate_score": 0.2163,
+      "candidate_evidence": {
+        "candidate_score": 0.2163,
+        "signals": {
+          "channel": {
+            "score": 1.0,
+            "available": true,
+            "weight": 0.0,
+            "effective_weight": 0.0,
+            "detail": "configured mirror channel"
+          },
+          "date": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.3,
+            "effective_weight": 0.3,
+            "detail": "YouTube predates Twitch by 7.1d"
+          },
+          "duration": {
+            "score": 0.9831,
+            "available": true,
+            "weight": 0.22,
+            "effective_weight": 0.22,
+            "detail": "subset-compatible ratio 0.86"
+          },
+          "title": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.28,
+            "effective_weight": 0.28,
+            "detail": "token similarity"
+          },
+          "chapters": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.2,
+            "effective_weight": 0.2,
+            "detail": "shared tokens: none"
+          }
+        },
+        "contributions": {
+          "channel": 0.0,
+          "date": 0.0,
+          "duration": 0.2163,
+          "title": 0.0,
+          "chapters": 0.0
+        }
+      },
+      "reason": "known upload date predates this Twitch VOD",
+      "evaluated_at": "2026-09-10T20:49:42Z",
+      "policy_version": "global-source-assignment-v1",
+      "matcher_engine": "not_run",
+      "timeline_segments": [],
+      "audio": {
+        "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+        "anchors": [],
+        "assessment": {
+          "state": "not_run"
+        }
+      }
+    },
+    "2869682753": {
+      "vod_id": "2869682753",
+      "state": "candidate",
+      "candidate_score": 0.2144,
+      "candidate_evidence": {
+        "candidate_score": 0.2144,
+        "signals": {
+          "channel": {
+            "score": 1.0,
+            "available": true,
+            "weight": 0.0,
+            "effective_weight": 0.0,
+            "detail": "configured mirror channel"
+          },
+          "date": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.3,
+            "effective_weight": 0.3,
+            "detail": "YouTube predates Twitch by 8.1d"
+          },
+          "duration": {
+            "score": 0.9745,
+            "available": true,
+            "weight": 0.22,
+            "effective_weight": 0.22,
+            "detail": "subset-compatible ratio 0.83"
+          },
+          "title": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.28,
+            "effective_weight": 0.28,
+            "detail": "token similarity"
+          },
+          "chapters": {
+            "score": 0.0,
+            "available": true,
+            "weight": 0.2,
+            "effective_weight": 0.2,
+            "detail": "shared tokens: none"
+          }
+        },
+        "contributions": {
+          "channel": 0.0,
+          "date": 0.0,
+          "duration": 0.2144,
+          "title": 0.0,
+          "chapters": 0.0
+        }
+      },
+      "reason": "known upload date predates this Twitch VOD",
+      "evaluated_at": "2026-09-10T20:49:42Z",
+      "policy_version": "global-source-assignment-v1",
+      "matcher_engine": "not_run",
+      "timeline_segments": [],
+      "audio": {
+        "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+        "anchors": [],
+        "assessment": {
+          "state": "not_run"
+        }
+      }
+    }
+  },
+  "matcher_engine": "numpy-exact",
+  "youtube": {
+    "schema_version": 2,
+    "video_id": "CMrXO8qfoQw",
+    "url": "https://www.youtube.com/watch?v=CMrXO8qfoQw",
+    "channel_id": "UCIwspRtKNszHhIhl36gREjQ",
+    "channel_name": "alanzoka",
+    "title": "UM CLÁSSICO! - THE DARKNESS",
+    "description": "OS MAIORES DESCONTOS ESTÃO NO KABUM!:\nhttp://kb1.me/alanzokakabumyt\n\n💜 LIVE: https://www.twitch.tv/alanzoka\n📷 Instagram: https://www.instagram.com/alanzoka/\n📧 alanzoka@vandep.ag\n🐤 Twitter: https://twitter.com/alanzoka\n\n\n\n\n#Alanzoka",
+    "upload_date": "20260901",
+    "timestamp": 1788274839,
+    "duration": 23380.0,
+    "availability": "public",
+    "live_status": "not_live",
+    "thumbnail": "https://i.ytimg.com/vi_webp/CMrXO8qfoQw/maxresdefault.webp",
+    "thumbnails": [
+      {
+        "url": "https://i.ytimg.com/vi/CMrXO8qfoQw/hq720.jpg",
+        "height": 720,
+        "width": 1280,
+        "preference": -3,
+        "id": "38",
+        "resolution": "1280x720"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/CMrXO8qfoQw/hq720.webp",
+        "preference": -2,
+        "id": "39"
+      },
+      {
+        "url": "https://i.ytimg.com/vi/CMrXO8qfoQw/maxresdefault.jpg",
+        "height": 720,
+        "width": 1280,
+        "preference": -1,
+        "id": "40",
+        "resolution": "1280x720"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/CMrXO8qfoQw/maxresdefault.webp",
+        "height": 1080,
+        "width": 1920,
+        "preference": 0,
+        "id": "41",
+        "resolution": "1920x1080"
+      }
+    ],
+    "view_count": 378720,
+    "chapters": [],
+    "formats_summary": {
+      "max_height": 2160,
+      "max_fps": 60.0,
+      "heights": [
+        180,
+        240,
+        360,
+        480,
+        720,
+        1080,
+        1440,
+        2160
+      ]
+    },
+    "indexed_at": "2026-09-10T20:45:31Z",
+    "untrusted": true,
+    "injection_findings": [],
+    "streamer": "alanzoka",
+    "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+    "configured_channel_name": "alanzoka",
+    "playlist_index": null,
+    "playlist_autonumber": null
+  },
+  "candidate_discovery": {
+    "best_candidate_score": 0.4991,
+    "best_candidate_vod_id": "2861744268",
+    "best_chapter_shared_tokens": 0,
+    "reasons": [
+      "production-time-window",
+      "metadata"
+    ],
+    "index_position": 16,
+    "publish_time": "2026-09-01T15:00:39+00:00"
+  },
+  "schema_version": 2,
+  "policy_version": "global-source-assignment-v1",
+  "updated_at": "2026-09-10T20:50:20Z",
+  "youtube_fingerprint": {
+    "provider": "ffmpeg-temporal-features-v1",
+    "frames": 46759,
+    "duration_seconds": 23379.5
+  },
+  "deep_resolution": {
+    "policy_version": "localized-global-tiebreak-v1",
+    "status": "completed",
+    "attempted_vod_ids": [
+      "2862622285",
+      "2863504919"
+    ],
+    "candidate_vod_ids": [
+      "2863504919",
+      "2862622285"
+    ],
+    "attempts": {
+      "2863504919": {
+        "state": "candidate",
+        "assessment": {
+          "state": "insufficient",
+          "good_anchors": 0,
+          "total_anchors": 3,
+          "median_similarity": 0.0,
+          "timeline_consistency": "insufficient"
+        },
+        "attempted_at": "2026-09-10T20:50:03Z"
+      },
+      "2862622285": {
+        "state": "candidate",
+        "assessment": {
+          "state": "insufficient",
+          "good_anchors": 0,
+          "total_anchors": 3,
+          "median_similarity": 0.0,
+          "timeline_consistency": "insufficient"
+        },
+        "attempted_at": "2026-09-10T20:50:19Z"
+      }
+    },
+    "reason": "all bounded deep-resolution candidates exhausted",
+    "completed_at": "2026-09-10T20:50:20Z"
+  },
+  "state": "unmatched",
+  "primary_vod_id": "2861744268",
+  "assigned_vod_ids": [],
+  "completed_at": "2026-09-10T20:50:20Z"
+}

@@ -1,0 +1,320 @@
+{
+  "schema_version": 2,
+  "youtube_video_id": "Bnzb0zhWGmE",
+  "youtube": {
+    "schema_version": 2,
+    "video_id": "Bnzb0zhWGmE",
+    "url": "https://www.youtube.com/watch?v=Bnzb0zhWGmE",
+    "channel_id": "UCIwspRtKNszHhIhl36gREjQ",
+    "channel_name": "alanzoka",
+    "title": "O MELHOR SNIPER DO JOGO! - BATTLEFIELD 1",
+    "description": "OS MAIORES DESCONTOS ESTÃO NO KABUM!:\nhttp://kb1.me/alanzokakabumyt\n\n💜 LIVE: https://www.twitch.tv/alanzoka\n📷 Instagram: https://www.instagram.com/alanzoka/\n📧 alanzoka@vandep.ag\n🐤 Twitter: https://twitter.com/alanzoka\n\n\n\n\n#Alanzoka",
+    "upload_date": "20260908",
+    "timestamp": 1788908432,
+    "duration": 6157.0,
+    "availability": "public",
+    "live_status": "not_live",
+    "thumbnail": "https://i.ytimg.com/vi_webp/Bnzb0zhWGmE/maxresdefault.webp",
+    "thumbnails": [
+      {
+        "url": "https://i.ytimg.com/vi/Bnzb0zhWGmE/hq720.jpg",
+        "height": 720,
+        "width": 1280,
+        "preference": -3,
+        "id": "38",
+        "resolution": "1280x720"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/Bnzb0zhWGmE/hq720.webp",
+        "preference": -2,
+        "id": "39"
+      },
+      {
+        "url": "https://i.ytimg.com/vi/Bnzb0zhWGmE/maxresdefault.jpg",
+        "height": 720,
+        "width": 1280,
+        "preference": -1,
+        "id": "40",
+        "resolution": "1280x720"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/Bnzb0zhWGmE/maxresdefault.webp",
+        "height": 1080,
+        "width": 1920,
+        "preference": 0,
+        "id": "41",
+        "resolution": "1920x1080"
+      }
+    ],
+    "view_count": 349321,
+    "chapters": [],
+    "formats_summary": {
+      "max_height": 2160,
+      "max_fps": 60.0,
+      "heights": [
+        180,
+        240,
+        360,
+        480,
+        720,
+        1080,
+        1440,
+        2160
+      ]
+    },
+    "indexed_at": "2026-09-10T20:45:23Z",
+    "untrusted": true,
+    "injection_findings": [],
+    "streamer": "alanzoka",
+    "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+    "configured_channel_name": "alanzoka",
+    "playlist_index": null,
+    "playlist_autonumber": null
+  },
+  "twitch_vod_ids": [
+    "2863504919"
+  ],
+  "twitch": {
+    "vod_id": "2863504919",
+    "streamer": "alanzoka",
+    "title": "!live vai dar uma atrasada - blood of the dawnwalker as 19h, antes disso nao sei descubra",
+    "game": "Só Na Conversa",
+    "created_at": "2026-09-02T18:53:16Z",
+    "duration": 24696.0,
+    "chapters": [
+      {
+        "title": "Just Chatting",
+        "start": 0.0,
+        "duration": 3827.0
+      },
+      {
+        "title": "S.T.A.L.K.E.R. G.A.M.M.A.",
+        "start": 3827.0,
+        "duration": 185.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 4012.0,
+        "duration": 175.0
+      },
+      {
+        "title": "Battlefield 1",
+        "start": 4187.0,
+        "duration": 6509.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 10696.0,
+        "duration": 1742.0
+      },
+      {
+        "title": "The Blood of Dawnwalker",
+        "start": 12438.0,
+        "duration": 11893.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 24331.0,
+        "duration": 365.0
+      }
+    ],
+    "path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\twitch\\alanzoka\\discovery\\2863504919.json",
+    "source_url": "https://www.twitch.tv/videos/2863504919",
+    "untrusted": true,
+    "injection_findings": []
+  },
+  "streamer": "alanzoka",
+  "state": "verified",
+  "candidate_score": 0.411,
+  "candidate_evidence": {
+    "candidate_score": 0.411,
+    "signals": {
+      "channel": {
+        "score": 1.0,
+        "available": true,
+        "weight": 0.0,
+        "effective_weight": 0.0,
+        "detail": "configured mirror channel"
+      },
+      "date": {
+        "score": 0.5979,
+        "available": true,
+        "weight": 0.3,
+        "effective_weight": 0.3,
+        "detail": "upload delay +6.2d"
+      },
+      "duration": {
+        "score": 0.6482,
+        "available": true,
+        "weight": 0.22,
+        "effective_weight": 0.22,
+        "detail": "short subset ratio 0.25"
+      },
+      "title": {
+        "score": 0.0,
+        "available": true,
+        "weight": 0.28,
+        "effective_weight": 0.28,
+        "detail": "token similarity"
+      },
+      "chapters": {
+        "score": 0.4452,
+        "available": true,
+        "weight": 0.2,
+        "effective_weight": 0.2,
+        "detail": "shared tokens: battlefield"
+      }
+    },
+    "contributions": {
+      "channel": 0.0,
+      "date": 0.1794,
+      "duration": 0.1426,
+      "title": 0.0,
+      "chapters": 0.089
+    }
+  },
+  "verification": {
+    "status": "complete",
+    "policy_version": "global-source-assignment-v1",
+    "matcher_engine": "numpy-exact",
+    "completed_at": "2026-09-10T20:46:12Z",
+    "mode": "global-audio-assignment",
+    "providers": {
+      "metadata": "complete",
+      "audio": "complete",
+      "transcript": "not_run"
+    },
+    "transcript": {
+      "method": "whisper-localized-anchor-v2",
+      "anchors": [],
+      "assessment": {
+        "state": "not_run"
+      },
+      "strategy": "bounded-global-localized-tiebreak",
+      "full_source_whisper": false
+    },
+    "audio": {
+      "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+      "anchors": [
+        {
+          "youtube_time": 601.7,
+          "twitch_time": 4901.0,
+          "similarity": 0.9828,
+          "second_best_similarity": 0.8173,
+          "peak_margin": 0.1655,
+          "search_mode": "global",
+          "evaluated_windows": 49338,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 2202.52,
+          "twitch_time": 6502.0,
+          "similarity": 0.9959,
+          "second_best_similarity": 0.8081,
+          "peak_margin": 0.1878,
+          "search_mode": "predicted-window",
+          "evaluated_windows": 2041,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 3926.48,
+          "twitch_time": 8225.5,
+          "similarity": 0.9804,
+          "second_best_similarity": 0.7586,
+          "peak_margin": 0.2218,
+          "search_mode": "predicted-window",
+          "evaluated_windows": 2041,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 5404.16,
+          "twitch_time": 9703.5,
+          "similarity": 0.9805,
+          "second_best_similarity": 0.7426,
+          "peak_margin": 0.2379,
+          "search_mode": "predicted-window",
+          "evaluated_windows": 2041,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        }
+      ],
+      "assessment": {
+        "state": "verified",
+        "good_anchors": 4,
+        "total_anchors": 4,
+        "median_similarity": 0.9817,
+        "ordered": true,
+        "timeline_consistency": "strong",
+        "slopes": [
+          1.0001,
+          0.9997,
+          1.0002
+        ],
+        "offsets": [
+          4299.3,
+          4299.48,
+          4299.02,
+          4299.34
+        ],
+        "offset_deltas": [
+          0.18,
+          -0.46,
+          0.32
+        ],
+        "backwards_offset_jumps": [],
+        "continuous_offset_pairs": 3,
+        "forward_cut_gaps": [],
+        "median_peak_margin": 0.2048,
+        "consistency_model": "piecewise-offset-v1"
+      }
+    }
+  },
+  "timeline_segments": [
+    {
+      "youtube_start": 601.7,
+      "youtube_end": 2202.52,
+      "twitch_start": 4901.0,
+      "twitch_end": 6502.0,
+      "slope": 1.00011,
+      "confidence": 0.9828,
+      "offset_start": 4299.3,
+      "offset_end": 4299.48,
+      "offset_delta": 0.18,
+      "kind": "continuous"
+    },
+    {
+      "youtube_start": 2202.52,
+      "youtube_end": 3926.48,
+      "twitch_start": 6502.0,
+      "twitch_end": 8225.5,
+      "slope": 0.99973,
+      "confidence": 0.9804,
+      "offset_start": 4299.48,
+      "offset_end": 4299.02,
+      "offset_delta": -0.46,
+      "kind": "continuous"
+    },
+    {
+      "youtube_start": 3926.48,
+      "youtube_end": 5404.16,
+      "twitch_start": 8225.5,
+      "twitch_end": 9703.5,
+      "slope": 1.00022,
+      "confidence": 0.9804,
+      "offset_start": 4299.02,
+      "offset_end": 4299.34,
+      "offset_delta": 0.32,
+      "kind": "continuous"
+    }
+  ],
+  "download": {
+    "status": "not_downloaded",
+    "path": ""
+  },
+  "rights_status": "sem_autorizacao_confirmada",
+  "global_assignment": true,
+  "updated_at": "2026-09-10T20:46:12Z"
+}

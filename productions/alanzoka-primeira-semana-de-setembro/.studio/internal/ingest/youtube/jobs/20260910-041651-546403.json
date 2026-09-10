@@ -1,0 +1,36 @@
+{
+  "id": "20260910-041651-546403",
+  "type": "resolve",
+  "status": "completed",
+  "slug": "alanzoka-primeira-semana-de-setembro",
+  "streamer": "",
+  "vod_id": "",
+  "candidate_video_id": "",
+  "created_at": "2026-09-10T04:16:51Z",
+  "started_at": "2026-09-10T04:16:51Z",
+  "ended_at": "2026-09-10T04:42:25Z",
+  "command": "dashboard youtube-resolve",
+  "return_code": 0,
+  "error": "",
+  "artifacts": [],
+  "log_path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\youtube\\logs\\20260910-041651-546403.log",
+  "params": {
+    "streamer": "",
+    "vod_id": "",
+    "refresh_index": false,
+    "download": false,
+    "verify": true,
+    "force": false
+  },
+  "result_summary": {
+    "candidates": 64,
+    "verified": 0,
+    "errors": [
+      {
+        "vod_id": "2861744268",
+        "video_id": "SynOBrPYbV0",
+        "error": "yt-dlp audio fetch failed with code 1: audio%2Fwebm&rqh=1&gir=yes&clen=144213191&dur=9194.861&lmt=1788316825932353&mt=1789014778&fvip=1&keepalive=yes&fexp=51565115%2C52135441%2C52178456&c=VISIONOS&txp=3308224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AE0s2JYwRQIhALrsIScKtCyH5nBwAztefagoXrCmHwR8wsTYKCz7vbCJAiB0SElJU-sDb7L2BZepR1gm1rsFfsDlAoQJwtk6VWPPaA%3D%3D&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRgIhAJ6HF4UdAp58F-1OCOs0ilLjWaUDCB8Nmkx19IUN820FAiEA_8efbsCpXdzsZq4PHlfkdWBXUDeEpv1miJxGFo-PslU%3D.\nError opening input files: Error number -138 occurred\n\n\nERROR: ffmpeg exited with code 4294967158\n\n"
+      }
+    ]
+  }
+}

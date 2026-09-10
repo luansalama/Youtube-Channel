@@ -1,0 +1,49 @@
+{
+  "id": "20260910-040952-842f26",
+  "type": "index",
+  "status": "completed",
+  "slug": "alanzoka-primeira-semana-de-setembro",
+  "streamer": "",
+  "vod_id": "",
+  "candidate_video_id": "",
+  "created_at": "2026-09-10T04:09:52Z",
+  "started_at": "2026-09-10T04:09:52Z",
+  "ended_at": "2026-09-10T04:09:54Z",
+  "command": "dashboard youtube-index",
+  "return_code": 0,
+  "error": "",
+  "artifacts": [],
+  "log_path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\youtube\\logs\\20260910-040952-842f26.log",
+  "params": {
+    "streamer": "",
+    "force": true
+  },
+  "result_summary": {
+    "indexed": [
+      {
+        "streamer": "alanzoka",
+        "videos": 0,
+        "seen_this_run": 0,
+        "path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\youtube\\index\\alanzoka.json",
+        "channels": [
+          {
+            "name": "alanzoka",
+            "url": "https://www.youtube.com/@alanzoka/featured/videos",
+            "seen": 0
+          }
+        ]
+      }
+    ],
+    "status": {
+      "videos": 0,
+      "last_indexed_at": "2026-09-10T04:09:54Z",
+      "streamers": [
+        {
+          "streamer": "alanzoka",
+          "videos": 0,
+          "updated_at": "2026-09-10T04:09:54Z"
+        }
+      ]
+    }
+  }
+}

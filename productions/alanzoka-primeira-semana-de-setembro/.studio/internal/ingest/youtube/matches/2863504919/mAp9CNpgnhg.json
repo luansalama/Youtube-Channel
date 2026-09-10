@@ -1,0 +1,150 @@
+{
+  "schema_version": 2,
+  "youtube_video_id": "mAp9CNpgnhg",
+  "youtube": {
+    "schema_version": 2,
+    "video_id": "mAp9CNpgnhg",
+    "url": "https://www.youtube.com/watch?v=mAp9CNpgnhg",
+    "channel_id": "",
+    "channel_name": "alanzoka",
+    "title": "I'M BACK TO BATTLEFIELD 2!",
+    "description": "",
+    "upload_date": "",
+    "timestamp": null,
+    "duration": 5260.0,
+    "availability": null,
+    "live_status": null,
+    "thumbnail": "https://i.ytimg.com/vi/mAp9CNpgnhg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDqrO91WREzf1ROnUhYY9hIyEep5g",
+    "thumbnails": [
+      {
+        "url": "https://i.ytimg.com/vi/mAp9CNpgnhg/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBJRenICiaiPsYhLpMARHSan1efdw",
+        "height": 202,
+        "width": 360
+      },
+      {
+        "url": "https://i.ytimg.com/vi/mAp9CNpgnhg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDqrO91WREzf1ROnUhYY9hIyEep5g",
+        "height": 404,
+        "width": 720
+      }
+    ],
+    "view_count": 166000,
+    "chapters": [],
+    "formats_summary": {},
+    "indexed_at": "2026-09-10T07:50:34Z",
+    "untrusted": true,
+    "injection_findings": [],
+    "streamer": "alanzoka",
+    "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+    "configured_channel_name": "alanzoka"
+  },
+  "twitch_vod_ids": [
+    "2863504919"
+  ],
+  "twitch": {
+    "vod_id": "2863504919",
+    "streamer": "alanzoka",
+    "title": "!live vai dar uma atrasada - blood of the dawnwalker as 19h, antes disso nao sei descubra",
+    "game": "Só Na Conversa",
+    "created_at": "2026-09-02T18:53:16Z",
+    "duration": 24696.0,
+    "chapters": [
+      {
+        "title": "Just Chatting",
+        "start": 0.0,
+        "duration": 3827.0
+      },
+      {
+        "title": "S.T.A.L.K.E.R. G.A.M.M.A.",
+        "start": 3827.0,
+        "duration": 185.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 4012.0,
+        "duration": 175.0
+      },
+      {
+        "title": "Battlefield 1",
+        "start": 4187.0,
+        "duration": 6509.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 10696.0,
+        "duration": 1742.0
+      },
+      {
+        "title": "The Blood of Dawnwalker",
+        "start": 12438.0,
+        "duration": 11893.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 24331.0,
+        "duration": 365.0
+      }
+    ],
+    "path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\twitch\\alanzoka\\discovery\\2863504919.json",
+    "source_url": "https://www.twitch.tv/videos/2863504919",
+    "untrusted": true,
+    "injection_findings": []
+  },
+  "streamer": "alanzoka",
+  "state": "candidate",
+  "candidate_score": 0.3958,
+  "candidate_evidence": {
+    "candidate_score": 0.3958,
+    "signals": {
+      "channel": {
+        "score": 1.0,
+        "weight": 0.1,
+        "detail": "configured mirror channel"
+      },
+      "date": {
+        "score": 0.35,
+        "weight": 0.25,
+        "detail": "date unavailable on one side"
+      },
+      "duration": {
+        "score": 0.5538,
+        "weight": 0.2,
+        "detail": "short subset ratio 0.21"
+      },
+      "title": {
+        "score": 0.0,
+        "weight": 0.25,
+        "detail": "token similarity"
+      },
+      "chapters": {
+        "score": 0.4875,
+        "weight": 0.2,
+        "detail": "shared tokens: battlefield"
+      }
+    },
+    "contributions": {
+      "channel": 0.1,
+      "date": 0.0875,
+      "duration": 0.1108,
+      "title": 0.0,
+      "chapters": 0.0975
+    }
+  },
+  "verification": {
+    "providers": {
+      "metadata": "complete",
+      "audio": "pending",
+      "transcript": "not_implemented"
+    },
+    "audio": {
+      "method": "ffmpeg-temporal-features-v1",
+      "anchors": []
+    }
+  },
+  "timeline_segments": [],
+  "download": {
+    "status": "not_downloaded",
+    "path": ""
+  },
+  "rights_status": "sem_autorizacao_confirmada",
+  "updated_at": "2026-09-10T07:50:38Z"
+}

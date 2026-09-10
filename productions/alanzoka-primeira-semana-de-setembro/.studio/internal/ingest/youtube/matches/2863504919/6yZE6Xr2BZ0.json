@@ -1,0 +1,317 @@
+{
+  "schema_version": 2,
+  "youtube_video_id": "6yZE6Xr2BZ0",
+  "youtube": {
+    "schema_version": 2,
+    "video_id": "6yZE6Xr2BZ0",
+    "url": "https://www.youtube.com/watch?v=6yZE6Xr2BZ0",
+    "channel_id": "UCIwspRtKNszHhIhl36gREjQ",
+    "channel_name": "alanzoka",
+    "title": "JOGUEI O MELHOR ROCKET LEAGUE DA MINHA VIDA COM A MERCEDES DO FIUK! - ROCKET LEAGUE COM O FALCON",
+    "description": "OS MAIORES DESCONTOS ESTÃO NO KABUM!:\nhttp://kb1.me/alanzokakabumyt\n\n💜 LIVE: https://www.twitch.tv/alanzoka\n📷 Instagram: https://www.instagram.com/alanzoka/\n📧 alanzoka@vandep.ag\n🐤 Twitter: https://twitter.com/alanzoka\n\n\n\n\n#Alanzoka",
+    "upload_date": "20260831",
+    "timestamp": 1788210009,
+    "duration": 5930.0,
+    "availability": "public",
+    "live_status": "not_live",
+    "thumbnail": "https://i.ytimg.com/vi_webp/6yZE6Xr2BZ0/maxresdefault.webp",
+    "thumbnails": [
+      {
+        "url": "https://i.ytimg.com/vi/6yZE6Xr2BZ0/hq720.jpg",
+        "height": 720,
+        "width": 1280,
+        "preference": -3,
+        "id": "38",
+        "resolution": "1280x720"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/6yZE6Xr2BZ0/hq720.webp",
+        "preference": -2,
+        "id": "39"
+      },
+      {
+        "url": "https://i.ytimg.com/vi/6yZE6Xr2BZ0/maxresdefault.jpg",
+        "height": 720,
+        "width": 1280,
+        "preference": -1,
+        "id": "40",
+        "resolution": "1280x720"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/6yZE6Xr2BZ0/maxresdefault.webp",
+        "height": 1080,
+        "width": 1920,
+        "preference": 0,
+        "id": "41",
+        "resolution": "1920x1080"
+      }
+    ],
+    "view_count": 589401,
+    "chapters": [],
+    "formats_summary": {
+      "max_height": 2160,
+      "max_fps": 60.0,
+      "heights": [
+        180,
+        240,
+        360,
+        480,
+        720,
+        1080,
+        1440,
+        2160
+      ]
+    },
+    "indexed_at": "2026-09-10T19:11:45Z",
+    "untrusted": true,
+    "injection_findings": [],
+    "streamer": "alanzoka",
+    "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+    "configured_channel_name": "alanzoka"
+  },
+  "twitch_vod_ids": [
+    "2863504919"
+  ],
+  "twitch": {
+    "vod_id": "2863504919",
+    "streamer": "alanzoka",
+    "title": "!live vai dar uma atrasada - blood of the dawnwalker as 19h, antes disso nao sei descubra",
+    "game": "Só Na Conversa",
+    "created_at": "2026-09-02T18:53:16Z",
+    "duration": 24696.0,
+    "chapters": [
+      {
+        "title": "Just Chatting",
+        "start": 0.0,
+        "duration": 3827.0
+      },
+      {
+        "title": "S.T.A.L.K.E.R. G.A.M.M.A.",
+        "start": 3827.0,
+        "duration": 185.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 4012.0,
+        "duration": 175.0
+      },
+      {
+        "title": "Battlefield 1",
+        "start": 4187.0,
+        "duration": 6509.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 10696.0,
+        "duration": 1742.0
+      },
+      {
+        "title": "The Blood of Dawnwalker",
+        "start": 12438.0,
+        "duration": 11893.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 24331.0,
+        "duration": 365.0
+      }
+    ],
+    "path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\twitch\\alanzoka\\discovery\\2863504919.json",
+    "source_url": "https://www.twitch.tv/videos/2863504919",
+    "untrusted": true,
+    "injection_findings": []
+  },
+  "streamer": "alanzoka",
+  "state": "candidate",
+  "candidate_score": 0.3323,
+  "candidate_evidence": {
+    "candidate_score": 0.3323,
+    "signals": {
+      "channel": {
+        "score": 1.0,
+        "available": true,
+        "weight": 0.0,
+        "effective_weight": 0.0,
+        "detail": "configured mirror channel"
+      },
+      "date": {
+        "score": 0.65,
+        "available": true,
+        "weight": 0.3,
+        "effective_weight": 0.3,
+        "detail": "upload delay -1.9d"
+      },
+      "duration": {
+        "score": 0.6243,
+        "available": true,
+        "weight": 0.22,
+        "effective_weight": 0.22,
+        "detail": "short subset ratio 0.24"
+      },
+      "title": {
+        "score": 0.0,
+        "available": true,
+        "weight": 0.28,
+        "effective_weight": 0.28,
+        "detail": "token similarity"
+      },
+      "chapters": {
+        "score": 0.0,
+        "available": true,
+        "weight": 0.2,
+        "effective_weight": 0.2,
+        "detail": "shared tokens: none"
+      }
+    },
+    "contributions": {
+      "channel": 0.0,
+      "date": 0.195,
+      "duration": 0.1373,
+      "title": 0.0,
+      "chapters": 0.0
+    }
+  },
+  "verification": {
+    "status": "complete",
+    "policy_version": "global-source-assignment-v1",
+    "matcher_engine": "numpy-exact",
+    "completed_at": "2026-09-10T20:25:48Z",
+    "mode": "global-audio+localized-text",
+    "providers": {
+      "metadata": "complete",
+      "audio": "complete",
+      "transcript": "localized_complete"
+    },
+    "transcript": {
+      "method": "whisper-localized-anchor-v2",
+      "anchors": [
+        {
+          "youtube_time": 579.0,
+          "twitch_time": 11832.5,
+          "audio_similarity": 0.8075,
+          "similarity": 0.0,
+          "youtube_tokens": 70,
+          "twitch_tokens": 1,
+          "youtube_text": "Só fazer Falcon. Você consegue? Bio meu aqui. Só dar um minuto. >> Vai, mano. Faz um gol, baby. Meu Deus, mano. Meu Deus, mano. Relaxa, mano. Relaxa que você sabe quem Relaxa, mano. Relaxa que você sabe quem faz aqui. [ __ ] o cara deu um predas, faz aqui. [ __ ] o cara deu um predas, mano. Assustador isso. Eu acho que",
+          "twitch_text": "Hum?",
+          "method": "whisper-localized-anchor-v2"
+        },
+        {
+          "youtube_time": 2120.8,
+          "twitch_time": 20575.0,
+          "audio_similarity": 0.8129,
+          "similarity": 0.0821,
+          "youtube_tokens": 130,
+          "twitch_tokens": 65,
+          "youtube_text": ">> Boa, boa. Errou, né? >> Boa, boa. Errou, né? >> Eu passo ainda. Tá. >> Eu passo ainda. Tá. >> Teu cu. >> Teu cu. É, fez mesmo. >> Ai, mas daí também é difícil, né, mano? Como que o cara faz um bagulho desse, Como que o cara faz um bagulho desse, mano? Ai meu Deus do céu, mano? Ai meu Deus do céu, >> na moral mano. >",
+          "twitch_text": "Por que que eu tô pelado? O cara tirou minha roupa, mano. Mano, o cara é mó carado, né? Ele tirou minha roupa pra mim curar, mano. Quem que faz isso, velho? Ah, eu faço, né? Eu fiz isso também mais cedo com a mina, né? Cara, é que é padrão, é procedimento padrão, mano. Da região aqui, é tirar a roupa pra se curar.",
+          "method": "whisper-localized-anchor-v2"
+        },
+        {
+          "youtube_time": 3781.2,
+          "twitch_time": 22404.0,
+          "audio_similarity": 0.7501,
+          "similarity": 0.0897,
+          "youtube_tokens": 101,
+          "twitch_tokens": 55,
+          "youtube_text": "Desculpulpa, mano. Tive que tirar de você porque você porque >> pode fazer. Eu sei que você quer fazer o >> pode fazer. Eu sei que você quer fazer o gol. Não peguei reset, senhor amado. gol. Não peguei reset, senhor amado. >> [ __ ] quase [risadas] fiz ainda. Nossa senhora. >> Horroroso, né? Horrível. >> Horroroso, né?",
+          "twitch_text": "O Vrakirfang não funcionou? Eu gostaria de ter mais respostas para você. Eu preciso saber o que aconteceu com eles. Eu disse, a cidade está descançada. Ficou. Eu preciso voltar a Láslea. Suas wounds, elas estão quase fechadas. Você deve restar mais. Você está em meu lugar? Eu vou com você. Talvez eu esqueci algo.",
+          "method": "whisper-localized-anchor-v2"
+        },
+        {
+          "youtube_time": 5204.4,
+          "twitch_time": 24369.5,
+          "audio_similarity": 0.7551,
+          "similarity": 0.0891,
+          "youtube_tokens": 218,
+          "twitch_tokens": 141,
+          "youtube_text": ">> É, então >> mano. Você É verdade. A Ma veio me lembrar aqui que você come miojo com lembrar aqui que você come miojo com arroz e feijão, mano. Pelo amor de Deus. arroz e feijão, mano. Pelo amor de Deus. Ah, cara, isso é é proteína, mano. Ah, cara, isso é é proteína, mano. >> Cara, onde que tem proteína no arroz e >>",
+          "twitch_text": "Cines. Ah, mano, não. Daí você tá de sacanagem, né? Pô, com todo respeito. Não, calma. Que porra de review é esse? Você compra a porra de um RPG, esquipa a porra das cutscenes e daí reclama que não tá se conectando com os personagens, mano. Você teve o cérebro corrompido já por TikTok, mano. Não tem explicação. Meu Deu",
+          "method": "whisper-localized-anchor-v2"
+        }
+      ],
+      "assessment": {
+        "state": "insufficient",
+        "good_anchors": 0,
+        "total_anchors": 4,
+        "median_similarity": 0.0,
+        "timeline_consistency": "insufficient"
+      },
+      "strategy": "bounded-global-localized-tiebreak",
+      "full_source_whisper": false
+    },
+    "audio": {
+      "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+      "anchors": [
+        {
+          "youtube_time": 579.0,
+          "twitch_time": 11832.5,
+          "similarity": 0.8075,
+          "second_best_similarity": 0.7736,
+          "peak_margin": 0.0339,
+          "search_mode": "global",
+          "evaluated_windows": 49338,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 2120.8,
+          "twitch_time": 20575.0,
+          "similarity": 0.8129,
+          "second_best_similarity": 0.7764,
+          "peak_margin": 0.0365,
+          "search_mode": "forward-fallback",
+          "evaluated_windows": 24132,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 3781.2,
+          "twitch_time": 22404.0,
+          "similarity": 0.7501,
+          "second_best_similarity": 0.7388,
+          "peak_margin": 0.0113,
+          "search_mode": "forward-fallback",
+          "evaluated_windows": 6528,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 5204.4,
+          "twitch_time": 24369.5,
+          "similarity": 0.7551,
+          "second_best_similarity": 0.7333,
+          "peak_margin": 0.0218,
+          "search_mode": "forward-fallback",
+          "evaluated_windows": 3107,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        }
+      ],
+      "assessment": {
+        "state": "candidate",
+        "good_anchors": 0,
+        "total_anchors": 4,
+        "median_similarity": 0.0,
+        "ordered": false,
+        "timeline_consistency": "insufficient",
+        "slopes": [],
+        "offsets": [],
+        "offset_deltas": [],
+        "backwards_offset_jumps": [],
+        "continuous_offset_pairs": 0,
+        "forward_cut_gaps": [],
+        "median_peak_margin": null,
+        "consistency_model": "piecewise-offset-v1"
+      }
+    }
+  },
+  "timeline_segments": [],
+  "download": {
+    "status": "not_downloaded",
+    "path": ""
+  },
+  "rights_status": "sem_autorizacao_confirmada",
+  "global_assignment": true,
+  "updated_at": "2026-09-10T20:25:48Z"
+}

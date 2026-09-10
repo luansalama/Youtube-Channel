@@ -1,0 +1,132 @@
+[2026-09-10T05:48:18Z] YouTube Mirror Resolver job resolve
+candidate vod=2861744268 youtube=SynOBrPYbV0 score=0.728 state=ambiguous
+candidate vod=2861744268 youtube=vt1HbScE_jM score=0.710 state=ambiguous
+candidate vod=2861744268 youtube=7GBn3uVeVb8 score=0.708 state=likely
+candidate vod=2861744268 youtube=muxOFHGOpZs score=0.697 state=verified
+candidate vod=2861744268 youtube=iEZOwN5xssU score=0.662 state=candidate
+candidate vod=2861744268 youtube=nH8X1jAyoeQ score=0.538 state=candidate
+candidate vod=2861744268 youtube=CMrXO8qfoQw score=0.388 state=candidate
+candidate vod=2861744268 youtube=Wjl1p9MmI-k score=0.359 state=candidate
+candidate vod=2862622285 youtube=SynOBrPYbV0 score=0.685 state=candidate
+candidate vod=2862622285 youtube=vt1HbScE_jM score=0.667 state=candidate
+candidate vod=2862622285 youtube=7GBn3uVeVb8 score=0.664 state=candidate
+candidate vod=2862622285 youtube=muxOFHGOpZs score=0.654 state=candidate
+candidate vod=2862622285 youtube=iEZOwN5xssU score=0.632 state=candidate
+candidate vod=2862622285 youtube=nH8X1jAyoeQ score=0.584 state=candidate
+candidate vod=2862622285 youtube=nOj-aeb7haY score=0.451 state=candidate
+candidate vod=2862622285 youtube=6yZE6Xr2BZ0 score=0.445 state=candidate
+candidate vod=2863504919 youtube=Plcc-06LY-A score=0.589 state=candidate
+candidate vod=2863504919 youtube=XR0-lJLW_rs score=0.587 state=candidate
+candidate vod=2863504919 youtube=QcJ0mjcA62k score=0.581 state=candidate
+candidate vod=2863504919 youtube=_Q-dV2V2g5s score=0.580 state=candidate
+candidate vod=2863504919 youtube=fSMIJVnlB_Y score=0.576 state=candidate
+candidate vod=2863504919 youtube=1CuVhBjs3ns score=0.439 state=candidate
+candidate vod=2863504919 youtube=1wACf-7QBE8 score=0.435 state=candidate
+candidate vod=2863504919 youtube=mAp9CNpgnhg score=0.396 state=candidate
+candidate vod=2864229186 youtube=TEHaNIT7eZs score=0.489 state=candidate
+candidate vod=2864229186 youtube=favxANUu9O4 score=0.487 state=candidate
+candidate vod=2864229186 youtube=OKO05-GPKyI score=0.486 state=candidate
+candidate vod=2864229186 youtube=XR0-lJLW_rs score=0.469 state=candidate
+candidate vod=2864229186 youtube=Plcc-06LY-A score=0.468 state=candidate
+candidate vod=2864229186 youtube=QcJ0mjcA62k score=0.460 state=candidate
+candidate vod=2864229186 youtube=_Q-dV2V2g5s score=0.459 state=candidate
+candidate vod=2864229186 youtube=fSMIJVnlB_Y score=0.455 state=candidate
+candidate vod=2865097583 youtube=Plcc-06LY-A score=0.584 state=candidate
+candidate vod=2865097583 youtube=XR0-lJLW_rs score=0.581 state=candidate
+candidate vod=2865097583 youtube=TEHaNIT7eZs score=0.576 state=candidate
+candidate vod=2865097583 youtube=QcJ0mjcA62k score=0.557 state=candidate
+candidate vod=2865097583 youtube=_Q-dV2V2g5s score=0.552 state=candidate
+candidate vod=2865097583 youtube=favxANUu9O4 score=0.549 state=candidate
+candidate vod=2865097583 youtube=OKO05-GPKyI score=0.545 state=candidate
+candidate vod=2865097583 youtube=fSMIJVnlB_Y score=0.530 state=candidate
+candidate vod=2868004694 youtube=Plcc-06LY-A score=0.676 state=candidate
+candidate vod=2868004694 youtube=QcJ0mjcA62k score=0.669 state=candidate
+candidate vod=2868004694 youtube=_Q-dV2V2g5s score=0.667 state=candidate
+candidate vod=2868004694 youtube=TEHaNIT7eZs score=0.660 state=candidate
+candidate vod=2868004694 youtube=favxANUu9O4 score=0.658 state=candidate
+candidate vod=2868004694 youtube=OKO05-GPKyI score=0.658 state=candidate
+candidate vod=2868004694 youtube=XR0-lJLW_rs score=0.656 state=candidate
+candidate vod=2868004694 youtube=fSMIJVnlB_Y score=0.639 state=candidate
+candidate vod=2868864059 youtube=Plcc-06LY-A score=0.654 state=candidate
+candidate vod=2868864059 youtube=QcJ0mjcA62k score=0.646 state=candidate
+candidate vod=2868864059 youtube=_Q-dV2V2g5s score=0.645 state=candidate
+candidate vod=2868864059 youtube=TEHaNIT7eZs score=0.640 state=candidate
+candidate vod=2868864059 youtube=XR0-lJLW_rs score=0.639 state=candidate
+candidate vod=2868864059 youtube=favxANUu9O4 score=0.638 state=candidate
+candidate vod=2868864059 youtube=OKO05-GPKyI score=0.637 state=candidate
+candidate vod=2868864059 youtube=fSMIJVnlB_Y score=0.616 state=candidate
+candidate vod=2869682753 youtube=Plcc-06LY-A score=0.623 state=candidate
+candidate vod=2869682753 youtube=QcJ0mjcA62k score=0.616 state=candidate
+candidate vod=2869682753 youtube=_Q-dV2V2g5s score=0.615 state=candidate
+candidate vod=2869682753 youtube=XR0-lJLW_rs score=0.614 state=candidate
+candidate vod=2869682753 youtube=TEHaNIT7eZs score=0.611 state=candidate
+candidate vod=2869682753 youtube=favxANUu9O4 score=0.610 state=candidate
+candidate vod=2869682753 youtube=OKO05-GPKyI score=0.609 state=candidate
+candidate vod=2869682753 youtube=fSMIJVnlB_Y score=0.583 state=candidate
+verification shortlist: matches=28 unique_youtube=10 min_score=0.54
+metadata: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --dump-single-json --skip-download --no-playlist --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin https://www.youtube.com/watch?v=SynOBrPYbV0
+whisper preflight: python=K:\Applications\LLMS\Whisper\.venv\Scripts\python.exe torch=2.6.0+cu124 whisper=20250625 cuda=True gpu=NVIDIA GeForce RTX 4070 SUPER device=cuda
+audio fetch (-N 8): C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --no-write-info-json --no-write-thumbnail --concurrent-fragments 8 --newline --progress --progress-delta 1 --progress-template "download:[download] %(info.id)s %(progress._percent_str)s %(progress._speed_str)s ETA %(progress._eta_str)s frag %(progress.fragment_index)s/%(progress.fragment_count)s" --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -f ba -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2861744268.%(ext)s https://www.twitch.tv/videos/2861744268
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2861744268
+[twitch:vod] 2861744268: Downloading stream metadata GraphQL
+[twitch:vod] 2861744268: Downloading video access token GraphQL
+[twitch:vod] 2861744268: Downloading m3u8 information
+[twitch:vod] 2861744268: Downloading storyboard metadata JSON
+[info] v2861744268: Downloading 1 format(s): Audio_Only
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 2591
+[download] Destination: K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2861744268.mp4
+[download] v2861744268   0.0%    2.33KiB/s ETA Unknown frag 0/2591
+[download] v2861744268   1.6%   11.69MiB/s ETA Unknown frag 40/2591
+[download] v2861744268   7.1%   29.19MiB/s ETA 00:21 frag 183/2591
+[download] v2861744268  12.7%   31.90MiB/s ETA 00:18 frag 330/2591
+[download] v2861744268  18.3%   35.64MiB/s ETA 00:16 frag 474/2591
+[download] v2861744268  23.9%   35.98MiB/s ETA 00:14 frag 620/2591
+[download] v2861744268  29.7%   36.28MiB/s ETA 00:13 frag 768/2591
+[download] v2861744268  35.3%   36.23MiB/s ETA 00:12 frag 914/2591
+[download] v2861744268  40.9%   36.29MiB/s ETA 00:11 frag 1060/2591
+[download] v2861744268  46.4%   35.95MiB/s ETA 00:10 frag 1202/2591
+[download] v2861744268  52.1%   35.97MiB/s ETA 00:09 frag 1350/2591
+[download] v2861744268  57.7%   35.82MiB/s ETA 00:08 frag 1495/2591
+[download] v2861744268  63.3%   35.92MiB/s ETA 00:07 frag 1639/2591
+[download] v2861744268  69.0%   36.01MiB/s ETA 00:06 frag 1787/2591
+[download] v2861744268  74.5%   35.86MiB/s ETA 00:05 frag 1930/2591
+[download] v2861744268  80.2%   35.92MiB/s ETA 00:04 frag 2078/2591
+[download] v2861744268  85.8%   35.85MiB/s ETA 00:03 frag 2224/2591
+[download] v2861744268  91.5%   36.07MiB/s ETA 00:02 frag 2371/2591
+[download] v2861744268  97.1%   36.21MiB/s ETA 00:01 frag 2517/2591
+[download] v2861744268 100.0% 35.51MiB/s ETA NA frag NA/NA
+whisper profile: streamer=alanzoka language=pt timestamps=segment model=turbo device=cuda
+transcribe twitch/2861744268: K:\Applications\LLMS\Whisper\.venv\Scripts\python.exe -m whisper K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\youtube\tmp\twitch-2861744268.mp4 --model turbo --output_dir C:\Users\Admin\AppData\Local\Temp\cstudio-whisper-7y4f2ygu --output_format json --verbose False --task transcribe --model_dir K:\Applications\LLMS\Whisper --device cuda --language pt
+whisper media tools: ffmpeg=C:\Users\Admin\AppData\Local\ffmpeg\bin\ffmpeg.EXE ffprobe=C:\Users\Admin\AppData\Local\ffmpeg\bin\ffprobe.EXE
+[whisper] Traceback (most recent call last):
+[whisper]   File "<frozen runpy>", line 198, in _run_module_as_main
+[whisper]   File "<frozen runpy>", line 88, in _run_code
+[whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\whisper\__main__.py", line 3, in <module>
+[whisper]     cli()
+[whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\whisper\transcribe.py", line 615, in cli
+[whisper]     result = transcribe(model, audio_path, temperature=temperature, **args)
+[whisper]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\whisper\transcribe.py", line 139, in transcribe
+[whisper]     mel = log_mel_spectrogram(audio, model.dims.n_mels, padding=N_SAMPLES)
+[whisper]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\whisper\audio.py", line 140, in log_mel_spectrogram
+[whisper]     audio = load_audio(audio)
+[whisper]             ^^^^^^^^^^^^^^^^^
+[whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\whisper\audio.py", line 58, in load_audio
+[whisper]     out = run(cmd, capture_output=True, check=True).stdout
+[whisper]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[whisper]   File "C:\Users\Admin\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\subprocess.py", line 550, in run
+[whisper]     stdout, stderr = process.communicate(input, timeout=timeout)
+[whisper]                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[whisper]   File "C:\Users\Admin\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\subprocess.py", line 1209, in communicate
+[whisper]     stdout, stderr = self._communicate(input, endtime, timeout)
+[whisper]                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[whisper]   File "C:\Users\Admin\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\subprocess.py", line 1628, in _communicate
+[whisper]     self.stdout_thread.join(self._remaining_time(endtime))
+[whisper]   File "C:\Users\Admin\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1119, in join
+[whisper]     self._wait_for_tstate_lock()
+[whisper]   File "C:\Users\Admin\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1139, in _wait_for_tstate_lock
+[whisper]     if lock.acquire(block, timeout):
+[whisper]        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[whisper] KeyboardInterrupt

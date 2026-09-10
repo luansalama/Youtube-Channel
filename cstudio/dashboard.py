@@ -20,7 +20,7 @@ from . import proposals as P
 
 
 NAV_GROUPS = [
-    ("Operação", [("production", "Visão geral"), ("twitch", "Captura Twitch")]),
+    ("Operação", [("production", "Visão geral"), ("twitch", "Captura Twitch"), ("youtube", "YouTube Mirrors")]),
     ("Revisão humana", [("proposals", "Propostas"), ("gates", "Aprovações")]),
     ("Construção", [
         ("cutlist", "Cutlist"), ("sync", "Sincronização"), ("graphics", "Gráficos"),
@@ -89,6 +89,7 @@ def _icon(name: str) -> str:
     paths = {
         "production": '<rect x="2.2" y="2.2" width="11.6" height="11.6" rx="3"/><circle cx="8" cy="8" r="2.4"/>',
         "twitch": '<path d="M2.4 2.4h11.2v7.2l-3 3H8l-1.8 1.6v-1.6H3.8V4.2z"/><path d="M6.3 5.2v3.2M9.7 5.2v3.2"/>',
+        "youtube": '<rect x="1.5" y="3.2" width="13" height="9.6" rx="3"/><path d="M6.5 5.8l4 2.2-4 2.2z"/>',
         "proposals": '<path d="M4 2h4.6L12 5.4V14H4z"/><path d="M8.5 2v3.5H12M6 8.5h4M6 10.8h4"/>',
         "gates": '<path d="M8 1.7l4.7 1.8v3.8c0 3.2-2.2 5.1-4.7 6.6-2.5-1.5-4.7-3.4-4.7-6.6V3.5z"/><path d="M5.9 7.9l1.4 1.4 2.9-3"/>',
         "cutlist": '<path d="M2.5 4h11M2.5 8h11M2.5 12h7"/><circle cx="11.8" cy="12" r="1.7"/>',
@@ -313,8 +314,8 @@ def layout(
 <meta name="color-scheme" content="dark">
 {token_meta}
 <title>Cuts Studio · {_e(label)}</title>
-<link rel="stylesheet" href="/static/dashboard.css?v=2">
-<script src="/static/dashboard.js?v=2" defer></script>
+<link rel="stylesheet" href="/static/dashboard.css?v=3">
+<script src="/static/dashboard.js?v=3" defer></script>
 </head>
 <body data-page="{_e(page)}" data-slug="{_e(slug)}">
 <div class="app-shell">
@@ -702,6 +703,494 @@ def _twitch_page(root: str, slug: str, st: dict, csrf_token: str) -> str:
     return body
 
 
+
+def _youtube_state_badge(state: str) -> str:
+    state = str(state or "unmatched")
+    tone = {
+        "verified": "ok", "likely": "info", "candidate": "neutral",
+        "ambiguous": "warn", "rejected": "danger", "unmatched": "neutral",
+    }.get(state, "neutral")
+    return _badge(state.upper(), tone)
+
+
+def _youtube_score_details(match: dict) -> str:
+    evidence = match.get("candidate_evidence") or {}
+    signals = evidence.get("signals") or {}
+    rows = []
+    for key in ("channel", "date", "duration", "title", "chapters"):
+        item = signals.get(key) or {}
+        rows.append(
+            '<li><span>' + _e(key) + '</span><strong>' + _e(f"{float(item.get('score') or 0):.2f}") +
+            '</strong><small>' + _e(item.get("detail", "")) + '</small></li>'
+        )
+    return '<ul class="signal-list">' + ''.join(rows) + '</ul>'
+
+
+def _youtube_candidate_card(slug: str, match: dict, csrf_token: str) -> str:
+    video = match.get("youtube") or {}
+    verification_root = match.get("verification") or {}
+    verification = (verification_root.get("audio") or {})
+    transcript = (verification_root.get("transcript") or {})
+    anchors = list(verification.get("anchors") or [])
+    transcript_anchors = list(transcript.get("anchors") or [])
+    assessment = verification.get("assessment") or {}
+    transcript_assessment = transcript.get("assessment") or {}
+    segments = list(match.get("timeline_segments") or [])
+    download = match.get("download") or {}
+    state = str(match.get("state") or "candidate")
+    vod_id = str((match.get("twitch_vod_ids") or [""])[0])
+    video_id = str(match.get("youtube_video_id") or "")
+    score = float(match.get("candidate_score") or 0)
+    anchor_text = ' · '.join(
+        f"YT {float(a.get('youtube_time') or 0):.0f}s ↔ TW {float(a.get('twitch_time') or 0):.0f}s · {float(a.get('similarity') or 0):.2f}"
+        for a in anchors[:5]
+    ) or "Ainda não confirmado por áudio."
+    transcript_text = ' · '.join(
+        f"YT {float(a.get('youtube_time') or 0):.0f}s ↔ TW {float(a.get('twitch_time') or 0):.0f}s · {float(a.get('similarity') or 0):.2f}"
+        for a in transcript_anchors[:5]
+    ) or "Transcrição ainda não alinhada."
+    max_height = ((video.get("formats_summary") or {}).get("max_height"))
+    quality = f"{max_height}p" if max_height else "metadata pendente"
+    actions = []
+    if state != "rejected":
+        actions.append(
+            '<form method="post" action="/action/youtube-verify">' + _csrf(csrf_token) +
+            f'<input type="hidden" name="slug" value="{_e(slug)}"><input type="hidden" name="vod_id" value="{_e(vod_id)}"><input type="hidden" name="video_id" value="{_e(video_id)}">'
+            '<button class="button button-ghost button-small" type="submit">Verify</button></form>'
+        )
+    if state == "verified":
+        actions.append(
+            '<form method="post" action="/action/youtube-download">' + _csrf(csrf_token) +
+            f'<input type="hidden" name="slug" value="{_e(slug)}"><input type="hidden" name="vod_id" value="{_e(vod_id)}"><input type="hidden" name="video_id" value="{_e(video_id)}">'
+            '<button class="button button-primary button-small" type="submit">Download master</button></form>'
+        )
+    if state != "rejected":
+        actions.append(
+            '<form method="post" action="/action/youtube-reject" data-confirm="Rejeitar este candidato? O manifest será preservado.">' + _csrf(csrf_token) +
+            f'<input type="hidden" name="slug" value="{_e(slug)}"><input type="hidden" name="vod_id" value="{_e(vod_id)}"><input type="hidden" name="video_id" value="{_e(video_id)}">'
+            '<button class="button button-ghost button-small" type="submit">Reject</button></form>'
+        )
+    return (
+        '<article class="resolver-candidate">'
+        '<div class="resolver-candidate-head"><div>' + _youtube_state_badge(state) +
+        f'<h3>{_e(video.get("title") or video_id)}</h3><p><code>{_e(video_id)}</code> · {_e(video.get("channel_name") or video.get("configured_channel_name") or "")}</p></div>'
+        f'<div class="resolver-score"><span>candidate score</span><strong>{score:.2f}</strong></div></div>'
+        '<div class="resolver-candidate-grid">'
+        '<section><span class="eyebrow">Signals</span>' + _youtube_score_details(match) + '</section>'
+        '<section><span class="eyebrow">Transcript alignment</span>'
+        f'<p>{_e(transcript_text)}</p><div class="resolver-mini"><span>text anchors <strong>{len(transcript_anchors)}</strong></span><span>state <strong>{_e(transcript_assessment.get("state") or "pending")}</strong></span><span>consistency <strong>{_e(transcript_assessment.get("timeline_consistency") or "pending")}</strong></span></div></section>'
+        '<section><span class="eyebrow">Audio confirmation</span>'
+        f'<p>{_e(anchor_text)}</p><div class="resolver-mini"><span>audio anchors <strong>{len(anchors)}</strong></span><span>mapping <strong>{len(segments)}</strong></span><span>consistency <strong>{_e(assessment.get("timeline_consistency") or "pending")}</strong></span></div></section>'
+        '<section><span class="eyebrow">Master</span>'
+        f'<p>Qualidade: <strong>{_e(quality)}</strong><br>Status: <strong>{_e(download.get("status") or "not_downloaded")}</strong></p>'
+        + (f'<code class="path-chip">{_e(download.get("path"))}</code>' if download.get("path") else '') + '</section></div>'
+        '<div class="resolver-actions">' + ''.join(actions) + '</div></article>'
+    )
+
+
+def _youtube_duration_label(seconds) -> str:
+    try:
+        value = max(0, int(round(float(seconds or 0))))
+    except (TypeError, ValueError):
+        return "—"
+    if not value:
+        return "—"
+    hours, rem = divmod(value, 3600)
+    minutes = rem // 60
+    if hours:
+        return f"{hours}h {minutes:02d}m"
+    return f"{max(1, minutes)}m"
+
+
+def _youtube_upload_label(video: dict) -> str:
+    raw = str((video or {}).get("upload_date") or "")
+    if len(raw) == 8 and raw.isdigit():
+        return f"{raw[:4]}-{raw[4:6]}-{raw[6:]}"
+    raw = str((video or {}).get("timestamp") or "")
+    return raw if raw else "data —"
+
+
+def _youtube_assignment_badge(state: str) -> str:
+    state = str(state or "pending")
+    if state == "verified":
+        return _badge("VERIFIED", "ok")
+    if state in {"unmatched", "rejected"}:
+        return _badge("NO MATCH", "neutral" if state == "unmatched" else "danger")
+    return _badge("EM PROGRESSO", "warn")
+
+
+def _youtube_vod_catalog(vods: list[dict], matches: list[dict]) -> dict[str, dict]:
+    """Build VOD labels from live discovery when present, with persisted matches as fallback."""
+    catalog: dict[str, dict] = {}
+    for vod in vods:
+        vod_id = str(vod.get("vod_id") or "")
+        if vod_id:
+            catalog[vod_id] = dict(vod)
+    for match in matches:
+        vod = match.get("twitch") or {}
+        vod_id = str(vod.get("vod_id") or ((match.get("twitch_vod_ids") or [""])[0]))
+        if vod_id and vod_id not in catalog:
+            catalog[vod_id] = dict(vod) if isinstance(vod, dict) else {"vod_id": vod_id}
+        elif vod_id and isinstance(vod, dict):
+            current = catalog.setdefault(vod_id, {"vod_id": vod_id})
+            for key, value in vod.items():
+                if value not in (None, "", [], {}) and not current.get(key):
+                    current[key] = value
+    return catalog
+
+
+def _youtube_match_index(matches: list[dict]) -> dict[tuple[str, str], dict]:
+    rows: dict[tuple[str, str], dict] = {}
+    for match in matches:
+        video_id = str(match.get("youtube_video_id") or "")
+        vod_id = str((match.get("twitch_vod_ids") or [""])[0])
+        if video_id and vod_id:
+            rows[(video_id, vod_id)] = match
+    return rows
+
+
+def _youtube_pair_summary(pair: dict) -> tuple[int, float | None, str, str]:
+    audio = pair.get("audio") or ((pair.get("verification") or {}).get("audio") or {})
+    transcript = pair.get("transcript") or ((pair.get("verification") or {}).get("transcript") or {})
+    anchors = list(audio.get("anchors") or [])
+    similarities = [float(a.get("similarity") or 0) for a in anchors if float(a.get("similarity") or 0) > 0]
+    strongest = max(similarities) if similarities else None
+    assessment = audio.get("assessment") or {}
+    consistency = str(assessment.get("timeline_consistency") or "insufficient")
+    transcript_state = str((transcript.get("assessment") or {}).get("state") or ("not-run" if not transcript else "insufficient"))
+    return len(anchors), strongest, consistency, transcript_state
+
+
+def _youtube_pair_table(slug: str, assignment: dict, vod_catalog: dict[str, dict], match_index: dict[tuple[str, str], dict], csrf_token: str) -> str:
+    video_id = str(assignment.get("youtube_video_id") or "")
+    primary_vod = str(assignment.get("primary_vod_id") or "")
+    global_state = str(assignment.get("state") or "pending")
+    pairs = []
+    for vod_id, raw_pair in (assignment.get("pair_results") or {}).items():
+        pair = dict(raw_pair or {})
+        persisted = match_index.get((video_id, str(vod_id))) or {}
+        if persisted:
+            if not pair.get("candidate_evidence"):
+                pair["candidate_evidence"] = persisted.get("candidate_evidence")
+            if not pair.get("verification"):
+                pair["verification"] = persisted.get("verification")
+        pairs.append((str(vod_id), pair))
+    pairs.sort(key=lambda item: (
+        0 if item[0] == primary_vod else 1,
+        0 if str(item[1].get("state") or "") == "verified" else 1,
+        -float(item[1].get("candidate_score") or 0),
+    ))
+    rows = []
+    for vod_id, pair in pairs:
+        vod = vod_catalog.get(vod_id) or {"vod_id": vod_id}
+        title = str(vod.get("title") or f"Twitch VOD {vod_id}")
+        local_state = str(pair.get("state") or "candidate")
+        anchor_count, strongest, consistency, transcript_state = _youtube_pair_summary(pair)
+        score = float(pair.get("candidate_score") or 0)
+        is_primary = vod_id == primary_vod
+        actions = ""
+        if global_state != "verified" and local_state != "rejected":
+            actions = (
+                '<div class="pair-actions">'
+                '<form method="post" action="/action/youtube-verify">' + _csrf(csrf_token) +
+                f'<input type="hidden" name="slug" value="{_e(slug)}"><input type="hidden" name="vod_id" value="{_e(vod_id)}"><input type="hidden" name="video_id" value="{_e(video_id)}">'
+                '<button class="button button-ghost button-tiny" type="submit">Reverificar</button></form>'
+                '<form method="post" action="/action/youtube-reject" data-confirm="Rejeitar este par? O manifest será preservado.">' + _csrf(csrf_token) +
+                f'<input type="hidden" name="slug" value="{_e(slug)}"><input type="hidden" name="vod_id" value="{_e(vod_id)}"><input type="hidden" name="video_id" value="{_e(video_id)}">'
+                '<button class="button button-ghost button-tiny" type="submit">Rejeitar par</button></form></div>'
+            )
+        peak_label = f"pico {strongest:.3f}" if strongest is not None else "sem pico forte"
+        rows.append(
+            f'<article class="pair-diagnostic-row {"pair-primary" if is_primary else ""}">'
+            f'<div class="pair-vod-title"><span>Twitch VOD</span><strong>{_e(title)}</strong><small><code>{_e(vod_id)}</code>{" · referência global" if is_primary else ""}</small></div>'
+            f'<div class="pair-local-state"><span>Sinal local</span>{_youtube_state_badge(local_state)}</div>'
+            f'<div class="pair-evidence"><span>Evidência acústica</span><strong>{anchor_count} anchors · {_e(peak_label)}</strong><small>metadata prior {score:.2f} · timeline {_e(consistency)}</small></div>'
+            f'<div class="pair-text-state"><span>Texto</span><strong>{_e(transcript_state)}</strong><small>fallback textual</small></div>'
+            + actions + '</article>'
+        )
+    if not rows:
+        return '<div class="empty-state compact"><strong>Sem pares persistidos</strong><span>Execute Resolve production para gerar a matriz global.</span></div>'
+    return '<div class="pair-diagnostic-list">' + ''.join(rows) + '</div>'
+
+
+def _youtube_assignment_card(slug: str, assignment: dict, vod_catalog: dict[str, dict], match_index: dict[tuple[str, str], dict], csrf_token: str) -> str:
+    video = assignment.get("youtube") or {}
+    video_id = str(assignment.get("youtube_video_id") or video.get("video_id") or "")
+    title = str(video.get("title") or video_id)
+    url = str(video.get("url") or (f"https://www.youtube.com/watch?v={video_id}" if video_id else ""))
+    state = str(assignment.get("state") or "pending")
+    primary_vod = str(assignment.get("primary_vod_id") or "")
+    evaluated = [str(v) for v in (assignment.get("evaluated_vod_ids") or []) if str(v)]
+    pair = (assignment.get("pair_results") or {}).get(primary_vod) or {}
+    persisted = match_index.get((video_id, primary_vod)) or {}
+    if persisted and not pair.get("verification"):
+        pair = dict(pair)
+        pair["verification"] = persisted.get("verification")
+    anchor_count, strongest, consistency, transcript_state = _youtube_pair_summary(pair)
+    discovery = assignment.get("candidate_discovery") or {}
+    discovery_reasons = [str(x) for x in (discovery.get("reasons") or [])]
+    deep = assignment.get("deep_resolution") or {}
+    deep_attempts = list((deep.get("attempted_vod_ids") or []))
+    duration = _youtube_duration_label(video.get("duration"))
+    upload = _youtube_upload_label(video)
+    channel = str(video.get("channel_name") or assignment.get("streamer") or "")
+    primary = vod_catalog.get(primary_vod) or {"vod_id": primary_vod}
+    primary_title = str(primary.get("title") or (f"Twitch VOD {primary_vod}" if primary_vod else "—"))
+    primary_url = str(primary.get("source_url") or (f"https://www.twitch.tv/videos/{primary_vod}" if primary_vod else ""))
+    score = float(pair.get("candidate_score") or discovery.get("best_candidate_score") or 0)
+    status_copy = ""
+    status_tone = state
+    if state == "verified":
+        status_copy = f'Associado a <strong>{_e(primary_title)}</strong>.'
+    elif state in {"unmatched", "rejected"}:
+        status_copy = f'Nenhum dos <strong>{len(evaluated) or len(assignment.get("pair_results") or {})}</strong> VODs testados atingiu confirmação audiovisual.'
+        status_tone = "unmatched"
+    else:
+        status_copy = f'Avaliação global em andamento: <strong>{len(evaluated)}</strong> VOD(s) concluído(s).'
+        status_tone = "pending"
+    reason_chips = ''.join(f'<span>{_e(reason.replace("-", " "))}</span>' for reason in discovery_reasons[:3])
+    if not reason_chips:
+        reason_chips = '<span>checkpoint anterior</span>'
+    evidence_bits = [
+        f'<div><span>VODs avaliados</span><strong>{len(evaluated) or len(assignment.get("pair_results") or {})}</strong></div>',
+        f'<div><span>Audio anchors</span><strong>{anchor_count}</strong></div>',
+        f'<div><span>Timeline</span><strong>{_e(consistency)}</strong></div>',
+    ]
+    if strongest is not None:
+        evidence_bits.append(f'<div><span>Melhor pico</span><strong>{strongest:.3f}</strong></div>')
+    if deep_attempts:
+        evidence_bits.append(f'<div><span>Fallback textual</span><strong>{len(deep_attempts)} VOD(s)</strong></div>')
+    elif transcript_state not in {"not-run", ""}:
+        evidence_bits.append(f'<div><span>Texto</span><strong>{_e(transcript_state)}</strong></div>')
+    action_html = ""
+    if state == "verified" and primary_vod:
+        download = persisted.get("download") or {}
+        download_status = str(download.get("status") or "not_downloaded")
+        if download_status == "downloaded" and download.get("path"):
+            action_html += f'<span class="assignment-downloaded">{_icon("check")} Master baixado</span><code class="path-chip">{_e(download.get("path"))}</code>'
+        else:
+            action_html += (
+                '<form method="post" action="/action/youtube-download">' + _csrf(csrf_token) +
+                f'<input type="hidden" name="slug" value="{_e(slug)}"><input type="hidden" name="vod_id" value="{_e(primary_vod)}"><input type="hidden" name="video_id" value="{_e(video_id)}">'
+                '<button class="button button-primary button-small" type="submit">Download master</button></form>'
+            )
+    search_blob = " ".join([title, video_id, channel, primary_title, primary_vod, state]).lower()
+    pair_table = _youtube_pair_table(slug, assignment, vod_catalog, match_index, csrf_token)
+    return (
+        f'<article class="assignment-card assignment-{_e(status_tone)}" data-youtube-assignment data-state="{_e("verified" if state == "verified" else ("unmatched" if state in {"unmatched", "rejected"} else "pending"))}" data-search="{_e(search_blob)}">'
+        '<div class="assignment-main">'
+        '<div class="assignment-state-column">' + _youtube_assignment_badge(state) +
+        f'<span class="assignment-sequence">#{_e(discovery.get("index_position") or "—")}</span></div>'
+        '<div class="assignment-content"><div class="assignment-title-row"><div>'
+        f'<h3><a href="{_e(url)}" target="_blank" rel="noreferrer">{_e(title)} {_icon("external")}</a></h3>'
+        f'<p><code>{_e(video_id)}</code> · {_e(channel)} · {_e(upload)} · {_e(duration)}</p></div>'
+        f'<div class="assignment-prior"><span>metadata prior</span><strong>{score:.2f}</strong></div></div>'
+        f'<div class="assignment-decision"><span>{status_copy}</span>' +
+        ((f'<a href="{_e(primary_url)}" target="_blank" rel="noreferrer"><code>{_e(primary_vod)}</code> {_icon("external")}</a>') if state == "verified" and primary_vod else
+         (f'<span class="assignment-closest">referência mais próxima <code>{_e(primary_vod or "—")}</code></span>' if primary_vod else '')) +
+        '</div><div class="assignment-evidence-strip">' + ''.join(evidence_bits) + '</div>'
+        f'<div class="assignment-discovery"><span>admissão</span>{reason_chips}</div>'
+        '</div><div class="assignment-actions">' + action_html + '</div></div>'
+        '<details class="assignment-details"><summary><span>Ver evidência técnica e matriz de VODs</span><small>estado local dos pares não substitui a decisão global</small></summary>'
+        '<div class="assignment-detail-body"><div class="assignment-detail-note">'
+        f'<div><span>Assignment global</span><strong>{_e(state)}</strong></div><div><span>Matcher</span><strong>{_e(assignment.get("matcher_engine") or "—")}</strong></div>'
+        f'<div><span>Policy</span><code>{_e(assignment.get("policy_version") or "—")}</code></div><div><span>Deep resolution</span><strong>{_e(deep.get("reason") or deep.get("status") or "não necessário")}</strong></div>'
+        '</div><div class="assignment-tech-heading"><span class="eyebrow">Pair diagnostics</span><p>“candidate/likely” abaixo descreve somente um teste local contra aquele VOD. A decisão acima é a autoridade global.</p></div>'
+        + pair_table + '</div></details></article>'
+    )
+
+
+def _youtube_vod_coverage(assignments: list[dict], vod_catalog: dict[str, dict]) -> str:
+    verified = [a for a in assignments if str(a.get("state") or "") == "verified"]
+    by_vod: dict[str, list[dict]] = {}
+    for assignment in verified:
+        for vod_id in assignment.get("assigned_vod_ids") or []:
+            by_vod.setdefault(str(vod_id), []).append(assignment)
+    all_vods = sorted(vod_catalog, key=lambda vod_id: str((vod_catalog.get(vod_id) or {}).get("created_at") or vod_id))
+    if not all_vods:
+        all_vods = sorted(by_vod)
+    if not all_vods:
+        return ""
+    cards = []
+    for vod_id in all_vods:
+        vod = vod_catalog.get(vod_id) or {"vod_id": vod_id}
+        rows = by_vod.get(vod_id) or []
+        chips = ''.join(
+            f'<span class="vod-video-chip" title="{_e((a.get("youtube") or {}).get("title") or a.get("youtube_video_id"))}">{_e((a.get("youtube") or {}).get("title") or a.get("youtube_video_id"))}</span>'
+            for a in sorted(rows, key=lambda a: str((a.get("youtube") or {}).get("upload_date") or ""))
+        )
+        cards.append(
+            '<article class="vod-coverage-card"><div class="vod-coverage-head"><div>'
+            f'<span class="eyebrow">Twitch VOD</span><h3>{_e(vod.get("title") or vod_id)}</h3><p><code>{_e(vod_id)}</code> · {_e(vod.get("game") or vod.get("streamer") or "")}</p></div>'
+            + _badge(f"{len(rows)} mirror" + ("s" if len(rows) != 1 else ""), "ok" if rows else "neutral") +
+            '</div><div class="vod-video-chips">' + (chips or '<span class="vod-empty">Nenhum mirror verificado nesta janela.</span>') + '</div></article>'
+        )
+    return '<div class="vod-coverage-grid">' + ''.join(cards) + '</div>'
+
+
+def render_youtube_job(root: str, slug: str) -> str:
+    from . import youtube_resolver as YR
+    latest = YR.latest_job(root, slug)
+    if not latest:
+        return '<div class="live-run" data-youtube-live data-running="false"><div class="empty-state"><strong>Nenhum job ainda</strong><span>Configure canais e execute index ou resolve.</span></div></div>'
+    status = str(latest.get("status") or "unknown")
+    running = status == "running"
+    log_tail = YR.tail_job_log(root, slug, latest.get("id"), max_chars=None)
+    error = f'<div class="notice notice-danger">{_icon("warning")}<div><strong>Falha no resolver</strong><span>{_e(latest.get("error"))}</span></div></div>' if latest.get("error") else ""
+    result_summary = latest.get("result_summary") or {}
+    summary_bits = []
+    if isinstance(result_summary, dict):
+        for key in ("resolved", "verified", "downloaded", "indexed", "videos"):
+            if key in result_summary and result_summary.get(key) not in (None, "", [], {}):
+                summary_bits.append(f'<span><strong>{_e(result_summary.get(key))}</strong> {_e(key)}</span>')
+    return (
+        f'<div class="live-run youtube-live-run" data-youtube-live data-running="{"true" if running else "false"}" data-run-id="{_e(latest.get("id", ""))}">'
+        '<div class="live-head"><div><div class="live-status">' + ('<span class="live-pulse"></span>' if running else '') + _status_badge(status) +
+        f'<strong>{_e(latest.get("type") or "job")}</strong></div><p>streamer <code>{_e(latest.get("streamer") or "all")}</code> · VOD <code>{_e(latest.get("vod_id") or "all")}</code></p></div>'
+        f'<div class="live-run-id"><span>Job</span><code>{_e(latest.get("id", ""))}</code></div></div>{error}'
+        + (f'<div class="job-result-summary">{"".join(summary_bits)}</div>' if summary_bits else '') +
+        f'<details class="job-log-details" {"open" if running else ""}><summary><span>{"Acompanhar log ao vivo" if running else "Ver log da execução"}</span><small>{"Atualizando a cada 2 s" if running else "Execução finalizada"}</small></summary>'
+        '<section class="log-panel"><div class="log-head"><h3>Log</h3><div class="log-head-actions"><span>' + ('Atualizando a cada 2 s' if running else 'Execução finalizada') + '</span><button class="log-copy-button" type="button" data-copy-log>Copiar log</button></div></div>'
+        f'<pre class="log-output" tabindex="0">{_e(log_tail or "Sem log ainda.")}</pre></section></details></div>'
+    )
+
+
+def _youtube_channels_panel(slug: str, channels: list[dict], csrf_token: str) -> str:
+    rows = []
+    for ch in channels:
+        key = ch.get("channel_id") or ch.get("url") or ""
+        enabled = bool(ch.get("enabled", True))
+        rows.append(
+            '<tr><td><strong>' + _e(ch.get("streamer")) + '</strong></td><td>' + _e(ch.get("name")) +
+            f'</td><td><code>{_e(ch.get("channel_id") or "—")}</code></td><td><code>{_e(ch.get("transcription_language") or "auto")}</code></td><td class="muted-cell">{_e(ch.get("url"))}</td><td>{_badge("enabled" if enabled else "disabled", "ok" if enabled else "neutral")}</td><td>'
+            '<form method="post" action="/action/youtube-channel-toggle">' + _csrf(csrf_token) +
+            f'<input type="hidden" name="slug" value="{_e(slug)}"><input type="hidden" name="streamer" value="{_e(ch.get("streamer"))}"><input type="hidden" name="channel_key" value="{_e(key)}"><input type="hidden" name="enabled" value="{"0" if enabled else "1"}">'
+            f'<button class="button button-ghost button-small" type="submit">{"Disable" if enabled else "Enable"}</button></form></td></tr>'
+        )
+    table = '<div class="table-scroll"><table><thead><tr><th>Twitch</th><th>YouTube</th><th>Channel ID</th><th>Whisper</th><th>URL</th><th>Status</th><th></th></tr></thead><tbody>' + ''.join(rows) + '</tbody></table></div>' if rows else '<p class="empty-state compact">Nenhum canal configurado.</p>'
+    return (
+        '<details class="panel resolver-settings"><summary><span class="resolver-settings-title"><span class="eyebrow">Configuration</span><strong>Mapeamento Twitch → YouTube</strong></span>' + _badge(f"{len(channels)} configurado(s)", "info") + '</summary><div class="resolver-settings-body">' + table +
+        '<form class="form-row resolver-channel-form" method="post" action="/action/youtube-channel-set">' + _csrf(csrf_token) + f'<input type="hidden" name="slug" value="{_e(slug)}">'
+        '<label><span>Twitch streamer</span><input name="streamer" placeholder="alanzoka" required></label><label><span>Nome do canal</span><input name="name" placeholder="alanzoka" required></label><label class="grow"><span>YouTube channel URL</span><input name="url" placeholder="https://youtube.com/@alanzoka" required></label><label><span>Channel ID</span><input name="channel_id" placeholder="opcional"></label><label><span>Whisper lang</span><input name="language" placeholder="pt / auto"></label><button class="button button-primary" type="submit">Adicionar</button></form></div></details>'
+    )
+
+
+def _youtube_legacy_vod_sections(slug: str, vods: list[dict], matches: list[dict], csrf_token: str, disabled: str) -> str:
+    grouped = {str(v.get("vod_id")): v for v in vods}
+    if not grouped:
+        for match in matches:
+            vod = match.get("twitch") or {}
+            vod_id = str(vod.get("vod_id") or ((match.get("twitch_vod_ids") or [""])[0]))
+            if vod_id:
+                grouped.setdefault(vod_id, vod or {"vod_id": vod_id})
+    match_by_vod: dict[str, list[dict]] = {}
+    for match in matches:
+        key = str((match.get("twitch_vod_ids") or [""])[0])
+        match_by_vod.setdefault(key, []).append(match)
+    cards = []
+    for vod_id, vod in grouped.items():
+        candidates = match_by_vod.get(vod_id, [])
+        candidate_html = ''.join(_youtube_candidate_card(slug, m, csrf_token) for m in candidates) or '<p class="empty-state compact">Nenhum candidato. Execute Resolve.</p>'
+        cards.append(
+            '<section class="panel resolver-vod"><div class="panel-head"><div><span class="eyebrow">Twitch VOD</span>'
+            f'<h2>{_e(vod.get("title") or vod_id)}</h2><p><code>{_e(vod_id)}</code> · {_e(vod.get("streamer"))} · {_e(vod.get("game") or "")}</p></div>'
+            f'<form method="post" action="/action/youtube-resolve">{_csrf(csrf_token)}<input type="hidden" name="slug" value="{_e(slug)}"><input type="hidden" name="vod_id" value="{_e(vod_id)}"><input type="hidden" name="streamer" value="{_e(vod.get("streamer"))}"><button class="button button-ghost button-small" type="submit"{disabled}>Resolve VOD</button></form></div>'
+            '<div class="resolver-candidates">' + candidate_html + '</div></section>'
+        )
+    return ''.join(cards) if cards else '<section class="panel"><div class="empty-state"><strong>Nenhum assignment global ainda</strong><span>Execute Resolve production para construir a matriz de VODs.</span></div></section>'
+
+
+def _youtube_page(root: str, slug: str, st: dict, csrf_token: str) -> str:
+    from . import youtube_resolver as YR
+    state = YR.dashboard_state(root, slug)
+    health = state["health"]
+    channels = state["channels"]
+    index = state["index"]
+    vods = state["vods"]
+    matches = state["matches"]
+    assignments = state.get("assignments") or []
+    assignment_verified = sum(1 for a in assignments if str(a.get("state") or "") == "verified")
+    assignment_terminal = sum(1 for a in assignments if YR._assignment_resolution_terminal(a))
+    assignment_pending = max(0, len(assignments) - assignment_terminal)
+    assignment_no_match = max(0, assignment_terminal - assignment_verified)
+    latest = state.get("latest_job") or {}
+    running = latest.get("status") == "running"
+    transcription_backend = str(health.get("transcription_backend") or "")
+    if transcription_backend == "faster-whisper":
+        transcription_badge = _badge("faster-whisper pronto", "ok")
+        transcription_model = os.path.basename(str(health.get("faster_whisper_model") or "large-v3-turbo"))
+        transcription_runtime = f"faster-whisper · batch {health.get('faster_whisper_batch_size') or 8} · {health.get('faster_whisper_compute_type') or 'float16'}"
+    elif health.get("whisper_available"):
+        transcription_badge = _badge("OpenAI Whisper pronto", "ok")
+        transcription_model = os.path.basename(str(health.get("whisper_model") or "turbo"))
+        transcription_runtime = "OpenAI Whisper"
+    else:
+        transcription_badge = _badge("Whisper fallback", "warn")
+        transcription_model = "—"
+        transcription_runtime = "indisponível"
+    body = _page_header(
+        "YouTube Mirror Resolver", "Ingest audiovisual",
+        "Assignment global primeiro: mirrors verificados ficam ligados ao VOD correto; candidatos locais aparecem apenas como evidência técnica.",
+        _badge("yt-dlp pronto" if health.get("yt_dlp_available") else "yt-dlp ausente", "ok" if health.get("yt_dlp_available") else "danger") +
+        _badge("FFmpeg pronto" if health.get("ffmpeg_available") else "FFmpeg ausente", "ok" if health.get("ffmpeg_available") else "danger") +
+        _badge("NumPy exato" if health.get("numpy_acceleration") else "NumPy obrigatório", "ok" if health.get("numpy_acceleration") else "danger") +
+        transcription_badge
+    )
+    disabled = ' disabled' if running else ''
+    vod_catalog = _youtube_vod_catalog(vods, matches)
+    match_index = _youtube_match_index(matches)
+    visible_vods = len(vod_catalog)
+
+    operation = (
+        '<section class="panel resolver-command-center"><div class="resolver-command-main"><div><span class="eyebrow">Resolver state</span><h2>Assignment global</h2><p>A decisão global é a fonte de verdade. <strong>NO MATCH</strong> é terminal; estados candidate/likely de pares individuais não são pendências.</p></div>'
+        '<div class="resolver-command-row"><form method="post" action="/action/youtube-index">' + _csrf(csrf_token) + f'<input type="hidden" name="slug" value="{_e(slug)}"><button class="button button-ghost" type="submit"{disabled}>Refresh index</button></form>'
+        '<form method="post" action="/action/youtube-resolve">' + _csrf(csrf_token) + f'<input type="hidden" name="slug" value="{_e(slug)}"><button class="button button-primary" type="submit"{disabled}>Resolve production</button></form></div></div>'
+        '<div class="resolver-kpis">'
+        f'<div class="resolver-kpi"><span>Index</span><strong>{_e(index.get("videos") or 0)}</strong><small>{_e(index.get("last_indexed_at") or "nunca")}</small></div>'
+        f'<div class="resolver-kpi"><span>VODs conhecidos</span><strong>{visible_vods}</strong><small>produção / manifests</small></div>'
+        f'<div class="resolver-kpi resolver-kpi-ok"><span>Verified</span><strong>{assignment_verified}</strong><small>mirror confirmado</small></div>'
+        f'<div class="resolver-kpi"><span>No match</span><strong>{assignment_no_match}</strong><small>decisão terminal</small></div>'
+        f'<div class="resolver-kpi {"resolver-kpi-warn" if assignment_pending else ""}"><span>Em progresso</span><strong>{assignment_pending}</strong><small>{"resolver ativo" if assignment_pending else "fila limpa"}</small></div>'
+        '</div><div class="resolver-runtime-line">'
+        f'<span>matcher <strong>{_e(health.get("matcher_engine") or "—")}</strong></span><span>policy <code>{_e(health.get("verification_policy") or "—")}</code></span><span>fragments <strong>{_e(health.get("concurrent_fragments") or 1)}</strong></span><span>transcript <strong>{_e(transcription_runtime)}</strong></span><span>model <code>{_e(transcription_model)}</code></span><span>languages <code>{_e(", ".join(f"{k}={v}" for k, v in (health.get("whisper_languages") or {}).items()) or "auto")}</code></span>'
+        '</div><form class="check-option resolver-auto" method="post" action="/action/youtube-auto-download">' + _csrf(csrf_token) + f'<input type="hidden" name="slug" value="{_e(slug)}"><input type="hidden" name="enabled" value="{"0" if state["config"].get("auto_download_verified") else "1"}"><button class="toggle-button" type="submit" aria-pressed="{"true" if state["config"].get("auto_download_verified") else "false"}"><span class="toggle-dot"></span></button><span><strong>Auto-download verified sources</strong><small>Somente assignments VERIFIED; NO MATCH e pares ambiguous nunca baixam automaticamente.</small></span></form></section>'
+    )
+    body += operation
+
+    live_panel = (
+        '<section class="panel live-panel resolver-live-panel"><div class="panel-head"><div><span class="eyebrow">Background job</span><h2>Execução atual</h2></div><span class="live-connection" data-youtube-connection>Monitor local</span></div>'
+        f'<div id="youtube-run-fragment" data-youtube-endpoint="/ui/youtube-run?slug={_q(slug)}">{render_youtube_job(root, slug)}</div></section>'
+    )
+    if running:
+        body += live_panel
+
+    if assignments:
+        cards = sorted(assignments, key=lambda a: (
+            0 if str(a.get("state") or "") == "verified" else (1 if str(a.get("state") or "") not in {"unmatched", "rejected"} else 2),
+            str(a.get("primary_vod_id") or "zzzz"),
+            str((a.get("youtube") or {}).get("upload_date") or ""),
+            str(a.get("youtube_video_id") or ""),
+        ))
+        assignment_cards = ''.join(_youtube_assignment_card(slug, a, vod_catalog, match_index, csrf_token) for a in cards)
+        body += (
+            f'<section class="panel resolver-results"><div class="panel-head resolver-results-head"><div><span class="eyebrow">Global results</span><h2>{len(assignments)} vídeos, uma decisão por source</h2><p>Use os filtros para auditar rapidamente o resultado. Abra um card apenas quando precisar inspecionar a matriz global de VODs.</p></div><span class="resolver-result-count" data-youtube-visible-count>{len(assignments)} visíveis</span></div>'
+            '<div class="resolver-filterbar"><label class="resolver-search"><span class="sr-only">Buscar assignments</span><input type="search" placeholder="Buscar título, vídeo ou VOD…" data-youtube-assignment-search></label>'
+            f'<div class="resolver-state-filters" role="group" aria-label="Filtrar assignments"><button type="button" class="resolver-filter is-active" data-youtube-state-filter="all">Todos <span>{len(assignments)}</span></button><button type="button" class="resolver-filter" data-youtube-state-filter="verified">Verified <span>{assignment_verified}</span></button><button type="button" class="resolver-filter" data-youtube-state-filter="unmatched">No match <span>{assignment_no_match}</span></button><button type="button" class="resolver-filter" data-youtube-state-filter="pending">Em progresso <span>{assignment_pending}</span></button></div></div>'
+            '<div class="assignment-list" data-youtube-assignment-list>' + assignment_cards + '</div><div class="empty-state compact resolver-filter-empty" data-youtube-filter-empty hidden><strong>Nenhum assignment nesse filtro</strong><span>Tente outro estado ou termo de busca.</span></div></section>'
+        )
+        coverage = _youtube_vod_coverage(assignments, vod_catalog)
+        if coverage:
+            body += '<section class="panel resolver-coverage"><div class="panel-head"><div><span class="eyebrow">VOD coverage</span><h2>Mirrors confirmados por live</h2><p>Esta visão contém somente assignments VERIFIED. VOD sem mirror permanece explicitamente vazio.</p></div>' + _badge(f"{assignment_verified} verified", "ok") + '</div>' + coverage + '</section>'
+    else:
+        body += '<section class="panel resolver-results"><div class="panel-head"><div><span class="eyebrow">Candidate discovery</span><h2>Pré-assignment</h2><p>Ainda não existe matriz global persistida; estes cards são sinais locais e não decisões finais.</p></div></div></section>'
+        body += _youtube_legacy_vod_sections(slug, vods, matches, csrf_token, disabled)
+
+    if not running:
+        body += live_panel
+    body += _youtube_channels_panel(slug, channels, csrf_token)
+    body += '<section class="cli-strip"><div><span class="eyebrow">CLI equivalente</span><code>python -m cstudio --root . youtube-resolve ' + _e(slug) + ' --refresh-index</code></div><span>Audio-first preserva o verifier audiovisual; texto localizado é apenas desempate. Masters continuam restritos a assignments VERIFIED e rights permanecem fail-closed.</span></section>'
+    return body
+
 def _gates_page(root: str, slug: str, st: dict, csrf_token: str) -> str:
     gates = list(st.get("gates", []) or [])
     checks = list(st.get("checks", []) or [])
@@ -854,6 +1343,8 @@ def render(root: str, page: str, slug: str = "", csrf_token: str = "") -> str:
 
     if page == "twitch":
         body = _twitch_page(root, slug, st, csrf_token)
+    elif page == "youtube":
+        body = _youtube_page(root, slug, st, csrf_token)
     elif page == "gates":
         body = _gates_page(root, slug, st, csrf_token)
     elif page == "proposals":

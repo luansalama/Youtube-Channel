@@ -1,0 +1,417 @@
+--- a/cstudio/youtube_resolver.py
++++ b/cstudio/youtube_resolver.py
+@@ -30,7 +30,7 @@
+ import urllib.parse
+ import uuid
+ from collections import Counter
+-from datetime import datetime, timezone
++from datetime import datetime, timedelta, timezone
+ from pathlib import Path
+ from typing import Any, Iterable
+ 
+@@ -157,6 +157,15 @@
+ GLOBAL_DISCOVERY_MIN_SCORE = 0.45
+ GLOBAL_DISCOVERY_MIN_CHAPTER_SHARED = 2
+ GLOBAL_DISCOVERY_MAX_VIDEOS = 64
++# Flat YouTube tab indexes frequently omit upload dates and may expose temporary
++# titles such as "guns5".  Metadata similarity therefore cannot be a hard gate
++# for recent uploads.  Resolve lazily enriches a bounded recent frontier and
++# admits every video whose exact publish timestamp can overlap the production
++# window, irrespective of title/chapter tokens.
++GLOBAL_DISCOVERY_PRE_ROLL_DAYS = 2.0
++GLOBAL_DISCOVERY_UPLOAD_LAG_DAYS = 21.0
++GLOBAL_DISCOVERY_METADATA_SCAN_LIMIT = 40
++GLOBAL_DISCOVERY_OLD_BOUNDARY_STREAK = 3
+ DEEP_RESOLUTION_MAX_VODS = 3
+ DEEP_RESOLUTION_MIN_AUDIO_ANCHORS = 2
+ DEEP_RESOLUTION_AUDIO_MEDIAN_MIN = 0.75
+@@ -942,6 +951,8 @@
+         "thumbnail": raw.get("thumbnail") or (thumbs[-1].get("url") if thumbs else None),
+         "thumbnails": thumbs[-4:],
+         "view_count": raw.get("view_count"),
++        "playlist_index": raw.get("playlist_index"),
++        "playlist_autonumber": raw.get("playlist_autonumber"),
+         "chapters": raw.get("chapters") if isinstance(raw.get("chapters"), list) else [],
+         "formats_summary": _formats_summary(raw.get("formats")),
+         "indexed_at": C.utc_now(),
+@@ -1058,12 +1069,21 @@
+     return {"indexed": results, "status": index_status(root, slug)}
+ 
+ 
+-def _video_sort_key(row: dict[str, Any]) -> tuple[float, str]:
+-    ts = row.get("timestamp")
++def _video_sort_key(row: dict[str, Any]) -> tuple[int, float, float]:
++    """Sort newest first while preserving flat-playlist recency when dates are absent."""
++    published = _video_publish_time(row)
++    if published is not None:
++        return 1, published.timestamp(), 0.0
+     try:
+-        return float(ts or 0), str(row.get("upload_date") or "")
+-    except Exception:
+-        return 0.0, str(row.get("upload_date") or "")
++        playlist_index = float(row.get("playlist_index"))
++        if playlist_index > 0:
++            # YouTube channel tabs enumerate from newest (1) to oldest.
++            return 0, 0.0, -playlist_index
++    except (TypeError, ValueError):
++        pass
++    # Unknown legacy entries should trail current flat-index rows rather than
++    # accidentally becoming the "recent frontier" merely because date=0.
++    return 0, 0.0, -1_000_000_000.0
+ 
+ 
+ def _walk(obj: Any):
+@@ -1349,10 +1369,13 @@
+         return False
+     if str(result.get("policy_version") or "") != VERIFICATION_POLICY_VERSION:
+         return False
++    if str(result.get("state") or "") == "rejected":
++        return True
+     assessment = ((result.get("audio") or {}).get("assessment") or {})
+     audio_state = str(assessment.get("state") or "")
+     if audio_state in {"", "not_run"}:
+-        return True
++        reason = str(result.get("reason") or assessment.get("reason") or "")
++        return reason == "known upload date predates this Twitch VOD"
+     return str(result.get("matcher_engine") or "") == _current_matcher_engine()
+ 
+ 
+@@ -3961,13 +3984,40 @@
+     )
+ 
+ 
++def _global_discovery_time_window(vods: list[dict[str, Any]]) -> tuple[datetime | None, datetime | None]:
++    """Return the safe YouTube publish window for a production's Twitch VODs."""
++    starts: list[datetime] = []
++    ends: list[datetime] = []
++    for vod in vods:
++        created = _parse_date(vod.get("created_at"))
++        if not created:
++            continue
++        starts.append(created)
++        try:
++            duration = max(0.0, float(vod.get("duration") or 0.0))
++        except (TypeError, ValueError):
++            duration = 0.0
++        ends.append(created + timedelta(seconds=duration))
++    if not starts:
++        return None, None
++    earliest = min(starts) - timedelta(days=GLOBAL_DISCOVERY_PRE_ROLL_DAYS)
++    latest = max(ends or starts) + timedelta(days=GLOBAL_DISCOVERY_UPLOAD_LAG_DAYS)
++    return earliest, latest
++
++
++def _video_publish_time(video: dict[str, Any]) -> datetime | None:
++    return _parse_date(video.get("timestamp") or video.get("upload_date") or video.get("release_timestamp"))
++
++
+ def _discover_global_video_pool(root: str, slug: str, *, streamer: str = "", vod_id: str = "", log=None) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+-    """Return relevant YouTube sources once, rather than N candidates per VOD.
++    """Return YouTube sources that can plausibly belong to the production.
+ 
+-    Discovery is intentionally generous: a video enters if metadata scoring is
+-    reasonably plausible, if it shares at least two game/chapter tokens, or if
+-    an earlier run already paid to fingerprint it. Expensive verification then
+-    compares that source against every VOD from the same streamer.
++    Metadata similarity is useful for prioritisation, not completeness. YouTube
++    flat-tab entries often omit dates and sometimes carry temporary titles
++    (e.g. ``guns5``), so a strict title/chapter gate can permanently hide a true
++    mirror. We therefore lazily enrich a bounded recent frontier and include
++    every upload whose exact publish time overlaps the Twitch production window.
++    Older historical rows still use the cheap metadata/cached-fingerprint rules.
+     """
+     vods = list_twitch_vods(root, slug, streamer)
+     if vod_id:
+@@ -3985,12 +4035,44 @@
+     }
+     selected: dict[str, dict[str, Any]] = {}
+     for st, streamer_vods in by_streamer.items():
+-        for video in load_index(root, slug, st):
+-            if not isinstance(video, dict):
+-                continue
++        indexed = [dict(v) for v in load_index(root, slug, st) if isinstance(v, dict)]
++        earliest_publish, latest_publish = _global_discovery_time_window(streamer_vods)
++        metadata_scanned = 0
++        older_streak = 0
++
++        for position, original_video in enumerate(indexed, 1):
++            video = dict(original_video)
+             video_id = str(video.get("video_id") or "")
+             if not video_id or not _channel_allowed_for_video(root, st, video):
+                 continue
++
++            publish_time = _video_publish_time(video)
++            # Channel-tab flat indexes are newest-first. Enrich only the recent
++            # frontier until exact dates prove we are safely older than the
++            # production. Cached metadata makes later runs essentially free.
++            should_enrich_frontier = (
++                publish_time is None
++                and earliest_publish is not None
++                and metadata_scanned < GLOBAL_DISCOVERY_METADATA_SCAN_LIMIT
++                and older_streak < GLOBAL_DISCOVERY_OLD_BOUNDARY_STREAK
++            )
++            if should_enrich_frontier:
++                try:
++                    video = enrich_video_metadata_cached(root, slug, video, force=False, log=log)
++                    metadata_scanned += 1
++                    publish_time = _video_publish_time(video)
++                except Exception as exc:
++                    metadata_scanned += 1
++                    if log:
++                        log.write(f"global discovery metadata unavailable: youtube={video_id} position={position}: {exc}\n")
++                        log.flush()
++
++            if publish_time is not None and earliest_publish is not None:
++                if publish_time < earliest_publish:
++                    older_streak += 1
++                else:
++                    older_streak = 0
++
+             scores = [(score_candidate(vod, video, configured_channel=True), vod) for vod in streamer_vods]
+             if not scores:
+                 continue
+@@ -3998,24 +4080,58 @@
+             best_score = float(best_evidence.get("candidate_score") or 0.0)
+             shared = max(_chapter_shared_token_count(vod, video) for vod in streamer_vods)
+             cached_fp = os.path.isfile(_youtube_audio_cache_file(root, slug, video_id))
+-            if (
+-                best_score < GLOBAL_DISCOVERY_MIN_SCORE
+-                and shared < GLOBAL_DISCOVERY_MIN_CHAPTER_SHARED
+-                and not cached_fp
+-                and video_id not in prior_video_ids
+-            ):
++            in_time_window = bool(
++                publish_time is not None
++                and earliest_publish is not None
++                and latest_publish is not None
++                and earliest_publish <= publish_time <= latest_publish
++            )
++            unknown_recent_frontier = bool(
++                publish_time is None
++                and earliest_publish is not None
++                and position <= GLOBAL_DISCOVERY_METADATA_SCAN_LIMIT
++                and older_streak < GLOBAL_DISCOVERY_OLD_BOUNDARY_STREAK
++            )
++            metadata_selected = best_score >= GLOBAL_DISCOVERY_MIN_SCORE or shared >= GLOBAL_DISCOVERY_MIN_CHAPTER_SHARED
++            historical_selected = cached_fp or video_id in prior_video_ids
++
++            if not (in_time_window or unknown_recent_frontier or metadata_selected or historical_selected):
+                 continue
++
++            reasons: list[str] = []
++            if in_time_window:
++                reasons.append("production-time-window")
++            if unknown_recent_frontier:
++                reasons.append("recent-date-unknown")
++            if metadata_selected:
++                reasons.append("metadata")
++            if historical_selected:
++                reasons.append("checkpoint")
+             selected[video_id] = {
+                 "video": dict(video),
+                 "best_candidate_score": round(best_score, 4),
+                 "best_candidate_vod_id": str(best_vod.get("vod_id") or ""),
+                 "best_chapter_shared_tokens": int(shared),
+                 "streamer": st,
++                "discovery_reasons": reasons,
++                "index_position": position,
++                "publish_time": publish_time.isoformat() if publish_time else "",
+             }
+ 
++        if log:
++            time_rows = sum(1 for r in selected.values() if r.get("streamer") == st and "production-time-window" in (r.get("discovery_reasons") or []))
++            unknown_rows = sum(1 for r in selected.values() if r.get("streamer") == st and "recent-date-unknown" in (r.get("discovery_reasons") or []))
++            log.write(
++                f"global discovery coverage: streamer={st} indexed={len(indexed)} metadata_scanned={metadata_scanned} "
++                f"time_window={time_rows} unknown_recent={unknown_rows} selected={sum(1 for r in selected.values() if r.get('streamer') == st)}\n"
++            )
++            log.flush()
++
+     rows = sorted(
+         selected.values(),
+         key=lambda row: (
++            0 if "production-time-window" in (row.get("discovery_reasons") or []) else 1,
++            int(row.get("index_position") or 10**9),
+             -float(row.get("best_candidate_score") or 0.0),
+             -int(row.get("best_chapter_shared_tokens") or 0),
+             str((row.get("video") or {}).get("video_id") or ""),
+@@ -4025,7 +4141,7 @@
+         if log:
+             log.write(
+                 f"global discovery safety cap: selected={len(rows)} cap={GLOBAL_DISCOVERY_MAX_VIDEOS}; "
+-                "raise GLOBAL_DISCOVERY_MAX_VIDEOS only for unusually large productions\n"
++                "increase GLOBAL_DISCOVERY_MAX_VIDEOS only for unusually large productions\n"
+             )
+             log.flush()
+         rows = rows[:GLOBAL_DISCOVERY_MAX_VIDEOS]
+@@ -4296,6 +4412,9 @@
+             "best_candidate_score": item.get("best_candidate_score"),
+             "best_candidate_vod_id": item.get("best_candidate_vod_id"),
+             "best_chapter_shared_tokens": item.get("best_chapter_shared_tokens"),
++            "reasons": list(item.get("discovery_reasons") or []),
++            "index_position": item.get("index_position"),
++            "publish_time": item.get("publish_time"),
+         }
+         save_assignment(root, slug, assignment)
+         if log:
+--- a/cstudio/dashboard.py
++++ b/cstudio/dashboard.py
+@@ -819,6 +819,7 @@
+     assignment_verified = sum(1 for a in assignments if str(a.get("state") or "") == "verified")
+     assignment_terminal = sum(1 for a in assignments if YR._assignment_resolution_terminal(a))
+     assignment_pending = max(0, len(assignments) - assignment_terminal)
++    assignment_no_match = max(0, assignment_terminal - assignment_verified)
+     latest = state.get("latest_job") or {}
+     running = latest.get("status") == "running"
+     configured = len(channels)
+@@ -869,9 +870,9 @@
+         '<form class="form-row resolver-channel-form" method="post" action="/action/youtube-channel-set">' + _csrf(csrf_token) + f'<input type="hidden" name="slug" value="{_e(slug)}">'
+         '<label><span>Twitch streamer</span><input name="streamer" placeholder="alanzoka" required></label><label><span>Nome do canal</span><input name="name" placeholder="alanzoka" required></label><label class="grow"><span>YouTube channel URL</span><input name="url" placeholder="https://youtube.com/@alanzoka" required></label><label><span>Channel ID</span><input name="channel_id" placeholder="opcional"></label><label><span>Whisper lang</span><input name="language" placeholder="pt / auto"></label><button class="button button-primary" type="submit">Adicionar</button></form></section>'
+         '<section class="panel resolver-control"><div class="panel-head"><div><span class="eyebrow">Operations</span><h2>Index & resolve</h2></div></div>'
+-        '<div class="metric-grid metric-grid-3">' + _metric("Index", str(index.get("videos") or 0), str(index.get("last_indexed_at") or "nunca"), "blue", "youtube") + _metric("Twitch VODs", str(len(vods)), "na produção", "purple", "twitch") + _metric("Assignments", str(len(assignments)), f"{assignment_verified} verified · {assignment_pending} pendente(s)", "teal", "sync") + '</div>'
++        '<div class="metric-grid metric-grid-3">' + _metric("Index", str(index.get("videos") or 0), str(index.get("last_indexed_at") or "nunca"), "blue", "youtube") + _metric("Twitch VODs", str(len(vods)), "na produção", "purple", "twitch") + _metric("Assignments", str(len(assignments)), f"{assignment_verified} verified · {assignment_no_match} no-match · {assignment_pending} em progresso", "teal", "sync") + '</div>'
+         f'<p class="muted-cell">Verifier: <strong>{_e(health.get("verification_provider") or "—")}</strong> · matcher <strong>{_e(health.get("matcher_engine") or "stdlib-coarse")}</strong> · policy <code>{_e(health.get("verification_policy") or "—")}</code> · yt-dlp fragments <strong>{_e(health.get("concurrent_fragments") or 1)}</strong> · JS runtime <strong>{_e(health.get("deno_version") or "ausente")}</strong> · Transcript backend <strong>{_e(transcription_runtime)}</strong> · model <code>{_e(transcription_model)}</code> · languages <code>{_e(", ".join(f"{k}={v}" for k, v in (health.get("whisper_languages") or {}).items()) or "auto")}</code></p>'
+-        '<p class="muted-cell"><strong>Resolve production é incremental:</strong> fingerprints e pares válidos são reutilizados; assignments inconclusivos continuam numa etapa profunda separada em vez de serem tratados como resolvidos.</p>'
++        '<p class="muted-cell"><strong>Resolve production é incremental e cobre a janela temporal:</strong> o resolver enriquece metadata recente para não perder uploads com títulos temporários, inclui todo vídeo que pode cair na janela dos VODs, e reutiliza fingerprints/pares já válidos.</p>'
+         '<p class="muted-cell">Fallback textual: <strong>até 3 VODs plausíveis por vídeo</strong>, usando captions YouTube cacheadas primeiro e faster-whisper localizado só quando necessário. Tentativas profundas também são checkpointadas.</p>'
+         '<div class="resolver-command-row"><form method="post" action="/action/youtube-index">' + _csrf(csrf_token) + f'<input type="hidden" name="slug" value="{_e(slug)}"><button class="button button-ghost" type="submit"{disabled}>Refresh index</button></form>'
+         '<form method="post" action="/action/youtube-resolve">' + _csrf(csrf_token) + f'<input type="hidden" name="slug" value="{_e(slug)}"><button class="button button-primary" type="submit"{disabled}>Resolve production</button></form></div>'
+--- a/tests/test_youtube_resolver.py
++++ b/tests/test_youtube_resolver.py
+@@ -1252,6 +1252,122 @@
+     assert pool[0]["best_chapter_shared_tokens"] >= 2
+ 
+ 
++
++
++def test_global_discovery_includes_temporally_plausible_placeholder_title(tmp_path, monkeypatch):
++    root = _harness(tmp_path)
++    vod = {
++        "vod_id": "1111111111", "streamer": "alanzoka", "title": "Metal Gear continuation", "game": "Just Chatting",
++        "created_at": "2026-09-01T10:00:00Z", "duration": 25000,
++        "source_url": "https://www.twitch.tv/videos/1111111111", "chapters": [],
++    }
++    video = {
++        "video_id": "placeholder1", "streamer": "alanzoka", "title": "guns5", "description": "",
++        "duration": 6700.0, "url": "https://youtube.com/watch?v=placeholder1",
++    }
++    monkeypatch.setattr(YR, "list_twitch_vods", lambda *a, **k: [vod])
++    monkeypatch.setattr(YR, "load_index", lambda *a, **k: [video])
++    monkeypatch.setattr(YR, "_channel_allowed_for_video", lambda *a, **k: True)
++    monkeypatch.setattr(YR, "GLOBAL_DISCOVERY_MIN_SCORE", 0.99)
++    monkeypatch.setattr(YR, "GLOBAL_DISCOVERY_MIN_CHAPTER_SHARED", 99)
++    monkeypatch.setattr(
++        YR, "enrich_video_metadata_cached",
++        lambda *a, **k: {**video, "upload_date": "20260904", "timestamp": None},
++    )
++    _vods, pool = YR._discover_global_video_pool(root, "yt")
++    assert [row["video"]["video_id"] for row in pool] == ["placeholder1"]
++    assert "production-time-window" in pool[0]["discovery_reasons"]
++
++
++def test_global_discovery_excludes_old_low_signal_placeholder_after_metadata(tmp_path, monkeypatch):
++    root = _harness(tmp_path)
++    vod = {
++        "vod_id": "1111111111", "streamer": "alanzoka", "title": "new production", "game": "Just Chatting",
++        "created_at": "2026-09-01T10:00:00Z", "duration": 20000,
++        "source_url": "https://www.twitch.tv/videos/1111111111", "chapters": [],
++    }
++    video = {
++        "video_id": "oldPlaceholder", "streamer": "alanzoka", "title": "oldx", "description": "",
++        "duration": 5000.0, "url": "https://youtube.com/watch?v=oldPlaceholder",
++    }
++    monkeypatch.setattr(YR, "list_twitch_vods", lambda *a, **k: [vod])
++    monkeypatch.setattr(YR, "load_index", lambda *a, **k: [video])
++    monkeypatch.setattr(YR, "_channel_allowed_for_video", lambda *a, **k: True)
++    monkeypatch.setattr(YR, "GLOBAL_DISCOVERY_MIN_SCORE", 0.99)
++    monkeypatch.setattr(YR, "GLOBAL_DISCOVERY_MIN_CHAPTER_SHARED", 99)
++    monkeypatch.setattr(
++        YR, "enrich_video_metadata_cached",
++        lambda *a, **k: {**video, "upload_date": "20260820", "timestamp": None},
++    )
++    _vods, pool = YR._discover_global_video_pool(root, "yt")
++    assert pool == []
++
++
++def test_global_discovery_keeps_recent_unknown_when_metadata_probe_fails(tmp_path, monkeypatch):
++    root = _harness(tmp_path)
++    vod = {
++        "vod_id": "1111111111", "streamer": "alanzoka", "title": "production", "game": "Just Chatting",
++        "created_at": "2026-09-01T10:00:00Z", "duration": 20000,
++        "source_url": "https://www.twitch.tv/videos/1111111111", "chapters": [],
++    }
++    video = {
++        "video_id": "unknownRecent", "streamer": "alanzoka", "title": "tmp7", "description": "",
++        "duration": 5000.0, "url": "https://youtube.com/watch?v=unknownRecent",
++    }
++    monkeypatch.setattr(YR, "list_twitch_vods", lambda *a, **k: [vod])
++    monkeypatch.setattr(YR, "load_index", lambda *a, **k: [video])
++    monkeypatch.setattr(YR, "_channel_allowed_for_video", lambda *a, **k: True)
++    monkeypatch.setattr(YR, "GLOBAL_DISCOVERY_MIN_SCORE", 0.99)
++    monkeypatch.setattr(YR, "GLOBAL_DISCOVERY_MIN_CHAPTER_SHARED", 99)
++    monkeypatch.setattr(YR, "enrich_video_metadata_cached", lambda *a, **k: (_ for _ in ()).throw(RuntimeError("offline")))
++    _vods, pool = YR._discover_global_video_pool(root, "yt")
++    assert [row["video"]["video_id"] for row in pool] == ["unknownRecent"]
++    assert "recent-date-unknown" in pool[0]["discovery_reasons"]
++
++
++def test_global_discovery_stops_metadata_frontier_after_old_boundary(tmp_path, monkeypatch):
++    root = _harness(tmp_path)
++    vod = {
++        "vod_id": "1111111111", "streamer": "alanzoka", "title": "production", "game": "Just Chatting",
++        "created_at": "2026-09-10T10:00:00Z", "duration": 10000,
++        "source_url": "https://www.twitch.tv/videos/1111111111", "chapters": [],
++    }
++    videos = [
++        {"video_id": f"oldVideo{i:02d}", "streamer": "alanzoka", "title": f"tmp{i}", "description": "", "duration": 1000.0,
++         "url": f"https://youtube.com/watch?v=oldVideo{i:02d}"}
++        for i in range(1, 6)
++    ]
++    calls = []
++    def enrich(_root, _slug, video, **kwargs):
++        calls.append(video["video_id"])
++        return {**video, "upload_date": "20260801"}
++    monkeypatch.setattr(YR, "list_twitch_vods", lambda *a, **k: [vod])
++    monkeypatch.setattr(YR, "load_index", lambda *a, **k: videos)
++    monkeypatch.setattr(YR, "_channel_allowed_for_video", lambda *a, **k: True)
++    monkeypatch.setattr(YR, "GLOBAL_DISCOVERY_MIN_SCORE", 0.99)
++    monkeypatch.setattr(YR, "GLOBAL_DISCOVERY_MIN_CHAPTER_SHARED", 99)
++    monkeypatch.setattr(YR, "GLOBAL_DISCOVERY_OLD_BOUNDARY_STREAK", 3)
++    monkeypatch.setattr(YR, "enrich_video_metadata_cached", enrich)
++    _vods, pool = YR._discover_global_video_pool(root, "yt")
++    assert calls == ["oldVideo01", "oldVideo02", "oldVideo03"]
++    assert pool == []
++
++
++def test_pair_result_reusable_only_accepts_chronology_not_run():
++    chronology = {
++        "state": "candidate", "policy_version": YR.VERIFICATION_POLICY_VERSION,
++        "reason": "known upload date predates this Twitch VOD",
++        "audio": {"assessment": {"state": "not_run"}},
++    }
++    transient = {
++        "state": "candidate", "policy_version": YR.VERIFICATION_POLICY_VERSION,
++        "reason": "YouTube duration unavailable",
++        "audio": {"assessment": {"state": "not_run"}},
++    }
++    assert YR._pair_result_reusable(chronology) is True
++    assert YR._pair_result_reusable(transient) is False
++
++
+ def test_completed_assignment_skips_all_media_work_on_next_run(tmp_path, monkeypatch):
+     root = _harness(tmp_path)
+     vod = {"vod_id": "1111111111", "streamer": "alanzoka", "created_at": "2026-09-01T10:00:00Z"}
+@@ -1481,3 +1597,13 @@
+     monkeypatch.setattr(YR, "_np", None)
+     with pytest.raises(C.StudioError, match="NumPy is required"):
+         YR._resolve_global_assignments(root, "yt", no_download=True)
++
++
++def test_video_sort_key_uses_playlist_index_when_flat_dates_are_missing():
++    rows = [
++        {"video_id": "legacy", "playlist_index": None, "timestamp": None, "upload_date": ""},
++        {"video_id": "second", "playlist_index": 2, "timestamp": None, "upload_date": ""},
++        {"video_id": "first", "playlist_index": 1, "timestamp": None, "upload_date": ""},
++    ]
++    ordered = sorted(rows, key=YR._video_sort_key, reverse=True)
++    assert [row["video_id"] for row in ordered] == ["first", "second", "legacy"]

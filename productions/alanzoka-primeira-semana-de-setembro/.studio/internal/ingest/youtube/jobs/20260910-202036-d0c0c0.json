@@ -1,0 +1,27 @@
+{
+  "id": "20260910-202036-d0c0c0",
+  "type": "resolve",
+  "status": "failed",
+  "slug": "alanzoka-primeira-semana-de-setembro",
+  "streamer": "",
+  "vod_id": "",
+  "candidate_video_id": "",
+  "created_at": "2026-09-10T20:20:36Z",
+  "started_at": "2026-09-10T20:20:36Z",
+  "ended_at": "2026-09-10T20:20:37Z",
+  "command": "dashboard youtube-resolve",
+  "return_code": 1,
+  "error": "NumPy is required for global YouTube mirror assignment. Run `python -m pip install -e .` in the same Python environment that starts the dashboard, then restart it.",
+  "artifacts": [],
+  "log_path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\youtube\\logs\\20260910-202036-d0c0c0.log",
+  "params": {
+    "streamer": "",
+    "vod_id": "",
+    "refresh_index": false,
+    "download": false,
+    "verify": true,
+    "force": false
+  },
+  "worker_pid": 19176,
+  "worker_mode": "process"
+}

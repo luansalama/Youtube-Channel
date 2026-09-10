@@ -1,0 +1,270 @@
+{
+  "schema_version": 2,
+  "youtube_video_id": "QcJ0mjcA62k",
+  "youtube": {
+    "schema_version": 2,
+    "video_id": "QcJ0mjcA62k",
+    "url": "https://www.youtube.com/watch?v=QcJ0mjcA62k",
+    "channel_id": "UCIwspRtKNszHhIhl36gREjQ",
+    "channel_name": "alanzoka",
+    "title": "ENCONTREI A XANTHE! - THE BLOOD OF THE DAWNWALKER - Parte 5",
+    "description": "OS MAIORES DESCONTOS ESTÃO NO KABUM!:\nhttp://kb1.me/alanzokakabumyt\n\n💜 LIVE: https://www.twitch.tv/alanzoka\n📷 Instagram: https://www.instagram.com/alanzoka/\n📧 alanzoka@vandep.ag\n🐤 Twitter: https://twitter.com/alanzoka\n\n\n\n\n#Alanzoka",
+    "upload_date": "20260909",
+    "timestamp": 1788966003,
+    "duration": 8120.0,
+    "availability": "public",
+    "live_status": "not_live",
+    "thumbnail": "https://i.ytimg.com/vi_webp/QcJ0mjcA62k/maxresdefault.webp",
+    "thumbnails": [
+      {
+        "url": "https://i.ytimg.com/vi/QcJ0mjcA62k/hq720.jpg",
+        "height": 720,
+        "width": 1280,
+        "preference": -3,
+        "id": "38",
+        "resolution": "1280x720"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/QcJ0mjcA62k/hq720.webp",
+        "preference": -2,
+        "id": "39"
+      },
+      {
+        "url": "https://i.ytimg.com/vi/QcJ0mjcA62k/maxresdefault.jpg",
+        "height": 720,
+        "width": 1280,
+        "preference": -1,
+        "id": "40",
+        "resolution": "1280x720"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/QcJ0mjcA62k/maxresdefault.webp",
+        "height": 1080,
+        "width": 1920,
+        "preference": 0,
+        "id": "41",
+        "resolution": "1920x1080"
+      }
+    ],
+    "view_count": 87949,
+    "chapters": [],
+    "formats_summary": {
+      "max_height": 2160,
+      "max_fps": 60.0,
+      "heights": [
+        180,
+        240,
+        360,
+        480,
+        720,
+        1080,
+        1440,
+        2160
+      ]
+    },
+    "indexed_at": "2026-09-10T19:13:02Z",
+    "untrusted": true,
+    "injection_findings": [],
+    "streamer": "alanzoka",
+    "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+    "configured_channel_name": "alanzoka"
+  },
+  "twitch_vod_ids": [
+    "2865097583"
+  ],
+  "twitch": {
+    "vod_id": "2865097583",
+    "streamer": "alanzoka",
+    "title": "live mais cedo de novo sexta la pra 13h -> onimusha - halloween - blood of the dawnwalker",
+    "game": "Só Na Conversa",
+    "created_at": "2026-09-04T16:09:03Z",
+    "duration": 32949.0,
+    "chapters": [
+      {
+        "title": "Just Chatting",
+        "start": 0.0,
+        "duration": 1492.0
+      },
+      {
+        "title": "Onimusha: Way of the Sword",
+        "start": 1492.0,
+        "duration": 7971.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 9463.0,
+        "duration": 785.0
+      },
+      {
+        "title": "Halloween: The Game",
+        "start": 10248.0,
+        "duration": 9216.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 19464.0,
+        "duration": 710.0
+      },
+      {
+        "title": "The Blood of Dawnwalker",
+        "start": 20174.0,
+        "duration": 12235.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 32409.0,
+        "duration": 540.0
+      }
+    ],
+    "path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\twitch\\alanzoka\\discovery\\2865097583.json",
+    "source_url": "https://www.twitch.tv/videos/2865097583",
+    "untrusted": true,
+    "injection_findings": []
+  },
+  "streamer": "alanzoka",
+  "state": "candidate",
+  "candidate_score": 0.582,
+  "candidate_evidence": {
+    "candidate_score": 0.582,
+    "signals": {
+      "channel": {
+        "score": 1.0,
+        "available": true,
+        "weight": 0.0,
+        "effective_weight": 0.0,
+        "detail": "configured mirror channel"
+      },
+      "date": {
+        "score": 0.6619,
+        "available": true,
+        "weight": 0.3,
+        "effective_weight": 0.3,
+        "detail": "upload delay +5.0d"
+      },
+      "duration": {
+        "score": 0.6407,
+        "available": true,
+        "weight": 0.22,
+        "effective_weight": 0.22,
+        "detail": "short subset ratio 0.25"
+      },
+      "title": {
+        "score": 0.5154,
+        "available": true,
+        "weight": 0.28,
+        "effective_weight": 0.28,
+        "detail": "token similarity"
+      },
+      "chapters": {
+        "score": 0.4903,
+        "available": true,
+        "weight": 0.2,
+        "effective_weight": 0.2,
+        "detail": "shared tokens: blood, dawnwalker"
+      }
+    },
+    "contributions": {
+      "channel": 0.0,
+      "date": 0.1986,
+      "duration": 0.141,
+      "title": 0.1443,
+      "chapters": 0.0981
+    }
+  },
+  "verification": {
+    "status": "complete",
+    "policy_version": "global-source-assignment-v1",
+    "matcher_engine": "numpy-exact",
+    "completed_at": "2026-09-10T20:24:46Z",
+    "mode": "global-audio-assignment",
+    "providers": {
+      "metadata": "complete",
+      "audio": "complete",
+      "transcript": "not_run"
+    },
+    "transcript": {
+      "method": "whisper-localized-anchor-v2",
+      "anchors": [],
+      "assessment": {
+        "state": "not_run"
+      },
+      "strategy": "bounded-global-localized-tiebreak",
+      "full_source_whisper": false
+    },
+    "audio": {
+      "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+      "anchors": [
+        {
+          "youtube_time": 798.0,
+          "twitch_time": 19625.5,
+          "similarity": 0.7757,
+          "second_best_similarity": 0.7453,
+          "peak_margin": 0.0304,
+          "search_mode": "global",
+          "evaluated_windows": 65844,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 2909.2,
+          "twitch_time": 30366.5,
+          "similarity": 0.7536,
+          "second_best_similarity": 0.7396,
+          "peak_margin": 0.014,
+          "search_mode": "forward-fallback",
+          "evaluated_windows": 24482,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 5182.8,
+          "twitch_time": 32652.0,
+          "similarity": 0.7125,
+          "second_best_similarity": 0.7022,
+          "peak_margin": 0.0103,
+          "search_mode": "forward-fallback",
+          "evaluated_windows": 2838,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 7131.6,
+          "twitch_time": 33626.0,
+          "similarity": 0.0,
+          "second_best_similarity": 0.0,
+          "peak_margin": 0.0,
+          "search_mode": "forward-fallback",
+          "evaluated_windows": 0,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        }
+      ],
+      "assessment": {
+        "state": "candidate",
+        "good_anchors": 0,
+        "total_anchors": 4,
+        "median_similarity": 0.0,
+        "ordered": false,
+        "timeline_consistency": "insufficient",
+        "slopes": [],
+        "offsets": [],
+        "offset_deltas": [],
+        "backwards_offset_jumps": [],
+        "continuous_offset_pairs": 0,
+        "forward_cut_gaps": [],
+        "median_peak_margin": null,
+        "consistency_model": "piecewise-offset-v1"
+      }
+    }
+  },
+  "timeline_segments": [],
+  "download": {
+    "status": "not_downloaded",
+    "path": ""
+  },
+  "rights_status": "sem_autorizacao_confirmada",
+  "updated_at": "2026-09-10T20:45:19Z",
+  "candidate_score_initial": 0.5574,
+  "metadata_enriched_at": "2026-09-10T07:53:55Z",
+  "global_assignment": true
+}

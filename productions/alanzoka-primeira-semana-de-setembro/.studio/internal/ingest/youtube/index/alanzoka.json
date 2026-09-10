@@ -1,0 +1,4337 @@
+{
+  "schema_version": 2,
+  "streamer": "alanzoka",
+  "updated_at": "2026-09-10T07:50:34Z",
+  "refresh_mode": "forced",
+  "playlist_end": 120,
+  "channels": [
+    {
+      "name": "alanzoka",
+      "url": "https://www.youtube.com/@alanzoka/videos",
+      "seen": 120
+    }
+  ],
+  "seen_this_run": 120,
+  "videos": [
+    {
+      "schema_version": 2,
+      "video_id": "TEHaNIT7eZs",
+      "url": "https://www.youtube.com/watch?v=TEHaNIT7eZs",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "ONIMUSHA: WAY OF THE SWORD - Parte 3",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 8494.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/TEHaNIT7eZs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCN1yXEwtpoFNZtUvWWKXsJijiC6w",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/TEHaNIT7eZs/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCQI4WFz4-7KSvbhGaJ91nyAI07aQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/TEHaNIT7eZs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCN1yXEwtpoFNZtUvWWKXsJijiC6w",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 68000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "QcJ0mjcA62k",
+      "url": "https://www.youtube.com/watch?v=QcJ0mjcA62k",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "ENCONTREI A XANTHE! - THE BLOOD OF THE DAWNWALKER - Parte 5",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 8121.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/QcJ0mjcA62k/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB47Pl3iVG3-JxyvAawHBJDSn405Q",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/QcJ0mjcA62k/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCo5l95FvXPl23zKFfjSuNd7ZZKiw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/QcJ0mjcA62k/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB47Pl3iVG3-JxyvAawHBJDSn405Q",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 76000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "Bnzb0zhWGmE",
+      "url": "https://www.youtube.com/watch?v=Bnzb0zhWGmE",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "battle",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6158.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/Bnzb0zhWGmE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA3DLQKTPhc-BMHTdN0lLGhrgUq6w",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/Bnzb0zhWGmE/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCBIlsb-qUy6IeilH7PFI0NaohzUQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Bnzb0zhWGmE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA3DLQKTPhc-BMHTdN0lLGhrgUq6w",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 311000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "99tNnmIDS7E",
+      "url": "https://www.youtube.com/watch?v=99tNnmIDS7E",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "ASSISTINDO AO EVENTO DE 40 ANOS DE ZELDA E VENDO O OCARINA OF TIME REMAKE!",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 2146.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/99tNnmIDS7E/hq720_custom_3.jpg?sqp=CKjCidUG-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLANahjPUVsE1LXb6b-4p5gq9XQgVg",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/99tNnmIDS7E/hq720_custom_3.jpg?sqp=CKjCidUG-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLABXoN2pFGeydxK7raviILYvWkKJQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/99tNnmIDS7E/hq720_custom_3.jpg?sqp=CKjCidUG-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLANahjPUVsE1LXb6b-4p5gq9XQgVg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 529000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "Plcc-06LY-A",
+      "url": "https://www.youtube.com/watch?v=Plcc-06LY-A",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "A MALDIÇÃO DO CONVENTO! - THE BLOOD OF THE DAWNWALKER - Parte 4",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 10596.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/Plcc-06LY-A/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCZZDclmlu6YsnLOR0tg_qP_Qmqkg",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/Plcc-06LY-A/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBfIBSS66VFXoENnvh1IapyQe3oTQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Plcc-06LY-A/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCZZDclmlu6YsnLOR0tg_qP_Qmqkg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 131000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "favxANUu9O4",
+      "url": "https://www.youtube.com/watch?v=favxANUu9O4",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "ONIMUSHA: WAY OF THE SWORD - Parte 2",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7827.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/favxANUu9O4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCCH5J_JEJIU1ghkH6kgbD_BEuEPA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/favxANUu9O4/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA77X-ylo42JVsIKeN23HSPNoY54g",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/favxANUu9O4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCCH5J_JEJIU1ghkH6kgbD_BEuEPA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 255000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "fSMIJVnlB_Y",
+      "url": "https://www.youtube.com/watch?v=fSMIJVnlB_Y",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "THE AMBUSH! - THE BLOOD OF THE DAWNWALKER - Part 3",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6416.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/fSMIJVnlB_Y/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDSa0a7l7jHkiPSmnX4eC1hX9EdaQ",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/fSMIJVnlB_Y/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBpPkmTdEKkdO2QugZSIfY3D_bacg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/fSMIJVnlB_Y/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDSa0a7l7jHkiPSmnX4eC1hX9EdaQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 166000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "SynOBrPYbV0",
+      "url": "https://www.youtube.com/watch?v=SynOBrPYbV0",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "A BATALHA FINAL! - METAL GEAR SOLID 4: GUNS OF THE PATRIOTS - Parte 7 / FINAL",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 9195.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/SynOBrPYbV0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDIb1sYKtLeDd4h1ynSCBOYwA3Bjg",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/SynOBrPYbV0/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDCNCyh3BhvDOdz4d1y2xUQzpT62g",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/SynOBrPYbV0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDIb1sYKtLeDd4h1ynSCBOYwA3Bjg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 105000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "_Q-dV2V2g5s",
+      "url": "https://www.youtube.com/watch?v=_Q-dV2V2g5s",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "PRESO NO ACAMPAMENTO! - THE BLOOD OF THE DAWNWALKER - Parte 2",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7755.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/_Q-dV2V2g5s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLArB7Txi0-Sy_a0_ZjjfHV8TdQfKg",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/_Q-dV2V2g5s/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD75wyI0CuUY0hI1hWzRxXW7i54TQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/_Q-dV2V2g5s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLArB7Txi0-Sy_a0_ZjjfHV8TdQfKg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 244000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "iEZOwN5xssU",
+      "url": "https://www.youtube.com/watch?v=iEZOwN5xssU",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "VAMP E RAIDEN! - METAL GEAR SOLID 4: GUNS OF THE PATRIOTS - Parte 6",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5356.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/iEZOwN5xssU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAllNoXTMp_QEFy59lyXITmY-IBUg",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/iEZOwN5xssU/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCJF3C3Gp6-_ueV2_hkcFaZf_6pOA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/iEZOwN5xssU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAllNoXTMp_QEFy59lyXITmY-IBUg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 100000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "jcs6OmYZQ-o",
+      "url": "https://www.youtube.com/watch?v=jcs6OmYZQ-o",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "FUGINDO DO MICHAEL MYERS! - HALLOWEEN: THE GAME COM OS AMIGOS",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7857.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/jcs6OmYZQ-o/hq720_custom_2.jpg?sqp=CKjCidUG-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAtxKQuMpYXZkxJqJjmaf_AvElogA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/jcs6OmYZQ-o/hq720_custom_2.jpg?sqp=CKjCidUG-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA6GkkgmVLxZNP6Qu_Hm_f528NovA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/jcs6OmYZQ-o/hq720_custom_2.jpg?sqp=CKjCidUG-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAtxKQuMpYXZkxJqJjmaf_AvElogA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 2700000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "OKO05-GPKyI",
+      "url": "https://www.youtube.com/watch?v=OKO05-GPKyI",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "ONIMUSHA: WAY OF THE SWORD - Parte 1",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7608.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/OKO05-GPKyI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCU1X7iEjeOd9bzPkqPYPYRAIMC2w",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/OKO05-GPKyI/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCXYiId6DnDLjDv4cuiDLvoZHu56g",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/OKO05-GPKyI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCU1X7iEjeOd9bzPkqPYPYRAIMC2w",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 795000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "S_mY0ESbwMY",
+      "url": "https://www.youtube.com/watch?v=S_mY0ESbwMY",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "guns5",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6722.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/S_mY0ESbwMY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC461R8v0C38is0utIbnHRzJglVuw",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/S_mY0ESbwMY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBfR5NsNjQoANgK_EzGq44qlY_DVw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/S_mY0ESbwMY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC461R8v0C38is0utIbnHRzJglVuw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 108000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "XR0-lJLW_rs",
+      "url": "https://www.youtube.com/watch?v=XR0-lJLW_rs",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "ENTRE A VIDA E A MORTE! - THE BLOOD OF THE DAWNWALKER - Parte 1",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 11487.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/XR0-lJLW_rs/hq720_custom_1.jpg?sqp=CKjCidUG-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAoKtoa-VWA7WZhaY0Avtoe9AI2ow",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/XR0-lJLW_rs/hq720_custom_1.jpg?sqp=CKjCidUG-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDT0AChEXmiuDPS3DzeliWhZqi_4w",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/XR0-lJLW_rs/hq720_custom_1.jpg?sqp=CKjCidUG-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAoKtoa-VWA7WZhaY0Avtoe9AI2ow",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 794000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "muxOFHGOpZs",
+      "url": "https://www.youtube.com/watch?v=muxOFHGOpZs",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "PERSEGUIÇÃO COM A BIG MAMA! - METAL GEAR SOLID 4: GUNS OF THE PATRIOTS - Parte 4",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 8433.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/muxOFHGOpZs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDNUwIkZvn9_NQipt8Pv_RZj9iJRQ",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/muxOFHGOpZs/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBqj2bLK4f6qxrFkCjPhFzozp-6dA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/muxOFHGOpZs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDNUwIkZvn9_NQipt8Pv_RZj9iJRQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 132000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "CMrXO8qfoQw",
+      "url": "https://www.youtube.com/watch?v=CMrXO8qfoQw",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "UM CLÁSSICO! - THE DARKNESS",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 23380.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/CMrXO8qfoQw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDOMaMhitmPm_BpunjeNaQOIXnmtg",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/CMrXO8qfoQw/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAP7mhLNGQS0zGUL8V_PQqb3Tt_4A",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/CMrXO8qfoQw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDOMaMhitmPm_BpunjeNaQOIXnmtg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 376000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "6yZE6Xr2BZ0",
+      "url": "https://www.youtube.com/watch?v=6yZE6Xr2BZ0",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "I PLAYED THE BEST ROCKET LEAGUE OF MY LIFE WITH FIUK'S MERCEDES! - ROCKET LEAGUE WITH FALCON",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5930.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/6yZE6Xr2BZ0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCE30-pEdvGsNuPWa37eOEcSYLY4g",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/6yZE6Xr2BZ0/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDp_VSSUnFL1ROrTOHDxoh-Hqxh2A",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/6yZE6Xr2BZ0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCE30-pEdvGsNuPWa37eOEcSYLY4g",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 586000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "7GBn3uVeVb8",
+      "url": "https://www.youtube.com/watch?v=7GBn3uVeVb8",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "LAUGHING OCTOPUS! - METAL GEAR SOLID 4: GUNS OF THE PATRIOTS - Parte 3",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7638.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/7GBn3uVeVb8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA2tYI23DOz4N61oYgRGP5mfj25PA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/7GBn3uVeVb8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCCmobofsyOvwZknlCYGp5tMzE8tA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/7GBn3uVeVb8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA2tYI23DOz4N61oYgRGP5mfj25PA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 117000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "-2A5lJmH6hI",
+      "url": "https://www.youtube.com/watch?v=-2A5lJmH6hI",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "aliens2",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6293.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/-2A5lJmH6hI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA_fRBmWnK0P9WTBUUin6yaHOTu9Q",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/-2A5lJmH6hI/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCIyJmHvaEaQ8i93zS4J5fkSWGRTg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/-2A5lJmH6hI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA_fRBmWnK0P9WTBUUin6yaHOTu9Q",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 393000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "lwZDxy_uLj8",
+      "url": "https://www.youtube.com/watch?v=lwZDxy_uLj8",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "guns2",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5981.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/lwZDxy_uLj8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBHWNIaoTOwrmCoSJMML7__xmPl7A",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/lwZDxy_uLj8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCpuFKU4JhK4b4xi3XDUWwotZavrQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/lwZDxy_uLj8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBHWNIaoTOwrmCoSJMML7__xmPl7A",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 138000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "2g8Gex_RiMo",
+      "url": "https://www.youtube.com/watch?v=2g8Gex_RiMo",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "O PIOR CHEFE DO JOGO! - MORTAL SHELL 2 - Parte 10 / FINAL",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 10055.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/2g8Gex_RiMo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAX-gTjGCclmpJCB6JXpVtVqRFf6Q",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/2g8Gex_RiMo/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCkMNGA_WndpPdFnNHbHCmzjJPlJg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/2g8Gex_RiMo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAX-gTjGCclmpJCB6JXpVtVqRFf6Q",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 182000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "vt1HbScE_jM",
+      "url": "https://www.youtube.com/watch?v=vt1HbScE_jM",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "A GUERRA MUDOU. - METAL GEAR SOLID 4: GUNS OF THE PATRIOTS - Parte 1",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 8499.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/vt1HbScE_jM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDcMroVOWZkVShoPy6qyAWyfExgUA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/vt1HbScE_jM/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAZmAIMQvpgNTwtb0lsc3n2v9MzkQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/vt1HbScE_jM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDcMroVOWZkVShoPy6qyAWyfExgUA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 325000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "x1-EfCGHTd4",
+      "url": "https://www.youtube.com/watch?v=x1-EfCGHTd4",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "ESSES CHEFES FORAM ABSURDOS! - MORTAL SHELL 2 - Parte 9",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 8059.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/x1-EfCGHTd4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAZxjq_WhJ1rwSbHnCY3V6t93-eyw",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/x1-EfCGHTd4/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC8jXwYxfUv3iQorGDRQJGpyqK8UA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/x1-EfCGHTd4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAZxjq_WhJ1rwSbHnCY3V6t93-eyw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 175000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "X6gr-4jUb-g",
+      "url": "https://www.youtube.com/watch?v=X6gr-4jUb-g",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "XCOM DE STAR WARS! - STAR WARS: ZERO COMPANY",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7706.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/X6gr-4jUb-g/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAyRfgQAKUzVtQt2IIXtrtkf4VuPA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/X6gr-4jUb-g/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBMLHftib5x5RX-nadUQdTp9-MFMg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/X6gr-4jUb-g/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAyRfgQAKUzVtQt2IIXtrtkf4VuPA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 420000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "c6nQ3T6KX0M",
+      "url": "https://www.youtube.com/watch?v=c6nQ3T6KX0M",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "WATCHING GRAND THEFT AUTO 6: AN EXTENDED LOOK!",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 4853.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/c6nQ3T6KX0M/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD9sge27OGkTX3rtWAP3b-egJQcrA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/c6nQ3T6KX0M/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBAKq6A2dtCOP5qWo78MI41XtKlBw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/c6nQ3T6KX0M/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD9sge27OGkTX3rtWAP3b-egJQcrA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 1600000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "uNBC0CAzRPo",
+      "url": "https://www.youtube.com/watch?v=uNBC0CAzRPo",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "THE WORST SQUAD AGAINST THE XENOMORPHS! - ALIENS: FIRETEAM ELITE 2 WITH FRIENDS",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6307.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/uNBC0CAzRPo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBciMkOe06dpiN_AwVyM-Wm66ZUGw",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/uNBC0CAzRPo/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB05hWhZILoIJk1UbVujGIBR1vrww",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/uNBC0CAzRPo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBciMkOe06dpiN_AwVyM-Wm66ZUGw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 915000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "RPjLb0dQNbo",
+      "url": "https://www.youtube.com/watch?v=RPjLb0dQNbo",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "mortal8",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6879.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/RPjLb0dQNbo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBaqZSqG3xs1PWFmhoj_Cqa0zPclA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/RPjLb0dQNbo/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCJOrFjv0xCLDMO0l07h4Y0tdp3QQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/RPjLb0dQNbo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBaqZSqG3xs1PWFmhoj_Cqa0zPclA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 127000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "orHpmTpU1BI",
+      "url": "https://www.youtube.com/watch?v=orHpmTpU1BI",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "Amsterdam",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5887.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/orHpmTpU1BI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLASAJTww7lRxaFCRMEy7IWgnv6BzQ",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/orHpmTpU1BI/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDuY4fOXIFfxJdFniPU9Co3VylBvA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/orHpmTpU1BI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLASAJTww7lRxaFCRMEy7IWgnv6BzQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 274000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "Ztvumha0w8g",
+      "url": "https://www.youtube.com/watch?v=Ztvumha0w8g",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "ESSE JOGO DE PESCA É INCRÍVEL! - HOW TO FISH COM OS AMIGOS",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 12471.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/Ztvumha0w8g/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAIgc8aFdjx3Hta8e5rWf4kJLBR3A",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/Ztvumha0w8g/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCJfPb87ADGyvYDXpQCascow8cHog",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Ztvumha0w8g/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAIgc8aFdjx3Hta8e5rWf4kJLBR3A",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 3100000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "ir4w7fr1FJk",
+      "url": "https://www.youtube.com/watch?v=ir4w7fr1FJk",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "mortal7",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5841.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/ir4w7fr1FJk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC4tyq6DQefJenjrUId1A8W0_HGXw",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/ir4w7fr1FJk/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD7PJiNOOvHlo6brfL5njjIgYC-iA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/ir4w7fr1FJk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC4tyq6DQefJenjrUId1A8W0_HGXw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 107000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "tIRoNogVLxs",
+      "url": "https://www.youtube.com/watch?v=tIRoNogVLxs",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "ESSE CHEFE ME QUEBROU! - MORTAL SHELL 2 - Parte 6",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7784.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/tIRoNogVLxs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBd5tfTm7SrwXiiycm-8i1Q0siWzA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/tIRoNogVLxs/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC1tudesHOeVVKls1NaJ4j470Vn0w",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/tIRoNogVLxs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBd5tfTm7SrwXiiycm-8i1Q0siWzA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 110000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "QZDjLHvqUog",
+      "url": "https://www.youtube.com/watch?v=QZDjLHvqUog",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "hole",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5587.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/QZDjLHvqUog/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAKZyBcoGSYa8BJPo5Et2lvp6xC0w",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/QZDjLHvqUog/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLANep4Og4RBbEArO-nUgXGhfDk_tg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/QZDjLHvqUog/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAKZyBcoGSYa8BJPo5Et2lvp6xC0w",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 664000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "Nz8JPcXLLB8",
+      "url": "https://www.youtube.com/watch?v=Nz8JPcXLLB8",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "THE LOST CHILD! - MORTAL SHELL 2 - Part 5",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6080.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/Nz8JPcXLLB8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBJtrjyt9GaezZJMPsyNB2y4Vn0Nw",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/Nz8JPcXLLB8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD_FLV3ZfLka2DOf-5R42Yovw6PpA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Nz8JPcXLLB8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBJtrjyt9GaezZJMPsyNB2y4Vn0Nw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 115000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "K8Ru9Qc3E1k",
+      "url": "https://www.youtube.com/watch?v=K8Ru9Qc3E1k",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "moo",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 3959.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/K8Ru9Qc3E1k/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC3Tvn-fRI-g6VfNzUefyqmjCtCKw",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/K8Ru9Qc3E1k/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAYBe5nyIke-QvdCVw_jrizI317OQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/K8Ru9Qc3E1k/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC3Tvn-fRI-g6VfNzUefyqmjCtCKw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 1400000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "q5pvbSrlu3M",
+      "url": "https://www.youtube.com/watch?v=q5pvbSrlu3M",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "arx9",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 3476.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/q5pvbSrlu3M/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAY2sf9Zfs6vLXfrmfpOI-AIvwmxw",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/q5pvbSrlu3M/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDmCvOJjG1hml7aO-xg366alS2zUw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/q5pvbSrlu3M/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAY2sf9Zfs6vLXfrmfpOI-AIvwmxw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 45000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "0pvzu7gKA6U",
+      "url": "https://www.youtube.com/watch?v=0pvzu7gKA6U",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "mortal4",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6347.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/0pvzu7gKA6U/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDHwT4PNp6ZNeIazBOiFO5PcHQ8lg",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/0pvzu7gKA6U/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCwq6fnbnet9fAk-NXk1721t0ae5g",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/0pvzu7gKA6U/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDHwT4PNp6ZNeIazBOiFO5PcHQ8lg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 118000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "d108TV9lH_0",
+      "url": "https://www.youtube.com/watch?v=d108TV9lH_0",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "arx8",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5322.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/d108TV9lH_0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCSfJO91GFq_-aHhI4YlLn6Ku2vPQ",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/d108TV9lH_0/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCFoGcUKtU68yhNYHo-N-MLNRwOlg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/d108TV9lH_0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCSfJO91GFq_-aHhI4YlLn6Ku2vPQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 63000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "G_B8vtTp2es",
+      "url": "https://www.youtube.com/watch?v=G_B8vtTp2es",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "A JORNADA DA FOICE! - MORTAL SHELL 2 - Parte 3",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7416.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/G_B8vtTp2es/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAEqtKF40x2zqacLrAmc1aQzx7UDQ",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/G_B8vtTp2es/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD6h0__yV9h4mQHIaZC2vNvwttaRA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/G_B8vtTp2es/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAEqtKF40x2zqacLrAmc1aQzx7UDQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 146000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "UBAGkO044zk",
+      "url": "https://www.youtube.com/watch?v=UBAGkO044zk",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "arx7",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6086.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/UBAGkO044zk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCsQmCtfAmV607qyi1zOQ5cl_xaYQ",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/UBAGkO044zk/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBVfCTQSscK8FuRXX3mwbHqdxcZXw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/UBAGkO044zk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCsQmCtfAmV607qyi1zOQ5cl_xaYQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 25000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "Jw9RFM90s_s",
+      "url": "https://www.youtube.com/watch?v=Jw9RFM90s_s",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "A SENHORA DA FLORESTA! - MORTAL SHELL 2 - Parte 2",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7556.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/Jw9RFM90s_s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAdFPQjXM379lo-_K1Z-R6d6JE6RA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/Jw9RFM90s_s/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAKbNM_HWVIgs1bIr_bL2xuVVzKwg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Jw9RFM90s_s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAdFPQjXM379lo-_K1Z-R6d6JE6RA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 200000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "ZjdfNZwIoy0",
+      "url": "https://www.youtube.com/watch?v=ZjdfNZwIoy0",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "PERDIDO NA CRIPTA! - ARX FATALIS - Parte 6",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7619.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/ZjdfNZwIoy0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDvDNOHLwGUxy5CuYsSDnXjXGGEyA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/ZjdfNZwIoy0/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLByYeIxE7Zv5DzV-hxwhd5T6LoOtg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/ZjdfNZwIoy0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDvDNOHLwGUxy5CuYsSDnXjXGGEyA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 32000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "BPcD3vng3OI",
+      "url": "https://www.youtube.com/watch?v=BPcD3vng3OI",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "SOULSLIKE ABSURDO DE BOM! - MORTAL SHELL 2 - Parte 1",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7377.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/BPcD3vng3OI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCtroNFpmF-fqBp9vwtbe66iY64CA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/BPcD3vng3OI/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCSgGWSR16XsPmd7gO-Zd2VV8xdmg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/BPcD3vng3OI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCtroNFpmF-fqBp9vwtbe66iY64CA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 632000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "nOj-aeb7haY",
+      "url": "https://www.youtube.com/watch?v=nOj-aeb7haY",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "ONLY 4 PEOPLE ARE PLAYING THIS GAME! - ROCKET LEAGUE",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6789.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/nOj-aeb7haY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDJ2MgTKPy54uSjxnUk5o3iNSpzdQ",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/nOj-aeb7haY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBzABs-tkOpDu6tA9ZRl79V-0JTjg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/nOj-aeb7haY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDJ2MgTKPy54uSjxnUk5o3iNSpzdQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 240000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "dgA0AAZFvuU",
+      "url": "https://www.youtube.com/watch?v=dgA0AAZFvuU",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "arx5",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5912.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/dgA0AAZFvuU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCHycic9CHMNNfGInN37jEtLmmUuw",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/dgA0AAZFvuU/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCc-2jZ3xruiSevg4hXkA-xkT3IKA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/dgA0AAZFvuU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCHycic9CHMNNfGInN37jEtLmmUuw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 33000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "9JC7YQyAQac",
+      "url": "https://www.youtube.com/watch?v=9JC7YQyAQac",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "arx4",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6169.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/9JC7YQyAQac/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAAwg1fY8hnQtBubiqX2sQYsdV3Lw",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/9JC7YQyAQac/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDZbCMZ6o_uxz184fDpAjNdpASVOQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/9JC7YQyAQac/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAAwg1fY8hnQtBubiqX2sQYsdV3Lw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 40000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "ClgMFR7gABk",
+      "url": "https://www.youtube.com/watch?v=ClgMFR7gABk",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "PESCANDO COM OS AMIGOS DE NOVO! - THE ONE FISH",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 3369.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/ClgMFR7gABk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD7kYZPbHB-yLqBwhovepX9Vi-3bg",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/ClgMFR7gABk/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBjURKxENZi4BlifD6yIw1hFMFiqQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/ClgMFR7gABk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD7kYZPbHB-yLqBwhovepX9Vi-3bg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 951000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "4MpuNKeXnOA",
+      "url": "https://www.youtube.com/watch?v=4MpuNKeXnOA",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "IMPEDINDO UM SACRIFÍCIO! - ARX FATALIS - Parte 3",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7760.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/4MpuNKeXnOA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCKUyKR7hyM6HM_gtOSKlJNtN_JOA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/4MpuNKeXnOA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB-mCexxhX8OUzuXsb59AkAVzfbDw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/4MpuNKeXnOA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCKUyKR7hyM6HM_gtOSKlJNtN_JOA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 43000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "gUZi2TYzcd4",
+      "url": "https://www.youtube.com/watch?v=gUZi2TYzcd4",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "THE WORST SURVIVORS! - NO MORE ROOM IN HELL 2 WITH FRIENDS",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7109.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/gUZi2TYzcd4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDvZYzkUaKER9hJh_lH5_nio05IQA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/gUZi2TYzcd4/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBQk_hX_3ppsXTLjTfXH-sfeAnLsQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/gUZi2TYzcd4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDvZYzkUaKER9hJh_lH5_nio05IQA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 650000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "DLtPkxnzq_s",
+      "url": "https://www.youtube.com/watch?v=DLtPkxnzq_s",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "FAZENDO UMA TORTA PRO REI! - ARX FATALIS - Parte 2",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5776.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/DLtPkxnzq_s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBAvNu-yj3XCMx5GpVaut9QCCsFtA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/DLtPkxnzq_s/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA1iM3DuhyzL6HvgEbvnMs2aUbs_w",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/DLtPkxnzq_s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBAvNu-yj3XCMx5GpVaut9QCCsFtA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 53000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "zcTp9NUMlJc",
+      "url": "https://www.youtube.com/watch?v=zcTp9NUMlJc",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "NEVER PLAY THIS GAME! - HANDS OVER WITH FRIENDS",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 2275.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/zcTp9NUMlJc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAbmiUnufwBiad9N5P1ool0EGPaRA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/zcTp9NUMlJc/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCKf3neZboQQn2l7c3HozXlOp7y3w",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/zcTp9NUMlJc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAbmiUnufwBiad9N5P1ool0EGPaRA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 1000000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "-dNJBrS41aI",
+      "url": "https://www.youtube.com/watch?v=-dNJBrS41aI",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "ADVENTURES IN MIDDLE-EARTH! - THE LORD OF THE RINGS: WAR IN THE NORTH WITH FRIENDS",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5500.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/-dNJBrS41aI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD4e-FRO2O4jubm13oxAiOle7T-_Q",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/-dNJBrS41aI/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDZ9lFhD5B4IOUno0oObw_gmj6srw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/-dNJBrS41aI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD4e-FRO2O4jubm13oxAiOle7T-_Q",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 465000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "NsbmrYRpA_0",
+      "url": "https://www.youtube.com/watch?v=NsbmrYRpA_0",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "Arx",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6121.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/NsbmrYRpA_0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCsVECMjXu30DVuX_h6DnyCUguzKA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/NsbmrYRpA_0/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDKRnxcpVBC7KqF2ApXVl_cplHbaQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/NsbmrYRpA_0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCsVECMjXu30DVuX_h6DnyCUguzKA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 146000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "A9CwTGtLDBA",
+      "url": "https://www.youtube.com/watch?v=A9CwTGtLDBA",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "THE TRUTH! - TACHE NOIRE - Part 9 / FINALE",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6863.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/A9CwTGtLDBA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAfrNKvlbRu2e01Qi4wEh0W3YZ25A",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/A9CwTGtLDBA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDDArF1zBOOTDVhlErHExKtOkZnTg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/A9CwTGtLDBA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAfrNKvlbRu2e01Qi4wEh0W3YZ25A",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 85000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "0JeoeoRStRA",
+      "url": "https://www.youtube.com/watch?v=0JeoeoRStRA",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "THE FINAL CLIMB! - PEAK WITH FRIENDS",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6055.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/0JeoeoRStRA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC7qYinPBJsTorrsXXcZPUxON2kYQ",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/0JeoeoRStRA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAKsIAyw6RtStRXNEyp-QR2qq5oww",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/0JeoeoRStRA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC7qYinPBJsTorrsXXcZPUxON2kYQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 1300000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "i8Zrn7IeVFw",
+      "url": "https://www.youtube.com/watch?v=i8Zrn7IeVFw",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "IN SEARCH OF THE CONTROL ROOMS! - TACHE NOIRE - Part 8",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5257.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/i8Zrn7IeVFw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBNuXBlF-LJDkIZfoXqJl55Rb8VIA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/i8Zrn7IeVFw/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA9I3XvarlymDhqQiNAkTzLB8d2bg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/i8Zrn7IeVFw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBNuXBlF-LJDkIZfoXqJl55Rb8VIA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 84000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "1CuVhBjs3ns",
+      "url": "https://www.youtube.com/watch?v=1CuVhBjs3ns",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "VIREI COMANDANTE DE NOVO! - BATTLEFIELD 2",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 8097.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/1CuVhBjs3ns/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBf72OpKVe-UX4PZ8cq6GBjW8JuIQ",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/1CuVhBjs3ns/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBrqE3e03pYR_25LpeXMO0CiX3blg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/1CuVhBjs3ns/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBf72OpKVe-UX4PZ8cq6GBjW8JuIQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 87000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "d1UH_J393UE",
+      "url": "https://www.youtube.com/watch?v=d1UH_J393UE",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "THE HOSPITAL SECRET! - TACHE NOIRE - Part 7",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6998.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/d1UH_J393UE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBlGV2RtB6KH-9BhrLP6_UJ0QzEug",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/d1UH_J393UE/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCp4nMNyRgoeVhvTfLFLlPZnsXv_g",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/d1UH_J393UE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBlGV2RtB6KH-9BhrLP6_UJ0QzEug",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 98000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "4JP0ww_7R3U",
+      "url": "https://www.youtube.com/watch?v=4JP0ww_7R3U",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "CONSTRUINDO A PIOR NAVE DO MUNDO! - APPROXIMATELY UP COM OS AMIGOS",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 9557.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/4JP0ww_7R3U/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAHkHPo94vobEH8AmSAuO9DoRVk-Q",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/4JP0ww_7R3U/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCNa9yHAXWamGiYLL4-Ugy5XKwjEA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/4JP0ww_7R3U/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAHkHPo94vobEH8AmSAuO9DoRVk-Q",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 1100000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "KK_IFGHkkes",
+      "url": "https://www.youtube.com/watch?v=KK_IFGHkkes",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "PAUL'S VHS TAPE! - TACHE NOIRE - Part 6",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7098.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/KK_IFGHkkes/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD10BH2geKHGLxQWjPqHSrri4t6SQ",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/KK_IFGHkkes/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB9ZwRznA_Nc2UWJ6Aw8NlHRrRyAg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/KK_IFGHkkes/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD10BH2geKHGLxQWjPqHSrri4t6SQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 98000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "csUeexUoiG0",
+      "url": "https://www.youtube.com/watch?v=csUeexUoiG0",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "A NEW R.E.P.O.? - GRAIN ROT WITH FRIENDS",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6593.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/csUeexUoiG0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD2Cps3GIkxvLQ8ABXTm4237iN4ow",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/csUeexUoiG0/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB_zx5Tm0gigJNeh7iVqgfFcx-vOA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/csUeexUoiG0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD2Cps3GIkxvLQ8ABXTm4237iN4ow",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 1200000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "ytBTuviOPYQ",
+      "url": "https://www.youtube.com/watch?v=ytBTuviOPYQ",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "O HOSPITAL DA CIDADE! - TACHE NOIRE - Parte 5",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7401.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/ytBTuviOPYQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDsTbE0A7phU_GiHR0KH5okzsYM6g",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/ytBTuviOPYQ/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBuqUl3Bl5lgOSSfOyQNUjd3LtnIg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/ytBTuviOPYQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDsTbE0A7phU_GiHR0KH5okzsYM6g",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 115000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "ovfLRukc-CE",
+      "url": "https://www.youtube.com/watch?v=ovfLRukc-CE",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "NOBODY LISTENS TO ANYONE! - BIG WALK WITH FRIENDS - Part 4 / FINALE",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6181.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/ovfLRukc-CE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDKIUVFQap3mZzvppsnkY0W8tX-Ng",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/ovfLRukc-CE/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAFTAupBYP30GA0NZY8LJ54hbf63g",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/ovfLRukc-CE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDKIUVFQap3mZzvppsnkY0W8tX-Ng",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 677000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "DtYfsU2mW_Y",
+      "url": "https://www.youtube.com/watch?v=DtYfsU2mW_Y",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "ESCAPING THE MINES! - TACHE NOIRE - Part 4",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6400.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/DtYfsU2mW_Y/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB42L-ptOGTmiygjn5WcNfde-RccA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/DtYfsU2mW_Y/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDVME1qY4F7MerxEFWZRAf4iEc47A",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/DtYfsU2mW_Y/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB42L-ptOGTmiygjn5WcNfde-RccA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 122000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "hHGSvoODvcw",
+      "url": "https://www.youtube.com/watch?v=hHGSvoODvcw",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "SUCH INCOMPETENCE! - BIG WALK WITH FRIENDS - Part 3",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6852.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/hHGSvoODvcw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBmtKfNFOJ87dA5aWX5I-dwWoQB1w",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/hHGSvoODvcw/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCW6yiaoPBFtP-BkhyN8UyttGU0fw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/hHGSvoODvcw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBmtKfNFOJ87dA5aWX5I-dwWoQB1w",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 734000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "7vtAy_qEUNk",
+      "url": "https://www.youtube.com/watch?v=7vtAy_qEUNk",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "ONDE VIM PARAR? - TACHE NOIRE - Parte 3",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7553.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/7vtAy_qEUNk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDll-06LVzZurN0w4OsV0VCz6IjKA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/7vtAy_qEUNk/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBUo-wEIx45dUxymynqjgpxQgmGRQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/7vtAy_qEUNk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDll-06LVzZurN0w4OsV0VCz6IjKA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 179000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "3tisvBMsZQA",
+      "url": "https://www.youtube.com/watch?v=3tisvBMsZQA",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "PRESO EM UMA SALA COM MEUS AMIGOS! - BIG WALK COM OS AMIGOS - Parte 2",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 8116.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/3tisvBMsZQA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCaViu-vXy_VPelf-FZZh9rIUlMbA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/3tisvBMsZQA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCqbiFadesV6CX5F8paoAZxLQdg5Q",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/3tisvBMsZQA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCaViu-vXy_VPelf-FZZh9rIUlMbA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 1000000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "4Zf90XaIwsE",
+      "url": "https://www.youtube.com/watch?v=4Zf90XaIwsE",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "STACKING BOXES WORKS! - TACHE NOIRE - Part 2",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6319.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/4Zf90XaIwsE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBOUU2-83LgJALFHhqP6Hc0ulldmA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/4Zf90XaIwsE/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCDhtsH4Fli8omo7i0tDvL2Af_KXg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/4Zf90XaIwsE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBOUU2-83LgJALFHhqP6Hc0ulldmA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 232000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "OdTy29Z6Nnc",
+      "url": "https://www.youtube.com/watch?v=OdTy29Z6Nnc",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "A LONG WALK! - BIG WALK WITH FRIENDS - Part 1",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6835.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/OdTy29Z6Nnc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBkqC7chCPizTa1BvqgF5TqOBWeHQ",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/OdTy29Z6Nnc/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLARITP6EaaHnhhozzwlyd7z27DL-Q",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/OdTy29Z6Nnc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBkqC7chCPizTa1BvqgF5TqOBWeHQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 1900000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "nH8X1jAyoeQ",
+      "url": "https://www.youtube.com/watch?v=nH8X1jAyoeQ",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "Tears of Metal",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6693.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/nH8X1jAyoeQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLALsaH1sAn38gZq5sfQ3KqaXAVolg",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/nH8X1jAyoeQ/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAhlMaMm9FMbni_YRp07G3O_muZIA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/nH8X1jAyoeQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLALsaH1sAn38gZq5sfQ3KqaXAVolg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 492000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "JKTsuVwxmNY",
+      "url": "https://www.youtube.com/watch?v=JKTsuVwxmNY",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "THIS HORROR IMMERSIVE SIM IS INCREDIBLE! - TACHE NOIRE - Part 1",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6886.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/JKTsuVwxmNY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBIZm1-isq9DYrtt_g33-gQvrmsIA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/JKTsuVwxmNY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDifwbShmq4kZoBfvxJY0X5etCgMA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/JKTsuVwxmNY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBIZm1-isq9DYrtt_g33-gQvrmsIA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 990000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "1wACf-7QBE8",
+      "url": "https://www.youtube.com/watch?v=1wACf-7QBE8",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "WE WON EVERY MATCH! - BATTLEFIELD 2",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6913.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/1wACf-7QBE8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDpx6bWZ0-Bh7oSskOW6FcQUiRLJQ",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/1wACf-7QBE8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCszupSmhQWkiDUpTiD7wD4NK0ZIg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/1wACf-7QBE8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDpx6bWZ0-Bh7oSskOW6FcQUiRLJQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 101000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "jm0netGLxFA",
+      "url": "https://www.youtube.com/watch?v=jm0netGLxFA",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "Magnavis",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5030.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/jm0netGLxFA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBVfIRFwGtxfPnPTAXXWTrLofVAhg",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/jm0netGLxFA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBiqKvpmfWtVtYTo0aGD8Gp3nzAVg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/jm0netGLxFA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBVfIRFwGtxfPnPTAXXWTrLofVAhg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 631000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "SqODx-TbN38",
+      "url": "https://www.youtube.com/watch?v=SqODx-TbN38",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "TWO RETIREES AND A TERRIBLE MICROPHONE! - ROCKET LEAGUE WITH FALCON",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5441.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/SqODx-TbN38/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCdP6afY8koOblCM1P0QAPh-E_p4w",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/SqODx-TbN38/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAxwHH4YKNsdxjkx0U9stS13NZq6g",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/SqODx-TbN38/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCdP6afY8koOblCM1P0QAPh-E_p4w",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 270000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "M9j0hV7MAlY",
+      "url": "https://www.youtube.com/watch?v=M9j0hV7MAlY",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "The Floor",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5970.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/M9j0hV7MAlY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDUVW3HKr_tVSXixUgUm2iYMuhdsA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/M9j0hV7MAlY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBDNYwKjQuTcHXVgHyj3B5_q0AecA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/M9j0hV7MAlY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDUVW3HKr_tVSXixUgUm2iYMuhdsA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 836000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "Zj7i5aEwCgY",
+      "url": "https://www.youtube.com/watch?v=Zj7i5aEwCgY",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "EVERYTHING (ALMOST) WENT WELL AND A SAD ENDING! - PROJECT ZOMBOID BUILD 42",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7110.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/Zj7i5aEwCgY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCmegZ8ksTrbuAy3c6rBVX-Srq_FQ",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/Zj7i5aEwCgY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCTrTJNNysnupspoUU7S7EirMJQWg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Zj7i5aEwCgY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCmegZ8ksTrbuAy3c6rBVX-Srq_FQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 289000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "GRY4ojbxU1k",
+      "url": "https://www.youtube.com/watch?v=GRY4ojbxU1k",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "Sponge Break",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 3298.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/GRY4ojbxU1k/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA8Iy3ne-GzTXdK1KKHkaqJ6L7elg",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/GRY4ojbxU1k/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDCOI1ZLeMfSKMXXvdMz0Vmn2aCSg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/GRY4ojbxU1k/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA8Iy3ne-GzTXdK1KKHkaqJ6L7elg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 839000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "T7PV-LZ6CuQ",
+      "url": "https://www.youtube.com/watch?v=T7PV-LZ6CuQ",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "THE BIG LIE! - THE EXCAVATION OF HOB'S BARROW - Part 4 / FINALE",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 4232.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/T7PV-LZ6CuQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC80tRYAiLm5FdTwmR3wgQD4QKUig",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/T7PV-LZ6CuQ/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCyco-ina2ASODZZQvefEXuajuhJQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/T7PV-LZ6CuQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC80tRYAiLm5FdTwmR3wgQD4QKUig",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 74000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "3WNww6aGmiQ",
+      "url": "https://www.youtube.com/watch?v=3WNww6aGmiQ",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "DEADLY GAMES! - MACHINE PARTY WITH FRIENDS",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7056.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/3WNww6aGmiQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDOjc-wHE2z3O4tAQJcgHwPCIYOgw",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/3WNww6aGmiQ/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCDkqGZIFvAqJp0jnlrEkbbPr5BBQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/3WNww6aGmiQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDOjc-wHE2z3O4tAQJcgHwPCIYOgw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 1700000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "gfG_s6lWCV8",
+      "url": "https://www.youtube.com/watch?v=gfG_s6lWCV8",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "THE MISSING ONE! - THE EXCAVATION OF HOB'S BARROW - Part 3",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5454.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/gfG_s6lWCV8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAjwf7GMDiFXUmhcAhMTExLvLCGSg",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/gfG_s6lWCV8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDX9Octk6zMDXn9o2Akl83ZkUwMWA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/gfG_s6lWCV8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAjwf7GMDiFXUmhcAhMTExLvLCGSg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 94000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "XCRXlmK-9jw",
+      "url": "https://www.youtube.com/watch?v=XCRXlmK-9jw",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "TESTANDO A NOVA BUILD 42 DO PROJECT ZOMBOID!",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 8166.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/XCRXlmK-9jw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCJe8_v5YF--XqWtFQen6OiGFIXHA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/XCRXlmK-9jw/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBn2zqUolB2kiV3hhSf6NokqeL3Yg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/XCRXlmK-9jw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCJe8_v5YF--XqWtFQen6OiGFIXHA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 682000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "2waWfgU6yUc",
+      "url": "https://www.youtube.com/watch?v=2waWfgU6yUc",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "SHODAN! - SYSTEM SHOCK - Part 8 / FINALE",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5229.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/2waWfgU6yUc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBHBKUulAL60RT1-yB0V8GJEkuleQ",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/2waWfgU6yUc/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLASTPJrfAM7h6iWe8Y-GaO9pUODpw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/2waWfgU6yUc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBHBKUulAL60RT1-yB0V8GJEkuleQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 23000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "irg0KMIoPCQ",
+      "url": "https://www.youtube.com/watch?v=irg0KMIoPCQ",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "A STRANGE DREAM! - THE EXCAVATION OF HOB'S BARROW - Part 2",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5797.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/irg0KMIoPCQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDKCsWdMPpBXqOCAXn80N6PoTwLBw",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/irg0KMIoPCQ/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAiL8GvVWTBdfrn7nRivWEDAYza3w",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/irg0KMIoPCQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDKCsWdMPpBXqOCAXn80N6PoTwLBw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 123000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "RftLgVrUsrQ",
+      "url": "https://www.youtube.com/watch?v=RftLgVrUsrQ",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "THE SECURITY WING! - SYSTEM SHOCK - Part 7",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5720.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/RftLgVrUsrQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD_oYxQmOMJro5XZvEYhAmzb2YnNw",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/RftLgVrUsrQ/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACFqCU8TKS-Ncxs4v_O3Jdr0jXSQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/RftLgVrUsrQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD_oYxQmOMJro5XZvEYhAmzb2YnNw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 22000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "pHNMi0DM26k",
+      "url": "https://www.youtube.com/watch?v=pHNMi0DM26k",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "UMA VILA E MUITOS MISTÉRIOS! - THE EXCAVATION OF HOB'S BARROW - Parte 1",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7893.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/pHNMi0DM26k/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAgazLY1NuPqawRhafw4ZniKCs1lw",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/pHNMi0DM26k/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCYDUukswRcPCfN7IuaFuYXLL6XtA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/pHNMi0DM26k/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAgazLY1NuPqawRhafw4ZniKCs1lw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 356000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "s8FNQ5X00Js",
+      "url": "https://www.youtube.com/watch?v=s8FNQ5X00Js",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "DESTRUINDO AS ANTENAS! - SYSTEM SHOCK - Parte 6",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 9280.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/s8FNQ5X00Js/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAs0WW5adbXf7t_8Z3s3LRrI6m27Q",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/s8FNQ5X00Js/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAX0kNbDuaHr_FcIdsCsFKOD9dVZg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/s8FNQ5X00Js/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAs0WW5adbXf7t_8Z3s3LRrI6m27Q",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 27000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "mAp9CNpgnhg",
+      "url": "https://www.youtube.com/watch?v=mAp9CNpgnhg",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "I'M BACK TO BATTLEFIELD 2!",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5260.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/mAp9CNpgnhg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDqrO91WREzf1ROnUhYY9hIyEep5g",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/mAp9CNpgnhg/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBJRenICiaiPsYhLpMARHSan1efdw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/mAp9CNpgnhg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDqrO91WREzf1ROnUhYY9hIyEep5g",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 166000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "Vl0S_x4PE9Q",
+      "url": "https://www.youtube.com/watch?v=Vl0S_x4PE9Q",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "THE GROVES! - SYSTEM SHOCK - Part 5",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6549.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/Vl0S_x4PE9Q/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCGBpKwq3mTL0M5ME_IvdgAY5BybQ",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/Vl0S_x4PE9Q/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB0ZEJkGahpXCUZyc3tNUVel7mVKg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Vl0S_x4PE9Q/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCGBpKwq3mTL0M5ME_IvdgAY5BybQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 28000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "rorf2m0slSY",
+      "url": "https://www.youtube.com/watch?v=rorf2m0slSY",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "THIS FPS IS A BLAST FROM THE PAST! - ANGELS FALL FIRST WITH FRIENDS",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5902.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/rorf2m0slSY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA_1-qfzWHx3b0tZ1r7rRnFT9FRZg",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/rorf2m0slSY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBGHurWf6d9IqrhkhHg1qjOzsdhNA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/rorf2m0slSY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA_1-qfzWHx3b0tZ1r7rRnFT9FRZg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 281000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "Qkba4kHyJMo",
+      "url": "https://www.youtube.com/watch?v=Qkba4kHyJMo",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "PERDIDO NO REATOR! - SYSTEM SHOCK - Parte 4",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7842.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/Qkba4kHyJMo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCgNmcYeno3FuefC1DwH95Mw2n2Gw",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/Qkba4kHyJMo/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAdbejRgGO__WaRRBrtPdqu-7xtow",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Qkba4kHyJMo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCgNmcYeno3FuefC1DwH95Mw2n2Gw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 23000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "n2CxBmonu6o",
+      "url": "https://www.youtube.com/watch?v=n2CxBmonu6o",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "TENTANDO NÃO QUEBRAR O OVO COM O FALL! - AN EGGSTREMELY HARD GAME",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 9618.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/n2CxBmonu6o/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCUA_WqpEPu-unOWT5Un2xS54b7vw",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/n2CxBmonu6o/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCAITdzX6vCVc7pNmRepw9UWoAQDg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/n2CxBmonu6o/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCUA_WqpEPu-unOWT5Un2xS54b7vw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 664000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "fPN0Si67Zm4",
+      "url": "https://www.youtube.com/watch?v=fPN0Si67Zm4",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "CORTEX REAVER - SYSTEM SHOCK - Part 3",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7097.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/fPN0Si67Zm4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA3eiD14o8PSx2Rd2k1znNfb3p5Ew",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/fPN0Si67Zm4/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAbQRfMHUZQYgIrChiuxYU4E3hT6w",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/fPN0Si67Zm4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA3eiD14o8PSx2Rd2k1znNfb3p5Ew",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 24000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "hSEClqM6uBU",
+      "url": "https://www.youtube.com/watch?v=hSEClqM6uBU",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "UM JOGO EXTREMAMENTE INOVADOR! - WRECK RUNNERS COM OS AMIGOS",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 4813.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/hSEClqM6uBU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBqGyoVp2Ssem64avrhNOab3iCRRA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/hSEClqM6uBU/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCG-01oy8Th3ZSDZqQAfGAyCHmfDA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/hSEClqM6uBU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBqGyoVp2Ssem64avrhNOab3iCRRA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 637000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "N3hPb0kpy5M",
+      "url": "https://www.youtube.com/watch?v=N3hPb0kpy5M",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "DEEPER INTO THE CITADEL! - SYSTEM SHOCK - Part 2",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5727.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/N3hPb0kpy5M/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLABcM9Vug_VuevYKOoS7W2kkgaGSg",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/N3hPb0kpy5M/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDl2SCu-qnBhC7sPReGTHN7UiucPA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/N3hPb0kpy5M/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLABcM9Vug_VuevYKOoS7W2kkgaGSg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 37000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "Wjl1p9MmI-k",
+      "url": "https://www.youtube.com/watch?v=Wjl1p9MmI-k",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "ESSE MERCADO É AMALDIÇOADO! - SHIFT AT MIDNIGHT COM OS AMIGOS",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 13750.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/Wjl1p9MmI-k/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCqXBmFv-Dqs7cdQtDvjUqWSCf0Sg",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/Wjl1p9MmI-k/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCirvY1432mVrOZiE7dMWvA6JNOXg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Wjl1p9MmI-k/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCqXBmFv-Dqs7cdQtDvjUqWSCf0Sg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 3300000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "wFzJ5s7o46E",
+      "url": "https://www.youtube.com/watch?v=wFzJ5s7o46E",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "O ÚLTIMO DIA! - THE LEGEND OF ZELDA: MAJORA'S MASK - Parte 10 / FINAL",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7286.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/wFzJ5s7o46E/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAyRjSKXGVywyPuNDI-DQQSD-sawQ",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/wFzJ5s7o46E/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCY64S2xkFHH1LFlmUWCzmarp7m3Q",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/wFzJ5s7o46E/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAyRjSKXGVywyPuNDI-DQQSD-sawQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 55000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "uOYPVtbsb7I",
+      "url": "https://www.youtube.com/watch?v=uOYPVtbsb7I",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "DON'T TAKE PHOTOS HERE! - PHOTOMALY",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5120.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/uOYPVtbsb7I/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAfxYO6Ih5ToM2DzWyrgbCPo5akvQ",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/uOYPVtbsb7I/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBQtMLyNimHp7B9Mj8D-mV2YPns-g",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/uOYPVtbsb7I/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAfxYO6Ih5ToM2DzWyrgbCPo5akvQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 1400000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "ECn5GrQ_VK0",
+      "url": "https://www.youtube.com/watch?v=ECn5GrQ_VK0",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "THE BEST TEMPLE IN ALL OF ZELDA! - THE LEGEND OF ZELDA: MAJORA'S MASK - Part 9",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5853.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/ECn5GrQ_VK0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD2xDZtsonJkzOz9BCWOkoPibLXng",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/ECn5GrQ_VK0/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAZ_uCPheSrkZhjG3gn4BDlFgpnLw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/ECn5GrQ_VK0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD2xDZtsonJkzOz9BCWOkoPibLXng",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 44000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "h4vHBiGmaGE",
+      "url": "https://www.youtube.com/watch?v=h4vHBiGmaGE",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "UM CLÁSSICO DE 1994! - SYSTEM SHOCK - Parte 1",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7722.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/h4vHBiGmaGE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAW_CENICEgHbhl3LNqTfkJn4uyiA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/h4vHBiGmaGE/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC23azCXoHjtURk5AUfmUitv7bmFw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/h4vHBiGmaGE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAW_CENICEgHbhl3LNqTfkJn4uyiA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 117000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "sE607JnMuuM",
+      "url": "https://www.youtube.com/watch?v=sE607JnMuuM",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "O ANTIGO CASTELO DE IKANA! - THE LEGEND OF ZELDA: MAJORA'S MASK - Parte 8",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7416.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/sE607JnMuuM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD4hXENQb-2ywR4rXWPpBXhKIJprw",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/sE607JnMuuM/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD2jFFP6TBR3ID2K3P8-APc87pljw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/sE607JnMuuM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD4hXENQb-2ywR4rXWPpBXhKIJprw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 48000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "AWhvBjXOnGQ",
+      "url": "https://www.youtube.com/watch?v=AWhvBjXOnGQ",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "ESSE JOGO É ABSURDO DE BOM! - JUMP SPACE COM OS AMIGOS",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 9017.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/AWhvBjXOnGQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCetz9NSuLiIOK5VLGj0g1kXPxkCg",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/AWhvBjXOnGQ/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCng1644jH1-HrQh8sms0a0E2uXjQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/AWhvBjXOnGQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCetz9NSuLiIOK5VLGj0g1kXPxkCg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 714000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "RZTcMnC9XZ8",
+      "url": "https://www.youtube.com/watch?v=RZTcMnC9XZ8",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "THE CURSE OF IKANA! - THE LEGEND OF ZELDA: MAJORA'S MASK - Part 7",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6294.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/RZTcMnC9XZ8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDkgKuXFT8Qsa9nH2Lco_eUpFPKbA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/RZTcMnC9XZ8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAC3BxQroXkHxQ8sCd8eRUNVnKEVA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/RZTcMnC9XZ8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDkgKuXFT8Qsa9nH2Lco_eUpFPKbA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 49000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "srKURz3UZO0",
+      "url": "https://www.youtube.com/watch?v=srKURz3UZO0",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "NUNCA VENHA NESSA HAMBURGUERIA! - HAPPY'S HUMBLE BURGER CULT COM OS AMIGOS",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6172.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/srKURz3UZO0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCIbuQWwNMbhXQOhSctlaJFrNCKTw",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/srKURz3UZO0/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCz_NVc5I7tN20TPTNONQMrIdgDVQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/srKURz3UZO0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCIbuQWwNMbhXQOhSctlaJFrNCKTw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 921000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "LpAMu5ggXvk",
+      "url": "https://www.youtube.com/watch?v=LpAMu5ggXvk",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "GREAT BAY TEMPLE! - THE LEGEND OF ZELDA: MAJORA'S MASK - Part 6",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7154.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/LpAMu5ggXvk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAYhIiVyHiS1DbA0oPh3aEqiM6XYA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/LpAMu5ggXvk/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDLune3PVd26bW_yNchhnb5Vy5iiQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/LpAMu5ggXvk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAYhIiVyHiS1DbA0oPh3aEqiM6XYA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 53000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "qaoEYHVnAeM",
+      "url": "https://www.youtube.com/watch?v=qaoEYHVnAeM",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "DON'T PILOT A SUBMARINE WITH YOUR FRIENDS! - S.O.N.A.R WITH FRIENDS",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 4395.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/qaoEYHVnAeM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDuI2rulRwJ-kn0UPrR-5SxZ26rtg",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/qaoEYHVnAeM/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCadVX0IjbkSb4cu4j-9CBqnY19aQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/qaoEYHVnAeM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDuI2rulRwJ-kn0UPrR-5SxZ26rtg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 1000000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "DJJ0Z8GGjeQ",
+      "url": "https://www.youtube.com/watch?v=DJJ0Z8GGjeQ",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "A GRANDE BAÍA E OS ZORA! - THE LEGEND OF ZELDA: MAJORA'S MASK - Parte 5",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7235.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/DJJ0Z8GGjeQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCU5QOc0hF4gXzfp1IZ7lPtierSbQ",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/DJJ0Z8GGjeQ/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBG3ZUr14AMlM8HAXiUGaC0CVh-nw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/DJJ0Z8GGjeQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCU5QOc0hF4gXzfp1IZ7lPtierSbQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 67000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "zbS-jgtW20A",
+      "url": "https://www.youtube.com/watch?v=zbS-jgtW20A",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "THE TORNADO HUNTERS! - FUNNEL RUNNERS WITH FRIENDS",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 4221.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/zbS-jgtW20A/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCmnLiM7OFwiTw6PL5ELq0RKHuhZw",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/zbS-jgtW20A/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCG60oDp4Mi4bgV1S8jIgM07K13vw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/zbS-jgtW20A/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCmnLiM7OFwiTw6PL5ELq0RKHuhZw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 1200000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "z4r2kQV38FY",
+      "url": "https://www.youtube.com/watch?v=z4r2kQV38FY",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "O ACERTO DE CONTAS! - GRAND THEFT AUTO V - Parte 14 / FINAL",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 8139.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/z4r2kQV38FY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBDw-adPMwpdVH__op4Fy6o2K5WnQ",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/z4r2kQV38FY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAwQ9fkHKwrvDnXcyOWQDq_v66VZg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/z4r2kQV38FY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBDw-adPMwpdVH__op4Fy6o2K5WnQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 479000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "Vty4778nGIs",
+      "url": "https://www.youtube.com/watch?v=Vty4778nGIs",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "A FLORESTA DA LOUCURA! - THE MOUND: OMEN OF CTHULHU COM OS AMIGOS",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7857.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/Vty4778nGIs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBX6L04OeRLYcaYJH5hLSo6uh3snA",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/Vty4778nGIs/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBhTEASC6ocOBuXdbTGvdKwHFMN9w",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Vty4778nGIs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBX6L04OeRLYcaYJH5hLSo6uh3snA",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 1100000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "vAto4TqMEUI",
+      "url": "https://www.youtube.com/watch?v=vAto4TqMEUI",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "THE IKANA GRAVEYARD! - THE LEGEND OF ZELDA: MAJORA'S MASK - Part 4",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6127.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/vAto4TqMEUI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC0viIglXCp0AQPCGeQAO65K97y3w",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/vAto4TqMEUI/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA76Nj1iNKwO1Xz8OJc6zf2iPVucg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/vAto4TqMEUI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC0viIglXCp0AQPCGeQAO65K97y3w",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 65000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "pzsEnNR56zg",
+      "url": "https://www.youtube.com/watch?v=pzsEnNR56zg",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "UM PROBLEMINHA... - GRAND THEFT AUTO V - Parte 13",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 8140.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/pzsEnNR56zg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC6zfdy_WwTqnDeDR0xVDbpzlPpHg",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/pzsEnNR56zg/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCMpMAUKg91qUViOBBdYAWq5F737A",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/pzsEnNR56zg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC6zfdy_WwTqnDeDR0xVDbpzlPpHg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 382000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "O9kyUqeu_Hc",
+      "url": "https://www.youtube.com/watch?v=O9kyUqeu_Hc",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "THE SNOWHEAD PEAK! - THE LEGEND OF ZELDA: MAJORA'S MASK - Part 3",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6413.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/O9kyUqeu_Hc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBRiVptfQ0fN1r96oBqeVaRBi5XCQ",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/O9kyUqeu_Hc/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCprL4_TEZuyybRWEDHbgRvSjzrMw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/O9kyUqeu_Hc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBRiVptfQ0fN1r96oBqeVaRBi5XCQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 75000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "40DbO2_Np8g",
+      "url": "https://www.youtube.com/watch?v=40DbO2_Np8g",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "OS PIORES SOLDADOS DO MUNDO! - OPERATOR COM OS AMIGOS",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7716.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/40DbO2_Np8g/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBA04ceOS4e1X3EQ_EwDrCtOgwRBg",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/40DbO2_Np8g/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDde5-cHw66KH1YkGh9MV2FPtj3iQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/40DbO2_Np8g/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBA04ceOS4e1X3EQ_EwDrCtOgwRBg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 864000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "_FFzDEyfvSA",
+      "url": "https://www.youtube.com/watch?v=_FFzDEyfvSA",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "THE FIB HEIST! - GRAND THEFT AUTO V - Part 12",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5750.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/_FFzDEyfvSA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAQDleoM88NUfzPmAWa7Gn21ghWSw",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/_FFzDEyfvSA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAHo7tSlSCvLJj8MwTluU8pWTaeOw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/_FFzDEyfvSA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAQDleoM88NUfzPmAWa7Gn21ghWSw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 354000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "d8WHa2zLU_A",
+      "url": "https://www.youtube.com/watch?v=d8WHa2zLU_A",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "O TEMPLO DO BOSQUE CATARATA! - THE LEGEND OF ZELDA: MAJORA'S MASK - Parte 2",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7567.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/d8WHa2zLU_A/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBM5tYtlM2Aai0f_ZI-eO-mY2gJ2Q",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/d8WHa2zLU_A/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC05ALyP57GBQ-RA4qpmf_XNXt2xg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/d8WHa2zLU_A/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBM5tYtlM2Aai0f_ZI-eO-mY2gJ2Q",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 112000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "EH9PpZGQgsQ",
+      "url": "https://www.youtube.com/watch?v=EH9PpZGQgsQ",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "OS FANTASMAS DO PASSADO! - GRAND THEFT AUTO V - Parte 11",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 7890.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/EH9PpZGQgsQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCCeY8UT1Nw_6WAXClwMN1XKwBhbg",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/EH9PpZGQgsQ/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDaUF7II431a5OEuhzXV3IdcXCAqg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/EH9PpZGQgsQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCCeY8UT1Nw_6WAXClwMN1XKwBhbg",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 366000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "G-HWi9Yk0lk",
+      "url": "https://www.youtube.com/watch?v=G-HWi9Yk0lk",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "STEALING THE CHEMICAL WEAPON! - GRAND THEFT AUTO V - Part 10",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6722.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/G-HWi9Yk0lk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB18j5HqNhmxcYicuvX90hTZLR-FQ",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/G-HWi9Yk0lk/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAzFg1UiTF_BpFcTsDmvFG-tj54Lg",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/G-HWi9Yk0lk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB18j5HqNhmxcYicuvX90hTZLR-FQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 370000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "Bcf6o7kQAkU",
+      "url": "https://www.youtube.com/watch?v=Bcf6o7kQAkU",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "ANOTHER MASTERPIECE! - THE LEGEND OF ZELDA: MAJORA'S MASK - Part 1",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 6787.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/Bcf6o7kQAkU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCpr_f5_Lws8yugW8QTDSeFPUjp3Q",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/Bcf6o7kQAkU/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBEoMKdMuY2kD_p0HTvnRtqeg9Txw",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/Bcf6o7kQAkU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCpr_f5_Lws8yugW8QTDSeFPUjp3Q",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 195000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "m7gFJAIwkKQ",
+      "url": "https://www.youtube.com/watch?v=m7gFJAIwkKQ",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "THE PALETO BAY HEIST! - GRAND THEFT AUTO V - Part 9",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5784.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/m7gFJAIwkKQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDru7GQ_s9mBfO35yED3K3vOdFtgQ",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/m7gFJAIwkKQ/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDw3Kk-Iq-zbiAxgm4I8FsMGpsLfQ",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/m7gFJAIwkKQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDru7GQ_s9mBfO35yED3K3vOdFtgQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 404000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "sc03U_cHwL8",
+      "url": "https://www.youtube.com/watch?v=sc03U_cHwL8",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "NUNCA FAÇA UMA ENTREGA NESSA CIDADE! - FATIMOPOLIS",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 3704.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/sc03U_cHwL8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCSdXTHJt5xpiMRl2nZCkvi_UFcLQ",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/sc03U_cHwL8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBcm1z6Fy90O0W5CWkGg54U0_fRYA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/sc03U_cHwL8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCSdXTHJt5xpiMRl2nZCkvi_UFcLQ",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 867000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    },
+    {
+      "schema_version": 2,
+      "video_id": "zm4hJgClpmw",
+      "url": "https://www.youtube.com/watch?v=zm4hJgClpmw",
+      "channel_id": "",
+      "channel_name": "alanzoka",
+      "title": "CHASING A PLANE! - GRAND THEFT AUTO V - Part 8",
+      "description": "",
+      "upload_date": "",
+      "timestamp": null,
+      "duration": 5982.0,
+      "availability": null,
+      "live_status": null,
+      "thumbnail": "https://i.ytimg.com/vi/zm4hJgClpmw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAP8MgQH08tlst7QhHsS2yA2wJ-6A",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/zm4hJgClpmw/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD-eqh5QwPDHExXBp12MD1xr4F2ZA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/zm4hJgClpmw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAP8MgQH08tlst7QhHsS2yA2wJ-6A",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "view_count": 459000,
+      "chapters": [],
+      "formats_summary": {},
+      "indexed_at": "2026-09-10T07:50:34Z",
+      "untrusted": true,
+      "injection_findings": [],
+      "streamer": "alanzoka",
+      "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+      "configured_channel_name": "alanzoka"
+    }
+  ]
+}

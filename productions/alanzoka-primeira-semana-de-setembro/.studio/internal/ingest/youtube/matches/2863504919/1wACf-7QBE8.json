@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "youtube_video_id": "1wACf-7QBE8",
+  "youtube": {
+    "schema_version": 2,
+    "video_id": "1wACf-7QBE8",
+    "url": "https://www.youtube.com/watch?v=1wACf-7QBE8",
+    "channel_id": "",
+    "channel_name": "alanzoka",
+    "title": "WE WON EVERY MATCH! - BATTLEFIELD 2",
+    "description": "",
+    "upload_date": "",
+    "timestamp": null,
+    "duration": 6913.0,
+    "availability": null,
+    "live_status": null,
+    "thumbnail": "https://i.ytimg.com/vi/1wACf-7QBE8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDpx6bWZ0-Bh7oSskOW6FcQUiRLJQ",
+    "thumbnails": [
+      {
+        "url": "https://i.ytimg.com/vi/1wACf-7QBE8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCszupSmhQWkiDUpTiD7wD4NK0ZIg",
+        "height": 202,
+        "width": 360
+      },
+      {
+        "url": "https://i.ytimg.com/vi/1wACf-7QBE8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDpx6bWZ0-Bh7oSskOW6FcQUiRLJQ",
+        "height": 404,
+        "width": 720
+      }
+    ],
+    "view_count": 101000,
+    "chapters": [],
+    "formats_summary": {},
+    "indexed_at": "2026-09-10T07:50:34Z",
+    "untrusted": true,
+    "injection_findings": [],
+    "streamer": "alanzoka",
+    "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+    "configured_channel_name": "alanzoka"
+  },
+  "twitch_vod_ids": [
+    "2863504919"
+  ],
+  "twitch": {
+    "vod_id": "2863504919",
+    "streamer": "alanzoka",
+    "title": "!live vai dar uma atrasada - blood of the dawnwalker as 19h, antes disso nao sei descubra",
+    "game": "Só Na Conversa",
+    "created_at": "2026-09-02T18:53:16Z",
+    "duration": 24696.0,
+    "chapters": [
+      {
+        "title": "Just Chatting",
+        "start": 0.0,
+        "duration": 3827.0
+      },
+      {
+        "title": "S.T.A.L.K.E.R. G.A.M.M.A.",
+        "start": 3827.0,
+        "duration": 185.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 4012.0,
+        "duration": 175.0
+      },
+      {
+        "title": "Battlefield 1",
+        "start": 4187.0,
+        "duration": 6509.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 10696.0,
+        "duration": 1742.0
+      },
+      {
+        "title": "The Blood of Dawnwalker",
+        "start": 12438.0,
+        "duration": 11893.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 24331.0,
+        "duration": 365.0
+      }
+    ],
+    "path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\twitch\\alanzoka\\discovery\\2863504919.json",
+    "source_url": "https://www.twitch.tv/videos/2863504919",
+    "untrusted": true,
+    "injection_findings": []
+  },
+  "streamer": "alanzoka",
+  "state": "candidate",
+  "candidate_score": 0.375,
+  "candidate_evidence": {
+    "candidate_score": 0.375,
+    "signals": {
+      "channel": {
+        "score": 1.0,
+        "available": true,
+        "weight": 0.0,
+        "effective_weight": 0.0,
+        "detail": "configured mirror channel"
+      },
+      "date": {
+        "score": null,
+        "available": false,
+        "weight": 0.3,
+        "effective_weight": 0.0,
+        "detail": "date unavailable on one side"
+      },
+      "duration": {
+        "score": 0.7589,
+        "available": true,
+        "weight": 0.22,
+        "effective_weight": 0.314286,
+        "detail": "subset-compatible ratio 0.28"
+      },
+      "title": {
+        "score": 0.0,
+        "available": true,
+        "weight": 0.28,
+        "effective_weight": 0.4,
+        "detail": "token similarity"
+      },
+      "chapters": {
+        "score": 0.4778,
+        "available": true,
+        "weight": 0.2,
+        "effective_weight": 0.285714,
+        "detail": "shared tokens: battlefield"
+      }
+    },
+    "contributions": {
+      "channel": 0.0,
+      "date": 0.0,
+      "duration": 0.2385,
+      "title": 0.0,
+      "chapters": 0.1365
+    }
+  },
+  "verification": {
+    "providers": {
+      "metadata": "complete",
+      "audio": "pending",
+      "transcript": "not_implemented"
+    },
+    "audio": {
+      "method": "ffmpeg-temporal-features-v1",
+      "anchors": []
+    }
+  },
+  "timeline_segments": [],
+  "download": {
+    "status": "not_downloaded",
+    "path": ""
+  },
+  "rights_status": "sem_autorizacao_confirmada",
+  "updated_at": "2026-09-10T20:45:19Z"
+}

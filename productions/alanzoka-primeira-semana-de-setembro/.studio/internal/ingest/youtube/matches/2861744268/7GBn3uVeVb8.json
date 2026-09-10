@@ -1,0 +1,279 @@
+{
+  "schema_version": 2,
+  "youtube_video_id": "7GBn3uVeVb8",
+  "youtube": {
+    "schema_version": 2,
+    "video_id": "7GBn3uVeVb8",
+    "url": "https://www.youtube.com/watch?v=7GBn3uVeVb8",
+    "channel_id": "UCIwspRtKNszHhIhl36gREjQ",
+    "channel_name": "alanzoka",
+    "title": "ESSE CHEFE É BIZARRO! - METAL GEAR SOLID 4: GUNS OF THE PATRIOTS - Parte 3",
+    "description": "OS MAIORES DESCONTOS ESTÃO NO KABUM!:\nhttp://kb1.me/alanzokakabumyt\n\n💜 LIVE: https://www.twitch.tv/alanzoka\n📷 Instagram: https://www.instagram.com/alanzoka/\n📧 alanzoka@vandep.ag\n🐤 Twitter: https://twitter.com/alanzoka\n\n\n\n\n#Alanzoka",
+    "upload_date": "20260831",
+    "timestamp": 1788188976,
+    "duration": 7638.0,
+    "availability": "public",
+    "live_status": "not_live",
+    "thumbnail": "https://i.ytimg.com/vi_webp/7GBn3uVeVb8/maxresdefault.webp",
+    "thumbnails": [
+      {
+        "url": "https://i.ytimg.com/vi/7GBn3uVeVb8/hq720.jpg",
+        "height": 720,
+        "width": 1280,
+        "preference": -3,
+        "id": "38",
+        "resolution": "1280x720"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/7GBn3uVeVb8/hq720.webp",
+        "preference": -2,
+        "id": "39"
+      },
+      {
+        "url": "https://i.ytimg.com/vi/7GBn3uVeVb8/maxresdefault.jpg",
+        "height": 720,
+        "width": 1280,
+        "preference": -1,
+        "id": "40",
+        "resolution": "1280x720"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/7GBn3uVeVb8/maxresdefault.webp",
+        "height": 1080,
+        "width": 1920,
+        "preference": 0,
+        "id": "41",
+        "resolution": "1920x1080"
+      }
+    ],
+    "view_count": 118009,
+    "chapters": [],
+    "formats_summary": {
+      "max_height": 2160,
+      "max_fps": 60.0,
+      "heights": [
+        180,
+        240,
+        360,
+        480,
+        720,
+        1080,
+        1440,
+        2160
+      ]
+    },
+    "indexed_at": "2026-09-10T19:10:04Z",
+    "untrusted": true,
+    "injection_findings": [],
+    "streamer": "alanzoka",
+    "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+    "configured_channel_name": "alanzoka"
+  },
+  "twitch_vod_ids": [
+    "2861744268"
+  ],
+  "twitch": {
+    "vod_id": "2861744268",
+    "streamer": "alanzoka",
+    "title": "METAL GEAR SOLID 4: GUNS OF THE PATRIOTS - continunando nossa saga metal gear, o 1, 2 e o 3 tao no youtube",
+    "game": "Só Na Conversa",
+    "created_at": "2026-08-31T18:13:55Z",
+    "duration": 25902.0,
+    "chapters": [
+      {
+        "title": "Just Chatting",
+        "start": 0.0,
+        "duration": 2967.0
+      },
+      {
+        "title": "Metal Gear Solid 4: Guns of the Patriots - Master Collection Version",
+        "start": 2967.0,
+        "duration": 22639.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 25606.0,
+        "duration": 296.0
+      }
+    ],
+    "path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\twitch\\alanzoka\\discovery\\2861744268.json",
+    "source_url": "https://www.twitch.tv/videos/2861744268",
+    "untrusted": true,
+    "injection_findings": []
+  },
+  "streamer": "alanzoka",
+  "state": "candidate",
+  "candidate_score": 0.7096,
+  "candidate_evidence": {
+    "candidate_score": 0.7096,
+    "signals": {
+      "channel": {
+        "score": 1.0,
+        "available": true,
+        "weight": 0.0,
+        "effective_weight": 0.0,
+        "detail": "configured mirror channel"
+      },
+      "date": {
+        "score": 0.65,
+        "available": true,
+        "weight": 0.3,
+        "effective_weight": 0.3,
+        "detail": "upload delay -0.1d"
+      },
+      "duration": {
+        "score": 0.7647,
+        "available": true,
+        "weight": 0.22,
+        "effective_weight": 0.22,
+        "detail": "subset-compatible ratio 0.29"
+      },
+      "title": {
+        "score": 0.8,
+        "available": true,
+        "weight": 0.28,
+        "effective_weight": 0.28,
+        "detail": "token similarity"
+      },
+      "chapters": {
+        "score": 0.6121,
+        "available": true,
+        "weight": 0.2,
+        "effective_weight": 0.2,
+        "detail": "shared tokens: gear, guns, metal, patriots, solid"
+      }
+    },
+    "contributions": {
+      "channel": 0.0,
+      "date": 0.195,
+      "duration": 0.1682,
+      "title": 0.224,
+      "chapters": 0.1224
+    }
+  },
+  "verification": {
+    "status": "complete",
+    "policy_version": "global-source-assignment-v1",
+    "matcher_engine": "numpy-exact",
+    "completed_at": "2026-09-10T20:24:45Z",
+    "mode": "global-audio+localized-text",
+    "providers": {
+      "metadata": "complete",
+      "audio": "complete",
+      "transcript": "localized_complete"
+    },
+    "transcript": {
+      "method": "whisper-localized-anchor-v2",
+      "anchors": [
+        {
+          "youtube_time": 749.8,
+          "twitch_time": 13723.5,
+          "audio_similarity": 0.8206,
+          "similarity": 0.0,
+          "youtube_tokens": 92,
+          "twitch_tokens": 7,
+          "youtube_text": "jogar no cara. Não atira. [música] Não atira porque eu sou jogo demais, né, bebê? porque eu sou jogo demais, né, bebê? Posso fazer, mano? Não, esse daqui. Posso fazer, mano? Não, esse daqui. Granada de chafe. Ô, granada de chave Granada de chafe. Ô, granada de chave era boa no primeiro jogo e no segundo, era boa no pri",
+          "twitch_text": "Eles atacaram de fundinho de qualquer jeito.",
+          "method": "whisper-localized-anchor-v2"
+        },
+        {
+          "youtube_time": 2735.68,
+          "twitch_time": 25676.5,
+          "audio_similarity": 0.7526,
+          "similarity": 0.0207,
+          "youtube_tokens": 50,
+          "twitch_tokens": 143,
+          "youtube_text": "all It's not over yet. I know you still have a job to do. You have months still enough time to [música] think once all of this is done [música] think once all of this is done with. And if I choose death first, will that stop Fox fromading? [música]",
+          "twitch_text": "Libera a sede a dois, né? Libera a sede. É... Eles falaram que só vão mandar pra quem faz conteúdo no dia, mano. Então eu acho que o embargo deve cair aí mesmo. Eles não quiseram mandar antes, não. Falaram que só vão mandar antes se for da imprensa, velho. Se for fazer review, tá ligado? É. Falaram, não, nós só vai man",
+          "method": "whisper-localized-anchor-v2"
+        }
+      ],
+      "assessment": {
+        "state": "insufficient",
+        "good_anchors": 0,
+        "total_anchors": 2,
+        "median_similarity": 0.0,
+        "timeline_consistency": "insufficient"
+      },
+      "strategy": "bounded-global-localized-tiebreak",
+      "full_source_whisper": false
+    },
+    "audio": {
+      "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+      "anchors": [
+        {
+          "youtube_time": 749.8,
+          "twitch_time": 13723.5,
+          "similarity": 0.8206,
+          "second_best_similarity": 0.805,
+          "peak_margin": 0.0156,
+          "search_mode": "global",
+          "evaluated_windows": 51751,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 2735.68,
+          "twitch_time": 25676.5,
+          "similarity": 0.7526,
+          "second_best_similarity": 0.7506,
+          "peak_margin": 0.002,
+          "search_mode": "forward-fallback",
+          "evaluated_windows": 22319,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 4874.32,
+          "twitch_time": 26745.5,
+          "similarity": 0.0,
+          "second_best_similarity": 0.0,
+          "peak_margin": 0.0,
+          "search_mode": "forward-fallback",
+          "evaluated_windows": 0,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 6707.44,
+          "twitch_time": 27662.0,
+          "similarity": 0.0,
+          "second_best_similarity": 0.0,
+          "peak_margin": 0.0,
+          "search_mode": "forward-fallback",
+          "evaluated_windows": 0,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        }
+      ],
+      "assessment": {
+        "state": "candidate",
+        "good_anchors": 1,
+        "total_anchors": 4,
+        "median_similarity": 0.8206,
+        "ordered": false,
+        "timeline_consistency": "insufficient",
+        "slopes": [],
+        "offsets": [
+          12973.7
+        ],
+        "offset_deltas": [],
+        "backwards_offset_jumps": [],
+        "continuous_offset_pairs": 0,
+        "forward_cut_gaps": [],
+        "median_peak_margin": 0.0156,
+        "consistency_model": "piecewise-offset-v1"
+      }
+    }
+  },
+  "timeline_segments": [],
+  "download": {
+    "status": "not_downloaded",
+    "path": ""
+  },
+  "rights_status": "sem_autorizacao_confirmada",
+  "updated_at": "2026-09-10T20:45:19Z",
+  "candidate_score_initial": 0.7078,
+  "metadata_enriched_at": "2026-09-10T07:50:49Z",
+  "global_assignment": true
+}

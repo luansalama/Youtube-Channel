@@ -1,0 +1,300 @@
+{
+  "schema_version": 2,
+  "youtube_video_id": "S_mY0ESbwMY",
+  "youtube": {
+    "schema_version": 2,
+    "video_id": "S_mY0ESbwMY",
+    "url": "https://www.youtube.com/watch?v=S_mY0ESbwMY",
+    "channel_id": "UCIwspRtKNszHhIhl36gREjQ",
+    "channel_name": "alanzoka",
+    "title": "DE VOLTA EM SHADOW MOSES! - METAL GEAR SOLID 4: GUNS OF THE PATRIOTS - Parte 5",
+    "description": "OS MAIORES DESCONTOS ESTÃO NO KABUM!:\nhttp://kb1.me/alanzokakabumyt\n\n💜 LIVE: https://www.twitch.tv/alanzoka\n📷 Instagram: https://www.instagram.com/alanzoka/\n📧 alanzoka@vandep.ag\n🐤 Twitter: https://twitter.com/alanzoka\n\n\n\n\n#Alanzoka",
+    "upload_date": "20260903",
+    "timestamp": 1788469202,
+    "duration": 6722.0,
+    "availability": "public",
+    "live_status": "not_live",
+    "thumbnail": "https://i.ytimg.com/vi_webp/S_mY0ESbwMY/maxresdefault.webp",
+    "thumbnails": [
+      {
+        "url": "https://i.ytimg.com/vi/S_mY0ESbwMY/hq720.jpg",
+        "height": 720,
+        "width": 1280,
+        "preference": -3,
+        "id": "38",
+        "resolution": "1280x720"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/S_mY0ESbwMY/hq720.webp",
+        "preference": -2,
+        "id": "39"
+      },
+      {
+        "url": "https://i.ytimg.com/vi/S_mY0ESbwMY/maxresdefault.jpg",
+        "height": 720,
+        "width": 1280,
+        "preference": -1,
+        "id": "40",
+        "resolution": "1280x720"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/S_mY0ESbwMY/maxresdefault.webp",
+        "height": 1080,
+        "width": 1920,
+        "preference": 0,
+        "id": "41",
+        "resolution": "1920x1080"
+      }
+    ],
+    "view_count": 109569,
+    "chapters": [],
+    "formats_summary": {
+      "max_height": 2160,
+      "max_fps": 60.0,
+      "heights": [
+        180,
+        240,
+        360,
+        480,
+        720,
+        1080,
+        1440,
+        2160
+      ]
+    },
+    "indexed_at": "2026-09-10T20:45:28Z",
+    "untrusted": true,
+    "injection_findings": [],
+    "streamer": "alanzoka",
+    "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+    "configured_channel_name": "alanzoka",
+    "playlist_index": null,
+    "playlist_autonumber": null
+  },
+  "twitch_vod_ids": [
+    "2861744268"
+  ],
+  "twitch": {
+    "vod_id": "2861744268",
+    "streamer": "alanzoka",
+    "title": "METAL GEAR SOLID 4: GUNS OF THE PATRIOTS - continunando nossa saga metal gear, o 1, 2 e o 3 tao no youtube",
+    "game": "Só Na Conversa",
+    "created_at": "2026-08-31T18:13:55Z",
+    "duration": 25902.0,
+    "chapters": [
+      {
+        "title": "Just Chatting",
+        "start": 0.0,
+        "duration": 2967.0
+      },
+      {
+        "title": "Metal Gear Solid 4: Guns of the Patriots - Master Collection Version",
+        "start": 2967.0,
+        "duration": 22639.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 25606.0,
+        "duration": 296.0
+      }
+    ],
+    "path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\twitch\\alanzoka\\discovery\\2861744268.json",
+    "source_url": "https://www.twitch.tv/videos/2861744268",
+    "untrusted": true,
+    "injection_findings": []
+  },
+  "streamer": "alanzoka",
+  "state": "verified",
+  "candidate_score": 0.743,
+  "candidate_evidence": {
+    "candidate_score": 0.743,
+    "signals": {
+      "channel": {
+        "score": 1.0,
+        "available": true,
+        "weight": 0.0,
+        "effective_weight": 0.0,
+        "detail": "configured mirror channel"
+      },
+      "date": {
+        "score": 0.7713,
+        "available": true,
+        "weight": 0.3,
+        "effective_weight": 0.3,
+        "detail": "upload delay +3.1d"
+      },
+      "duration": {
+        "score": 0.7509,
+        "available": true,
+        "weight": 0.22,
+        "effective_weight": 0.22,
+        "detail": "subset-compatible ratio 0.26"
+      },
+      "title": {
+        "score": 0.8,
+        "available": true,
+        "weight": 0.28,
+        "effective_weight": 0.28,
+        "detail": "token similarity"
+      },
+      "chapters": {
+        "score": 0.6121,
+        "available": true,
+        "weight": 0.2,
+        "effective_weight": 0.2,
+        "detail": "shared tokens: gear, guns, metal, patriots, solid"
+      }
+    },
+    "contributions": {
+      "channel": 0.0,
+      "date": 0.2314,
+      "duration": 0.1652,
+      "title": 0.224,
+      "chapters": 0.1224
+    }
+  },
+  "verification": {
+    "status": "complete",
+    "policy_version": "global-source-assignment-v1",
+    "matcher_engine": "numpy-exact",
+    "completed_at": "2026-09-10T20:47:50Z",
+    "mode": "global-audio-assignment",
+    "providers": {
+      "metadata": "complete",
+      "audio": "complete",
+      "transcript": "not_run"
+    },
+    "transcript": {
+      "method": "whisper-localized-anchor-v2",
+      "anchors": [],
+      "assessment": {
+        "state": "not_run"
+      },
+      "strategy": "bounded-global-localized-tiebreak",
+      "full_source_whisper": false
+    },
+    "audio": {
+      "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+      "anchors": [
+        {
+          "youtube_time": 658.2,
+          "twitch_time": 13036.0,
+          "similarity": 0.9804,
+          "second_best_similarity": 0.7922,
+          "peak_margin": 0.1882,
+          "search_mode": "global",
+          "evaluated_windows": 51751,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 2405.92,
+          "twitch_time": 14783.5,
+          "similarity": 0.9571,
+          "second_best_similarity": 0.7386,
+          "peak_margin": 0.2185,
+          "search_mode": "predicted-window",
+          "evaluated_windows": 2041,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 4288.08,
+          "twitch_time": 16666.0,
+          "similarity": 0.9022,
+          "second_best_similarity": 0.7498,
+          "peak_margin": 0.1524,
+          "search_mode": "predicted-window",
+          "evaluated_windows": 2041,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 5901.36,
+          "twitch_time": 18279.0,
+          "similarity": 0.9716,
+          "second_best_similarity": 0.7382,
+          "peak_margin": 0.2334,
+          "search_mode": "predicted-window",
+          "evaluated_windows": 2041,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        }
+      ],
+      "assessment": {
+        "state": "verified",
+        "good_anchors": 4,
+        "total_anchors": 4,
+        "median_similarity": 0.9644,
+        "ordered": true,
+        "timeline_consistency": "strong",
+        "slopes": [
+          0.9999,
+          1.0002,
+          0.9998
+        ],
+        "offsets": [
+          12377.8,
+          12377.58,
+          12377.92,
+          12377.64
+        ],
+        "offset_deltas": [
+          -0.22,
+          0.34,
+          -0.28
+        ],
+        "backwards_offset_jumps": [],
+        "continuous_offset_pairs": 3,
+        "forward_cut_gaps": [],
+        "median_peak_margin": 0.2034,
+        "consistency_model": "piecewise-offset-v1"
+      }
+    }
+  },
+  "timeline_segments": [
+    {
+      "youtube_start": 658.2,
+      "youtube_end": 2405.92,
+      "twitch_start": 13036.0,
+      "twitch_end": 14783.5,
+      "slope": 0.99987,
+      "confidence": 0.9571,
+      "offset_start": 12377.8,
+      "offset_end": 12377.58,
+      "offset_delta": -0.22,
+      "kind": "continuous"
+    },
+    {
+      "youtube_start": 2405.92,
+      "youtube_end": 4288.08,
+      "twitch_start": 14783.5,
+      "twitch_end": 16666.0,
+      "slope": 1.00018,
+      "confidence": 0.9022,
+      "offset_start": 12377.58,
+      "offset_end": 12377.92,
+      "offset_delta": 0.34,
+      "kind": "continuous"
+    },
+    {
+      "youtube_start": 4288.08,
+      "youtube_end": 5901.36,
+      "twitch_start": 16666.0,
+      "twitch_end": 18279.0,
+      "slope": 0.99983,
+      "confidence": 0.9022,
+      "offset_start": 12377.92,
+      "offset_end": 12377.64,
+      "offset_delta": -0.28,
+      "kind": "continuous"
+    }
+  ],
+  "download": {
+    "status": "not_downloaded",
+    "path": ""
+  },
+  "rights_status": "sem_autorizacao_confirmada",
+  "global_assignment": true,
+  "updated_at": "2026-09-10T20:47:50Z"
+}

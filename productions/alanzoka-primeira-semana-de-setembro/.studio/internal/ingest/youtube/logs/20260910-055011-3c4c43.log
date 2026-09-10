@@ -1,0 +1,2 @@
+[2026-09-10T05:50:11Z] YouTube Mirror Resolver job index
+index alanzoka/alanzoka: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --flat-playlist --dump-json --skip-download --ignore-errors --playlist-end 120 https://www.youtube.com/@alanzoka/videos

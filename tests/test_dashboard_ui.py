@@ -30,8 +30,8 @@ def _harness(tmp_path):
 def test_dashboard_uses_external_assets_and_csrf(tmp_path):
     root = _harness(tmp_path)
     page = D.render(root, "production", "ui-test", csrf_token="csrf-test")
-    assert '/static/dashboard.css?v=2' in page
-    assert '/static/dashboard.js?v=2' in page
+    assert '/static/dashboard.css?v=3' in page
+    assert '/static/dashboard.js?v=3' in page
     assert '<script>' not in page
     assert 'style=' not in page
     assert 'name="csrf_token" value="csrf-test"' in page

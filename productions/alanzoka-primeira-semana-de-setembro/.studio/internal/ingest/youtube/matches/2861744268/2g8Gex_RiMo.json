@@ -1,0 +1,301 @@
+{
+  "schema_version": 2,
+  "youtube_video_id": "2g8Gex_RiMo",
+  "youtube": {
+    "schema_version": 2,
+    "video_id": "2g8Gex_RiMo",
+    "url": "https://www.youtube.com/watch?v=2g8Gex_RiMo",
+    "channel_id": "UCIwspRtKNszHhIhl36gREjQ",
+    "channel_name": "alanzoka",
+    "title": "O PIOR CHEFE DO JOGO! - MORTAL SHELL 2 - Parte 10 / FINAL",
+    "description": "OS MAIORES DESCONTOS ESTÃO NO KABUM!:\nhttp://kb1.me/alanzokakabumyt\n\n💜 LIVE: https://www.twitch.tv/alanzoka\n📷 Instagram: https://www.instagram.com/alanzoka/\n📧 alanzoka@vandep.ag\n🐤 Twitter: https://twitter.com/alanzoka\n\n\n\n\n#Alanzoka",
+    "upload_date": "20260829",
+    "timestamp": 1788037211,
+    "duration": 10055.0,
+    "availability": "public",
+    "live_status": "not_live",
+    "thumbnail": "https://i.ytimg.com/vi_webp/2g8Gex_RiMo/maxresdefault.webp",
+    "thumbnails": [
+      {
+        "url": "https://i.ytimg.com/vi/2g8Gex_RiMo/hq720.jpg",
+        "height": 720,
+        "width": 1280,
+        "preference": -3,
+        "id": "38",
+        "resolution": "1280x720"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/2g8Gex_RiMo/hq720.webp",
+        "preference": -2,
+        "id": "39"
+      },
+      {
+        "url": "https://i.ytimg.com/vi/2g8Gex_RiMo/maxresdefault.jpg",
+        "height": 720,
+        "width": 1280,
+        "preference": -1,
+        "id": "40",
+        "resolution": "1280x720"
+      },
+      {
+        "url": "https://i.ytimg.com/vi_webp/2g8Gex_RiMo/maxresdefault.webp",
+        "height": 1080,
+        "width": 1920,
+        "preference": 0,
+        "id": "41",
+        "resolution": "1920x1080"
+      }
+    ],
+    "view_count": 184006,
+    "chapters": [],
+    "formats_summary": {
+      "max_height": 2160,
+      "max_fps": 60.0,
+      "heights": [
+        180,
+        240,
+        360,
+        480,
+        720,
+        1080,
+        1440,
+        2160
+      ]
+    },
+    "indexed_at": "2026-09-10T20:45:40Z",
+    "untrusted": true,
+    "injection_findings": [],
+    "streamer": "alanzoka",
+    "configured_channel_url": "https://www.youtube.com/@alanzoka/videos",
+    "configured_channel_name": "alanzoka",
+    "playlist_index": null,
+    "playlist_autonumber": null
+  },
+  "twitch_vod_ids": [
+    "2861744268"
+  ],
+  "twitch": {
+    "vod_id": "2861744268",
+    "streamer": "alanzoka",
+    "title": "METAL GEAR SOLID 4: GUNS OF THE PATRIOTS - continunando nossa saga metal gear, o 1, 2 e o 3 tao no youtube",
+    "game": "Só Na Conversa",
+    "created_at": "2026-08-31T18:13:55Z",
+    "duration": 25902.0,
+    "chapters": [
+      {
+        "title": "Just Chatting",
+        "start": 0.0,
+        "duration": 2967.0
+      },
+      {
+        "title": "Metal Gear Solid 4: Guns of the Patriots - Master Collection Version",
+        "start": 2967.0,
+        "duration": 22639.0
+      },
+      {
+        "title": "Just Chatting",
+        "start": 25606.0,
+        "duration": 296.0
+      }
+    ],
+    "path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\internal\\ingest\\twitch\\alanzoka\\discovery\\2861744268.json",
+    "source_url": "https://www.twitch.tv/videos/2861744268",
+    "untrusted": true,
+    "injection_findings": []
+  },
+  "streamer": "alanzoka",
+  "state": "candidate",
+  "candidate_score": 0.3712,
+  "candidate_evidence": {
+    "candidate_score": 0.3712,
+    "signals": {
+      "channel": {
+        "score": 1.0,
+        "available": true,
+        "weight": 0.0,
+        "effective_weight": 0.0,
+        "detail": "configured mirror channel"
+      },
+      "date": {
+        "score": 0.65,
+        "available": true,
+        "weight": 0.3,
+        "effective_weight": 0.3,
+        "detail": "upload delay -1.9d"
+      },
+      "duration": {
+        "score": 0.801,
+        "available": true,
+        "weight": 0.22,
+        "effective_weight": 0.22,
+        "detail": "subset-compatible ratio 0.39"
+      },
+      "title": {
+        "score": 0.0,
+        "available": true,
+        "weight": 0.28,
+        "effective_weight": 0.28,
+        "detail": "token similarity"
+      },
+      "chapters": {
+        "score": 0.0,
+        "available": true,
+        "weight": 0.2,
+        "effective_weight": 0.2,
+        "detail": "shared tokens: none"
+      }
+    },
+    "contributions": {
+      "channel": 0.0,
+      "date": 0.195,
+      "duration": 0.1762,
+      "title": 0.0,
+      "chapters": 0.0
+    }
+  },
+  "verification": {
+    "status": "complete",
+    "policy_version": "global-source-assignment-v1",
+    "matcher_engine": "numpy-exact",
+    "completed_at": "2026-09-10T20:53:11Z",
+    "mode": "global-audio+localized-text",
+    "providers": {
+      "metadata": "complete",
+      "audio": "complete",
+      "transcript": "localized_complete"
+    },
+    "transcript": {
+      "method": "whisper-localized-anchor-v2",
+      "anchors": [
+        {
+          "youtube_time": 991.5,
+          "twitch_time": 6969.0,
+          "audio_similarity": 0.8204,
+          "similarity": 0.0706,
+          "youtube_tokens": 70,
+          "twitch_tokens": 15,
+          "youtube_text": "[ __ ] que [ __ ] foi essa? Ah, mano, olha esse ataque de fodidinho do [ __ ] Filha da [ __ ] do [ __ ] do [ __ ] Filha da [ __ ] do [ __ ] Filha da [ __ ] Né? T de gamepl já plus oito. Nossa, chat. Era para eu ter matado esse bicho chat. Era para eu ter matado esse bicho de primeira se eu não fosse, não tivesse de pri",
+          "twitch_text": "Ah, mano, fala sério que os cara me ouviram, velho. Não é possível isso, cara.",
+          "method": "whisper-localized-anchor-v2"
+        },
+        {
+          "youtube_time": 3605.8,
+          "twitch_time": 10172.0,
+          "audio_similarity": 0.7813,
+          "similarity": 0.0,
+          "youtube_tokens": 23,
+          "twitch_tokens": 5,
+          "youtube_text": "ataque de rabo. ataque de rabo. Ai, que gostoso que eu sou. Quando eu lembro desse ataque, eu não tomo, tomo, eu acho.",
+          "twitch_text": "Tomeu! Mas fiquei surdo, mano!",
+          "method": "whisper-localized-anchor-v2"
+        },
+        {
+          "youtube_time": 6421.2,
+          "twitch_time": 12858.0,
+          "audio_similarity": 0.8088,
+          "similarity": 0.0,
+          "youtube_tokens": 174,
+          "twitch_tokens": 0,
+          "youtube_text": "mim. Dá mais um. Hum. Errei. Ó, não perdi. Ol aí, ó. Você Hum. Errei. Ó, não perdi. Ol aí, ó. Você viu, ó? É. Ah, é, eu reiniciei o jogo, viu, ó? É. Ah, é, eu reiniciei o jogo, né? Não podemos esquecer desse detalhe. né? Não podemos esquecer desse detalhe. Às vezes, ah, cara, ele deu um pulo de ré, velho. Eu tive exata",
+          "twitch_text": ". . .",
+          "method": "whisper-localized-anchor-v2"
+        },
+        {
+          "youtube_time": 8834.4,
+          "twitch_time": 17512.5,
+          "audio_similarity": 0.7959,
+          "similarity": 0.0131,
+          "youtube_tokens": 141,
+          "twitch_tokens": 12,
+          "youtube_text": "[ __ ] foi 2 horas que eu demorei esse boss, mano. 2:20. [ __ ] que pariu, velho. boss, mano. 2:20. [ __ ] que pariu, velho. Demorei mais nele que não é que sa, pô. Mas fala, se não tivesse esse bug, eu não ia ter demorado 2:20. 1 hora e eu não ia ter demorado 2:20. 1 hora e pouco, beleza. Agora 2:20 não, pô. Não vou f",
+          "twitch_text": "Mais Gekko! A Mark III está totalmente defensiva enquanto trabalhando na porta.",
+          "method": "whisper-localized-anchor-v2"
+        }
+      ],
+      "assessment": {
+        "state": "insufficient",
+        "good_anchors": 0,
+        "total_anchors": 4,
+        "median_similarity": 0.0,
+        "timeline_consistency": "insufficient"
+      },
+      "strategy": "bounded-global-localized-tiebreak",
+      "full_source_whisper": false
+    },
+    "audio": {
+      "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+      "anchors": [
+        {
+          "youtube_time": 991.5,
+          "twitch_time": 6969.0,
+          "similarity": 0.8204,
+          "second_best_similarity": 0.8151,
+          "peak_margin": 0.0053,
+          "search_mode": "global",
+          "evaluated_windows": 51751,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 3605.8,
+          "twitch_time": 10172.0,
+          "similarity": 0.7813,
+          "second_best_similarity": 0.7505,
+          "peak_margin": 0.0308,
+          "search_mode": "predicted-window",
+          "evaluated_windows": 2041,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 6421.2,
+          "twitch_time": 12858.0,
+          "similarity": 0.8088,
+          "second_best_similarity": 0.7979,
+          "peak_margin": 0.0109,
+          "search_mode": "forward-fallback",
+          "evaluated_windows": 28592,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        },
+        {
+          "youtube_time": 8834.4,
+          "twitch_time": 17512.5,
+          "similarity": 0.7959,
+          "second_best_similarity": 0.7844,
+          "peak_margin": 0.0115,
+          "search_mode": "forward-fallback",
+          "evaluated_windows": 23622,
+          "method": "ffmpeg-temporal-features-v3-piecewise-offset",
+          "duration": 28.0
+        }
+      ],
+      "assessment": {
+        "state": "candidate",
+        "good_anchors": 1,
+        "total_anchors": 4,
+        "median_similarity": 0.8204,
+        "ordered": false,
+        "timeline_consistency": "insufficient",
+        "slopes": [],
+        "offsets": [
+          5977.5
+        ],
+        "offset_deltas": [],
+        "backwards_offset_jumps": [],
+        "continuous_offset_pairs": 0,
+        "forward_cut_gaps": [],
+        "median_peak_margin": 0.0053,
+        "consistency_model": "piecewise-offset-v1"
+      }
+    }
+  },
+  "timeline_segments": [],
+  "download": {
+    "status": "not_downloaded",
+    "path": ""
+  },
+  "rights_status": "sem_autorizacao_confirmada",
+  "global_assignment": true,
+  "updated_at": "2026-09-10T20:53:11Z"
+}

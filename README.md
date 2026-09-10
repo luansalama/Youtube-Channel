@@ -11,7 +11,7 @@ fingerprint e publicação bloqueada por padrão.
 ## Requisitos
 
 - Python 3.11+
-- Sem dependências Python obrigatórias (stdlib). Extra YouTube: `pip install -e .[youtube]`
+- O harness permanece majoritariamente stdlib, mas o Mirror Resolver usa **NumPy** para correlação acústica exata e rápida, além de `yt-dlp`, `ffmpeg`/`ffprobe`; recomenda **Deno >= 2.3** para o runtime JavaScript/EJS atual do YouTube e usa `faster-whisper` isolado somente como fallback textual localizado; `openai-whisper` permanece como fallback compatível
 - Twitch ingest: [Bun](https://bun.sh/) no `PATH`; Playwright/Chromium são preparados automaticamente no primeiro scrape
 
 ## Início rápido
@@ -24,7 +24,7 @@ python -m cstudio --root . status
 python -m cstudio --root . studio --host 127.0.0.1 --port 8765
 ```
 
-No dashboard, abra **Twitch Ingest** para capturar VOD metadata/chat sem sair do Studio.
+No dashboard, abra **Twitch Ingest** para capturar VOD metadata/chat sem sair do Studio. Depois, **YouTube Mirrors** pode localizar e verificar masters oficiais correspondentes sem liberar direitos.
 A mesma operação existe via CLI:
 
 ```powershell
@@ -36,6 +36,18 @@ O scraper V7.6 empacotado mantém resume, fallback sequencial e limite efetivo d
 As saídas ficam em `productions/<slug>/.studio/internal/ingest/twitch/<canal>/`; os arquivos
 `discovery/<vod>.json` e `chat/<vod>.json` são registrados automaticamente em `assets.csv`
 com `sem_autorizacao_confirmada`. Isso **não** aprova direitos, gates nem avança o pipeline.
+
+## YouTube Mirror Resolver
+
+O resolver usa metadata apenas para **descobrir fontes plausíveis** e mantém a autoridade em evidência audiovisual. Cada vídeo YouTube relevante é fingerprintado uma vez e comparado contra **todos os VODs elegíveis do streamer** com correlação NumPy exata. Pares válidos são checkpointados em `assignments/`; assignments ainda inconclusivos seguem para um tiebreak textual limitado e também resumível, sem repetir fingerprints ou correlações já concluídas. Checkpoints antigos do matcher coarse são migrados localmente uma única vez. Captions do YouTube e `faster-whisper` localizado servem apenas como confirmação adicional, nunca como prova isolada. Os manifests e masters ficam em `productions/<slug>/.studio/internal/ingest/youtube/`, e downloads registrados entram em `assets.csv` como `video-source` + `sem_autorizacao_confirmada`.
+
+```powershell
+python -m cstudio --root . youtube-channel-set --streamer alanzoka --name alanzoka --url https://www.youtube.com/@alanzoka
+python -m cstudio --root . youtube-index MEU-CORTE --streamer alanzoka
+python -m cstudio --root . youtube-resolve MEU-CORTE --download-verified
+```
+
+`--no-download` bloqueia download mesmo quando o auto-download estiver habilitado. Fingerprints, metadata, captions, assignments e o áudio YouTube já adquirido para análise são reutilizados entre rodadas; `--force` é a forma explícita de invalidar essa retomada. Jobs iniciados pelo dashboard rodam em processo destacado e sobrevivem a restart do servidor. Downloads HLS/DASH usam 8 fragments concorrentes por padrão. Detalhes: `integrations/youtube.md`.
 
 ## Fluxo (12 stages)
 
@@ -66,6 +78,10 @@ python -m cstudio --root . advance MEU-CORTE
 | `proposal-import/apply/discard` | fallback manual |
 | `ingest --asset-id --kind --path` | registra VOD/chat/transcript |
 | `twitch-scrape --streamer --target --threads` | roda scraper Twitch V7.6 e registra metadata/chat no ingest |
+| `youtube-channel-set --streamer --url` | associa streamer Twitch a um ou mais canais YouTube |
+| `youtube-index SLUG [--streamer]` | indexa uploads dos canais configurados sem baixar vídeo |
+| `youtube-resolve SLUG [--vod-id]` | gera candidatos e verifica áudio de matches promissores |
+| `youtube-verify` / `youtube-download` | verifica um par ou baixa master `verified` em qualidade máxima |
 | `rights --asset --status` | libera direitos (com autor) |
 | `cutlist-validate` | valida CSV (duração/overlap/ids) |
 | `nle-export` | gera xmeml + scripts Resolve |
