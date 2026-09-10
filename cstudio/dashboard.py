@@ -1,854 +1,865 @@
-"""HTML dashboard rendering (stdlib only, dark SnowUI).
+"""Server-rendered dashboard for Cuts Studio.
 
-SnowUI DARK — tokens reais via Figma Dev Mode (ver docs/SNOWUI-DARK-TOKENS.md,
-fonte da verdade; substitui a paleta derivada anterior):
-
-- Page bg #333333; texto #FFFFFF / rgba(255,255,255,0.4) / faint 0.15-0.2.
-- Blocks rgba(255,255,255,0.04) radius 20 padding 24 gap 16.
-- Stat cards PASTEL #EDEEFC/#E6F1FD alternados, texto #000000 (kit, mesmo no dark).
-- Nav ativa rgba(255,255,255,0.1) radius 12; itens 36px; sidebar 212px pad16 gap8;
-  borda direita 0.5px rgba(255,255,255,0.15).
-- Header 68px padding 20/28, borda bottom 0.5px; search rgba(255,255,255,0.1)+blur
-  radius 16.
-- Icon chips pastel 24px radius 8 glifo #000 16px; avatares circulares branco 0.1.
-- Series #A0BCE8 #6BE6D3 #ADADFB #7DBBFF #B899EB #71DD8C (sparklines/donut/badges).
-- Inter 12/14/24 (ss01, cv01); botoes/pills radius 12, acoes radius 8;
-  tags radius 8 com dot.
-- Transicoes .3s ease-out + prefers-reduced-motion; responsivo <960px.
-
-Tela 2 (eCommerce/Overview — deltas aplicados sobre a base acima):
-
-- Chips pill 28px radius 80 padding 4/12: fundo cor@10% + borda 0.5px cor@20%
-  + label 14/400 cor 100%. Cores iOS: OK #30D158, FAIL #FF453A,
-  pending #FF9F0A, info #0A84FF, gate #BF5AF2 (gates/tabelas/feed).
-- Stat cards em gradiente 285x100 radius 24 padding 16/20:
-  Gradient/Primary = linear-gradient(180deg, branco 5%->40%), #0A84FF;
-  alterna com variante escura Gradient/Black. Titulo 16/400 branco +
-  chip pill branco 20% radius 80; valor 24/600 branco.
-- Titulos de secao/bloco 18/600 na cor do contexto: gates #BF5AF2,
-  sync #0A84FF, master #30D158, release #FF453A, cutlist #63E6E2.
-- Tabelas: header 12/400 muted padding 12/16 min-h 40px; linhas 52px
-  padding 12/16; zebra rgba(255,255,255,0.04); radius 16.
-- Sidebar 220px: itens 48px radius 16 padding 12 gap 12, icones 24px;
-  footer simples 12px muted.
-- Accent iOS #0A84FF (logo usa #0A84FF; tela 1 usava #4C98FD).
+The dashboard is deliberately stdlib-first: Python remains authoritative for domain
+state/actions and the browser is only a progressively enhanced presentation layer.
+CSS and JavaScript live in ``cstudio/static`` so the server can enforce a strict CSP.
 """
 from __future__ import annotations
+
+import csv
 import html
+import io
+import json
 import os
+import re
 import urllib.parse as _up
+from typing import Iterable
 
 from . import core as C
 from . import proposals as P
 
-NAV = [("production", "Produção"), ("proposals", "Propostas"), ("gates", "Gates"),
-       ("cutlist", "Cutlist"), ("sync", "Sync"), ("graphics", "Gráficos"),
-       ("master", "Master"), ("release", "Release"), ("diagnostics", "Diagnóstico")]
 
-PALETTE = {
-    # SnowUI DARK real (docs/SNOWUI-DARK-TOKENS.md)
-    "bg": "#333333",
-    "sidebar": "#333333",
-    "card": "rgba(255,255,255,0.04)",
-    "elevated": "rgba(255,255,255,0.1)",
-    "border": "rgba(255,255,255,0.15)",
-    "faint": "rgba(255,255,255,0.2)",
-    "text": "#FFFFFF",
-    "muted": "rgba(255,255,255,0.4)",
-    "accent": "#0A84FF",
-    "accent_soft": "rgba(255,255,255,0.1)",
-    "success": "#30D158",
-    "danger": "#FF453A",
-    "warning": "#FF9F0A",
-    # chips Tela 2 (fundo cor@10% + borda cor@20% + label 100%)
-    "info": "#0A84FF",
-    "gate": "#BF5AF2",
-    "teal": "#63E6E2",
-    # stat cards pastel (texto preto mesmo no dark)
-    "pastel_a": "#EDEEFC",
-    "pastel_b": "#E6F1FD",
-    "ink": "#000000",
+NAV_GROUPS = [
+    ("Operação", [("production", "Visão geral"), ("twitch", "Captura Twitch")]),
+    ("Revisão humana", [("proposals", "Propostas"), ("gates", "Aprovações")]),
+    ("Construção", [
+        ("cutlist", "Cutlist"), ("sync", "Sincronização"), ("graphics", "Gráficos"),
+        ("master", "Master"), ("release", "Release"),
+    ]),
+    ("Sistema", [("diagnostics", "Diagnóstico")]),
+]
+NAV = [item for _group, items in NAV_GROUPS for item in items]
+PAGE_LABELS = dict(NAV)
+
+ARTIFACT_PAGES = {
+    "cutlist": {
+        "title": "Cutlist",
+        "path": ".studio/internal/cutlist/cutlist.csv",
+        "kind": "csv",
+        "accent": "teal",
+        "description": "Seleção editorial estruturada que alimenta a montagem. Revise IDs, fontes, timecodes e durações antes do lock.",
+    },
+    "sync": {
+        "title": "Sincronização",
+        "path": ".studio/internal/sync/sync-report.json",
+        "kind": "json",
+        "accent": "blue",
+        "description": "Offsets e evidências de alinhamento entre fontes. O relatório deve explicar o que foi sincronizado e com qual confiança.",
+    },
+    "graphics": {
+        "title": "Gráficos",
+        "path": ".studio/internal/graphics/overlays.csv",
+        "kind": "csv",
+        "accent": "purple",
+        "description": "Plano de overlays e elementos gráficos. Alterações posteriores ao graphics_lock exigem nova revisão.",
+    },
+    "master": {
+        "title": "Master",
+        "path": ".studio/internal/composition/master.json",
+        "kind": "json",
+        "accent": "green",
+        "description": "Evidência do master de composição. Esta tela mostra readiness e o artefato produzido, sem fingir integração live com o NLE.",
+    },
+    "release": {
+        "title": "Release",
+        "path": ".studio/internal/release/metadata.json",
+        "kind": "json",
+        "accent": "red",
+        "description": "Pacote final e metadados de release. Publicação continua fail-closed e nunca faz upload automaticamente.",
+    },
 }
 
-# Series exatas do kit (sparklines, donut, badges).
-SERIES = ["#A0BCE8", "#6BE6D3", "#ADADFB", "#7DBBFF", "#B899EB", "#71DD8C"]
+
+def _e(value) -> str:
+    return html.escape(str(value if value is not None else ""), quote=True)
 
 
-def _e(s) -> str:
-    return html.escape(str(s))
+def _q(value) -> str:
+    return _up.quote(str(value if value is not None else ""), safe="")
 
 
-def _q(s) -> str:
-    return _up.quote(str(s), safe="")
+def _csrf(token: str) -> str:
+    if not token:
+        return ""
+    return f'<input type="hidden" name="csrf_token" value="{_e(token)}">'
 
 
 def _icon(name: str) -> str:
-    """Stroke icons 16px inline (fallback manual; Figma icon components sao remotos)."""
-    p = {
-        "production": '<rect x="2" y="2" width="12" height="12" rx="3"/><circle cx="8" cy="8" r="2.6"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/>',
-        "proposals": '<path d="M4 1.8h4.5L12 5.3V14.2H4z"/><path d="M8.3 1.8v3.7H12"/><path d="M6 8.2h4M6 10.5h4"/>',
-        "gates": '<path d="M8 1.6l4.8 1.9v3.8c0 3.3-2.3 5.2-4.8 6.7-2.5-1.5-4.8-3.4-4.8-6.7V3.5z"/><path d="M6 7.8l1.5 1.5L10.2 6.5"/>',
-        "cutlist": '<path d="M2.4 4h11.2M2.4 8h11.2M2.4 12h7"/><circle cx="11.6" cy="12" r="1.8"/>',
-        "sync": '<path d="M13.2 8A5.2 5.2 0 1 1 8 2.8c1.9 0 3.4.9 4.4 2.4"/><path d="M12.6 1.4v3.8h-3.8"/>',
-        "graphics": '<rect x="2" y="3" width="12" height="10" rx="2"/><circle cx="5.6" cy="6.4" r="1.2"/><path d="M2.4 11.4l3.4-2.9 2.4 1.9 2-1.5 3 2.4"/>',
-        "master": '<circle cx="8" cy="8" r="6.2"/><path d="M6.6 5.4l4.2 2.6-4.2 2.6z"/>',
-        "release": '<path d="M8 12.5V2.6"/><path d="M4.6 6L8 2.6 11.4 6"/><path d="M2.8 14.4h10.4"/>',
-        "diagnostics": '<path d="M1.6 8h2.8l1.5-3.8 2.9 7.6 1.5-3.8h4.1"/>',
-    }.get(name, '<circle cx="8" cy="8" r="5.5"/>')
+    """Small, self-contained SVG icon set; no runtime icon library is required."""
+    paths = {
+        "production": '<rect x="2.2" y="2.2" width="11.6" height="11.6" rx="3"/><circle cx="8" cy="8" r="2.4"/>',
+        "twitch": '<path d="M2.4 2.4h11.2v7.2l-3 3H8l-1.8 1.6v-1.6H3.8V4.2z"/><path d="M6.3 5.2v3.2M9.7 5.2v3.2"/>',
+        "proposals": '<path d="M4 2h4.6L12 5.4V14H4z"/><path d="M8.5 2v3.5H12M6 8.5h4M6 10.8h4"/>',
+        "gates": '<path d="M8 1.7l4.7 1.8v3.8c0 3.2-2.2 5.1-4.7 6.6-2.5-1.5-4.7-3.4-4.7-6.6V3.5z"/><path d="M5.9 7.9l1.4 1.4 2.9-3"/>',
+        "cutlist": '<path d="M2.5 4h11M2.5 8h11M2.5 12h7"/><circle cx="11.8" cy="12" r="1.7"/>',
+        "sync": '<path d="M13 8a5 5 0 1 1-1.2-3.3"/><path d="M12.6 1.8v3.3H9.3"/>',
+        "graphics": '<rect x="2" y="3" width="12" height="10" rx="2"/><circle cx="5.4" cy="6.2" r="1.1"/><path d="M2.6 11.4l3.2-2.8 2.4 1.9 2-1.5 3.1 2.4"/>',
+        "master": '<circle cx="8" cy="8" r="6"/><path d="M6.7 5.3l4.1 2.7-4.1 2.7z"/>',
+        "release": '<path d="M8 12.5V2.7M4.7 5.9L8 2.7l3.3 3.2M2.8 14h10.4"/>',
+        "diagnostics": '<path d="M1.7 8h2.7l1.4-3.7 2.9 7.4 1.5-3.7h4.1"/>',
+        "menu": '<path d="M2 4.2h12M2 8h12M2 11.8h12"/>',
+        "activity": '<path d="M8 2v6l3.8 2.1"/><circle cx="8" cy="8" r="6"/>',
+        "check": '<path d="M3 8.2l3.1 3.1L13 4.8"/>',
+        "arrow": '<path d="M3 8h10M9.5 4.5L13 8l-3.5 3.5"/>',
+        "play": '<path d="M5.2 3.2l7 4.8-7 4.8z"/>',
+        "pause": '<path d="M5.3 3.3v9.4M10.7 3.3v9.4"/>',
+        "warning": '<path d="M8 1.9l6.1 11H1.9z"/><path d="M8 5.3v3.6M8 11.2h.01"/>',
+        "external": '<path d="M9.2 2.5h4.3v4.3M13.2 2.8L7.6 8.4"/><path d="M12 8.2v4.2H3.6V4H8"/>',
+    }
+    p = paths.get(name, '<circle cx="8" cy="8" r="5.5"/>')
     return (
-        '<svg class="ic" viewBox="0 0 16 16" width="16" height="16" fill="none" '
-        'stroke="currentColor" stroke-width="1.5" stroke-linecap="round" '
-        f'stroke-linejoin="round" aria-hidden="true">{p}</svg>'
+        '<svg class="icon" viewBox="0 0 16 16" width="16" height="16" fill="none" '
+        'stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+        f"{p}</svg>"
     )
 
 
-def _spark(points: str, color: str) -> str:
+def _badge(label: str, tone: str = "neutral") -> str:
+    return f'<span class="badge badge-{_e(tone)}"><span class="badge-dot"></span>{_e(label)}</span>'
+
+
+def _status_badge(status: str) -> str:
+    s = str(status or "unknown")
+    sl = s.lower()
+    if sl in {"completed", "complete", "active", "applied", "approved", "ready"}:
+        tone = "ok"
+    elif sl in {"failed", "error", "blocked", "abandoned"}:
+        tone = "danger"
+    elif sl in {"running", "processing"}:
+        tone = "info"
+    elif sl in {"pending", "paused", "waiting"}:
+        tone = "warn"
+    else:
+        tone = "neutral"
+    return _badge(s, tone)
+
+
+def _page_header(title: str, eyebrow: str, description: str = "", actions: str = "") -> str:
     return (
-        '<svg class="spark" viewBox="0 0 120 36" width="120" height="36" fill="none" aria-hidden="true">'
-        f'<polyline points="{points}" stroke="{color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>'
-        f'<circle cx="112" cy="{points.split()[-1].split(",")[1]}" r="2.6" fill="{color}"/>'
-        "</svg>"
+        '<header class="page-header">'
+        '<div class="page-heading">'
+        f'<div class="eyebrow">{_e(eyebrow)}</div><h1>{_e(title)}</h1>'
+        + (f'<p>{_e(description)}</p>' if description else "")
+        + '</div>'
+        + (f'<div class="page-actions">{actions}</div>' if actions else "")
+        + '</header>'
     )
 
 
-def _donut(done: int, total: int) -> str:
-    total = max(int(total or 0), 1)
-    done = max(0, min(int(done or 0), total))
-    pct = (100.0 * done / total) if total else 0.0
-    circ = 2 * 3.14159265 * 34
-    off = circ * (1 - done / total)
-    # SnowUI: donut 120px, serie #A0BCE8, trilha branco 0.1.
+def _metric(label: str, value: str, detail: str, tone: str = "blue", icon: str = "activity") -> str:
     return (
-        '<div class="donut-wrap">'
-        '<svg class="donut" viewBox="0 0 96 96" width="120" height="120" role="img" '
-        f'aria-label="Gates {done} de {total}">'
-        '<circle cx="48" cy="48" r="34" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="11"/>'
-        '<circle class="donut-fg" cx="48" cy="48" r="34" fill="none" stroke="#A0BCE8" '
-        'stroke-width="11" stroke-linecap="round" transform="rotate(-90 48 48)" '
-        f'stroke-dasharray="{circ:.1f}" stroke-dashoffset="{off:.1f}"/>'
-        "</svg>"
-        f'<div class="donut-c"><strong class="num">{pct:.0f}%</strong><span class="muted">{done}/{total} gates</span></div>'
-        "</div>"
+        f'<article class="metric metric-{_e(tone)}">'
+        f'<div class="metric-top"><span>{_e(label)}</span><span class="metric-icon">{_icon(icon)}</span></div>'
+        f'<strong>{_e(value)}</strong><span class="metric-detail">{_e(detail)}</span></article>'
     )
 
 
-def _stepper(root: str, current: str) -> str:
+def _stage_data(root: str):
     try:
-        stages = C.load_stages(root)
+        return list(C.load_stages(root) or [])
     except Exception:
-        return '<p class="empty">Etapas indisponíveis.</p>'
-    ids = [s.get("id", "") for s in stages]
+        return []
+
+
+def _stage_label(root: str, stage_id: str) -> str:
+    for s in _stage_data(root):
+        if s.get("id") == stage_id:
+            return str(s.get("label") or stage_id)
+    return str(stage_id or "—")
+
+
+def _pipeline(root: str, current: str) -> str:
+    stages = _stage_data(root)
+    if not stages:
+        return '<p class="empty-state">Pipeline indisponível.</p>'
+    ids = [str(s.get("id", "")) for s in stages]
     try:
-        cur = ids.index(current)
+        current_index = ids.index(str(current))
     except ValueError:
-        cur = 0
+        current_index = 0
     items = []
-    for i, s in enumerate(stages):
-        sid = s.get("id", "")
-        label = s.get("label", sid)
-        gate = s.get("gate")
-        cls = "done" if i < cur else ("cur" if i == cur else "todo")
-        dot = "✓" if i < cur else (str(i + 1))
-        lock = " 🔒" if gate else ""
+    for i, stage in enumerate(stages):
+        sid = str(stage.get("id", ""))
+        label = str(stage.get("label") or sid)
+        gate = str(stage.get("gate") or "")
+        state = "done" if i < current_index else ("current" if i == current_index else "upcoming")
+        marker = "✓" if i < current_index else str(i + 1)
         items.append(
-            f'<li class="step {cls}" title="{_e(sid)}{" · gate " + _e(gate) if gate else ""}">'
-            f'<span class="dot num">{_e(dot)}</span>'
-            f'<span class="step-t">{_e(label)}{_e(lock)}</span>'
-            f'<span class="step-id mono">{_e(sid)}</span></li>'
+            f'<li class="pipeline-step pipeline-{state}" aria-current="{"step" if state == "current" else "false"}">'
+            f'<span class="pipeline-index">{_e(marker)}</span><span class="pipeline-copy"><strong>{_e(label)}</strong>'
+            f'<small>{_e(sid)}{(" · gate " + _e(gate)) if gate else ""}</small></span></li>'
         )
-    return f'<ol class="stepper">{"".join(items)}</ol>'
+    return f'<ol class="pipeline" aria-label="Pipeline da produção">{"".join(items)}</ol>'
 
 
-def _stat_cards(st: dict, pending_props: int) -> str:
-    gates = st.get("gates", []) or []
-    checks = st.get("checks", []) or []
-    total_g = len(gates)
-    ok_g = sum(1 for g in gates if g.get("approved"))
-    fails = sum(1 for c in checks if not c.get("ok"))
-    stage = str(st.get("stage", "—"))
-    try:
-        idx = C.stage_index(".", stage)
-        pos = f"{idx + 1}/12"
-    except Exception:
-        pos = "—"
-    # Tela 2: cards em gradiente, alternando Primary (#0A84FF) / Black.
-    # Titulo 16/400 branco + chip pill branco 20%; valor 24/600 branco.
-    cards = [
-        ("Stage", _e(stage), f"fase {pos}", _spark("4,28 24,24 44,26 64,18 84,20 104,12 112,14", "#FFFFFF"), "stat-primary"),
-        ("Gates", f"{ok_g}/{total_g}", "aprovados", _spark("4,26 24,22 44,24 64,16 84,18 104,10 112,12", "#FFFFFF"), "stat-dark"),
-        ("Propostas pendentes", str(int(pending_props)), "aguardam revisão", _spark("4,14 24,18 44,15 64,22 84,20 104,24 112,22", "#FFFFFF"), "stat-primary"),
-        ("Bloqueios", str(int(fails)), "checks falhando" if fails else "nada bloqueando", _spark("4,20 24,20 44,21 64,19 84,20 104,20 112,20" if not fails else "4,24 24,22 44,26 64,14 84,18 104,10 112,12", "#FFFFFF"), "stat-dark"),
-    ]
-    out = []
-    for i, (t, v, sub, spark, variant) in enumerate(cards, 1):
-        out.append(
-            f'<div class="stat {variant} anim anim-{i}"><div class="stat-h"><span>{t}</span>'
-            f'<span class="stat-chip">{sub}</span></div>'
-            f'<div class="stat-v num">{v}</div>'
-            f'<div class="stat-f">{spark}</div></div>'
-        )
-    return f'<div class="stats">{"".join(out)}</div>'
-
-
-def layout(page: str, body: str, slug: str = "", productions=None, status=None, history=None) -> str:
-    prods = list(productions) if productions else []
-    st = status or {}
-    stage = str(st.get("stage", "") or "")
-    state = str(st.get("state", "") or "")
-    title = str(st.get("title", "") or "")
-    blocked = bool(st.get("blocked", False))
-    # Historico p/ painel contextual: prefere arg explícito, senão `status["history"]`.
-    hist = list(history) if history is not None else list(st.get("history", []) or [])
-
-    if page not in {p for p, _ in NAV}:
-        page = "production" if not slug else page
-
-    nav_links = "".join(
-        f'<a class="nav-link{" active" if p == page else ""}" aria-current="{"page" if p == page else "false"}"'
-        f' href="/?page={p}{("&slug=" + _q(slug)) if slug else ""}">{_icon(p)}<span>{_e(label)}</span></a>'
-        for p, label in NAV)
-
-    if prods:
-        prod_links = "".join(
-            f'<a class="prod-link{" active" if p.get("slug") == slug else ""}"'
-            f' href="/?page={page}&slug={_q(p.get("slug", ""))}"'
-            f' title="{_e(p.get("title", ""))}">{_e(p.get("slug", ""))}</a>'
-            for p in prods[:20]
-        )
-    else:
-        prod_links = '<span class="muted">Nenhuma produção</span>'
-
-    if prods:
-        options = "".join(
-            f'<option value="{_e(p.get("slug", ""))}"{" selected" if p.get("slug") == slug else ""}>'
-            f'{_e(p.get("slug", ""))}</option>'
-            for p in prods
-        )
-        selector_inner = (
-            '<form class="prod-switch" method="get" action="/">'
-            f'<input type="hidden" name="page" value="{_e(page)}">'
-            '<label class="muted" for="slug-sel">Produção</label>'
-            f'<select id="slug-sel" name="slug">{options}</select>'
-            '<button class="btn btn-ghost" type="submit">Trocar</button>'
-            "</form>"
-        )
-        top_search = (
-            '<div class="top-right">'
-            '<input type="search" class="top-search" placeholder="Buscar…" aria-label="Buscar">'
-            '<span class="avatar" title="showrunner">SR</span>'
-            "</div>"
-        )
-        prod_selector = f'<div class="top-sel">{selector_inner}</div>'
-    else:
-        top_search = '<span class="avatar" title="showrunner">SR</span>'
-        prod_selector = '<span class="muted">Nenhuma produção cadastrada</span>'
-
-    crumb_label = dict(NAV).get(page, page)
-    ctx = f" ctx-{page}" if page in ("gates", "sync", "master", "release", "cutlist") else ""
-    if slug:
-        crumb = (
-            f'<nav class="crumb muted" aria-label="breadcrumb">Cuts Studio <span>/</span> {_e(crumb_label)} '
-            f"<span>/</span> <strong>{_e(slug)}</strong>{(' <span>—</span> ' + _e(stage)) if stage else ''}</nav>"
-        )
-        prod_info = (
-            f'<div class="prod-id"><strong>{_e(title or slug)}</strong>'
-            f'<span class="muted mono">{_e(slug)}</span></div>'
-            '<div class="top-badges">'
-            + (f'<span class="badge badge-info">Fase: {_e(stage)}</span>' if stage else "")
-            + (f'<span class="badge badge-muted">Estado: {_e(state)}</span>' if state else "")
-            + ('<span class="badge badge-fail">Bloqueado</span>' if blocked
-               else '<span class="badge badge-ok">Liberado</span>')
-            + "</div>"
-        )
-    else:
-        crumb = (
-            f'<nav class="crumb muted" aria-label="breadcrumb">Cuts Studio <span>/</span> {_e(crumb_label)}</nav>'
-        )
-        prod_info = (
-            '<div class="prod-id"><strong>Nenhuma produção selecionada</strong>'
-            '<span class="muted">Escolha uma produção no seletor ou na lista.</span></div>'
-        )
-    # Painel contextual (right-sidebar 280px): reativa _activity_feed (antes código morto).
-    try:
-        feed_html = _activity_feed(hist[-8:] if hist else [])
-    except Exception:
-        feed_html = '<p class="empty">Sem atividade registrada.</p>'
-    if slug:
-        _ctx_badge = '<span class="badge badge-fail">Bloqueado</span>' if blocked else '<span class="badge badge-ok">Liberado</span>'
-        ctx_meta = (
-            '<div class="ctx-meta">'
-            f"<div><span class='muted'>Fase</span><br><strong>{_e(stage or '—')}</strong></div>"
-            f"<div><span class='muted'>Estado</span><br><strong>{_e(state or '—')}</strong></div>"
-            f"<div>{_ctx_badge}</div>"
-            "</div>"
-        )
-    else:
-        ctx_meta = '<p class="muted">Selecione uma produção para ver o contexto.</p>'
-    context_panel = (
-        '<aside class="context-panel" aria-label="Painel contextual">'
-        '<div class="ctx-card"><h3>Resumo</h3>'
-        f"{ctx_meta}</div>"
-        '<div class="ctx-card"><h3>Atividade recente</h3>'
-        f"{feed_html}</div>"
-        "</aside>"
-    )
-
-    return f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cuts Studio — {_e(page)}</title>
-<style>
-/* SnowUI DARK real — docs/SNOWUI-DARK-TOKENS.md (page bg #333333). */
-:root{{color-scheme:dark;--bg:#333333;--sidebar:#333333;
---card:rgba(255,255,255,0.04);--elev:rgba(255,255,255,0.1);--border:rgba(255,255,255,0.15);
---border-soft:rgba(255,255,255,0.08);
---faint:rgba(255,255,255,0.2);--text:#FFFFFF;
---muted:rgba(255,255,255,0.4);--accent:#0A84FF;--accent-soft:rgba(255,255,255,0.1);--ok:#30D158;
---fail:#FF453A;--warn:#FF9F0A;--gate:#BF5AF2;--teal:#63E6E2;--pastel-a:#EDEEFC;--pastel-b:#E6F1FD;--ink:#000000;
---dur-fast:150ms;--dur-base:250ms;--dur-slow:400ms;--dur-chart:800ms;
---ease-out:cubic-bezier(0,0,0.2,1);--ease-spring:cubic-bezier(0.34,1.56,0.64,1)}}
-*{{box-sizing:border-box}}body{{margin:0;background:#333333;background:var(--bg);color:var(--text);
-font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,sans-serif;font-size:14px;line-height:20px;
-font-feature-settings:"ss01" 1,"cv01" 1,"tnum" 1}}.num,.mono,td,.stat-v{{font-variant-numeric:tabular-nums}}
-a{{color:var(--accent);text-decoration:none}}a:hover{{text-decoration:underline}}
-img,svg{{max-width:100%}}
-.app{{display:flex;min-height:100vh;border-radius:24px;overflow:hidden;max-width:100%}}
-.sidebar{{width:220px;flex-shrink:0;background:var(--sidebar);border-right:1px solid var(--border-soft);
-padding:16px;display:flex;flex-direction:column;gap:8px;position:sticky;top:0;height:100vh;overflow:auto;
-transition:width var(--dur-base) var(--ease-out),transform var(--dur-base) var(--ease-out)}}
-.logo{{font-size:18px;font-weight:800;letter-spacing:.2px;display:flex;align-items:center;gap:8px}}
-.logo-mark{{width:28px;height:28px;border-radius:8px;background:#0A84FF;
-display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:15px}}
-.logo span{{color:var(--accent)}}
-.logo-sub{{color:var(--muted);font-size:12px;line-height:16px;margin-top:2px}}
-.nav{{display:flex;flex-direction:column;gap:8px}}
-.nav-title{{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em;margin:4px 6px}}
-.nav-link{{display:flex;align-items:center;gap:12px;min-height:48px;width:100%;padding:12px;border-radius:16px;
-color:var(--text);border:1px solid transparent;transition:background var(--dur-base) var(--ease-out),border-color var(--dur-base) var(--ease-out),transform var(--dur-fast) var(--ease-out)}}
-.nav-link .ic{{flex-shrink:0;width:24px;height:24px;border-radius:8px;background:var(--pastel-a);color:#000;
-padding:4px;opacity:1}}
-.nav a:nth-child(even) .ic,.nav-link:nth-child(even) .ic{{background:var(--pastel-b)}}
-.nav-link:hover{{background:var(--elev);text-decoration:none;transform:translateX(2px)}}
-.nav-link.active{{background:rgba(255,255,255,0.1);background:var(--accent-soft);border-color:transparent;font-weight:700}}
-.side-block{{border-top:1px solid var(--border-soft);padding-top:12px;display:flex;flex-direction:column;gap:8px}}
-.prod-link{{display:block;padding:5px 8px;border-radius:6px;color:var(--muted);
-white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
-.prod-link:hover{{color:var(--text);background:var(--elev);text-decoration:none}}
-.prod-link.active{{color:var(--text);background:var(--elev);font-weight:700}}
-.side-hint{{color:var(--muted);font-size:12px;line-height:16px;overflow-wrap:anywhere;word-break:break-word}}.side-hint code{{color:var(--text)}}
-.brand-foot{{margin-top:auto;padding:10px 6px;font-size:12px;line-height:16px;color:var(--muted)}}
-.brand-foot strong{{color:var(--muted);font-weight:600}}
-.main{{flex:1;min-width:0;display:flex;flex-direction:column;max-width:100%}}
-.topbar{{display:flex;flex-direction:column;justify-content:center;gap:10px;
-padding:16px 28px;border-bottom:1px solid var(--border-soft);background:var(--sidebar);min-height:68px}}
-.topbar-row-1{{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}}
-.topbar-row-2{{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}}
-.topbar>div,.topbar-row-1>div,.topbar-row-2>div{{min-width:0;max-width:100%}}
-.prod-id-wrap{{display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 280px}}
-.crumb{{font-size:12px;line-height:16px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}}.crumb span{{opacity:.5;margin:0 4px}}.crumb strong{{color:var(--text)}}
-.prod-id{{display:flex;flex-direction:column;gap:2px;min-width:0;max-width:100%}}
-.prod-id strong{{font-size:18px;font-weight:600;line-height:24px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}}.mono{{font-family:ui-monospace,Consolas,monospace;font-size:12px}}
-.top-badges{{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap;max-width:100%}}
-.top-right{{display:flex;align-items:center;gap:12px;flex-wrap:wrap;min-width:0;max-width:100%}}
-.top-sel{{min-width:0;max-width:100%}}
-.top-sel .prod-switch{{display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-width:0;max-width:100%}}
-.avatar{{width:32px;height:32px;border-radius:80px;background:rgba(255,255,255,0.1);
-display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--text);flex-shrink:0}}
-.avatar-sm{{width:24px;height:24px;font-size:10px}}
-.cell-id{{display:flex;align-items:center;gap:8px;min-height:28px;min-width:0}}
-.cell-id a{{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}}
-.top-search{{width:160px;max-width:100%;flex:1 1 120px;min-width:0;height:28px;background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);
--webkit-backdrop-filter:blur(10px);border:1px solid var(--border-soft);color:var(--text);border-radius:16px;padding:4px 12px;font-size:12px}}
-.top-search::placeholder{{color:var(--muted)}}
-.top-search:focus{{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}}
-.content{{padding:28px;width:100%;margin:0;flex:1 1 auto;min-width:0;box-sizing:border-box;
-display:flex;flex-direction:column;gap:24px;max-width:1440px}}
-.workspace{{display:flex;gap:24px;align-items:flex-start;width:100%;max-width:1440px;margin:0 auto;padding:28px;box-sizing:border-box;min-width:0}}
-.workspace .content{{padding:0;max-width:none;margin:0}}
-.context-panel{{width:280px;flex-shrink:0;display:flex;flex-direction:column;gap:16px;position:sticky;top:16px;max-height:calc(100vh - 32px);overflow:auto;min-width:0}}
-.ctx-card{{background:var(--card);border:0;border-radius:24px;padding:20px;display:flex;flex-direction:column;gap:12px;min-width:0}}
-.ctx-card h3{{margin:0;font-size:14px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}}
-.ctx-meta{{display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--muted)}}
-.ctx-meta strong{{color:var(--text)}}
-.card{{background:rgba(255,255,255,0.04);background:var(--card);border:0;border-radius:24px;position:relative;
-padding:24px;margin-bottom:0;display:flex;flex-direction:column;gap:16px;box-shadow:0 0.5px 1px rgba(0,0,0,0.1);
-transition:transform var(--dur-base) var(--ease-out),box-shadow var(--dur-base) var(--ease-out),border-color var(--dur-base) var(--ease-out);min-width:0;max-width:100%;overflow:hidden;will-change:transform}}
-@media(hover:hover){{.card:hover{{transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,0,0,.3),0 2px 8px rgba(0,0,0,.2)}}}}
-.card:active{{transform:translateY(0) scale(0.995)}}
-.card h2,.card h3{{margin:0 0 10px;overflow-wrap:anywhere}}.card h2{{font-size:18px;font-weight:600;line-height:24px}}
-.card h3{{font-size:14px;font-weight:600;color:var(--muted);
-text-transform:uppercase;letter-spacing:.04em}}
-.ctx-gates .card h2{{color:#BF5AF2}}.ctx-sync .card h2{{color:#0A84FF}}.ctx-master .card h2{{color:#30D158}}
-.ctx-release .card h2{{color:#FF453A}}.ctx-cutlist .card h2{{color:#63E6E2}}
-.ctx-gates .card::before{{background:#BF5AF2}}.ctx-sync .card::before{{background:#0A84FF}}.ctx-master .card::before{{background:#30D158}}
-.ctx-release .card::before{{background:#FF453A}}.ctx-cutlist .card::before{{background:#63E6E2}}
-.ctx-gates .card::before,.ctx-sync .card::before,.ctx-master .card::before,.ctx-release .card::before,.ctx-cutlist .card::before{{
-content:'';position:absolute;left:0;top:20px;bottom:20px;width:3px;border-radius:0 3px 3px 0;opacity:.8}}
-.muted{{color:var(--muted)}}.faint{{color:var(--faint)}}
-.stats{{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:100%}}
-.stat{{border-radius:24px;padding:16px 20px;min-height:100px;min-width:0;max-width:100%;overflow:hidden;
-display:flex;flex-direction:column;gap:8px;color:#FFFFFF;transition:transform var(--dur-base) var(--ease-out),box-shadow var(--dur-base) var(--ease-out);will-change:transform}}
-.stat-primary{{background:linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.4)),#0A84FF}}
-.stat-dark{{background:linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.2)),#000000}}
-@media(hover:hover){{.stat:hover{{transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,0,0,.3),0 2px 8px rgba(0,0,0,.2)}}}}
-.stat:active{{transform:translateY(0) scale(0.995)}}
-.stat-h{{display:flex;justify-content:space-between;align-items:center;gap:8px;min-width:0;
-font-size:16px;line-height:22px;font-weight:400;color:#FFFFFF}}
-.stat-h>span:first-child{{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}}
-.stat-chip{{display:inline-flex;align-items:center;min-height:24px;padding:2px 10px;border-radius:80px;flex-shrink:0;max-width:100%;
-background:rgba(255,255,255,0.2);color:#FFFFFF;font-size:12px;line-height:16px;font-weight:400;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
-.stat-v{{font-size:24px;font-weight:600;line-height:32px;color:#FFFFFF;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}
-.stat-f{{display:flex;justify-content:flex-end;align-items:end;gap:8px;min-width:0;overflow:hidden}}
-.spark{{opacity:.9;max-width:100%;height:auto}}
-.grid2{{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:100%}}
-.stepper{{list-style:none;margin:0;padding:0 0 4px;display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin;max-width:100%}}
-.step{{flex:1 0 96px;min-width:96px;max-width:180px;background:rgba(255,255,255,0.04);border:0;border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:4px;min-width:0;
-transition:background var(--dur-base) var(--ease-out),transform var(--dur-fast) var(--ease-out)}}
-.step .dot{{width:24px;height:24px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;
-font-size:12px;font-weight:700;background:rgba(255,255,255,0.1);color:var(--text);flex-shrink:0}}
-.step.done .dot{{background:rgba(113,221,140,.25);color:#fff}}
-.step.cur{{outline:1px solid var(--border-soft)}}.step.cur .dot{{background:var(--accent);color:#fff;animation:dotPulse 2s var(--ease-out) infinite}}
-@keyframes dotPulse{{0%,100%{{box-shadow:0 0 0 0 rgba(10,132,255,0.4)}}50%{{box-shadow:0 0 0 6px rgba(10,132,255,0)}}}}
-.step-t{{font-size:12px;line-height:16px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}}.step-id{{font-size:11px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}
-.donut-row{{display:flex;gap:24px;align-items:center;flex-wrap:wrap;max-width:100%}}
-.donut-side{{flex:1 1 240px;min-width:0;max-width:100%}}
-.donut-wrap{{position:relative;width:120px;height:120px;flex-shrink:0;animation:donutPulse 2.4s var(--ease-out) infinite}}
-.donut-fg{{transition:stroke-dashoffset var(--dur-chart) var(--ease-out);animation:donutIn var(--dur-chart) var(--ease-out)}}
-@keyframes donutIn{{from{{stroke-dashoffset:213.6}}}}
-@keyframes donutPulse{{0%,100%{{filter:drop-shadow(0 0 0 rgba(10,132,255,0))}}50%{{filter:drop-shadow(0 0 8px rgba(10,132,255,0.3))}}}}
-.donut-c{{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0}}
-.donut-c strong{{font-size:20px}}.donut-c span{{font-size:12px;line-height:16px}}
-.chart-line{{border-top:1px dashed #A0BCE8}}
-.bar{{height:28px;border-radius:8px}}
-.table-wrap{{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:16px;max-width:100%;margin-top:12px}}
-.table-wrap table{{min-width:560px}}
-table{{border-collapse:separate;border-spacing:0;width:100%;font-size:14px;line-height:20px;
-border-radius:16px;overflow:hidden;max-width:100%}}
-thead th{{color:var(--muted);font-weight:400;font-size:12px;line-height:16px;letter-spacing:.02em;
-padding:12px 16px;text-align:left;height:40px;vertical-align:middle;border-bottom:1px solid var(--border-soft)}}
-tbody td{{padding:12px 16px;height:52px;text-align:left;vertical-align:middle;
-font-size:14px;font-weight:400;border-bottom:1px solid var(--border-soft);overflow-wrap:break-word}}
-td .badge,td code{{flex-shrink:0}}
-tbody tr:last-child td{{border-bottom:0}}
-tbody tr{{transition:background var(--dur-fast) ease-out,transform var(--dur-fast) var(--ease-out)}}tbody tr:nth-child(even){{background:rgba(255,255,255,0.03)}}
-tbody tr:hover{{background:rgba(255,255,255,0.08);transform:translateX(2px)}}
-.badge{{display:inline-flex;align-items:center;gap:6px;min-height:28px;padding:4px 12px;border-radius:80px;
-font-size:14px;line-height:20px;font-weight:400;border:0.5px solid transparent;white-space:nowrap}}
-.badge-ok{{background:rgba(48,209,88,0.1);border-color:rgba(48,209,88,0.2);color:#30D158}}
-.badge-fail{{background:rgba(255,69,58,0.1);border-color:rgba(255,69,58,0.2);color:#FF453A}}
-.badge-warn{{background:rgba(255,159,10,0.1);border-color:rgba(255,159,10,0.2);color:#FF9F0A}}
-.badge-info{{background:rgba(10,132,255,0.1);border-color:rgba(10,132,255,0.2);color:#0A84FF}}
-.badge-gate{{background:rgba(191,90,242,0.1);border-color:rgba(191,90,242,0.2);color:#BF5AF2}}
-.badge-muted{{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2);color:var(--muted)}}
-.ok{{color:var(--ok)}}.bad{{color:var(--fail)}}
-pre{{background:rgba(255,255,255,0.04);border:0;border-radius:8px;padding:12px;max-width:100%;
-overflow:auto;color:var(--text);font-size:12px;line-height:16px;white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word}}
-code{{background:rgba(255,255,255,0.1);border:0;border-radius:6px;padding:1px 6px;font-size:12px;overflow-wrap:anywhere}}
-kbd{{border:1px solid rgba(255,255,255,0.15);border-radius:6px;padding:1px 6px;font-size:12px;font-family:inherit}}
-.tooltip{{background:rgba(255,255,255,0.8);color:#000000;border:0;
-border-radius:80px;padding:4px 12px;font-size:12px;line-height:16px;max-width:100%}}
-.btn{{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:36px;padding:4px 12px;border-radius:12px;border:1px solid var(--border);
-background:var(--elev);color:var(--text);cursor:pointer;font-weight:600;font-size:13px;text-decoration:none;white-space:nowrap;
-transition:transform var(--dur-fast) var(--ease-out),filter var(--dur-fast) var(--ease-out),box-shadow var(--dur-fast) var(--ease-out)}}
-.btn:hover{{transform:translateY(-1px);filter:brightness(1.1);box-shadow:0 2px 8px rgba(0,0,0,0.25);text-decoration:none}}
-.btn:active{{transform:translateY(0);filter:brightness(0.95)}}
-.btn-primary:hover{{box-shadow:0 4px 12px rgba(10,132,255,0.35)}}
-.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{{outline:2px solid var(--accent);outline-offset:2px}}
-.btn-primary{{background:var(--accent);border-color:var(--accent);color:#fff}}
-.btn-success{{background:#30D158;border-color:#30D158;color:#fff}}
-.btn-danger{{background:rgba(255,107,107,.2);border-color:var(--fail);color:#ffe3e3}}
-.btn-ghost{{background:transparent}}
-.btn-sm{{padding:4px 8px;font-size:12px;border-radius:8px;min-height:28px}}
-.btn:disabled{{opacity:.5;cursor:not-allowed}}
-form.inline{{display:inline}}form.stack{{display:flex;gap:8px;flex-wrap:wrap;align-items:end;max-width:100%}}
-label.f{{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--muted);flex:1 1 180px;min-width:0;max-width:100%}}
-input[type=text],select,textarea{{background:rgba(255,255,255,0.1);border:1px solid var(--border-soft);color:var(--text);
-border-radius:12px;padding:8px 10px;font-size:13px;min-width:0;max-width:100%;width:100%;box-sizing:border-box;font-family:inherit}}
-select option{{background:#2a2a2a;color:#FFFFFF}}
-input[type=text]:focus,select:focus,textarea:focus{{border-color:var(--accent);outline:2px solid var(--accent);outline-offset:1px}}
-input[type=search]:not(.top-search){{background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);
--webkit-backdrop-filter:blur(10px);border:1px solid var(--border-soft);color:var(--text);border-radius:16px;padding:6px 12px;font-size:13px;min-width:0;max-width:100%;flex:1 1 160px}}
-.actions{{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;max-width:100%}}
-.empty{{color:var(--muted);padding:8px 0}}
-.missing{{border-radius:8px;color:var(--muted);border:1px dashed var(--border-soft);
-background:linear-gradient(90deg,rgba(255,255,255,0.03) 25%,rgba(255,255,255,0.09) 50%,rgba(255,255,255,0.03) 75%);
-background-size:200% 100%;animation:shimmer 1.6s var(--ease-out) infinite}}
-@keyframes shimmer{{from{{background-position:200% 0}}to{{background-position:-200% 0}}}}
-.feed{{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0;max-width:100%}}
-.feed li{{display:flex;gap:10px;padding:10px 2px;border-bottom:1px solid var(--border-soft);font-size:13px;min-width:0}}
-.feed li>div{{min-width:0;flex:1;overflow-wrap:anywhere;word-break:break-word}}
-.feed .fdot{{width:8px;height:8px;border-radius:999px;background:#A0BCE8;margin-top:6px;flex-shrink:0}}
-.feed time{{color:var(--muted);font-size:12px;overflow-wrap:anywhere}}
-.feed .badge{{margin-bottom:4px}}
-.anim{{opacity:0;animation:fadeSlideIn var(--dur-base) var(--ease-out) forwards}}
-.anim-1{{animation-delay:0ms}}.anim-2{{animation-delay:60ms}}.anim-3{{animation-delay:120ms}}
-.anim-4{{animation-delay:180ms}}.anim-5{{animation-delay:240ms}}.anim-6{{animation-delay:300ms}}
-@keyframes fadeSlideIn{{from{{opacity:0;transform:translateY(12px) scale(0.99)}}to{{opacity:1;transform:none}}}}
-.filterbar{{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px;max-width:100%}}
-.filterbar .muted{{flex-shrink:0}}
-@media(min-width:1441px){{.workspace{{max-width:1600px;margin:0 auto}}}}
-@media(max-width:1280px){{.context-panel{{display:none}}.workspace{{max-width:100%}}.content{{max-width:100%}}}}
-@media(max-width:1100px){{.stats{{grid-template-columns:1fr 1fr}}.topbar{{gap:10px}}.workspace{{gap:16px}}}}
-@media(max-width:960px){{.app{{flex-direction:column}}.sidebar{{width:auto;height:auto;position:static;max-height:none;border-right:0;border-bottom:1px solid var(--border-soft)}}
-.grid2{{grid-template-columns:1fr}}.topbar{{align-items:flex-start;gap:12px;padding:16px}}.workspace{{flex-direction:column;padding:16px}}.content{{padding:0;max-width:none}}.stats{{grid-template-columns:1fr 1fr}}.stat{{max-width:none}}.donut-row{{gap:16px}}
-.stepper{{flex-direction:column;overflow-x:visible}}.step{{min-width:auto;max-width:none;flex:none}}.topbar-row-1,.topbar-row-2{{flex-direction:column;align-items:stretch;gap:8px}}}}
-@media(max-width:640px){{body{{font-size:13px}}.sidebar{{padding:12px}}.nav-link{{min-height:44px;padding:10px}}.topbar{{padding:12px 16px}}
-.top-right{{width:100%}}.top-sel,.top-sel .prod-switch{{width:100%}}.top-sel select{{flex:1}}.top-search{{width:100%;flex:1 1 100%}}
-.workspace{{padding:12px 16px}}.content{{gap:16px}}.card{{padding:16px;border-radius:16px}}.stats{{grid-template-columns:1fr;gap:12px}}
-form.stack{{flex-direction:column;align-items:stretch}}label.f{{flex:1 1 100%}}.donut-row{{flex-direction:column;align-items:flex-start}}
-.donut-side{{flex:1 1 100%;width:100%}}th,td{{padding:8px 12px}}.filterbar{{align-items:stretch;flex-direction:column}}.filterbar input{{width:100%}}}}
-@media(max-width:400px){{.stat-v{{font-size:20px;line-height:28px}}.card h2{{font-size:16px}}.btn:not(.btn-sm){{width:100%}}.table-wrap table{{min-width:520px}}}}
-@media(prefers-reduced-motion:reduce){{*,*::before,*::after{{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important}}.anim{{opacity:1}}}}
-</style>
-</head><body><div class="app">
-<aside class="sidebar">
-<div><div class="logo"><span class="logo-mark">✂</span><span>Cuts <span>Studio</span></span></div><div class="logo-sub">Painel local · YouTube escuro</div></div>
-<div><div class="nav-title">Navegação</div><nav class="nav">{nav_links}</nav></div>
-<div class="side-block"><div class="nav-title">Produções</div>{prod_links}</div>
-<div class="side-block side-hint">CLI: <code>python -m cstudio new --title "..."</code><br>API: <code>GET /health</code> · <code>GET /api/status</code></div>
-<div class="brand-foot"><strong>Cuts Studio</strong> · SnowUI dark #333333</div>
-</aside>
-<div class="main"><header class="topbar">
-<div class="topbar-row-1"><div>{crumb}</div><div>{top_search}</div></div>
-<div class="topbar-row-2"><div class="prod-id-wrap">{prod_info}</div><div>{prod_selector}</div></div>
-</header>
-<div class="workspace"><main class="content{ctx}">{body}</main>{context_panel}</div></div>
-</div></body></html>"""
-
-
-def _checks_table(checks) -> str:
-    out = []
-    badge_ok = '<span class="badge badge-ok">OK</span>'
-    badge_fail = '<span class="badge badge-fail">FAIL</span>'
-    for c in checks:
-        badge = badge_ok if c.get('ok') else badge_fail
-        label = _e(c.get('label', ''))
-        detail = _e(c.get('detail', ''))
-        out.append(f'<tr><td>{badge}</td><td>{label}</td><td class="muted">{detail}</td></tr>')
-    rows = ''.join(out)
-    return f'<div class="table-wrap"><table><thead><tr><th>Status</th><th>Verificação</th><th>Detalhe</th></tr></thead><tbody>{rows}</tbody></table></div>'
-
-
-def _gates_table(gates, slug: str) -> str:
-    rows = []
-    for g in gates:
-        approved = bool(g.get("approved"))
-        badge = '<span class="badge badge-ok">Aprovado</span>' if approved else '<span class="badge badge-warn">Pendente</span>'
-        if approved:
-            action = '<span class="muted">—</span>'
-        else:
-            action = (
-                f'<form class="inline" method="post" action="/action/approve">'
-                f'<input type="hidden" name="slug" value="{_e(slug)}">'
-                f'<input type="hidden" name="gate" value="{_e(g.get("gate", ""))}">'
-                f'<button class="btn btn-sm btn-success" type="submit">Aprovar</button>'
-                f'</form>'
-            )
-        rows.append(
-            f"<tr><td><span class=\"badge badge-gate\">{_e(g.get('gate', ''))}</span></td><td>{_e(g.get('stage', ''))}</td>"
-            f"<td>{badge}</td><td class=\"muted\">{_e(g.get('detail', ''))}</td><td>{action}</td></tr>")
-    return ("<div class=\"table-wrap\"><table><thead><tr><th>Gate</th><th>Fase</th><th>Situação</th>"
-            "<th>Detalhe</th><th>Ação</th></tr></thead><tbody>"
-            + "".join(rows) + "</tbody></table></div>")
-
-
-def _proposals_table(props, slug: str) -> str:
-    if not props:
-        return '<p class="empty">Nenhuma proposta encontrada para esta produção.</p>'
-    rows = []
-    for p in props:
-        pid = str(p.get("id", ""))
-        stt = str(p.get("status", ""))
-        if stt == "applied":
-            badge = '<span class="badge badge-ok">Aplicada</span>'
-        elif stt == "discarded":
-            badge = '<span class="badge badge-muted">Descartada</span>'
-        elif stt == "pending":
-            badge = '<span class="badge badge-warn">Pendente</span>'
-        else:
-            badge = f'<span class="badge badge-info">{_e(stt)}</span>'
-        if stt == "pending":
-            action = (
-                f'<form class="inline" method="post" action="/action/apply-proposal">'
-                f'<input type="hidden" name="slug" value="{_e(slug)}">'
-                f'<input type="hidden" name="id" value="{_e(pid)}">'
-                f'<button class="btn btn-sm btn-primary" type="submit">Aplicar</button></form> '
-                f'<form class="inline" method="post" action="/action/discard-proposal">'
-                f'<input type="hidden" name="slug" value="{_e(slug)}">'
-                f'<input type="hidden" name="id" value="{_e(pid)}">'
-                f'<button class="btn btn-sm btn-danger" type="submit">Descartar</button></form>'
-            )
-        else:
-            action = '<span class="muted">—</span>'
-        rows.append(
-            f"<tr><td><code>{_e(pid)}</code></td><td>{_e(p.get('runner', ''))}</td>"
-            f"<td>{badge}</td><td title=\"{_e(p.get('summary', ''))}\">{_e(p.get('summary', '')[:120])}{'…' if len(str(p.get('summary', ''))) > 120 else ''}</td><td>{action}</td></tr>")
-    return ("<div class=\"table-wrap\"><table><thead><tr><th>ID</th><th>Runner</th><th>Situação</th>"
-            "<th>Resumo</th><th>Ações</th></tr></thead><tbody>"
-            + "".join(rows) + "</tbody></table></div>")
-
-
-def _feed_badge(ev: str) -> str:
-    """Chip Tela 2 para um evento do historico (OK/FAIL/pending/info/gate)."""
-    e = ev.lower()
-    if any(k in e for k in ("approv", "aplica", "appl", "conclu", "advanc", "ok", "avan")):
-        return '<span class="badge badge-ok">OK</span>'
-    if any(k in e for k in ("fail", "falh", "bloque", "block", "error", "erro", "discard", "descart", "neg")):
-        return '<span class="badge badge-fail">FAIL</span>'
-    if "pend" in e:
-        return '<span class="badge badge-warn">Pendente</span>'
-    if "gate" in e:
-        return '<span class="badge badge-gate">Gate</span>'
-    if "propos" in e:
-        return '<span class="badge badge-gate">Proposta</span>'
-    return '<span class="badge badge-info">Info</span>'
-
-
-def _activity_feed(history) -> str:
-    if not history:
-        return '<p class="empty">Sem atividade registrada.</p>'
-    items = []
-    for h in reversed(list(history or [])):
-        ev = _e(h.get("event", "—"))
-        at = _e(h.get("at", ""))
-        extra = []
-        for k in ("gate", "by", "to", "from", "proposal_id", "reason"):
-            if h.get(k):
-                extra.append(f"{k}={_e(h.get(k))}")
-        det = (" · " + " ".join(extra)) if extra else ""
-        badge = _feed_badge(str(h.get("event", "")))
-        items.append(f'<li><span class="fdot"></span><div>{badge}<div>{ev}{det}</div><time class="mono">{at}</time></div></li>')
-    return f'<ul class="feed">{"".join(items)}</ul>'
-
-
-def _cutlist_js() -> str:
-    # Filtro client-side (<30 linhas).
-    return (
-        "<script>(function(){var i=document.getElementById('cutfilter'),"
-        "t=document.getElementById('cuttable');if(!i||!t)return;"
-        "i.addEventListener('input',function(){var q=i.value.toLowerCase(),"
-        "rs=t.tBodies[0].rows,n=0;for(var k=0;k<rs.length;k++){"
-        "var hit=rs[k].textContent.toLowerCase().indexOf(q)>=0;"
-        "rs[k].style.display=hit?'':'none';if(hit)n++;}"
-        "document.getElementById('cutcount').textContent=n+' linhas';});})();</script>"
-    )
-
-
-def _cutlist_table(csv_text: str) -> str:
-    import csv as _csv
-    import io as _io
-    try:
-        rows = list(_csv.DictReader(_io.StringIO(csv_text)))
-    except Exception:
-        return f"<pre>{_e(csv_text[:8000])}</pre>"
+def _activity_feed(history: Iterable[dict], limit: int = 8) -> str:
+    rows = list(history or [])[-limit:]
     if not rows:
-        return '<p class="empty missing">Cutlist vazia ou ilegível.</p>'
-    cols = list(rows[0].keys())
-    head = "".join(f"<th>{_e(c)}</th>" for c in cols)
-    body = "".join(
-        "<tr>" + "".join(f"<td>{_e(r.get(c, ''))}</td>" for c in cols) + "</tr>"
-        for r in rows[:500]
-    )
-    return (
-        '<div class="filterbar"><label class="muted" for="cutfilter">Filtrar</label>'
-        '<input type="search" id="cutfilter" placeholder="ex.: cut_id, fonte, tc…">'
-        f'<span class="muted" id="cutcount">{len(rows)} linhas</span></div>'
-        f'<div class="table-wrap"><table id="cuttable"><thead><tr>{head}</tr></thead>'
-        f"<tbody>{body}</tbody></table></div>"
-    )
+        return '<p class="empty-state compact">Sem atividade registrada.</p>'
+    out = []
+    for h in reversed(rows):
+        event = str(h.get("event") or "atividade")
+        at = str(h.get("at") or "")
+        extra = []
+        for key in ("gate", "by", "to", "from", "proposal_id", "reason"):
+            if h.get(key):
+                extra.append(f"{key}={h.get(key)}")
+        tone = "ok" if any(k in event.lower() for k in ("approv", "aplica", "advanc", "conclu")) else (
+            "danger" if any(k in event.lower() for k in ("fail", "erro", "block", "aband", "discard")) else "neutral"
+        )
+        out.append(
+            '<li class="activity-item"><span class="activity-mark"></span><div>'
+            f'<div class="activity-title">{_badge("Evento", tone)} <strong>{_e(event)}</strong></div>'
+            + (f'<div class="activity-detail">{_e(" · ".join(extra))}</div>' if extra else "")
+            + f'<time>{_e(at)}</time></div></li>'
+        )
+    return f'<ul class="activity-list">{"".join(out)}</ul>'
 
 
-def render(root: str, page: str, slug: str = "") -> str:
-    prods = []
+def _history_for(root: str, slug: str) -> list[dict]:
+    if not slug:
+        return []
     try:
-        prods = C.list_productions(root)
+        _dir, project = C.load_project(root, slug)
+        return list((project or {}).get("history", []) or [])
     except Exception:
-        prods = []
+        return []
 
-    def _hist_for(s: str):
+
+def _nav(page: str, slug: str) -> str:
+    chunks = []
+    for group, items in NAV_GROUPS:
+        links = []
+        for key, label in items:
+            href = f'/?page={_q(key)}' + (f'&slug={_q(slug)}' if slug else "")
+            links.append(
+                f'<a class="nav-link{" active" if key == page else ""}" href="{href}" '
+                f'aria-current="{"page" if key == page else "false"}">{_icon(key)}<span>{_e(label)}</span></a>'
+            )
+        chunks.append(f'<div class="nav-group"><div class="nav-label">{_e(group)}</div>{"".join(links)}</div>')
+    return "".join(chunks)
+
+
+def _production_switcher(productions: list[dict], page: str, slug: str) -> str:
+    if not productions:
+        return '<a class="button button-primary" href="/?page=production">Criar produção</a>'
+    opts = []
+    for p in productions:
+        ps = str(p.get("slug") or "")
+        title = str(p.get("title") or ps)
+        opts.append(f'<option value="{_e(ps)}"{" selected" if ps == slug else ""}>{_e(title)}</option>')
+    return (
+        '<form class="production-switcher" method="get" action="/">'
+        f'<input type="hidden" name="page" value="{_e(page)}">'
+        '<label for="production-switch">Produção</label>'
+        f'<select id="production-switch" name="slug">{"".join(opts)}</select>'
+        '<button class="button button-ghost button-icon-only" type="submit" aria-label="Abrir produção">'
+        f'{_icon("arrow")}</button></form>'
+    )
+
+
+def _context_panel(root: str, slug: str, status: dict | None, history: list[dict]) -> str:
+    if not slug or not status:
+        summary = '<p class="empty-state compact">Selecione uma produção para acompanhar contexto e atividade.</p>'
+    else:
+        stage = str(status.get("stage") or "—")
+        state = str(status.get("state") or "—")
+        blocked = bool(status.get("blocked"))
+        summary = (
+            '<dl class="context-facts">'
+            f'<div><dt>Fase</dt><dd>{_e(_stage_label(root, stage))}</dd></div>'
+            f'<div><dt>Estado</dt><dd>{_e(state)}</dd></div>'
+            f'<div><dt>Readiness</dt><dd>{_badge("Bloqueado" if blocked else "Pronto", "danger" if blocked else "ok")}</dd></div>'
+            '</dl>'
+        )
+    return (
+        '<aside class="context-panel" id="context-panel" aria-label="Contexto da produção">'
+        '<div class="context-head"><div><span class="eyebrow">Contexto</span><h2>Agora</h2></div>'
+        '<button class="icon-button context-close" type="button" data-close-context aria-label="Fechar contexto">×</button></div>'
+        f'<section class="context-card"><h3>Resumo</h3>{summary}</section>'
+        f'<section class="context-card context-activity"><h3>Atividade recente</h3>{_activity_feed(history)}</section>'
+        '</aside>'
+    )
+
+
+def layout(
+    root: str,
+    page: str,
+    body: str,
+    slug: str = "",
+    productions: list[dict] | None = None,
+    status: dict | None = None,
+    history: list[dict] | None = None,
+    csrf_token: str = "",
+) -> str:
+    productions = list(productions or [])
+    history = list(history or [])
+    page = page if page in PAGE_LABELS else "production"
+    label = PAGE_LABELS.get(page, page)
+    if slug and status:
+        title = str(status.get("title") or slug)
+        stage = str(status.get("stage") or "")
+        crumb = f'<span>{_e(label)}</span><span class="crumb-sep">/</span><strong>{_e(title)}</strong>'
+        stage_chip = _badge(_stage_label(root, stage), "info") if stage else ""
+    else:
+        crumb = f'<strong>{_e(label)}</strong>'
+        stage_chip = ""
+    token_meta = f'<meta name="csrf-token" content="{_e(csrf_token)}">' if csrf_token else ""
+    return f'''<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+{token_meta}
+<title>Cuts Studio · {_e(label)}</title>
+<link rel="stylesheet" href="/static/dashboard.css?v=2">
+<script src="/static/dashboard.js?v=2" defer></script>
+</head>
+<body data-page="{_e(page)}" data-slug="{_e(slug)}">
+<div class="app-shell">
+<div class="mobile-backdrop" data-close-sidebar></div>
+<aside class="sidebar" id="sidebar" aria-label="Navegação principal">
+  <a class="brand" href="/?page=production"><span class="brand-mark">C</span><span><strong>Cuts Studio</strong><small>Twitch → YouTube</small></span></a>
+  <nav class="nav">{_nav(page, slug)}</nav>
+  <div class="sidebar-foot"><span class="status-light"></span><span>Local · determinístico</span></div>
+</aside>
+<main class="main-shell">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-button mobile-menu" type="button" data-open-sidebar aria-label="Abrir menu">{_icon("menu")}</button>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/?page=production">Cuts Studio</a><span class="crumb-sep">/</span>{crumb}</nav>
+      {stage_chip}
+    </div>
+    <div class="topbar-actions">
+      {_production_switcher(productions, page, slug)}
+      <button class="icon-button context-toggle" type="button" data-open-context aria-label="Abrir contexto">{_icon("activity")}</button>
+    </div>
+  </header>
+  <div class="workspace">
+    <div class="content" id="main-content">{body}</div>
+    {_context_panel(root, slug, status, history)}
+  </div>
+</main>
+</div>
+<dialog class="confirm-dialog" id="confirm-dialog">
+  <form method="dialog">
+    <div class="dialog-icon">{_icon("warning")}</div>
+    <h2>Confirmar ação</h2>
+    <p id="confirm-message">Esta ação requer confirmação.</p>
+    <div class="dialog-actions"><button class="button button-ghost" value="cancel">Cancelar</button><button class="button button-danger" value="confirm">Confirmar</button></div>
+  </form>
+</dialog>
+</body>
+</html>'''
+
+
+def _checks_table(checks: Iterable[dict]) -> str:
+    rows = []
+    for c in list(checks or []):
+        ok = bool(c.get("ok"))
+        rows.append(
+            '<tr>'
+            f'<td>{_badge("OK" if ok else "Falha", "ok" if ok else "danger")}</td>'
+            f'<td><strong>{_e(c.get("label", ""))}</strong></td>'
+            f'<td class="muted-cell">{_e(c.get("detail", ""))}</td></tr>'
+        )
+    if not rows:
+        return '<p class="empty-state compact">Nenhuma verificação disponível.</p>'
+    return (
+        '<div class="table-scroll"><table><thead><tr><th>Status</th><th>Verificação</th><th>Detalhe</th></tr></thead>'
+        f'<tbody>{"".join(rows)}</tbody></table></div>'
+    )
+
+
+def _gates_table(gates: Iterable[dict], slug: str, csrf_token: str, current_stage: str = "") -> str:
+    rows = []
+    for g in list(gates or []):
+        approved = bool(g.get("approved"))
+        action = '<span class="table-dash">—</span>'
+        if not approved and str(g.get("stage") or "") == str(current_stage or ""):
+            action = (
+                '<form class="inline-form" method="post" action="/action/approve">'
+                f'{_csrf(csrf_token)}<input type="hidden" name="slug" value="{_e(slug)}">'
+                f'<input type="hidden" name="gate" value="{_e(g.get("gate", ""))}">'
+                '<button class="button button-success button-small" type="submit">Aprovar</button></form>'
+            )
+        elif not approved:
+            action = '<span class="muted-cell">Aguarda fase</span>'
+        rows.append(
+            '<tr>'
+            f'<td><code>{_e(g.get("gate", ""))}</code></td><td>{_e(g.get("stage", ""))}</td>'
+            f'<td>{_badge("Aprovado" if approved else "Pendente", "ok" if approved else "warn")}</td>'
+            f'<td class="muted-cell">{_e(g.get("detail", ""))}</td><td>{action}</td></tr>'
+        )
+    return (
+        '<div class="table-scroll"><table><thead><tr><th>Gate</th><th>Fase</th><th>Situação</th><th>Detalhe</th><th>Ação</th></tr></thead>'
+        f'<tbody>{"".join(rows)}</tbody></table></div>'
+    )
+
+
+def _proposal_queue(props: list[dict], slug: str, csrf_token: str) -> str:
+    pending = [p for p in props if str(p.get("status")) == "pending"]
+    if not pending:
+        return '<div class="empty-state"><strong>Fila limpa</strong><span>Não há propostas aguardando revisão humana.</span></div>'
+    cards = []
+    for p in pending:
+        pid = str(p.get("id") or "")
+        cards.append(
+            '<article class="review-card">'
+            '<div class="review-copy">'
+            f'<div class="review-meta">{_badge("Pendente", "warn")}<code>{_e(pid)}</code><span>{_e(p.get("runner", "manual"))}</span></div>'
+            f'<h3>{_e(p.get("summary", "Proposta sem resumo"))}</h3>'
+            '<p>Aplicar grava somente os arquivos já validados pelo contrato de propostas; a decisão continua humana.</p>'
+            '</div><div class="review-actions">'
+            '<form method="post" action="/action/apply-proposal">'
+            f'{_csrf(csrf_token)}<input type="hidden" name="slug" value="{_e(slug)}"><input type="hidden" name="id" value="{_e(pid)}">'
+            '<button class="button button-primary" type="submit">Aplicar proposta</button></form>'
+            '<form method="post" action="/action/discard-proposal" data-confirm="Descartar esta proposta? O registro será preservado no histórico.">'
+            f'{_csrf(csrf_token)}<input type="hidden" name="slug" value="{_e(slug)}"><input type="hidden" name="id" value="{_e(pid)}">'
+            '<button class="button button-ghost" type="submit">Descartar</button></form>'
+            '</div></article>'
+        )
+    return f'<div class="review-queue">{"".join(cards)}</div>'
+
+
+def _proposal_history(props: list[dict]) -> str:
+    old = [p for p in props if str(p.get("status")) != "pending"]
+    if not old:
+        return '<p class="empty-state compact">Nenhuma proposta processada ainda.</p>'
+    rows = []
+    for p in old[:50]:
+        status = str(p.get("status") or "")
+        rows.append(
+            f'<tr><td><code>{_e(p.get("id", ""))}</code></td><td>{_e(p.get("runner", ""))}</td>'
+            f'<td>{_status_badge(status)}</td><td>{_e(str(p.get("summary", ""))[:160])}</td></tr>'
+        )
+    return '<div class="table-scroll"><table><thead><tr><th>ID</th><th>Runner</th><th>Status</th><th>Resumo</th></tr></thead>' + f'<tbody>{"".join(rows)}</tbody></table></div>'
+
+
+def _readiness_summary(root: str, st: dict, pending_props: int) -> str:
+    checks = list(st.get("checks", []) or [])
+    gates = list(st.get("gates", []) or [])
+    failed = sum(1 for c in checks if not c.get("ok"))
+    approved = sum(1 for g in gates if g.get("approved"))
+    stage = str(st.get("stage") or "—")
+    total_stages = len(_stage_data(root)) or 12
+    ids = [str(s.get("id")) for s in _stage_data(root)]
+    try:
+        stage_no = ids.index(stage) + 1
+    except ValueError:
+        stage_no = 1
+    return (
+        '<div class="metric-grid">'
+        + _metric("Fase atual", _stage_label(root, stage), f"{stage_no} de {total_stages}", "blue", "production")
+        + _metric("Checks", str(len(checks) - failed), f"{failed} falhando" if failed else "todos da fase passaram", "green" if not failed else "red", "check")
+        + _metric("Propostas", str(pending_props), "aguardando revisão", "purple", "proposals")
+        + _metric("Gates", f"{approved}/{len(gates)}", "aprovações preservadas por fingerprint", "teal", "gates")
+        + '</div>'
+    )
+
+
+def _next_action(root: str, st: dict, pending_props: int, slug: str, csrf_token: str) -> str:
+    state = str(st.get("state") or "")
+    checks = list(st.get("checks", []) or [])
+    failed = [c for c in checks if not c.get("ok")]
+    current = str(st.get("stage") or "")
+    stage_spec = next((s for s in _stage_data(root) if str(s.get("id")) == current), {})
+    gate = str(stage_spec.get("gate") or "")
+    gate_row = next((g for g in st.get("gates", []) or [] if str(g.get("gate")) == gate), {}) if gate else {}
+
+    if state == "paused":
+        title, desc, tone = "Retomar a produção", "A produção está pausada. Retome antes de continuar o pipeline.", "warn"
+        action = (
+            '<form method="post" action="/action/resume">'
+            f'{_csrf(csrf_token)}<input type="hidden" name="slug" value="{_e(slug)}">'
+            '<button class="button button-primary" type="submit">Retomar produção</button></form>'
+        )
+    elif state == "abandoned":
+        title, desc, tone, action = "Produção abandonada", "O histórico foi preservado e o pipeline não deve continuar.", "danger", ""
+    elif failed:
+        title, desc, tone = "Resolver verificações da fase", f"{len(failed)} check(s) ainda bloqueiam o avanço. Corrija os artefatos da fase {current} e valide novamente.", "danger"
+        action = f'<a class="button button-primary" href="/?page=gates&slug={_q(slug)}">Ver verificações</a>'
+    elif pending_props:
+        title, desc, tone = "Revisar propostas pendentes", f"Há {pending_props} proposta(s) esperando decisão humana antes de serem aplicadas.", "purple"
+        action = f'<a class="button button-primary" href="/?page=proposals&slug={_q(slug)}">Abrir fila de revisão</a>'
+    elif gate and not gate_row.get("approved"):
+        title, desc, tone = f"Revisar {gate}", "A fase está pronta para uma decisão humana. O gate não será aprovado automaticamente.", "purple"
+        action = f'<a class="button button-primary" href="/?page=gates&slug={_q(slug)}">Revisar aprovação</a>'
+    else:
+        title, desc, tone = "Avançar o pipeline", "As verificações necessárias para a fase atual estão atendidas. O avanço continuará validando invariantes no backend.", "ok"
+        action = (
+            '<form method="post" action="/action/advance">'
+            f'{_csrf(csrf_token)}<input type="hidden" name="slug" value="{_e(slug)}">'
+            '<button class="button button-primary" type="submit">Avançar fase</button></form>'
+        )
+    return (
+        f'<section class="next-action next-{_e(tone)}"><div class="next-icon">{_icon("arrow")}</div><div class="next-copy">'
+        '<span class="eyebrow">Próxima ação</span>'
+        f'<h2>{_e(title)}</h2><p>{_e(desc)}</p></div>'
+        + (f'<div class="next-cta">{action}</div>' if action else "")
+        + '</section>'
+    )
+
+
+def _production_page(root: str, prods: list[dict], slug: str, csrf_token: str) -> tuple[str, dict | None, list[dict]]:
+    selected_status = None
+    selected_history: list[dict] = []
+    try:
+        active = C.active_production(root)
+    except Exception:
+        active = None
+    if not slug and active:
+        slug = str(active.get("slug") or "")
+    if slug:
         try:
-            _, _proj = C.load_project(root, s)
-            return list((_proj or {}).get("history", []) or [])
+            selected_status = C.workflow_status(root, slug)
+            selected_history = _history_for(root, slug)
         except Exception:
-            return []
-    if page == "production":
-        rows = "".join(
-            f"<tr><td><span class=\"cell-id\"><span class=\"avatar avatar-sm\" aria-hidden=\"true\">"
-            f"{_e((p['slug'][:2] or '··').upper())}</span>"
-            f"<a href='/?page=gates&slug={_q(p['slug'])}'>{_e(p['slug'])}</a></span></td>"
-            f"<td>{_e(p.get('title', ''))}</td><td>{_e(p.get('stage', ''))}</td>"
-            f"<td>{_e(p.get('state', ''))}</td></tr>" for p in prods)
-        body = (f"<section class='card anim anim-1'><h2>Produções</h2>"
-                f"<p class='muted'>Uma produção ativa por vez. Clique no slug para abrir os gates.</p>"
-                f"<div class=\"table-wrap\"><table><thead><tr><th>Slug</th><th>Título</th>"
-                f"<th>Fase</th><th>Estado</th></tr></thead><tbody>{rows}</tbody></table></div>"
-                f"<div class='actions'><span class='muted'>CLI: "
-                f"<code>python -m cstudio new --title \"...\"</code></span></div></section>")
+            selected_status = None
+    body = _page_header(
+        "Central de produção",
+        "Operação",
+        "Acompanhe o trabalho que realmente destrava o próximo estágio, sem esconder checks, gates ou decisões humanas.",
+    )
+    if selected_status:
         try:
-            _active = C.active_production(root)
+            props = P.list_proposals(root, slug)
         except Exception:
-            _active = None
-        if _active:
-            _aslug = str(_active.get("slug", "") or "")
-            _atitle = str(_active.get("title", "") or "")
-            _life = (
-                f"<p><span class='badge badge-warn'>Uma ativa por vez</span> "
-                f"<span class='muted'>Já existe uma produção ativa (<strong>{_e(_aslug)}</strong>"
-                f"{(' — ' + _e(_atitle)) if _atitle else ''}). "
-                f"Pause ou abandone a atual antes de criar outra.</span></p>"
-                f"<div class='actions'>"
-                f"<form class='inline' method='post' action='/action/pause'>"
-                f"<input type='hidden' name='slug' value='{_e(_aslug)}'>"
-                f"<button class='btn btn-sm' type='submit'>Pausar</button></form> "
-                f"<form class='inline' method='post' action='/action/resume'>"
-                f"<input type='hidden' name='slug' value='{_e(_aslug)}'>"
-                f"<button class='btn btn-sm' type='submit'>Retomar</button></form> "
-                f"<form class='inline' method='post' action='/action/abandon'>"
-                f"<input type='hidden' name='slug' value='{_e(_aslug)}'>"
-                f"<label class='muted' style='font-size:12px;display:inline-flex;align-items:center;gap:6px;white-space:nowrap'><input type='checkbox' name='confirmo' value='on' required> confirmo</label> "
-                f"<button class='btn btn-sm btn-danger' type='submit'>Abandonar</button></form>"
-                f"</div>")
-        else:
-            _life = "<p class='muted'>Nenhuma produção ativa. Preencha e crie.</p>"
+            props = []
+        pending = sum(1 for p in props if str(p.get("status")) == "pending")
+        body += _next_action(root, selected_status, pending, slug, csrf_token)
+        body += _readiness_summary(root, selected_status, pending)
         body += (
-            f"<section class='card anim anim-2'><h2>Nova produção</h2>"
-            f"{_life}"
-            f"<form class='stack' method='post' action='/action/new'>"
-            f"<label class='f'>Título*<input type='text' name='title' required placeholder='Ex.: React do episódio 12'></label>"
-            f"<label class='f'>Slug (opcional)<input type='text' name='slug' placeholder='auto a partir do título'></label>"
-            f"<label class='f'>Source URL (opcional)<input type='text' name='source_url' placeholder='https://...'></label>"
-            f"<button class='btn btn-primary' type='submit'>Criar produção</button></form>"
-            f"<div class='actions'><form class='inline' method='post' action='/action/maintain'>"
-            f"<button class='btn btn-sm btn-ghost' type='submit'>Preparar (maintain)</button></form>"
-            f"<span class='muted'>Prepara o repositório sem terminal.</span></div></section>")
-        if slug:
+            '<section class="panel"><div class="panel-head"><div><span class="eyebrow">Pipeline</span><h2>Fluxo da produção</h2></div>'
+            f'<a class="text-link" href="/?page=gates&slug={_q(slug)}">Abrir aprovações {_icon("arrow")}</a></div>{_pipeline(root, str(selected_status.get("stage") or ""))}</section>'
+        )
+    else:
+        body += '<section class="empty-state hero-empty"><strong>Nenhuma produção selecionada</strong><span>Crie uma produção ou escolha uma existente abaixo.</span></section>'
+
+    rows = []
+    for p in prods:
+        ps = str(p.get("slug") or "")
+        state = str(p.get("state") or "")
+        rows.append(
+            '<tr>'
+            f'<td><a class="production-cell" href="/?page=production&slug={_q(ps)}"><span class="production-avatar">{_e((ps[:2] or "··").upper())}</span><span><strong>{_e(p.get("title") or ps)}</strong><small>{_e(ps)}</small></span></a></td>'
+            f'<td>{_e(_stage_label(root, str(p.get("stage") or "")))}</td><td>{_status_badge(state)}</td>'
+            f'<td><a class="text-link" href="/?page=gates&slug={_q(ps)}">Abrir {_icon("arrow")}</a></td></tr>'
+        )
+    prod_table = (
+        '<div class="table-scroll"><table><thead><tr><th>Produção</th><th>Fase</th><th>Estado</th><th></th></tr></thead>'
+        f'<tbody>{"".join(rows)}</tbody></table></div>' if rows else '<p class="empty-state compact">Ainda não há produções.</p>'
+    )
+    body += (
+        '<div class="two-column lower-grid">'
+        '<section class="panel"><div class="panel-head"><div><span class="eyebrow">Workspace</span><h2>Produções</h2></div></div>'
+        f'{prod_table}</section>'
+        '<section class="panel"><div class="panel-head"><div><span class="eyebrow">Nova</span><h2>Criar produção</h2></div></div>'
+    )
+    if active:
+        aslug = str(active.get("slug") or "")
+        body += (
+            f'<div class="notice notice-warn">{_icon("warning")}<div><strong>Uma produção já está ativa</strong><span>{_e(active.get("title") or aslug)}. Pause ou abandone a atual antes de criar outra.</span></div></div>'
+            '<div class="lifecycle-actions">'
+            '<form method="post" action="/action/pause">'
+            f'{_csrf(csrf_token)}<input type="hidden" name="slug" value="{_e(aslug)}"><button class="button button-ghost" type="submit">{_icon("pause")} Pausar</button></form>'
+            '<form method="post" action="/action/abandon" data-confirm="Abandonar esta produção? O histórico será preservado, mas ela deixará de ser ativa.">'
+            f'{_csrf(csrf_token)}<input type="hidden" name="slug" value="{_e(aslug)}"><input type="hidden" name="confirmo" value="on"><button class="button button-danger" type="submit">Abandonar</button></form>'
+            '</div>'
+        )
+    else:
+        body += (
+            '<form class="form-stack" method="post" action="/action/new">'
+            f'{_csrf(csrf_token)}'
+            '<label><span>Título <b>*</b></span><input type="text" name="title" required placeholder="Ex.: melhores momentos da semana"></label>'
+            '<label><span>Slug <small>opcional</small></span><input type="text" name="slug" placeholder="gerado automaticamente"></label>'
+            '<label><span>Source URL <small>opcional</small></span><input type="url" name="source_url" placeholder="https://www.twitch.tv/canal/videos"></label>'
+            '<button class="button button-primary" type="submit">Criar produção</button></form>'
+        )
+    body += (
+        '<div class="panel-footer"><form method="post" action="/action/maintain">'
+        f'{_csrf(csrf_token)}<input type="hidden" name="slug" value="{_e(slug)}"><button class="button button-ghost button-small" type="submit">Executar maintain</button></form>'
+        '<span>Prepara a estrutura do repositório sem alterar decisões editoriais.</span></div></section></div>'
+    )
+    return body, selected_status, selected_history
+
+
+def _twitch_default_streamer(project: dict) -> str:
+    source = str((project or {}).get("source_url", "") or "")
+    m = re.search(r"(?:https?://)?(?:www\.)?twitch\.tv/([A-Za-z0-9_]{1,25})(?:/|$)", source, re.I)
+    if m and m.group(1).lower() not in {"videos", "directory"}:
+        return m.group(1)
+    return ""
+
+
+def _run_flags(run: dict) -> str:
+    parts = ["--sequential" if run.get("sequential") else f"--threads {run.get('threads', 4)}"]
+    if run.get("force"):
+        parts.append("--force")
+    if not run.get("resume", True):
+        parts.append("--no-resume")
+    return " ".join(parts)
+
+
+def _twitch_runs_table(runs: list[dict]) -> str:
+    if not runs:
+        return '<p class="empty-state compact">Nenhuma captura Twitch registrada nesta produção.</p>'
+    rows = []
+    for run in runs:
+        rows.append(
+            '<tr>'
+            f'<td><time>{_e(run.get("started_at", ""))}</time></td><td>{_status_badge(str(run.get("status") or "unknown"))}</td>'
+            f'<td>{_e(run.get("streamer", ""))}</td><td><code>{_e(run.get("target", ""))}</code></td>'
+            f'<td><code>{_e(_run_flags(run))}</code></td><td>{len(run.get("imported_assets") or [])}</td></tr>'
+        )
+    return '<div class="table-scroll"><table><thead><tr><th>Início</th><th>Status</th><th>Canal</th><th>Target</th><th>Flags</th><th>Assets</th></tr></thead>' + f'<tbody>{"".join(rows)}</tbody></table></div>'
+
+
+def render_twitch_run(root: str, slug: str) -> str:
+    """Render only the live Twitch run fragment. Used by progressive polling."""
+    from . import twitch as TW
+
+    runs = TW.list_runs(root, slug, 8)
+    latest = runs[0] if runs else None
+    if not latest:
+        return (
+            '<div class="live-run" data-twitch-live data-running="false">'
+            '<div class="empty-state"><strong>Nenhuma execução ainda</strong><span>Configure a captura ao lado e inicie o primeiro ingest.</span></div></div>'
+        )
+    status = str(latest.get("status") or "unknown")
+    running = status == "running"
+    assets = list(latest.get("imported_assets") or [])
+    log_tail = TW.tail_log(root, slug, latest.get("id"))
+    asset_items = "".join(
+        f'<li><code>{_e(a.get("asset_id", ""))}</code><span>{_e(a.get("kind", ""))}</span></li>' for a in assets
+    ) or '<li class="empty-inline">Nenhum asset importado ainda.</li>'
+    error = f'<div class="notice notice-danger">{_icon("warning")}<div><strong>Falha no scraper</strong><span>{_e(latest.get("error"))}</span></div></div>' if latest.get("error") else ""
+    progress = '<span class="live-pulse" aria-hidden="true"></span>' if running else ""
+    return (
+        f'<div class="live-run" data-twitch-live data-running="{"true" if running else "false"}" data-run-id="{_e(latest.get("id", ""))}">'
+        '<div class="live-head"><div>'
+        f'<div class="live-status">{progress}{_status_badge(status)}<strong>{_e(latest.get("streamer", ""))}</strong></div>'
+        f'<p>Target <code>{_e(latest.get("target", ""))}</code> · workers efetivos <strong>{_e(latest.get("effective_threads", ""))}</strong></p>'
+        '</div><div class="live-run-id"><span>Run</span><code>' + _e(latest.get("id", "")) + '</code></div></div>'
+        + error
+        + '<div class="live-grid"><section><h3>Comando</h3><code class="command-line">' + _e(latest.get("command", "")) + '</code></section>'
+        + f'<section><h3>Assets registrados <span class="count-pill">{len(assets)}</span></h3><ul class="asset-list">{asset_items}</ul></section></div>'
+        + '<section class="log-panel"><div class="log-head"><h3>Log</h3>' + ('<span>Atualizando a cada 2 s</span>' if running else '<span>Execução finalizada</span>') + '</div>'
+        + f'<pre class="log-output" tabindex="0">{_e(log_tail or "Sem log ainda.")}</pre></section></div>'
+    )
+
+
+def _twitch_page(root: str, slug: str, st: dict, csrf_token: str) -> str:
+    from . import twitch as TW
+
+    try:
+        _pdir, project = C.load_project(root, slug)
+    except Exception:
+        project = {}
+    health = TW.scraper_health(root)
+    runs = TW.list_runs(root, slug, 8)
+    latest = runs[0] if runs else None
+    running = bool(latest and latest.get("status") == "running")
+    can_run = bool(health.get("script_present") and health.get("bun_available"))
+    default_streamer = _twitch_default_streamer(project)
+    body = _page_header(
+        "Twitch Ingest",
+        "Captura operacional",
+        "Colete VOD metadata e chat para a produção atual. A captura registra evidência, mas nunca concede direitos, aprova gate ou avança fase.",
+        _badge("Scraper pronto" if can_run else "Setup pendente", "ok" if can_run else "danger") + _badge("Job em execução" if running else "Idle", "info" if running else "neutral"),
+    )
+    disabled = " disabled" if (running or not can_run) else ""
+    opts = "".join(f'<option value="{n}"{" selected" if n == 4 else ""}>{n} worker{"s" if n != 1 else ""}</option>' for n in (1, 2, 4, 8))
+    body += (
+        '<div class="twitch-layout">'
+        '<section class="panel setup-panel"><div class="panel-head"><div><span class="eyebrow">Run setup</span><h2>Nova captura</h2></div></div>'
+        '<form class="form-stack" method="post" action="/action/twitch-scrape">'
+        f'{_csrf(csrf_token)}<input type="hidden" name="slug" value="{_e(slug)}">'
+        f'<label><span>Canal Twitch <b>*</b></span><input type="text" name=\'streamer\' value=\'{_e(default_streamer)}\' placeholder="ex.: alanzoka" required></label>'
+        '<label><span>Target</span><input type="text" name=\'target\' value=\'3\' placeholder="3, VOD ID ou URL"></label>'
+        f'<label><span>Workers</span><select name=\'threads\'>{opts}</select><small>8 workers equivale a <code>--threads 8</code>.</small></label>'
+        '<fieldset class="option-group"><legend>Flags</legend>'
+        '<label class="check-option"><input type="checkbox" name=\'sequential\' value=\'on\'><span><strong>Sequencial</strong><small><code>--sequential</code> força 1 worker.</small></span></label>'
+        '<label class="check-option"><input type="checkbox" name=\'force\' value=\'on\'><span><strong>Forçar captura</strong><small><code>--force</code> ignora skip de VOD completo.</small></span></label>'
+        '<label class="check-option"><input type="checkbox" name=\'no_resume\' value=\'on\'><span><strong>Desabilitar resume</strong><small><code>--no-resume</code> reinicia o trabalho aplicável.</small></span></label>'
+        '</fieldset>'
+        f'<button class="button button-primary button-wide" type="submit"{disabled}>{_icon("play")} {"Captura em execução" if running else ("Iniciar Twitch ingest" if can_run else "Bun necessário para executar")}</button>'
+        '</form>'
+        '<div class="setup-health">'
+        f'<div><span>Script</span>{_badge("presente" if health.get("script_present") else "ausente", "ok" if health.get("script_present") else "danger")}</div>'
+        f'<div><span>Bun</span><code>{_e(health.get("bun") or "não encontrado")}</code></div>'
+        f'<div><span>Playwright</span>{_badge("instalado" if health.get("dependencies_present") else "instala no 1º run", "ok" if health.get("dependencies_present") else "warn")}</div>'
+        '</div></section>'
+        '<section class="panel live-panel"><div class="panel-head"><div><span class="eyebrow">Live run</span><h2>Execução atual</h2></div><span class="live-connection" data-live-connection>Monitor local</span></div>'
+        f'<div id="twitch-run-fragment" data-twitch-endpoint="/ui/twitch-run?slug={_q(slug)}">{render_twitch_run(root, slug)}</div></section>'
+        '</div>'
+        '<section class="panel"><div class="panel-head"><div><span class="eyebrow">Histórico</span><h2>Capturas recentes</h2></div></div>'
+        f'{_twitch_runs_table(runs)}</section>'
+        '<section class="cli-strip"><div><span class="eyebrow">CLI equivalente</span><code>python -m cstudio --root . twitch-scrape '
+        f'{_e(slug)} --streamer {_e(default_streamer or "CANAL")} --target 3 --threads 8</code></div><span>Saída isolada em <code>.studio/internal/ingest/twitch/</code>.</span></section>'
+    )
+    return body
+
+
+def _gates_page(root: str, slug: str, st: dict, csrf_token: str) -> str:
+    gates = list(st.get("gates", []) or [])
+    checks = list(st.get("checks", []) or [])
+    pending = [g for g in gates if not g.get("approved")]
+    failed = [c for c in checks if not c.get("ok")]
+    actions = _badge(f"{len(pending)} gate(s) pendente(s)", "warn" if pending else "ok") + _badge(f"{len(failed)} check(s) falhando", "danger" if failed else "ok")
+    body = _page_header("Aprovações e readiness", "Revisão humana", "Gates são decisões explícitas e vinculadas a fingerprints dos artefatos aprovados.", actions)
+    body += (
+        '<section class="panel gate-focus"><div class="panel-head"><div><span class="eyebrow">Fase atual</span>'
+        f'<h2>{_e(_stage_label(root, str(st.get("stage") or "")))}</h2></div>{_badge("Bloqueado" if st.get("blocked") else "Pronto para avançar", "danger" if st.get("blocked") else "ok")}</div>'
+        f'{_pipeline(root, str(st.get("stage") or ""))}</section>'
+    )
+    body += '<div class="two-column review-grid"><section class="panel"><div class="panel-head"><div><span class="eyebrow">Gates</span><h2>Fila de aprovação</h2></div></div>' + _gates_table(gates, slug, csrf_token, str(st.get("stage") or "")) + '</section>'
+    body += '<section class="panel"><div class="panel-head"><div><span class="eyebrow">Checks</span><h2>Verificações da fase</h2></div></div>' + _checks_table(checks)
+    body += (
+        '<div class="advance-box"><div><strong>Avançar somente quando estiver pronto</strong><span>O backend continuará recusando avanço com check ou gate obrigatório pendente.</span></div>'
+        '<form method="post" action="/action/advance">'
+        f'{_csrf(csrf_token)}<input type="hidden" name="slug" value="{_e(slug)}"><button class="button button-primary" type="submit">Avançar fase</button></form></div></section></div>'
+    )
+    return body
+
+
+def _proposals_page(slug: str, props: list[dict], csrf_token: str) -> str:
+    pending = [p for p in props if str(p.get("status")) == "pending"]
+    body = _page_header("Propostas", "Revisão humana", "Runners externos podem propor trabalho, mas nunca aplicam suas próprias decisões.", _badge(f"{len(pending)} pendente(s)", "warn" if pending else "ok"))
+    body += '<section class="panel"><div class="panel-head"><div><span class="eyebrow">Inbox</span><h2>Fila para revisão</h2></div></div>' + _proposal_queue(props, slug, csrf_token) + '</section>'
+    body += '<section class="panel"><div class="panel-head"><div><span class="eyebrow">Histórico</span><h2>Propostas processadas</h2></div></div>' + _proposal_history(props) + '</section>'
+    return body
+
+
+def _csv_preview(text: str, filterable: bool = False) -> str:
+    try:
+        rows = list(csv.DictReader(io.StringIO(text)))
+    except Exception:
+        rows = []
+    if not rows:
+        return '<p class="empty-state compact">CSV vazio ou ilegível.</p>'
+    columns = list(rows[0].keys())
+    head = "".join(f'<th>{_e(c)}</th>' for c in columns)
+    body = "".join('<tr>' + "".join(f'<td>{_e(row.get(c, ""))}</td>' for c in columns) + '</tr>' for row in rows[:500])
+    filterbar = (
+        '<div class="filterbar"><label for="artifact-filter">Filtrar tabela</label><input id="artifact-filter" type="search" placeholder="Buscar em qualquer coluna" data-table-filter="artifact-table"><span data-table-count>'
+        f'{len(rows)} linhas</span></div>' if filterable else ""
+    )
+    return filterbar + f'<div class="table-scroll artifact-table"><table id="artifact-table"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>'
+
+
+def _json_preview(text: str) -> str:
+    try:
+        data = json.loads(text)
+    except Exception:
+        return f'<pre class="code-block">{_e(text[:12000])}</pre>'
+    facts = []
+    if isinstance(data, dict):
+        for key, value in list(data.items())[:12]:
+            if isinstance(value, (str, int, float, bool)) or value is None:
+                display = str(value)
+            elif isinstance(value, list):
+                display = f"{len(value)} item(ns)"
+            elif isinstance(value, dict):
+                display = f"{len(value)} campo(s)"
+            else:
+                continue
+            facts.append(f'<div><dt>{_e(key)}</dt><dd>{_e(display)}</dd></div>')
+    summary = f'<dl class="json-facts">{"".join(facts)}</dl>' if facts else ""
+    raw = _e(json.dumps(data, ensure_ascii=False, indent=2)[:20000])
+    return summary + f'<details class="raw-details"><summary>Ver JSON bruto</summary><pre class="code-block">{raw}</pre></details>'
+
+
+def _artifact_page(root: str, page: str, slug: str, st: dict) -> str:
+    spec = ARTIFACT_PAGES[page]
+    path = os.path.join(C.prod_path(root, slug), spec["path"])
+    exists = os.path.isfile(path)
+    text = open(path, encoding="utf-8", errors="replace").read() if exists else ""
+    body = _page_header(spec["title"], "Artefato", spec["description"], _badge("Disponível" if exists else "Ausente", "ok" if exists else "warn"))
+    body += (
+        '<section class="artifact-hero"><div><span class="eyebrow">Artefato canônico</span>'
+        f'<h2>{_e(spec["path"])}</h2><p>{"O arquivo existe e pode ser revisado abaixo." if exists else "Este artefato ainda não foi produzido para a produção atual."}</p></div>'
+        f'<div class="artifact-state artifact-{_e(spec["accent"])}">{_icon(page)}<span>{"ready" if exists else "missing"}</span></div></section>'
+    )
+    preview = (
+        _csv_preview(text, filterable=(page == "cutlist")) if exists and spec["kind"] == "csv" else
+        _json_preview(text) if exists and spec["kind"] == "json" else
+        '<div class="empty-state"><strong>Sem preview disponível</strong><span>Avance o pipeline ou produza o artefato correspondente para preencher esta tela.</span></div>'
+    )
+    body += '<div class="artifact-layout"><section class="panel artifact-preview"><div class="panel-head"><div><span class="eyebrow">Preview</span><h2>Conteúdo</h2></div></div>' + preview + '</section>'
+    body += '<aside class="artifact-side"><section class="panel"><div class="panel-head"><div><span class="eyebrow">Readiness</span><h2>Checks da fase</h2></div></div>' + _checks_table(st.get("checks", [])) + '</section>'
+    body += '<section class="panel"><div class="panel-head"><div><span class="eyebrow">Pipeline</span><h2>Posição atual</h2></div></div>' + _pipeline(root, str(st.get("stage") or "")) + '</section></aside></div>'
+    return body
+
+
+def _diagnostics_page(root: str, slug: str, st: dict, history: list[dict]) -> str:
+    from . import twitch as TW
+    diag = {
+        "stage": st.get("stage"), "state": st.get("state"), "blocked": st.get("blocked"),
+        "gates": st.get("gates"), "checks": st.get("checks"), "history": history[-20:],
+    }
+    health = TW.scraper_health(root)
+    body = _page_header("Diagnóstico", "Sistema", "Estado observável do harness para investigação. Esta página não altera nenhuma decisão da produção.")
+    body += '<div class="metric-grid metric-grid-3">' + _metric("Stage", _stage_label(root, str(st.get("stage") or "")), str(st.get("stage") or ""), "blue", "production") + _metric("Estado", str(st.get("state") or "—"), "lifecycle da produção", "purple", "activity") + _metric("Readiness", "Bloqueado" if st.get("blocked") else "Pronto", "resultado determinístico", "red" if st.get("blocked") else "green", "check") + '</div>'
+    body += '<div class="two-column diagnostics-grid"><section class="panel"><div class="panel-head"><div><span class="eyebrow">Checks</span><h2>Verificações atuais</h2></div></div>' + _checks_table(st.get("checks", [])) + '</section>'
+    body += '<section class="panel"><div class="panel-head"><div><span class="eyebrow">Twitch scraper</span><h2>Saúde local</h2></div></div><dl class="json-facts">' + ''.join([
+        f'<div><dt>Script</dt><dd>{_e("presente" if health.get("script_present") else "ausente")}</dd></div>',
+        f'<div><dt>Bun</dt><dd>{_e(health.get("bun") or "não encontrado")}</dd></div>',
+        f'<div><dt>Dependências</dt><dd>{_e("presentes" if health.get("dependencies_present") else "pendentes")}</dd></div>',
+    ]) + '</dl></section></div>'
+    body += '<section class="panel"><div class="panel-head"><div><span class="eyebrow">Estado bruto</span><h2>Workflow snapshot</h2></div></div><pre class="code-block">' + _e(json.dumps(diag, ensure_ascii=False, indent=2)) + '</pre></section>'
+    return body
+
+
+def render(root: str, page: str, slug: str = "", csrf_token: str = "") -> str:
+    """Render a complete dashboard page.
+
+    ``csrf_token`` is injected by the local HTTP server. CLI-generated HTML may omit it.
+    """
+    try:
+        productions = list(C.list_productions(root) or [])
+    except Exception:
+        productions = []
+    page = page if page in PAGE_LABELS else "production"
+
+    if page == "production":
+        body, selected_status, history = _production_page(root, productions, slug, csrf_token)
+        # _production_page may choose the active production when no slug was supplied.
+        if not slug and selected_status:
             try:
-                st = C.workflow_status(root, slug)
-                props = P.list_proposals(root, slug)
-                pend = sum(1 for x in props if x.get("status") == "pending")
-                ok_g = sum(1 for g in st["gates"] if g.get("approved"))
-                body += (
-                    f"<section class='card anim anim-2'><h3>Resumo — {_e(slug)}</h3>"
-                    f"{_stat_cards(st, pend)}"
-                    f"<div class='donut-row'>{_donut(ok_g, len(st['gates']) or 1)}"
-                    f"<div class='donut-side'><h3>Pipeline</h3>{_stepper(root, st['stage'])}</div></div></section>")
+                active = C.active_production(root)
+                slug = str((active or {}).get("slug") or "")
             except Exception:
                 pass
-        return layout(page, body, slug, productions=prods, status=None, history=_hist_for(slug) if slug else [])
+        return layout(root, page, body, slug, productions, selected_status, history, csrf_token)
+
     if not slug:
-        body = ("<section class='card anim anim-1'><h2>Selecione uma produção</h2>"
-                "<p class='muted'>Use o seletor no topo ou abra a página "
-                "<a href='/?page=production'>Produção</a> para escolher.</p></section>")
-        return layout(page, body, slug, productions=prods, status=None, history=[])
+        body = _page_header(PAGE_LABELS[page], "Produção necessária", "Escolha uma produção no topo para abrir esta área.")
+        body += '<section class="empty-state hero-empty"><strong>Selecione uma produção</strong><span>As telas operacionais sempre trabalham dentro de uma produção explícita.</span><a class="button button-primary" href="/?page=production">Abrir produções</a></section>'
+        return layout(root, page, body, "", productions, None, [], csrf_token)
+
     try:
         st = C.workflow_status(root, slug)
     except Exception as exc:
-        return layout(page, f"<section class='card'><p class='bad'>{_e(exc)}</p></section>",
-                      slug, productions=prods, status=None, history=_hist_for(slug))
+        body = _page_header("Produção indisponível", "Erro", "Não foi possível carregar o estado solicitado.")
+        body += f'<div class="notice notice-danger">{_icon("warning")}<div><strong>Falha ao carregar</strong><span>{_e(exc)}</span></div></div>'
+        return layout(root, page, body, slug, productions, None, _history_for(root, slug), csrf_token)
+
+    history = _history_for(root, slug)
     try:
-        props_all = P.list_proposals(root, slug)
+        props = list(P.list_proposals(root, slug) or [])
     except Exception:
-        props_all = []
-    pend_n = sum(1 for x in props_all if x.get("status") == "pending")
-    ok_g = sum(1 for g in st["gates"] if g.get("approved"))
-    stats_html = _stat_cards(st, pend_n)
-    stepper_html = _stepper(root, st["stage"])
-    if page == "gates":
-        pending = [g for g in st["gates"] if not g.get("approved")]
-        if pending:
-            opts = "".join(
-                f'<option value="{_e(g["gate"])}">{_e(g["gate"])} ({_e(g["stage"])})</option>'
-                for g in pending)
-            approve_box = (
-                "<section class='card anim anim-4'><h3>Aprovar gate pendente</h3>"
-                "<form class='stack' method='post' action='/action/approve'>"
-                f"<input type='hidden' name='slug' value='{_e(slug)}'>"
-                f"<label class='f'>Gate<select name='gate'>{opts}</select></label>"
-                "<label class='f'>Responsável<input type='text' name='by' value='showrunner'></label>"
-                "<label class='f'>Nota<input type='text' name='note' placeholder='opcional'></label>"
-                "<button class='btn btn-success' type='submit'>Aprovar gate</button></form>"
-                "<div class='actions'><form class='inline' method='post' action='/action/advance'>"
-                f"<input type='hidden' name='slug' value='{_e(slug)}'>"
-                "<button class='btn btn-primary' type='submit'>Avançar fase</button></form>"
-                "<span class='muted'>Avanço exige checks + gates aprovados.</span></div></section>")
-        else:
-            approve_box = (
-                "<section class='card anim anim-4'><h3>Avançar fase</h3>"
-                "<p class='muted'>Todos os gates visíveis estão aprovados.</p>"
-                "<form class='inline' method='post' action='/action/advance'>"
-                f"<input type='hidden' name='slug' value='{_e(slug)}'>"
-                "<button class='btn btn-primary' type='submit'>Avançar fase</button></form></section>")
-        body = (f"<section class='card anim anim-1'><h2>{_e(slug)} — fase {_e(st['stage'])}</h2>"
-                f"<p class='muted'>Estado: {_e(st['state'])} · "
-                f"{'Bloqueado' if st['blocked'] else 'Liberado'}</p>"
-                f"{stats_html}</section>"
-                f"<section class='card anim anim-2'><h3>Pipeline (12 stages)</h3>{stepper_html}</section>"
-                f"<section class='card anim anim-3'><h3>Gates</h3>"
-                f"<div class='donut-row'>{_donut(ok_g, len(st['gates']) or 1)}"
-                f"<div class='donut-side'>{_gates_table(st['gates'], slug)}</div></div></section>"
-                f"{approve_box}"
-                f"<section class='card anim anim-5'><h3>Verificações da fase</h3>{_checks_table(st['checks'])}</section>")
-        return layout(page, body, slug, productions=prods, status=st, history=_hist_for(slug))
-    if page == "proposals":
-        props = props_all
-        body = (f"<section class='card anim anim-1'><h2>Propostas — {_e(slug)}</h2>"
-                f"<p class='muted'>Propostas pendentes exigem revisão humana antes de aplicar.</p>"
-                f"{stats_html}"
-                f"{_proposals_table(props, slug)}</section>"
-                f"<section class='card anim anim-2'><h3>Aplicar / descartar por ID</h3>"
-                f"<form class='stack' method='post' action='/action/apply-proposal'>"
-                f"<input type='hidden' name='slug' value='{_e(slug)}'>"
-                f"<label class='f'>ID da proposta<input type='text' name='id' placeholder='ex.: a1b2c3d4e5f6' required></label>"
-                f"<button class='btn btn-primary' type='submit'>Aplicar</button></form>"
-                f"<div class='actions'><form class='stack' method='post' action='/action/discard-proposal'>"
-                f"<input type='hidden' name='slug' value='{_e(slug)}'>"
-                f"<label class='f'>ID da proposta<input type='text' name='id' placeholder='ex.: a1b2c3d4e5f6' required></label>"
-                f"<button class='btn btn-danger' type='submit'>Descartar</button></form></div>"
-                f"<p class='muted'>Aplicar grava os arquivos validados; descartar marca como descartada.</p></section>"
-                f"<section class='card anim anim-3'><h3>Pipeline</h3>{stepper_html}</section>")
-        return layout(page, body, slug, productions=prods, status=st, history=_hist_for(slug))
-    if page in ("cutlist", "sync", "graphics", "master", "release"):
-        titles = {"cutlist": "Cutlist", "sync": "Sync", "graphics": "Gráficos",
-                  "master": "Master", "release": "Release"}
-        mapping = {"cutlist": ".studio/internal/cutlist/cutlist.csv",
-                   "sync": ".studio/internal/sync/sync-report.json",
-                   "graphics": ".studio/internal/graphics/overlays.csv",
-                   "master": ".studio/internal/composition/master.json",
-                   "release": ".studio/internal/release/metadata.json"}
-        from .core import prod_path
-        p = os.path.join(prod_path(root, slug), mapping[page])
-        content = open(p, encoding="utf-8", errors="replace").read() if os.path.isfile(p) else "(arquivo ausente)"
-        is_missing = not os.path.isfile(p)
-        if page == "cutlist" and not is_missing:
-            content_html = _cutlist_table(content)
-            extra_js = _cutlist_js()
-        else:
-            cls = " class='missing'" if is_missing else ""
-            content_html = f"<pre{cls}>{_e(content[:8000])}</pre>"
-            extra_js = ""
-        body = (f"<section class='card anim anim-1'><h2>{_e(titles.get(page, page))} — {_e(slug)}</h2>"
-                f"<p class='muted'><code>{_e(mapping[page])}</code></p>"
-                f"{stats_html}"
-                f"{content_html}</section>"
-                f"<section class='card anim anim-2'><h3>Pipeline</h3>{stepper_html}</section>"
-                f"<section class='card anim anim-3'><h3>Verificações da fase</h3>{_checks_table(st['checks'])}</section>")
-        html_out = layout(page, body, slug, productions=prods, status=st, history=_hist_for(slug))
-        if extra_js:
-            html_out = html_out.replace("</body>", extra_js + "</body>")
-        return html_out
-    # diagnostics
-    try:
-        _vdir, _proj = C.load_project(root, slug)
-        hist = (_proj or {}).get("history", [])[-10:]
-    except Exception:
-        hist = []
-    diag = {"stage": st["stage"], "state": st["state"], "blocked": st["blocked"],
-            "gates": st["gates"], "history": hist}
-    import json as _j
-    body = (f"<section class='card anim anim-1'><h2>Diagnóstico — {_e(slug)}</h2>{stats_html}"
-            f"<div class='donut-row'>{_donut(ok_g, len(st['gates']) or 1)}"
-            f"<div class='donut-side'><h3>Atividade recente</h3>{_activity_feed(hist)}</div></div></section>"
-            f"<section class='card anim anim-2'><h3>Pipeline</h3>{stepper_html}</section>"
-            f"<section class='card anim anim-3'><h2>Estado bruto</h2>"
-            f"<pre>{_e(_j.dumps(diag, ensure_ascii=False, indent=2))}</pre></section>"
-            f"<section class='card anim anim-4'><h3>Verificações</h3>{_checks_table(st['checks'])}</section>")
-    return layout(page, body, slug, productions=prods, status=st)
+        props = []
+
+    if page == "twitch":
+        body = _twitch_page(root, slug, st, csrf_token)
+    elif page == "gates":
+        body = _gates_page(root, slug, st, csrf_token)
+    elif page == "proposals":
+        body = _proposals_page(slug, props, csrf_token)
+    elif page in ARTIFACT_PAGES:
+        body = _artifact_page(root, page, slug, st)
+    else:
+        body = _diagnostics_page(root, slug, st, history)
+    return layout(root, page, body, slug, productions, st, history, csrf_token)

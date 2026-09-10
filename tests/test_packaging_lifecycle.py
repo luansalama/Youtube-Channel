@@ -3,6 +3,7 @@ import csv
 import json
 import os
 import shutil
+from pathlib import Path
 
 from cstudio import core as C
 from cstudio import cutlist as CL
@@ -10,11 +11,13 @@ from cstudio import nle as NLE
 from cstudio import pipeline as PL
 from cstudio import security as SEC
 
+REPO = Path(__file__).resolve().parents[1]
+
 
 def _harness(tmp_path):
     r = str(tmp_path / "harness")
-    shutil.copytree("K:/Applications/Youtube-Channel/studio", os.path.join(r, "studio"))
-    shutil.copytree("K:/Applications/Youtube-Channel/templates", os.path.join(r, "templates"))
+    shutil.copytree(REPO / "studio", os.path.join(r, "studio"))
+    shutil.copytree(REPO / "templates", os.path.join(r, "templates"))
     open(os.path.join(r, "pyproject.toml"), "w").write("[project]\nname='x'\n")
     return r
 

@@ -23,3 +23,6 @@ cstudio = "cstudio.cli:main"
 
 [tool.setuptools]
 packages = ["cstudio"]
+
+[tool.setuptools.package-data]
+cstudio = ["static/*.css", "static/*.js"]

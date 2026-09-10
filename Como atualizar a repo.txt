@@ -1,0 +1,5 @@
+Na próxima mudança, fecha e reabre o PowerShell uma vez (pra carregar o gsave novo), depois:
+cd "K:\Applications\Youtube-Channel"
+gsave "descrevi o que mudou"
+Ele já faz pull --rebase + add -A + commit + push sozinho. Se não tiver nada novo ele avisa nada para commitar.
+Só usa gs antes se quiser conferir o que vai subir.

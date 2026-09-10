@@ -36,6 +36,7 @@ def build_parser() -> argparse.ArgumentParser:
     s = sub.add_parser("proposal-discard"); s.add_argument("slug"); s.add_argument("--id", required=True)
 
     s = sub.add_parser("ingest"); s.add_argument("slug"); s.add_argument("--asset-id", required=True); s.add_argument("--kind", required=True); s.add_argument("--path", required=True); s.add_argument("--rights", default="sem_autorizacao_confirmada")
+    s = sub.add_parser("twitch-scrape"); s.add_argument("slug"); s.add_argument("--streamer", required=True); s.add_argument("--target", default="3"); s.add_argument("--threads", type=int, choices=(1, 2, 4, 8), default=4); s.add_argument("--force", action="store_true"); s.add_argument("--no-resume", action="store_true"); s.add_argument("--sequential", action="store_true")
     s = sub.add_parser("rights"); s.add_argument("slug"); s.add_argument("--asset", required=True); s.add_argument("--status", required=True); s.add_argument("--by", default=""); s.add_argument("--scope", default=""); s.add_argument("--evidence", default="")
     s = sub.add_parser("cutlist-validate"); s.add_argument("slug")
     s = sub.add_parser("nle-export"); s.add_argument("slug"); s.add_argument("--driver", default="davinci-resolve"); s.add_argument("--outdir", default="")
@@ -106,6 +107,11 @@ def main(argv=None) -> int:
         elif args.cmd == "ingest":
             from . import pipeline as PL
             print(json.dumps(PL.register_asset(root, args.slug, args.asset_id, args.kind, args.path, args.rights), ensure_ascii=False))
+        elif args.cmd == "twitch-scrape":
+            from . import twitch as TW
+            rec = TW.run_scrape(root, args.slug, args.streamer, args.target, threads=args.threads, force=args.force, resume=not args.no_resume, sequential=args.sequential)
+            print(json.dumps(rec, ensure_ascii=False, indent=2))
+            return 0 if rec.get("status") == "completed" else 1
         elif args.cmd == "rights":
             from . import rights as RT
             print(json.dumps(RT.set_asset_rights(root, args.slug, args.asset, args.status, args.by, args.scope, args.evidence), ensure_ascii=False))

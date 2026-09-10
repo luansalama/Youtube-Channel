@@ -2,6 +2,7 @@
 import json
 import os
 import shutil
+from pathlib import Path
 
 import pytest
 
@@ -9,12 +10,14 @@ from cstudio import core as C
 from cstudio import proposals as P
 from cstudio import runners as R
 
+REPO = Path(__file__).resolve().parents[1]
+
 
 @pytest.fixture()
 def root(tmp_path):
     r = str(tmp_path / "harness")
-    shutil.copytree("K:/Applications/Youtube-Channel/studio", os.path.join(r, "studio"))
-    shutil.copytree("K:/Applications/Youtube-Channel/templates", os.path.join(r, "templates"))
+    shutil.copytree(REPO / "studio", os.path.join(r, "studio"))
+    shutil.copytree(REPO / "templates", os.path.join(r, "templates"))
     open(os.path.join(r, "pyproject.toml"), "w").write("[project]\nname='x'\n")
     C.create_production(r, "Corte Teste", slug="corte-teste")
     return r

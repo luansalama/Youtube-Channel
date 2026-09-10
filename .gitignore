@@ -4,3 +4,8 @@ __pycache__/
 exports/recovery/
 productions/*/assets/
 
+
+# Bundled Twitch scraper runtime/dependencies and per-production capture data.
+integrations/twitch-scraper/node_modules/
+productions/*/.studio/internal/ingest/twitch/
+videos/*/.studio/internal/ingest/twitch/

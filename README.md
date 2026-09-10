@@ -11,7 +11,8 @@ fingerprint e publicação bloqueada por padrão.
 ## Requisitos
 
 - Python 3.11+
-- Sem dependências obrigatórias (stdlib). Extra YouTube: `pip install -e .[youtube]`
+- Sem dependências Python obrigatórias (stdlib). Extra YouTube: `pip install -e .[youtube]`
+- Twitch ingest: [Bun](https://bun.sh/) no `PATH`; Playwright/Chromium são preparados automaticamente no primeiro scrape
 
 ## Início rápido
 
@@ -22,6 +23,19 @@ python -m cstudio --root . new --title "Corte do hype" --source-url "https://www
 python -m cstudio --root . status
 python -m cstudio --root . studio --host 127.0.0.1 --port 8765
 ```
+
+No dashboard, abra **Twitch Ingest** para capturar VOD metadata/chat sem sair do Studio.
+A mesma operação existe via CLI:
+
+```powershell
+python -m cstudio --root . twitch-scrape MEU-CORTE --streamer alanzoka --target 3 --threads 8
+python -m cstudio --root . twitch-scrape MEU-CORTE --streamer alanzoka --target 2864229186 --force
+```
+
+O scraper V7.6 empacotado mantém resume, fallback sequencial e limite efetivo de 8 workers.
+As saídas ficam em `productions/<slug>/.studio/internal/ingest/twitch/<canal>/`; os arquivos
+`discovery/<vod>.json` e `chat/<vod>.json` são registrados automaticamente em `assets.csv`
+com `sem_autorizacao_confirmada`. Isso **não** aprova direitos, gates nem avança o pipeline.
 
 ## Fluxo (12 stages)
 
@@ -51,6 +65,7 @@ python -m cstudio --root . advance MEU-CORTE
 | `propose --request` | roda Runner Manager (codex→opencode→openai) |
 | `proposal-import/apply/discard` | fallback manual |
 | `ingest --asset-id --kind --path` | registra VOD/chat/transcript |
+| `twitch-scrape --streamer --target --threads` | roda scraper Twitch V7.6 e registra metadata/chat no ingest |
 | `rights --asset --status` | libera direitos (com autor) |
 | `cutlist-validate` | valida CSV (duração/overlap/ids) |
 | `nle-export` | gera xmeml + scripts Resolve |
