@@ -1,4 +1,4 @@
-name: ChatGPT Cutlist Baseline
+name: ChatGPT Cutlist Implementation
 
 on:
   push:
@@ -7,36 +7,56 @@ on:
   workflow_dispatch:
 
 jobs:
-  baseline:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Apply implementation patch
+        run: python .github/scripts/apply_cutlist_patch.py
       - name: Install project and test tooling
         run: |
           python -m pip install --upgrade pip
           python -m pip install -e . pytest
-      - name: Maintain
-        run: python -m cstudio --root . maintain | tee baseline-maintain.txt
-      - name: Status
-        run: python -m cstudio --root . status | tee baseline-status.txt
-      - name: Test baseline
+      - name: Compile changed Python
+        run: python -m py_compile cstudio/video_cutlists.py cstudio/runners.py cstudio/jobs.py cstudio/dashboard.py cstudio/server.py tests/test_video_cutlist_workflow.py
+      - name: Targeted cutlist workflow tests
+        run: python -m pytest tests/test_video_cutlist_workflow.py tests/test_video_plans.py tests/test_agent_runner_controls.py tests/test_dashboard_ui.py tests/test_cutlist_sync_timecode.py -q | tee targeted-tests.txt
+      - name: Full test suite
+        run: python -m pytest tests/ -q | tee full-tests.txt
+      - name: Post-change maintain and status
+        run: |
+          python -m cstudio --root . maintain | tee post-maintain.txt
+          python -m cstudio --root . status | tee post-status.txt
+      - name: Build extractable patch ZIP
         shell: bash
         run: |
-          set +e
-          python -m pytest tests/ -q 2>&1 | tee baseline-tests.txt
-          code=${PIPESTATUS[0]}
-          echo "$code" > baseline-test-exit.txt
-          echo "Baseline pytest exit code: $code"
-          exit 0
-      - name: Upload baseline logs
+          mkdir -p patch/cstudio/static patch/tests
+          cp cstudio/video_cutlists.py patch/cstudio/video_cutlists.py
+          cp cstudio/runners.py patch/cstudio/runners.py
+          cp cstudio/jobs.py patch/cstudio/jobs.py
+          cp cstudio/dashboard.py patch/cstudio/dashboard.py
+          cp cstudio/server.py patch/cstudio/server.py
+          cp cstudio/static/dashboard.css patch/cstudio/static/dashboard.css
+          cp tests/test_video_cutlist_workflow.py patch/tests/test_video_cutlist_workflow.py
+          (cd patch && zip -qr ../cutlist-workflow-patch.zip .)
+          git diff --stat | tee patch-stat.txt
+          git diff --check | tee diff-check.txt
+      - name: Upload validation logs
         uses: actions/upload-artifact@v4
         with:
-          name: cutlist-baseline-logs
+          name: cutlist-validation-logs
           path: |
-            baseline-maintain.txt
-            baseline-status.txt
-            baseline-tests.txt
-            baseline-test-exit.txt
+            targeted-tests.txt
+            full-tests.txt
+            post-maintain.txt
+            post-status.txt
+            patch-stat.txt
+            diff-check.txt
+      - name: Upload patch ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: cutlist-workflow-patch
+          path: cutlist-workflow-patch.zip
