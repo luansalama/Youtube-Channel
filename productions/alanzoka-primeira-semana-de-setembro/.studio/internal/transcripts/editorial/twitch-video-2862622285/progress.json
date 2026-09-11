@@ -1,0 +1,21 @@
+{
+  "schema_version": 2,
+  "status": "completed",
+  "asset_id": "twitch-video-2862622285",
+  "source_path": ".studio/tmp/transcription-audio/2862622285/2862622285.mp4",
+  "source_sha256": "b1890ee92b8983c08c717dc41354b4249329c5d833397f8dca05fc9424e94acf",
+  "source_identity": "twitch-vod:2862622285",
+  "source_mode": "temporary-audio",
+  "language": "pt",
+  "word_timestamps": false,
+  "timestamp_mode": "segment",
+  "duration_seconds": 22477.932,
+  "processed_seconds": 22477.932,
+  "percent": 100.0,
+  "started_at": "2026-09-11T09:35:07Z",
+  "updated_at": "2026-09-11T09:44:33Z",
+  "ended_at": "2026-09-11T09:44:33Z",
+  "segment_count": 5424,
+  "word_count": 31039,
+  "model": "K:\\Applications\\LLMS\\Whisper\\faster-whisper-large-v3-turbo"
+}

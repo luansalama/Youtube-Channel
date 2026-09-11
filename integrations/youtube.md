@@ -313,7 +313,7 @@ Par-manifests independentes preservam 1 VOD → N vídeos e N VODs → 1 master.
 
 ## Jobs resilientes do dashboard
 
-CLI explícita (`youtube-index`, `youtube-resolve`, `youtube-verify`, `youtube-download`) continua
+CLI explícita (`youtube-index`, `youtube-resolve`, `youtube-sizes`, `youtube-verify`, `youtube-download`) continua
 síncrona e retorna código de saída normal.
 
 O dashboard, porém, não executa mais jobs longos em daemon thread. `start_job()`:
@@ -342,6 +342,20 @@ O comando usa `bv*+ba/b` e merge via FFmpeg, sem limite artificial de 1080p; 216
 quando for a melhor qualidade disponível. As mesmas opções de runtime Deno/EJS são aplicadas ao
 master.
 
+## Planejamento de armazenamento
+
+Antes de baixar mídia, o dashboard pode consultar apenas metadata e estimar o espaço das sources:
+
+```powershell
+python -m cstudio --root . youtube-sizes <slug> --force
+```
+
+O cálculo usa o mesmo seletor `bv*+ba/b` do download real. Para cada master YouTube `VERIFIED`
+e cada VOD Twitch conhecido, o resolver prefere `filesize`, depois `filesize_approx`; quando o
+servidor não informa tamanho, usa `bitrate × duração`. Valores derivados aparecem como estimativa
+na UI. Se um master YouTube já existe localmente, o tamanho do arquivo em disco passa a ser a
+autoridade. O job de tamanhos é metadata-only e não baixa o payload audiovisual.
+
 ## Direitos
 
 Todo asset YouTube entra obrigatoriamente como:
@@ -356,8 +370,9 @@ chama `approve_gate`, não altera `rights_lock`, não avança stage e não publi
 ## Dashboard
 
 A página **YouTube Mirrors** exibe health de yt-dlp/FFmpeg/Deno/Whisper, canais, índice, VODs,
-candidatos, score, anchors, consistência temporal, Chromaprint shadow quando existir, qualidade
-do master e logs. Ausência de Deno suportado aparece como degradação explícita.
+assignments globais, evidência técnica e um painel de storage com tamanho por VOD Twitch, tamanho
+por master YouTube `VERIFIED`, total combinado e espaço livre no volume da produção. Ausência de
+Deno suportado aparece como degradação explícita.
 
 O browser consulta `GET /ui/youtube-run` enquanto houver job ativo. Falhas ficam persistidas como
 `failed`; restart do dashboard não é tratado como falha se o worker continua vivo.

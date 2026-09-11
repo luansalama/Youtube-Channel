@@ -1,0 +1,5938 @@
+{
+  "text": "Tchau, tchau! Agora! Tchau, tchau. O que você está? Desculpe, é o meu dedo. Você pode andar? Acho que sim. Você está bem? Isso é muito mais difícil sem S.O.P. Isso faz você sentir vivo, não é? O que é Akiba? Ele caiu no oceano. Snake, eu vou se encontrar logo. Você vai lá. Se vai ter perdido de mim. Aí, mamamos, né? Nossa, pior que os caras estão vindo fortes para me arregaçar. Quero salvar o jogo, pô. Se eu entrar numa cancinha de uma hora, acabou. Agora que a gente tá num lugar meio ruim aqui, né, mano? Cheio de inimigo, velho. Tá num lugar muito ruim, velho. Por que eu saio daqui, velho? Eu entrei num lugar também terrível. Será que tem alguém aqui? É impossível terem me visto. Vangaro. Cara, sem matar ninguém, né? O cara joga, assim, um gameplay honesto, né? Sem matar ninguém na tranquilidade máxima. Dá mais pura tranquilidade. Snake, use essa porta de água para entrar. Ah, não. Relaxa, relaxa. Tamo no jogo. É chato, tô achando que eu vou morrer, tá? Não queria falar nada, mas... Porra! Porque tem gente mugindo Caralho, eu tava tão perto de entrar, mano Porra, era só matar Nossa, volta tudo, velho Chat, acho que é um bom momento pra gente parar aqui, tá, mano? Porque eu tô com medo de entrar lá e começar outros 40 minutos de cutscene, velho Vou falar pra vocês Eu vou meter o salve aqui Tá, e amanhã a gente termina Porque, mano, imagina eu entrar naquela porta e começa mais 3 horas de cutscene Já é quase 11 da noite Mas aqui tá um lugar meio ruim Mas Aqui, aqui Mais GG Porque mano, imagina eu entro lá Começa 3 horas de cutscene Vamos aproveitar que tá salvo aqui E a gente já para E continua na próxima Amanhã a gente termina Tamo no fim, tamo no último ato Amanhã pipoquinha Pra 2 horas de cutscene E é isso basicamente, mano, é isso, né, pô mas fizeram um progresso bom, mano, fizeram um progresso bom, né. Gibriapolos 1.500 biso, eleição, rapaz, o meu aniversário é você que vai ganhar presente, é sim, né, de coração é por tudo, sei, muito louco, pensar como eu já acompanhava tem uns 10 anos agora, já com 22, estamos juntados e aí, Gibriapolos 1.500, mano, quanto tempo valeu, parabéns, hein felicidades, tudo de bom, valeu brigadão tô doente, mano, porra, velho porra, velho, Daniel Brápolos 88, Z King Brápolos 36, JV Nunes Brápolos 14, tem umas 3 horas até acabar contando com a cutscene ah, então tem uma hora e pouco até acabar né Matheus, Apple 30, muito obrigado, Reino do Live Apple 52, Gimentoni Apple 6 deu pro Murilo, Kaique Apple Sub, Rostinho Angelical, Apple 11 já sabe como vai fazer no Down Ocris receber antecipado, saiu o horário, libera 7 eu tô ligado que libera 7, dia 2 né, libera 7 é, eles falaram que só vão mandar pra quem faz conteúdo no dia mano, não fala Mas então eu acho que o embargo deve cair aí mesmo. Eles não quiseram mandar antes, não. Falaram que só vão mandar antes se for da imprensa, velho. Se for fazer review, tá ligado? É. Falaram, não, nós só vai mandar ontem pra quem for fazer review. Foi isso que eles falaram. Imprensa. Os humildes, né? Humildes, mano. Horáriozinho bomba, né? Sete da noite. Ah, vai dar pra gente jogar umas quatro horinhas. Vai três horas. Vai dar... Não, vai ser legal. Vai dar pra gente jogar umas 3 horinhas, vai ser bom Tô louco pra jogar, mano Bom, mas tamo tranquilo, amanhã a gente termina o Metal Gear 4, né, no caso E daí o próximo jogo que jogaremos Vai ser o Blood of the Dawnwalker E depois tem o Onimusha também Mano, o Onimusha eu não sei se eu vou jogar, talvez Vamos ver Mas o Blood of the Dawnwalker eu quero muito jogar Né, então Eren's Apple 71, mas é isso, chat Obrigado pelo meu sub, mandou beats, acompanha o geral Amanhã a gente termina o Metal Gear E joga mais alguma outra coisa, não sei o que Vamos descobrir, né E é isso, pô É setembro, tem muita coisa, mano Tem muita coisa Boa noite, beijos, tchau E eu, me LucasApples80, fui, até amanhã Tchau, tchau. Se inscreva no canal. Tchau, tchau. Se inscreva. Não, não, não, não.",
+  "segments": [
+    {
+      "start": 25211.18,
+      "end": 25212.38,
+      "text": "Tchau, tchau!",
+      "words": [
+        {
+          "word": " Tchau,",
+          "start": 25211.18,
+          "end": 25211.98,
+          "probability": 0.33368
+        },
+        {
+          "word": " tchau!",
+          "start": 25212.38,
+          "end": 25212.38,
+          "probability": 0.7917
+        }
+      ],
+      "avg_logprob": -0.8809336026509603,
+      "no_speech_prob": 3.0159769126569813e-10,
+      "compression_ratio": 0.7222222222222222,
+      "temperature": 0.8
+    },
+    {
+      "start": 25230.4,
+      "end": 25231.8,
+      "text": "Agora!",
+      "words": [
+        {
+          "word": " Agora!",
+          "start": 25230.4,
+          "end": 25231.8,
+          "probability": 0.83473
+        }
+      ],
+      "avg_logprob": -0.7159999370574951,
+      "no_speech_prob": 4.493563073720841e-12,
+      "compression_ratio": 0.42857142857142855,
+      "temperature": 0.0
+    },
+    {
+      "start": 25277.26,
+      "end": 25278.88,
+      "text": "Tchau, tchau.",
+      "words": [
+        {
+          "word": " Tchau,",
+          "start": 25277.26,
+          "end": 25278.66,
+          "probability": 0.29144
+        },
+        {
+          "word": " tchau.",
+          "start": 25278.76,
+          "end": 25278.88,
+          "probability": 0.77571
+        }
+      ],
+      "avg_logprob": -0.7580786281161838,
+      "no_speech_prob": 1.9028431608170138e-10,
+      "compression_ratio": 0.7222222222222222,
+      "temperature": 0.0
+    },
+    {
+      "start": 25298.32,
+      "end": 25299.28,
+      "text": "O que você está?",
+      "words": [
+        {
+          "word": " O",
+          "start": 25298.32,
+          "end": 25298.8,
+          "probability": 0.06688
+        },
+        {
+          "word": " que",
+          "start": 25298.8,
+          "end": 25298.82,
+          "probability": 0.19419
+        },
+        {
+          "word": " você",
+          "start": 25298.82,
+          "end": 25299.16,
+          "probability": 0.59878
+        },
+        {
+          "word": " está?",
+          "start": 25299.16,
+          "end": 25299.28,
+          "probability": 0.86647
+        }
+      ],
+      "avg_logprob": -0.8464731432727932,
+      "no_speech_prob": 4.742298775894938e-10,
+      "compression_ratio": 1.3404255319148937,
+      "temperature": 0.0
+    },
+    {
+      "start": 25300.42,
+      "end": 25302.24,
+      "text": "Desculpe, é o meu dedo.",
+      "words": [
+        {
+          "word": " Desculpe,",
+          "start": 25300.42,
+          "end": 25300.9,
+          "probability": 0.66724
+        },
+        {
+          "word": " é",
+          "start": 25301.52,
+          "end": 25301.6,
+          "probability": 0.79116
+        },
+        {
+          "word": " o",
+          "start": 25301.6,
+          "end": 25301.76,
+          "probability": 0.34979
+        },
+        {
+          "word": " meu",
+          "start": 25301.76,
+          "end": 25301.9,
+          "probability": 0.95147
+        },
+        {
+          "word": " dedo.",
+          "start": 25301.9,
+          "end": 25302.24,
+          "probability": 0.49533
+        }
+      ],
+      "avg_logprob": -0.8464731432727932,
+      "no_speech_prob": 4.742298775894938e-10,
+      "compression_ratio": 1.3404255319148937,
+      "temperature": 0.0
+    },
+    {
+      "start": 25302.82,
+      "end": 25303.46,
+      "text": "Você pode andar?",
+      "words": [
+        {
+          "word": " Você",
+          "start": 25302.82,
+          "end": 25303.04,
+          "probability": 0.32563
+        },
+        {
+          "word": " pode",
+          "start": 25303.04,
+          "end": 25303.26,
+          "probability": 0.82026
+        },
+        {
+          "word": " andar?",
+          "start": 25303.26,
+          "end": 25303.46,
+          "probability": 0.34722
+        }
+      ],
+      "avg_logprob": -0.8464731432727932,
+      "no_speech_prob": 4.742298775894938e-10,
+      "compression_ratio": 1.3404255319148937,
+      "temperature": 0.0
+    },
+    {
+      "start": 25304.0,
+      "end": 25304.86,
+      "text": "Acho que sim.",
+      "words": [
+        {
+          "word": " Acho",
+          "start": 25304.0,
+          "end": 25304.48,
+          "probability": 0.52794
+        },
+        {
+          "word": " que",
+          "start": 25304.48,
+          "end": 25304.62,
+          "probability": 0.89081
+        },
+        {
+          "word": " sim.",
+          "start": 25304.62,
+          "end": 25304.86,
+          "probability": 0.21507
+        }
+      ],
+      "avg_logprob": -0.8464731432727932,
+      "no_speech_prob": 4.742298775894938e-10,
+      "compression_ratio": 1.3404255319148937,
+      "temperature": 0.0
+    },
+    {
+      "start": 25306.54,
+      "end": 25307.36,
+      "text": "Você está bem?",
+      "words": [
+        {
+          "word": " Você",
+          "start": 25306.54,
+          "end": 25307.02,
+          "probability": 0.68791
+        },
+        {
+          "word": " está",
+          "start": 25307.02,
+          "end": 25307.22,
+          "probability": 0.92871
+        },
+        {
+          "word": " bem?",
+          "start": 25307.22,
+          "end": 25307.36,
+          "probability": 0.63505
+        }
+      ],
+      "avg_logprob": -0.8464731432727932,
+      "no_speech_prob": 4.742298775894938e-10,
+      "compression_ratio": 1.3404255319148937,
+      "temperature": 0.0
+    },
+    {
+      "start": 25308.2,
+      "end": 25310.62,
+      "text": "Isso é muito mais difícil sem S.O.P.",
+      "words": [
+        {
+          "word": " Isso",
+          "start": 25308.2,
+          "end": 25308.68,
+          "probability": 0.04507
+        },
+        {
+          "word": " é",
+          "start": 25308.68,
+          "end": 25308.82,
+          "probability": 0.12226
+        },
+        {
+          "word": " muito",
+          "start": 25308.82,
+          "end": 25309.22,
+          "probability": 0.34609
+        },
+        {
+          "word": " mais",
+          "start": 25309.22,
+          "end": 25309.52,
+          "probability": 0.30041
+        },
+        {
+          "word": " difícil",
+          "start": 25309.52,
+          "end": 25309.64,
+          "probability": 0.03597
+        },
+        {
+          "word": " sem",
+          "start": 25309.64,
+          "end": 25309.88,
+          "probability": 0.70316
+        },
+        {
+          "word": " S",
+          "start": 25309.88,
+          "end": 25310.22,
+          "probability": 0.20642
+        },
+        {
+          "word": ".O",
+          "start": 25310.22,
+          "end": 25310.36,
+          "probability": 0.99026
+        },
+        {
+          "word": ".P.",
+          "start": 25310.36,
+          "end": 25310.62,
+          "probability": 0.99659
+        }
+      ],
+      "avg_logprob": -0.8464731432727932,
+      "no_speech_prob": 4.742298775894938e-10,
+      "compression_ratio": 1.3404255319148937,
+      "temperature": 0.0
+    },
+    {
+      "start": 25310.8,
+      "end": 25312.58,
+      "text": "Isso faz você sentir vivo, não é?",
+      "words": [
+        {
+          "word": " Isso",
+          "start": 25310.8,
+          "end": 25311.06,
+          "probability": 0.2094
+        },
+        {
+          "word": " faz",
+          "start": 25311.06,
+          "end": 25311.46,
+          "probability": 0.5891
+        },
+        {
+          "word": " você",
+          "start": 25311.46,
+          "end": 25311.56,
+          "probability": 0.63667
+        },
+        {
+          "word": " sentir",
+          "start": 25311.56,
+          "end": 25311.74,
+          "probability": 0.6773
+        },
+        {
+          "word": " vivo,",
+          "start": 25311.74,
+          "end": 25312.14,
+          "probability": 0.32533
+        },
+        {
+          "word": " não",
+          "start": 25312.24,
+          "end": 25312.4,
+          "probability": 0.67265
+        },
+        {
+          "word": " é?",
+          "start": 25312.4,
+          "end": 25312.58,
+          "probability": 0.8984
+        }
+      ],
+      "avg_logprob": -0.8464731432727932,
+      "no_speech_prob": 4.742298775894938e-10,
+      "compression_ratio": 1.3404255319148937,
+      "temperature": 0.0
+    },
+    {
+      "start": 25312.8,
+      "end": 25313.58,
+      "text": "O que é Akiba?",
+      "words": [
+        {
+          "word": " O",
+          "start": 25312.8,
+          "end": 25312.96,
+          "probability": 0.5335
+        },
+        {
+          "word": " que",
+          "start": 25312.96,
+          "end": 25313.06,
+          "probability": 0.97198
+        },
+        {
+          "word": " é",
+          "start": 25313.06,
+          "end": 25313.1,
+          "probability": 0.34069
+        },
+        {
+          "word": " Akiba?",
+          "start": 25313.1,
+          "end": 25313.58,
+          "probability": 0.61177
+        }
+      ],
+      "avg_logprob": -0.8464731432727932,
+      "no_speech_prob": 4.742298775894938e-10,
+      "compression_ratio": 1.3404255319148937,
+      "temperature": 0.0
+    },
+    {
+      "start": 25313.78,
+      "end": 25315.18,
+      "text": "Ele caiu no oceano.",
+      "words": [
+        {
+          "word": " Ele",
+          "start": 25313.78,
+          "end": 25314.1,
+          "probability": 0.93995
+        },
+        {
+          "word": " caiu",
+          "start": 25314.1,
+          "end": 25314.44,
+          "probability": 0.50059
+        },
+        {
+          "word": " no",
+          "start": 25314.44,
+          "end": 25314.62,
+          "probability": 0.55336
+        },
+        {
+          "word": " oceano.",
+          "start": 25314.62,
+          "end": 25315.18,
+          "probability": 0.77023
+        }
+      ],
+      "avg_logprob": -0.8464731432727932,
+      "no_speech_prob": 4.742298775894938e-10,
+      "compression_ratio": 1.3404255319148937,
+      "temperature": 0.0
+    },
+    {
+      "start": 25317.06,
+      "end": 25318.72,
+      "text": "Snake, eu vou se encontrar logo.",
+      "words": [
+        {
+          "word": " Snake,",
+          "start": 25317.06,
+          "end": 25317.54,
+          "probability": 0.03971
+        },
+        {
+          "word": " eu",
+          "start": 25318.06,
+          "end": 25318.12,
+          "probability": 0.56609
+        },
+        {
+          "word": " vou",
+          "start": 25318.12,
+          "end": 25318.22,
+          "probability": 0.45189
+        },
+        {
+          "word": " se",
+          "start": 25318.22,
+          "end": 25318.3,
+          "probability": 0.12625
+        },
+        {
+          "word": " encontrar",
+          "start": 25318.3,
+          "end": 25318.4,
+          "probability": 0.13499
+        },
+        {
+          "word": " logo.",
+          "start": 25318.4,
+          "end": 25318.72,
+          "probability": 0.28779
+        }
+      ],
+      "avg_logprob": -0.8464731432727932,
+      "no_speech_prob": 4.742298775894938e-10,
+      "compression_ratio": 1.3404255319148937,
+      "temperature": 0.0
+    },
+    {
+      "start": 25318.98,
+      "end": 25319.54,
+      "text": "Você vai lá.",
+      "words": [
+        {
+          "word": " Você",
+          "start": 25318.98,
+          "end": 25319.26,
+          "probability": 0.73092
+        },
+        {
+          "word": " vai",
+          "start": 25319.26,
+          "end": 25319.42,
+          "probability": 0.14193
+        },
+        {
+          "word": " lá.",
+          "start": 25319.42,
+          "end": 25319.54,
+          "probability": 0.13864
+        }
+      ],
+      "avg_logprob": -0.8464731432727932,
+      "no_speech_prob": 4.742298775894938e-10,
+      "compression_ratio": 1.3404255319148937,
+      "temperature": 0.0
+    },
+    {
+      "start": 25329.06,
+      "end": 25331.88,
+      "text": "Se vai ter perdido de mim.",
+      "words": [
+        {
+          "word": " Se",
+          "start": 25329.06,
+          "end": 25329.78,
+          "probability": 0.00935
+        },
+        {
+          "word": " vai",
+          "start": 25329.78,
+          "end": 25329.88,
+          "probability": 0.02255
+        },
+        {
+          "word": " ter",
+          "start": 25329.88,
+          "end": 25330.04,
+          "probability": 0.19827
+        },
+        {
+          "word": " perdido",
+          "start": 25330.04,
+          "end": 25330.34,
+          "probability": 0.48538
+        },
+        {
+          "word": " de",
+          "start": 25330.34,
+          "end": 25331.52,
+          "probability": 0.03087
+        },
+        {
+          "word": " mim.",
+          "start": 25331.52,
+          "end": 25331.88,
+          "probability": 0.06845
+        }
+      ],
+      "avg_logprob": -2.407000108198686,
+      "no_speech_prob": 1.4398406078530712e-10,
+      "compression_ratio": 0.7647058823529411,
+      "temperature": 1.0
+    },
+    {
+      "start": 25351.62,
+      "end": 25352.66,
+      "text": "Aí, mamamos, né?",
+      "words": [
+        {
+          "word": " Aí,",
+          "start": 25351.62,
+          "end": 25352.06,
+          "probability": 0.6629
+        },
+        {
+          "word": " mamamos,",
+          "start": 25352.14,
+          "end": 25352.54,
+          "probability": 0.92914
+        },
+        {
+          "word": " né?",
+          "start": 25352.58,
+          "end": 25352.66,
+          "probability": 0.98331
+        }
+      ],
+      "avg_logprob": -0.48543016372188447,
+      "no_speech_prob": 3.933026213737145e-12,
+      "compression_ratio": 0.9764705882352941,
+      "temperature": 0.0
+    },
+    {
+      "start": 25359.64,
+      "end": 25366.54,
+      "text": "Nossa, pior que os caras estão vindo fortes para me arregaçar.",
+      "words": [
+        {
+          "word": " Nossa,",
+          "start": 25359.64,
+          "end": 25360.08,
+          "probability": 0.56609
+        },
+        {
+          "word": " pior",
+          "start": 25364.14,
+          "end": 25364.38,
+          "probability": 0.96929
+        },
+        {
+          "word": " que",
+          "start": 25364.38,
+          "end": 25364.56,
+          "probability": 0.7809
+        },
+        {
+          "word": " os",
+          "start": 25364.56,
+          "end": 25364.7,
+          "probability": 0.93224
+        },
+        {
+          "word": " caras",
+          "start": 25364.7,
+          "end": 25364.96,
+          "probability": 0.90374
+        },
+        {
+          "word": " estão",
+          "start": 25364.96,
+          "end": 25365.1,
+          "probability": 0.72705
+        },
+        {
+          "word": " vindo",
+          "start": 25365.1,
+          "end": 25365.32,
+          "probability": 0.99648
+        },
+        {
+          "word": " fortes",
+          "start": 25365.32,
+          "end": 25365.82,
+          "probability": 0.68578
+        },
+        {
+          "word": " para",
+          "start": 25365.82,
+          "end": 25365.92,
+          "probability": 0.5288
+        },
+        {
+          "word": " me",
+          "start": 25365.92,
+          "end": 25366.04,
+          "probability": 0.55749
+        },
+        {
+          "word": " arregaçar.",
+          "start": 25366.04,
+          "end": 25366.54,
+          "probability": 0.96838
+        }
+      ],
+      "avg_logprob": -0.48543016372188447,
+      "no_speech_prob": 3.933026213737145e-12,
+      "compression_ratio": 0.9764705882352941,
+      "temperature": 0.0
+    },
+    {
+      "start": 25381.56,
+      "end": 25384.7,
+      "text": "Quero salvar o jogo, pô. Se eu entrar numa cancinha de uma hora, acabou.",
+      "words": [
+        {
+          "word": " Quero",
+          "start": 25381.56,
+          "end": 25381.96,
+          "probability": 0.68843
+        },
+        {
+          "word": " salvar",
+          "start": 25381.96,
+          "end": 25382.24,
+          "probability": 0.99395
+        },
+        {
+          "word": " o",
+          "start": 25382.24,
+          "end": 25382.4,
+          "probability": 0.99307
+        },
+        {
+          "word": " jogo,",
+          "start": 25382.4,
+          "end": 25382.72,
+          "probability": 0.99402
+        },
+        {
+          "word": " pô.",
+          "start": 25382.84,
+          "end": 25382.98,
+          "probability": 0.8206
+        },
+        {
+          "word": " Se",
+          "start": 25383.08,
+          "end": 25383.18,
+          "probability": 0.98814
+        },
+        {
+          "word": " eu",
+          "start": 25383.18,
+          "end": 25383.24,
+          "probability": 0.98642
+        },
+        {
+          "word": " entrar",
+          "start": 25383.24,
+          "end": 25383.42,
+          "probability": 0.99096
+        },
+        {
+          "word": " numa",
+          "start": 25383.42,
+          "end": 25383.56,
+          "probability": 0.80799
+        },
+        {
+          "word": " cancinha",
+          "start": 25383.56,
+          "end": 25383.82,
+          "probability": 0.67839
+        },
+        {
+          "word": " de",
+          "start": 25383.82,
+          "end": 25384.0,
+          "probability": 0.98711
+        },
+        {
+          "word": " uma",
+          "start": 25384.0,
+          "end": 25384.14,
+          "probability": 0.91476
+        },
+        {
+          "word": " hora,",
+          "start": 25384.14,
+          "end": 25384.32,
+          "probability": 0.99914
+        },
+        {
+          "word": " acabou.",
+          "start": 25384.4,
+          "end": 25384.7,
+          "probability": 0.99522
+        }
+      ],
+      "avg_logprob": -0.296208033842199,
+      "no_speech_prob": 6.367157235481757e-12,
+      "compression_ratio": 1.48,
+      "temperature": 0.0
+    },
+    {
+      "start": 25387.68,
+      "end": 25390.32,
+      "text": "Agora que a gente tá num lugar meio ruim aqui, né, mano?",
+      "words": [
+        {
+          "word": " Agora",
+          "start": 25387.68,
+          "end": 25388.08,
+          "probability": 0.28187
+        },
+        {
+          "word": " que",
+          "start": 25388.08,
+          "end": 25388.2,
+          "probability": 0.61022
+        },
+        {
+          "word": " a",
+          "start": 25388.2,
+          "end": 25388.28,
+          "probability": 0.99157
+        },
+        {
+          "word": " gente",
+          "start": 25388.28,
+          "end": 25388.28,
+          "probability": 0.9999
+        },
+        {
+          "word": " tá",
+          "start": 25388.28,
+          "end": 25388.4,
+          "probability": 0.7221
+        },
+        {
+          "word": " num",
+          "start": 25388.4,
+          "end": 25388.52,
+          "probability": 0.97446
+        },
+        {
+          "word": " lugar",
+          "start": 25388.52,
+          "end": 25388.7,
+          "probability": 0.9994
+        },
+        {
+          "word": " meio",
+          "start": 25388.7,
+          "end": 25388.96,
+          "probability": 0.99307
+        },
+        {
+          "word": " ruim",
+          "start": 25388.96,
+          "end": 25389.62,
+          "probability": 0.94277
+        },
+        {
+          "word": " aqui,",
+          "start": 25389.62,
+          "end": 25389.94,
+          "probability": 0.9956
+        },
+        {
+          "word": " né,",
+          "start": 25390.06,
+          "end": 25390.1,
+          "probability": 0.99692
+        },
+        {
+          "word": " mano?",
+          "start": 25390.24,
+          "end": 25390.32,
+          "probability": 0.99817
+        }
+      ],
+      "avg_logprob": -0.296208033842199,
+      "no_speech_prob": 6.367157235481757e-12,
+      "compression_ratio": 1.48,
+      "temperature": 0.0
+    },
+    {
+      "start": 25390.42,
+      "end": 25393.76,
+      "text": "Cheio de inimigo, velho.",
+      "words": [
+        {
+          "word": " Cheio",
+          "start": 25390.42,
+          "end": 25390.7,
+          "probability": 0.98983
+        },
+        {
+          "word": " de",
+          "start": 25390.7,
+          "end": 25390.9,
+          "probability": 0.9998
+        },
+        {
+          "word": " inimigo,",
+          "start": 25390.9,
+          "end": 25393.42,
+          "probability": 0.68899
+        },
+        {
+          "word": " velho.",
+          "start": 25393.52,
+          "end": 25393.76,
+          "probability": 0.997
+        }
+      ],
+      "avg_logprob": -0.296208033842199,
+      "no_speech_prob": 6.367157235481757e-12,
+      "compression_ratio": 1.48,
+      "temperature": 0.0
+    },
+    {
+      "start": 25396.88,
+      "end": 25398.68,
+      "text": "Tá num lugar muito ruim, velho.",
+      "words": [
+        {
+          "word": " Tá",
+          "start": 25396.88,
+          "end": 25397.28,
+          "probability": 0.98203
+        },
+        {
+          "word": " num",
+          "start": 25397.28,
+          "end": 25397.38,
+          "probability": 0.99924
+        },
+        {
+          "word": " lugar",
+          "start": 25397.38,
+          "end": 25397.6,
+          "probability": 0.99996
+        },
+        {
+          "word": " muito",
+          "start": 25397.6,
+          "end": 25398.02,
+          "probability": 0.99968
+        },
+        {
+          "word": " ruim,",
+          "start": 25398.02,
+          "end": 25398.34,
+          "probability": 0.99994
+        },
+        {
+          "word": " velho.",
+          "start": 25398.42,
+          "end": 25398.68,
+          "probability": 0.99966
+        }
+      ],
+      "avg_logprob": -0.296208033842199,
+      "no_speech_prob": 6.367157235481757e-12,
+      "compression_ratio": 1.48,
+      "temperature": 0.0
+    },
+    {
+      "start": 25405.4,
+      "end": 25408.58,
+      "text": "Por que eu saio daqui, velho? Eu entrei num lugar também terrível.",
+      "words": [
+        {
+          "word": " Por",
+          "start": 25405.4,
+          "end": 25405.8,
+          "probability": 0.21473
+        },
+        {
+          "word": " que",
+          "start": 25405.8,
+          "end": 25406.2,
+          "probability": 0.91133
+        },
+        {
+          "word": " eu",
+          "start": 25406.2,
+          "end": 25406.44,
+          "probability": 0.86395
+        },
+        {
+          "word": " saio",
+          "start": 25406.44,
+          "end": 25406.68,
+          "probability": 0.93042
+        },
+        {
+          "word": " daqui,",
+          "start": 25406.68,
+          "end": 25406.92,
+          "probability": 0.99721
+        },
+        {
+          "word": " velho?",
+          "start": 25407.06,
+          "end": 25407.18,
+          "probability": 0.99931
+        },
+        {
+          "word": " Eu",
+          "start": 25407.24,
+          "end": 25407.26,
+          "probability": 0.98225
+        },
+        {
+          "word": " entrei",
+          "start": 25407.26,
+          "end": 25407.52,
+          "probability": 0.98416
+        },
+        {
+          "word": " num",
+          "start": 25407.52,
+          "end": 25407.58,
+          "probability": 0.99862
+        },
+        {
+          "word": " lugar",
+          "start": 25407.58,
+          "end": 25407.82,
+          "probability": 0.99976
+        },
+        {
+          "word": " também",
+          "start": 25407.82,
+          "end": 25408.06,
+          "probability": 0.99774
+        },
+        {
+          "word": " terrível.",
+          "start": 25408.06,
+          "end": 25408.58,
+          "probability": 0.99636
+        }
+      ],
+      "avg_logprob": -0.296208033842199,
+      "no_speech_prob": 6.367157235481757e-12,
+      "compression_ratio": 1.48,
+      "temperature": 0.0
+    },
+    {
+      "start": 25410.0,
+      "end": 25410.56,
+      "text": "Será que tem alguém aqui?",
+      "words": [
+        {
+          "word": " Será",
+          "start": 25410.0,
+          "end": 25410.06,
+          "probability": 0.35017
+        },
+        {
+          "word": " que",
+          "start": 25410.06,
+          "end": 25410.14,
+          "probability": 0.9859
+        },
+        {
+          "word": " tem",
+          "start": 25410.14,
+          "end": 25410.18,
+          "probability": 0.89158
+        },
+        {
+          "word": " alguém",
+          "start": 25410.18,
+          "end": 25410.34,
+          "probability": 0.94603
+        },
+        {
+          "word": " aqui?",
+          "start": 25410.34,
+          "end": 25410.56,
+          "probability": 0.9911
+        }
+      ],
+      "avg_logprob": -0.4903902816772461,
+      "no_speech_prob": 6.236428908013014e-12,
+      "compression_ratio": 0.9305555555555556,
+      "temperature": 0.0
+    },
+    {
+      "start": 25417.94,
+      "end": 25419.62,
+      "text": "É impossível terem me visto.",
+      "words": [
+        {
+          "word": " É",
+          "start": 25417.94,
+          "end": 25418.46,
+          "probability": 0.16989
+        },
+        {
+          "word": " impossível",
+          "start": 25418.46,
+          "end": 25418.98,
+          "probability": 0.99109
+        },
+        {
+          "word": " terem",
+          "start": 25418.98,
+          "end": 25419.2,
+          "probability": 0.9282
+        },
+        {
+          "word": " me",
+          "start": 25419.2,
+          "end": 25419.32,
+          "probability": 0.92761
+        },
+        {
+          "word": " visto.",
+          "start": 25419.32,
+          "end": 25419.62,
+          "probability": 0.88907
+        }
+      ],
+      "avg_logprob": -0.4903902816772461,
+      "no_speech_prob": 6.236428908013014e-12,
+      "compression_ratio": 0.9305555555555556,
+      "temperature": 0.0
+    },
+    {
+      "start": 25424.0,
+      "end": 25424.52,
+      "text": "Vangaro.",
+      "words": [
+        {
+          "word": " Vangaro.",
+          "start": 25424.0,
+          "end": 25424.52,
+          "probability": 0.71062
+        }
+      ],
+      "avg_logprob": -0.4903902816772461,
+      "no_speech_prob": 6.236428908013014e-12,
+      "compression_ratio": 0.9305555555555556,
+      "temperature": 0.0
+    },
+    {
+      "start": 25440.78,
+      "end": 25442.38,
+      "text": "Cara, sem matar ninguém, né?",
+      "words": [
+        {
+          "word": " Cara,",
+          "start": 25440.78,
+          "end": 25441.42,
+          "probability": 0.60121
+        },
+        {
+          "word": " sem",
+          "start": 25441.48,
+          "end": 25441.6,
+          "probability": 0.99557
+        },
+        {
+          "word": " matar",
+          "start": 25441.6,
+          "end": 25441.86,
+          "probability": 0.99939
+        },
+        {
+          "word": " ninguém,",
+          "start": 25441.86,
+          "end": 25442.18,
+          "probability": 0.99883
+        },
+        {
+          "word": " né?",
+          "start": 25442.32,
+          "end": 25442.38,
+          "probability": 0.97014
+        }
+      ],
+      "avg_logprob": -0.3568026360045088,
+      "no_speech_prob": 3.116800220692717e-12,
+      "compression_ratio": 1.3043478260869565,
+      "temperature": 0.0
+    },
+    {
+      "start": 25442.44,
+      "end": 25446.0,
+      "text": "O cara joga, assim, um gameplay honesto, né?",
+      "words": [
+        {
+          "word": " O",
+          "start": 25442.44,
+          "end": 25442.5,
+          "probability": 0.99562
+        },
+        {
+          "word": " cara",
+          "start": 25442.5,
+          "end": 25442.7,
+          "probability": 0.99983
+        },
+        {
+          "word": " joga,",
+          "start": 25442.7,
+          "end": 25443.14,
+          "probability": 0.99965
+        },
+        {
+          "word": " assim,",
+          "start": 25443.14,
+          "end": 25443.38,
+          "probability": 0.96514
+        },
+        {
+          "word": " um",
+          "start": 25443.46,
+          "end": 25443.78,
+          "probability": 0.99751
+        },
+        {
+          "word": " gameplay",
+          "start": 25443.78,
+          "end": 25444.08,
+          "probability": 0.99504
+        },
+        {
+          "word": " honesto,",
+          "start": 25444.08,
+          "end": 25445.02,
+          "probability": 0.88501
+        },
+        {
+          "word": " né?",
+          "start": 25445.1,
+          "end": 25446.0,
+          "probability": 0.99919
+        }
+      ],
+      "avg_logprob": -0.3568026360045088,
+      "no_speech_prob": 3.116800220692717e-12,
+      "compression_ratio": 1.3043478260869565,
+      "temperature": 0.0
+    },
+    {
+      "start": 25459.26,
+      "end": 25462.6,
+      "text": "Sem matar ninguém na tranquilidade máxima.",
+      "words": [
+        {
+          "word": " Sem",
+          "start": 25459.26,
+          "end": 25459.9,
+          "probability": 0.90096
+        },
+        {
+          "word": " matar",
+          "start": 25459.9,
+          "end": 25460.16,
+          "probability": 0.99909
+        },
+        {
+          "word": " ninguém",
+          "start": 25460.16,
+          "end": 25460.52,
+          "probability": 0.99735
+        },
+        {
+          "word": " na",
+          "start": 25460.52,
+          "end": 25460.7,
+          "probability": 0.7704
+        },
+        {
+          "word": " tranquilidade",
+          "start": 25460.7,
+          "end": 25461.28,
+          "probability": 0.99949
+        },
+        {
+          "word": " máxima.",
+          "start": 25461.28,
+          "end": 25462.6,
+          "probability": 0.99937
+        }
+      ],
+      "avg_logprob": -0.3568026360045088,
+      "no_speech_prob": 3.116800220692717e-12,
+      "compression_ratio": 1.3043478260869565,
+      "temperature": 0.0
+    },
+    {
+      "start": 25467.04,
+      "end": 25469.46,
+      "text": "Dá mais pura tranquilidade.",
+      "words": [
+        {
+          "word": " Dá",
+          "start": 25467.04,
+          "end": 25467.68,
+          "probability": 0.58871
+        },
+        {
+          "word": " mais",
+          "start": 25467.68,
+          "end": 25468.06,
+          "probability": 0.89088
+        },
+        {
+          "word": " pura",
+          "start": 25468.06,
+          "end": 25468.4,
+          "probability": 0.9803
+        },
+        {
+          "word": " tranquilidade.",
+          "start": 25468.4,
+          "end": 25469.46,
+          "probability": 0.99847
+        }
+      ],
+      "avg_logprob": -0.3568026360045088,
+      "no_speech_prob": 3.116800220692717e-12,
+      "compression_ratio": 1.3043478260869565,
+      "temperature": 0.0
+    },
+    {
+      "start": 25473.16,
+      "end": 25476.08,
+      "text": "Snake, use essa porta de água para entrar.",
+      "words": [
+        {
+          "word": " Snake,",
+          "start": 25473.16,
+          "end": 25473.8,
+          "probability": 0.94107
+        },
+        {
+          "word": " use",
+          "start": 25474.08,
+          "end": 25474.44,
+          "probability": 0.65025
+        },
+        {
+          "word": " essa",
+          "start": 25474.44,
+          "end": 25474.72,
+          "probability": 0.4247
+        },
+        {
+          "word": " porta",
+          "start": 25474.72,
+          "end": 25474.82,
+          "probability": 0.87859
+        },
+        {
+          "word": " de",
+          "start": 25474.82,
+          "end": 25475.26,
+          "probability": 0.17583
+        },
+        {
+          "word": " água",
+          "start": 25475.26,
+          "end": 25475.7,
+          "probability": 0.65648
+        },
+        {
+          "word": " para",
+          "start": 25475.7,
+          "end": 25475.84,
+          "probability": 0.38432
+        },
+        {
+          "word": " entrar.",
+          "start": 25475.84,
+          "end": 25476.08,
+          "probability": 0.94641
+        }
+      ],
+      "avg_logprob": -0.8904099831214318,
+      "no_speech_prob": 3.994284937525183e-12,
+      "compression_ratio": 0.86,
+      "temperature": 0.0
+    },
+    {
+      "start": 25500.0,
+      "end": 25500.4,
+      "text": "Ah, não.",
+      "words": [
+        {
+          "word": " Ah,",
+          "start": 25500.0,
+          "end": 25500.02,
+          "probability": 0.01789
+        },
+        {
+          "word": " não.",
+          "start": 25500.26,
+          "end": 25500.4,
+          "probability": 0.91079
+        }
+      ],
+      "avg_logprob": -0.5833426475524902,
+      "no_speech_prob": 6.35208639160334e-12,
+      "compression_ratio": 0.9883720930232558,
+      "temperature": 0.0
+    },
+    {
+      "start": 25516.04,
+      "end": 25516.56,
+      "text": "Relaxa, relaxa.",
+      "words": [
+        {
+          "word": " Relaxa,",
+          "start": 25516.04,
+          "end": 25516.3,
+          "probability": 0.75688
+        },
+        {
+          "word": " relaxa.",
+          "start": 25516.3,
+          "end": 25516.56,
+          "probability": 0.95257
+        }
+      ],
+      "avg_logprob": -0.5833426475524902,
+      "no_speech_prob": 6.35208639160334e-12,
+      "compression_ratio": 0.9883720930232558,
+      "temperature": 0.0
+    },
+    {
+      "start": 25516.56,
+      "end": 25516.98,
+      "text": "Tamo no jogo.",
+      "words": [
+        {
+          "word": " Tamo",
+          "start": 25516.56,
+          "end": 25516.68,
+          "probability": 0.85338
+        },
+        {
+          "word": " no",
+          "start": 25516.68,
+          "end": 25516.78,
+          "probability": 0.9871
+        },
+        {
+          "word": " jogo.",
+          "start": 25516.78,
+          "end": 25516.98,
+          "probability": 0.99301
+        }
+      ],
+      "avg_logprob": -0.5833426475524902,
+      "no_speech_prob": 6.35208639160334e-12,
+      "compression_ratio": 0.9883720930232558,
+      "temperature": 0.0
+    },
+    {
+      "start": 25528.04,
+      "end": 25529.6,
+      "text": "É chato, tô achando que eu vou morrer, tá?",
+      "words": [
+        {
+          "word": " É",
+          "start": 25528.04,
+          "end": 25528.3,
+          "probability": 0.8488
+        },
+        {
+          "word": " chato,",
+          "start": 25528.3,
+          "end": 25528.56,
+          "probability": 0.79967
+        },
+        {
+          "word": " tô",
+          "start": 25528.66,
+          "end": 25528.66,
+          "probability": 0.31215
+        },
+        {
+          "word": " achando",
+          "start": 25528.66,
+          "end": 25528.82,
+          "probability": 0.99855
+        },
+        {
+          "word": " que",
+          "start": 25528.82,
+          "end": 25528.94,
+          "probability": 0.9958
+        },
+        {
+          "word": " eu",
+          "start": 25528.94,
+          "end": 25529.0,
+          "probability": 0.9076
+        },
+        {
+          "word": " vou",
+          "start": 25529.0,
+          "end": 25529.06,
+          "probability": 0.99296
+        },
+        {
+          "word": " morrer,",
+          "start": 25529.06,
+          "end": 25529.44,
+          "probability": 0.99839
+        },
+        {
+          "word": " tá?",
+          "start": 25529.52,
+          "end": 25529.6,
+          "probability": 0.95317
+        }
+      ],
+      "avg_logprob": -0.5833426475524902,
+      "no_speech_prob": 6.35208639160334e-12,
+      "compression_ratio": 0.9883720930232558,
+      "temperature": 0.0
+    },
+    {
+      "start": 25529.6,
+      "end": 25531.6,
+      "text": "Não queria falar nada, mas...",
+      "words": [
+        {
+          "word": " Não",
+          "start": 25529.6,
+          "end": 25529.74,
+          "probability": 0.2066
+        },
+        {
+          "word": " queria",
+          "start": 25529.74,
+          "end": 25529.96,
+          "probability": 0.86205
+        },
+        {
+          "word": " falar",
+          "start": 25529.96,
+          "end": 25530.26,
+          "probability": 0.98416
+        },
+        {
+          "word": " nada,",
+          "start": 25530.26,
+          "end": 25530.64,
+          "probability": 0.99397
+        },
+        {
+          "word": " mas...",
+          "start": 25530.8,
+          "end": 25531.6,
+          "probability": 0.99093
+        }
+      ],
+      "avg_logprob": -0.6414169073104858,
+      "no_speech_prob": 3.3548643463970906e-12,
+      "compression_ratio": 0.8222222222222222,
+      "temperature": 0.0
+    },
+    {
+      "start": 25556.4,
+      "end": 25557.08,
+      "text": "Porra!",
+      "words": [
+        {
+          "word": " Porra!",
+          "start": 25556.4,
+          "end": 25557.08,
+          "probability": 0.87766
+        }
+      ],
+      "avg_logprob": -0.6414169073104858,
+      "no_speech_prob": 3.3548643463970906e-12,
+      "compression_ratio": 0.8222222222222222,
+      "temperature": 0.0
+    },
+    {
+      "start": 25558.34,
+      "end": 25559.72,
+      "text": "Porque tem gente mugindo",
+      "words": [
+        {
+          "word": " Porque",
+          "start": 25558.34,
+          "end": 25558.7,
+          "probability": 0.54212
+        },
+        {
+          "word": " tem",
+          "start": 25558.7,
+          "end": 25558.9,
+          "probability": 0.99951
+        },
+        {
+          "word": " gente",
+          "start": 25558.9,
+          "end": 25559.16,
+          "probability": 0.9999
+        },
+        {
+          "word": " mugindo",
+          "start": 25559.16,
+          "end": 25559.72,
+          "probability": 0.98103
+        }
+      ],
+      "avg_logprob": -0.18357967767189806,
+      "no_speech_prob": 6.054911346614622e-12,
+      "compression_ratio": 1.618320610687023,
+      "temperature": 0.0
+    },
+    {
+      "start": 25561.3,
+      "end": 25563.54,
+      "text": "Caralho, eu tava tão perto de entrar, mano",
+      "words": [
+        {
+          "word": " Caralho,",
+          "start": 25561.3,
+          "end": 25561.66,
+          "probability": 0.67594
+        },
+        {
+          "word": " eu",
+          "start": 25561.7,
+          "end": 25561.74,
+          "probability": 0.75566
+        },
+        {
+          "word": " tava",
+          "start": 25561.74,
+          "end": 25561.82,
+          "probability": 0.94706
+        },
+        {
+          "word": " tão",
+          "start": 25561.82,
+          "end": 25562.06,
+          "probability": 0.99818
+        },
+        {
+          "word": " perto",
+          "start": 25562.06,
+          "end": 25562.4,
+          "probability": 0.99797
+        },
+        {
+          "word": " de",
+          "start": 25562.4,
+          "end": 25562.56,
+          "probability": 0.93434
+        },
+        {
+          "word": " entrar,",
+          "start": 25562.56,
+          "end": 25562.92,
+          "probability": 0.9977
+        },
+        {
+          "word": " mano",
+          "start": 25563.1,
+          "end": 25563.54,
+          "probability": 0.9995
+        }
+      ],
+      "avg_logprob": -0.18357967767189806,
+      "no_speech_prob": 6.054911346614622e-12,
+      "compression_ratio": 1.618320610687023,
+      "temperature": 0.0
+    },
+    {
+      "start": 25566.12,
+      "end": 25567.06,
+      "text": "Porra, era só matar",
+      "words": [
+        {
+          "word": " Porra,",
+          "start": 25566.12,
+          "end": 25566.48,
+          "probability": 0.90344
+        },
+        {
+          "word": " era",
+          "start": 25566.48,
+          "end": 25566.64,
+          "probability": 0.97692
+        },
+        {
+          "word": " só",
+          "start": 25566.64,
+          "end": 25566.8,
+          "probability": 0.9998
+        },
+        {
+          "word": " matar",
+          "start": 25566.8,
+          "end": 25567.06,
+          "probability": 0.97692
+        }
+      ],
+      "avg_logprob": -0.18357967767189806,
+      "no_speech_prob": 6.054911346614622e-12,
+      "compression_ratio": 1.618320610687023,
+      "temperature": 0.0
+    },
+    {
+      "start": 25567.06,
+      "end": 25568.66,
+      "text": "Nossa, volta tudo, velho",
+      "words": [
+        {
+          "word": " Nossa,",
+          "start": 25567.06,
+          "end": 25567.36,
+          "probability": 0.69275
+        },
+        {
+          "word": " volta",
+          "start": 25567.52,
+          "end": 25567.7,
+          "probability": 0.99851
+        },
+        {
+          "word": " tudo,",
+          "start": 25567.7,
+          "end": 25568.18,
+          "probability": 0.98804
+        },
+        {
+          "word": " velho",
+          "start": 25568.22,
+          "end": 25568.66,
+          "probability": 0.99944
+        }
+      ],
+      "avg_logprob": -0.18357967767189806,
+      "no_speech_prob": 6.054911346614622e-12,
+      "compression_ratio": 1.618320610687023,
+      "temperature": 0.0
+    },
+    {
+      "start": 25570.24,
+      "end": 25572.74,
+      "text": "Chat, acho que é um bom momento pra gente parar aqui, tá, mano?",
+      "words": [
+        {
+          "word": " Chat,",
+          "start": 25570.24,
+          "end": 25570.6,
+          "probability": 0.62655
+        },
+        {
+          "word": " acho",
+          "start": 25570.74,
+          "end": 25570.92,
+          "probability": 0.96494
+        },
+        {
+          "word": " que",
+          "start": 25570.92,
+          "end": 25571.0,
+          "probability": 0.99985
+        },
+        {
+          "word": " é",
+          "start": 25571.0,
+          "end": 25571.04,
+          "probability": 0.99191
+        },
+        {
+          "word": " um",
+          "start": 25571.04,
+          "end": 25571.12,
+          "probability": 0.99931
+        },
+        {
+          "word": " bom",
+          "start": 25571.12,
+          "end": 25571.24,
+          "probability": 0.99934
+        },
+        {
+          "word": " momento",
+          "start": 25571.24,
+          "end": 25571.5,
+          "probability": 0.98931
+        },
+        {
+          "word": " pra",
+          "start": 25571.5,
+          "end": 25571.62,
+          "probability": 0.81455
+        },
+        {
+          "word": " gente",
+          "start": 25571.62,
+          "end": 25571.72,
+          "probability": 0.99754
+        },
+        {
+          "word": " parar",
+          "start": 25571.72,
+          "end": 25571.96,
+          "probability": 0.99746
+        },
+        {
+          "word": " aqui,",
+          "start": 25571.96,
+          "end": 25572.24,
+          "probability": 0.99733
+        },
+        {
+          "word": " tá,",
+          "start": 25572.38,
+          "end": 25572.44,
+          "probability": 0.99894
+        },
+        {
+          "word": " mano?",
+          "start": 25572.68,
+          "end": 25572.74,
+          "probability": 0.99968
+        }
+      ],
+      "avg_logprob": -0.18357967767189806,
+      "no_speech_prob": 6.054911346614622e-12,
+      "compression_ratio": 1.618320610687023,
+      "temperature": 0.0
+    },
+    {
+      "start": 25572.9,
+      "end": 25576.74,
+      "text": "Porque eu tô com medo de entrar lá e começar outros 40 minutos de cutscene, velho",
+      "words": [
+        {
+          "word": " Porque",
+          "start": 25572.9,
+          "end": 25572.96,
+          "probability": 0.97334
+        },
+        {
+          "word": " eu",
+          "start": 25572.96,
+          "end": 25573.02,
+          "probability": 0.99988
+        },
+        {
+          "word": " tô",
+          "start": 25573.02,
+          "end": 25573.12,
+          "probability": 0.9914
+        },
+        {
+          "word": " com",
+          "start": 25573.12,
+          "end": 25573.24,
+          "probability": 0.98098
+        },
+        {
+          "word": " medo",
+          "start": 25573.24,
+          "end": 25573.3,
+          "probability": 0.86552
+        },
+        {
+          "word": " de",
+          "start": 25573.3,
+          "end": 25573.46,
+          "probability": 0.99981
+        },
+        {
+          "word": " entrar",
+          "start": 25573.46,
+          "end": 25573.66,
+          "probability": 0.99916
+        },
+        {
+          "word": " lá",
+          "start": 25573.66,
+          "end": 25573.76,
+          "probability": 0.93799
+        },
+        {
+          "word": " e",
+          "start": 25573.76,
+          "end": 25573.86,
+          "probability": 0.80949
+        },
+        {
+          "word": " começar",
+          "start": 25573.86,
+          "end": 25574.14,
+          "probability": 0.99845
+        },
+        {
+          "word": " outros",
+          "start": 25574.14,
+          "end": 25574.42,
+          "probability": 0.9605
+        },
+        {
+          "word": " 40",
+          "start": 25574.42,
+          "end": 25574.88,
+          "probability": 0.98199
+        },
+        {
+          "word": " minutos",
+          "start": 25574.88,
+          "end": 25575.2,
+          "probability": 0.99316
+        },
+        {
+          "word": " de",
+          "start": 25575.2,
+          "end": 25575.38,
+          "probability": 0.88958
+        },
+        {
+          "word": " cutscene,",
+          "start": 25575.38,
+          "end": 25575.88,
+          "probability": 0.99753
+        },
+        {
+          "word": " velho",
+          "start": 25575.98,
+          "end": 25576.74,
+          "probability": 0.99986
+        }
+      ],
+      "avg_logprob": -0.18357967767189806,
+      "no_speech_prob": 6.054911346614622e-12,
+      "compression_ratio": 1.618320610687023,
+      "temperature": 0.0
+    },
+    {
+      "start": 25576.74,
+      "end": 25577.54,
+      "text": "Vou falar pra vocês",
+      "words": [
+        {
+          "word": " Vou",
+          "start": 25576.74,
+          "end": 25577.1,
+          "probability": 0.50744
+        },
+        {
+          "word": " falar",
+          "start": 25577.1,
+          "end": 25577.22,
+          "probability": 0.9959
+        },
+        {
+          "word": " pra",
+          "start": 25577.22,
+          "end": 25577.3,
+          "probability": 0.97839
+        },
+        {
+          "word": " vocês",
+          "start": 25577.3,
+          "end": 25577.54,
+          "probability": 0.9998
+        }
+      ],
+      "avg_logprob": -0.18357967767189806,
+      "no_speech_prob": 6.054911346614622e-12,
+      "compression_ratio": 1.618320610687023,
+      "temperature": 0.0
+    },
+    {
+      "start": 25577.54,
+      "end": 25579.12,
+      "text": "Eu vou meter o salve aqui",
+      "words": [
+        {
+          "word": " Eu",
+          "start": 25577.54,
+          "end": 25577.96,
+          "probability": 0.7175
+        },
+        {
+          "word": " vou",
+          "start": 25577.96,
+          "end": 25578.08,
+          "probability": 0.99981
+        },
+        {
+          "word": " meter",
+          "start": 25578.08,
+          "end": 25578.28,
+          "probability": 0.99917
+        },
+        {
+          "word": " o",
+          "start": 25578.28,
+          "end": 25578.42,
+          "probability": 0.99435
+        },
+        {
+          "word": " salve",
+          "start": 25578.42,
+          "end": 25578.8,
+          "probability": 0.99426
+        },
+        {
+          "word": " aqui",
+          "start": 25578.8,
+          "end": 25579.12,
+          "probability": 0.99971
+        }
+      ],
+      "avg_logprob": -0.18357967767189806,
+      "no_speech_prob": 6.054911346614622e-12,
+      "compression_ratio": 1.618320610687023,
+      "temperature": 0.0
+    },
+    {
+      "start": 25580.48,
+      "end": 25582.64,
+      "text": "Tá, e amanhã a gente termina",
+      "words": [
+        {
+          "word": " Tá,",
+          "start": 25580.48,
+          "end": 25580.84,
+          "probability": 0.72971
+        },
+        {
+          "word": " e",
+          "start": 25581.04,
+          "end": 25581.26,
+          "probability": 0.99969
+        },
+        {
+          "word": " amanhã",
+          "start": 25581.26,
+          "end": 25581.88,
+          "probability": 0.97843
+        },
+        {
+          "word": " a",
+          "start": 25581.88,
+          "end": 25582.0,
+          "probability": 0.99014
+        },
+        {
+          "word": " gente",
+          "start": 25582.0,
+          "end": 25582.12,
+          "probability": 0.99999
+        },
+        {
+          "word": " termina",
+          "start": 25582.12,
+          "end": 25582.64,
+          "probability": 0.99967
+        }
+      ],
+      "avg_logprob": -0.18357967767189806,
+      "no_speech_prob": 6.054911346614622e-12,
+      "compression_ratio": 1.618320610687023,
+      "temperature": 0.0
+    },
+    {
+      "start": 25582.64,
+      "end": 25585.68,
+      "text": "Porque, mano, imagina eu entrar naquela porta e começa mais 3 horas de cutscene",
+      "words": [
+        {
+          "word": " Porque,",
+          "start": 25582.64,
+          "end": 25583.26,
+          "probability": 0.99463
+        },
+        {
+          "word": " mano,",
+          "start": 25583.4,
+          "end": 25583.46,
+          "probability": 0.9993
+        },
+        {
+          "word": " imagina",
+          "start": 25583.56,
+          "end": 25583.76,
+          "probability": 0.91444
+        },
+        {
+          "word": " eu",
+          "start": 25583.76,
+          "end": 25583.82,
+          "probability": 0.97947
+        },
+        {
+          "word": " entrar",
+          "start": 25583.82,
+          "end": 25583.94,
+          "probability": 0.76685
+        },
+        {
+          "word": " naquela",
+          "start": 25583.94,
+          "end": 25584.2,
+          "probability": 0.99929
+        },
+        {
+          "word": " porta",
+          "start": 25584.2,
+          "end": 25584.4,
+          "probability": 0.99962
+        },
+        {
+          "word": " e",
+          "start": 25584.4,
+          "end": 25584.48,
+          "probability": 0.80689
+        },
+        {
+          "word": " começa",
+          "start": 25584.48,
+          "end": 25584.64,
+          "probability": 0.51559
+        },
+        {
+          "word": " mais",
+          "start": 25584.64,
+          "end": 25584.78,
+          "probability": 0.99167
+        },
+        {
+          "word": " 3",
+          "start": 25584.78,
+          "end": 25585.0,
+          "probability": 0.91368
+        },
+        {
+          "word": " horas",
+          "start": 25585.0,
+          "end": 25585.2,
+          "probability": 0.99441
+        },
+        {
+          "word": " de",
+          "start": 25585.2,
+          "end": 25585.3,
+          "probability": 0.99831
+        },
+        {
+          "word": " cutscene",
+          "start": 25585.3,
+          "end": 25585.68,
+          "probability": 0.99985
+        }
+      ],
+      "avg_logprob": -0.18357967767189806,
+      "no_speech_prob": 6.054911346614622e-12,
+      "compression_ratio": 1.618320610687023,
+      "temperature": 0.0
+    },
+    {
+      "start": 25585.68,
+      "end": 25587.12,
+      "text": "Já é quase 11 da noite",
+      "words": [
+        {
+          "word": " Já",
+          "start": 25585.68,
+          "end": 25586.16,
+          "probability": 0.31156
+        },
+        {
+          "word": " é",
+          "start": 25586.16,
+          "end": 25586.28,
+          "probability": 0.99912
+        },
+        {
+          "word": " quase",
+          "start": 25586.28,
+          "end": 25586.54,
+          "probability": 0.99908
+        },
+        {
+          "word": " 11",
+          "start": 25586.54,
+          "end": 25586.7,
+          "probability": 0.86886
+        },
+        {
+          "word": " da",
+          "start": 25586.7,
+          "end": 25586.82,
+          "probability": 0.98245
+        },
+        {
+          "word": " noite",
+          "start": 25586.82,
+          "end": 25587.12,
+          "probability": 0.99955
+        }
+      ],
+      "avg_logprob": -0.1736961198889691,
+      "no_speech_prob": 9.267950122626711e-12,
+      "compression_ratio": 1.4557522123893805,
+      "temperature": 0.0
+    },
+    {
+      "start": 25587.12,
+      "end": 25589.72,
+      "text": "Mas aqui tá um lugar meio ruim",
+      "words": [
+        {
+          "word": " Mas",
+          "start": 25587.12,
+          "end": 25587.92,
+          "probability": 0.07189
+        },
+        {
+          "word": " aqui",
+          "start": 25587.92,
+          "end": 25588.88,
+          "probability": 0.98636
+        },
+        {
+          "word": " tá",
+          "start": 25588.88,
+          "end": 25589.0,
+          "probability": 0.75749
+        },
+        {
+          "word": " um",
+          "start": 25589.0,
+          "end": 25589.08,
+          "probability": 0.98598
+        },
+        {
+          "word": " lugar",
+          "start": 25589.08,
+          "end": 25589.24,
+          "probability": 0.99971
+        },
+        {
+          "word": " meio",
+          "start": 25589.24,
+          "end": 25589.4,
+          "probability": 0.93872
+        },
+        {
+          "word": " ruim",
+          "start": 25589.4,
+          "end": 25589.72,
+          "probability": 0.99743
+        }
+      ],
+      "avg_logprob": -0.1736961198889691,
+      "no_speech_prob": 9.267950122626711e-12,
+      "compression_ratio": 1.4557522123893805,
+      "temperature": 0.0
+    },
+    {
+      "start": 25589.72,
+      "end": 25590.26,
+      "text": "Mas",
+      "words": [
+        {
+          "word": " Mas",
+          "start": 25589.72,
+          "end": 25590.26,
+          "probability": 0.78566
+        }
+      ],
+      "avg_logprob": -0.1736961198889691,
+      "no_speech_prob": 9.267950122626711e-12,
+      "compression_ratio": 1.4557522123893805,
+      "temperature": 0.0
+    },
+    {
+      "start": 25591.28,
+      "end": 25592.26,
+      "text": "Aqui, aqui",
+      "words": [
+        {
+          "word": " Aqui,",
+          "start": 25591.28,
+          "end": 25591.88,
+          "probability": 0.37705
+        },
+        {
+          "word": " aqui",
+          "start": 25591.88,
+          "end": 25592.26,
+          "probability": 0.90069
+        }
+      ],
+      "avg_logprob": -0.1736961198889691,
+      "no_speech_prob": 9.267950122626711e-12,
+      "compression_ratio": 1.4557522123893805,
+      "temperature": 0.0
+    },
+    {
+      "start": 25592.26,
+      "end": 25593.5,
+      "text": "Mais GG",
+      "words": [
+        {
+          "word": " Mais",
+          "start": 25592.26,
+          "end": 25593.16,
+          "probability": 0.7409
+        },
+        {
+          "word": " GG",
+          "start": 25593.16,
+          "end": 25593.5,
+          "probability": 0.99741
+        }
+      ],
+      "avg_logprob": -0.1736961198889691,
+      "no_speech_prob": 9.267950122626711e-12,
+      "compression_ratio": 1.4557522123893805,
+      "temperature": 0.0
+    },
+    {
+      "start": 25595.1,
+      "end": 25596.88,
+      "text": "Porque mano, imagina eu entro lá",
+      "words": [
+        {
+          "word": " Porque",
+          "start": 25595.1,
+          "end": 25595.7,
+          "probability": 0.55899
+        },
+        {
+          "word": " mano,",
+          "start": 25595.7,
+          "end": 25595.98,
+          "probability": 0.7926
+        },
+        {
+          "word": " imagina",
+          "start": 25596.12,
+          "end": 25596.44,
+          "probability": 0.99732
+        },
+        {
+          "word": " eu",
+          "start": 25596.44,
+          "end": 25596.54,
+          "probability": 0.95285
+        },
+        {
+          "word": " entro",
+          "start": 25596.54,
+          "end": 25596.76,
+          "probability": 0.98202
+        },
+        {
+          "word": " lá",
+          "start": 25596.76,
+          "end": 25596.88,
+          "probability": 0.99609
+        }
+      ],
+      "avg_logprob": -0.1736961198889691,
+      "no_speech_prob": 9.267950122626711e-12,
+      "compression_ratio": 1.4557522123893805,
+      "temperature": 0.0
+    },
+    {
+      "start": 25596.88,
+      "end": 25598.14,
+      "text": "Começa 3 horas de cutscene",
+      "words": [
+        {
+          "word": " Começa",
+          "start": 25596.88,
+          "end": 25597.16,
+          "probability": 0.69338
+        },
+        {
+          "word": " 3",
+          "start": 25597.16,
+          "end": 25597.36,
+          "probability": 0.75981
+        },
+        {
+          "word": " horas",
+          "start": 25597.36,
+          "end": 25597.58,
+          "probability": 0.97294
+        },
+        {
+          "word": " de",
+          "start": 25597.58,
+          "end": 25597.66,
+          "probability": 0.99631
+        },
+        {
+          "word": " cutscene",
+          "start": 25597.66,
+          "end": 25598.14,
+          "probability": 0.99497
+        }
+      ],
+      "avg_logprob": -0.1736961198889691,
+      "no_speech_prob": 9.267950122626711e-12,
+      "compression_ratio": 1.4557522123893805,
+      "temperature": 0.0
+    },
+    {
+      "start": 25598.14,
+      "end": 25599.9,
+      "text": "Vamos aproveitar que tá salvo aqui",
+      "words": [
+        {
+          "word": " Vamos",
+          "start": 25598.14,
+          "end": 25598.46,
+          "probability": 0.68114
+        },
+        {
+          "word": " aproveitar",
+          "start": 25598.46,
+          "end": 25598.92,
+          "probability": 0.99986
+        },
+        {
+          "word": " que",
+          "start": 25598.92,
+          "end": 25599.04,
+          "probability": 0.9973
+        },
+        {
+          "word": " tá",
+          "start": 25599.04,
+          "end": 25599.16,
+          "probability": 0.99095
+        },
+        {
+          "word": " salvo",
+          "start": 25599.16,
+          "end": 25599.56,
+          "probability": 0.99916
+        },
+        {
+          "word": " aqui",
+          "start": 25599.56,
+          "end": 25599.9,
+          "probability": 0.99621
+        }
+      ],
+      "avg_logprob": -0.1736961198889691,
+      "no_speech_prob": 9.267950122626711e-12,
+      "compression_ratio": 1.4557522123893805,
+      "temperature": 0.0
+    },
+    {
+      "start": 25600.76,
+      "end": 25602.68,
+      "text": "E a gente já para",
+      "words": [
+        {
+          "word": " E",
+          "start": 25600.76,
+          "end": 25601.36,
+          "probability": 0.97486
+        },
+        {
+          "word": " a",
+          "start": 25601.36,
+          "end": 25601.86,
+          "probability": 0.98141
+        },
+        {
+          "word": " gente",
+          "start": 25601.86,
+          "end": 25601.96,
+          "probability": 0.99994
+        },
+        {
+          "word": " já",
+          "start": 25601.96,
+          "end": 25602.14,
+          "probability": 0.99978
+        },
+        {
+          "word": " para",
+          "start": 25602.14,
+          "end": 25602.68,
+          "probability": 0.98798
+        }
+      ],
+      "avg_logprob": -0.1736961198889691,
+      "no_speech_prob": 9.267950122626711e-12,
+      "compression_ratio": 1.4557522123893805,
+      "temperature": 0.0
+    },
+    {
+      "start": 25602.68,
+      "end": 25604.16,
+      "text": "E continua na próxima",
+      "words": [
+        {
+          "word": " E",
+          "start": 25602.68,
+          "end": 25603.16,
+          "probability": 0.99753
+        },
+        {
+          "word": " continua",
+          "start": 25603.16,
+          "end": 25603.58,
+          "probability": 0.96561
+        },
+        {
+          "word": " na",
+          "start": 25603.58,
+          "end": 25603.74,
+          "probability": 0.9971
+        },
+        {
+          "word": " próxima",
+          "start": 25603.74,
+          "end": 25604.16,
+          "probability": 0.99971
+        }
+      ],
+      "avg_logprob": -0.1736961198889691,
+      "no_speech_prob": 9.267950122626711e-12,
+      "compression_ratio": 1.4557522123893805,
+      "temperature": 0.0
+    },
+    {
+      "start": 25604.16,
+      "end": 25605.76,
+      "text": "Amanhã a gente termina",
+      "words": [
+        {
+          "word": " Amanhã",
+          "start": 25604.16,
+          "end": 25605.0,
+          "probability": 0.885
+        },
+        {
+          "word": " a",
+          "start": 25605.0,
+          "end": 25605.12,
+          "probability": 0.99964
+        },
+        {
+          "word": " gente",
+          "start": 25605.12,
+          "end": 25605.26,
+          "probability": 0.99999
+        },
+        {
+          "word": " termina",
+          "start": 25605.26,
+          "end": 25605.76,
+          "probability": 0.99987
+        }
+      ],
+      "avg_logprob": -0.1736961198889691,
+      "no_speech_prob": 9.267950122626711e-12,
+      "compression_ratio": 1.4557522123893805,
+      "temperature": 0.0
+    },
+    {
+      "start": 25605.76,
+      "end": 25607.98,
+      "text": "Tamo no fim, tamo no último ato",
+      "words": [
+        {
+          "word": " Tamo",
+          "start": 25605.76,
+          "end": 25606.42,
+          "probability": 0.87652
+        },
+        {
+          "word": " no",
+          "start": 25606.42,
+          "end": 25606.56,
+          "probability": 0.99998
+        },
+        {
+          "word": " fim,",
+          "start": 25606.56,
+          "end": 25606.8,
+          "probability": 0.99312
+        },
+        {
+          "word": " tamo",
+          "start": 25606.92,
+          "end": 25607.22,
+          "probability": 0.99347
+        },
+        {
+          "word": " no",
+          "start": 25607.22,
+          "end": 25607.3,
+          "probability": 0.99997
+        },
+        {
+          "word": " último",
+          "start": 25607.3,
+          "end": 25607.52,
+          "probability": 0.95081
+        },
+        {
+          "word": " ato",
+          "start": 25607.52,
+          "end": 25607.98,
+          "probability": 0.99835
+        }
+      ],
+      "avg_logprob": -0.1736961198889691,
+      "no_speech_prob": 9.267950122626711e-12,
+      "compression_ratio": 1.4557522123893805,
+      "temperature": 0.0
+    },
+    {
+      "start": 25609.38,
+      "end": 25610.58,
+      "text": "Amanhã pipoquinha",
+      "words": [
+        {
+          "word": " Amanhã",
+          "start": 25609.38,
+          "end": 25609.98,
+          "probability": 0.99968
+        },
+        {
+          "word": " pipoquinha",
+          "start": 25609.98,
+          "end": 25610.58,
+          "probability": 0.88965
+        }
+      ],
+      "avg_logprob": -0.1736961198889691,
+      "no_speech_prob": 9.267950122626711e-12,
+      "compression_ratio": 1.4557522123893805,
+      "temperature": 0.0
+    },
+    {
+      "start": 25610.58,
+      "end": 25612.18,
+      "text": "Pra 2 horas de cutscene",
+      "words": [
+        {
+          "word": " Pra",
+          "start": 25610.58,
+          "end": 25610.84,
+          "probability": 0.71622
+        },
+        {
+          "word": " 2",
+          "start": 25610.84,
+          "end": 25611.32,
+          "probability": 0.95833
+        },
+        {
+          "word": " horas",
+          "start": 25611.32,
+          "end": 25611.6,
+          "probability": 0.99867
+        },
+        {
+          "word": " de",
+          "start": 25611.6,
+          "end": 25611.7,
+          "probability": 0.99977
+        },
+        {
+          "word": " cutscene",
+          "start": 25611.7,
+          "end": 25612.18,
+          "probability": 0.99979
+        }
+      ],
+      "avg_logprob": -0.1736961198889691,
+      "no_speech_prob": 9.267950122626711e-12,
+      "compression_ratio": 1.4557522123893805,
+      "temperature": 0.0
+    },
+    {
+      "start": 25612.18,
+      "end": 25614.36,
+      "text": "E é isso",
+      "words": [
+        {
+          "word": " E",
+          "start": 25612.18,
+          "end": 25613.12,
+          "probability": 0.99743
+        },
+        {
+          "word": " é",
+          "start": 25613.12,
+          "end": 25614.06,
+          "probability": 0.84828
+        },
+        {
+          "word": " isso",
+          "start": 25614.06,
+          "end": 25614.36,
+          "probability": 0.99987
+        }
+      ],
+      "avg_logprob": -0.1736961198889691,
+      "no_speech_prob": 9.267950122626711e-12,
+      "compression_ratio": 1.4557522123893805,
+      "temperature": 0.0
+    },
+    {
+      "start": 25614.88,
+      "end": 25616.38,
+      "text": "basicamente, mano, é isso, né, pô",
+      "words": [
+        {
+          "word": " basicamente,",
+          "start": 25614.88,
+          "end": 25615.22,
+          "probability": 0.78484
+        },
+        {
+          "word": " mano,",
+          "start": 25615.32,
+          "end": 25615.48,
+          "probability": 0.9743
+        },
+        {
+          "word": " é",
+          "start": 25615.54,
+          "end": 25615.66,
+          "probability": 0.99906
+        },
+        {
+          "word": " isso,",
+          "start": 25615.66,
+          "end": 25615.94,
+          "probability": 0.99994
+        },
+        {
+          "word": " né,",
+          "start": 25616.02,
+          "end": 25616.12,
+          "probability": 0.96087
+        },
+        {
+          "word": " pô",
+          "start": 25616.18,
+          "end": 25616.38,
+          "probability": 0.97417
+        }
+      ],
+      "avg_logprob": -0.2670076361113188,
+      "no_speech_prob": 7.65352798498542e-12,
+      "compression_ratio": 1.6686746987951808,
+      "temperature": 0.0
+    },
+    {
+      "start": 25616.38,
+      "end": 25618.36,
+      "text": "mas fizeram um progresso bom, mano, fizeram um progresso",
+      "words": [
+        {
+          "word": " mas",
+          "start": 25616.38,
+          "end": 25616.72,
+          "probability": 0.27873
+        },
+        {
+          "word": " fizeram",
+          "start": 25616.72,
+          "end": 25616.96,
+          "probability": 0.83197
+        },
+        {
+          "word": " um",
+          "start": 25616.96,
+          "end": 25617.02,
+          "probability": 0.4181
+        },
+        {
+          "word": " progresso",
+          "start": 25617.02,
+          "end": 25617.32,
+          "probability": 0.99983
+        },
+        {
+          "word": " bom,",
+          "start": 25617.32,
+          "end": 25617.58,
+          "probability": 0.9998
+        },
+        {
+          "word": " mano,",
+          "start": 25617.66,
+          "end": 25617.76,
+          "probability": 0.98415
+        },
+        {
+          "word": " fizeram",
+          "start": 25617.76,
+          "end": 25617.98,
+          "probability": 0.989
+        },
+        {
+          "word": " um",
+          "start": 25617.98,
+          "end": 25618.14,
+          "probability": 0.95165
+        },
+        {
+          "word": " progresso",
+          "start": 25618.14,
+          "end": 25618.36,
+          "probability": 0.99991
+        }
+      ],
+      "avg_logprob": -0.2670076361113188,
+      "no_speech_prob": 7.65352798498542e-12,
+      "compression_ratio": 1.6686746987951808,
+      "temperature": 0.0
+    },
+    {
+      "start": 25618.36,
+      "end": 25620.56,
+      "text": "bom, né. Gibriapolos 1.500",
+      "words": [
+        {
+          "word": " bom,",
+          "start": 25618.36,
+          "end": 25618.62,
+          "probability": 0.99884
+        },
+        {
+          "word": " né.",
+          "start": 25618.66,
+          "end": 25618.8,
+          "probability": 0.99981
+        },
+        {
+          "word": " Gibriapolos",
+          "start": 25619.62,
+          "end": 25619.96,
+          "probability": 0.51351
+        },
+        {
+          "word": " 1",
+          "start": 25619.96,
+          "end": 25620.14,
+          "probability": 0.09592
+        },
+        {
+          "word": ".500",
+          "start": 25620.14,
+          "end": 25620.56,
+          "probability": 0.99614
+        }
+      ],
+      "avg_logprob": -0.2670076361113188,
+      "no_speech_prob": 7.65352798498542e-12,
+      "compression_ratio": 1.6686746987951808,
+      "temperature": 0.0
+    },
+    {
+      "start": 25620.56,
+      "end": 25622.24,
+      "text": "biso, eleição, rapaz, o meu aniversário",
+      "words": [
+        {
+          "word": " biso,",
+          "start": 25620.56,
+          "end": 25620.92,
+          "probability": 0.35437
+        },
+        {
+          "word": " eleição,",
+          "start": 25620.94,
+          "end": 25621.28,
+          "probability": 0.60952
+        },
+        {
+          "word": " rapaz,",
+          "start": 25621.34,
+          "end": 25621.54,
+          "probability": 0.89809
+        },
+        {
+          "word": " o",
+          "start": 25621.54,
+          "end": 25621.64,
+          "probability": 0.17268
+        },
+        {
+          "word": " meu",
+          "start": 25621.64,
+          "end": 25621.74,
+          "probability": 0.95576
+        },
+        {
+          "word": " aniversário",
+          "start": 25621.74,
+          "end": 25622.24,
+          "probability": 0.99741
+        }
+      ],
+      "avg_logprob": -0.2670076361113188,
+      "no_speech_prob": 7.65352798498542e-12,
+      "compression_ratio": 1.6686746987951808,
+      "temperature": 0.0
+    },
+    {
+      "start": 25622.24,
+      "end": 25624.24,
+      "text": "é você que vai ganhar presente, é sim, né, de coração",
+      "words": [
+        {
+          "word": " é",
+          "start": 25622.24,
+          "end": 25622.4,
+          "probability": 0.76126
+        },
+        {
+          "word": " você",
+          "start": 25622.4,
+          "end": 25622.6,
+          "probability": 0.99871
+        },
+        {
+          "word": " que",
+          "start": 25622.6,
+          "end": 25622.7,
+          "probability": 0.9958
+        },
+        {
+          "word": " vai",
+          "start": 25622.7,
+          "end": 25622.78,
+          "probability": 0.99983
+        },
+        {
+          "word": " ganhar",
+          "start": 25622.78,
+          "end": 25622.92,
+          "probability": 0.99938
+        },
+        {
+          "word": " presente,",
+          "start": 25622.92,
+          "end": 25623.24,
+          "probability": 0.6556
+        },
+        {
+          "word": " é",
+          "start": 25623.42,
+          "end": 25623.56,
+          "probability": 0.95326
+        },
+        {
+          "word": " sim,",
+          "start": 25623.56,
+          "end": 25623.72,
+          "probability": 0.97024
+        },
+        {
+          "word": " né,",
+          "start": 25623.76,
+          "end": 25623.84,
+          "probability": 0.50269
+        },
+        {
+          "word": " de",
+          "start": 25623.88,
+          "end": 25623.96,
+          "probability": 0.99672
+        },
+        {
+          "word": " coração",
+          "start": 25623.96,
+          "end": 25624.24,
+          "probability": 0.99974
+        }
+      ],
+      "avg_logprob": -0.2670076361113188,
+      "no_speech_prob": 7.65352798498542e-12,
+      "compression_ratio": 1.6686746987951808,
+      "temperature": 0.0
+    },
+    {
+      "start": 25624.24,
+      "end": 25626.26,
+      "text": "é por tudo, sei, muito louco, pensar como eu já acompanhava",
+      "words": [
+        {
+          "word": " é",
+          "start": 25624.24,
+          "end": 25624.42,
+          "probability": 0.04961
+        },
+        {
+          "word": " por",
+          "start": 25624.42,
+          "end": 25624.62,
+          "probability": 0.70768
+        },
+        {
+          "word": " tudo,",
+          "start": 25624.62,
+          "end": 25624.82,
+          "probability": 0.99318
+        },
+        {
+          "word": " sei,",
+          "start": 25624.92,
+          "end": 25624.98,
+          "probability": 0.67191
+        },
+        {
+          "word": " muito",
+          "start": 25625.04,
+          "end": 25625.14,
+          "probability": 0.9302
+        },
+        {
+          "word": " louco,",
+          "start": 25625.14,
+          "end": 25625.3,
+          "probability": 0.97845
+        },
+        {
+          "word": " pensar",
+          "start": 25625.38,
+          "end": 25625.52,
+          "probability": 0.76277
+        },
+        {
+          "word": " como",
+          "start": 25625.52,
+          "end": 25625.68,
+          "probability": 0.47787
+        },
+        {
+          "word": " eu",
+          "start": 25625.68,
+          "end": 25625.76,
+          "probability": 0.5071
+        },
+        {
+          "word": " já",
+          "start": 25625.76,
+          "end": 25625.82,
+          "probability": 0.59603
+        },
+        {
+          "word": " acompanhava",
+          "start": 25625.82,
+          "end": 25626.26,
+          "probability": 0.62372
+        }
+      ],
+      "avg_logprob": -0.2670076361113188,
+      "no_speech_prob": 7.65352798498542e-12,
+      "compression_ratio": 1.6686746987951808,
+      "temperature": 0.0
+    },
+    {
+      "start": 25626.26,
+      "end": 25628.24,
+      "text": "tem uns 10 anos agora, já com 22, estamos juntados",
+      "words": [
+        {
+          "word": " tem",
+          "start": 25626.26,
+          "end": 25626.4,
+          "probability": 0.509
+        },
+        {
+          "word": " uns",
+          "start": 25626.4,
+          "end": 25626.54,
+          "probability": 0.99976
+        },
+        {
+          "word": " 10",
+          "start": 25626.54,
+          "end": 25626.68,
+          "probability": 0.99464
+        },
+        {
+          "word": " anos",
+          "start": 25626.68,
+          "end": 25626.86,
+          "probability": 0.99989
+        },
+        {
+          "word": " agora,",
+          "start": 25626.86,
+          "end": 25627.04,
+          "probability": 0.99165
+        },
+        {
+          "word": " já",
+          "start": 25627.1,
+          "end": 25627.18,
+          "probability": 0.99895
+        },
+        {
+          "word": " com",
+          "start": 25627.18,
+          "end": 25627.32,
+          "probability": 0.99673
+        },
+        {
+          "word": " 22,",
+          "start": 25627.32,
+          "end": 25627.6,
+          "probability": 0.99532
+        },
+        {
+          "word": " estamos",
+          "start": 25627.72,
+          "end": 25627.84,
+          "probability": 0.80332
+        },
+        {
+          "word": " juntados",
+          "start": 25627.84,
+          "end": 25628.24,
+          "probability": 0.77554
+        }
+      ],
+      "avg_logprob": -0.2670076361113188,
+      "no_speech_prob": 7.65352798498542e-12,
+      "compression_ratio": 1.6686746987951808,
+      "temperature": 0.0
+    },
+    {
+      "start": 25628.24,
+      "end": 25630.44,
+      "text": "e aí, Gibriapolos 1.500, mano, quanto tempo",
+      "words": [
+        {
+          "word": " e",
+          "start": 25628.24,
+          "end": 25628.4,
+          "probability": 0.62123
+        },
+        {
+          "word": " aí,",
+          "start": 25628.4,
+          "end": 25628.5,
+          "probability": 0.75659
+        },
+        {
+          "word": " Gibriapolos",
+          "start": 25628.54,
+          "end": 25629.02,
+          "probability": 0.99429
+        },
+        {
+          "word": " 1",
+          "start": 25629.02,
+          "end": 25629.1,
+          "probability": 0.99898
+        },
+        {
+          "word": ".500,",
+          "start": 25629.1,
+          "end": 25629.5,
+          "probability": 0.9998
+        },
+        {
+          "word": " mano,",
+          "start": 25629.82,
+          "end": 25629.94,
+          "probability": 0.99952
+        },
+        {
+          "word": " quanto",
+          "start": 25630.02,
+          "end": 25630.18,
+          "probability": 0.99494
+        },
+        {
+          "word": " tempo",
+          "start": 25630.18,
+          "end": 25630.44,
+          "probability": 0.99962
+        }
+      ],
+      "avg_logprob": -0.2670076361113188,
+      "no_speech_prob": 7.65352798498542e-12,
+      "compression_ratio": 1.6686746987951808,
+      "temperature": 0.0
+    },
+    {
+      "start": 25630.44,
+      "end": 25632.44,
+      "text": "valeu, parabéns, hein",
+      "words": [
+        {
+          "word": " valeu,",
+          "start": 25630.44,
+          "end": 25631.04,
+          "probability": 0.69485
+        },
+        {
+          "word": " parabéns,",
+          "start": 25631.7,
+          "end": 25632.32,
+          "probability": 0.99941
+        },
+        {
+          "word": " hein",
+          "start": 25632.36,
+          "end": 25632.44,
+          "probability": 0.98803
+        }
+      ],
+      "avg_logprob": -0.2670076361113188,
+      "no_speech_prob": 7.65352798498542e-12,
+      "compression_ratio": 1.6686746987951808,
+      "temperature": 0.0
+    },
+    {
+      "start": 25632.44,
+      "end": 25634.4,
+      "text": "felicidades, tudo de bom, valeu",
+      "words": [
+        {
+          "word": " felicidades,",
+          "start": 25632.44,
+          "end": 25633.02,
+          "probability": 0.80748
+        },
+        {
+          "word": " tudo",
+          "start": 25633.12,
+          "end": 25633.32,
+          "probability": 0.99924
+        },
+        {
+          "word": " de",
+          "start": 25633.32,
+          "end": 25633.46,
+          "probability": 0.99994
+        },
+        {
+          "word": " bom,",
+          "start": 25633.46,
+          "end": 25633.7,
+          "probability": 0.99992
+        },
+        {
+          "word": " valeu",
+          "start": 25633.82,
+          "end": 25634.4,
+          "probability": 0.99991
+        }
+      ],
+      "avg_logprob": -0.2670076361113188,
+      "no_speech_prob": 7.65352798498542e-12,
+      "compression_ratio": 1.6686746987951808,
+      "temperature": 0.0
+    },
+    {
+      "start": 25636.1,
+      "end": 25636.44,
+      "text": "brigadão",
+      "words": [
+        {
+          "word": " brigadão",
+          "start": 25636.1,
+          "end": 25636.44,
+          "probability": 0.96556
+        }
+      ],
+      "avg_logprob": -0.2670076361113188,
+      "no_speech_prob": 7.65352798498542e-12,
+      "compression_ratio": 1.6686746987951808,
+      "temperature": 0.0
+    },
+    {
+      "start": 25636.44,
+      "end": 25638.66,
+      "text": "tô doente, mano, porra, velho",
+      "words": [
+        {
+          "word": " tô",
+          "start": 25636.44,
+          "end": 25637.08,
+          "probability": 0.90089
+        },
+        {
+          "word": " doente,",
+          "start": 25637.08,
+          "end": 25637.5,
+          "probability": 0.99911
+        },
+        {
+          "word": " mano,",
+          "start": 25637.56,
+          "end": 25637.76,
+          "probability": 0.99975
+        },
+        {
+          "word": " porra,",
+          "start": 25638.08,
+          "end": 25638.4,
+          "probability": 0.99904
+        },
+        {
+          "word": " velho",
+          "start": 25638.44,
+          "end": 25638.66,
+          "probability": 0.99511
+        }
+      ],
+      "avg_logprob": -0.2670076361113188,
+      "no_speech_prob": 7.65352798498542e-12,
+      "compression_ratio": 1.6686746987951808,
+      "temperature": 0.0
+    },
+    {
+      "start": 25639.42,
+      "end": 25640.16,
+      "text": "porra, velho, Daniel",
+      "words": [
+        {
+          "word": " porra,",
+          "start": 25639.42,
+          "end": 25639.76,
+          "probability": 0.88976
+        },
+        {
+          "word": " velho,",
+          "start": 25639.84,
+          "end": 25639.96,
+          "probability": 0.9991
+        },
+        {
+          "word": " Daniel",
+          "start": 25639.96,
+          "end": 25640.16,
+          "probability": 0.98829
+        }
+      ],
+      "avg_logprob": -0.2670076361113188,
+      "no_speech_prob": 7.65352798498542e-12,
+      "compression_ratio": 1.6686746987951808,
+      "temperature": 0.0
+    },
+    {
+      "start": 25640.16,
+      "end": 25642.44,
+      "text": "Brápolos 88, Z King Brápolos",
+      "words": [
+        {
+          "word": " Brápolos",
+          "start": 25640.16,
+          "end": 25640.64,
+          "probability": 0.54621
+        },
+        {
+          "word": " 88,",
+          "start": 25640.64,
+          "end": 25641.16,
+          "probability": 0.94234
+        },
+        {
+          "word": " Z",
+          "start": 25641.58,
+          "end": 25641.76,
+          "probability": 0.92609
+        },
+        {
+          "word": " King",
+          "start": 25641.76,
+          "end": 25642.0,
+          "probability": 0.20658
+        },
+        {
+          "word": " Brápolos",
+          "start": 25642.0,
+          "end": 25642.44,
+          "probability": 0.96976
+        }
+      ],
+      "avg_logprob": -0.2670076361113188,
+      "no_speech_prob": 7.65352798498542e-12,
+      "compression_ratio": 1.6686746987951808,
+      "temperature": 0.0
+    },
+    {
+      "start": 25642.44,
+      "end": 25644.14,
+      "text": "36, JV Nunes Brápolos",
+      "words": [
+        {
+          "word": " 36,",
+          "start": 25642.44,
+          "end": 25642.88,
+          "probability": 0.99659
+        },
+        {
+          "word": " JV",
+          "start": 25643.16,
+          "end": 25643.46,
+          "probability": 0.71728
+        },
+        {
+          "word": " Nunes",
+          "start": 25643.46,
+          "end": 25643.76,
+          "probability": 0.99635
+        },
+        {
+          "word": " Brápolos",
+          "start": 25643.76,
+          "end": 25644.14,
+          "probability": 0.93245
+        }
+      ],
+      "avg_logprob": -0.2670076361113188,
+      "no_speech_prob": 7.65352798498542e-12,
+      "compression_ratio": 1.6686746987951808,
+      "temperature": 0.0
+    },
+    {
+      "start": 25644.14,
+      "end": 25646.22,
+      "text": "14, tem umas 3 horas",
+      "words": [
+        {
+          "word": " 14,",
+          "start": 25644.14,
+          "end": 25644.74,
+          "probability": 0.64544
+        },
+        {
+          "word": " tem",
+          "start": 25645.2,
+          "end": 25645.54,
+          "probability": 0.99376
+        },
+        {
+          "word": " umas",
+          "start": 25645.54,
+          "end": 25645.74,
+          "probability": 0.99969
+        },
+        {
+          "word": " 3",
+          "start": 25645.74,
+          "end": 25645.94,
+          "probability": 0.92321
+        },
+        {
+          "word": " horas",
+          "start": 25645.94,
+          "end": 25646.22,
+          "probability": 0.99137
+        }
+      ],
+      "avg_logprob": -0.2298799084078881,
+      "no_speech_prob": 8.021144512482259e-12,
+      "compression_ratio": 1.5612244897959184,
+      "temperature": 0.0
+    },
+    {
+      "start": 25646.22,
+      "end": 25647.94,
+      "text": "até acabar contando com a cutscene",
+      "words": [
+        {
+          "word": " até",
+          "start": 25646.22,
+          "end": 25646.46,
+          "probability": 0.96888
+        },
+        {
+          "word": " acabar",
+          "start": 25646.46,
+          "end": 25646.82,
+          "probability": 0.99082
+        },
+        {
+          "word": " contando",
+          "start": 25646.82,
+          "end": 25647.28,
+          "probability": 0.89037
+        },
+        {
+          "word": " com",
+          "start": 25647.28,
+          "end": 25647.38,
+          "probability": 0.99997
+        },
+        {
+          "word": " a",
+          "start": 25647.38,
+          "end": 25647.46,
+          "probability": 0.99976
+        },
+        {
+          "word": " cutscene",
+          "start": 25647.46,
+          "end": 25647.94,
+          "probability": 0.99047
+        }
+      ],
+      "avg_logprob": -0.2298799084078881,
+      "no_speech_prob": 8.021144512482259e-12,
+      "compression_ratio": 1.5612244897959184,
+      "temperature": 0.0
+    },
+    {
+      "start": 25648.44,
+      "end": 25650.42,
+      "text": "ah, então tem uma hora e pouco até acabar",
+      "words": [
+        {
+          "word": " ah,",
+          "start": 25648.44,
+          "end": 25648.88,
+          "probability": 0.22666
+        },
+        {
+          "word": " então",
+          "start": 25648.96,
+          "end": 25649.06,
+          "probability": 0.99988
+        },
+        {
+          "word": " tem",
+          "start": 25649.06,
+          "end": 25649.24,
+          "probability": 0.99969
+        },
+        {
+          "word": " uma",
+          "start": 25649.24,
+          "end": 25649.44,
+          "probability": 0.51536
+        },
+        {
+          "word": " hora",
+          "start": 25649.44,
+          "end": 25649.6,
+          "probability": 0.9996
+        },
+        {
+          "word": " e",
+          "start": 25649.6,
+          "end": 25649.7,
+          "probability": 0.99986
+        },
+        {
+          "word": " pouco",
+          "start": 25649.7,
+          "end": 25649.84,
+          "probability": 0.98812
+        },
+        {
+          "word": " até",
+          "start": 25649.84,
+          "end": 25650.06,
+          "probability": 0.99712
+        },
+        {
+          "word": " acabar",
+          "start": 25650.06,
+          "end": 25650.42,
+          "probability": 0.99981
+        }
+      ],
+      "avg_logprob": -0.2298799084078881,
+      "no_speech_prob": 8.021144512482259e-12,
+      "compression_ratio": 1.5612244897959184,
+      "temperature": 0.0
+    },
+    {
+      "start": 25650.42,
+      "end": 25651.24,
+      "text": "né",
+      "words": [
+        {
+          "word": " né",
+          "start": 25650.42,
+          "end": 25651.24,
+          "probability": 0.51149
+        }
+      ],
+      "avg_logprob": -0.2298799084078881,
+      "no_speech_prob": 8.021144512482259e-12,
+      "compression_ratio": 1.5612244897959184,
+      "temperature": 0.0
+    },
+    {
+      "start": 25653.0,
+      "end": 25653.64,
+      "text": "Matheus, Apple",
+      "words": [
+        {
+          "word": " Matheus,",
+          "start": 25653.0,
+          "end": 25653.44,
+          "probability": 0.74626
+        },
+        {
+          "word": " Apple",
+          "start": 25653.54,
+          "end": 25653.64,
+          "probability": 0.18456
+        }
+      ],
+      "avg_logprob": -0.2298799084078881,
+      "no_speech_prob": 8.021144512482259e-12,
+      "compression_ratio": 1.5612244897959184,
+      "temperature": 0.0
+    },
+    {
+      "start": 25653.64,
+      "end": 25656.08,
+      "text": "30, muito obrigado, Reino do Live",
+      "words": [
+        {
+          "word": " 30,",
+          "start": 25653.64,
+          "end": 25654.16,
+          "probability": 0.37105
+        },
+        {
+          "word": " muito",
+          "start": 25654.84,
+          "end": 25655.08,
+          "probability": 0.9997
+        },
+        {
+          "word": " obrigado,",
+          "start": 25655.08,
+          "end": 25655.52,
+          "probability": 0.99952
+        },
+        {
+          "word": " Reino",
+          "start": 25655.68,
+          "end": 25655.84,
+          "probability": 0.46582
+        },
+        {
+          "word": " do",
+          "start": 25655.84,
+          "end": 25655.94,
+          "probability": 0.90886
+        },
+        {
+          "word": " Live",
+          "start": 25655.94,
+          "end": 25656.08,
+          "probability": 0.97129
+        }
+      ],
+      "avg_logprob": -0.2298799084078881,
+      "no_speech_prob": 8.021144512482259e-12,
+      "compression_ratio": 1.5612244897959184,
+      "temperature": 0.0
+    },
+    {
+      "start": 25656.08,
+      "end": 25657.96,
+      "text": "Apple 52, Gimentoni",
+      "words": [
+        {
+          "word": " Apple",
+          "start": 25656.08,
+          "end": 25656.3,
+          "probability": 0.05722
+        },
+        {
+          "word": " 52,",
+          "start": 25656.3,
+          "end": 25657.04,
+          "probability": 0.98769
+        },
+        {
+          "word": " Gimentoni",
+          "start": 25657.38,
+          "end": 25657.96,
+          "probability": 0.85178
+        }
+      ],
+      "avg_logprob": -0.2298799084078881,
+      "no_speech_prob": 8.021144512482259e-12,
+      "compression_ratio": 1.5612244897959184,
+      "temperature": 0.0
+    },
+    {
+      "start": 25657.96,
+      "end": 25659.98,
+      "text": "Apple 6 deu pro Murilo, Kaique",
+      "words": [
+        {
+          "word": " Apple",
+          "start": 25657.96,
+          "end": 25658.16,
+          "probability": 0.31966
+        },
+        {
+          "word": " 6",
+          "start": 25658.16,
+          "end": 25658.4,
+          "probability": 0.11588
+        },
+        {
+          "word": " deu",
+          "start": 25658.4,
+          "end": 25658.56,
+          "probability": 0.85059
+        },
+        {
+          "word": " pro",
+          "start": 25658.56,
+          "end": 25658.7,
+          "probability": 0.9615
+        },
+        {
+          "word": " Murilo,",
+          "start": 25658.7,
+          "end": 25659.26,
+          "probability": 0.99792
+        },
+        {
+          "word": " Kaique",
+          "start": 25659.7,
+          "end": 25659.98,
+          "probability": 0.96266
+        }
+      ],
+      "avg_logprob": -0.2298799084078881,
+      "no_speech_prob": 8.021144512482259e-12,
+      "compression_ratio": 1.5612244897959184,
+      "temperature": 0.0
+    },
+    {
+      "start": 25659.98,
+      "end": 25662.22,
+      "text": "Apple Sub, Rostinho Angelical, Apple 11",
+      "words": [
+        {
+          "word": " Apple",
+          "start": 25659.98,
+          "end": 25660.2,
+          "probability": 0.96453
+        },
+        {
+          "word": " Sub,",
+          "start": 25660.2,
+          "end": 25660.5,
+          "probability": 0.79732
+        },
+        {
+          "word": " Rostinho",
+          "start": 25660.6,
+          "end": 25660.9,
+          "probability": 0.95591
+        },
+        {
+          "word": " Angelical,",
+          "start": 25660.9,
+          "end": 25661.36,
+          "probability": 0.98768
+        },
+        {
+          "word": " Apple",
+          "start": 25661.4,
+          "end": 25661.58,
+          "probability": 0.98793
+        },
+        {
+          "word": " 11",
+          "start": 25661.58,
+          "end": 25662.22,
+          "probability": 0.99481
+        }
+      ],
+      "avg_logprob": -0.2298799084078881,
+      "no_speech_prob": 8.021144512482259e-12,
+      "compression_ratio": 1.5612244897959184,
+      "temperature": 0.0
+    },
+    {
+      "start": 25662.22,
+      "end": 25664.14,
+      "text": "já sabe como vai fazer no Down Ocris",
+      "words": [
+        {
+          "word": " já",
+          "start": 25662.22,
+          "end": 25663.1,
+          "probability": 0.9306
+        },
+        {
+          "word": " sabe",
+          "start": 25663.1,
+          "end": 25663.24,
+          "probability": 0.98592
+        },
+        {
+          "word": " como",
+          "start": 25663.24,
+          "end": 25663.36,
+          "probability": 0.79756
+        },
+        {
+          "word": " vai",
+          "start": 25663.36,
+          "end": 25663.48,
+          "probability": 0.91825
+        },
+        {
+          "word": " fazer",
+          "start": 25663.48,
+          "end": 25663.66,
+          "probability": 0.95496
+        },
+        {
+          "word": " no",
+          "start": 25663.66,
+          "end": 25663.76,
+          "probability": 0.80773
+        },
+        {
+          "word": " Down",
+          "start": 25663.76,
+          "end": 25663.86,
+          "probability": 0.45184
+        },
+        {
+          "word": " Ocris",
+          "start": 25663.86,
+          "end": 25664.14,
+          "probability": 0.28078
+        }
+      ],
+      "avg_logprob": -0.2298799084078881,
+      "no_speech_prob": 8.021144512482259e-12,
+      "compression_ratio": 1.5612244897959184,
+      "temperature": 0.0
+    },
+    {
+      "start": 25664.14,
+      "end": 25666.06,
+      "text": "receber antecipado, saiu o horário, libera 7",
+      "words": [
+        {
+          "word": " receber",
+          "start": 25664.14,
+          "end": 25664.46,
+          "probability": 0.29096
+        },
+        {
+          "word": " antecipado,",
+          "start": 25664.46,
+          "end": 25665.0,
+          "probability": 0.84019
+        },
+        {
+          "word": " saiu",
+          "start": 25665.06,
+          "end": 25665.22,
+          "probability": 0.88819
+        },
+        {
+          "word": " o",
+          "start": 25665.22,
+          "end": 25665.3,
+          "probability": 0.92568
+        },
+        {
+          "word": " horário,",
+          "start": 25665.3,
+          "end": 25665.44,
+          "probability": 0.99955
+        },
+        {
+          "word": " libera",
+          "start": 25665.54,
+          "end": 25665.74,
+          "probability": 0.97549
+        },
+        {
+          "word": " 7",
+          "start": 25665.74,
+          "end": 25666.06,
+          "probability": 0.73724
+        }
+      ],
+      "avg_logprob": -0.2298799084078881,
+      "no_speech_prob": 8.021144512482259e-12,
+      "compression_ratio": 1.5612244897959184,
+      "temperature": 0.0
+    },
+    {
+      "start": 25666.06,
+      "end": 25668.28,
+      "text": "eu tô ligado que libera 7, dia 2 né, libera 7",
+      "words": [
+        {
+          "word": " eu",
+          "start": 25666.06,
+          "end": 25666.24,
+          "probability": 0.8711
+        },
+        {
+          "word": " tô",
+          "start": 25666.24,
+          "end": 25666.34,
+          "probability": 0.94092
+        },
+        {
+          "word": " ligado",
+          "start": 25666.34,
+          "end": 25666.56,
+          "probability": 0.99519
+        },
+        {
+          "word": " que",
+          "start": 25666.56,
+          "end": 25666.66,
+          "probability": 0.89253
+        },
+        {
+          "word": " libera",
+          "start": 25666.66,
+          "end": 25666.94,
+          "probability": 0.99045
+        },
+        {
+          "word": " 7,",
+          "start": 25666.94,
+          "end": 25667.08,
+          "probability": 0.99231
+        },
+        {
+          "word": " dia",
+          "start": 25667.12,
+          "end": 25667.24,
+          "probability": 0.92375
+        },
+        {
+          "word": " 2",
+          "start": 25667.24,
+          "end": 25667.48,
+          "probability": 0.99761
+        },
+        {
+          "word": " né,",
+          "start": 25667.48,
+          "end": 25667.62,
+          "probability": 0.76557
+        },
+        {
+          "word": " libera",
+          "start": 25667.66,
+          "end": 25667.94,
+          "probability": 0.99943
+        },
+        {
+          "word": " 7",
+          "start": 25667.94,
+          "end": 25668.28,
+          "probability": 0.99761
+        }
+      ],
+      "avg_logprob": -0.2298799084078881,
+      "no_speech_prob": 8.021144512482259e-12,
+      "compression_ratio": 1.5612244897959184,
+      "temperature": 0.0
+    },
+    {
+      "start": 25668.92,
+      "end": 25670.14,
+      "text": "é, eles falaram",
+      "words": [
+        {
+          "word": " é,",
+          "start": 25668.92,
+          "end": 25669.36,
+          "probability": 0.75705
+        },
+        {
+          "word": " eles",
+          "start": 25669.7,
+          "end": 25669.94,
+          "probability": 0.99817
+        },
+        {
+          "word": " falaram",
+          "start": 25669.94,
+          "end": 25670.14,
+          "probability": 0.96463
+        }
+      ],
+      "avg_logprob": -0.2298799084078881,
+      "no_speech_prob": 8.021144512482259e-12,
+      "compression_ratio": 1.5612244897959184,
+      "temperature": 0.0
+    },
+    {
+      "start": 25670.14,
+      "end": 25672.12,
+      "text": "que só vão mandar pra quem faz conteúdo",
+      "words": [
+        {
+          "word": " que",
+          "start": 25670.14,
+          "end": 25670.22,
+          "probability": 0.99928
+        },
+        {
+          "word": " só",
+          "start": 25670.22,
+          "end": 25670.38,
+          "probability": 0.99838
+        },
+        {
+          "word": " vão",
+          "start": 25670.38,
+          "end": 25670.78,
+          "probability": 0.9972
+        },
+        {
+          "word": " mandar",
+          "start": 25670.78,
+          "end": 25671.04,
+          "probability": 0.99919
+        },
+        {
+          "word": " pra",
+          "start": 25671.04,
+          "end": 25671.22,
+          "probability": 0.996
+        },
+        {
+          "word": " quem",
+          "start": 25671.22,
+          "end": 25671.42,
+          "probability": 0.9999
+        },
+        {
+          "word": " faz",
+          "start": 25671.42,
+          "end": 25671.7,
+          "probability": 0.9995
+        },
+        {
+          "word": " conteúdo",
+          "start": 25671.7,
+          "end": 25672.12,
+          "probability": 0.99766
+        }
+      ],
+      "avg_logprob": -0.2298799084078881,
+      "no_speech_prob": 8.021144512482259e-12,
+      "compression_ratio": 1.5612244897959184,
+      "temperature": 0.0
+    },
+    {
+      "start": 25672.12,
+      "end": 25673.82,
+      "text": "no dia mano, não fala",
+      "words": [
+        {
+          "word": " no",
+          "start": 25672.12,
+          "end": 25672.34,
+          "probability": 0.99927
+        },
+        {
+          "word": " dia",
+          "start": 25672.34,
+          "end": 25672.58,
+          "probability": 0.99992
+        },
+        {
+          "word": " mano,",
+          "start": 25672.58,
+          "end": 25672.82,
+          "probability": 0.5316
+        },
+        {
+          "word": " não",
+          "start": 25673.44,
+          "end": 25673.58,
+          "probability": 0.58579
+        },
+        {
+          "word": " fala",
+          "start": 25673.58,
+          "end": 25673.82,
+          "probability": 0.70076
+        }
+      ],
+      "avg_logprob": -0.2298799084078881,
+      "no_speech_prob": 8.021144512482259e-12,
+      "compression_ratio": 1.5612244897959184,
+      "temperature": 0.0
+    },
+    {
+      "start": 25673.82,
+      "end": 25676.02,
+      "text": "Mas então eu acho que o embargo deve cair aí mesmo.",
+      "words": [
+        {
+          "word": " Mas",
+          "start": 25673.82,
+          "end": 25674.06,
+          "probability": 0.27262
+        },
+        {
+          "word": " então",
+          "start": 25674.06,
+          "end": 25674.38,
+          "probability": 0.82343
+        },
+        {
+          "word": " eu",
+          "start": 25674.38,
+          "end": 25674.56,
+          "probability": 0.93476
+        },
+        {
+          "word": " acho",
+          "start": 25674.56,
+          "end": 25674.7,
+          "probability": 0.99997
+        },
+        {
+          "word": " que",
+          "start": 25674.7,
+          "end": 25674.78,
+          "probability": 0.99982
+        },
+        {
+          "word": " o",
+          "start": 25674.78,
+          "end": 25674.86,
+          "probability": 0.99992
+        },
+        {
+          "word": " embargo",
+          "start": 25674.86,
+          "end": 25675.1,
+          "probability": 0.96931
+        },
+        {
+          "word": " deve",
+          "start": 25675.1,
+          "end": 25675.32,
+          "probability": 0.99367
+        },
+        {
+          "word": " cair",
+          "start": 25675.32,
+          "end": 25675.54,
+          "probability": 0.99941
+        },
+        {
+          "word": " aí",
+          "start": 25675.54,
+          "end": 25675.74,
+          "probability": 0.99898
+        },
+        {
+          "word": " mesmo.",
+          "start": 25675.74,
+          "end": 25676.02,
+          "probability": 0.99645
+        }
+      ],
+      "avg_logprob": -0.21459919068871475,
+      "no_speech_prob": 6.291174612510497e-12,
+      "compression_ratio": 1.6228373702422145,
+      "temperature": 0.0
+    },
+    {
+      "start": 25676.9,
+      "end": 25678.32,
+      "text": "Eles não quiseram mandar antes, não.",
+      "words": [
+        {
+          "word": " Eles",
+          "start": 25676.9,
+          "end": 25677.26,
+          "probability": 0.97912
+        },
+        {
+          "word": " não",
+          "start": 25677.26,
+          "end": 25677.36,
+          "probability": 0.99994
+        },
+        {
+          "word": " quiseram",
+          "start": 25677.36,
+          "end": 25677.7,
+          "probability": 0.99906
+        },
+        {
+          "word": " mandar",
+          "start": 25677.7,
+          "end": 25677.9,
+          "probability": 0.99968
+        },
+        {
+          "word": " antes,",
+          "start": 25677.9,
+          "end": 25678.18,
+          "probability": 0.99949
+        },
+        {
+          "word": " não.",
+          "start": 25678.26,
+          "end": 25678.32,
+          "probability": 0.99979
+        }
+      ],
+      "avg_logprob": -0.21459919068871475,
+      "no_speech_prob": 6.291174612510497e-12,
+      "compression_ratio": 1.6228373702422145,
+      "temperature": 0.0
+    },
+    {
+      "start": 25678.38,
+      "end": 25680.56,
+      "text": "Falaram que só vão mandar antes se for da imprensa, velho.",
+      "words": [
+        {
+          "word": " Falaram",
+          "start": 25678.38,
+          "end": 25678.56,
+          "probability": 0.98456
+        },
+        {
+          "word": " que",
+          "start": 25678.56,
+          "end": 25678.64,
+          "probability": 0.99989
+        },
+        {
+          "word": " só",
+          "start": 25678.64,
+          "end": 25678.74,
+          "probability": 0.99958
+        },
+        {
+          "word": " vão",
+          "start": 25678.74,
+          "end": 25678.9,
+          "probability": 0.99723
+        },
+        {
+          "word": " mandar",
+          "start": 25678.9,
+          "end": 25679.14,
+          "probability": 0.9999
+        },
+        {
+          "word": " antes",
+          "start": 25679.14,
+          "end": 25679.46,
+          "probability": 0.99953
+        },
+        {
+          "word": " se",
+          "start": 25679.46,
+          "end": 25679.58,
+          "probability": 0.99262
+        },
+        {
+          "word": " for",
+          "start": 25679.58,
+          "end": 25679.74,
+          "probability": 0.99985
+        },
+        {
+          "word": " da",
+          "start": 25679.74,
+          "end": 25679.86,
+          "probability": 0.98812
+        },
+        {
+          "word": " imprensa,",
+          "start": 25679.86,
+          "end": 25680.34,
+          "probability": 0.99942
+        },
+        {
+          "word": " velho.",
+          "start": 25680.42,
+          "end": 25680.56,
+          "probability": 0.96464
+        }
+      ],
+      "avg_logprob": -0.21459919068871475,
+      "no_speech_prob": 6.291174612510497e-12,
+      "compression_ratio": 1.6228373702422145,
+      "temperature": 0.0
+    },
+    {
+      "start": 25680.64,
+      "end": 25682.16,
+      "text": "Se for fazer review, tá ligado?",
+      "words": [
+        {
+          "word": " Se",
+          "start": 25680.64,
+          "end": 25680.76,
+          "probability": 0.99955
+        },
+        {
+          "word": " for",
+          "start": 25680.76,
+          "end": 25680.98,
+          "probability": 0.99995
+        },
+        {
+          "word": " fazer",
+          "start": 25680.98,
+          "end": 25681.26,
+          "probability": 0.99978
+        },
+        {
+          "word": " review,",
+          "start": 25681.26,
+          "end": 25681.64,
+          "probability": 0.99863
+        },
+        {
+          "word": " tá",
+          "start": 25681.8,
+          "end": 25681.84,
+          "probability": 0.99862
+        },
+        {
+          "word": " ligado?",
+          "start": 25681.84,
+          "end": 25682.16,
+          "probability": 0.99993
+        }
+      ],
+      "avg_logprob": -0.21459919068871475,
+      "no_speech_prob": 6.291174612510497e-12,
+      "compression_ratio": 1.6228373702422145,
+      "temperature": 0.0
+    },
+    {
+      "start": 25682.3,
+      "end": 25682.46,
+      "text": "É.",
+      "words": [
+        {
+          "word": " É.",
+          "start": 25682.3,
+          "end": 25682.46,
+          "probability": 0.96693
+        }
+      ],
+      "avg_logprob": -0.21459919068871475,
+      "no_speech_prob": 6.291174612510497e-12,
+      "compression_ratio": 1.6228373702422145,
+      "temperature": 0.0
+    },
+    {
+      "start": 25683.46,
+      "end": 25688.08,
+      "text": "Falaram, não, nós só vai mandar ontem pra quem for fazer review.",
+      "words": [
+        {
+          "word": " Falaram,",
+          "start": 25683.46,
+          "end": 25683.82,
+          "probability": 0.99948
+        },
+        {
+          "word": " não,",
+          "start": 25683.86,
+          "end": 25683.96,
+          "probability": 0.99231
+        },
+        {
+          "word": " nós",
+          "start": 25683.98,
+          "end": 25684.16,
+          "probability": 0.95523
+        },
+        {
+          "word": " só",
+          "start": 25684.16,
+          "end": 25684.36,
+          "probability": 0.99988
+        },
+        {
+          "word": " vai",
+          "start": 25684.36,
+          "end": 25684.6,
+          "probability": 0.93733
+        },
+        {
+          "word": " mandar",
+          "start": 25684.6,
+          "end": 25684.9,
+          "probability": 0.99944
+        },
+        {
+          "word": " ontem",
+          "start": 25684.9,
+          "end": 25686.86,
+          "probability": 0.92417
+        },
+        {
+          "word": " pra",
+          "start": 25686.86,
+          "end": 25687.04,
+          "probability": 0.84557
+        },
+        {
+          "word": " quem",
+          "start": 25687.04,
+          "end": 25687.22,
+          "probability": 0.99993
+        },
+        {
+          "word": " for",
+          "start": 25687.22,
+          "end": 25687.4,
+          "probability": 0.99981
+        },
+        {
+          "word": " fazer",
+          "start": 25687.4,
+          "end": 25687.68,
+          "probability": 0.99993
+        },
+        {
+          "word": " review.",
+          "start": 25687.68,
+          "end": 25688.08,
+          "probability": 0.99977
+        }
+      ],
+      "avg_logprob": -0.21459919068871475,
+      "no_speech_prob": 6.291174612510497e-12,
+      "compression_ratio": 1.6228373702422145,
+      "temperature": 0.0
+    },
+    {
+      "start": 25688.28,
+      "end": 25689.16,
+      "text": "Foi isso que eles falaram.",
+      "words": [
+        {
+          "word": " Foi",
+          "start": 25688.28,
+          "end": 25688.42,
+          "probability": 0.99615
+        },
+        {
+          "word": " isso",
+          "start": 25688.42,
+          "end": 25688.5,
+          "probability": 0.98948
+        },
+        {
+          "word": " que",
+          "start": 25688.5,
+          "end": 25688.6,
+          "probability": 0.99995
+        },
+        {
+          "word": " eles",
+          "start": 25688.6,
+          "end": 25688.74,
+          "probability": 0.99993
+        },
+        {
+          "word": " falaram.",
+          "start": 25688.74,
+          "end": 25689.16,
+          "probability": 0.99955
+        }
+      ],
+      "avg_logprob": -0.21459919068871475,
+      "no_speech_prob": 6.291174612510497e-12,
+      "compression_ratio": 1.6228373702422145,
+      "temperature": 0.0
+    },
+    {
+      "start": 25691.7,
+      "end": 25692.06,
+      "text": "Imprensa.",
+      "words": [
+        {
+          "word": " Imprensa.",
+          "start": 25691.7,
+          "end": 25692.06,
+          "probability": 0.97225
+        }
+      ],
+      "avg_logprob": -0.21459919068871475,
+      "no_speech_prob": 6.291174612510497e-12,
+      "compression_ratio": 1.6228373702422145,
+      "temperature": 0.0
+    },
+    {
+      "start": 25693.78,
+      "end": 25694.74,
+      "text": "Os humildes, né?",
+      "words": [
+        {
+          "word": " Os",
+          "start": 25693.78,
+          "end": 25694.14,
+          "probability": 0.92257
+        },
+        {
+          "word": " humildes,",
+          "start": 25694.14,
+          "end": 25694.5,
+          "probability": 0.98177
+        },
+        {
+          "word": " né?",
+          "start": 25694.58,
+          "end": 25694.74,
+          "probability": 0.99994
+        }
+      ],
+      "avg_logprob": -0.21459919068871475,
+      "no_speech_prob": 6.291174612510497e-12,
+      "compression_ratio": 1.6228373702422145,
+      "temperature": 0.0
+    },
+    {
+      "start": 25696.76,
+      "end": 25697.3,
+      "text": "Humildes, mano.",
+      "words": [
+        {
+          "word": " Humildes,",
+          "start": 25696.76,
+          "end": 25697.12,
+          "probability": 0.6868
+        },
+        {
+          "word": " mano.",
+          "start": 25697.2,
+          "end": 25697.3,
+          "probability": 0.99837
+        }
+      ],
+      "avg_logprob": -0.21459919068871475,
+      "no_speech_prob": 6.291174612510497e-12,
+      "compression_ratio": 1.6228373702422145,
+      "temperature": 0.0
+    },
+    {
+      "start": 25698.78,
+      "end": 25699.6,
+      "text": "Horáriozinho bomba, né?",
+      "words": [
+        {
+          "word": " Horáriozinho",
+          "start": 25698.78,
+          "end": 25699.14,
+          "probability": 0.90915
+        },
+        {
+          "word": " bomba,",
+          "start": 25699.14,
+          "end": 25699.5,
+          "probability": 0.99008
+        },
+        {
+          "word": " né?",
+          "start": 25699.6,
+          "end": 25699.6,
+          "probability": 0.99957
+        }
+      ],
+      "avg_logprob": -0.21459919068871475,
+      "no_speech_prob": 6.291174612510497e-12,
+      "compression_ratio": 1.6228373702422145,
+      "temperature": 0.0
+    },
+    {
+      "start": 25699.74,
+      "end": 25700.18,
+      "text": "Sete da noite.",
+      "words": [
+        {
+          "word": " Sete",
+          "start": 25699.74,
+          "end": 25699.84,
+          "probability": 0.81314
+        },
+        {
+          "word": " da",
+          "start": 25699.84,
+          "end": 25700.0,
+          "probability": 0.9996
+        },
+        {
+          "word": " noite.",
+          "start": 25700.0,
+          "end": 25700.18,
+          "probability": 0.99989
+        }
+      ],
+      "avg_logprob": -0.21459919068871475,
+      "no_speech_prob": 6.291174612510497e-12,
+      "compression_ratio": 1.6228373702422145,
+      "temperature": 0.0
+    },
+    {
+      "start": 25700.28,
+      "end": 25701.9,
+      "text": "Ah, vai dar pra gente jogar umas quatro horinhas.",
+      "words": [
+        {
+          "word": " Ah,",
+          "start": 25700.28,
+          "end": 25700.36,
+          "probability": 0.99901
+        },
+        {
+          "word": " vai",
+          "start": 25700.42,
+          "end": 25700.5,
+          "probability": 0.99951
+        },
+        {
+          "word": " dar",
+          "start": 25700.5,
+          "end": 25700.54,
+          "probability": 0.9904
+        },
+        {
+          "word": " pra",
+          "start": 25700.54,
+          "end": 25700.62,
+          "probability": 0.9995
+        },
+        {
+          "word": " gente",
+          "start": 25700.62,
+          "end": 25700.68,
+          "probability": 0.41545
+        },
+        {
+          "word": " jogar",
+          "start": 25700.68,
+          "end": 25700.86,
+          "probability": 0.99964
+        },
+        {
+          "word": " umas",
+          "start": 25700.86,
+          "end": 25701.06,
+          "probability": 0.99946
+        },
+        {
+          "word": " quatro",
+          "start": 25701.06,
+          "end": 25701.6,
+          "probability": 0.97889
+        },
+        {
+          "word": " horinhas.",
+          "start": 25701.6,
+          "end": 25701.9,
+          "probability": 0.92581
+        }
+      ],
+      "avg_logprob": -0.21459919068871475,
+      "no_speech_prob": 6.291174612510497e-12,
+      "compression_ratio": 1.6228373702422145,
+      "temperature": 0.0
+    },
+    {
+      "start": 25702.02,
+      "end": 25702.64,
+      "text": "Vai três horas.",
+      "words": [
+        {
+          "word": " Vai",
+          "start": 25702.02,
+          "end": 25702.08,
+          "probability": 0.9906
+        },
+        {
+          "word": " três",
+          "start": 25702.08,
+          "end": 25702.34,
+          "probability": 0.64331
+        },
+        {
+          "word": " horas.",
+          "start": 25702.34,
+          "end": 25702.64,
+          "probability": 0.998
+        }
+      ],
+      "avg_logprob": -0.21459919068871475,
+      "no_speech_prob": 6.291174612510497e-12,
+      "compression_ratio": 1.6228373702422145,
+      "temperature": 0.0
+    },
+    {
+      "start": 25702.8,
+      "end": 25702.98,
+      "text": "Vai dar...",
+      "words": [
+        {
+          "word": " Vai",
+          "start": 25702.8,
+          "end": 25702.8,
+          "probability": 0.21158
+        },
+        {
+          "word": " dar...",
+          "start": 25702.8,
+          "end": 25702.98,
+          "probability": 0.76264
+        }
+      ],
+      "avg_logprob": -0.21459919068871475,
+      "no_speech_prob": 6.291174612510497e-12,
+      "compression_ratio": 1.6228373702422145,
+      "temperature": 0.0
+    },
+    {
+      "start": 25702.98,
+      "end": 25703.64,
+      "text": "Não, vai ser legal.",
+      "words": [
+        {
+          "word": " Não,",
+          "start": 25702.98,
+          "end": 25703.12,
+          "probability": 0.95295
+        },
+        {
+          "word": " vai",
+          "start": 25703.14,
+          "end": 25703.28,
+          "probability": 0.99986
+        },
+        {
+          "word": " ser",
+          "start": 25703.28,
+          "end": 25703.4,
+          "probability": 0.99992
+        },
+        {
+          "word": " legal.",
+          "start": 25703.4,
+          "end": 25703.64,
+          "probability": 0.99994
+        }
+      ],
+      "avg_logprob": -0.21459919068871475,
+      "no_speech_prob": 6.291174612510497e-12,
+      "compression_ratio": 1.6228373702422145,
+      "temperature": 0.0
+    },
+    {
+      "start": 25703.82,
+      "end": 25705.88,
+      "text": "Vai dar pra gente jogar umas 3 horinhas, vai ser bom",
+      "words": [
+        {
+          "word": " Vai",
+          "start": 25703.82,
+          "end": 25704.18,
+          "probability": 0.91329
+        },
+        {
+          "word": " dar",
+          "start": 25704.18,
+          "end": 25704.22,
+          "probability": 0.99477
+        },
+        {
+          "word": " pra",
+          "start": 25704.22,
+          "end": 25704.34,
+          "probability": 0.93952
+        },
+        {
+          "word": " gente",
+          "start": 25704.34,
+          "end": 25704.44,
+          "probability": 0.78103
+        },
+        {
+          "word": " jogar",
+          "start": 25704.44,
+          "end": 25704.66,
+          "probability": 0.99969
+        },
+        {
+          "word": " umas",
+          "start": 25704.66,
+          "end": 25704.84,
+          "probability": 0.99376
+        },
+        {
+          "word": " 3",
+          "start": 25704.84,
+          "end": 25705.08,
+          "probability": 0.5262
+        },
+        {
+          "word": " horinhas,",
+          "start": 25705.08,
+          "end": 25705.42,
+          "probability": 0.94865
+        },
+        {
+          "word": " vai",
+          "start": 25705.44,
+          "end": 25705.56,
+          "probability": 0.99785
+        },
+        {
+          "word": " ser",
+          "start": 25705.56,
+          "end": 25705.66,
+          "probability": 0.99967
+        },
+        {
+          "word": " bom",
+          "start": 25705.66,
+          "end": 25705.88,
+          "probability": 0.99943
+        }
+      ],
+      "avg_logprob": -0.14367119662732963,
+      "no_speech_prob": 7.682794504748625e-12,
+      "compression_ratio": 1.673202614379085,
+      "temperature": 0.0
+    },
+    {
+      "start": 25706.78,
+      "end": 25707.94,
+      "text": "Tô louco pra jogar, mano",
+      "words": [
+        {
+          "word": " Tô",
+          "start": 25706.78,
+          "end": 25707.1,
+          "probability": 0.60211
+        },
+        {
+          "word": " louco",
+          "start": 25707.1,
+          "end": 25707.26,
+          "probability": 0.99956
+        },
+        {
+          "word": " pra",
+          "start": 25707.26,
+          "end": 25707.38,
+          "probability": 0.99867
+        },
+        {
+          "word": " jogar,",
+          "start": 25707.38,
+          "end": 25707.66,
+          "probability": 0.9998
+        },
+        {
+          "word": " mano",
+          "start": 25707.68,
+          "end": 25707.94,
+          "probability": 0.9998
+        }
+      ],
+      "avg_logprob": -0.14367119662732963,
+      "no_speech_prob": 7.682794504748625e-12,
+      "compression_ratio": 1.673202614379085,
+      "temperature": 0.0
+    },
+    {
+      "start": 25708.38,
+      "end": 25710.9,
+      "text": "Bom, mas tamo tranquilo, amanhã a gente termina o Metal Gear",
+      "words": [
+        {
+          "word": " Bom,",
+          "start": 25708.38,
+          "end": 25708.7,
+          "probability": 0.96742
+        },
+        {
+          "word": " mas",
+          "start": 25708.8,
+          "end": 25708.96,
+          "probability": 0.99947
+        },
+        {
+          "word": " tamo",
+          "start": 25708.96,
+          "end": 25709.28,
+          "probability": 0.73992
+        },
+        {
+          "word": " tranquilo,",
+          "start": 25709.28,
+          "end": 25709.62,
+          "probability": 0.99828
+        },
+        {
+          "word": " amanhã",
+          "start": 25709.7,
+          "end": 25709.84,
+          "probability": 0.99981
+        },
+        {
+          "word": " a",
+          "start": 25709.84,
+          "end": 25709.92,
+          "probability": 0.99832
+        },
+        {
+          "word": " gente",
+          "start": 25709.92,
+          "end": 25710.02,
+          "probability": 0.99999
+        },
+        {
+          "word": " termina",
+          "start": 25710.02,
+          "end": 25710.32,
+          "probability": 0.96846
+        },
+        {
+          "word": " o",
+          "start": 25710.32,
+          "end": 25710.42,
+          "probability": 0.86873
+        },
+        {
+          "word": " Metal",
+          "start": 25710.42,
+          "end": 25710.56,
+          "probability": 0.99782
+        },
+        {
+          "word": " Gear",
+          "start": 25710.56,
+          "end": 25710.9,
+          "probability": 0.9997
+        }
+      ],
+      "avg_logprob": -0.14367119662732963,
+      "no_speech_prob": 7.682794504748625e-12,
+      "compression_ratio": 1.673202614379085,
+      "temperature": 0.0
+    },
+    {
+      "start": 25711.6,
+      "end": 25712.6,
+      "text": "4, né, no caso",
+      "words": [
+        {
+          "word": " 4,",
+          "start": 25711.6,
+          "end": 25711.92,
+          "probability": 0.77506
+        },
+        {
+          "word": " né,",
+          "start": 25712.08,
+          "end": 25712.16,
+          "probability": 0.98911
+        },
+        {
+          "word": " no",
+          "start": 25712.18,
+          "end": 25712.26,
+          "probability": 0.99993
+        },
+        {
+          "word": " caso",
+          "start": 25712.26,
+          "end": 25712.6,
+          "probability": 0.99994
+        }
+      ],
+      "avg_logprob": -0.14367119662732963,
+      "no_speech_prob": 7.682794504748625e-12,
+      "compression_ratio": 1.673202614379085,
+      "temperature": 0.0
+    },
+    {
+      "start": 25713.1,
+      "end": 25714.6,
+      "text": "E daí o próximo jogo que jogaremos",
+      "words": [
+        {
+          "word": " E",
+          "start": 25713.1,
+          "end": 25713.42,
+          "probability": 0.97374
+        },
+        {
+          "word": " daí",
+          "start": 25713.42,
+          "end": 25713.58,
+          "probability": 0.99824
+        },
+        {
+          "word": " o",
+          "start": 25713.58,
+          "end": 25713.72,
+          "probability": 0.98044
+        },
+        {
+          "word": " próximo",
+          "start": 25713.72,
+          "end": 25713.94,
+          "probability": 0.9999
+        },
+        {
+          "word": " jogo",
+          "start": 25713.94,
+          "end": 25714.1,
+          "probability": 0.99753
+        },
+        {
+          "word": " que",
+          "start": 25714.1,
+          "end": 25714.2,
+          "probability": 0.92114
+        },
+        {
+          "word": " jogaremos",
+          "start": 25714.2,
+          "end": 25714.6,
+          "probability": 0.99809
+        }
+      ],
+      "avg_logprob": -0.14367119662732963,
+      "no_speech_prob": 7.682794504748625e-12,
+      "compression_ratio": 1.673202614379085,
+      "temperature": 0.0
+    },
+    {
+      "start": 25714.6,
+      "end": 25716.74,
+      "text": "Vai ser o Blood of the Dawnwalker",
+      "words": [
+        {
+          "word": " Vai",
+          "start": 25714.6,
+          "end": 25714.84,
+          "probability": 0.47558
+        },
+        {
+          "word": " ser",
+          "start": 25714.84,
+          "end": 25715.14,
+          "probability": 0.99995
+        },
+        {
+          "word": " o",
+          "start": 25715.14,
+          "end": 25715.36,
+          "probability": 0.99994
+        },
+        {
+          "word": " Blood",
+          "start": 25715.36,
+          "end": 25715.98,
+          "probability": 0.98184
+        },
+        {
+          "word": " of",
+          "start": 25715.98,
+          "end": 25716.12,
+          "probability": 0.99354
+        },
+        {
+          "word": " the",
+          "start": 25716.12,
+          "end": 25716.24,
+          "probability": 0.99794
+        },
+        {
+          "word": " Dawnwalker",
+          "start": 25716.24,
+          "end": 25716.74,
+          "probability": 0.79019
+        }
+      ],
+      "avg_logprob": -0.14367119662732963,
+      "no_speech_prob": 7.682794504748625e-12,
+      "compression_ratio": 1.673202614379085,
+      "temperature": 0.0
+    },
+    {
+      "start": 25717.14,
+      "end": 25718.62,
+      "text": "E depois tem o Onimusha também",
+      "words": [
+        {
+          "word": " E",
+          "start": 25717.14,
+          "end": 25717.46,
+          "probability": 0.99809
+        },
+        {
+          "word": " depois",
+          "start": 25717.46,
+          "end": 25717.74,
+          "probability": 0.99994
+        },
+        {
+          "word": " tem",
+          "start": 25717.74,
+          "end": 25717.92,
+          "probability": 0.99948
+        },
+        {
+          "word": " o",
+          "start": 25717.92,
+          "end": 25718.02,
+          "probability": 0.95463
+        },
+        {
+          "word": " Onimusha",
+          "start": 25718.02,
+          "end": 25718.46,
+          "probability": 0.91036
+        },
+        {
+          "word": " também",
+          "start": 25718.46,
+          "end": 25718.62,
+          "probability": 0.96985
+        }
+      ],
+      "avg_logprob": -0.14367119662732963,
+      "no_speech_prob": 7.682794504748625e-12,
+      "compression_ratio": 1.673202614379085,
+      "temperature": 0.0
+    },
+    {
+      "start": 25718.62,
+      "end": 25720.7,
+      "text": "Mano, o Onimusha eu não sei se eu vou jogar, talvez",
+      "words": [
+        {
+          "word": " Mano,",
+          "start": 25718.62,
+          "end": 25718.9,
+          "probability": 0.92613
+        },
+        {
+          "word": " o",
+          "start": 25718.9,
+          "end": 25718.98,
+          "probability": 0.97697
+        },
+        {
+          "word": " Onimusha",
+          "start": 25718.98,
+          "end": 25719.34,
+          "probability": 0.99905
+        },
+        {
+          "word": " eu",
+          "start": 25719.34,
+          "end": 25719.42,
+          "probability": 0.86788
+        },
+        {
+          "word": " não",
+          "start": 25719.42,
+          "end": 25719.5,
+          "probability": 0.99992
+        },
+        {
+          "word": " sei",
+          "start": 25719.5,
+          "end": 25719.7,
+          "probability": 0.99994
+        },
+        {
+          "word": " se",
+          "start": 25719.7,
+          "end": 25719.8,
+          "probability": 0.99991
+        },
+        {
+          "word": " eu",
+          "start": 25719.8,
+          "end": 25719.88,
+          "probability": 0.99393
+        },
+        {
+          "word": " vou",
+          "start": 25719.88,
+          "end": 25719.96,
+          "probability": 0.99994
+        },
+        {
+          "word": " jogar,",
+          "start": 25719.96,
+          "end": 25720.24,
+          "probability": 0.9999
+        },
+        {
+          "word": " talvez",
+          "start": 25720.42,
+          "end": 25720.7,
+          "probability": 0.99981
+        }
+      ],
+      "avg_logprob": -0.14367119662732963,
+      "no_speech_prob": 7.682794504748625e-12,
+      "compression_ratio": 1.673202614379085,
+      "temperature": 0.0
+    },
+    {
+      "start": 25720.7,
+      "end": 25721.16,
+      "text": "Vamos ver",
+      "words": [
+        {
+          "word": " Vamos",
+          "start": 25720.7,
+          "end": 25720.96,
+          "probability": 0.65126
+        },
+        {
+          "word": " ver",
+          "start": 25720.96,
+          "end": 25721.16,
+          "probability": 0.99991
+        }
+      ],
+      "avg_logprob": -0.14367119662732963,
+      "no_speech_prob": 7.682794504748625e-12,
+      "compression_ratio": 1.673202614379085,
+      "temperature": 0.0
+    },
+    {
+      "start": 25722.12,
+      "end": 25724.2,
+      "text": "Mas o Blood of the Dawnwalker eu quero muito jogar",
+      "words": [
+        {
+          "word": " Mas",
+          "start": 25722.12,
+          "end": 25722.44,
+          "probability": 0.9751
+        },
+        {
+          "word": " o",
+          "start": 25722.44,
+          "end": 25722.56,
+          "probability": 0.99977
+        },
+        {
+          "word": " Blood",
+          "start": 25722.56,
+          "end": 25722.72,
+          "probability": 0.99799
+        },
+        {
+          "word": " of",
+          "start": 25722.72,
+          "end": 25722.88,
+          "probability": 0.99976
+        },
+        {
+          "word": " the",
+          "start": 25722.88,
+          "end": 25723.0,
+          "probability": 0.99999
+        },
+        {
+          "word": " Dawnwalker",
+          "start": 25723.0,
+          "end": 25723.38,
+          "probability": 0.99831
+        },
+        {
+          "word": " eu",
+          "start": 25723.38,
+          "end": 25723.52,
+          "probability": 0.95945
+        },
+        {
+          "word": " quero",
+          "start": 25723.52,
+          "end": 25723.66,
+          "probability": 0.99978
+        },
+        {
+          "word": " muito",
+          "start": 25723.66,
+          "end": 25723.9,
+          "probability": 0.99963
+        },
+        {
+          "word": " jogar",
+          "start": 25723.9,
+          "end": 25724.2,
+          "probability": 0.99951
+        }
+      ],
+      "avg_logprob": -0.14367119662732963,
+      "no_speech_prob": 7.682794504748625e-12,
+      "compression_ratio": 1.673202614379085,
+      "temperature": 0.0
+    },
+    {
+      "start": 25726.04,
+      "end": 25726.64,
+      "text": "Né, então",
+      "words": [
+        {
+          "word": " Né,",
+          "start": 25726.04,
+          "end": 25726.36,
+          "probability": 0.91924
+        },
+        {
+          "word": " então",
+          "start": 25726.42,
+          "end": 25726.64,
+          "probability": 0.99981
+        }
+      ],
+      "avg_logprob": -0.14367119662732963,
+      "no_speech_prob": 7.682794504748625e-12,
+      "compression_ratio": 1.673202614379085,
+      "temperature": 0.0
+    },
+    {
+      "start": 25726.64,
+      "end": 25728.7,
+      "text": "Eren's Apple 71, mas é isso, chat",
+      "words": [
+        {
+          "word": " Eren's",
+          "start": 25726.64,
+          "end": 25727.02,
+          "probability": 0.35583
+        },
+        {
+          "word": " Apple",
+          "start": 25727.02,
+          "end": 25727.18,
+          "probability": 0.8246
+        },
+        {
+          "word": " 71,",
+          "start": 25727.18,
+          "end": 25727.7,
+          "probability": 0.95978
+        },
+        {
+          "word": " mas",
+          "start": 25728.0,
+          "end": 25728.18,
+          "probability": 0.70364
+        },
+        {
+          "word": " é",
+          "start": 25728.18,
+          "end": 25728.26,
+          "probability": 0.99946
+        },
+        {
+          "word": " isso,",
+          "start": 25728.26,
+          "end": 25728.38,
+          "probability": 0.99992
+        },
+        {
+          "word": " chat",
+          "start": 25728.44,
+          "end": 25728.7,
+          "probability": 0.92499
+        }
+      ],
+      "avg_logprob": -0.14367119662732963,
+      "no_speech_prob": 7.682794504748625e-12,
+      "compression_ratio": 1.673202614379085,
+      "temperature": 0.0
+    },
+    {
+      "start": 25728.7,
+      "end": 25730.66,
+      "text": "Obrigado pelo meu sub, mandou beats, acompanha o geral",
+      "words": [
+        {
+          "word": " Obrigado",
+          "start": 25728.7,
+          "end": 25728.96,
+          "probability": 0.96138
+        },
+        {
+          "word": " pelo",
+          "start": 25728.96,
+          "end": 25729.08,
+          "probability": 0.22237
+        },
+        {
+          "word": " meu",
+          "start": 25729.08,
+          "end": 25729.16,
+          "probability": 0.50527
+        },
+        {
+          "word": " sub,",
+          "start": 25729.16,
+          "end": 25729.44,
+          "probability": 0.94958
+        },
+        {
+          "word": " mandou",
+          "start": 25729.52,
+          "end": 25729.74,
+          "probability": 0.97594
+        },
+        {
+          "word": " beats,",
+          "start": 25729.74,
+          "end": 25730.0,
+          "probability": 0.61008
+        },
+        {
+          "word": " acompanha",
+          "start": 25730.12,
+          "end": 25730.42,
+          "probability": 0.84928
+        },
+        {
+          "word": " o",
+          "start": 25730.42,
+          "end": 25730.54,
+          "probability": 0.4612
+        },
+        {
+          "word": " geral",
+          "start": 25730.54,
+          "end": 25730.66,
+          "probability": 0.99752
+        }
+      ],
+      "avg_logprob": -0.14367119662732963,
+      "no_speech_prob": 7.682794504748625e-12,
+      "compression_ratio": 1.673202614379085,
+      "temperature": 0.0
+    },
+    {
+      "start": 25731.1,
+      "end": 25732.38,
+      "text": "Amanhã a gente termina o Metal Gear",
+      "words": [
+        {
+          "word": " Amanhã",
+          "start": 25731.1,
+          "end": 25731.42,
+          "probability": 0.99723
+        },
+        {
+          "word": " a",
+          "start": 25731.42,
+          "end": 25731.52,
+          "probability": 0.99996
+        },
+        {
+          "word": " gente",
+          "start": 25731.52,
+          "end": 25731.6,
+          "probability": 0.99999
+        },
+        {
+          "word": " termina",
+          "start": 25731.6,
+          "end": 25731.82,
+          "probability": 0.99581
+        },
+        {
+          "word": " o",
+          "start": 25731.82,
+          "end": 25731.92,
+          "probability": 0.99886
+        },
+        {
+          "word": " Metal",
+          "start": 25731.92,
+          "end": 25732.08,
+          "probability": 0.99983
+        },
+        {
+          "word": " Gear",
+          "start": 25732.08,
+          "end": 25732.38,
+          "probability": 0.9998
+        }
+      ],
+      "avg_logprob": -0.14367119662732963,
+      "no_speech_prob": 7.682794504748625e-12,
+      "compression_ratio": 1.673202614379085,
+      "temperature": 0.0
+    },
+    {
+      "start": 25732.38,
+      "end": 25734.3,
+      "text": "E joga mais alguma outra coisa, não sei o que",
+      "words": [
+        {
+          "word": " E",
+          "start": 25732.38,
+          "end": 25732.62,
+          "probability": 0.22182
+        },
+        {
+          "word": " joga",
+          "start": 25732.62,
+          "end": 25732.92,
+          "probability": 0.99641
+        },
+        {
+          "word": " mais",
+          "start": 25732.92,
+          "end": 25733.08,
+          "probability": 0.99844
+        },
+        {
+          "word": " alguma",
+          "start": 25733.08,
+          "end": 25733.32,
+          "probability": 0.99902
+        },
+        {
+          "word": " outra",
+          "start": 25733.32,
+          "end": 25733.48,
+          "probability": 0.99606
+        },
+        {
+          "word": " coisa,",
+          "start": 25733.48,
+          "end": 25733.74,
+          "probability": 0.99966
+        },
+        {
+          "word": " não",
+          "start": 25733.78,
+          "end": 25733.9,
+          "probability": 0.99935
+        },
+        {
+          "word": " sei",
+          "start": 25733.9,
+          "end": 25734.04,
+          "probability": 0.99881
+        },
+        {
+          "word": " o",
+          "start": 25734.04,
+          "end": 25734.18,
+          "probability": 0.9999
+        },
+        {
+          "word": " que",
+          "start": 25734.18,
+          "end": 25734.3,
+          "probability": 0.90276
+        }
+      ],
+      "avg_logprob": -0.21714027304398387,
+      "no_speech_prob": 4.9604678004078195e-12,
+      "compression_ratio": 1.3157894736842106,
+      "temperature": 0.0
+    },
+    {
+      "start": 25734.3,
+      "end": 25735.72,
+      "text": "Vamos descobrir, né",
+      "words": [
+        {
+          "word": " Vamos",
+          "start": 25734.3,
+          "end": 25735.16,
+          "probability": 0.9187
+        },
+        {
+          "word": " descobrir,",
+          "start": 25735.16,
+          "end": 25735.54,
+          "probability": 0.76375
+        },
+        {
+          "word": " né",
+          "start": 25735.6,
+          "end": 25735.72,
+          "probability": 0.9999
+        }
+      ],
+      "avg_logprob": -0.21714027304398387,
+      "no_speech_prob": 4.9604678004078195e-12,
+      "compression_ratio": 1.3157894736842106,
+      "temperature": 0.0
+    },
+    {
+      "start": 25735.72,
+      "end": 25737.82,
+      "text": "E é isso, pô",
+      "words": [
+        {
+          "word": " E",
+          "start": 25735.72,
+          "end": 25736.6,
+          "probability": 0.70426
+        },
+        {
+          "word": " é",
+          "start": 25736.6,
+          "end": 25737.4,
+          "probability": 0.94222
+        },
+        {
+          "word": " isso,",
+          "start": 25737.4,
+          "end": 25737.62,
+          "probability": 0.99991
+        },
+        {
+          "word": " pô",
+          "start": 25737.7,
+          "end": 25737.82,
+          "probability": 0.91357
+        }
+      ],
+      "avg_logprob": -0.21714027304398387,
+      "no_speech_prob": 4.9604678004078195e-12,
+      "compression_ratio": 1.3157894736842106,
+      "temperature": 0.0
+    },
+    {
+      "start": 25737.82,
+      "end": 25739.18,
+      "text": "É setembro, tem muita coisa, mano",
+      "words": [
+        {
+          "word": " É",
+          "start": 25737.82,
+          "end": 25737.96,
+          "probability": 0.3089
+        },
+        {
+          "word": " setembro,",
+          "start": 25737.96,
+          "end": 25738.34,
+          "probability": 0.86117
+        },
+        {
+          "word": " tem",
+          "start": 25738.42,
+          "end": 25738.48,
+          "probability": 0.99846
+        },
+        {
+          "word": " muita",
+          "start": 25738.48,
+          "end": 25738.66,
+          "probability": 0.99988
+        },
+        {
+          "word": " coisa,",
+          "start": 25738.66,
+          "end": 25739.0,
+          "probability": 0.99999
+        },
+        {
+          "word": " mano",
+          "start": 25739.02,
+          "end": 25739.18,
+          "probability": 0.94286
+        }
+      ],
+      "avg_logprob": -0.21714027304398387,
+      "no_speech_prob": 4.9604678004078195e-12,
+      "compression_ratio": 1.3157894736842106,
+      "temperature": 0.0
+    },
+    {
+      "start": 25739.18,
+      "end": 25740.02,
+      "text": "Tem muita coisa",
+      "words": [
+        {
+          "word": " Tem",
+          "start": 25739.18,
+          "end": 25739.4,
+          "probability": 0.49342
+        },
+        {
+          "word": " muita",
+          "start": 25739.4,
+          "end": 25739.58,
+          "probability": 0.9995
+        },
+        {
+          "word": " coisa",
+          "start": 25739.58,
+          "end": 25740.02,
+          "probability": 0.99999
+        }
+      ],
+      "avg_logprob": -0.21714027304398387,
+      "no_speech_prob": 4.9604678004078195e-12,
+      "compression_ratio": 1.3157894736842106,
+      "temperature": 0.0
+    },
+    {
+      "start": 25742.3,
+      "end": 25744.28,
+      "text": "Boa noite, beijos, tchau",
+      "words": [
+        {
+          "word": " Boa",
+          "start": 25742.3,
+          "end": 25742.74,
+          "probability": 0.90747
+        },
+        {
+          "word": " noite,",
+          "start": 25742.74,
+          "end": 25743.06,
+          "probability": 0.99985
+        },
+        {
+          "word": " beijos,",
+          "start": 25743.24,
+          "end": 25743.82,
+          "probability": 0.99978
+        },
+        {
+          "word": " tchau",
+          "start": 25743.96,
+          "end": 25744.28,
+          "probability": 0.99962
+        }
+      ],
+      "avg_logprob": -0.21714027304398387,
+      "no_speech_prob": 4.9604678004078195e-12,
+      "compression_ratio": 1.3157894736842106,
+      "temperature": 0.0
+    },
+    {
+      "start": 25744.28,
+      "end": 25745.48,
+      "text": "E eu, me",
+      "words": [
+        {
+          "word": " E",
+          "start": 25744.28,
+          "end": 25744.64,
+          "probability": 0.9952
+        },
+        {
+          "word": " eu,",
+          "start": 25744.64,
+          "end": 25744.98,
+          "probability": 0.9996
+        },
+        {
+          "word": " me",
+          "start": 25745.3,
+          "end": 25745.48,
+          "probability": 0.52218
+        }
+      ],
+      "avg_logprob": -0.21714027304398387,
+      "no_speech_prob": 4.9604678004078195e-12,
+      "compression_ratio": 1.3157894736842106,
+      "temperature": 0.0
+    },
+    {
+      "start": 25746.66,
+      "end": 25748.08,
+      "text": "LucasApples80, fui, até amanhã",
+      "words": [
+        {
+          "word": " LucasApples80,",
+          "start": 25746.66,
+          "end": 25747.1,
+          "probability": 0.52834
+        },
+        {
+          "word": " fui,",
+          "start": 25747.44,
+          "end": 25747.66,
+          "probability": 0.97085
+        },
+        {
+          "word": " até",
+          "start": 25747.76,
+          "end": 25747.8,
+          "probability": 0.99995
+        },
+        {
+          "word": " amanhã",
+          "start": 25747.8,
+          "end": 25748.08,
+          "probability": 0.99922
+        }
+      ],
+      "avg_logprob": -0.21714027304398387,
+      "no_speech_prob": 4.9604678004078195e-12,
+      "compression_ratio": 1.3157894736842106,
+      "temperature": 0.0
+    },
+    {
+      "start": 25762.4,
+      "end": 25779.8,
+      "text": "Tchau, tchau.",
+      "words": [
+        {
+          "word": " Tchau,",
+          "start": 25762.4,
+          "end": 25763.8,
+          "probability": 0.47465
+        },
+        {
+          "word": " tchau.",
+          "start": 25779.56,
+          "end": 25779.8,
+          "probability": 0.96373
+        }
+      ],
+      "avg_logprob": -0.7184516059027778,
+      "no_speech_prob": 4.310504730931086e-11,
+      "compression_ratio": 0.7222222222222222,
+      "temperature": 0.0
+    },
+    {
+      "start": 25820.96,
+      "end": 25822.36,
+      "text": "Se inscreva no canal.",
+      "words": [
+        {
+          "word": " Se",
+          "start": 25820.96,
+          "end": 25822.36,
+          "probability": 0.02567
+        },
+        {
+          "word": " inscreva",
+          "start": 25822.36,
+          "end": 25822.36,
+          "probability": 0.82832
+        },
+        {
+          "word": " no",
+          "start": 25822.36,
+          "end": 25822.36,
+          "probability": 0.78773
+        },
+        {
+          "word": " canal.",
+          "start": 25822.36,
+          "end": 25822.36,
+          "probability": 0.90302
+        }
+      ],
+      "avg_logprob": -0.5600878927442763,
+      "no_speech_prob": 5.072314096521424e-11,
+      "compression_ratio": 0.7241379310344828,
+      "temperature": 0.4
+    },
+    {
+      "start": 25822.38,
+      "end": 25827.68,
+      "text": "Tchau, tchau.",
+      "words": [
+        {
+          "word": " Tchau,",
+          "start": 25822.38,
+          "end": 25823.58,
+          "probability": 0.51421
+        },
+        {
+          "word": " tchau.",
+          "start": 25827.68,
+          "end": 25827.68,
+          "probability": 0.98423
+        }
+      ],
+      "avg_logprob": -0.7447518242730035,
+      "no_speech_prob": 1.299933771736761e-10,
+      "compression_ratio": 0.7222222222222222,
+      "temperature": 0.0
+    },
+    {
+      "start": 25880.96,
+      "end": 25882.36,
+      "text": "Se inscreva.",
+      "words": [
+        {
+          "word": " Se",
+          "start": 25880.96,
+          "end": 25882.36,
+          "probability": 0.01526
+        },
+        {
+          "word": " inscreva.",
+          "start": 25882.36,
+          "end": 25882.36,
+          "probability": 0.8606
+        }
+      ],
+      "avg_logprob": -0.848339353288923,
+      "no_speech_prob": 5.090373261795733e-11,
+      "compression_ratio": 0.6,
+      "temperature": 0.0
+    },
+    {
+      "start": 25882.38,
+      "end": 25884.96,
+      "text": "Não, não, não, não.",
+      "words": [
+        {
+          "word": " Não,",
+          "start": 25882.38,
+          "end": 25882.56,
+          "probability": 0.05307
+        },
+        {
+          "word": " não,",
+          "start": 25882.56,
+          "end": 25883.0,
+          "probability": 0.86627
+        },
+        {
+          "word": " não,",
+          "start": 25883.32,
+          "end": 25884.62,
+          "probability": 0.98929
+        },
+        {
+          "word": " não.",
+          "start": 25884.62,
+          "end": 25884.96,
+          "probability": 0.98971
+        }
+      ],
+      "avg_logprob": -0.8403830961747603,
+      "no_speech_prob": 9.81704648128634e-11,
+      "compression_ratio": 1.2777777777777777,
+      "temperature": 0.0
+    }
+  ],
+  "language": "pt",
+  "chunk_index": 14,
+  "chunk_start": 25200,
+  "chunk_duration": 766.884,
+  "source_sha256": "1605ad447320615ea04e8e4abe115eda0df5a9eabe146fc50fe13cc139aa0086",
+  "model": "turbo",
+  "created_at": "2026-09-11T08:35:59Z"
+}

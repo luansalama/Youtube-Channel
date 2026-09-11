@@ -1,4 +1,4 @@
-"""Packaging + lifecycle completo + NLE Resolve + pipeline helpers."""
+"""Packaging + lifecycle completo + NLE Premiere MCP + pipeline helpers."""
 import csv
 import json
 import os
@@ -87,18 +87,29 @@ def test_full_lifecycle_to_package(tmp_path):
     assert "lição" in open(os.path.join(root, "productions/full/12-learn/lessons.md"), encoding="utf-8").read()
 
 
-def test_nle_resolve_export(tmp_path):
+def test_nle_premiere_mcp_export(tmp_path):
     root = _harness(tmp_path)
     C.create_production(root, "NLE", slug="nle")
     _fill_all(root, "nle")
-    vdir, proj = C.load_project(root, "nle")
+    vdir, _ = C.load_project(root, "nle")
     tl = json.load(open(os.path.join(vdir, ".studio/internal/assembly/timeline.json"), encoding="utf-8"))
-    out = NLE.get_driver("davinci-resolve").export(tl, os.path.join(vdir, "resolve-out"), "NLE")
-    assert "timeline.xmeml" in out["files"] and "resolve_assemble.py" in out["files"]
-    xmeml = open(os.path.join(vdir, "resolve-out/timeline.xmeml"), encoding="utf-8").read()
-    assert "c1" in xmeml
+    driver = NLE.get_driver(root=root)
+    assert driver.name == "premiere-pro"
+    outdir = os.path.join(vdir, "premiere-out")
+    out = driver.export(tl, outdir, "NLE")
+    assert {"timeline.xmeml", "premiere-edit-spec.json", "mcp-client.example.json", "RUNBOOK.md"} <= set(out["files"])
+    spec = json.load(open(os.path.join(outdir, "premiere-edit-spec.json"), encoding="utf-8"))
+    assert spec["events"][0]["cut_id"] == "c1"
+    assert spec["events"][0]["source_in_seconds"] == 0.0
+    assert spec["events"][0]["source_out_seconds"] == 10.0
+    assert spec["mcp"]["never_use"] == ["execute_extendscript", "evaluate_expression"]
+    client = json.load(open(os.path.join(outdir, "mcp-client.example.json"), encoding="utf-8"))
+    env = client["mcpServers"]["premiere-pro"]["env"]
+    assert "unsafe-script" not in env["PREMIERE_MCP_CAPABILITIES"]
+    xmeml = open(os.path.join(outdir, "timeline.xmeml"), encoding="utf-8").read()
+    assert "c1" in xmeml and "<start>0</start>" in xmeml and "<end>300</end>" in xmeml
     try:
-        NLE.get_driver("premiere")
+        NLE.get_driver("davinci-resolve", root=root)
         raise AssertionError("should have raised")
     except ValueError:
         pass

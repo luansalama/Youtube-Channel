@@ -1,0 +1,30 @@
+{
+  "id": "20260911-120210-9f12f1",
+  "type": "video-proposal",
+  "status": "failed",
+  "slug": "alanzoka-primeira-semana-de-setembro",
+  "created_at": "2026-09-11T12:02:10Z",
+  "started_at": "2026-09-11T12:02:10Z",
+  "ended_at": "2026-09-11T12:02:11Z",
+  "return_code": 1,
+  "error": "runner could not launch: C:\\Users\\Admin\\AppData\\Local\\agy\\bin\\agy.EXE (binary_exists=True; cwd_exists=True; cmdline_chars=125570; WinError=206; detail=[WinError 206] The filename or extension is too long)",
+  "worker_pid": 19432,
+  "log_path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\jobs\\logs\\20260911-120210-9f12f1.log",
+  "params": {
+    "request": "Quero fazer os melhores momentos do alan da primeira semana de setembro. esses 8 vods sao dessa semana. O objetivo é procurar por momentos engraçados, inacreditaveis, interessantes, ou qualquer coisa que se destaque por algum motivo legal. Seria interessante tambem ter uma corrente, de um momento aparecer em um corte e a resolucao do mesmo aparecer em outro momento no video, algo do tipo. A duracao pode variar entre 10 e 30mins. Vai depender da capacidade de encontrar cortes suficientes pelas transcrições.",
+    "source_asset_ids": [
+      "twitch-vod-2861744268",
+      "twitch-vod-2862622285",
+      "twitch-vod-2863504919",
+      "twitch-vod-2864229186",
+      "twitch-vod-2865097583",
+      "twitch-vod-2868004694",
+      "twitch-vod-2868864059",
+      "twitch-vod-2869682753"
+    ],
+    "runner": "agy",
+    "model": "gemini-3.8-flash",
+    "reasoning_effort": "high"
+  },
+  "result_summary": {}
+}

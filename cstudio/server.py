@@ -177,6 +177,17 @@ class Handler(BaseHTTPRequestHandler):
                     '<div class="notice notice-danger"><div><strong>Falha ao atualizar</strong><span>'
                     + html.escape(str(exc)) + "</span></div></div>", code=400,
                 )
+        if u.path == "/ui/studio-job":
+            try:
+                if not slug:
+                    raise ValueError("slug is required")
+                kind = q.get("kind", [""])[0]
+                return self._send(D.render_studio_job(self.root, slug, kind))
+            except Exception as exc:
+                return self._send(
+                    '<div class="notice notice-danger"><div><strong>Falha ao atualizar job</strong><span>'
+                    + html.escape(str(exc)) + "</span></div></div>", code=400,
+                )
         if u.path in ("/", "/index.html"):
             try:
                 return self._send(D.render(self.root, page, slug, csrf_token=self.csrf_token))
@@ -310,7 +321,7 @@ class Handler(BaseHTTPRequestHandler):
                 cfg = YR.set_auto_download(self.root, str(payload.get("enabled", "0")) in {"1", "true", "on", "yes"})
                 if is_form: return self._redirect(f"/?page=youtube&slug={_up.quote(slug)}")
                 return self._send(json.dumps({"ok": True, "config": cfg}, ensure_ascii=False), "application/json; charset=utf-8")
-            if u.path in {"/action/youtube-index", "/action/youtube-resolve", "/action/youtube-verify", "/action/youtube-download"}:
+            if u.path in {"/action/youtube-index", "/action/youtube-resolve", "/action/youtube-sizes", "/action/youtube-verify", "/action/youtube-download"}:
                 from . import youtube_resolver as YR
                 slug = str(payload.get("slug", "") or "").strip()
                 if not slug: raise ValueError("slug is required")
@@ -318,6 +329,8 @@ class Handler(BaseHTTPRequestHandler):
                     rec = YR.start_job(self.root, slug, "index", streamer=str(payload.get("streamer", "") or ""), force=True, command="dashboard youtube-index")
                 elif u.path.endswith("youtube-resolve"):
                     rec = YR.start_job(self.root, slug, "resolve", streamer=str(payload.get("streamer", "") or ""), vod_id=str(payload.get("vod_id", "") or ""), refresh_index=False, download=False, verify=True, force=False, command="dashboard youtube-resolve")
+                elif u.path.endswith("youtube-sizes"):
+                    rec = YR.start_job(self.root, slug, "sizes", streamer=str(payload.get("streamer", "") or ""), force=str(payload.get("force", "0") or "0") in {"1", "true", "on", "yes"}, command="dashboard youtube-sizes")
                 elif u.path.endswith("youtube-verify"):
                     rec = YR.start_job(self.root, slug, "verify", vod_id=str(payload.get("vod_id", "") or ""), video_id=str(payload.get("video_id", "") or ""), force=False, command="dashboard youtube-verify")
                 else:
@@ -330,6 +343,247 @@ class Handler(BaseHTTPRequestHandler):
                 rec = YR.reject_match(self.root, slug, str(payload.get("vod_id", "") or ""), str(payload.get("video_id", "") or ""), reason=str(payload.get("reason", "manual dashboard rejection") or "manual dashboard rejection"))
                 if is_form: return self._redirect(f"/?page=youtube&slug={_up.quote(slug)}")
                 return self._send(json.dumps({"ok": True, "match": rec}, ensure_ascii=False), "application/json; charset=utf-8")
+            if u.path == "/action/source-download-twitch":
+                from . import jobs as J
+                slug = str(payload.get("slug", "") or "").strip()
+                vod_id = str(payload.get("vod_id", "") or "").strip()
+                if not slug or not vod_id:
+                    raise ValueError("slug and vod_id are required")
+                rec = J.start_job(
+                    self.root, slug, "source-download-twitch",
+                    vod_id=vod_id,
+                    force=str(payload.get("force", "0") or "0").lower() in {"1", "true", "on", "yes"},
+                )
+                if is_form:
+                    return self._redirect(f"/?page=sources&slug={_up.quote(slug)}#source-{_up.quote(vod_id)}")
+                return self._send(json.dumps({"ok": True, "job": rec}, ensure_ascii=False), "application/json; charset=utf-8")
+            if u.path == "/action/source-batch-download-twitch":
+                from . import jobs as J
+                slug = str(payload.get("slug", "") or "").strip()
+                vod_ids = payload.get("vod_ids") or []
+                if isinstance(vod_ids, str):
+                    vod_ids = [vod_ids]
+                vod_ids = [str(x).strip() for x in vod_ids if str(x).strip()]
+                if not slug or not vod_ids:
+                    raise ValueError("slug and at least one vod_id are required")
+                rec = J.start_job(self.root, slug, "source-batch-download-twitch", vod_ids=vod_ids)
+                if is_form:
+                    return self._redirect(f"/?page=sources&slug={_up.quote(slug)}#source-library")
+                return self._send(json.dumps({"ok": True, "job": rec}, ensure_ascii=False), "application/json; charset=utf-8")
+            if u.path == "/action/source-download-audio":
+                from . import jobs as J
+                slug = str(payload.get("slug", "") or "").strip()
+                vod_id = str(payload.get("vod_id", "") or "").strip()
+                if not slug or not vod_id:
+                    raise ValueError("slug and vod_id are required")
+                rec = J.start_job(
+                    self.root, slug, "source-download-audio", vod_id=vod_id,
+                    force=str(payload.get("force", "0") or "0").lower() in {"1", "true", "on", "yes"},
+                )
+                if is_form:
+                    return self._redirect(f"/?page=sources&slug={_up.quote(slug)}#source-{_up.quote(vod_id)}")
+                return self._send(json.dumps({"ok": True, "job": rec}, ensure_ascii=False), "application/json; charset=utf-8")
+            if u.path == "/action/source-audio-transcribe":
+                from . import jobs as J
+                slug = str(payload.get("slug", "") or "").strip()
+                vod_id = str(payload.get("vod_id", "") or "").strip()
+                if not slug or not vod_id:
+                    raise ValueError("slug and vod_id are required")
+                rec = J.start_job(
+                    self.root, slug, "source-audio-transcribe", vod_id=vod_id,
+                    download_if_missing=True, cleanup_after=True,
+                    force=str(payload.get("force", "0") or "0").lower() in {"1", "true", "on", "yes"},
+                )
+                if is_form:
+                    return self._redirect(f"/?page=sources&slug={_up.quote(slug)}#source-{_up.quote(vod_id)}")
+                return self._send(json.dumps({"ok": True, "job": rec}, ensure_ascii=False), "application/json; charset=utf-8")
+            if u.path == "/action/source-batch-audio-transcribe":
+                from . import jobs as J
+                slug = str(payload.get("slug", "") or "").strip()
+                vod_ids = payload.get("vod_ids") or []
+                if isinstance(vod_ids, str):
+                    vod_ids = [vod_ids]
+                vod_ids = [str(x).strip() for x in vod_ids if str(x).strip()]
+                if not slug or not vod_ids:
+                    raise ValueError("slug and at least one vod_id are required")
+                rec = J.start_job(self.root, slug, "source-batch-audio-transcribe", vod_ids=vod_ids)
+                if is_form:
+                    return self._redirect(f"/?page=sources&slug={_up.quote(slug)}#source-library")
+                return self._send(json.dumps({"ok": True, "job": rec}, ensure_ascii=False), "application/json; charset=utf-8")
+            if u.path == "/action/source-prepare-vods":
+                from . import jobs as J
+                slug = str(payload.get("slug", "") or "").strip()
+                vod_ids = payload.get("vod_ids") or []
+                if isinstance(vod_ids, str):
+                    vod_ids = [vod_ids]
+                vod_ids = [str(x).strip() for x in vod_ids if str(x).strip()]
+                if not slug or not vod_ids:
+                    raise ValueError("slug and at least one vod_id are required")
+                rec = J.start_job(
+                    self.root, slug, "source-prepare-vods", vod_ids=vod_ids, include_masters=True,
+                )
+                if is_form:
+                    return self._redirect(f"/?page=sources&slug={_up.quote(slug)}#source-library")
+                return self._send(json.dumps({"ok": True, "job": rec}, ensure_ascii=False), "application/json; charset=utf-8")
+            if u.path == "/action/source-transcribe":
+                from . import jobs as J
+                slug = str(payload.get("slug", "") or "").strip()
+                asset_id = str(payload.get("asset_id", "") or "").strip()
+                if not slug or not asset_id:
+                    raise ValueError("slug and asset_id are required")
+                rec = J.start_job(
+                    self.root, slug, "source-transcribe",
+                    asset_id=asset_id,
+                    force=str(payload.get("force", "0") or "0").lower() in {"1", "true", "on", "yes"},
+                )
+                if is_form:
+                    return self._redirect(f"/?page=sources&slug={_up.quote(slug)}")
+                return self._send(json.dumps({"ok": True, "job": rec}, ensure_ascii=False), "application/json; charset=utf-8")
+            if u.path == "/action/video-proposal-run":
+                from . import jobs as J
+                slug = str(payload.get("slug", "") or "").strip()
+                if not slug:
+                    raise ValueError("slug is required")
+                continue_attempt = str(payload.get("continue_attempt", "") or "").lower() in {"1", "true", "on", "yes"}
+                resume_job_id = str(payload.get("resume_job_id", "") or "").strip()
+                source_ids = payload.get("source_asset_ids") or []
+                if isinstance(source_ids, str):
+                    source_ids = [source_ids]
+                request_text = str(payload.get("request", "") or "")
+                runner = str(payload.get("runner", "") or "")
+                model = str(payload.get("model", "") or "")
+                effort = str(payload.get("reasoning_effort", "") or "")
+                if continue_attempt:
+                    candidate = J.video_resume_candidate(self.root, slug, "part1", job_id=resume_job_id)
+                    if not candidate:
+                        raise ValueError("this Part 1 attempt is no longer resumable")
+                    source_ids = list(candidate.get("source_asset_ids") or [])
+                    request_text = str(candidate.get("request") or request_text)
+                    runner = str(candidate.get("runner") or "")
+                    model = str(candidate.get("model") or "")
+                    effort = str(candidate.get("reasoning_effort") or "")
+                rec = J.start_job(
+                    self.root, slug, "video-proposal",
+                    request=request_text, source_asset_ids=list(source_ids),
+                    runner=runner, model=model, reasoning_effort=effort,
+                    continue_attempt=continue_attempt, resume_job_id=resume_job_id,
+                )
+                if is_form:
+                    return self._redirect(f"/?page=videos&slug={_up.quote(slug)}")
+                return self._send(json.dumps({"ok": True, "job": rec}, ensure_ascii=False), "application/json; charset=utf-8")
+            if u.path == "/action/video-proposal-answers":
+                from . import video_plans as VP
+                slug = str(payload.get("slug", "") or "").strip()
+                pid = str(payload.get("id", "") or "").strip()
+                answers = {str(k)[7:]: str(v[0] if isinstance(v, list) else v or "") for k, v in payload.items() if str(k).startswith("answer_")}
+                rec = VP.save_answers(self.root, slug, pid, answers)
+                if is_form:
+                    return self._redirect(f"/?page=videos&slug={_up.quote(slug)}#video-proposal-{_up.quote(pid)}")
+                return self._send(json.dumps({"ok": True, "proposal": rec}, ensure_ascii=False), "application/json; charset=utf-8")
+            if u.path == "/action/video-proposal-refine":
+                from . import jobs as J
+                from . import video_plans as VP
+                slug = str(payload.get("slug", "") or "").strip()
+                pid = str(payload.get("id", "") or "").strip()
+                if not slug or not pid:
+                    raise ValueError("slug and proposal id are required")
+                continue_attempt = str(payload.get("continue_attempt", "") or "").lower() in {"1", "true", "on", "yes"}
+                resume_job_id = str(payload.get("resume_job_id", "") or "").strip()
+                inline_answers = payload.get("answers") if isinstance(payload.get("answers"), dict) else {}
+                if inline_answers and not continue_attempt:
+                    VP.save_answers(self.root, slug, pid, {str(k): str(v or "") for k, v in inline_answers.items()})
+                request_text = str(payload.get("request", "") or "Refine this proposal using the saved human answers.")
+                runner = str(payload.get("runner", "") or "")
+                model = str(payload.get("model", "") or "")
+                effort = str(payload.get("reasoning_effort", "") or "")
+                if continue_attempt:
+                    candidate = J.video_resume_candidate(self.root, slug, "part2", proposal_id=pid, job_id=resume_job_id)
+                    if not candidate:
+                        raise ValueError("this Part 2 attempt is no longer resumable; start a fresh consolidation")
+                    request_text = str(candidate.get("request") or request_text)
+                    runner = str(candidate.get("runner") or "")
+                    model = str(candidate.get("model") or "")
+                    effort = str(candidate.get("reasoning_effort") or "")
+                rec = J.start_job(
+                    self.root, slug, "video-proposal-refine",
+                    proposal_id=pid, request=request_text,
+                    runner=runner, model=model, reasoning_effort=effort,
+                    continue_attempt=continue_attempt, resume_job_id=resume_job_id,
+                )
+                if is_form:
+                    return self._redirect(f"/?page=videos&slug={_up.quote(slug)}#video-proposal-{_up.quote(pid)}")
+                return self._send(json.dumps({"ok": True, "job": rec}, ensure_ascii=False), "application/json; charset=utf-8")
+            if u.path == "/action/video-proposal-accept":
+                from . import video_plans as VP
+                slug = str(payload.get("slug", "") or "").strip(); pid = str(payload.get("id", "") or "").strip()
+                video = VP.accept_video_proposal(self.root, slug, pid)
+                if is_form:
+                    return self._redirect(f"/?page=videos&slug={_up.quote(slug)}#planned-videos")
+                return self._send(json.dumps({"ok": True, "video": video}, ensure_ascii=False), "application/json; charset=utf-8")
+            if u.path == "/action/video-proposal-discard":
+                from . import video_plans as VP
+                slug = str(payload.get("slug", "") or "").strip(); pid = str(payload.get("id", "") or "").strip()
+                rec = VP.discard_video_proposal(self.root, slug, pid)
+                if is_form:
+                    return self._redirect(f"/?page=videos&slug={_up.quote(slug)}")
+                return self._send(json.dumps({"ok": True, "proposal": rec}, ensure_ascii=False), "application/json; charset=utf-8")
+            if u.path == "/action/video-candidate-precision":
+                from . import jobs as J
+                slug = str(payload.get("slug", "") or "").strip()
+                video_id = str(payload.get("video_id", "") or "").strip()
+                if not slug or not video_id:
+                    raise ValueError("slug and video_id are required")
+                rec = J.start_job(self.root, slug, "video-candidate-precision", video_id=video_id)
+                if is_form:
+                    return self._redirect(f"/?page=videos&slug={_up.quote(slug)}#planned-videos")
+                return self._send(json.dumps({"ok": True, "job": rec}, ensure_ascii=False), "application/json; charset=utf-8")
+            if u.path == "/action/agent-run":
+                from . import jobs as J
+                slug = str(payload.get("slug", "") or "").strip()
+                if not slug:
+                    raise ValueError("slug is required")
+                stage = str(payload.get("stage", "") or "").strip()
+                current = C.workflow_status(self.root, slug)
+                if stage and stage != str(current.get("stage") or ""):
+                    raise ValueError("a fase mudou; recarregue a produção antes de iniciar o agente")
+                rec = J.start_job(
+                    self.root, slug, "agent-proposal",
+                    request=str(payload.get("request", "") or ""),
+                    runner=str(payload.get("runner", "") or ""),
+                    model=str(payload.get("model", "") or ""),
+                    reasoning_effort=str(payload.get("reasoning_effort", "") or ""),
+                    stage=str(current.get("stage") or ""),
+                )
+                if is_form:
+                    return self._redirect(f"/?page=production&slug={_up.quote(slug)}#phase-assistant")
+                return self._send(json.dumps({"ok": True, "job": rec}, ensure_ascii=False), "application/json; charset=utf-8")
+            if u.path == "/action/premiere-media-manifest":
+                from . import edit_media as EM
+                slug = str(payload.get("slug", "") or "").strip()
+                if not slug:
+                    raise ValueError("slug is required")
+                manifest = EM.build_manifest(self.root, slug)
+                if is_form:
+                    return self._redirect(f"/?page=premiere&slug={_up.quote(slug)}#premiere-media")
+                return self._send(json.dumps({"ok": True, "manifest": manifest}, ensure_ascii=False), "application/json; charset=utf-8")
+            if u.path == "/action/premiere-doctor":
+                from . import jobs as J
+                slug = str(payload.get("slug", "") or "").strip()
+                if not slug:
+                    raise ValueError("slug is required")
+                rec = J.start_job(self.root, slug, "premiere-doctor")
+                if is_form:
+                    return self._redirect(f"/?page=premiere&slug={_up.quote(slug)}")
+                return self._send(json.dumps({"ok": True, "job": rec}, ensure_ascii=False), "application/json; charset=utf-8")
+            if u.path == "/action/premiere-export":
+                from . import jobs as J
+                slug = str(payload.get("slug", "") or "").strip()
+                if not slug:
+                    raise ValueError("slug is required")
+                rec = J.start_job(self.root, slug, "premiere-export")
+                if is_form:
+                    return self._redirect(f"/?page=premiere&slug={_up.quote(slug)}")
+                return self._send(json.dumps({"ok": True, "job": rec}, ensure_ascii=False), "application/json; charset=utf-8")
             if u.path == "/action/maintain":
                 report = C.maintain_repository(self.root)
                 if is_form:
@@ -348,10 +602,18 @@ class Handler(BaseHTTPRequestHandler):
                     page = "twitch"
                 elif "/youtube-" in u.path:
                     page = "youtube"
+                elif u.path == "/action/agent-run":
+                    page = "production"
+                elif u.path.startswith("/action/source-"):
+                    page = "sources"
+                elif u.path.startswith("/action/video-proposal-"):
+                    page = "videos"
+                elif u.path.startswith("/action/premiere-"):
+                    page = "premiere"
                 elif u.path in ("/action/new", "/action/pause", "/action/resume", "/action/abandon", "/action/maintain"):
                     page = "production"
                 else:
-                    page = "gates"
+                    page = "reviews"
                 return self._form_result(False, str(payload.get("slug", "")), page, str(exc))
             return self._send(json.dumps({"ok": False, "error": str(exc)}), "application/json; charset=utf-8", 400)
 

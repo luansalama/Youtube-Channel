@@ -1,0 +1,21 @@
+{
+  "id": "20260911-122828-16e1aa",
+  "type": "video-proposal-refine",
+  "status": "failed",
+  "slug": "alanzoka-primeira-semana-de-setembro",
+  "created_at": "2026-09-11T12:28:28Z",
+  "started_at": "2026-09-11T12:28:28Z",
+  "ended_at": "2026-09-11T12:28:32Z",
+  "return_code": 1,
+  "error": "runner failed (1): {\"event\":\"result\",\"result\":{\"conversation_id\":\"\",\"status\":\"ERROR\",\"response\":\"\",\"error\":\"invalid model selection (--model \\\"claude-opus-4-6\\\" --effort \\\"\\\"): model claude-opus-4-6 is not recognized as a known model or custom model in settings\\nAvailable models:\\n  Gemini 3.8 Flash (High)\\n  Gemini 3.8 Flash (Medium)\\n  Gemini 3.8 Flash (Low)\\n  Gemini 3.7 Flash (High)\\n  Gemini 3.7 Flash (Medium)\\n  Gemini 3.7 Flash (Low)\\n  Gemini 3.6 Flash (High)\\n  Gemini 3.6 Flash (Medium)\\n  Gemini 3.6 Flash (Low)\\n  Gemini 3.1 Pro (High)\\n  Gemini 3.1 Pro (Low)\\n  Claude Sonnet 4.6 (Thinking)\\n  Claude Opus 4.6 (Thinking)\\n  GPT-OSS 120B (Medium)\",\"duration_seconds\":0,\"num_turns\":0,\"usage\":{\"input_tokens\":0,\"output_tokens\":0,\"thinking_tokens\":0,\"cache_read_tokens\":0,\"total_tokens\":0}}}\n\nerror: invalid model selection (--model \"claude-opus-4-6\" --effort \"\"): model claude-opus-4-6 is not recognized as a known model or custom model in settings\nAvailable models:\n  Gemini 3.8 Flash (High)\n  Gemini 3.8 Flash (Medium)\n  Gemini 3.8 Flash (Low)\n  Gemini 3.7 Flash (High)\n  Gemini 3.7 Flash (Medium)\n  Gemini 3.7 Flash (Low)\n  Gemini 3.6 Flash (High)\n  Gemini 3.6 Flash (Medium)\n  Gemini 3.6 Flash (Low)\n  Gemini 3.1 Pro (High)\n  Gemini 3.1 Pro (Low)\n  Claude Sonnet 4.6 (Thinking)\n  Claude Opus 4.6 (Thinking)\n  GPT-OSS 120B (Medium)",
+  "worker_pid": 22160,
+  "log_path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\jobs\\logs\\20260911-122828-16e1aa.log",
+  "params": {
+    "proposal_id": "fe53735e563a",
+    "request": "Consolide a Parte 2 usando todas as respostas humanas salvas como decisões autoritativas. Torne a proposta específica, remova perguntas resolvidas e preserve os candidate moments sustentados pela transcrição.",
+    "runner": "agy",
+    "model": "claude-opus-4-6",
+    "reasoning_effort": "thinking"
+  },
+  "result_summary": {}
+}

@@ -1,0 +1,204 @@
+[2026-09-11T17:57:29Z] Cuts Studio job video-candidate-precision pid=22568
+candidate precision: video=alanzoka-o-detetive-de-laslea-a-saga-fitness-melhores-momentos candidates=19 decoded_seconds=3260.0 word_timestamps=true
+extract audio chunk start=262.0s duration=43.0s
+extract audio chunk start=24297.0s duration=206.0s
+extract audio chunk start=257.0s duration=51.0s
+extract audio chunk start=15564.0s duration=159.0s
+extract audio chunk start=26912.0s duration=101.0s
+extract audio chunk start=14397.0s duration=306.0s
+extract audio chunk start=16368.0s duration=78.0s
+extract audio chunk start=16732.0s duration=21.0s
+extract audio chunk start=19497.0s duration=306.0s
+extract audio chunk start=5097.0s duration=286.0s
+extract audio chunk start=18263.0s duration=100.0s
+extract audio chunk start=18897.0s duration=206.0s
+extract audio chunk start=1497.0s duration=306.0s
+extract audio chunk start=8127.0s duration=201.0s
+extract audio chunk start=22557.0s duration=196.0s
+extract audio chunk start=19557.0s duration=91.0s
+extract audio chunk start=24917.0s duration=136.0s
+extract audio chunk start=26617.0s duration=311.0s
+extract audio chunk start=32397.0s duration=156.0s
+faster-whisper preflight: python=K:\Applications\LLMS\Whisper\.venv\Scripts\python.exe faster_whisper=1.2.1 ctranslate2=4.8.2 cuda_devices=1 device=cuda compute=float16 batch=8 model=faster-whisper-large-v3-turbo
+faster-whisper profile: streamer=alanzoka language=pt timestamps=word+segment condition_on_previous_text=false scope=localized inference=plain processed_seconds=3260.0 model=faster-whisper-large-v3-turbo device=cuda compute=float16 batch=n/a beam=5 vad=on
+transcribe candidate-precision/alanzoka-o-detetive-de-laslea-a-saga-fitness-melhores-momentos: K:\Applications\LLMS\Whisper\.venv\Scripts\python.exe K:\Applications\Youtube-Channel\cstudio\faster_whisper_runner.py --spec C:\Users\Admin\AppData\Local\Temp\cstudio-faster-whisper-gchn0kmp\spec.json --output C:\Users\Admin\AppData\Local\Temp\cstudio-faster-whisper-gchn0kmp\transcript.json
+[faster-whisper] CSTUDIO_FW {"event": "runtime", "faster_whisper": "1.2.1", "ctranslate2": "4.8.2", "cuda_devices": 1, "device": "cuda", "compute_type": "float16", "batch_size": null, "inference_mode": "plain", "word_timestamps": true}
+[faster-whisper] CSTUDIO_FW {"event": "model_ready", "seconds": 2.596, "model": "K:\\Applications\\LLMS\\Whisper\\faster-whisper-large-v3-turbo", "inference_mode": "plain"}
+[faster-whisper] CSTUDIO_FW {"event": "input_start", "index": 1, "inputs": 19, "file": "candidate-0000.wav", "ranges": 0, "offset": 262.0}
+[faster-whisper] CSTUDIO_FW {"event": "error", "type": "TypeError", "message": "'NoneType' object is not iterable"}
+[faster-whisper] Traceback (most recent call last):
+[faster-whisper]   File "K:\Applications\Youtube-Channel\cstudio\faster_whisper_runner.py", line 201, in <module>
+[faster-whisper]     raise SystemExit(main())
+[faster-whisper]                      ^^^^^^
+[faster-whisper]   File "K:\Applications\Youtube-Channel\cstudio\faster_whisper_runner.py", line 157, in main
+[faster-whisper]     for segment in segments:
+[faster-whisper]   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\faster_whisper\transcribe.py", line 1124, in generate_segments
+[faster-whisper]     seek_points: List[int] = [
+[faster-whisper]                              ^
+[faster-whisper] TypeError: 'NoneType' object is not iterable
+faster-whisper localized batch failed; falling back to OpenAI Whisper: faster-whisper transcription failed with code 1: Traceback (most recent call last): |   File "K:\Applications\Youtube-Channel\cstudio\faster_whisper_runner.py", line 201, in <module> |     raise SystemExit(main()) |                      ^^^^^^ |   File "K:\Applications\Youtube-Channel\cstudio\faster_whisper_runner.py", line 157, in main |     for segment in segments: |   File "K:\Applications\LLMS\Whisper\.venv\Lib\site-packages\faster_whisper\transcribe.py", line 1124, in generate_segments |     seek_points: List[int] = [ |                              ^ | TypeError: 'NoneType' object is not iterable
+whisper preflight: python=K:\Applications\LLMS\Whisper\.venv\Scripts\python.exe torch=2.6.0+cu124 whisper=20250625 cuda=True gpu=NVIDIA GeForce RTX 4070 SUPER device=cuda
+whisper localized batch: source=candidate-precision/alanzoka-o-detetive-de-laslea-a-saga-fitness-melhores-momentos clips=19 processed_seconds=3260.0 model_loads=1
+transcribe localized candidate-precision/alanzoka-o-detetive-de-laslea-a-saga-fitness-melhores-momentos: K:\Applications\LLMS\Whisper\.venv\Scripts\python.exe -m whisper C:\Users\Admin\AppData\Local\Temp\cstudio-candidate-precision-a9hgbkda\candidate-0000.wav C:\Users\Admin\AppData\Local\Temp\cstudio-candidate-precision-a9hgbkda\candidate-0001.wav C:\Users\Admin\AppData\Local\Temp\cstudio-candidate-precision-a9hgbkda\candidate-0002.wav C:\Users\Admin\AppData\Local\Temp\cstudio-candidate-precision-a9hgbkda\candidate-0003.wav C:\Users\Admin\AppData\Local\Temp\cstudio-candidate-precision-a9hgbkda\candidate-0004.wav C:\Users\Admin\AppData\Local\Temp\cstudio-candidate-precision-a9hgbkda\candidate-0005.wav C:\Users\Admin\AppData\Local\Temp\cstudio-candidate-precision-a9hgbkda\candidate-0006.wav C:\Users\Admin\AppData\Local\Temp\cstudio-candidate-precision-a9hgbkda\candidate-0007.wav C:\Users\Admin\AppData\Local\Temp\cstudio-candidate-precision-a9hgbkda\candidate-0008.wav C:\Users\Admin\AppData\Local\Temp\cstudio-candidate-precision-a9hgbkda\candidate-0009.wav C:\Users\Admin\AppData\Local\Temp\cstudio-candidate-precision-a9hgbkda\candidate-0010.wav C:\Users\Admin\AppData\Local\Temp\cstudio-candidate-precision-a9hgbkda\candidate-0011.wav C:\Users\Admin\AppData\Local\Temp\cstudio-candidate-precision-a9hgbkda\candidate-0012.wav C:\Users\Admin\AppData\Local\Temp\cstudio-candidate-precision-a9hgbkda\candidate-0013.wav C:\Users\Admin\AppData\Local\Temp\cstudio-candidate-precision-a9hgbkda\candidate-0014.wav C:\Users\Admin\AppData\Local\Temp\cstudio-candidate-precision-a9hgbkda\candidate-0015.wav C:\Users\Admin\AppData\Local\Temp\cstudio-candidate-precision-a9hgbkda\candidate-0016.wav C:\Users\Admin\AppData\Local\Temp\cstudio-candidate-precision-a9hgbkda\candidate-0017.wav C:\Users\Admin\AppData\Local\Temp\cstudio-candidate-precision-a9hgbkda\candidate-0018.wav --model turbo --output_dir C:\Users\Admin\AppData\Local\Temp\cstudio-whisper-clips-7a4z_16d --output_format json --verbose False --task transcribe --condition_on_previous_text False --word_timestamps True --model_dir K:\Applications\LLMS\Whisper --device cuda --language pt
+[whisper]   0%|          | 0/4300 [00:00<?, ?frames/s]
+[whisper]  61%|██████▏   | 2636/4300 [00:07<00:04, 360.80frames/s]
+[whisper] 100%|██████████| 4300/4300 [00:10<00:00, 447.87frames/s]
+[whisper] 100%|██████████| 4300/4300 [00:10<00:00, 428.83frames/s]
+[whisper]   0%|          | 0/20600 [00:00<?, ?frames/s]
+[whisper]  15%|█▍        | 3000/20600 [00:00<00:03, 4585.79frames/s]
+[whisper]  27%|██▋       | 5514/20600 [00:01<00:03, 4190.38frames/s]
+[whisper]  41%|████      | 8430/20600 [00:02<00:04, 2848.47frames/s]
+[whisper]  55%|█████▌    | 11430/20600 [00:04<00:04, 2122.65frames/s]
+[whisper]  70%|███████   | 14430/20600 [00:05<00:02, 2431.67frames/s]
+[whisper]  84%|████████▍ | 17300/20600 [00:07<00:01, 2004.45frames/s]
+[whisper]  97%|█████████▋| 20030/20600 [00:09<00:00, 1744.87frames/s]
+[whisper] 100%|██████████| 20600/20600 [00:10<00:00, 1464.63frames/s]
+[whisper] 100%|██████████| 20600/20600 [00:10<00:00, 1954.86frames/s]
+[whisper]   0%|          | 0/5100 [00:00<?, ?frames/s]
+[whisper]  58%|█████▊    | 2962/5100 [00:03<00:02, 937.85frames/s]
+[whisper] 100%|██████████| 5100/5100 [00:04<00:00, 1049.26frames/s]
+[whisper] 100%|██████████| 5100/5100 [00:04<00:00, 1027.98frames/s]
+[whisper]   0%|          | 0/15900 [00:00<?, ?frames/s]
+[whisper]  19%|█▉        | 3000/15900 [00:02<00:10, 1220.09frames/s]
+[whisper]  36%|███▌      | 5680/15900 [00:04<00:08, 1209.59frames/s]
+[whisper]  52%|█████▏    | 8220/15900 [00:06<00:06, 1171.65frames/s]
+[whisper]  70%|██████▉   | 11056/15900 [00:09<00:04, 1129.78frames/s]
+[whisper]  88%|████████▊ | 13970/15900 [00:11<00:01, 1263.56frames/s]
+[whisper] 100%|██████████| 15900/15900 [00:13<00:00, 1170.86frames/s]
+[whisper] 100%|██████████| 15900/15900 [00:13<00:00, 1184.18frames/s]
+[whisper]   0%|          | 0/10100 [00:00<?, ?frames/s]
+[whisper]  28%|██▊       | 2812/10100 [00:03<00:08, 858.04frames/s]
+[whisper]  56%|█████▌    | 5606/10100 [00:06<00:05, 820.67frames/s]
+[whisper]  82%|████████▏ | 8330/10100 [00:10<00:02, 782.79frames/s]
+[whisper] 100%|██████████| 10100/10100 [00:12<00:00, 806.33frames/s]
+[whisper] 100%|██████████| 10100/10100 [00:12<00:00, 808.02frames/s]
+[whisper]   0%|          | 0/30600 [00:00<?, ?frames/s]
+[whisper]   9%|▉         | 2798/30600 [00:02<00:26, 1056.76frames/s]
+[whisper]  17%|█▋        | 5142/30600 [00:05<00:29, 865.75frames/s] 
+[whisper]  27%|██▋       | 8142/30600 [00:09<00:28, 787.77frames/s]
+[whisper]  36%|███▋      | 11142/30600 [00:13<00:23, 825.12frames/s]
+[whisper]  46%|████▌     | 13988/30600 [00:16<00:19, 841.23frames/s]
+[whisper]  55%|█████▌    | 16930/30600 [00:21<00:18, 745.71frames/s]
+[whisper]  65%|██████▌   | 19930/30600 [00:23<00:12, 859.98frames/s]
+[whisper]  75%|███████▍  | 22930/30600 [00:26<00:08, 927.41frames/s]
+[whisper]  84%|████████▍ | 25848/30600 [00:29<00:05, 916.75frames/s]
+[whisper]  92%|█████████▏| 28196/30600 [00:31<00:02, 967.81frames/s]
+[whisper] 100%|██████████| 30600/30600 [00:33<00:00, 1041.91frames/s]
+[whisper] 100%|██████████| 30600/30600 [00:33<00:00, 909.03frames/s] 
+[whisper]   0%|          | 0/7800 [00:00<?, ?frames/s]
+[whisper]  38%|███▊      | 3000/7800 [00:03<00:05, 814.12frames/s]
+[whisper]  71%|███████▏  | 5562/7800 [00:07<00:03, 711.25frames/s]
+[whisper] 100%|██████████| 7800/7800 [00:09<00:00, 887.11frames/s]
+[whisper] 100%|██████████| 7800/7800 [00:09<00:00, 841.12frames/s]
+[whisper]   0%|          | 0/2100 [00:00<?, ?frames/s]
+[whisper] 100%|██████████| 2100/2100 [00:02<00:00, 985.27frames/s]
+[whisper] 100%|██████████| 2100/2100 [00:02<00:00, 984.80frames/s]
+[whisper]   0%|          | 0/30600 [00:00<?, ?frames/s]
+[whisper]  10%|▉         | 3000/30600 [00:02<00:19, 1424.17frames/s]
+[whisper]  19%|█▉        | 5896/30600 [00:04<00:19, 1260.05frames/s]
+[whisper]  28%|██▊       | 8598/30600 [00:06<00:16, 1316.53frames/s]
+[whisper]  37%|███▋      | 11360/30600 [00:08<00:14, 1299.80frames/s]
+[whisper]  47%|████▋     | 14360/30600 [00:12<00:15, 1076.24frames/s]
+[whisper]  55%|█████▌    | 16876/30600 [00:16<00:15, 908.06frames/s] 
+[whisper]  65%|██████▍   | 19740/30600 [00:20<00:13, 810.18frames/s]
+[whisper]  74%|███████▍  | 22680/30600 [00:24<00:10, 775.29frames/s]
+[whisper]  83%|████████▎ | 25370/30600 [00:27<00:06, 778.74frames/s]
+[whisper]  93%|█████████▎| 28328/30600 [00:31<00:02, 799.00frames/s]
+[whisper] 100%|██████████| 30600/30600 [00:35<00:00, 737.53frames/s]
+[whisper] 100%|██████████| 30600/30600 [00:35<00:00, 871.96frames/s]
+[whisper]   0%|          | 0/28600 [00:00<?, ?frames/s]
+[whisper]  10%|█         | 2952/28600 [00:04<00:34, 736.44frames/s]
+[whisper]  19%|█▉        | 5516/28600 [00:07<00:29, 774.17frames/s]
+[whisper]  28%|██▊       | 8114/28600 [00:08<00:20, 988.67frames/s]
+[whisper]  39%|███▉      | 11114/28600 [00:11<00:16, 1083.56frames/s]
+[whisper]  49%|████▉     | 13952/28600 [00:13<00:13, 1076.41frames/s]
+[whisper]  59%|█████▉    | 16952/28600 [00:15<00:08, 1321.52frames/s]
+[whisper]  69%|██████▉   | 19814/28600 [00:23<00:12, 692.62frames/s] 
+[whisper]  79%|███████▊  | 22466/28600 [00:25<00:07, 794.40frames/s]
+[whisper]  88%|████████▊ | 25118/28600 [00:28<00:04, 837.86frames/s]
+[whisper]  98%|█████████▊| 27968/28600 [00:30<00:00, 957.24frames/s]
+[whisper] 100%|██████████| 28600/28600 [00:31<00:00, 945.73frames/s]
+[whisper] 100%|██████████| 28600/28600 [00:31<00:00, 914.37frames/s]
+[whisper]   0%|          | 0/10000 [00:00<?, ?frames/s]
+[whisper]  30%|██▉       | 2964/10000 [00:02<00:04, 1457.70frames/s]
+[whisper]  57%|█████▋    | 5672/10000 [00:06<00:05, 825.47frames/s] 
+[whisper]  84%|████████▎ | 8352/10000 [00:09<00:01, 885.38frames/s]
+[whisper] 100%|██████████| 10000/10000 [00:10<00:00, 927.69frames/s]
+[whisper] 100%|██████████| 10000/10000 [00:10<00:00, 933.22frames/s]
+[whisper]   0%|          | 0/20600 [00:00<?, ?frames/s]
+[whisper]  15%|█▍        | 3000/20600 [00:00<00:05, 3146.68frames/s]
+[whisper]  29%|██▉       | 6000/20600 [00:03<00:07, 1833.24frames/s]
+[whisper]  41%|████▏     | 8524/20600 [00:06<00:11, 1088.55frames/s]
+[whisper]  56%|█████▌    | 11448/20600 [00:09<00:08, 1117.72frames/s]
+[whisper]  69%|██████▊   | 14120/20600 [00:12<00:06, 975.62frames/s] 
+[whisper]  83%|████████▎ | 16996/20600 [00:16<00:04, 857.85frames/s]
+[whisper]  97%|█████████▋| 19888/20600 [00:20<00:00, 859.36frames/s]
+[whisper] 100%|██████████| 20600/20600 [00:21<00:00, 809.19frames/s]
+[whisper] 100%|██████████| 20600/20600 [00:21<00:00, 962.15frames/s]
+[whisper]   0%|          | 0/30600 [00:00<?, ?frames/s]
+[whisper]   7%|▋         | 2104/30600 [00:02<00:31, 908.67frames/s]
+[whisper]  17%|█▋        | 5104/30600 [00:04<00:21, 1179.39frames/s]
+[whisper]  26%|██▌       | 7982/30600 [00:07<00:22, 994.40frames/s] 
+[whisper]  35%|███▍      | 10606/30600 [00:09<00:16, 1231.36frames/s]
+[whisper]  43%|████▎     | 13258/30600 [00:10<00:11, 1460.50frames/s]
+[whisper]  53%|█████▎    | 16174/30600 [00:14<00:12, 1119.43frames/s]
+[whisper]  63%|██████▎   | 19148/30600 [00:17<00:11, 1007.16frames/s]
+[whisper]  72%|███████▏  | 22050/30600 [00:21<00:09, 911.21frames/s] 
+[whisper]  80%|████████  | 24592/30600 [00:24<00:06, 882.20frames/s]
+[whisper]  90%|█████████ | 27592/30600 [00:27<00:03, 967.78frames/s]
+[whisper] 100%|█████████▉| 30592/30600 [00:29<00:00, 1015.19frames/s]
+[whisper] 100%|██████████| 30600/30600 [00:30<00:00, 1012.27frames/s]
+[whisper]   0%|          | 0/20100 [00:00<?, ?frames/s]
+[whisper]  13%|█▎        | 2602/20100 [00:02<00:13, 1267.53frames/s]
+[whisper]  28%|██▊       | 5602/20100 [00:04<00:12, 1202.19frames/s]
+[whisper]  43%|████▎     | 8602/20100 [00:07<00:10, 1148.55frames/s]
+[whisper]  57%|█████▋    | 11520/20100 [00:09<00:07, 1148.15frames/s]
+[whisper]  67%|██████▋   | 13416/20100 [00:11<00:05, 1237.24frames/s]
+[whisper]  81%|████████▏ | 16376/20100 [00:12<00:02, 1375.09frames/s]
+[whisper]  95%|█████████▌| 19130/20100 [00:15<00:00, 1309.69frames/s]
+[whisper] 100%|██████████| 20100/20100 [00:16<00:00, 1218.28frames/s]
+[whisper] 100%|██████████| 20100/20100 [00:16<00:00, 1232.75frames/s]
+[whisper]   0%|          | 0/19600 [00:00<?, ?frames/s]
+[whisper]  15%|█▌        | 3000/19600 [00:00<00:05, 3147.79frames/s]
+[whisper]  29%|██▊       | 5610/19600 [00:03<00:08, 1610.90frames/s]
+[whisper]  44%|████▍     | 8610/19600 [00:03<00:04, 2566.21frames/s]
+[whisper]  59%|█████▊    | 11508/19600 [00:05<00:04, 1864.38frames/s]
+[whisper]  74%|███████▎  | 14414/19600 [00:07<00:03, 1678.33frames/s]
+[whisper]  89%|████████▉ | 17414/19600 [00:09<00:01, 1862.97frames/s]
+[whisper] 100%|██████████| 19600/19600 [00:11<00:00, 1559.11frames/s]
+[whisper] 100%|██████████| 19600/19600 [00:11<00:00, 1755.46frames/s]
+[whisper]   0%|          | 0/9100 [00:00<?, ?frames/s]
+[whisper]  31%|███       | 2804/9100 [00:03<00:08, 770.00frames/s]
+[whisper]  63%|██████▎   | 5704/9100 [00:07<00:04, 714.86frames/s]
+[whisper]  92%|█████████▏| 8406/9100 [00:12<00:01, 666.46frames/s]
+[whisper] 100%|██████████| 9100/9100 [00:13<00:00, 649.40frames/s]
+[whisper] 100%|██████████| 9100/9100 [00:13<00:00, 672.47frames/s]
+[whisper]   0%|          | 0/13600 [00:00<?, ?frames/s]
+[whisper]  22%|██▏       | 3000/13600 [00:01<00:05, 2019.52frames/s]
+[whisper]  43%|████▎     | 5788/13600 [00:03<00:04, 1608.68frames/s]
+[whisper]  56%|█████▌    | 7640/13600 [00:04<00:04, 1488.11frames/s]
+[whisper]  78%|███████▊  | 10640/13600 [00:06<00:01, 1691.35frames/s]
+[whisper]  99%|█████████▉| 13446/13600 [00:09<00:00, 1366.86frames/s]
+[whisper] 100%|██████████| 13600/13600 [00:09<00:00, 1224.42frames/s]
+[whisper] 100%|██████████| 13600/13600 [00:09<00:00, 1408.01frames/s]
+[whisper]   0%|          | 0/31100 [00:00<?, ?frames/s]
+[whisper]  10%|▉         | 3000/31100 [00:02<00:26, 1066.09frames/s]
+[whisper]  19%|█▉        | 5854/31100 [00:06<00:26, 960.29frames/s] 
+[whisper]  27%|██▋       | 8544/31100 [00:07<00:20, 1100.94frames/s]
+[whisper]  37%|███▋      | 11404/31100 [00:09<00:14, 1321.77frames/s]
+[whisper]  46%|████▌     | 14292/31100 [00:11<00:12, 1319.35frames/s]
+[whisper]  55%|█████▍    | 17044/31100 [00:13<00:09, 1487.07frames/s]
+[whisper]  64%|██████▍   | 20044/31100 [00:14<00:06, 1751.37frames/s]
+[whisper]  72%|███████▏  | 22352/31100 [00:16<00:05, 1543.47frames/s]
+[whisper]  82%|████████▏ | 25352/31100 [00:17<00:03, 1827.83frames/s]
+[whisper]  90%|█████████ | 28142/31100 [00:19<00:01, 1531.51frames/s]
+[whisper] 100%|██████████| 31100/31100 [00:21<00:00, 1540.18frames/s]
+[whisper] 100%|██████████| 31100/31100 [00:21<00:00, 1440.76frames/s]
+[whisper]   0%|          | 0/15600 [00:00<?, ?frames/s]
+[whisper]  18%|█▊        | 2782/15600 [00:02<00:12, 1043.92frames/s]
+[whisper]  36%|███▌      | 5606/15600 [00:05<00:10, 989.33frames/s] 
+[whisper]  55%|█████▌    | 8606/15600 [00:09<00:07, 936.37frames/s]
+[whisper]  74%|███████▍  | 11520/15600 [00:11<00:04, 968.97frames/s]
+[whisper]  93%|█████████▎| 14520/15600 [00:12<00:00, 1333.11frames/s]
+[whisper] 100%|██████████| 15600/15600 [00:13<00:00, 1331.09frames/s]
+[whisper] 100%|██████████| 15600/15600 [00:13<00:00, 1157.06frames/s]

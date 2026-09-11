@@ -88,6 +88,7 @@ except Exception:  # pragma: no cover - exercised on minimal installs
 
 SCHEMA_VERSION = 2
 MATCH_STATES = ("unmatched", "candidate", "likely", "verified", "rejected", "ambiguous")
+MASTER_FORMAT_SELECTOR = "bv*+ba/b"
 STREAMER_RE = re.compile(r"^[A-Za-z0-9_]{1,40}$")
 VIDEO_ID_RE = re.compile(r"^[A-Za-z0-9_-]{6,32}$")
 CHANNEL_ID_RE = re.compile(r"^UC[A-Za-z0-9_-]{20,30}$")
@@ -116,8 +117,12 @@ PCM_RATE = 8000
 # established audiovisual anchors decide VERIFIED. Whisper is localized and
 # on-demand only for borderline matches and never weakens the audio policy.
 TRANSCRIPT_PROVIDER = "openai-whisper-turbo-segment-v3"  # backwards-compatible cache/provider id
-TRANSCRIPT_PROVIDER_FASTER = "faster-whisper-1.2-batched-segment-v1"
-TRANSCRIPT_PROVIDERS = {TRANSCRIPT_PROVIDER, TRANSCRIPT_PROVIDER_FASTER}
+TRANSCRIPT_PROVIDER_FASTER = "faster-whisper-1.2-plain-segment-v2"
+# Preserve the previous batched provider ID as cache-compatible. Batched mode
+# remains useful for resolver-localized clips, but editorial discovery now uses
+# WhisperModel.transcribe() directly for better segment granularity.
+TRANSCRIPT_PROVIDER_FASTER_BATCHED = "faster-whisper-1.2-batched-segment-v1"
+TRANSCRIPT_PROVIDERS = {TRANSCRIPT_PROVIDER, TRANSCRIPT_PROVIDER_FASTER, TRANSCRIPT_PROVIDER_FASTER_BATCHED}
 TRANSCRIPT_SCHEMA_VERSION = 2
 TRANSCRIPT_DECODING_PROFILE = "matching-independent-segments-v1"
 TRANSCRIPT_QUALITY_PROFILE = "matching-quality-v1"
@@ -955,6 +960,7 @@ def normalize_ytdlp_entry(raw: dict[str, Any], fallback_channel: dict[str, Any] 
         "playlist_autonumber": raw.get("playlist_autonumber"),
         "chapters": raw.get("chapters") if isinstance(raw.get("chapters"), list) else [],
         "formats_summary": _formats_summary(raw.get("formats")),
+        "master_estimate": _selected_download_estimate(raw, selector=MASTER_FORMAT_SELECTOR),
         "indexed_at": C.utc_now(),
         "untrusted": True,
         "injection_findings": findings,
@@ -970,6 +976,128 @@ def _formats_summary(formats: Any) -> dict[str, Any]:
         "max_height": max(heights) if heights else None,
         "max_fps": max(fps) if fps else None,
         "heights": heights[-8:],
+    }
+
+
+def _positive_number(value: Any) -> float | None:
+    try:
+        number = float(value)
+    except (TypeError, ValueError):
+        return None
+    if not math.isfinite(number) or number <= 0:
+        return None
+    return number
+
+
+def _format_size_bytes(fmt: dict[str, Any], fallback_duration: float | None = None) -> tuple[int | None, str]:
+    """Return a conservative size for one selected yt-dlp format.
+
+    Prefer server-provided exact/approximate sizes.  HLS/DASH often omit those,
+    in which case bitrate × duration is a useful storage estimate.  A missing
+    component stays unknown instead of silently under-counting the download.
+    """
+    exact = _positive_number(fmt.get("filesize"))
+    if exact is not None:
+        return int(round(exact)), "exact"
+    approx = _positive_number(fmt.get("filesize_approx"))
+    if approx is not None:
+        return int(round(approx)), "approx"
+    duration = _positive_number(fmt.get("duration")) or _positive_number(fallback_duration)
+    tbr = _positive_number(fmt.get("tbr"))
+    if tbr is None:
+        vbr = _positive_number(fmt.get("vbr")) or 0.0
+        abr = _positive_number(fmt.get("abr")) or 0.0
+        tbr = (vbr + abr) or None
+    if duration is not None and tbr is not None:
+        # yt-dlp bitrates are reported in Kbit/s.
+        return int(round(duration * tbr * 1000.0 / 8.0)), "bitrate"
+    return None, "unknown"
+
+
+def _format_video_rank(fmt: dict[str, Any]) -> tuple[float, float, float, float]:
+    return (
+        _positive_number(fmt.get("height")) or 0.0,
+        _positive_number(fmt.get("fps")) or 0.0,
+        _positive_number(fmt.get("tbr")) or 0.0,
+        _positive_number(fmt.get("filesize")) or _positive_number(fmt.get("filesize_approx")) or 0.0,
+    )
+
+
+def _format_audio_rank(fmt: dict[str, Any]) -> tuple[float, float, float]:
+    return (
+        _positive_number(fmt.get("abr")) or _positive_number(fmt.get("tbr")) or 0.0,
+        _positive_number(fmt.get("asr")) or 0.0,
+        _positive_number(fmt.get("filesize")) or _positive_number(fmt.get("filesize_approx")) or 0.0,
+    )
+
+
+def _fallback_selected_formats(raw: dict[str, Any]) -> list[dict[str, Any]]:
+    formats = [dict(f) for f in (raw.get("formats") or []) if isinstance(f, dict)]
+    if not formats:
+        return []
+    video_only = [f for f in formats if str(f.get("vcodec") or "none") != "none" and str(f.get("acodec") or "none") == "none"]
+    combined = [f for f in formats if str(f.get("vcodec") or "none") != "none" and str(f.get("acodec") or "none") != "none"]
+    audio_only = [f for f in formats if str(f.get("vcodec") or "none") == "none" and str(f.get("acodec") or "none") != "none"]
+    if video_only:
+        picked = [max(video_only, key=_format_video_rank)]
+        if audio_only:
+            picked.append(max(audio_only, key=_format_audio_rank))
+        return picked
+    if combined:
+        return [max(combined, key=_format_video_rank)]
+    return []
+
+
+def _selected_download_estimate(raw: dict[str, Any], *, selector: str) -> dict[str, Any]:
+    """Summarise the formats selected by yt-dlp without downloading media."""
+    requested = raw.get("requested_formats")
+    selected = [dict(f) for f in requested if isinstance(f, dict)] if isinstance(requested, list) else []
+    if not selected and raw.get("format_id") and (raw.get("url") or raw.get("manifest_url")):
+        selected = [dict(raw)]
+    if not selected:
+        selected = _fallback_selected_formats(raw)
+    if not selected:
+        return {}
+
+    fallback_duration = _positive_number(raw.get("duration"))
+    sizes: list[int] = []
+    bases: list[str] = []
+    format_rows: list[dict[str, Any]] = []
+    incomplete = False
+    for fmt in selected:
+        size, basis = _format_size_bytes(fmt, fallback_duration)
+        if size is None:
+            incomplete = True
+        else:
+            sizes.append(size)
+        bases.append(basis)
+        format_rows.append({
+            "format_id": str(fmt.get("format_id") or ""),
+            "height": int(_positive_number(fmt.get("height")) or 0) or None,
+            "fps": _positive_number(fmt.get("fps")),
+            "tbr": _positive_number(fmt.get("tbr")),
+            "vcodec": str(fmt.get("vcodec") or ""),
+            "acodec": str(fmt.get("acodec") or ""),
+            "size_bytes": size,
+            "size_basis": basis,
+        })
+    if incomplete:
+        total = None
+        confidence = "unknown"
+    else:
+        total = sum(sizes)
+        confidence = "bitrate" if "bitrate" in bases else ("approx" if "approx" in bases else "exact")
+    heights = [int(f.get("height")) for f in format_rows if f.get("height")]
+    fps_values = [float(f.get("fps")) for f in format_rows if f.get("fps")]
+    return {
+        "selector": selector,
+        "bytes": total,
+        "confidence": confidence,
+        "height": max(heights) if heights else None,
+        "fps": max(fps_values) if fps_values else None,
+        "duration": fallback_duration,
+        "format_ids": [f.get("format_id") for f in format_rows if f.get("format_id")],
+        "formats": format_rows,
     }
 
 
@@ -1493,6 +1621,7 @@ def enrich_video_metadata(video: dict[str, Any], *, log=None) -> dict[str, Any]:
     url = str(video.get("url") or f"https://www.youtube.com/watch?v={video.get('video_id','')}")
     cmd = [
         ytdlp, "--dump-single-json", "--skip-download", "--no-playlist",
+        "-f", MASTER_FORMAT_SELECTOR,
         *_yt_dlp_runtime_args(), *_yt_dlp_youtube_metadata_args(), *_ffmpeg_location_args(), url,
     ]
     if log: log.write(f"metadata: {_display_cmd(cmd)}\n"); log.flush()
@@ -2249,11 +2378,14 @@ def _youtube_caption_transcript(root: str, slug: str, video_id: str, url: str, *
 
 
 def resolve_whisper_python(root: str = "", required: bool = False) -> str:
-    """Resolve the Python interpreter belonging to the discovered Whisper venv.
+    """Resolve the Python interpreter belonging to the selected Whisper runtime.
 
-    Calling ``python -m whisper`` is more diagnosable on Windows than the tiny
-    console-script launcher and guarantees we use the packages/CUDA runtime from
-    the user's Whisper environment.
+    Precedence is intentionally *specific to global*: direct Python override,
+    explicit Whisper executable/config, configured/root-relative Whisper homes,
+    and only then a Whisper executable discovered from the process PATH.  This
+    prevents a machine-wide Whisper installation from shadowing a runtime that
+    belongs to the requested harness root while preserving explicit user
+    overrides.
     """
     explicit = str(os.environ.get("CSTUDIO_WHISPER_PYTHON") or "").strip()
     if explicit:
@@ -2262,19 +2394,45 @@ def resolve_whisper_python(root: str = "", required: bool = False) -> str:
         if required:
             raise C.StudioError(f"Whisper Python not found: {explicit}")
         return ""
-    whisper = resolve_whisper(root, False)
+
     candidates: list[str] = []
-    if whisper:
-        parent = os.path.dirname(whisper)
+
+    # Explicit Whisper executable overrides are stronger than auto-discovered
+    # homes. Derive the sibling interpreter without consulting PATH.
+    explicit_whisper = str(os.environ.get("CSTUDIO_WHISPER") or "").strip()
+    if explicit_whisper and os.path.isfile(explicit_whisper):
+        parent = os.path.dirname(os.path.abspath(explicit_whisper))
         candidates.extend([os.path.join(parent, "python.exe"), os.path.join(parent, "python")])
+
+    if root:
+        configured = str((load_config(root).get("transcription") or {}).get("executable") or "").strip()
+        if configured and os.path.isfile(configured):
+            parent = os.path.dirname(os.path.abspath(configured))
+            candidates.extend([os.path.join(parent, "python.exe"), os.path.join(parent, "python")])
+
+    # Prefer the Whisper home associated with the requested harness root before
+    # falling back to a machine-wide console script found on PATH.
     for home in _candidate_whisper_homes(root):
         candidates.extend([
             os.path.join(home, ".venv", "Scripts", "python.exe"),
             os.path.join(home, ".venv", "bin", "python"),
         ])
+
+    # Last resort: derive Python from whichever whisper executable the generic
+    # resolver finds (normally a system/PATH installation).
+    whisper = resolve_whisper(root, False)
+    if whisper:
+        parent = os.path.dirname(os.path.abspath(whisper))
+        candidates.extend([os.path.join(parent, "python.exe"), os.path.join(parent, "python")])
+
+    seen: set[str] = set()
     for candidate in candidates:
-        if os.path.isfile(candidate):
-            return candidate
+        absolute = os.path.abspath(candidate)
+        if absolute in seen:
+            continue
+        seen.add(absolute)
+        if os.path.isfile(absolute):
+            return absolute
     if required:
         raise C.StudioError("Whisper Python runtime not found")
     return ""
@@ -2341,7 +2499,8 @@ def _whisper_preflight(root: str, log=None) -> dict[str, Any]:
 
 
 def build_whisper_command(root: str, media_path: str | list[str], output_dir: str, *, device: str = "", streamer: str = "",
-                          clip_timestamps: list[tuple[float, float]] | None = None) -> list[str]:
+                          clip_timestamps: list[tuple[float, float]] | None = None,
+                          word_timestamps: bool = False) -> list[str]:
     python = resolve_whisper_python(root, required=False)
     whisper = resolve_whisper(root, required=True)
     model, model_dir = _whisper_model_cli(root)
@@ -2365,6 +2524,8 @@ def build_whisper_command(root: str, media_path: str | list[str], output_dir: st
         for start, end in clip_timestamps:
             points.extend([f"{max(0.0, float(start)):.3f}", f"{max(float(start), float(end)):.3f}"])
         cmd += ["--clip_timestamps", ",".join(points)]
+    if word_timestamps:
+        cmd += ["--word_timestamps", "True"]
     if model_dir:
         cmd += ["--model_dir", model_dir]
     effective_device = device or whisper_device(root)
@@ -2563,10 +2724,19 @@ def _run_openai_whisper(root: str, media_path: str, *, source_kind: str, source_
 
 
 def _run_faster_whisper_inputs(root: str, inputs: list[dict[str, Any]], *, source_kind: str, source_id: str,
-                               streamer: str = "", log=None, scope: str = "localized") -> dict[str, Any]:
-    """Run one isolated CTranslate2 model load across one or more input clips."""
+                               streamer: str = "", log=None, scope: str = "localized",
+                               word_timestamps: bool = False, inference_mode: str = "plain") -> dict[str, Any]:
+    """Run one isolated CTranslate2 model load across one or more input clips.
+
+    ``plain`` uses ``WhisperModel.transcribe`` and is the editorial default so
+    proposal discovery keeps useful segment granularity. ``batched`` is reserved
+    for resolver/localized verification where throughput matters more.
+    """
     if not transcript_enabled(root):
         raise C.StudioError("transcription provider is disabled")
+    inference_mode = str(inference_mode or "plain").strip().lower()
+    if inference_mode not in {"plain", "batched"}:
+        raise C.StudioError(f"unsupported faster-whisper inference mode: {inference_mode}")
     preflight = _faster_whisper_preflight(root, log=log)
     python = resolve_whisper_python(root, required=True)
     runner = str(Path(__file__).with_name("faster_whisper_runner.py"))
@@ -2602,6 +2772,8 @@ def _run_faster_whisper_inputs(root: str, inputs: list[dict[str, Any]], *, sourc
         "batch_size": int(preflight.get("batch_size") or faster_whisper_batch_size(root)),
         "beam_size": 5,
         "language": whisper_language(root, streamer),
+        "word_timestamps": bool(word_timestamps),
+        "inference_mode": inference_mode,
         "inputs": normalized_inputs,
     }
     C.write_json(spec_path, spec)
@@ -2610,10 +2782,11 @@ def _run_faster_whisper_inputs(root: str, inputs: list[dict[str, Any]], *, sourc
         if log:
             log.write(
                 f"faster-whisper profile: streamer={streamer or 'unknown'} "
-                f"language={whisper_language(root, streamer) or 'auto'} timestamps=segment "
-                f"condition_on_previous_text=false scope={scope} processed_seconds={processed_seconds:.1f} "
+                f"language={whisper_language(root, streamer) or 'auto'} timestamps={'word+segment' if word_timestamps else 'segment'} "
+                f"condition_on_previous_text=false scope={scope} inference={inference_mode} processed_seconds={processed_seconds:.1f} "
                 f"model={os.path.basename(spec['model'])} device={spec['device']} compute={spec['compute_type']} "
-                f"batch={spec['batch_size']} beam={spec['beam_size']} vad={'on' if not any(x['ranges'] for x in normalized_inputs) else 'clip-ranges'}\n"
+                f"batch={spec['batch_size'] if inference_mode == 'batched' else 'n/a'} beam={spec['beam_size']} "
+                f"vad={'on' if not any(x['ranges'] for x in normalized_inputs) else 'clip-ranges'}\n"
             )
             log.write(f"transcribe {source_kind}/{source_id}: {_display_cmd(cmd)}\n")
             log.flush()
@@ -2646,16 +2819,20 @@ def _run_faster_whisper_inputs(root: str, inputs: list[dict[str, Any]], *, sourc
         transcript = _normalize_whisper_transcript(
             raw, source_kind=source_kind, source_id=source_id, root=root, streamer=streamer,
             processed_duration_seconds=(float(raw.get("processed_duration_seconds") or processed_seconds) or None),
-            scope=scope, provider=TRANSCRIPT_PROVIDER_FASTER, model_override=spec["model"],
+            scope=scope,
+            provider=(TRANSCRIPT_PROVIDER_FASTER_BATCHED if inference_mode == "batched" else TRANSCRIPT_PROVIDER_FASTER),
+            model_override=spec["model"],
             decoding_profile_extra={
                 "backend": "faster-whisper",
+                "inference_mode": inference_mode,
                 "faster_whisper": backend.get("faster_whisper") or preflight.get("faster_whisper") or "unknown",
                 "ctranslate2": backend.get("ctranslate2") or preflight.get("ctranslate2") or "unknown",
                 "compute_type": spec["compute_type"],
-                "batch_size": spec["batch_size"],
+                "batch_size": (spec["batch_size"] if inference_mode == "batched" else None),
                 "beam_size": spec["beam_size"],
                 "vad_filter": not any(x["ranges"] for x in normalized_inputs),
-                "without_timestamps": True,
+                "without_timestamps": False,
+                "word_timestamps": bool(word_timestamps),
             },
         )
         quality = transcript.get("quality") or {}
@@ -2680,12 +2857,16 @@ def _run_faster_whisper_inputs(root: str, inputs: list[dict[str, Any]], *, sourc
 
 
 def _run_faster_whisper(root: str, media_path: str, *, source_kind: str, source_id: str, streamer: str = "", log=None,
-                        clip_timestamps: list[tuple[float, float]] | None = None) -> dict[str, Any]:
+                        clip_timestamps: list[tuple[float, float]] | None = None,
+                        inference_mode: str | None = None) -> dict[str, Any]:
+    # Full-source/editorial discovery uses plain inference for finer segment
+    # boundaries. Localized resolver ranges keep batched throughput.
+    mode = str(inference_mode or ("batched" if clip_timestamps else "plain"))
     return _run_faster_whisper_inputs(
         root,
         [{"path": media_path, "ranges": list(clip_timestamps or [])}],
         source_kind=source_kind, source_id=source_id, streamer=streamer, log=log,
-        scope=("localized" if clip_timestamps else "full"),
+        scope=("localized" if clip_timestamps else "full"), inference_mode=mode,
     )
 
 
@@ -2757,6 +2938,7 @@ def _normalize_whisper_transcript(raw: dict[str, Any], *, source_kind: str, sour
     full_text = _safe_text(raw.get("text"), 2_000_000)
     findings = scan_text(full_text[:20000])
     duration_seconds = max((float(seg.get("end") or 0) for seg in segments), default=0.0)
+    has_word_timestamps = any(bool(seg.get("words")) for seg in segments)
     record = {
         "schema_version": TRANSCRIPT_SCHEMA_VERSION,
         "provider": provider,
@@ -2767,13 +2949,14 @@ def _normalize_whisper_transcript(raw: dict[str, Any], *, source_kind: str, sour
         "language": str(raw.get("language") or whisper_language(root, streamer) or "auto"),
         "language_requested": whisper_language(root, streamer) or "auto",
         "streamer": str(streamer or ""),
-        "timestamp_mode": "segment",
+        "timestamp_mode": "word+segment" if has_word_timestamps else "segment",
+        "word_timestamps": has_word_timestamps,
         "scope": scope,
         "processed_duration_seconds": round(float(processed_duration_seconds if processed_duration_seconds is not None else duration_seconds), 3),
         "decoding_profile": {
             "name": TRANSCRIPT_DECODING_PROFILE,
             "condition_on_previous_text": False,
-            "word_timestamps": False,
+            "word_timestamps": has_word_timestamps,
             **(decoding_profile_extra or {}),
         },
         "created_at": C.utc_now(),
@@ -3402,7 +3585,8 @@ def _offset_raw_transcript(raw: dict[str, Any], offset: float) -> dict[str, Any]
 
 
 def _run_whisper_clip_files(root: str, clips: list[tuple[str, float, float]], *, source_kind: str,
-                            source_id: str, streamer: str = "", log=None) -> dict[str, Any]:
+                            source_id: str, streamer: str = "", log=None,
+                            word_timestamps: bool = False) -> dict[str, Any]:
     """Transcribe several downloaded clip files with one model load."""
     if not clips:
         raise C.StudioError("no localized clips to transcribe")
@@ -3415,7 +3599,8 @@ def _run_whisper_clip_files(root: str, clips: list[tuple[str, float, float]], *,
                     for path, start, end in clips
                 ],
                 source_kind=source_kind, source_id=source_id, streamer=streamer,
-                log=log, scope="localized",
+                log=log, scope="localized", word_timestamps=word_timestamps,
+                inference_mode=("plain" if word_timestamps else "batched"),
             )
         except _TranscriptContentError:
             raise
@@ -3433,6 +3618,7 @@ def _run_whisper_clip_files(root: str, clips: list[tuple[str, float, float]], *,
         paths = [path for path, _, _ in clips]
         cmd = build_whisper_command(
             root, paths, temp_out, device=str(preflight.get("effective_device") or ""), streamer=streamer,
+            word_timestamps=word_timestamps,
         )
         if log:
             processed = sum(max(0.0, end-start) for _, start, end in clips)
@@ -3884,7 +4070,7 @@ def build_download_command(url: str, output_template: str, *, info_json: bool = 
     ytdlp = resolve_ytdlp()
     ffmpeg = resolve_ffmpeg()
     ffmpeg_dir = os.path.dirname(ffmpeg) if os.path.isfile(ffmpeg) else ffmpeg
-    cmd = [ytdlp, "--no-playlist", *_yt_dlp_runtime_args(), "-f", "bv*+ba/b", "--merge-output-format", "mkv"]
+    cmd = [ytdlp, "--no-playlist", *_yt_dlp_runtime_args(), "-f", MASTER_FORMAT_SELECTOR, "--merge-output-format", "mkv"]
     if ffmpeg_dir: cmd += ["--ffmpeg-location", ffmpeg_dir]
     if info_json: cmd += ["--write-info-json"]
     cmd += ["-o", output_template, url]
@@ -3921,6 +4107,237 @@ def _verified_relationships_for_video(root: str, slug: str, video_id: str) -> li
         if rec.get("youtube_video_id") == video_id and rec.get("state") == "verified":
             rows.append(rec)
     return rows
+
+
+def _storage_estimates_path(root: str, slug: str) -> str:
+    return os.path.join(_ensure_layout(root, slug), "storage-estimates.json")
+
+
+def load_storage_estimates(root: str, slug: str) -> dict[str, Any]:
+    data = C.read_json(_storage_estimates_path(root, slug), {}) or {}
+    return {
+        "schema_version": SCHEMA_VERSION,
+        "provider": str(data.get("provider") or "yt-dlp-format-size-v1"),
+        "updated_at": str(data.get("updated_at") or ""),
+        "youtube": dict(data.get("youtube") or {}),
+        "twitch": dict(data.get("twitch") or {}),
+    }
+
+
+def _save_storage_estimates(root: str, slug: str, data: dict[str, Any]) -> None:
+    payload = {
+        "schema_version": SCHEMA_VERSION,
+        "provider": "yt-dlp-format-size-v1",
+        "updated_at": C.utc_now(),
+        "youtube": dict(data.get("youtube") or {}),
+        "twitch": dict(data.get("twitch") or {}),
+    }
+    C.write_json(_storage_estimates_path(root, slug), payload)
+
+
+def _known_twitch_vods(root: str, slug: str) -> list[dict[str, Any]]:
+    """Return the production VOD catalog even if the heavy Twitch ingest was moved away."""
+    catalog: dict[str, dict[str, Any]] = {}
+    for vod in list_twitch_vods(root, slug):
+        vod_id = str(vod.get("vod_id") or "")
+        if vod_id:
+            catalog[vod_id] = dict(vod)
+    for match in list_matches(root, slug):
+        vod = match.get("twitch") if isinstance(match.get("twitch"), dict) else {}
+        vod_id = str(vod.get("vod_id") or ((match.get("twitch_vod_ids") or [""])[0]))
+        if not vod_id:
+            continue
+        current = catalog.setdefault(vod_id, {"vod_id": vod_id})
+        for key, value in vod.items():
+            if value not in (None, "", [], {}) and not current.get(key):
+                current[key] = value
+    for assignment in list_assignments(root, slug):
+        for vod_id in (assignment.get("pair_results") or {}).keys():
+            value = str(vod_id or "")
+            if value:
+                catalog.setdefault(value, {"vod_id": value})
+    for vod_id, vod in catalog.items():
+        vod.setdefault("source_url", f"https://www.twitch.tv/videos/{vod_id}")
+    return sorted(catalog.values(), key=lambda row: str(row.get("created_at") or row.get("vod_id") or ""))
+
+
+def _storage_probe_metadata(url: str, platform: str, *, log=None) -> dict[str, Any]:
+    ytdlp = resolve_ytdlp()
+    cmd = [
+        ytdlp, "--dump-single-json", "--skip-download", "--no-playlist",
+        "-f", MASTER_FORMAT_SELECTOR, *_yt_dlp_runtime_args(),
+    ]
+    if platform == "youtube":
+        cmd += [*_yt_dlp_youtube_metadata_args()]
+    cmd += [*_ffmpeg_location_args(), url]
+    if log:
+        log.write(f"storage metadata {platform}: {_display_cmd(cmd)}\n")
+        log.flush()
+    proc = _run_hidden(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding="utf-8", errors="replace", check=False)
+    if proc.returncode != 0:
+        raise C.StudioError(f"yt-dlp storage metadata failed for {platform}: {proc.stderr[-700:]}")
+    try:
+        return json.loads(proc.stdout)
+    except Exception as exc:
+        raise C.StudioError(f"yt-dlp returned invalid {platform} storage metadata JSON") from exc
+
+
+def _storage_probe_estimate(url: str, platform: str, *, log=None) -> dict[str, Any]:
+    raw = _storage_probe_metadata(url, platform, log=log)
+    estimate = _selected_download_estimate(raw, selector=MASTER_FORMAT_SELECTOR)
+    estimate["platform"] = platform
+    estimate["fetched_at"] = C.utc_now()
+    return estimate
+
+
+def estimate_storage(root: str, slug: str, *, streamer: str = "", force: bool = False, log=None) -> dict[str, Any]:
+    """Estimate storage for Twitch sources and VERIFIED max-quality YouTube masters.
+
+    This is metadata-only: yt-dlp resolves the same format selector used by the
+    real master download, but no media payload is downloaded.
+    """
+    C.load_project(root, slug)
+    doc = load_storage_estimates(root, slug)
+    youtube_rows = dict(doc.get("youtube") or {})
+    twitch_rows = dict(doc.get("twitch") or {})
+    errors: list[dict[str, str]] = []
+
+    verified = [a for a in list_assignments(root, slug) if str(a.get("state") or "") == "verified"]
+    if streamer:
+        verified = [a for a in verified if str(a.get("streamer") or "").lower() == streamer.lower()]
+    for index, assignment in enumerate(verified, 1):
+        video = assignment.get("youtube") if isinstance(assignment.get("youtube"), dict) else {}
+        video_id = str(assignment.get("youtube_video_id") or video.get("video_id") or "")
+        if not video_id:
+            continue
+        prior = youtube_rows.get(video_id) if isinstance(youtube_rows.get(video_id), dict) else {}
+        if prior.get("bytes") and not force:
+            if log: log.write(f"storage youtube {index}/{len(verified)}: {video_id} cache hit\n"); log.flush()
+            continue
+        url = str(video.get("url") or f"https://www.youtube.com/watch?v={video_id}")
+        try:
+            estimate = _storage_probe_estimate(url, "youtube", log=log)
+            estimate.update({"source_id": video_id, "title": str(video.get("title") or "")[:1000]})
+            youtube_rows[video_id] = estimate
+            if log:
+                log.write(f"storage youtube {index}/{len(verified)}: {video_id} bytes={estimate.get('bytes') or 'unknown'} confidence={estimate.get('confidence')}\n")
+                log.flush()
+        except Exception as exc:
+            errors.append({"platform": "youtube", "source_id": video_id, "error": str(exc)})
+            if not prior:
+                youtube_rows[video_id] = {"source_id": video_id, "platform": "youtube", "bytes": None, "confidence": "unknown", "error": str(exc)[:700], "fetched_at": C.utc_now()}
+            if log: log.write(f"storage youtube failed: {video_id}: {exc}\n"); log.flush()
+
+    vods = _known_twitch_vods(root, slug)
+    if streamer:
+        vods = [v for v in vods if not v.get("streamer") or str(v.get("streamer") or "").lower() == streamer.lower()]
+    for index, vod in enumerate(vods, 1):
+        vod_id = str(vod.get("vod_id") or "")
+        if not vod_id:
+            continue
+        prior = twitch_rows.get(vod_id) if isinstance(twitch_rows.get(vod_id), dict) else {}
+        if prior.get("bytes") and not force:
+            if log: log.write(f"storage twitch {index}/{len(vods)}: {vod_id} cache hit\n"); log.flush()
+            continue
+        url = str(vod.get("source_url") or f"https://www.twitch.tv/videos/{vod_id}")
+        try:
+            estimate = _storage_probe_estimate(url, "twitch", log=log)
+            estimate.update({"source_id": vod_id, "title": str(vod.get("title") or "")[:1000]})
+            twitch_rows[vod_id] = estimate
+            if log:
+                log.write(f"storage twitch {index}/{len(vods)}: {vod_id} bytes={estimate.get('bytes') or 'unknown'} confidence={estimate.get('confidence')}\n")
+                log.flush()
+        except Exception as exc:
+            errors.append({"platform": "twitch", "source_id": vod_id, "error": str(exc)})
+            if not prior:
+                twitch_rows[vod_id] = {"source_id": vod_id, "platform": "twitch", "bytes": None, "confidence": "unknown", "error": str(exc)[:700], "fetched_at": C.utc_now()}
+            if log: log.write(f"storage twitch failed: {vod_id}: {exc}\n"); log.flush()
+
+    doc["youtube"] = youtube_rows
+    doc["twitch"] = twitch_rows
+    _save_storage_estimates(root, slug, doc)
+    status = storage_status(root, slug)
+    return {
+        "youtube_sources": len(verified),
+        "twitch_sources": len(vods),
+        "youtube_estimated": sum(1 for a in verified if (youtube_rows.get(str(a.get("youtube_video_id") or "")) or {}).get("bytes")),
+        "twitch_estimated": sum(1 for v in vods if (twitch_rows.get(str(v.get("vod_id") or "")) or {}).get("bytes")),
+        "youtube_bytes": int((status.get("youtube_total") or {}).get("bytes") or 0),
+        "twitch_bytes": int((status.get("twitch_total") or {}).get("bytes") or 0),
+        "combined_bytes": int((status.get("combined_total") or {}).get("bytes") or 0),
+        "errors": errors,
+    }
+
+
+def _storage_total(rows: list[dict[str, Any]]) -> dict[str, Any]:
+    known = [int(r.get("bytes")) for r in rows if isinstance(r, dict) and r.get("bytes")]
+    return {
+        "bytes": sum(known),
+        "known": len(known),
+        "total": len(rows),
+        "complete": len(known) == len(rows) and bool(rows),
+    }
+
+
+def storage_status(root: str, slug: str) -> dict[str, Any]:
+    doc = load_storage_estimates(root, slug)
+    youtube = dict(doc.get("youtube") or {})
+    twitch = dict(doc.get("twitch") or {})
+    assignments = [a for a in list_assignments(root, slug) if str(a.get("state") or "") == "verified"]
+    verified_ids = [str(a.get("youtube_video_id") or "") for a in assignments if a.get("youtube_video_id")]
+    vod_ids = [str(v.get("vod_id") or "") for v in _known_twitch_vods(root, slug) if v.get("vod_id")]
+
+    # New metadata caches can already contain the selected master estimate even
+    # before the explicit storage job runs.
+    for assignment in assignments:
+        video_id = str(assignment.get("youtube_video_id") or "")
+        if not video_id or (youtube.get(video_id) or {}).get("bytes"):
+            continue
+        cached = C.read_json(_metadata_cache_file(root, slug, video_id), {}) or {}
+        video = cached.get("video") if isinstance(cached.get("video"), dict) else {}
+        estimate = video.get("master_estimate") if isinstance(video.get("master_estimate"), dict) else {}
+        if estimate:
+            youtube[video_id] = {**estimate, "platform": "youtube", "source_id": video_id, "fetched_at": str(cached.get("fetched_at") or "")}
+
+    # Once a master exists locally, its actual file size is authoritative.
+    vdir = C.prod_path(root, slug)
+    for match in list_matches(root, slug):
+        if str(match.get("state") or "") != "verified":
+            continue
+        video_id = str(match.get("youtube_video_id") or "")
+        download = match.get("download") if isinstance(match.get("download"), dict) else {}
+        rel = str(download.get("path") or "")
+        if not video_id or str(download.get("status") or "") not in {"completed", "downloaded"} or not rel:
+            continue
+        path = rel if os.path.isabs(rel) else os.path.join(vdir, rel.replace("/", os.sep))
+        if os.path.isfile(path):
+            current = dict(youtube.get(video_id) or {})
+            current.update({"bytes": os.path.getsize(path), "confidence": "exact", "basis": "local-file", "platform": "youtube", "source_id": video_id})
+            youtube[video_id] = current
+
+    youtube_rows = [dict(youtube.get(video_id) or {}) for video_id in verified_ids]
+    twitch_rows = [dict(twitch.get(vod_id) or {}) for vod_id in vod_ids]
+    yt_total = _storage_total(youtube_rows)
+    tw_total = _storage_total(twitch_rows)
+    combined = {
+        "bytes": int(yt_total["bytes"]) + int(tw_total["bytes"]),
+        "known": int(yt_total["known"]) + int(tw_total["known"]),
+        "total": int(yt_total["total"]) + int(tw_total["total"]),
+        "complete": bool(yt_total["complete"] and tw_total["complete"]),
+    }
+    try:
+        free_bytes = int(shutil.disk_usage(vdir).free)
+    except Exception:
+        free_bytes = None
+    return {
+        "updated_at": str(doc.get("updated_at") or ""),
+        "youtube": youtube,
+        "twitch": twitch,
+        "youtube_total": yt_total,
+        "twitch_total": tw_total,
+        "combined_total": combined,
+        "disk_free_bytes": free_bytes,
+    }
 
 
 def download_verified(root: str, slug: str, vod_id: str, video_id: str, *, force: bool = False, log=None) -> dict[str, Any]:
@@ -4768,6 +5185,7 @@ def _job_worker(root: str, slug: str, rec: dict[str, Any], params: dict[str, Any
             typ=rec["type"]
             if typ=="index": result=index_all(root,slug,streamer=params.get("streamer","") or "",force=bool(params.get("force")),log=log)
             elif typ=="resolve": result=resolve(root,slug,streamer=params.get("streamer","") or "",vod_id=params.get("vod_id","") or "",refresh_index=bool(params.get("refresh_index")),download=bool(params.get("download")),no_download=bool(params.get("no_download")),force=bool(params.get("force")),verify_likely=bool(params.get("verify",True)),log=log)
+            elif typ=="sizes": result=estimate_storage(root,slug,streamer=params.get("streamer","") or "",force=bool(params.get("force")),log=log)
             elif typ=="verify": result=verify_match(root,slug,str(params["vod_id"]),str(params["video_id"]),force=bool(params.get("force")),log=log)
             elif typ=="download": result=download_verified(root,slug,str(params["vod_id"]),str(params["video_id"]),force=bool(params.get("force")),log=log)
             else: raise C.StudioError(f"unknown YouTube resolver job type: {typ}")
@@ -4921,7 +5339,7 @@ def run_persisted_job(root: str, slug: str, job_id: str) -> dict[str, Any]:
 def start_job(root: str, slug: str, job_type: str, **params: Any) -> dict[str, Any]:
     """Start a dashboard job in a detached process that survives server restarts."""
     C.load_project(root,slug); _ensure_layout(root,slug)
-    if job_type not in {"index","resolve","verify","download"}: raise C.StudioError("invalid YouTube resolver job type")
+    if job_type not in {"index","resolve","sizes","verify","download"}: raise C.StudioError("invalid YouTube resolver job type")
     mark_stale_jobs_failed(root, slug)
     key=(_abs_root(root),slug)
     with _LOCK:
@@ -4954,7 +5372,7 @@ def start_job(root: str, slug: str, job_type: str, **params: Any) -> dict[str, A
 def run_job(root: str, slug: str, job_type: str, **params: Any) -> dict[str, Any]:
     """Synchronous CLI path; records the same job schema without forking twice."""
     C.load_project(root,slug); _ensure_layout(root,slug)
-    if job_type not in {"index","resolve","verify","download"}: raise C.StudioError("invalid YouTube resolver job type")
+    if job_type not in {"index","resolve","sizes","verify","download"}: raise C.StudioError("invalid YouTube resolver job type")
     mark_stale_jobs_failed(root, slug)
     running=[j for j in list_jobs(root,slug,100) if j.get("status")=="running" and _pid_alive(j.get("worker_pid"))]
     if running:

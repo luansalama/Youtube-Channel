@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "id": "alanzoka-o-detetive-de-laslea-a-saga-fitness-melhores-momentos",
+  "parent_production": "alanzoka-primeira-semana-de-setembro",
+  "proposal_id": "fe53735e563a",
+  "title": "Alanzoka: O Detetive de Laslea & A Saga Fitness (Melhores Momentos)",
+  "status": "planned",
+  "stage": "analysis",
+  "created_at": "2026-09-11T13:06:40Z",
+  "source_asset_ids": [
+    "twitch-vod-2861744268",
+    "twitch-vod-2862622285",
+    "twitch-vod-2863504919",
+    "twitch-vod-2864229186",
+    "twitch-vod-2865097583",
+    "twitch-vod-2868004694",
+    "twitch-vod-2868864059",
+    "twitch-vod-2869682753"
+  ],
+  "target_duration_minutes": {
+    "min": 18,
+    "max": 26
+  },
+  "candidate_moments": [
+    {
+      "source_asset_id": "twitch-video-2861744268",
+      "start_seconds": 265.0,
+      "end_seconds": 302.0,
+      "label": "Saga Fitness (Ato 1): 'Um dia não mata ninguém'",
+      "rationale": "Primeiro ato do bloco temático da academia: na segunda-feira, Alan inicia a semana gripado e cria a primeira desculpa fitness da semana.",
+      "transcript_evidence": "Tô fano? Eu fiquei doente, gente... Boa tarde, mano. Eu fiquei doente... Começamos nessa bela segunda... Já não fui pra academia, né, mano. Pra academia eu não fui. Não vou forçar, não tem motivo. Um dia não mata ninguém, talvez dois, né, amanhã... Só pra..."
+    },
+    {
+      "source_asset_id": "twitch-video-2864229186",
+      "start_seconds": 24300.0,
+      "end_seconds": 24500.0,
+      "label": "Saga Fitness (Ato 2): Semana Perdida na Quinta-Feira",
+      "rationale": "Segundo ato do bloco temático: na quinta-feira, Alan constata que a semana inteira já foi perdida sem treinos e empurra o compromisso para sábado.",
+      "transcript_evidence": "Como eu ainda tô meio doente, eu não tô doente, vai, já tô melhor. Mas, mano, eu já não fui pra academia a semana inteira, já fecho a semana sem ir, né? Sábado eu vou qualquer coisa."
+    },
+    {
+      "source_asset_id": "twitch-video-2865097583",
+      "start_seconds": 260.0,
+      "end_seconds": 305.0,
+      "label": "Saga Fitness (Ato 3): 'Ficar em Off pra Dar um Susto no Corpo'",
+      "rationale": "Desfecho triunfal do bloco temático da academia: na sexta-feira, confrontado pelo chat, Alan converte a semana sem treino em estratégia biológica de choque.",
+      "transcript_evidence": "Foi pra academia hoje? Não, né, gente? Mano, essa semana tá sendo conturbada, velho. Essa é uma semana dura, velho... Uma semana não mata ninguém, cara. Uma semana não mata ninguém, né? Às vezes é até bom a gente ficar uma semana em off, né? Só pra dar um susto no corpo."
+    },
+    {
+      "source_asset_id": "twitch-video-2861744268",
+      "start_seconds": 15567.0,
+      "end_seconds": 15720.0,
+      "label": "MGS4 Flashback Retrô e Monólogo: Kojima vs GTA 6",
+      "rationale": "Momento cômico e nostálgico em MGS4 ao carregar a fase clássica de PS1; Alan critica jogos modernos e faz monólogo sobre GTA 6 ('só vai abrir geladeira e pegar coca'). Conecta com o debate de GTA 6 no final da semana.",
+      "transcript_evidence": "Meu jogo abriu Metal Gear 1. Calma. Chat, não tá capturando porque ele literalmente abriu outro jogo no meu PC... Ele abriu o Metal Gear 1... Relaxa que aqui eu estou em casa, mano. Aqui é skill pura, é next stage, mano... Caralho, o Kojima perdeu a mão, mano! É, GTA 6 não vai ter isso não. Vocês acham que GTA 6 vai abrir o Vice City no meio da gameplay só pra dar um flashback? Não vai nada, pô, você não vai fazer nada naquele jogo, só vai abrir geladeira, pegar coca, andar de mão dada... Isso aqui é o True Video Game 2, pô!"
+    },
+    {
+      "source_asset_id": "twitch-video-2868864059",
+      "start_seconds": 26915.0,
+      "end_seconds": 27010.0,
+      "label": "Debate Técnico: O 'Monstrinho' Series S e GTA 6",
+      "rationale": "Callback da discussão de GTA 6: Alan ironiza a alcunha de 'monstrinho' do Xbox Series S, rebaixando-o para 'carinha gente boa', e afirma que 'só a live do Alanzoka que é grátis'.",
+      "transcript_evidence": "Fala lá, acho que o GTA 6 corre o risco de vir bomba no Series S? Acho que vai vir bomba em todos os consoles, né, mano?... Monstrinho é foda, né, mano? É mais pra um carinha gente boa, né? Monstro eu acho uma palavra muito forte pro Series S... Irmão, nem o Play 5 tá rodando o jogo direito, imagina o Series S, mano... Só a live do Alanzoka que é grátis."
+    },
+    {
+      "source_asset_id": "twitch-video-2862622285",
+      "start_seconds": 14400.0,
+      "end_seconds": 14700.0,
+      "label": "Rocket League: 'Só Fazer!' e Inimigos do Gol Aberto",
+      "rationale": "Abertura do bloco multiplayer de alto impacto: Alan rouba o boost de Falcon, bate em companheiros e reclama de gol perdido com a pérola 'Só fazer! Fazer com o que?'.",
+      "transcript_evidence": "Mano, tá open net. Só você fazer, mano... Você sabe que o intuito de fazer um reset é uma bola ir pra frente, né? Não pra trás, mano... Cara, você roubou meu boost, mano... Mano, você nunca vai fazer um reset... Só fazer! Fazer com o quê?... Relaxa, essa daqui não contou, infelizmente essa daqui ficou pra próxima..."
+    },
+    {
+      "source_asset_id": "twitch-video-2862622285",
+      "start_seconds": 16371.0,
+      "end_seconds": 16443.0,
+      "label": "Delírio Next Stage: Futebol Europeu e o Dom do Filho",
+      "rationale": "Setup orgânico da corrente de paternidade durante o Rocket League: Alan jura que jogaria no Real Madrid se não fosse streamer e projeta genialidade no filho de 4 meses.",
+      "transcript_evidence": "Se eu não fosse streamer, eu provavelmente estaria na Europa jogando futebol, mano, no Real Madrid. É sério, pô. Eu fui destinado a ser algo bom na vida, pô. Eu fui destinado a ser um vencedor, mano... Eu sou um cara de muitos talentos, mano. Eu nasci com o Dom, mano. Igual meu filho. Meu filho tá quase engatinhando já, pô. Não fez nem quatro meses, mano... Quero que ele não siga os passos do pai, mano. Vai ser ruim em todo jogo."
+    },
+    {
+      "source_asset_id": "twitch-video-2862622285",
+      "start_seconds": 16735.0,
+      "end_seconds": 16750.0,
+      "label": "Forfeit Paternal: 'Tenho Filho pra Cuidar'",
+      "rationale": "Callback imediato no Rocket League: sob chuva de gols adversários, Alan usa a paternidade como desculpa definitiva para exigir forfeit.",
+      "transcript_evidence": "Tem mais o que fazer na minha vida, mano. Tenho filho pra cuidar, mano. Pelo amor de Deus, dá forfeit."
+    },
+    {
+      "source_asset_id": "twitch-video-2862622285",
+      "start_seconds": 19500.0,
+      "end_seconds": 19800.0,
+      "label": "Colapso Total: Julinha Rabudinha e o Violino do Falcon",
+      "rationale": "Clímax do Rocket League: Alan assinando canais improváveis na Twitch para aliviar a tensão do 3x0 e mandando Falcon largar o jogo para tocar Mozart no violino.",
+      "transcript_evidence": "Vou vomitar, mano. Você é tão ruim que tá me dando ânsia de vômito... Ainda vou assinar a Julinha Rabudinha, mano... 3x0, velho. Flip, não dá. Ele é muito ruim, mano... O Falcon tem que tocar violino... É o que você faz de bem. Você sabe tocar o Mozart, mano."
+    },
+    {
+      "source_asset_id": "twitch-video-2863504919",
+      "start_seconds": 5100.0,
+      "end_seconds": 5380.0,
+      "label": "Battlefield 1: Fã Apaixonado no VoIP e Álibi da Paternidade",
+      "rationale": "Momento hilário com a comunidade no Battlefield 1: fã bajula Alan e EA Games, cobra aparição no vídeo, e quando outro jogador pergunta sobre live, Alan mente que não fará stream pois está cuidando do bebê.",
+      "transcript_evidence": "Mano, Battlefield 1 porque o Alonzoka tá no Battlefield 1, esse jogo é maravilhoso, é o melhor jogo que tem no mundo... Só do Alonzoka tá no jogo, mano... Eu vou aparecer no vídeo, Alonzoka? Vai, vai aparecer, mano... Mas se eu não aparecer no vídeo, eu vou ficar puto em você, mano... Ô Alan, parabéns pelo filho aí mano, você vai ter um pai maravilhoso... Vai ter live hoje, Alan? Irmão, hoje eu não vou fazer live não, mano. Tô com o parto cuidando do meu filho. Ele tá aqui do meu lado, mano. Não dá, né, pô, pra eu fazer live com o filho, mano? Que pai, que tipo de pai que eu seria, né?"
+    },
+    {
+      "source_asset_id": "twitch-video-2865097583",
+      "start_seconds": 18266.0,
+      "end_seconds": 18360.0,
+      "label": "Halloween Multiplayer: Morte Pro Bot e Carteirinha Cassada",
+      "rationale": "Destaque do multiplayer cooperativo: amigo falha no QTE e é eliminado por um bot. A call explode em gargalhadas exigindo confisco imediato da carteirinha de Dead by Daylight.",
+      "transcript_evidence": "Caralho, olha o tempo que ele demora pra acertar o Quick Time Event, mano, ele é muito Nilba, meu Deus. Ele tomou pro bot! Jesus, ele tomou pro bot! Caraca, tomou o gap! Meu, ele tomou o gap do bot! Aí é dureza, aí é dureza, aí acabou. Confisca a carteira dele, mano... Confisca a carteirinha do DBD dele, que pra ele acabou, mano."
+    },
+    {
+      "source_asset_id": "twitch-video-2865097583",
+      "start_seconds": 18900.0,
+      "end_seconds": 19100.0,
+      "label": "Halloween: O Segredo do Teclado Numérico '3-1-4-2'",
+      "rationale": "Discussão cômica sobre o balanceamento de Halloween: Michael Myers inofensivo que não bota medo em ninguém e a facilidade de escapar digitando 3-1-4-2 no teclado numérico.",
+      "transcript_evidence": "Como sobrevivente, a minha experiência é de que não dá medo do Killer. Você consegue ficar trolando o Killer, você não fica com medo dele... Não, acabou. Porque é mais fácil de escapar, mano. É facinho sair da agarrada, pô. Pô, é quatro botão, mano. É 3-1-4-2... A sorte que meu teclado tem número, né? Imagina a gente não tinha esse número no teclado. Aí tira todas as mecânicas."
+    },
+    {
+      "source_asset_id": "twitch-video-2864229186",
+      "start_seconds": 1500.0,
+      "end_seconds": 1800.0,
+      "label": "Onimusha: Saturação Samurai e 'Deixa pro BRKsEDU'",
+      "rationale": "Abertura do bloco de RPG solo: Alan inicia Onimusha no mouse/teclado, desabafa sobre a saturação de temas orientais e avisa que se cansar passa o jogo para o BRKsEDU.",
+      "transcript_evidence": "Bora, Onimusha! Joguinho novo do Onimusha, que lançou... não sei se eu vou terminar, eu quero ver, quero sentir, igual Mortal Shell 2... Esse daqui vai ser a mesma vibe, eu vou jogar o começo, umas duas horinhas aí, curte o jogo e depois fica pro BRKS Edu, né. Porque tomei um saturado de jogo de Samurai, Espada, Japão, Barra, China, Souls-like."
+    },
+    {
+      "source_asset_id": "twitch-video-2865097583",
+      "start_seconds": 8130.0,
+      "end_seconds": 8325.0,
+      "label": "Onimusha: Manopla Invasiva no Banheiro e o 'Mario Moderno'",
+      "rationale": "Ápice do humor em Onimusha: Alan reflete sobre o constrangimento de ter a alma de Shizuka na manopla vendo seus momentos íntimos no banheiro e conclui que o jogo virou o 'Mario moderno' (ele só aperta V e segue ordens).",
+      "transcript_evidence": "Será que a mina vê ele limpando a bunda, mano, quando ele vai no banheiro? Eu ia ficar meio incomodado com a mina dentro de uma manopla minha, tá ligado?... Meu Deus, mano. Eu acabei de me tocar que esse jogo é literalmente o Mario moderno... com essa manopla. É literalmente a mina falando tudo que eu tenho que fazer, mano. E eu aqui, só apertando V e seguindo. Eu nem tô pensando muito no jogo porque eu não preciso."
+    },
+    {
+      "source_asset_id": "twitch-video-2863504919",
+      "start_seconds": 22560.0,
+      "end_seconds": 22750.0,
+      "label": "Dawnwalker Mini-Doc (Ato 1): O Massacre de Laslea e Desolação",
+      "rationale": "Introdução do minidocumentário narrativo de Blood of the Dawnwalker: Alan chega à vila de Laslea, encontra tudo em ruínas e corpos massacrados, iniciando a investigação sombria.",
+      "transcript_evidence": "Anker, por que você não está dizendo nada? Porque eu vi o que estava faltando... Se eu comer alho eu morro, mano? Será?... Onde está todo mundo? O que ele fez com eles?... Zad! Luka! O Vrakir está desaparecido. E quem é isso? Um dos Brancis são homens... The whole village razed. Wiped out. I'll check my house..."
+    },
+    {
+      "source_asset_id": "twitch-video-2865097583",
+      "start_seconds": 19560.0,
+      "end_seconds": 19645.0,
+      "label": "Dawnwalker Mini-Doc (Ato 2): A Fome Vampírica e Comer NPCs",
+      "rationale": "Segundo ato do minidocumentário: Alan explica a mecânica implacável de sucumbir à fome no jogo, onde o personagem morde e assassina NPCs cruciais em diálogos.",
+      "transcript_evidence": "Tem uma mecânica no jogo que se você ficar com muita fome, você pode acabar matando um NPC... Se você não se alimentar à noite e entrar num diálogo com o NPC, pode ser um NPC importante. Você pode matar ele, mordendo ele, comendo ele... Quando você vai escolher o diálogo, começa a embaralhar tudo e escrever: Sucumbir à fome, sucumbir à fome. Daí do lado ele morde o cara."
+    },
+    {
+      "source_asset_id": "twitch-video-2869682753",
+      "start_seconds": 24920.0,
+      "end_seconds": 25050.0,
+      "label": "Dawnwalker Mini-Doc (Ato 3): A Síndrome de Jogo da Ubisoft",
+      "rationale": "Terceiro ato do minidocumentário: durante as buscas no mapa, Alan se revolta contra o excesso de pontos de interrogação, comparando a 'jogo da Ubisoft'.",
+      "transcript_evidence": "Mano, tem um monte de interrogação. Esses interrogação pode ser uma side interessante ou não? Porque, pô, eu não vou ficar indo de ponto de interrogação em ponto de interrogação. Tem muito ponto de interrogação no mapa, mano. Eu não vou passar por todos, velho. Me desculpa. É muito ponto de interrogação, mano. É jogo da Ubisoft, velho."
+    },
+    {
+      "source_asset_id": "twitch-video-2869682753",
+      "start_seconds": 26620.0,
+      "end_seconds": 26925.0,
+      "label": "Dawnwalker Mini-Doc (Ato 4): O Bicho Assassino e o Cobrador da Vila",
+      "rationale": "Clímax eletrizante do minidocumentário: Alan descobre que o monstro em 'Estudo em Vermelho' massacrou a vila, e na sequência um aldeão sobrevivente vem cobrar vingança pelas mortes ('Eu não sou o Coen!').",
+      "transcript_evidence": "Dr. Simeon: Ivo, o bicho enlouqueceu afinal... Ele matou o joalheiro... Caralho, descobri a verdade sobre o bicho. Meu Deus, era o bicho que matou eles mesmo! Nossa, voltou pra Quest 1 Estudo em Vermelho, chat!... E logo em seguida: Meu Deus, é o cara que eu prometi! Não, gente, eu não tenho culpa, eu juro! Veio me cobrar, mano, que eu matei a vila dele!... Eu não sou o Coen!"
+    },
+    {
+      "source_asset_id": "twitch-video-2865097583",
+      "start_seconds": 32400.0,
+      "end_seconds": 32550.0,
+      "label": "Encerramento: Paternidade, Responsabilidade e Fim de Semana",
+      "rationale": "Fechamento conclusivo do vídeo unindo paternidade e cansaço da maratona semanal ao encerrar a transmissão na sexta-feira.",
+      "transcript_evidence": "Umas onze e meia, daí já vai ficar meio tarde, né? Mas responsabilidade. É, mano, se eu não fosse mais um pai... Mas é foda, né, se eu não fosse um pai, daí eu iria até 11h30 ali, meia-noite. Eu iria, pô, tranquilo... Mas responsabilidade, é mano, se eu não fosse mais um pai."
+    }
+  ],
+  "brief_path": ".studio/videos/alanzoka-o-detetive-de-laslea-a-saga-fitness-melhores-momentos/brief.md",
+  "media_policy": {
+    "shared_source_pool": true,
+    "copy_media": false
+  },
+  "candidate_precision": {
+    "status": "completed",
+    "path": ".studio/videos/alanzoka-o-detetive-de-laslea-a-saga-fitness-melhores-momentos/candidate-word-timestamps.json",
+    "timestamp_mode": "word+segment",
+    "candidate_count": 19,
+    "word_count": 6556,
+    "created_at": "2026-09-11T18:15:32Z"
+  }
+}

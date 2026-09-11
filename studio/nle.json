@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "production_driver": "premiere-pro",
+  "premiere_pro": {
+    "integration": "mcp",
+    "repository": "https://github.com/leancoderkavy/premiere-pro-mcp",
+    "source_ref": "v1.15.0",
+    "npm_package": "premiere-pro-mcp",
+    "npm_version": "1.15.0",
+    "server_name": "io.github.leancoderkavy/premiere-pro",
+    "transport": "stdio",
+    "command": "premiere-pro-mcp",
+    "capabilities": [
+      "inspect",
+      "edit",
+      "export",
+      "filesystem"
+    ],
+    "tool_packs": "full",
+    "unsafe_script": false,
+    "production_bridge": "cep",
+    "uxp_extension": "prefer-documented-actions-when-authenticated"
+  },
+  "policy": {
+    "cutlist_lock_required_before_live_mutation": true,
+    "runtime_tool_schema_discovery_required": true,
+    "post_mutation_timeline_readback_required": true,
+    "allow_unsafe_script": false,
+    "allow_publish": false,
+    "allow_rights_changes": false
+  }
+}

@@ -1,0 +1,757 @@
+{
+  "schema_version": 2,
+  "provider": "yt-dlp-format-size-v1",
+  "updated_at": "2026-09-11T01:21:18Z",
+  "youtube": {
+    "Bnzb0zhWGmE": {
+      "selector": "bv*+ba/b",
+      "bytes": 15647351951,
+      "confidence": "exact",
+      "height": 2160,
+      "fps": 60.0,
+      "duration": 6157.0,
+      "format_ids": [
+        "401",
+        "251"
+      ],
+      "formats": [
+        {
+          "format_id": "401",
+          "height": 2160,
+          "fps": 60.0,
+          "tbr": 20203.304,
+          "vcodec": "av01.0.13M.08",
+          "acodec": "none",
+          "size_bytes": 15549556785,
+          "size_basis": "exact"
+        },
+        {
+          "format_id": "251",
+          "height": null,
+          "fps": null,
+          "tbr": 127.063,
+          "vcodec": "none",
+          "acodec": "opus",
+          "size_bytes": 97795166,
+          "size_basis": "exact"
+        }
+      ],
+      "platform": "youtube",
+      "fetched_at": "2026-09-11T01:20:20Z",
+      "source_id": "Bnzb0zhWGmE",
+      "title": "O MELHOR SNIPER DO JOGO! - BATTLEFIELD 1"
+    },
+    "OKO05-GPKyI": {
+      "selector": "bv*+ba/b",
+      "bytes": 10229220934,
+      "confidence": "exact",
+      "height": 2160,
+      "fps": 60.0,
+      "duration": 7608.0,
+      "format_ids": [
+        "401",
+        "251"
+      ],
+      "formats": [
+        {
+          "format_id": "401",
+          "height": 2160,
+          "fps": 60.0,
+          "tbr": 10638.251,
+          "vcodec": "av01.0.13M.08",
+          "acodec": "none",
+          "size_bytes": 10116311273,
+          "size_basis": "exact"
+        },
+        {
+          "format_id": "251",
+          "height": null,
+          "fps": null,
+          "tbr": 118.734,
+          "vcodec": "none",
+          "acodec": "opus",
+          "size_bytes": 112909661,
+          "size_basis": "exact"
+        }
+      ],
+      "platform": "youtube",
+      "fetched_at": "2026-09-11T01:20:24Z",
+      "source_id": "OKO05-GPKyI",
+      "title": "ONIMUSHA: WAY OF THE SWORD - Parte 1"
+    },
+    "Plcc-06LY-A": {
+      "selector": "bv*+ba/b",
+      "bytes": 11548254794,
+      "confidence": "exact",
+      "height": 2160,
+      "fps": 60.0,
+      "duration": 10595.0,
+      "format_ids": [
+        "401",
+        "251"
+      ],
+      "formats": [
+        {
+          "format_id": "401",
+          "height": 2160,
+          "fps": 60.0,
+          "tbr": 8596.44,
+          "vcodec": "av01.0.13M.08",
+          "acodec": "none",
+          "size_bytes": 11385070619,
+          "size_basis": "exact"
+        },
+        {
+          "format_id": "251",
+          "height": null,
+          "fps": null,
+          "tbr": 123.213,
+          "vcodec": "none",
+          "acodec": "opus",
+          "size_bytes": 163184175,
+          "size_basis": "exact"
+        }
+      ],
+      "platform": "youtube",
+      "fetched_at": "2026-09-11T01:20:27Z",
+      "source_id": "Plcc-06LY-A",
+      "title": "A MALDIÇÃO DO CONVENTO! - THE BLOOD OF THE DAWNWALKER - Parte 4"
+    },
+    "QcJ0mjcA62k": {
+      "selector": "bv*+ba/b",
+      "bytes": 16444167321,
+      "confidence": "exact",
+      "height": 2160,
+      "fps": 60.0,
+      "duration": 8120.0,
+      "format_ids": [
+        "401",
+        "251"
+      ],
+      "formats": [
+        {
+          "format_id": "401",
+          "height": 2160,
+          "fps": 60.0,
+          "tbr": 16079.691,
+          "vcodec": "av01.0.13M.08",
+          "acodec": "none",
+          "size_bytes": 16321688861,
+          "size_basis": "exact"
+        },
+        {
+          "format_id": "251",
+          "height": null,
+          "fps": null,
+          "tbr": 120.662,
+          "vcodec": "none",
+          "acodec": "opus",
+          "size_bytes": 122478460,
+          "size_basis": "exact"
+        }
+      ],
+      "platform": "youtube",
+      "fetched_at": "2026-09-11T01:20:29Z",
+      "source_id": "QcJ0mjcA62k",
+      "title": "ENCONTREI A XANTHE! - THE BLOOD OF THE DAWNWALKER - Parte 5"
+    },
+    "S_mY0ESbwMY": {
+      "selector": "bv*+ba/b",
+      "bytes": 6526777620,
+      "confidence": "exact",
+      "height": 2160,
+      "fps": 60.0,
+      "duration": 6722.0,
+      "format_ids": [
+        "401",
+        "251-1"
+      ],
+      "formats": [
+        {
+          "format_id": "401",
+          "height": 2160,
+          "fps": 60.0,
+          "tbr": 7646.012,
+          "vcodec": "av01.0.13M.08",
+          "acodec": "none",
+          "size_bytes": 6424209999,
+          "size_basis": "exact"
+        },
+        {
+          "format_id": "251-1",
+          "height": null,
+          "fps": null,
+          "tbr": 122.074,
+          "vcodec": "none",
+          "acodec": "opus",
+          "size_bytes": 102567621,
+          "size_basis": "exact"
+        }
+      ],
+      "platform": "youtube",
+      "fetched_at": "2026-09-11T01:20:32Z",
+      "source_id": "S_mY0ESbwMY",
+      "title": "DE VOLTA EM SHADOW MOSES! - METAL GEAR SOLID 4: GUNS OF THE PATRIOTS - Parte 5"
+    },
+    "SynOBrPYbV0": {
+      "selector": "bv*+ba/b",
+      "bytes": 8995004479,
+      "confidence": "exact",
+      "height": 2160,
+      "fps": 60.0,
+      "duration": 9195.0,
+      "format_ids": [
+        "401",
+        "251"
+      ],
+      "formats": [
+        {
+          "format_id": "401",
+          "height": 2160,
+          "fps": 60.0,
+          "tbr": 7700.665,
+          "vcodec": "av01.0.13M.08",
+          "acodec": "none",
+          "size_bytes": 8850791288,
+          "size_basis": "exact"
+        },
+        {
+          "format_id": "251",
+          "height": null,
+          "fps": null,
+          "tbr": 125.472,
+          "vcodec": "none",
+          "acodec": "opus",
+          "size_bytes": 144213191,
+          "size_basis": "exact"
+        }
+      ],
+      "platform": "youtube",
+      "fetched_at": "2026-09-11T01:20:35Z",
+      "source_id": "SynOBrPYbV0",
+      "title": "A BATALHA FINAL! - METAL GEAR SOLID 4: GUNS OF THE PATRIOTS - Parte 7 / FINAL"
+    },
+    "TEHaNIT7eZs": {
+      "selector": "bv*+ba/b",
+      "bytes": 19353394231,
+      "confidence": "exact",
+      "height": 2160,
+      "fps": 60.0,
+      "duration": 8493.0,
+      "format_ids": [
+        "401",
+        "251"
+      ],
+      "formats": [
+        {
+          "format_id": "401",
+          "height": 2160,
+          "fps": 60.0,
+          "tbr": 18113.883,
+          "vcodec": "av01.0.13M.08",
+          "acodec": "none",
+          "size_bytes": 19230601634,
+          "size_basis": "exact"
+        },
+        {
+          "format_id": "251",
+          "height": null,
+          "fps": null,
+          "tbr": 115.661,
+          "vcodec": "none",
+          "acodec": "opus",
+          "size_bytes": 122792597,
+          "size_basis": "exact"
+        }
+      ],
+      "platform": "youtube",
+      "fetched_at": "2026-09-11T01:20:37Z",
+      "source_id": "TEHaNIT7eZs",
+      "title": "ONIMUSHA: WAY OF THE SWORD - Parte 3"
+    },
+    "XR0-lJLW_rs": {
+      "selector": "bv*+ba/b",
+      "bytes": 12105537964,
+      "confidence": "exact",
+      "height": 2160,
+      "fps": 60.0,
+      "duration": 11486.0,
+      "format_ids": [
+        "401",
+        "251"
+      ],
+      "formats": [
+        {
+          "format_id": "401",
+          "height": 2160,
+          "fps": 60.0,
+          "tbr": 8306.274,
+          "vcodec": "av01.0.13M.08",
+          "acodec": "none",
+          "size_bytes": 11925836114,
+          "size_basis": "exact"
+        },
+        {
+          "format_id": "251",
+          "height": null,
+          "fps": null,
+          "tbr": 125.161,
+          "vcodec": "none",
+          "acodec": "opus",
+          "size_bytes": 179701850,
+          "size_basis": "exact"
+        }
+      ],
+      "platform": "youtube",
+      "fetched_at": "2026-09-11T01:20:40Z",
+      "source_id": "XR0-lJLW_rs",
+      "title": "ENTRE A VIDA E A MORTE! - THE BLOOD OF THE DAWNWALKER - Parte 1"
+    },
+    "_Q-dV2V2g5s": {
+      "selector": "bv*+ba/b",
+      "bytes": 9980605280,
+      "confidence": "exact",
+      "height": 2160,
+      "fps": 60.0,
+      "duration": 7754.0,
+      "format_ids": [
+        "401",
+        "251"
+      ],
+      "formats": [
+        {
+          "format_id": "401",
+          "height": 2160,
+          "fps": 60.0,
+          "tbr": 10175.477,
+          "vcodec": "av01.0.13M.08",
+          "acodec": "none",
+          "size_bytes": 9863089040,
+          "size_basis": "exact"
+        },
+        {
+          "format_id": "251",
+          "height": null,
+          "fps": null,
+          "tbr": 121.237,
+          "vcodec": "none",
+          "acodec": "opus",
+          "size_bytes": 117516240,
+          "size_basis": "exact"
+        }
+      ],
+      "platform": "youtube",
+      "fetched_at": "2026-09-11T01:20:42Z",
+      "source_id": "_Q-dV2V2g5s",
+      "title": "PRESO NO ACAMPAMENTO! - THE BLOOD OF THE DAWNWALKER - Parte 2"
+    },
+    "fSMIJVnlB_Y": {
+      "selector": "bv*+ba/b",
+      "bytes": 8412973970,
+      "confidence": "exact",
+      "height": 2160,
+      "fps": 60.0,
+      "duration": 6415.0,
+      "format_ids": [
+        "401",
+        "251-1"
+      ],
+      "formats": [
+        {
+          "format_id": "401",
+          "height": 2160,
+          "fps": 60.0,
+          "tbr": 10370.697,
+          "vcodec": "av01.0.13M.08",
+          "acodec": "none",
+          "size_bytes": 8316520633,
+          "size_basis": "exact"
+        },
+        {
+          "format_id": "251-1",
+          "height": null,
+          "fps": null,
+          "tbr": 120.276,
+          "vcodec": "none",
+          "acodec": "opus",
+          "size_bytes": 96453337,
+          "size_basis": "exact"
+        }
+      ],
+      "platform": "youtube",
+      "fetched_at": "2026-09-11T01:20:45Z",
+      "source_id": "fSMIJVnlB_Y",
+      "title": "A EMBOSCADA! - THE BLOOD OF THE DAWNWALKER - Parte 3"
+    },
+    "favxANUu9O4": {
+      "selector": "bv*+ba/b",
+      "bytes": 11417541733,
+      "confidence": "exact",
+      "height": 2160,
+      "fps": 60.0,
+      "duration": 7826.0,
+      "format_ids": [
+        "401",
+        "251"
+      ],
+      "formats": [
+        {
+          "format_id": "401",
+          "height": 2160,
+          "fps": 60.0,
+          "tbr": 11553.894,
+          "vcodec": "av01.0.13M.08",
+          "acodec": "none",
+          "size_bytes": 11302981182,
+          "size_basis": "exact"
+        },
+        {
+          "format_id": "251",
+          "height": null,
+          "fps": null,
+          "tbr": 117.103,
+          "vcodec": "none",
+          "acodec": "opus",
+          "size_bytes": 114560551,
+          "size_basis": "exact"
+        }
+      ],
+      "platform": "youtube",
+      "fetched_at": "2026-09-11T01:20:49Z",
+      "source_id": "favxANUu9O4",
+      "title": "ONIMUSHA: WAY OF THE SWORD - Parte 2"
+    },
+    "iEZOwN5xssU": {
+      "selector": "bv*+ba/b",
+      "bytes": 5571616678,
+      "confidence": "exact",
+      "height": 2160,
+      "fps": 60.0,
+      "duration": 5355.0,
+      "format_ids": [
+        "401",
+        "251-7"
+      ],
+      "formats": [
+        {
+          "format_id": "401",
+          "height": 2160,
+          "fps": 60.0,
+          "tbr": 8200.853,
+          "vcodec": "av01.0.13M.08",
+          "acodec": "none",
+          "size_bytes": 5489548086,
+          "size_basis": "exact"
+        },
+        {
+          "format_id": "251-7",
+          "height": null,
+          "fps": null,
+          "tbr": 122.602,
+          "vcodec": "none",
+          "acodec": "opus",
+          "size_bytes": 82068592,
+          "size_basis": "exact"
+        }
+      ],
+      "platform": "youtube",
+      "fetched_at": "2026-09-11T01:20:51Z",
+      "source_id": "iEZOwN5xssU",
+      "title": "VAMP E RAIDEN! - METAL GEAR SOLID 4: GUNS OF THE PATRIOTS - Parte 6"
+    },
+    "jcs6OmYZQ-o": {
+      "selector": "bv*+ba/b",
+      "bytes": 9078361391,
+      "confidence": "exact",
+      "height": 2160,
+      "fps": 60.0,
+      "duration": 7857.0,
+      "format_ids": [
+        "401",
+        "251"
+      ],
+      "formats": [
+        {
+          "format_id": "401",
+          "height": 2160,
+          "fps": 60.0,
+          "tbr": 9128.298,
+          "vcodec": "av01.0.13M.08",
+          "acodec": "none",
+          "size_bytes": 8964595979,
+          "size_basis": "exact"
+        },
+        {
+          "format_id": "251",
+          "height": null,
+          "fps": null,
+          "tbr": 115.842,
+          "vcodec": "none",
+          "acodec": "opus",
+          "size_bytes": 113765412,
+          "size_basis": "exact"
+        }
+      ],
+      "platform": "youtube",
+      "fetched_at": "2026-09-11T01:20:54Z",
+      "source_id": "jcs6OmYZQ-o",
+      "title": "FUGINDO DO MICHAEL MYERS! - HALLOWEEN: THE GAME COM OS AMIGOS"
+    },
+    "muxOFHGOpZs": {
+      "selector": "bv*+ba/b",
+      "bytes": 8164018599,
+      "confidence": "exact",
+      "height": 2160,
+      "fps": 60.0,
+      "duration": 8433.0,
+      "format_ids": [
+        "401",
+        "251"
+      ],
+      "formats": [
+        {
+          "format_id": "401",
+          "height": 2160,
+          "fps": 60.0,
+          "tbr": 7621.652,
+          "vcodec": "av01.0.13M.08",
+          "acodec": "none",
+          "size_bytes": 8033777290,
+          "size_basis": "exact"
+        },
+        {
+          "format_id": "251",
+          "height": null,
+          "fps": null,
+          "tbr": 123.559,
+          "vcodec": "none",
+          "acodec": "opus",
+          "size_bytes": 130241309,
+          "size_basis": "exact"
+        }
+      ],
+      "platform": "youtube",
+      "fetched_at": "2026-09-11T01:20:56Z",
+      "source_id": "muxOFHGOpZs",
+      "title": "PERSEGUIÇÃO COM A BIG MAMA! - METAL GEAR SOLID 4: GUNS OF THE PATRIOTS - Parte 4"
+    }
+  },
+  "twitch": {
+    "2861744268": {
+      "selector": "bv*+ba/b",
+      "bytes": 24790172839,
+      "confidence": "bitrate",
+      "height": 1080,
+      "fps": 60.0,
+      "duration": 25902.0,
+      "format_ids": [
+        "1080p60"
+      ],
+      "formats": [
+        {
+          "format_id": "1080p60",
+          "height": 1080,
+          "fps": 60.0,
+          "tbr": 7656.605,
+          "vcodec": "avc1.4D402A",
+          "acodec": "mp4a.40.2",
+          "size_bytes": 24790172839,
+          "size_basis": "bitrate"
+        }
+      ],
+      "platform": "twitch",
+      "fetched_at": "2026-09-11T01:21:00Z",
+      "source_id": "2861744268",
+      "title": "METAL GEAR SOLID 4: GUNS OF THE PATRIOTS - continunando nossa saga metal gear, o 1, 2 e o 3 tao no youtube"
+    },
+    "2862622285": {
+      "selector": "bv*+ba/b",
+      "bytes": 21476977088,
+      "confidence": "bitrate",
+      "height": 1080,
+      "fps": 59.991,
+      "duration": 22413.0,
+      "format_ids": [
+        "1080p60"
+      ],
+      "formats": [
+        {
+          "format_id": "1080p60",
+          "height": 1080,
+          "fps": 59.991,
+          "tbr": 7665.9,
+          "vcodec": "avc1.4D402A",
+          "acodec": "mp4a.40.2",
+          "size_bytes": 21476977088,
+          "size_basis": "bitrate"
+        }
+      ],
+      "platform": "twitch",
+      "fetched_at": "2026-09-11T01:21:02Z",
+      "source_id": "2862622285",
+      "title": "terminando metal gear 4"
+    },
+    "2863504919": {
+      "selector": "bv*+ba/b",
+      "bytes": 23714871138,
+      "confidence": "bitrate",
+      "height": 1080,
+      "fps": 60.0,
+      "duration": 24696.0,
+      "format_ids": [
+        "1080p60"
+      ],
+      "formats": [
+        {
+          "format_id": "1080p60",
+          "height": 1080,
+          "fps": 60.0,
+          "tbr": 7682.174,
+          "vcodec": "avc1.4D402A",
+          "acodec": "mp4a.40.2",
+          "size_bytes": 23714871138,
+          "size_basis": "bitrate"
+        }
+      ],
+      "platform": "twitch",
+      "fetched_at": "2026-09-11T01:21:05Z",
+      "source_id": "2863504919",
+      "title": "!live vai dar uma atrasada - blood of the dawnwalker as 19h, antes disso nao sei descubra"
+    },
+    "2864229186": {
+      "selector": "bv*+ba/b",
+      "bytes": 23904152320,
+      "confidence": "bitrate",
+      "height": 1080,
+      "fps": 60.0,
+      "duration": 24832.0,
+      "format_ids": [
+        "1080p60"
+      ],
+      "formats": [
+        {
+          "format_id": "1080p60",
+          "height": 1080,
+          "fps": 60.0,
+          "tbr": 7701.08,
+          "vcodec": "avc1.4D402A",
+          "acodec": "mp4a.40.2",
+          "size_bytes": 23904152320,
+          "size_basis": "bitrate"
+        }
+      ],
+      "platform": "twitch",
+      "fetched_at": "2026-09-11T01:21:08Z",
+      "source_id": "2864229186",
+      "title": "live mais cedo quinta (la pra 13h)"
+    },
+    "2865097583": {
+      "selector": "bv*+ba/b",
+      "bytes": 31722448763,
+      "confidence": "bitrate",
+      "height": 1080,
+      "fps": 60.0,
+      "duration": 32949.0,
+      "format_ids": [
+        "1080p60"
+      ],
+      "formats": [
+        {
+          "format_id": "1080p60",
+          "height": 1080,
+          "fps": 60.0,
+          "tbr": 7702.194,
+          "vcodec": "avc1.4D402A",
+          "acodec": "mp4a.40.2",
+          "size_bytes": 31722448763,
+          "size_basis": "bitrate"
+        }
+      ],
+      "platform": "twitch",
+      "fetched_at": "2026-09-11T01:21:10Z",
+      "source_id": "2865097583",
+      "title": "live mais cedo de novo sexta la pra 13h -> onimusha - halloween - blood of the dawnwalker"
+    },
+    "2868004694": {
+      "selector": "bv*+ba/b",
+      "bytes": 25973989084,
+      "confidence": "bitrate",
+      "height": 1080,
+      "fps": 59.934,
+      "duration": 27028.0,
+      "format_ids": [
+        "1080p60"
+      ],
+      "formats": [
+        {
+          "format_id": "1080p60",
+          "height": 1080,
+          "fps": 59.934,
+          "tbr": 7688.024,
+          "vcodec": "avc1.4D402A",
+          "acodec": "mp4a.40.2",
+          "size_bytes": 25973989084,
+          "size_basis": "bitrate"
+        }
+      ],
+      "platform": "twitch",
+      "fetched_at": "2026-09-11T01:21:13Z",
+      "source_id": "2868004694",
+      "title": "onimusha e blood of the dawnwalker"
+    },
+    "2868864059": {
+      "selector": "bv*+ba/b",
+      "bytes": 26280384494,
+      "confidence": "bitrate",
+      "height": 1080,
+      "fps": 60.0,
+      "duration": 27292.0,
+      "format_ids": [
+        "1080p60"
+      ],
+      "formats": [
+        {
+          "format_id": "1080p60",
+          "height": 1080,
+          "fps": 60.0,
+          "tbr": 7703.469,
+          "vcodec": "avc1.4D402A",
+          "acodec": "mp4a.40.2",
+          "size_bytes": 26280384494,
+          "size_basis": "bitrate"
+        }
+      ],
+      "platform": "twitch",
+      "fetched_at": "2026-09-11T01:21:16Z",
+      "source_id": "2868864059",
+      "title": "mais onimusha e blood of the dawnwalker"
+    },
+    "2869682753": {
+      "selector": "bv*+ba/b",
+      "bytes": 26937830254,
+      "confidence": "bitrate",
+      "height": 1080,
+      "fps": 59.994,
+      "duration": 28015.0,
+      "format_ids": [
+        "1080p60"
+      ],
+      "formats": [
+        {
+          "format_id": "1080p60",
+          "height": 1080,
+          "fps": 59.994,
+          "tbr": 7692.402,
+          "vcodec": "avc1.4D402A",
+          "acodec": "mp4a.40.2",
+          "size_bytes": 26937830254,
+          "size_basis": "bitrate"
+        }
+      ],
+      "platform": "twitch",
+      "fetched_at": "2026-09-11T01:21:18Z",
+      "source_id": "2869682753",
+      "title": "mais onimusha e blood of the dawnwalker -> WARDOGS amanhã"
+    }
+  }
+}

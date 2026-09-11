@@ -1,0 +1,7540 @@
+{
+  "language": "pt",
+  "segments_sample": [
+    {
+      "start": 0.0,
+      "end": 31.82,
+      "text": " de friendslop do mundo, velho. O cara que tá com ódio de friendslop, mano. Aí é duro, pô. Eu sou o maior hater de friendslop atual, até eu jogar o próximo. Não joguei todos, cara. Eu tô esquipando friendslop, mano. Mas, cara, não dá pra eu fugir de todos, né? Vai ter algum que eu vou ter que jogar, pô. Eu saí com o Cap ontem, inclusive. Cap e a Ana. Conheceram o Farelo.",
+      "words": [
+        {
+          "word": " de",
+          "start": 0.0,
+          "end": 0.16,
+          "prob": 0.9307
+        },
+        {
+          "word": " friendslop",
+          "start": 0.16,
+          "end": 0.58,
+          "prob": 0.5332
+        },
+        {
+          "word": " do",
+          "start": 0.58,
+          "end": 0.76,
+          "prob": 0.9961
+        },
+        {
+          "word": " mundo,",
+          "start": 0.76,
+          "end": 1.12,
+          "prob": 1.0
+        },
+        {
+          "word": " velho.",
+          "start": 1.26,
+          "end": 1.52,
+          "prob": 0.9905
+        },
+        {
+          "word": " O",
+          "start": 2.03,
+          "end": 2.41,
+          "prob": 0.9985
+        },
+        {
+          "word": " cara",
+          "start": 2.41,
+          "end": 2.61,
+          "prob": 1.0
+        },
+        {
+          "word": " que",
+          "start": 2.61,
+          "end": 2.81,
+          "prob": 0.9185
+        },
+        {
+          "word": " tá",
+          "start": 2.81,
+          "end": 3.11,
+          "prob": 0.9443
+        },
+        {
+          "word": " com",
+          "start": 3.11,
+          "end": 3.83,
+          "prob": 0.7886
+        },
+        {
+          "word": " ódio",
+          "start": 3.83,
+          "end": 4.17,
+          "prob": 0.6375
+        },
+        {
+          "word": " de",
+          "start": 4.17,
+          "end": 4.33,
+          "prob": 0.9995
+        },
+        {
+          "word": " friendslop,",
+          "start": 4.33,
+          "end": 4.95,
+          "prob": 0.9902
+        },
+        {
+          "word": " mano.",
+          "start": 5.03,
+          "end": 5.21,
+          "prob": 0.9985
+        },
+        {
+          "word": " Aí",
+          "start": 7.98,
+          "end": 8.36,
+          "prob": 0.585
+        },
+        {
+          "word": " é",
+          "start": 8.84,
+          "end": 10.0,
+          "prob": 0.9985
+        },
+        {
+          "word": " duro,",
+          "start": 10.0,
+          "end": 10.3,
+          "prob": 0.9998
+        },
+        {
+          "word": " pô.",
+          "start": 10.36,
+          "end": 10.46,
+          "prob": 0.991
+        },
+        {
+          "word": " Eu",
+          "start": 14.36,
+          "end": 14.74,
+          "prob": 0.9048
+        },
+        {
+          "word": " sou",
+          "start": 14.74,
+          "end": 14.88,
+          "prob": 1.0
+        },
+        {
+          "word": " o",
+          "start": 14.88,
+          "end": 15.0,
+          "prob": 0.9902
+        },
+        {
+          "word": " maior",
+          "start": 15.0,
+          "end": 15.12,
+          "prob": 1.0
+        },
+        {
+          "word": " hater",
+          "start": 15.12,
+          "end": 15.46,
+          "prob": 0.9966
+        },
+        {
+          "word": " de",
+          "start": 15.46,
+          "end": 15.58,
+          "prob": 0.999
+        },
+        {
+          "word": " friendslop",
+          "start": 15.58,
+          "end": 16.1,
+          "prob": 0.9928
+        },
+        {
+          "word": " atual,",
+          "start": 16.1,
+          "end": 16.38,
+          "prob": 0.9966
+        },
+        {
+          "word": " até",
+          "start": 16.58,
+          "end": 17.04,
+          "prob": 0.8779
+        },
+        {
+          "word": " eu",
+          "start": 17.04,
+          "end": 17.16,
+          "prob": 0.9902
+        },
+        {
+          "word": " jogar",
+          "start": 17.16,
+          "end": 17.36,
+          "prob": 0.9995
+        },
+        {
+          "word": " o",
+          "start": 17.36,
+          "end": 17.48,
+          "prob": 0.9995
+        },
+        {
+          "word": " próximo.",
+          "start": 17.48,
+          "end": 17.72,
+          "prob": 0.8247
+        },
+        {
+          "word": " Não",
+          "start": 19.58,
+          "end": 19.96,
+          "prob": 0.999
+        },
+        {
+          "word": " joguei",
+          "start": 19.96,
+          "end": 20.24,
+          "prob": 0.9993
+        },
+        {
+          "word": " todos,",
+          "start": 20.24,
+          "end": 20.44,
+          "prob": 0.9995
+        },
+        {
+          "word": " cara.",
+          "start": 20.6,
+          "end": 20.82,
+          "prob": 1.0
+        },
+        {
+          "word": " Eu",
+          "start": 21.0,
+          "end": 21.1,
+          "prob": 0.9951
+        },
+        {
+          "word": " tô",
+          "start": 21.1,
+          "end": 21.18,
+          "prob": 0.9966
+        },
+        {
+          "word": " esquipando",
+          "start": 21.18,
+          "end": 21.62,
+          "prob": 0.7443
+        },
+        {
+          "word": " friendslop,",
+          "start": 21.62,
+          "end": 22.18,
+          "prob": 0.9385
+        },
+        {
+          "word": " mano.",
+          "start": 22.24,
+          "end": 22.38,
+          "prob": 0.9888
+        },
+        {
+          "word": " Mas,",
+          "start": 22.82,
+          "end": 22.98,
+          "prob": 0.9976
+        },
+        {
+          "word": " cara,",
+          "start": 23.04,
+          "end": 23.18,
+          "prob": 1.0
+        },
+        {
+          "word": " não",
+          "start": 23.28,
+          "end": 23.36,
+          "prob": 0.9995
+        },
+        {
+          "word": " dá",
+          "start": 23.36,
+          "end": 23.48,
+          "prob": 0.9995
+        },
+        {
+          "word": " pra",
+          "start": 23.48,
+          "end": 23.6,
+          "prob": 0.9946
+        },
+        {
+          "word": " eu",
+          "start": 23.6,
+          "end": 23.72,
+          "prob": 0.9863
+        },
+        {
+          "word": " fugir",
+          "start": 23.72,
+          "end": 23.9,
+          "prob": 0.9895
+        },
+        {
+          "word": " de",
+          "start": 23.9,
+          "end": 24.04,
+          "prob": 0.9995
+        },
+        {
+          "word": " todos,",
+          "start": 24.04,
+          "end": 24.3,
+          "prob": 1.0
+        },
+        {
+          "word": " né?",
+          "start": 24.4,
+          "end": 24.52,
+          "prob": 0.9966
+        },
+        {
+          "word": " Vai",
+          "start": 24.6,
+          "end": 24.7,
+          "prob": 0.999
+        },
+        {
+          "word": " ter",
+          "start": 24.7,
+          "end": 24.82,
+          "prob": 0.9995
+        },
+        {
+          "word": " algum",
+          "start": 24.82,
+          "end": 25.04,
+          "prob": 0.9976
+        },
+        {
+          "word": " que",
+          "start": 25.04,
+          "end": 25.14,
+          "prob": 1.0
+        },
+        {
+          "word": " eu",
+          "start": 25.14,
+          "end": 25.22,
+          "prob": 1.0
+        },
+        {
+          "word": " vou",
+          "start": 25.22,
+          "end": 25.32,
+          "prob": 1.0
+        },
+        {
+          "word": " ter",
+          "start": 25.32,
+          "end": 25.4,
+          "prob": 0.9995
+        },
+        {
+          "word": " que",
+          "start": 25.4,
+          "end": 25.48,
+          "prob": 1.0
+        },
+        {
+          "word": " jogar,",
+          "start": 25.48,
+          "end": 25.72,
+          "prob": 1.0
+        },
+        {
+          "word": " pô.",
+          "start": 25.92,
+          "end": 26.08,
+          "prob": 0.9995
+        },
+        {
+          "word": " Eu",
+          "start": 27.58,
+          "end": 27.96,
+          "prob": 0.9976
+        },
+        {
+          "word": " saí",
+          "start": 27.96,
+          "end": 28.16,
+          "prob": 0.9978
+        },
+        {
+          "word": " com",
+          "start": 28.16,
+          "end": 28.24,
+          "prob": 0.9995
+        },
+        {
+          "word": " o",
+          "start": 28.24,
+          "end": 28.34,
+          "prob": 0.9883
+        },
+        {
+          "word": " Cap",
+          "start": 28.34,
+          "end": 28.48,
+          "prob": 0.7188
+        },
+        {
+          "word": " ontem,",
+          "start": 28.48,
+          "end": 28.82,
+          "prob": 0.9338
+        },
+        {
+          "word": " inclusive.",
+          "start": 28.96,
+          "end": 29.16,
+          "prob": 0.9995
+        },
+        {
+          "word": " Cap",
+          "start": 29.92,
+          "end": 30.2,
+          "prob": 0.958
+        },
+        {
+          "word": " e",
+          "start": 30.2,
+          "end": 30.32,
+          "prob": 0.2297
+        },
+        {
+          "word": " a",
+          "start": 30.32,
+          "end": 30.36,
+          "prob": 0.855
+        },
+        {
+          "word": " Ana.",
+          "start": 30.36,
+          "end": 30.6,
+          "prob": 0.9253
+        },
+        {
+          "word": " Conheceram",
+          "start": 30.92,
+          "end": 31.3,
+          "prob": 0.9785
+        },
+        {
+          "word": " o",
+          "start": 31.3,
+          "end": 31.36,
+          "prob": 0.998
+        },
+        {
+          "word": " Farelo.",
+          "start": 31.36,
+          "end": 31.82,
+          "prob": 0.7744
+        }
+      ]
+    },
+    {
+      "start": 33.3,
+      "end": 67.58,
+      "text": " Aí o Cap já tava, mano, me mostrando a listinha de friendslop dele. Falei, ah, pô, pelo amor de Deus. Já tava me mostrando a listinha de friendslop, mano. Tem uns jogos que eu não sei nem onde ele acha, cara. É loucura, velho. Caralho, velho, tá muito quente. Será que eu tô com febre? Jesus, abaixa esse ar aí. The Darkness vai lançar quando no YouTube? Cara, amanhã, eu acho. Não sei, pô. Não tô com pressa de soltar jogo, velho. E eu vou soltar em um vídeo só, então. Vai ser um vídeo 6 horas. O foco sujou.",
+      "words": [
+        {
+          "word": " Aí",
+          "start": 33.3,
+          "end": 33.62,
+          "prob": 0.6968
+        },
+        {
+          "word": " o",
+          "start": 33.62,
+          "end": 33.74,
+          "prob": 0.9902
+        },
+        {
+          "word": " Cap",
+          "start": 33.74,
+          "end": 33.9,
+          "prob": 0.9062
+        },
+        {
+          "word": " já",
+          "start": 33.9,
+          "end": 34.1,
+          "prob": 0.9814
+        },
+        {
+          "word": " tava,",
+          "start": 34.1,
+          "end": 34.4,
+          "prob": 0.9028
+        },
+        {
+          "word": " mano,",
+          "start": 34.48,
+          "end": 34.66,
+          "prob": 0.9985
+        },
+        {
+          "word": " me",
+          "start": 34.7,
+          "end": 34.84,
+          "prob": 0.9995
+        },
+        {
+          "word": " mostrando",
+          "start": 34.84,
+          "end": 35.18,
+          "prob": 0.9985
+        },
+        {
+          "word": " a",
+          "start": 35.18,
+          "end": 35.3,
+          "prob": 0.9263
+        },
+        {
+          "word": " listinha",
+          "start": 35.3,
+          "end": 35.68,
+          "prob": 0.999
+        },
+        {
+          "word": " de",
+          "start": 35.68,
+          "end": 35.78,
+          "prob": 0.9883
+        },
+        {
+          "word": " friendslop",
+          "start": 35.78,
+          "end": 36.4,
+          "prob": 0.5424
+        },
+        {
+          "word": " dele.",
+          "start": 36.4,
+          "end": 36.66,
+          "prob": 0.9961
+        },
+        {
+          "word": " Falei,",
+          "start": 36.76,
+          "end": 36.86,
+          "prob": 0.749
+        },
+        {
+          "word": " ah,",
+          "start": 36.88,
+          "end": 36.98,
+          "prob": 0.9863
+        },
+        {
+          "word": " pô,",
+          "start": 37.14,
+          "end": 37.28,
+          "prob": 0.9888
+        },
+        {
+          "word": " pelo",
+          "start": 37.36,
+          "end": 37.52,
+          "prob": 1.0
+        },
+        {
+          "word": " amor",
+          "start": 37.52,
+          "end": 37.68,
+          "prob": 1.0
+        },
+        {
+          "word": " de",
+          "start": 37.68,
+          "end": 37.88,
+          "prob": 1.0
+        },
+        {
+          "word": " Deus.",
+          "start": 37.88,
+          "end": 38.12,
+          "prob": 0.999
+        },
+        {
+          "word": " Já",
+          "start": 43.08,
+          "end": 43.4,
+          "prob": 0.6357
+        },
+        {
+          "word": " tava",
+          "start": 43.4,
+          "end": 43.54,
+          "prob": 0.957
+        },
+        {
+          "word": " me",
+          "start": 43.54,
+          "end": 43.66,
+          "prob": 0.998
+        },
+        {
+          "word": " mostrando",
+          "start": 43.66,
+          "end": 43.9,
+          "prob": 0.9993
+        },
+        {
+          "word": " a",
+          "start": 43.9,
+          "end": 43.98,
+          "prob": 0.9971
+        },
+        {
+          "word": " listinha",
+          "start": 43.98,
+          "end": 44.3,
+          "prob": 1.0
+        },
+        {
+          "word": " de",
+          "start": 44.3,
+          "end": 44.4,
+          "prob": 1.0
+        },
+        {
+          "word": " friendslop,",
+          "start": 44.4,
+          "end": 44.9,
+          "prob": 0.9953
+        },
+        {
+          "word": " mano.",
+          "start": 45.02,
+          "end": 45.08,
+          "prob": 0.9985
+        },
+        {
+          "word": " Tem",
+          "start": 45.14,
+          "end": 45.22,
+          "prob": 0.9893
+        },
+        {
+          "word": " uns",
+          "start": 45.22,
+          "end": 45.36,
+          "prob": 0.6875
+        },
+        {
+          "word": " jogos",
+          "start": 45.36,
+          "end": 45.48,
+          "prob": 0.9683
+        },
+        {
+          "word": " que",
+          "start": 45.48,
+          "end": 45.6,
+          "prob": 0.9976
+        },
+        {
+          "word": " eu",
+          "start": 45.6,
+          "end": 45.64,
+          "prob": 0.9995
+        },
+        {
+          "word": " não",
+          "start": 45.64,
+          "end": 45.74,
+          "prob": 0.9995
+        },
+        {
+          "word": " sei",
+          "start": 45.74,
+          "end": 45.9,
+          "prob": 0.9985
+        },
+        {
+          "word": " nem",
+          "start": 45.9,
+          "end": 46.0,
+          "prob": 0.9966
+        },
+        {
+          "word": " onde",
+          "start": 46.0,
+          "end": 46.16,
+          "prob": 0.9966
+        },
+        {
+          "word": " ele",
+          "start": 46.16,
+          "end": 46.32,
+          "prob": 0.999
+        },
+        {
+          "word": " acha,",
+          "start": 46.32,
+          "end": 46.58,
+          "prob": 0.999
+        },
+        {
+          "word": " cara.",
+          "start": 46.64,
+          "end": 46.78,
+          "prob": 0.9956
+        },
+        {
+          "word": " É",
+          "start": 48.18,
+          "end": 48.34,
+          "prob": 0.9971
+        },
+        {
+          "word": " loucura,",
+          "start": 48.34,
+          "end": 48.76,
+          "prob": 0.9989
+        },
+        {
+          "word": " velho.",
+          "start": 48.84,
+          "end": 48.98,
+          "prob": 0.9778
+        },
+        {
+          "word": " Caralho,",
+          "start": 49.66,
+          "end": 49.98,
+          "prob": 0.9992
+        },
+        {
+          "word": " velho,",
+          "start": 50.04,
+          "end": 50.16,
+          "prob": 0.9993
+        },
+        {
+          "word": " tá",
+          "start": 50.2,
+          "end": 50.28,
+          "prob": 0.999
+        },
+        {
+          "word": " muito",
+          "start": 50.28,
+          "end": 50.48,
+          "prob": 1.0
+        },
+        {
+          "word": " quente.",
+          "start": 50.48,
+          "end": 50.76,
+          "prob": 0.9995
+        },
+        {
+          "word": " Será",
+          "start": 50.84,
+          "end": 50.92,
+          "prob": 0.9995
+        },
+        {
+          "word": " que",
+          "start": 50.92,
+          "end": 50.98,
+          "prob": 1.0
+        },
+        {
+          "word": " eu",
+          "start": 50.98,
+          "end": 51.04,
+          "prob": 1.0
+        },
+        {
+          "word": " tô",
+          "start": 51.04,
+          "end": 51.1,
+          "prob": 0.9985
+        },
+        {
+          "word": " com",
+          "start": 51.1,
+          "end": 51.26,
+          "prob": 0.9985
+        },
+        {
+          "word": " febre?",
+          "start": 51.26,
+          "end": 51.54,
+          "prob": 0.9995
+        },
+        {
+          "word": " Jesus,",
+          "start": 52.71,
+          "end": 53.03,
+          "prob": 0.9951
+        },
+        {
+          "word": " abaixa",
+          "start": 53.27,
+          "end": 53.53,
+          "prob": 0.9971
+        },
+        {
+          "word": " esse",
+          "start": 53.53,
+          "end": 53.69,
+          "prob": 0.9985
+        },
+        {
+          "word": " ar",
+          "start": 53.69,
+          "end": 53.87,
+          "prob": 0.98
+        },
+        {
+          "word": " aí.",
+          "start": 53.87,
+          "end": 54.03,
+          "prob": 1.0
+        },
+        {
+          "word": " The",
+          "start": 56.88,
+          "end": 57.2,
+          "prob": 0.3511
+        },
+        {
+          "word": " Darkness",
+          "start": 57.2,
+          "end": 57.46,
+          "prob": 0.5396
+        },
+        {
+          "word": " vai",
+          "start": 57.46,
+          "end": 57.66,
+          "prob": 0.9893
+        },
+        {
+          "word": " lançar",
+          "start": 57.66,
+          "end": 57.92,
+          "prob": 0.9998
+        },
+        {
+          "word": " quando",
+          "start": 57.92,
+          "end": 58.12,
+          "prob": 0.9854
+        },
+        {
+          "word": " no",
+          "start": 58.12,
+          "end": 58.24,
+          "prob": 0.9883
+        },
+        {
+          "word": " YouTube?",
+          "start": 58.24,
+          "end": 58.58,
+          "prob": 0.9951
+        },
+        {
+          "word": " Cara,",
+          "start": 58.72,
+          "end": 58.92,
+          "prob": 0.9971
+        },
+        {
+          "word": " amanhã,",
+          "start": 58.98,
+          "end": 59.32,
+          "prob": 1.0
+        },
+        {
+          "word": " eu",
+          "start": 59.36,
+          "end": 59.46,
+          "prob": 0.9995
+        },
+        {
+          "word": " acho.",
+          "start": 59.46,
+          "end": 59.64,
+          "prob": 0.9995
+        },
+        {
+          "word": " Não",
+          "start": 59.7,
+          "end": 59.78,
+          "prob": 0.9951
+        },
+        {
+          "word": " sei,",
+          "start": 59.78,
+          "end": 59.96,
+          "prob": 0.9971
+        },
+        {
+          "word": " pô.",
+          "start": 60.1,
+          "end": 60.14,
+          "prob": 0.9976
+        },
+        {
+          "word": " Não",
+          "start": 60.18,
+          "end": 60.32,
+          "prob": 0.9546
+        },
+        {
+          "word": " tô",
+          "start": 60.32,
+          "end": 60.68,
+          "prob": 0.998
+        },
+        {
+          "word": " com",
+          "start": 60.68,
+          "end": 60.84,
+          "prob": 0.9951
+        },
+        {
+          "word": " pressa",
+          "start": 60.84,
+          "end": 61.06,
+          "prob": 0.981
+        },
+        {
+          "word": " de",
+          "start": 61.06,
+          "end": 61.2,
+          "prob": 0.5879
+        },
+        {
+          "word": " soltar",
+          "start": 61.2,
+          "end": 61.4,
+          "prob": 0.9998
+        },
+        {
+          "word": " jogo,",
+          "start": 61.4,
+          "end": 61.62,
+          "prob": 0.9775
+        },
+        {
+          "word": " velho.",
+          "start": 61.68,
+          "end": 61.96,
+          "prob": 0.9998
+        },
+        {
+          "word": " E",
+          "start": 62.97,
+          "end": 63.23,
+          "prob": 0.6851
+        },
+        {
+          "word": " eu",
+          "start": 63.23,
+          "end": 63.27,
+          "prob": 0.9995
+        },
+        {
+          "word": " vou",
+          "start": 63.27,
+          "end": 63.37,
+          "prob": 1.0
+        },
+        {
+          "word": " soltar",
+          "start": 63.37,
+          "end": 63.61,
+          "prob": 0.9995
+        },
+        {
+          "word": " em",
+          "start": 63.61,
+          "end": 63.71,
+          "prob": 0.9922
+        },
+        {
+          "word": " um",
+          "start": 63.71,
+          "end": 63.79,
+          "prob": 1.0
+        },
+        {
+          "word": " vídeo",
+          "start": 63.79,
+          "end": 63.97,
+          "prob": 1.0
+        },
+        {
+          "word": " só,",
+          "start": 63.97,
+          "end": 64.21,
+          "prob": 1.0
+        },
+        {
+          "word": " então.",
+          "start": 64.27,
+          "end": 64.45,
+          "prob": 0.9995
+        },
+        {
+          "word": " Vai",
+          "start": 64.65,
+          "end": 64.67,
+          "prob": 0.9917
+        },
+        {
+          "word": " ser",
+          "start": 64.67,
+          "end": 64.77,
+          "prob": 1.0
+        },
+        {
+          "word": " um",
+          "start": 64.77,
+          "end": 64.85,
+          "prob": 0.9995
+        },
+        {
+          "word": " vídeo",
+          "start": 64.85,
+          "end": 65.01,
+          "prob": 1.0
+        },
+        {
+          "word": " 6",
+          "start": 65.01,
+          "end": 65.21,
+          "prob": 0.5088
+        },
+        {
+          "word": " horas.",
+          "start": 65.21,
+          "end": 65.51,
+          "prob": 0.9956
+        },
+        {
+          "word": " O",
+          "start": 66.82,
+          "end": 66.98,
+          "prob": 0.2715
+        },
+        {
+          "word": " foco",
+          "start": 66.98,
+          "end": 67.18,
+          "prob": 0.5234
+        },
+        {
+          "word": " sujou.",
+          "start": 67.18,
+          "end": 67.58,
+          "prob": 0.9953
+        }
+      ]
+    },
+    {
+      "start": 71.59,
+      "end": 112.65,
+      "text": " Tô enxergando direito, tá muito perto. Mano, desde que eu fui arrumar meu óculos na loja de óculos, que eu esqueci o nome, ela apertou muito aqui atrás. E daí, ficou muito ruim meu óculos, mano. Na ótica, isso. Ela apertou muito, mano. Meu óculos tava meio bambu no rosto, tá ligado? Então eu falei, dá uma apertada aí. Ela deu uma apertada e acho que apertou demais. Agora ficou muito perto do meu rosto. Porque seu A de Alanzoca é minúsculo.",
+      "words": [
+        {
+          "word": " Tô",
+          "start": 71.59,
+          "end": 71.99,
+          "prob": 0.7673
+        },
+        {
+          "word": " enxergando",
+          "start": 71.99,
+          "end": 72.39,
+          "prob": 0.9989
+        },
+        {
+          "word": " direito,",
+          "start": 72.39,
+          "end": 72.59,
+          "prob": 0.9932
+        },
+        {
+          "word": " tá",
+          "start": 72.69,
+          "end": 72.79,
+          "prob": 0.9951
+        },
+        {
+          "word": " muito",
+          "start": 72.79,
+          "end": 72.99,
+          "prob": 0.9995
+        },
+        {
+          "word": " perto.",
+          "start": 72.99,
+          "end": 73.23,
+          "prob": 0.9824
+        },
+        {
+          "word": " Mano,",
+          "start": 73.49,
+          "end": 73.65,
+          "prob": 0.9954
+        },
+        {
+          "word": " desde",
+          "start": 73.67,
+          "end": 73.79,
+          "prob": 0.9985
+        },
+        {
+          "word": " que",
+          "start": 73.79,
+          "end": 73.89,
+          "prob": 1.0
+        },
+        {
+          "word": " eu",
+          "start": 73.89,
+          "end": 73.93,
+          "prob": 1.0
+        },
+        {
+          "word": " fui",
+          "start": 73.93,
+          "end": 74.05,
+          "prob": 0.9995
+        },
+        {
+          "word": " arrumar",
+          "start": 74.05,
+          "end": 74.33,
+          "prob": 1.0
+        },
+        {
+          "word": " meu",
+          "start": 74.33,
+          "end": 74.49,
+          "prob": 0.9971
+        },
+        {
+          "word": " óculos",
+          "start": 74.49,
+          "end": 74.95,
+          "prob": 0.999
+        },
+        {
+          "word": " na",
+          "start": 74.95,
+          "end": 76.05,
+          "prob": 0.9502
+        },
+        {
+          "word": " loja",
+          "start": 76.49,
+          "end": 77.11,
+          "prob": 1.0
+        },
+        {
+          "word": " de",
+          "start": 77.11,
+          "end": 77.25,
+          "prob": 1.0
+        },
+        {
+          "word": " óculos,",
+          "start": 77.25,
+          "end": 77.55,
+          "prob": 1.0
+        },
+        {
+          "word": " que",
+          "start": 77.63,
+          "end": 77.67,
+          "prob": 0.9995
+        },
+        {
+          "word": " eu",
+          "start": 77.67,
+          "end": 77.71,
+          "prob": 1.0
+        },
+        {
+          "word": " esqueci",
+          "start": 77.71,
+          "end": 77.99,
+          "prob": 1.0
+        },
+        {
+          "word": " o",
+          "start": 77.99,
+          "end": 78.07,
+          "prob": 1.0
+        },
+        {
+          "word": " nome,",
+          "start": 78.07,
+          "end": 78.33,
+          "prob": 1.0
+        },
+        {
+          "word": " ela",
+          "start": 79.76,
+          "end": 79.9,
+          "prob": 0.999
+        },
+        {
+          "word": " apertou",
+          "start": 79.9,
+          "end": 80.3,
+          "prob": 1.0
+        },
+        {
+          "word": " muito",
+          "start": 80.3,
+          "end": 80.62,
+          "prob": 1.0
+        },
+        {
+          "word": " aqui",
+          "start": 80.62,
+          "end": 80.82,
+          "prob": 0.9995
+        },
+        {
+          "word": " atrás.",
+          "start": 80.82,
+          "end": 81.28,
+          "prob": 1.0
+        },
+        {
+          "word": " E",
+          "start": 82.78,
+          "end": 83.18,
+          "prob": 0.626
+        },
+        {
+          "word": " daí,",
+          "start": 83.18,
+          "end": 83.54,
+          "prob": 0.9956
+        },
+        {
+          "word": " ficou",
+          "start": 84.68,
+          "end": 85.28,
+          "prob": 0.998
+        },
+        {
+          "word": " muito",
+          "start": 85.28,
+          "end": 85.52,
+          "prob": 1.0
+        },
+        {
+          "word": " ruim",
+          "start": 85.52,
+          "end": 85.74,
+          "prob": 1.0
+        },
+        {
+          "word": " meu",
+          "start": 85.74,
+          "end": 85.9,
+          "prob": 0.7881
+        },
+        {
+          "word": " óculos,",
+          "start": 85.9,
+          "end": 86.2,
+          "prob": 1.0
+        },
+        {
+          "word": " mano.",
+          "start": 86.28,
+          "end": 86.4,
+          "prob": 0.9961
+        },
+        {
+          "word": " Na",
+          "start": 87.53,
+          "end": 87.71,
+          "prob": 0.9932
+        },
+        {
+          "word": " ótica,",
+          "start": 87.71,
+          "end": 88.15,
+          "prob": 0.9912
+        },
+        {
+          "word": " isso.",
+          "start": 88.27,
+          "end": 88.55,
+          "prob": 1.0
+        },
+        {
+          "word": " Ela",
+          "start": 92.21,
+          "end": 92.47,
+          "prob": 0.999
+        },
+        {
+          "word": " apertou",
+          "start": 92.47,
+          "end": 92.87,
+          "prob": 1.0
+        },
+        {
+          "word": " muito,",
+          "start": 92.87,
+          "end": 93.25,
+          "prob": 1.0
+        },
+        {
+          "word": " mano.",
+          "start": 93.37,
+          "end": 93.53,
+          "prob": 1.0
+        },
+        {
+          "word": " Meu",
+          "start": 94.34,
+          "end": 94.58,
+          "prob": 0.8428
+        },
+        {
+          "word": " óculos",
+          "start": 94.58,
+          "end": 94.78,
+          "prob": 0.9995
+        },
+        {
+          "word": " tava",
+          "start": 94.78,
+          "end": 94.9,
+          "prob": 0.9868
+        },
+        {
+          "word": " meio",
+          "start": 94.9,
+          "end": 95.08,
+          "prob": 1.0
+        },
+        {
+          "word": " bambu",
+          "start": 95.08,
+          "end": 95.46,
+          "prob": 0.9585
+        },
+        {
+          "word": " no",
+          "start": 95.46,
+          "end": 95.58,
+          "prob": 0.9849
+        },
+        {
+          "word": " rosto,",
+          "start": 95.58,
+          "end": 95.92,
+          "prob": 0.9998
+        },
+        {
+          "word": " tá",
+          "start": 96.02,
+          "end": 96.1,
+          "prob": 0.9995
+        },
+        {
+          "word": " ligado?",
+          "start": 96.1,
+          "end": 96.38,
+          "prob": 1.0
+        },
+        {
+          "word": " Então",
+          "start": 96.9,
+          "end": 97.08,
+          "prob": 0.8325
+        },
+        {
+          "word": " eu",
+          "start": 97.08,
+          "end": 97.12,
+          "prob": 0.8696
+        },
+        {
+          "word": " falei,",
+          "start": 97.12,
+          "end": 97.22,
+          "prob": 0.999
+        },
+        {
+          "word": " dá",
+          "start": 97.3,
+          "end": 97.32,
+          "prob": 0.9976
+        },
+        {
+          "word": " uma",
+          "start": 97.32,
+          "end": 97.44,
+          "prob": 0.9995
+        },
+        {
+          "word": " apertada",
+          "start": 97.44,
+          "end": 98.06,
+          "prob": 1.0
+        },
+        {
+          "word": " aí.",
+          "start": 98.06,
+          "end": 98.22,
+          "prob": 0.999
+        },
+        {
+          "word": " Ela",
+          "start": 98.66,
+          "end": 98.82,
+          "prob": 0.6431
+        },
+        {
+          "word": " deu",
+          "start": 98.82,
+          "end": 98.96,
+          "prob": 0.9653
+        },
+        {
+          "word": " uma",
+          "start": 98.96,
+          "end": 99.04,
+          "prob": 1.0
+        },
+        {
+          "word": " apertada",
+          "start": 99.04,
+          "end": 99.82,
+          "prob": 1.0
+        },
+        {
+          "word": " e",
+          "start": 99.82,
+          "end": 100.02,
+          "prob": 0.9258
+        },
+        {
+          "word": " acho",
+          "start": 100.02,
+          "end": 100.18,
+          "prob": 0.9409
+        },
+        {
+          "word": " que",
+          "start": 100.18,
+          "end": 100.24,
+          "prob": 1.0
+        },
+        {
+          "word": " apertou",
+          "start": 100.24,
+          "end": 100.64,
+          "prob": 0.9163
+        },
+        {
+          "word": " demais.",
+          "start": 100.64,
+          "end": 100.82,
+          "prob": 0.999
+        },
+        {
+          "word": " Agora",
+          "start": 100.84,
+          "end": 100.98,
+          "prob": 0.9937
+        },
+        {
+          "word": " ficou",
+          "start": 100.98,
+          "end": 101.16,
+          "prob": 0.9907
+        },
+        {
+          "word": " muito",
+          "start": 101.16,
+          "end": 101.36,
+          "prob": 1.0
+        },
+        {
+          "word": " perto",
+          "start": 101.36,
+          "end": 101.7,
+          "prob": 1.0
+        },
+        {
+          "word": " do",
+          "start": 101.7,
+          "end": 101.84,
+          "prob": 0.9688
+        },
+        {
+          "word": " meu",
+          "start": 101.84,
+          "end": 101.94,
+          "prob": 1.0
+        },
+        {
+          "word": " rosto.",
+          "start": 101.94,
+          "end": 102.22,
+          "prob": 1.0
+        },
+        {
+          "word": " Porque",
+          "start": 110.63,
+          "end": 111.03,
+          "prob": 0.6348
+        },
+        {
+          "word": " seu",
+          "start": 111.03,
+          "end": 111.29,
+          "prob": 0.7847
+        },
+        {
+          "word": " A",
+          "start": 111.29,
+          "end": 111.41,
+          "prob": 0.8208
+        },
+        {
+          "word": " de",
+          "start": 111.41,
+          "end": 111.53,
+          "prob": 0.9951
+        },
+        {
+          "word": " Alanzoca",
+          "start": 111.53,
+          "end": 111.99,
+          "prob": 0.7629
+        },
+        {
+          "word": " é",
+          "start": 111.99,
+          "end": 112.13,
+          "prob": 1.0
+        },
+        {
+          "word": " minúsculo.",
+          "start": 112.13,
+          "end": 112.65,
+          "prob": 0.9992
+        }
+      ]
+    },
+    {
+      "start": 113.8,
+      "end": 141.14,
+      "text": " Tem coisas que não precisam ser grandes, cara. Né? Essa é uma delas. Né? Nome maiúsculo... O nome que começa com letra maiúscula perde aura, cara. Tem que começar com letra minúscula, pô. Letra maiúscula é pra escrever texto nas normas ABNT. Né? Pra você ter um seu nick, tem que ser minúsculo. Pobrear pelos 200 bits.",
+      "words": [
+        {
+          "word": " Tem",
+          "start": 113.8,
+          "end": 114.24,
+          "prob": 0.8843
+        },
+        {
+          "word": " coisas",
+          "start": 114.24,
+          "end": 114.48,
+          "prob": 0.8955
+        },
+        {
+          "word": " que",
+          "start": 114.48,
+          "end": 114.58,
+          "prob": 0.9995
+        },
+        {
+          "word": " não",
+          "start": 114.58,
+          "end": 114.66,
+          "prob": 0.999
+        },
+        {
+          "word": " precisam",
+          "start": 114.66,
+          "end": 114.78,
+          "prob": 0.988
+        },
+        {
+          "word": " ser",
+          "start": 114.78,
+          "end": 114.94,
+          "prob": 0.999
+        },
+        {
+          "word": " grandes,",
+          "start": 114.94,
+          "end": 115.26,
+          "prob": 0.9971
+        },
+        {
+          "word": " cara.",
+          "start": 115.36,
+          "end": 115.48,
+          "prob": 0.9897
+        },
+        {
+          "word": " Né?",
+          "start": 116.98,
+          "end": 117.12,
+          "prob": 0.7225
+        },
+        {
+          "word": " Essa",
+          "start": 117.2,
+          "end": 117.52,
+          "prob": 0.8477
+        },
+        {
+          "word": " é",
+          "start": 117.52,
+          "end": 117.58,
+          "prob": 1.0
+        },
+        {
+          "word": " uma",
+          "start": 117.58,
+          "end": 117.74,
+          "prob": 1.0
+        },
+        {
+          "word": " delas.",
+          "start": 117.74,
+          "end": 118.12,
+          "prob": 0.9998
+        },
+        {
+          "word": " Né?",
+          "start": 121.2,
+          "end": 121.56,
+          "prob": 0.8855
+        },
+        {
+          "word": " Nome",
+          "start": 123.51,
+          "end": 123.85,
+          "prob": 0.9233
+        },
+        {
+          "word": " maiúsculo...",
+          "start": 123.85,
+          "end": 124.77,
+          "prob": 0.943
+        },
+        {
+          "word": " O",
+          "start": 124.77,
+          "end": 124.95,
+          "prob": 0.6377
+        },
+        {
+          "word": " nome",
+          "start": 124.95,
+          "end": 125.11,
+          "prob": 1.0
+        },
+        {
+          "word": " que",
+          "start": 125.11,
+          "end": 125.21,
+          "prob": 0.9995
+        },
+        {
+          "word": " começa",
+          "start": 125.21,
+          "end": 125.47,
+          "prob": 0.998
+        },
+        {
+          "word": " com",
+          "start": 125.47,
+          "end": 125.65,
+          "prob": 1.0
+        },
+        {
+          "word": " letra",
+          "start": 125.65,
+          "end": 125.95,
+          "prob": 0.9973
+        },
+        {
+          "word": " maiúscula",
+          "start": 125.95,
+          "end": 126.29,
+          "prob": 0.9983
+        },
+        {
+          "word": " perde",
+          "start": 126.29,
+          "end": 126.53,
+          "prob": 0.9922
+        },
+        {
+          "word": " aura,",
+          "start": 126.53,
+          "end": 126.85,
+          "prob": 0.9795
+        },
+        {
+          "word": " cara.",
+          "start": 127.01,
+          "end": 127.11,
+          "prob": 1.0
+        },
+        {
+          "word": " Tem",
+          "start": 127.47,
+          "end": 127.55,
+          "prob": 0.9561
+        },
+        {
+          "word": " que",
+          "start": 127.55,
+          "end": 127.63,
+          "prob": 0.999
+        },
+        {
+          "word": " começar",
+          "start": 127.63,
+          "end": 127.89,
+          "prob": 0.9976
+        },
+        {
+          "word": " com",
+          "start": 127.89,
+          "end": 128.01,
+          "prob": 0.9995
+        },
+        {
+          "word": " letra",
+          "start": 128.01,
+          "end": 128.23,
+          "prob": 0.9951
+        },
+        {
+          "word": " minúscula,",
+          "start": 128.23,
+          "end": 128.63,
+          "prob": 0.9923
+        },
+        {
+          "word": " pô.",
+          "start": 128.63,
+          "end": 128.75,
+          "prob": 0.8145
+        },
+        {
+          "word": " Letra",
+          "start": 132.55,
+          "end": 132.93,
+          "prob": 0.9976
+        },
+        {
+          "word": " maiúscula",
+          "start": 132.93,
+          "end": 133.35,
+          "prob": 0.9991
+        },
+        {
+          "word": " é",
+          "start": 133.35,
+          "end": 133.47,
+          "prob": 0.9907
+        },
+        {
+          "word": " pra",
+          "start": 133.47,
+          "end": 133.53,
+          "prob": 0.9136
+        },
+        {
+          "word": " escrever",
+          "start": 133.53,
+          "end": 133.91,
+          "prob": 0.9995
+        },
+        {
+          "word": " texto",
+          "start": 133.91,
+          "end": 134.53,
+          "prob": 0.9922
+        },
+        {
+          "word": " nas",
+          "start": 134.53,
+          "end": 134.75,
+          "prob": 0.9854
+        },
+        {
+          "word": " normas",
+          "start": 134.75,
+          "end": 135.43,
+          "prob": 0.9851
+        },
+        {
+          "word": " ABNT.",
+          "start": 135.43,
+          "end": 135.99,
+          "prob": 0.906
+        },
+        {
+          "word": " Né?",
+          "start": 136.6,
+          "end": 137.08,
+          "prob": 0.9941
+        },
+        {
+          "word": " Pra",
+          "start": 137.16,
+          "end": 137.26,
+          "prob": 0.9907
+        },
+        {
+          "word": " você",
+          "start": 137.26,
+          "end": 137.52,
+          "prob": 0.9995
+        },
+        {
+          "word": " ter",
+          "start": 137.52,
+          "end": 137.7,
+          "prob": 0.9966
+        },
+        {
+          "word": " um",
+          "start": 137.7,
+          "end": 137.82,
+          "prob": 0.8032
+        },
+        {
+          "word": " seu",
+          "start": 137.82,
+          "end": 137.96,
+          "prob": 0.9839
+        },
+        {
+          "word": " nick,",
+          "start": 137.96,
+          "end": 138.2,
+          "prob": 0.8335
+        },
+        {
+          "word": " tem",
+          "start": 138.26,
+          "end": 138.36,
+          "prob": 0.998
+        },
+        {
+          "word": " que",
+          "start": 138.36,
+          "end": 138.44,
+          "prob": 1.0
+        },
+        {
+          "word": " ser",
+          "start": 138.44,
+          "end": 138.52,
+          "prob": 1.0
+        },
+        {
+          "word": " minúsculo.",
+          "start": 138.52,
+          "end": 138.92,
+          "prob": 0.9728
+        },
+        {
+          "word": " Pobrear",
+          "start": 139.56,
+          "end": 140.04,
+          "prob": 0.4957
+        },
+        {
+          "word": " pelos",
+          "start": 140.04,
+          "end": 140.2,
+          "prob": 0.7988
+        },
+        {
+          "word": " 200",
+          "start": 140.2,
+          "end": 140.62,
+          "prob": 0.9741
+        },
+        {
+          "word": " bits.",
+          "start": 140.62,
+          "end": 141.14,
+          "prob": 0.8096
+        }
+      ]
+    },
+    {
+      "start": 159.0,
+      "end": 169.48,
+      "text": " Olha, Robô. Assim, eu vou ser rude, tá? Eu vou ser rude. Vou machucar. Eu vou machucar. Tá? Eu vou machucar. Você não fez nada ainda. Quem que vai te cancelar, cara? Ninguém nem te conhece, pô.",
+      "words": [
+        {
+          "word": " Olha,",
+          "start": 159.0,
+          "end": 159.36,
+          "prob": 0.2507
+        },
+        {
+          "word": " Robô.",
+          "start": 159.36,
+          "end": 159.72,
+          "prob": 0.791
+        },
+        {
+          "word": " Assim,",
+          "start": 160.02,
+          "end": 160.38,
+          "prob": 0.9829
+        },
+        {
+          "word": " eu",
+          "start": 160.52,
+          "end": 160.58,
+          "prob": 0.9702
+        },
+        {
+          "word": " vou",
+          "start": 160.58,
+          "end": 160.7,
+          "prob": 1.0
+        },
+        {
+          "word": " ser",
+          "start": 160.7,
+          "end": 160.82,
+          "prob": 1.0
+        },
+        {
+          "word": " rude,",
+          "start": 160.82,
+          "end": 161.12,
+          "prob": 0.9985
+        },
+        {
+          "word": " tá?",
+          "start": 161.32,
+          "end": 161.44,
+          "prob": 0.999
+        },
+        {
+          "word": " Eu",
+          "start": 161.64,
+          "end": 161.86,
+          "prob": 0.5952
+        },
+        {
+          "word": " vou",
+          "start": 161.86,
+          "end": 162.0,
+          "prob": 0.9995
+        },
+        {
+          "word": " ser",
+          "start": 162.0,
+          "end": 162.0,
+          "prob": 0.9448
+        },
+        {
+          "word": " rude.",
+          "start": 162.0,
+          "end": 162.32,
+          "prob": 1.0
+        },
+        {
+          "word": " Vou",
+          "start": 162.5,
+          "end": 162.7,
+          "prob": 0.9141
+        },
+        {
+          "word": " machucar.",
+          "start": 162.7,
+          "end": 163.22,
+          "prob": 0.9993
+        },
+        {
+          "word": " Eu",
+          "start": 163.38,
+          "end": 163.48,
+          "prob": 0.8682
+        },
+        {
+          "word": " vou",
+          "start": 163.48,
+          "end": 163.56,
+          "prob": 1.0
+        },
+        {
+          "word": " machucar.",
+          "start": 163.56,
+          "end": 164.04,
+          "prob": 0.9998
+        },
+        {
+          "word": " Tá?",
+          "start": 164.32,
+          "end": 164.64,
+          "prob": 0.7329
+        },
+        {
+          "word": " Eu",
+          "start": 165.04,
+          "end": 165.36,
+          "prob": 0.6665
+        },
+        {
+          "word": " vou",
+          "start": 165.36,
+          "end": 165.42,
+          "prob": 1.0
+        },
+        {
+          "word": " machucar.",
+          "start": 165.42,
+          "end": 165.92,
+          "prob": 0.9998
+        },
+        {
+          "word": " Você",
+          "start": 166.3,
+          "end": 166.66,
+          "prob": 0.9922
+        },
+        {
+          "word": " não",
+          "start": 166.66,
+          "end": 166.8,
+          "prob": 0.9995
+        },
+        {
+          "word": " fez",
+          "start": 166.8,
+          "end": 167.06,
+          "prob": 1.0
+        },
+        {
+          "word": " nada",
+          "start": 167.06,
+          "end": 167.28,
+          "prob": 1.0
+        },
+        {
+          "word": " ainda.",
+          "start": 167.28,
+          "end": 167.46,
+          "prob": 0.9858
+        },
+        {
+          "word": " Quem",
+          "start": 167.52,
+          "end": 167.62,
+          "prob": 0.9976
+        },
+        {
+          "word": " que",
+          "start": 167.62,
+          "end": 167.74,
+          "prob": 0.918
+        },
+        {
+          "word": " vai",
+          "start": 167.74,
+          "end": 167.82,
+          "prob": 1.0
+        },
+        {
+          "word": " te",
+          "start": 167.82,
+          "end": 167.92,
+          "prob": 0.999
+        },
+        {
+          "word": " cancelar,",
+          "start": 167.92,
+          "end": 168.32,
+          "prob": 0.9998
+        },
+        {
+          "word": " cara?",
+          "start": 168.42,
+          "end": 168.52,
+          "prob": 0.9995
+        },
+        {
+          "word": " Ninguém",
+          "start": 168.56,
+          "end": 168.74,
+          "prob": 0.9995
+        },
+        {
+          "word": " nem",
+          "start": 168.74,
+          "end": 168.88,
+          "prob": 0.6328
+        },
+        {
+          "word": " te",
+          "start": 168.88,
+          "end": 168.96,
+          "prob": 0.9966
+        },
+        {
+          "word": " conhece,",
+          "start": 168.96,
+          "end": 169.28,
+          "prob": 1.0
+        },
+        {
+          "word": " pô.",
+          "start": 169.36,
+          "end": 169.48,
+          "prob": 0.8591
+        }
+      ]
+    },
+    {
+      "start": 169.82,
+      "end": 217.26,
+      "text": " Quem que vai te cancelar, pô? Você tá com medo do quê? Quem que vai te cancelar, velho? Se você nem existe na internet, velho? Pelo amor de Deus, cara. Que medo é esse? Né? Não, tem que ser rude às vezes, né? Pra dar uma acordada, velho. Né? Não, que machuquei, pô. Não, não chamei ninguém. Humilhei? Não, pô. Né? Tô mentindo? É, pô. Fazer o quê, mano? Falar a mesma coisa com o Fal? Falei, mano. Falei mesmo.",
+      "words": [
+        {
+          "word": " Quem",
+          "start": 169.82,
+          "end": 170.14,
+          "prob": 0.8994
+        },
+        {
+          "word": " que",
+          "start": 170.14,
+          "end": 170.24,
+          "prob": 0.9458
+        },
+        {
+          "word": " vai",
+          "start": 170.24,
+          "end": 170.34,
+          "prob": 0.9995
+        },
+        {
+          "word": " te",
+          "start": 170.34,
+          "end": 170.46,
+          "prob": 0.9995
+        },
+        {
+          "word": " cancelar,",
+          "start": 170.46,
+          "end": 170.84,
+          "prob": 0.9998
+        },
+        {
+          "word": " pô?",
+          "start": 170.9,
+          "end": 171.0,
+          "prob": 0.9893
+        },
+        {
+          "word": " Você",
+          "start": 171.08,
+          "end": 171.14,
+          "prob": 0.9561
+        },
+        {
+          "word": " tá",
+          "start": 171.14,
+          "end": 171.2,
+          "prob": 0.9478
+        },
+        {
+          "word": " com",
+          "start": 171.2,
+          "end": 171.3,
+          "prob": 0.9971
+        },
+        {
+          "word": " medo",
+          "start": 171.3,
+          "end": 171.44,
+          "prob": 1.0
+        },
+        {
+          "word": " do",
+          "start": 171.44,
+          "end": 171.56,
+          "prob": 0.9932
+        },
+        {
+          "word": " quê?",
+          "start": 171.56,
+          "end": 171.68,
+          "prob": 0.9629
+        },
+        {
+          "word": " Quem",
+          "start": 172.22,
+          "end": 172.44,
+          "prob": 0.9985
+        },
+        {
+          "word": " que",
+          "start": 172.44,
+          "end": 172.52,
+          "prob": 0.9961
+        },
+        {
+          "word": " vai",
+          "start": 172.52,
+          "end": 172.6,
+          "prob": 1.0
+        },
+        {
+          "word": " te",
+          "start": 172.6,
+          "end": 172.7,
+          "prob": 1.0
+        },
+        {
+          "word": " cancelar,",
+          "start": 172.7,
+          "end": 173.14,
+          "prob": 1.0
+        },
+        {
+          "word": " velho?",
+          "start": 173.2,
+          "end": 173.34,
+          "prob": 0.9949
+        },
+        {
+          "word": " Se",
+          "start": 173.38,
+          "end": 173.44,
+          "prob": 0.9946
+        },
+        {
+          "word": " você",
+          "start": 173.44,
+          "end": 173.6,
+          "prob": 1.0
+        },
+        {
+          "word": " nem",
+          "start": 173.6,
+          "end": 173.76,
+          "prob": 0.9956
+        },
+        {
+          "word": " existe",
+          "start": 173.76,
+          "end": 174.08,
+          "prob": 1.0
+        },
+        {
+          "word": " na",
+          "start": 174.08,
+          "end": 174.2,
+          "prob": 0.9995
+        },
+        {
+          "word": " internet,",
+          "start": 174.2,
+          "end": 174.56,
+          "prob": 0.998
+        },
+        {
+          "word": " velho?",
+          "start": 174.68,
+          "end": 174.92,
+          "prob": 0.9998
+        },
+        {
+          "word": " Pelo",
+          "start": 175.36,
+          "end": 175.66,
+          "prob": 0.999
+        },
+        {
+          "word": " amor",
+          "start": 175.66,
+          "end": 175.84,
+          "prob": 1.0
+        },
+        {
+          "word": " de",
+          "start": 175.84,
+          "end": 175.98,
+          "prob": 1.0
+        },
+        {
+          "word": " Deus,",
+          "start": 175.98,
+          "end": 176.12,
+          "prob": 0.999
+        },
+        {
+          "word": " cara.",
+          "start": 176.22,
+          "end": 176.28,
+          "prob": 0.8325
+        },
+        {
+          "word": " Que",
+          "start": 176.34,
+          "end": 176.42,
+          "prob": 0.999
+        },
+        {
+          "word": " medo",
+          "start": 176.42,
+          "end": 176.58,
+          "prob": 1.0
+        },
+        {
+          "word": " é",
+          "start": 176.58,
+          "end": 176.7,
+          "prob": 1.0
+        },
+        {
+          "word": " esse?",
+          "start": 176.7,
+          "end": 176.98,
+          "prob": 1.0
+        },
+        {
+          "word": " Né?",
+          "start": 178.02,
+          "end": 178.34,
+          "prob": 0.9958
+        },
+        {
+          "word": " Não,",
+          "start": 181.55,
+          "end": 181.77,
+          "prob": 0.9932
+        },
+        {
+          "word": " tem",
+          "start": 181.87,
+          "end": 182.09,
+          "prob": 0.9995
+        },
+        {
+          "word": " que",
+          "start": 182.09,
+          "end": 182.17,
+          "prob": 1.0
+        },
+        {
+          "word": " ser",
+          "start": 182.17,
+          "end": 182.29,
+          "prob": 1.0
+        },
+        {
+          "word": " rude",
+          "start": 182.29,
+          "end": 182.51,
+          "prob": 0.998
+        },
+        {
+          "word": " às",
+          "start": 182.51,
+          "end": 182.69,
+          "prob": 0.8843
+        },
+        {
+          "word": " vezes,",
+          "start": 182.69,
+          "end": 182.85,
+          "prob": 1.0
+        },
+        {
+          "word": " né?",
+          "start": 182.89,
+          "end": 182.97,
+          "prob": 0.9995
+        },
+        {
+          "word": " Pra",
+          "start": 183.03,
+          "end": 183.11,
+          "prob": 0.9883
+        },
+        {
+          "word": " dar",
+          "start": 183.11,
+          "end": 183.19,
+          "prob": 0.9395
+        },
+        {
+          "word": " uma",
+          "start": 183.19,
+          "end": 183.23,
+          "prob": 1.0
+        },
+        {
+          "word": " acordada,",
+          "start": 183.23,
+          "end": 183.73,
+          "prob": 0.9998
+        },
+        {
+          "word": " velho.",
+          "start": 183.79,
+          "end": 184.01,
+          "prob": 0.9932
+        },
+        {
+          "word": " Né?",
+          "start": 184.95,
+          "end": 185.21,
+          "prob": 0.9736
+        },
+        {
+          "word": " Não,",
+          "start": 187.1,
+          "end": 187.36,
+          "prob": 0.6646
+        },
+        {
+          "word": " que",
+          "start": 187.5,
+          "end": 187.6,
+          "prob": 0.6445
+        },
+        {
+          "word": " machuquei,",
+          "start": 187.6,
+          "end": 188.22,
+          "prob": 0.9971
+        },
+        {
+          "word": " pô.",
+          "start": 188.24,
+          "end": 188.38,
+          "prob": 0.9976
+        },
+        {
+          "word": " Não,",
+          "start": 190.07,
+          "end": 190.25,
+          "prob": 0.9878
+        },
+        {
+          "word": " não",
+          "start": 190.27,
+          "end": 190.37,
+          "prob": 0.998
+        },
+        {
+          "word": " chamei",
+          "start": 190.37,
+          "end": 190.65,
+          "prob": 0.7991
+        },
+        {
+          "word": " ninguém.",
+          "start": 190.65,
+          "end": 190.89,
+          "prob": 0.5981
+        },
+        {
+          "word": " Humilhei?",
+          "start": 191.17,
+          "end": 191.49,
+          "prob": 0.992
+        },
+        {
+          "word": " Não,",
+          "start": 191.67,
+          "end": 191.81,
+          "prob": 0.9966
+        },
+        {
+          "word": " pô.",
+          "start": 191.99,
+          "end": 192.19,
+          "prob": 0.9988
+        },
+        {
+          "word": " Né?",
+          "start": 194.54,
+          "end": 194.86,
+          "prob": 0.9983
+        },
+        {
+          "word": " Tô",
+          "start": 198.56,
+          "end": 198.88,
+          "prob": 0.9832
+        },
+        {
+          "word": " mentindo?",
+          "start": 198.88,
+          "end": 199.34,
+          "prob": 0.9946
+        },
+        {
+          "word": " É,",
+          "start": 199.78,
+          "end": 200.1,
+          "prob": 0.9336
+        },
+        {
+          "word": " pô.",
+          "start": 206.41,
+          "end": 206.55,
+          "prob": 0.9983
+        },
+        {
+          "word": " Fazer",
+          "start": 211.57,
+          "end": 211.89,
+          "prob": 0.9487
+        },
+        {
+          "word": " o",
+          "start": 211.89,
+          "end": 211.99,
+          "prob": 1.0
+        },
+        {
+          "word": " quê,",
+          "start": 211.99,
+          "end": 212.11,
+          "prob": 0.9819
+        },
+        {
+          "word": " mano?",
+          "start": 212.21,
+          "end": 212.29,
+          "prob": 0.9937
+        },
+        {
+          "word": " Falar",
+          "start": 213.49,
+          "end": 213.75,
+          "prob": 0.6404
+        },
+        {
+          "word": " a",
+          "start": 213.75,
+          "end": 213.89,
+          "prob": 0.9946
+        },
+        {
+          "word": " mesma",
+          "start": 213.89,
+          "end": 213.97,
+          "prob": 1.0
+        },
+        {
+          "word": " coisa",
+          "start": 213.97,
+          "end": 214.25,
+          "prob": 1.0
+        },
+        {
+          "word": " com",
+          "start": 214.25,
+          "end": 214.41,
+          "prob": 0.9648
+        },
+        {
+          "word": " o",
+          "start": 214.41,
+          "end": 214.55,
+          "prob": 0.9868
+        },
+        {
+          "word": " Fal?",
+          "start": 214.55,
+          "end": 214.73,
+          "prob": 0.2129
+        },
+        {
+          "word": " Falei,",
+          "start": 215.33,
+          "end": 215.65,
+          "prob": 0.9951
+        },
+        {
+          "word": " mano.",
+          "start": 215.67,
+          "end": 215.77,
+          "prob": 0.9985
+        },
+        {
+          "word": " Falei",
+          "start": 216.78,
+          "end": 217.1,
+          "prob": 0.9998
+        },
+        {
+          "word": " mesmo.",
+          "start": 217.1,
+          "end": 217.26,
+          "prob": 0.9561
+        }
+      ]
+    },
+    {
+      "start": 222.92,
+      "end": 254.71,
+      "text": " E eu não cancelei o cara, pô. Será que eu cancelei o cara? Não, não cancelei, não. Aí, ele mandou de novo. É que eu me preocupo muito com o futuro, mas você tem toda a razão. Pra quem me preocupar com algo que nem aconteceu ainda. O futuro? Não tem como você se preocupar com o futuro, pô. O futuro é o futuro, né? Você tem que se preocupar com o presente, mano. Futuro, mano, deixa você ou eu do futuro se preocupar. Eu faço muito isso, por isso que eu só me fodo mesmo, né? Ah, depois eu resolvo. Aí chega no dia e eu não resolvi.",
+      "words": [
+        {
+          "word": " E",
+          "start": 222.92,
+          "end": 223.18,
+          "prob": 0.0331
+        },
+        {
+          "word": " eu",
+          "start": 223.18,
+          "end": 223.44,
+          "prob": 0.8208
+        },
+        {
+          "word": " não",
+          "start": 223.44,
+          "end": 223.54,
+          "prob": 0.9985
+        },
+        {
+          "word": " cancelei",
+          "start": 223.54,
+          "end": 223.88,
+          "prob": 0.992
+        },
+        {
+          "word": " o",
+          "start": 223.88,
+          "end": 223.98,
+          "prob": 0.9966
+        },
+        {
+          "word": " cara,",
+          "start": 223.98,
+          "end": 224.22,
+          "prob": 0.999
+        },
+        {
+          "word": " pô.",
+          "start": 224.34,
+          "end": 224.46,
+          "prob": 0.9907
+        },
+        {
+          "word": " Será",
+          "start": 224.56,
+          "end": 224.72,
+          "prob": 0.9961
+        },
+        {
+          "word": " que",
+          "start": 224.72,
+          "end": 224.82,
+          "prob": 1.0
+        },
+        {
+          "word": " eu",
+          "start": 224.82,
+          "end": 224.94,
+          "prob": 1.0
+        },
+        {
+          "word": " cancelei",
+          "start": 224.94,
+          "end": 225.18,
+          "prob": 0.999
+        },
+        {
+          "word": " o",
+          "start": 225.18,
+          "end": 225.28,
+          "prob": 1.0
+        },
+        {
+          "word": " cara?",
+          "start": 225.28,
+          "end": 225.58,
+          "prob": 1.0
+        },
+        {
+          "word": " Não,",
+          "start": 225.84,
+          "end": 226.04,
+          "prob": 0.9888
+        },
+        {
+          "word": " não",
+          "start": 226.06,
+          "end": 226.18,
+          "prob": 0.9683
+        },
+        {
+          "word": " cancelei,",
+          "start": 226.18,
+          "end": 226.52,
+          "prob": 0.9985
+        },
+        {
+          "word": " não.",
+          "start": 226.6,
+          "end": 226.66,
+          "prob": 1.0
+        },
+        {
+          "word": " Aí,",
+          "start": 231.07,
+          "end": 231.23,
+          "prob": 0.9634
+        },
+        {
+          "word": " ele",
+          "start": 231.25,
+          "end": 231.37,
+          "prob": 0.707
+        },
+        {
+          "word": " mandou",
+          "start": 231.37,
+          "end": 231.59,
+          "prob": 1.0
+        },
+        {
+          "word": " de",
+          "start": 231.59,
+          "end": 231.71,
+          "prob": 1.0
+        },
+        {
+          "word": " novo.",
+          "start": 231.71,
+          "end": 231.99,
+          "prob": 1.0
+        },
+        {
+          "word": " É",
+          "start": 233.31,
+          "end": 233.31,
+          "prob": 0.124
+        },
+        {
+          "word": " que",
+          "start": 233.31,
+          "end": 233.57,
+          "prob": 0.9956
+        },
+        {
+          "word": " eu",
+          "start": 233.57,
+          "end": 233.65,
+          "prob": 0.9995
+        },
+        {
+          "word": " me",
+          "start": 233.65,
+          "end": 233.75,
+          "prob": 0.9985
+        },
+        {
+          "word": " preocupo",
+          "start": 233.75,
+          "end": 234.13,
+          "prob": 0.999
+        },
+        {
+          "word": " muito",
+          "start": 234.13,
+          "end": 234.31,
+          "prob": 0.9995
+        },
+        {
+          "word": " com",
+          "start": 234.31,
+          "end": 234.43,
+          "prob": 1.0
+        },
+        {
+          "word": " o",
+          "start": 234.43,
+          "end": 234.55,
+          "prob": 0.999
+        },
+        {
+          "word": " futuro,",
+          "start": 234.55,
+          "end": 234.81,
+          "prob": 0.9995
+        },
+        {
+          "word": " mas",
+          "start": 234.91,
+          "end": 235.01,
+          "prob": 0.9995
+        },
+        {
+          "word": " você",
+          "start": 235.01,
+          "end": 235.19,
+          "prob": 0.9995
+        },
+        {
+          "word": " tem",
+          "start": 235.19,
+          "end": 235.35,
+          "prob": 1.0
+        },
+        {
+          "word": " toda",
+          "start": 235.35,
+          "end": 235.55,
+          "prob": 0.9985
+        },
+        {
+          "word": " a",
+          "start": 235.55,
+          "end": 235.65,
+          "prob": 0.7603
+        },
+        {
+          "word": " razão.",
+          "start": 235.65,
+          "end": 235.91,
+          "prob": 1.0
+        },
+        {
+          "word": " Pra",
+          "start": 236.03,
+          "end": 236.07,
+          "prob": 0.8647
+        },
+        {
+          "word": " quem",
+          "start": 236.07,
+          "end": 236.21,
+          "prob": 0.9302
+        },
+        {
+          "word": " me",
+          "start": 236.21,
+          "end": 236.37,
+          "prob": 0.9995
+        },
+        {
+          "word": " preocupar",
+          "start": 236.37,
+          "end": 236.79,
+          "prob": 0.9998
+        },
+        {
+          "word": " com",
+          "start": 236.79,
+          "end": 236.93,
+          "prob": 0.9995
+        },
+        {
+          "word": " algo",
+          "start": 236.93,
+          "end": 237.09,
+          "prob": 0.9985
+        },
+        {
+          "word": " que",
+          "start": 237.09,
+          "end": 237.21,
+          "prob": 1.0
+        },
+        {
+          "word": " nem",
+          "start": 237.21,
+          "end": 237.27,
+          "prob": 0.9976
+        },
+        {
+          "word": " aconteceu",
+          "start": 237.27,
+          "end": 237.75,
+          "prob": 1.0
+        },
+        {
+          "word": " ainda.",
+          "start": 237.75,
+          "end": 238.11,
+          "prob": 0.999
+        },
+        {
+          "word": " O",
+          "start": 240.29,
+          "end": 240.53,
+          "prob": 0.4746
+        },
+        {
+          "word": " futuro?",
+          "start": 240.53,
+          "end": 240.95,
+          "prob": 0.999
+        },
+        {
+          "word": " Não",
+          "start": 241.05,
+          "end": 241.15,
+          "prob": 0.9951
+        },
+        {
+          "word": " tem",
+          "start": 241.15,
+          "end": 241.27,
+          "prob": 0.999
+        },
+        {
+          "word": " como",
+          "start": 241.27,
+          "end": 241.43,
+          "prob": 0.9326
+        },
+        {
+          "word": " você",
+          "start": 241.43,
+          "end": 241.55,
+          "prob": 0.8623
+        },
+        {
+          "word": " se",
+          "start": 241.55,
+          "end": 241.67,
+          "prob": 0.999
+        },
+        {
+          "word": " preocupar",
+          "start": 241.67,
+          "end": 241.95,
+          "prob": 1.0
+        },
+        {
+          "word": " com",
+          "start": 241.95,
+          "end": 242.07,
+          "prob": 1.0
+        },
+        {
+          "word": " o",
+          "start": 242.07,
+          "end": 242.17,
+          "prob": 1.0
+        },
+        {
+          "word": " futuro,",
+          "start": 242.17,
+          "end": 242.47,
+          "prob": 1.0
+        },
+        {
+          "word": " pô.",
+          "start": 242.59,
+          "end": 242.75,
+          "prob": 0.9993
+        },
+        {
+          "word": " O",
+          "start": 243.37,
+          "end": 243.63,
+          "prob": 0.9995
+        },
+        {
+          "word": " futuro",
+          "start": 243.63,
+          "end": 244.03,
+          "prob": 1.0
+        },
+        {
+          "word": " é",
+          "start": 244.03,
+          "end": 244.15,
+          "prob": 1.0
+        },
+        {
+          "word": " o",
+          "start": 244.15,
+          "end": 244.23,
+          "prob": 1.0
+        },
+        {
+          "word": " futuro,",
+          "start": 244.23,
+          "end": 244.59,
+          "prob": 1.0
+        },
+        {
+          "word": " né?",
+          "start": 244.73,
+          "end": 244.77,
+          "prob": 0.9976
+        },
+        {
+          "word": " Você",
+          "start": 244.81,
+          "end": 244.89,
+          "prob": 0.9966
+        },
+        {
+          "word": " tem",
+          "start": 244.89,
+          "end": 244.97,
+          "prob": 1.0
+        },
+        {
+          "word": " que",
+          "start": 244.97,
+          "end": 245.03,
+          "prob": 1.0
+        },
+        {
+          "word": " se",
+          "start": 245.03,
+          "end": 245.11,
+          "prob": 1.0
+        },
+        {
+          "word": " preocupar",
+          "start": 245.11,
+          "end": 245.37,
+          "prob": 1.0
+        },
+        {
+          "word": " com",
+          "start": 245.37,
+          "end": 245.45,
+          "prob": 1.0
+        },
+        {
+          "word": " o",
+          "start": 245.45,
+          "end": 245.53,
+          "prob": 0.9976
+        },
+        {
+          "word": " presente,",
+          "start": 245.53,
+          "end": 245.87,
+          "prob": 1.0
+        },
+        {
+          "word": " mano.",
+          "start": 245.99,
+          "end": 246.09,
+          "prob": 0.9409
+        },
+        {
+          "word": " Futuro,",
+          "start": 247.26,
+          "end": 247.52,
+          "prob": 0.8203
+        },
+        {
+          "word": " mano,",
+          "start": 247.64,
+          "end": 247.76,
+          "prob": 0.999
+        },
+        {
+          "word": " deixa",
+          "start": 247.98,
+          "end": 248.22,
+          "prob": 0.999
+        },
+        {
+          "word": " você",
+          "start": 248.22,
+          "end": 248.48,
+          "prob": 0.9795
+        },
+        {
+          "word": " ou",
+          "start": 248.48,
+          "end": 248.6,
+          "prob": 0.5869
+        },
+        {
+          "word": " eu",
+          "start": 248.6,
+          "end": 248.7,
+          "prob": 0.9878
+        },
+        {
+          "word": " do",
+          "start": 248.7,
+          "end": 248.78,
+          "prob": 0.9995
+        },
+        {
+          "word": " futuro",
+          "start": 248.78,
+          "end": 249.1,
+          "prob": 1.0
+        },
+        {
+          "word": " se",
+          "start": 249.1,
+          "end": 249.2,
+          "prob": 0.9976
+        },
+        {
+          "word": " preocupar.",
+          "start": 249.2,
+          "end": 249.64,
+          "prob": 1.0
+        },
+        {
+          "word": " Eu",
+          "start": 249.72,
+          "end": 249.8,
+          "prob": 0.999
+        },
+        {
+          "word": " faço",
+          "start": 249.8,
+          "end": 250.0,
+          "prob": 1.0
+        },
+        {
+          "word": " muito",
+          "start": 250.0,
+          "end": 250.2,
+          "prob": 0.9985
+        },
+        {
+          "word": " isso,",
+          "start": 250.2,
+          "end": 250.36,
+          "prob": 0.9995
+        },
+        {
+          "word": " por",
+          "start": 250.38,
+          "end": 250.5,
+          "prob": 0.9995
+        },
+        {
+          "word": " isso",
+          "start": 250.5,
+          "end": 250.5,
+          "prob": 0.999
+        },
+        {
+          "word": " que",
+          "start": 250.5,
+          "end": 250.56,
+          "prob": 1.0
+        },
+        {
+          "word": " eu",
+          "start": 250.56,
+          "end": 250.62,
+          "prob": 1.0
+        },
+        {
+          "word": " só",
+          "start": 250.62,
+          "end": 250.72,
+          "prob": 0.9995
+        },
+        {
+          "word": " me",
+          "start": 250.72,
+          "end": 250.84,
+          "prob": 1.0
+        },
+        {
+          "word": " fodo",
+          "start": 250.84,
+          "end": 251.1,
+          "prob": 0.8467
+        },
+        {
+          "word": " mesmo,",
+          "start": 251.1,
+          "end": 251.32,
+          "prob": 0.998
+        },
+        {
+          "word": " né?",
+          "start": 251.4,
+          "end": 251.48,
+          "prob": 0.9951
+        },
+        {
+          "word": " Ah,",
+          "start": 252.19,
+          "end": 252.45,
+          "prob": 0.9956
+        },
+        {
+          "word": " depois",
+          "start": 252.51,
+          "end": 252.69,
+          "prob": 1.0
+        },
+        {
+          "word": " eu",
+          "start": 252.69,
+          "end": 252.83,
+          "prob": 1.0
+        },
+        {
+          "word": " resolvo.",
+          "start": 252.83,
+          "end": 253.29,
+          "prob": 0.9993
+        },
+        {
+          "word": " Aí",
+          "start": 253.47,
+          "end": 253.65,
+          "prob": 0.5503
+        },
+        {
+          "word": " chega",
+          "start": 253.65,
+          "end": 253.87,
+          "prob": 0.5474
+        },
+        {
+          "word": " no",
+          "start": 253.87,
+          "end": 254.03,
+          "prob": 0.9927
+        },
+        {
+          "word": " dia",
+          "start": 254.03,
+          "end": 254.15,
+          "prob": 0.9995
+        },
+        {
+          "word": " e",
+          "start": 254.15,
+          "end": 254.23,
+          "prob": 0.5903
+        },
+        {
+          "word": " eu",
+          "start": 254.23,
+          "end": 254.25,
+          "prob": 0.9873
+        },
+        {
+          "word": " não",
+          "start": 254.25,
+          "end": 254.31,
+          "prob": 1.0
+        },
+        {
+          "word": " resolvi.",
+          "start": 254.31,
+          "end": 254.71,
+          "prob": 0.9995
+        }
+      ]
+    },
+    {
+      "start": 255.05,
+      "end": 292.26,
+      "text": " Não, mas, pô, tem coisa que não dá pra você mudar, né? Fazer o quê, mano? Tipo o Spotify. É, tipo o Spotify que eu... E agora eu posso confirmar que eu instalei no PC de stream o Spotify e eu posso botar a música que eu quiser. Então eu vou botar... Já tinha até deixado no grau aqui. Vou botar essa daqui que ninguém nunca ouviu. Rosa Brea Plus 5 serve de presente, mano. É.",
+      "words": [
+        {
+          "word": " Não,",
+          "start": 255.05,
+          "end": 255.33,
+          "prob": 0.8696
+        },
+        {
+          "word": " mas,",
+          "start": 255.45,
+          "end": 255.57,
+          "prob": 0.9927
+        },
+        {
+          "word": " pô,",
+          "start": 255.69,
+          "end": 255.87,
+          "prob": 0.9863
+        },
+        {
+          "word": " tem",
+          "start": 256.05,
+          "end": 256.23,
+          "prob": 1.0
+        },
+        {
+          "word": " coisa",
+          "start": 256.23,
+          "end": 256.43,
+          "prob": 0.9976
+        },
+        {
+          "word": " que",
+          "start": 256.43,
+          "end": 256.53,
+          "prob": 0.9995
+        },
+        {
+          "word": " não",
+          "start": 256.53,
+          "end": 256.63,
+          "prob": 1.0
+        },
+        {
+          "word": " dá",
+          "start": 256.63,
+          "end": 256.75,
+          "prob": 0.9985
+        },
+        {
+          "word": " pra",
+          "start": 256.75,
+          "end": 256.85,
+          "prob": 0.9526
+        },
+        {
+          "word": " você",
+          "start": 256.85,
+          "end": 256.95,
+          "prob": 0.9829
+        },
+        {
+          "word": " mudar,",
+          "start": 256.95,
+          "end": 257.23,
+          "prob": 0.9995
+        },
+        {
+          "word": " né?",
+          "start": 257.33,
+          "end": 257.45,
+          "prob": 0.9995
+        },
+        {
+          "word": " Fazer",
+          "start": 258.25,
+          "end": 258.65,
+          "prob": 0.8042
+        },
+        {
+          "word": " o",
+          "start": 258.65,
+          "end": 258.73,
+          "prob": 1.0
+        },
+        {
+          "word": " quê,",
+          "start": 258.73,
+          "end": 258.85,
+          "prob": 0.731
+        },
+        {
+          "word": " mano?",
+          "start": 258.93,
+          "end": 259.01,
+          "prob": 0.9644
+        },
+        {
+          "word": " Tipo",
+          "start": 265.45,
+          "end": 265.85,
+          "prob": 0.8677
+        },
+        {
+          "word": " o",
+          "start": 265.85,
+          "end": 265.95,
+          "prob": 0.3203
+        },
+        {
+          "word": " Spotify.",
+          "start": 265.95,
+          "end": 266.27,
+          "prob": 0.999
+        },
+        {
+          "word": " É,",
+          "start": 266.55,
+          "end": 266.65,
+          "prob": 0.9937
+        },
+        {
+          "word": " tipo",
+          "start": 266.81,
+          "end": 266.93,
+          "prob": 0.9976
+        },
+        {
+          "word": " o",
+          "start": 266.93,
+          "end": 267.01,
+          "prob": 0.9995
+        },
+        {
+          "word": " Spotify",
+          "start": 267.01,
+          "end": 267.31,
+          "prob": 1.0
+        },
+        {
+          "word": " que",
+          "start": 267.31,
+          "end": 267.47,
+          "prob": 0.7925
+        },
+        {
+          "word": " eu...",
+          "start": 267.47,
+          "end": 267.65,
+          "prob": 0.8445
+        },
+        {
+          "word": " E",
+          "start": 267.65,
+          "end": 267.85,
+          "prob": 0.8809
+        },
+        {
+          "word": " agora",
+          "start": 267.85,
+          "end": 268.13,
+          "prob": 0.999
+        },
+        {
+          "word": " eu",
+          "start": 268.13,
+          "end": 268.39,
+          "prob": 0.9819
+        },
+        {
+          "word": " posso",
+          "start": 268.39,
+          "end": 268.59,
+          "prob": 1.0
+        },
+        {
+          "word": " confirmar",
+          "start": 268.59,
+          "end": 268.91,
+          "prob": 0.9978
+        },
+        {
+          "word": " que",
+          "start": 268.91,
+          "end": 269.01,
+          "prob": 0.9995
+        },
+        {
+          "word": " eu",
+          "start": 269.01,
+          "end": 269.11,
+          "prob": 1.0
+        },
+        {
+          "word": " instalei",
+          "start": 269.11,
+          "end": 269.67,
+          "prob": 0.9995
+        },
+        {
+          "word": " no",
+          "start": 269.67,
+          "end": 269.79,
+          "prob": 0.9995
+        },
+        {
+          "word": " PC",
+          "start": 269.79,
+          "end": 270.05,
+          "prob": 0.9985
+        },
+        {
+          "word": " de",
+          "start": 270.05,
+          "end": 270.19,
+          "prob": 0.999
+        },
+        {
+          "word": " stream",
+          "start": 270.19,
+          "end": 270.45,
+          "prob": 0.8613
+        },
+        {
+          "word": " o",
+          "start": 270.45,
+          "end": 270.57,
+          "prob": 0.9951
+        },
+        {
+          "word": " Spotify",
+          "start": 270.57,
+          "end": 270.87,
+          "prob": 1.0
+        },
+        {
+          "word": " e",
+          "start": 270.87,
+          "end": 271.07,
+          "prob": 0.7373
+        },
+        {
+          "word": " eu",
+          "start": 271.07,
+          "end": 271.15,
+          "prob": 0.9971
+        },
+        {
+          "word": " posso",
+          "start": 271.15,
+          "end": 271.29,
+          "prob": 0.9995
+        },
+        {
+          "word": " botar",
+          "start": 271.29,
+          "end": 271.55,
+          "prob": 0.9993
+        },
+        {
+          "word": " a",
+          "start": 271.55,
+          "end": 271.67,
+          "prob": 0.9995
+        },
+        {
+          "word": " música",
+          "start": 271.67,
+          "end": 271.91,
+          "prob": 0.9995
+        },
+        {
+          "word": " que",
+          "start": 271.91,
+          "end": 272.07,
+          "prob": 1.0
+        },
+        {
+          "word": " eu",
+          "start": 272.07,
+          "end": 272.13,
+          "prob": 1.0
+        },
+        {
+          "word": " quiser.",
+          "start": 272.13,
+          "end": 272.43,
+          "prob": 1.0
+        },
+        {
+          "word": " Então",
+          "start": 272.81,
+          "end": 273.17,
+          "prob": 0.9956
+        },
+        {
+          "word": " eu",
+          "start": 273.17,
+          "end": 273.23,
+          "prob": 0.8335
+        },
+        {
+          "word": " vou",
+          "start": 273.23,
+          "end": 273.33,
+          "prob": 1.0
+        },
+        {
+          "word": " botar...",
+          "start": 273.33,
+          "end": 274.27,
+          "prob": 0.9858
+        },
+        {
+          "word": " Já",
+          "start": 275.81,
+          "end": 276.23,
+          "prob": 0.9917
+        },
+        {
+          "word": " tinha",
+          "start": 276.23,
+          "end": 276.43,
+          "prob": 0.9985
+        },
+        {
+          "word": " até",
+          "start": 276.43,
+          "end": 276.75,
+          "prob": 0.9937
+        },
+        {
+          "word": " deixado",
+          "start": 276.75,
+          "end": 277.11,
+          "prob": 0.9993
+        },
+        {
+          "word": " no",
+          "start": 277.11,
+          "end": 277.25,
+          "prob": 0.9858
+        },
+        {
+          "word": " grau",
+          "start": 277.25,
+          "end": 277.47,
+          "prob": 0.9885
+        },
+        {
+          "word": " aqui.",
+          "start": 277.47,
+          "end": 277.69,
+          "prob": 0.9995
+        },
+        {
+          "word": " Vou",
+          "start": 277.83,
+          "end": 277.97,
+          "prob": 0.9912
+        },
+        {
+          "word": " botar",
+          "start": 277.97,
+          "end": 278.41,
+          "prob": 1.0
+        },
+        {
+          "word": " essa",
+          "start": 278.41,
+          "end": 278.73,
+          "prob": 0.9961
+        },
+        {
+          "word": " daqui",
+          "start": 278.73,
+          "end": 278.91,
+          "prob": 0.9883
+        },
+        {
+          "word": " que",
+          "start": 278.91,
+          "end": 279.03,
+          "prob": 0.9932
+        },
+        {
+          "word": " ninguém",
+          "start": 279.03,
+          "end": 279.21,
+          "prob": 0.9995
+        },
+        {
+          "word": " nunca",
+          "start": 279.21,
+          "end": 279.57,
+          "prob": 1.0
+        },
+        {
+          "word": " ouviu.",
+          "start": 279.57,
+          "end": 280.03,
+          "prob": 0.9998
+        },
+        {
+          "word": " Rosa",
+          "start": 285.14,
+          "end": 285.46,
+          "prob": 0.917
+        },
+        {
+          "word": " Brea",
+          "start": 285.46,
+          "end": 285.68,
+          "prob": 0.3693
+        },
+        {
+          "word": " Plus",
+          "start": 285.68,
+          "end": 285.78,
+          "prob": 0.5483
+        },
+        {
+          "word": " 5",
+          "start": 285.78,
+          "end": 286.0,
+          "prob": 0.9731
+        },
+        {
+          "word": " serve",
+          "start": 286.0,
+          "end": 286.2,
+          "prob": 0.5894
+        },
+        {
+          "word": " de",
+          "start": 286.2,
+          "end": 286.34,
+          "prob": 0.999
+        },
+        {
+          "word": " presente,",
+          "start": 286.34,
+          "end": 287.02,
+          "prob": 0.9995
+        },
+        {
+          "word": " mano.",
+          "start": 287.2,
+          "end": 287.54,
+          "prob": 1.0
+        },
+        {
+          "word": " É.",
+          "start": 291.86,
+          "end": 292.26,
+          "prob": 0.9946
+        }
+      ]
+    },
+    {
+      "start": 293.48,
+      "end": 322.59,
+      "text": " Por isso que você não leu o Instagram. Eu não leio o Instagram. Pô, mas o Instagram eu nunca li, né? Acho que eu nunca respondi uma pessoa no Instagram na minha vida, velho. Eu nunca fui de usar o Instagram, não. Né? Ah, nunca é mentira, pô. Nunca é. Eu viajei. Muito que eu viajei. Eu respondo quem aparece, quem eu sigo só, né? Aparece lá na frente e tal, né, mano? O Falcon fica mandando uns vídeos merda. Às vezes eu não respondo, né? Eu vejo só, tipo, um mês depois.",
+      "words": [
+        {
+          "word": " Por",
+          "start": 293.48,
+          "end": 293.8,
+          "prob": 0.6982
+        },
+        {
+          "word": " isso",
+          "start": 293.8,
+          "end": 293.92,
+          "prob": 0.9971
+        },
+        {
+          "word": " que",
+          "start": 293.92,
+          "end": 294.0,
+          "prob": 0.9937
+        },
+        {
+          "word": " você",
+          "start": 294.0,
+          "end": 294.2,
+          "prob": 0.9932
+        },
+        {
+          "word": " não",
+          "start": 294.2,
+          "end": 294.36,
+          "prob": 0.9976
+        },
+        {
+          "word": " leu",
+          "start": 294.36,
+          "end": 294.52,
+          "prob": 0.946
+        },
+        {
+          "word": " o",
+          "start": 294.52,
+          "end": 294.62,
+          "prob": 0.7817
+        },
+        {
+          "word": " Instagram.",
+          "start": 294.62,
+          "end": 294.92,
+          "prob": 0.9551
+        },
+        {
+          "word": " Eu",
+          "start": 295.2,
+          "end": 295.32,
+          "prob": 0.9902
+        },
+        {
+          "word": " não",
+          "start": 295.32,
+          "end": 295.48,
+          "prob": 0.9961
+        },
+        {
+          "word": " leio",
+          "start": 295.48,
+          "end": 295.66,
+          "prob": 0.9722
+        },
+        {
+          "word": " o",
+          "start": 295.66,
+          "end": 295.78,
+          "prob": 0.8452
+        },
+        {
+          "word": " Instagram.",
+          "start": 295.78,
+          "end": 296.0,
+          "prob": 0.9995
+        },
+        {
+          "word": " Pô,",
+          "start": 296.28,
+          "end": 296.44,
+          "prob": 0.8284
+        },
+        {
+          "word": " mas",
+          "start": 296.5,
+          "end": 296.58,
+          "prob": 0.999
+        },
+        {
+          "word": " o",
+          "start": 296.58,
+          "end": 296.64,
+          "prob": 0.9878
+        },
+        {
+          "word": " Instagram",
+          "start": 296.64,
+          "end": 296.92,
+          "prob": 0.9995
+        },
+        {
+          "word": " eu",
+          "start": 296.92,
+          "end": 297.04,
+          "prob": 0.9692
+        },
+        {
+          "word": " nunca",
+          "start": 297.04,
+          "end": 297.2,
+          "prob": 0.9995
+        },
+        {
+          "word": " li,",
+          "start": 297.2,
+          "end": 297.38,
+          "prob": 0.999
+        },
+        {
+          "word": " né?",
+          "start": 297.46,
+          "end": 297.52,
+          "prob": 1.0
+        },
+        {
+          "word": " Acho",
+          "start": 297.66,
+          "end": 297.84,
+          "prob": 0.9854
+        },
+        {
+          "word": " que",
+          "start": 297.84,
+          "end": 297.9,
+          "prob": 1.0
+        },
+        {
+          "word": " eu",
+          "start": 297.9,
+          "end": 297.94,
+          "prob": 0.9971
+        },
+        {
+          "word": " nunca",
+          "start": 297.94,
+          "end": 298.06,
+          "prob": 1.0
+        },
+        {
+          "word": " respondi",
+          "start": 298.06,
+          "end": 298.44,
+          "prob": 0.9995
+        },
+        {
+          "word": " uma",
+          "start": 298.44,
+          "end": 298.54,
+          "prob": 0.9946
+        },
+        {
+          "word": " pessoa",
+          "start": 298.54,
+          "end": 298.82,
+          "prob": 0.9995
+        },
+        {
+          "word": " no",
+          "start": 298.82,
+          "end": 298.92,
+          "prob": 0.9985
+        },
+        {
+          "word": " Instagram",
+          "start": 298.92,
+          "end": 299.2,
+          "prob": 1.0
+        },
+        {
+          "word": " na",
+          "start": 299.2,
+          "end": 299.34,
+          "prob": 0.9922
+        },
+        {
+          "word": " minha",
+          "start": 299.34,
+          "end": 299.46,
+          "prob": 0.9995
+        },
+        {
+          "word": " vida,",
+          "start": 299.46,
+          "end": 299.7,
+          "prob": 1.0
+        },
+        {
+          "word": " velho.",
+          "start": 299.78,
+          "end": 299.86,
+          "prob": 0.9824
+        },
+        {
+          "word": " Eu",
+          "start": 299.94,
+          "end": 300.0,
+          "prob": 0.688
+        },
+        {
+          "word": " nunca",
+          "start": 300.0,
+          "end": 300.14,
+          "prob": 1.0
+        },
+        {
+          "word": " fui",
+          "start": 300.14,
+          "end": 300.34,
+          "prob": 0.999
+        },
+        {
+          "word": " de",
+          "start": 300.34,
+          "end": 300.4,
+          "prob": 0.8052
+        },
+        {
+          "word": " usar",
+          "start": 300.4,
+          "end": 300.52,
+          "prob": 0.9976
+        },
+        {
+          "word": " o",
+          "start": 300.52,
+          "end": 300.6,
+          "prob": 0.9731
+        },
+        {
+          "word": " Instagram,",
+          "start": 300.6,
+          "end": 300.94,
+          "prob": 1.0
+        },
+        {
+          "word": " não.",
+          "start": 301.02,
+          "end": 301.1,
+          "prob": 0.9976
+        },
+        {
+          "word": " Né?",
+          "start": 303.05,
+          "end": 303.37,
+          "prob": 0.7332
+        },
+        {
+          "word": " Ah,",
+          "start": 307.06,
+          "end": 307.24,
+          "prob": 0.8486
+        },
+        {
+          "word": " nunca",
+          "start": 307.3,
+          "end": 307.5,
+          "prob": 0.9995
+        },
+        {
+          "word": " é",
+          "start": 307.5,
+          "end": 307.62,
+          "prob": 0.9893
+        },
+        {
+          "word": " mentira,",
+          "start": 307.62,
+          "end": 307.9,
+          "prob": 1.0
+        },
+        {
+          "word": " pô.",
+          "start": 308.02,
+          "end": 308.18,
+          "prob": 0.9978
+        },
+        {
+          "word": " Nunca",
+          "start": 308.94,
+          "end": 309.26,
+          "prob": 0.9966
+        },
+        {
+          "word": " é.",
+          "start": 309.26,
+          "end": 309.4,
+          "prob": 0.6841
+        },
+        {
+          "word": " Eu",
+          "start": 309.44,
+          "end": 309.5,
+          "prob": 0.7124
+        },
+        {
+          "word": " viajei.",
+          "start": 309.5,
+          "end": 310.0,
+          "prob": 0.7568
+        },
+        {
+          "word": " Muito",
+          "start": 310.4,
+          "end": 310.64,
+          "prob": 0.147
+        },
+        {
+          "word": " que",
+          "start": 310.64,
+          "end": 310.8,
+          "prob": 0.4351
+        },
+        {
+          "word": " eu",
+          "start": 310.8,
+          "end": 310.88,
+          "prob": 0.9976
+        },
+        {
+          "word": " viajei.",
+          "start": 310.88,
+          "end": 311.2,
+          "prob": 0.9988
+        },
+        {
+          "word": " Eu",
+          "start": 311.56,
+          "end": 311.8,
+          "prob": 0.9995
+        },
+        {
+          "word": " respondo",
+          "start": 311.8,
+          "end": 312.4,
+          "prob": 0.9834
+        },
+        {
+          "word": " quem",
+          "start": 312.4,
+          "end": 312.64,
+          "prob": 0.999
+        },
+        {
+          "word": " aparece,",
+          "start": 312.64,
+          "end": 313.28,
+          "prob": 0.9561
+        },
+        {
+          "word": " quem",
+          "start": 313.42,
+          "end": 313.5,
+          "prob": 0.999
+        },
+        {
+          "word": " eu",
+          "start": 313.5,
+          "end": 313.58,
+          "prob": 0.9897
+        },
+        {
+          "word": " sigo",
+          "start": 313.58,
+          "end": 313.92,
+          "prob": 0.9998
+        },
+        {
+          "word": " só,",
+          "start": 313.92,
+          "end": 314.1,
+          "prob": 0.9756
+        },
+        {
+          "word": " né?",
+          "start": 314.16,
+          "end": 314.26,
+          "prob": 1.0
+        },
+        {
+          "word": " Aparece",
+          "start": 314.92,
+          "end": 315.24,
+          "prob": 0.8103
+        },
+        {
+          "word": " lá",
+          "start": 315.24,
+          "end": 315.36,
+          "prob": 1.0
+        },
+        {
+          "word": " na",
+          "start": 315.36,
+          "end": 315.5,
+          "prob": 1.0
+        },
+        {
+          "word": " frente",
+          "start": 315.5,
+          "end": 315.94,
+          "prob": 1.0
+        },
+        {
+          "word": " e",
+          "start": 315.94,
+          "end": 316.14,
+          "prob": 0.9971
+        },
+        {
+          "word": " tal,",
+          "start": 316.14,
+          "end": 316.28,
+          "prob": 1.0
+        },
+        {
+          "word": " né,",
+          "start": 316.32,
+          "end": 316.48,
+          "prob": 1.0
+        },
+        {
+          "word": " mano?",
+          "start": 316.54,
+          "end": 316.66,
+          "prob": 0.9985
+        },
+        {
+          "word": " O",
+          "start": 317.59,
+          "end": 317.91,
+          "prob": 0.9976
+        },
+        {
+          "word": " Falcon",
+          "start": 317.91,
+          "end": 318.15,
+          "prob": 0.8716
+        },
+        {
+          "word": " fica",
+          "start": 318.15,
+          "end": 318.37,
+          "prob": 0.981
+        },
+        {
+          "word": " mandando",
+          "start": 318.37,
+          "end": 318.65,
+          "prob": 0.9993
+        },
+        {
+          "word": " uns",
+          "start": 318.65,
+          "end": 318.79,
+          "prob": 0.9932
+        },
+        {
+          "word": " vídeos",
+          "start": 318.79,
+          "end": 318.91,
+          "prob": 0.9497
+        },
+        {
+          "word": " merda.",
+          "start": 318.91,
+          "end": 319.49,
+          "prob": 0.9978
+        },
+        {
+          "word": " Às",
+          "start": 320.21,
+          "end": 320.53,
+          "prob": 0.7881
+        },
+        {
+          "word": " vezes",
+          "start": 320.53,
+          "end": 320.61,
+          "prob": 1.0
+        },
+        {
+          "word": " eu",
+          "start": 320.61,
+          "end": 320.77,
+          "prob": 0.9731
+        },
+        {
+          "word": " não",
+          "start": 320.77,
+          "end": 320.89,
+          "prob": 1.0
+        },
+        {
+          "word": " respondo,",
+          "start": 320.89,
+          "end": 321.33,
+          "prob": 1.0
+        },
+        {
+          "word": " né?",
+          "start": 321.39,
+          "end": 321.41,
+          "prob": 0.999
+        },
+        {
+          "word": " Eu",
+          "start": 321.43,
+          "end": 321.49,
+          "prob": 0.9961
+        },
+        {
+          "word": " vejo",
+          "start": 321.49,
+          "end": 321.65,
+          "prob": 0.9949
+        },
+        {
+          "word": " só,",
+          "start": 321.65,
+          "end": 321.81,
+          "prob": 0.9995
+        },
+        {
+          "word": " tipo,",
+          "start": 321.81,
+          "end": 322.03,
+          "prob": 1.0
+        },
+        {
+          "word": " um",
+          "start": 322.11,
+          "end": 322.17,
+          "prob": 0.9995
+        },
+        {
+          "word": " mês",
+          "start": 322.17,
+          "end": 322.33,
+          "prob": 1.0
+        },
+        {
+          "word": " depois.",
+          "start": 322.33,
+          "end": 322.59,
+          "prob": 1.0
+        }
+      ]
+    },
+    {
+      "start": 335.7,
+      "end": 365.77,
+      "text": " Cara, faz muito tempo que não via uma Lave sua online. Tipo, mais que um ano. Veremos se mudou muita coisa. Mudou porra nenhuma, Sky. Tá? Fica tranquilo. Ou tranquila. Mudou porra nenhuma. Tá a mesma coisa as Lave. Tá? Mesma merda. Tá? Você tá esperando algo diferente aqui? Não tem, mano. Infelizmente. Vai ter eu jogando videogame. Né? Xingando umas pessoas no chat de vez em quando. É... É isso que vai ter aqui, né? Não tem muito além disso. Alanzoca is sick, skipping the jam.",
+      "words": [
+        {
+          "word": " Cara,",
+          "start": 335.7,
+          "end": 335.94,
+          "prob": 0.9585
+        },
+        {
+          "word": " faz",
+          "start": 336.0,
+          "end": 336.16,
+          "prob": 0.9995
+        },
+        {
+          "word": " muito",
+          "start": 336.16,
+          "end": 336.38,
+          "prob": 1.0
+        },
+        {
+          "word": " tempo",
+          "start": 336.38,
+          "end": 336.64,
+          "prob": 1.0
+        },
+        {
+          "word": " que",
+          "start": 336.64,
+          "end": 336.78,
+          "prob": 0.9995
+        },
+        {
+          "word": " não",
+          "start": 336.78,
+          "end": 336.94,
+          "prob": 0.9985
+        },
+        {
+          "word": " via",
+          "start": 336.94,
+          "end": 337.28,
+          "prob": 0.9937
+        },
+        {
+          "word": " uma",
+          "start": 337.28,
+          "end": 337.6,
+          "prob": 0.9941
+        },
+        {
+          "word": " Lave",
+          "start": 337.6,
+          "end": 338.04,
+          "prob": 0.5883
+        },
+        {
+          "word": " sua",
+          "start": 338.04,
+          "end": 338.4,
+          "prob": 0.5361
+        },
+        {
+          "word": " online.",
+          "start": 338.4,
+          "end": 338.78,
+          "prob": 0.9956
+        },
+        {
+          "word": " Tipo,",
+          "start": 338.98,
+          "end": 339.2,
+          "prob": 0.9951
+        },
+        {
+          "word": " mais",
+          "start": 339.24,
+          "end": 339.46,
+          "prob": 1.0
+        },
+        {
+          "word": " que",
+          "start": 339.46,
+          "end": 339.62,
+          "prob": 0.9961
+        },
+        {
+          "word": " um",
+          "start": 339.62,
+          "end": 339.74,
+          "prob": 0.9985
+        },
+        {
+          "word": " ano.",
+          "start": 339.74,
+          "end": 339.92,
+          "prob": 1.0
+        },
+        {
+          "word": " Veremos",
+          "start": 340.04,
+          "end": 340.3,
+          "prob": 0.9915
+        },
+        {
+          "word": " se",
+          "start": 340.3,
+          "end": 340.5,
+          "prob": 1.0
+        },
+        {
+          "word": " mudou",
+          "start": 340.5,
+          "end": 340.74,
+          "prob": 1.0
+        },
+        {
+          "word": " muita",
+          "start": 340.74,
+          "end": 340.98,
+          "prob": 0.9995
+        },
+        {
+          "word": " coisa.",
+          "start": 340.98,
+          "end": 341.28,
+          "prob": 1.0
+        },
+        {
+          "word": " Mudou",
+          "start": 341.4,
+          "end": 341.6,
+          "prob": 0.9932
+        },
+        {
+          "word": " porra",
+          "start": 341.6,
+          "end": 341.86,
+          "prob": 0.9988
+        },
+        {
+          "word": " nenhuma,",
+          "start": 341.86,
+          "end": 342.08,
+          "prob": 0.9995
+        },
+        {
+          "word": " Sky.",
+          "start": 342.18,
+          "end": 342.34,
+          "prob": 0.9512
+        },
+        {
+          "word": " Tá?",
+          "start": 343.02,
+          "end": 343.4,
+          "prob": 0.6562
+        },
+        {
+          "word": " Fica",
+          "start": 343.5,
+          "end": 343.68,
+          "prob": 0.9978
+        },
+        {
+          "word": " tranquilo.",
+          "start": 343.68,
+          "end": 344.32,
+          "prob": 0.9998
+        },
+        {
+          "word": " Ou",
+          "start": 344.62,
+          "end": 344.74,
+          "prob": 0.9658
+        },
+        {
+          "word": " tranquila.",
+          "start": 344.74,
+          "end": 345.28,
+          "prob": 0.9988
+        },
+        {
+          "word": " Mudou",
+          "start": 346.0,
+          "end": 346.3,
+          "prob": 0.9951
+        },
+        {
+          "word": " porra",
+          "start": 346.3,
+          "end": 346.56,
+          "prob": 1.0
+        },
+        {
+          "word": " nenhuma.",
+          "start": 346.56,
+          "end": 346.8,
+          "prob": 1.0
+        },
+        {
+          "word": " Tá",
+          "start": 346.98,
+          "end": 347.0,
+          "prob": 0.9819
+        },
+        {
+          "word": " a",
+          "start": 347.0,
+          "end": 347.12,
+          "prob": 0.7866
+        },
+        {
+          "word": " mesma",
+          "start": 347.12,
+          "end": 347.2,
+          "prob": 1.0
+        },
+        {
+          "word": " coisa",
+          "start": 347.2,
+          "end": 347.56,
+          "prob": 1.0
+        },
+        {
+          "word": " as",
+          "start": 347.56,
+          "end": 347.78,
+          "prob": 0.5562
+        },
+        {
+          "word": " Lave.",
+          "start": 347.78,
+          "end": 348.12,
+          "prob": 0.9724
+        },
+        {
+          "word": " Tá?",
+          "start": 348.5,
+          "end": 348.72,
+          "prob": 0.998
+        },
+        {
+          "word": " Mesma",
+          "start": 348.86,
+          "end": 349.14,
+          "prob": 0.9651
+        },
+        {
+          "word": " merda.",
+          "start": 349.14,
+          "end": 349.6,
+          "prob": 0.9998
+        },
+        {
+          "word": " Tá?",
+          "start": 350.14,
+          "end": 350.42,
+          "prob": 0.897
+        },
+        {
+          "word": " Você",
+          "start": 350.46,
+          "end": 350.54,
+          "prob": 0.5957
+        },
+        {
+          "word": " tá",
+          "start": 350.54,
+          "end": 350.64,
+          "prob": 0.9658
+        },
+        {
+          "word": " esperando",
+          "start": 350.64,
+          "end": 350.98,
+          "prob": 1.0
+        },
+        {
+          "word": " algo",
+          "start": 350.98,
+          "end": 351.16,
+          "prob": 0.9995
+        },
+        {
+          "word": " diferente",
+          "start": 351.16,
+          "end": 351.6,
+          "prob": 1.0
+        },
+        {
+          "word": " aqui?",
+          "start": 351.6,
+          "end": 351.82,
+          "prob": 0.7031
+        },
+        {
+          "word": " Não",
+          "start": 351.92,
+          "end": 352.0,
+          "prob": 0.9912
+        },
+        {
+          "word": " tem,",
+          "start": 352.0,
+          "end": 352.22,
+          "prob": 0.9995
+        },
+        {
+          "word": " mano.",
+          "start": 352.34,
+          "end": 352.42,
+          "prob": 0.9985
+        },
+        {
+          "word": " Infelizmente.",
+          "start": 352.54,
+          "end": 352.98,
+          "prob": 0.9994
+        },
+        {
+          "word": " Vai",
+          "start": 353.02,
+          "end": 353.18,
+          "prob": 0.999
+        },
+        {
+          "word": " ter",
+          "start": 353.18,
+          "end": 353.32,
+          "prob": 1.0
+        },
+        {
+          "word": " eu",
+          "start": 353.32,
+          "end": 353.5,
+          "prob": 0.9995
+        },
+        {
+          "word": " jogando",
+          "start": 353.5,
+          "end": 353.84,
+          "prob": 1.0
+        },
+        {
+          "word": " videogame.",
+          "start": 353.84,
+          "end": 354.44,
+          "prob": 0.9873
+        },
+        {
+          "word": " Né?",
+          "start": 354.96,
+          "end": 355.4,
+          "prob": 0.9824
+        },
+        {
+          "word": " Xingando",
+          "start": 355.54,
+          "end": 355.98,
+          "prob": 0.9832
+        },
+        {
+          "word": " umas",
+          "start": 355.98,
+          "end": 356.12,
+          "prob": 0.9829
+        },
+        {
+          "word": " pessoas",
+          "start": 356.12,
+          "end": 356.34,
+          "prob": 0.9976
+        },
+        {
+          "word": " no",
+          "start": 356.34,
+          "end": 356.5,
+          "prob": 0.9995
+        },
+        {
+          "word": " chat",
+          "start": 356.5,
+          "end": 356.7,
+          "prob": 0.9995
+        },
+        {
+          "word": " de",
+          "start": 356.7,
+          "end": 356.86,
+          "prob": 0.9839
+        },
+        {
+          "word": " vez",
+          "start": 356.86,
+          "end": 356.96,
+          "prob": 1.0
+        },
+        {
+          "word": " em",
+          "start": 356.96,
+          "end": 357.1,
+          "prob": 1.0
+        },
+        {
+          "word": " quando.",
+          "start": 357.1,
+          "end": 357.52,
+          "prob": 0.999
+        },
+        {
+          "word": " É...",
+          "start": 358.69,
+          "end": 359.13,
+          "prob": 0.7942
+        },
+        {
+          "word": " É",
+          "start": 359.13,
+          "end": 359.35,
+          "prob": 0.9629
+        },
+        {
+          "word": " isso",
+          "start": 359.35,
+          "end": 359.53,
+          "prob": 0.9995
+        },
+        {
+          "word": " que",
+          "start": 359.53,
+          "end": 359.63,
+          "prob": 1.0
+        },
+        {
+          "word": " vai",
+          "start": 359.63,
+          "end": 359.75,
+          "prob": 1.0
+        },
+        {
+          "word": " ter",
+          "start": 359.75,
+          "end": 359.87,
+          "prob": 0.999
+        },
+        {
+          "word": " aqui,",
+          "start": 359.87,
+          "end": 360.11,
+          "prob": 1.0
+        },
+        {
+          "word": " né?",
+          "start": 360.19,
+          "end": 360.27,
+          "prob": 1.0
+        },
+        {
+          "word": " Não",
+          "start": 360.45,
+          "end": 360.63,
+          "prob": 0.7446
+        },
+        {
+          "word": " tem",
+          "start": 360.63,
+          "end": 360.75,
+          "prob": 0.9995
+        },
+        {
+          "word": " muito",
+          "start": 360.75,
+          "end": 361.15,
+          "prob": 0.9995
+        },
+        {
+          "word": " além",
+          "start": 361.15,
+          "end": 361.51,
+          "prob": 0.9766
+        },
+        {
+          "word": " disso.",
+          "start": 361.51,
+          "end": 361.87,
+          "prob": 1.0
+        },
+        {
+          "word": " Alanzoca",
+          "start": 364.11,
+          "end": 364.55,
+          "prob": 0.7575
+        },
+        {
+          "word": " is",
+          "start": 364.55,
+          "end": 364.79,
+          "prob": 0.1209
+        },
+        {
+          "word": " sick,",
+          "start": 364.79,
+          "end": 364.99,
+          "prob": 0.9531
+        },
+        {
+          "word": " skipping",
+          "start": 365.09,
+          "end": 365.33,
+          "prob": 0.8228
+        },
+        {
+          "word": " the",
+          "start": 365.33,
+          "end": 365.51,
+          "prob": 0.9995
+        },
+        {
+          "word": " jam.",
+          "start": 365.51,
+          "end": 365.77,
+          "prob": 0.501
+        }
+      ]
+    },
+    {
+      "start": 366.27,
+      "end": 414.33,
+      "text": " And juggling a packed release calendar. Caralho! É, velho, é isso aí mesmo, mano. É isso aí mesmo, mano. Henry Carecão, um brilhado pelos três meses, velho, também. Muito obrigado, mano. O que mais, Char, tem de bom? Tem nada de bom, né? De bom nunca tem nada. Mas de ruim tem muita coisa, né? Mas de bom tem o quê? Tem eu, né? Viu as novas screenshots de GTA? Eu vi, sim. Eu vi, sim. Dia de ler o walkthrough ou ler o antes da live? Ô, louco, não precisa de walkthrough pro jogo aí. Precisa?",
+      "words": [
+        {
+          "word": " And",
+          "start": 366.27,
+          "end": 366.59,
+          "prob": 0.2048
+        },
+        {
+          "word": " juggling",
+          "start": 366.59,
+          "end": 366.91,
+          "prob": 0.8367
+        },
+        {
+          "word": " a",
+          "start": 366.91,
+          "end": 367.07,
+          "prob": 0.9556
+        },
+        {
+          "word": " packed",
+          "start": 367.07,
+          "end": 367.85,
+          "prob": 0.7173
+        },
+        {
+          "word": " release",
+          "start": 367.85,
+          "end": 368.57,
+          "prob": 0.9834
+        },
+        {
+          "word": " calendar.",
+          "start": 368.57,
+          "end": 369.13,
+          "prob": 0.9956
+        },
+        {
+          "word": " Caralho!",
+          "start": 369.69,
+          "end": 370.01,
+          "prob": 0.9956
+        },
+        {
+          "word": " É,",
+          "start": 373.68,
+          "end": 373.96,
+          "prob": 0.9956
+        },
+        {
+          "word": " velho,",
+          "start": 374.1,
+          "end": 374.24,
+          "prob": 0.9949
+        },
+        {
+          "word": " é",
+          "start": 374.24,
+          "end": 374.32,
+          "prob": 0.9995
+        },
+        {
+          "word": " isso",
+          "start": 374.32,
+          "end": 374.46,
+          "prob": 1.0
+        },
+        {
+          "word": " aí",
+          "start": 374.46,
+          "end": 374.58,
+          "prob": 0.998
+        },
+        {
+          "word": " mesmo,",
+          "start": 374.58,
+          "end": 374.84,
+          "prob": 0.9995
+        },
+        {
+          "word": " mano.",
+          "start": 374.92,
+          "end": 375.06,
+          "prob": 0.9985
+        },
+        {
+          "word": " É",
+          "start": 377.27,
+          "end": 377.55,
+          "prob": 0.998
+        },
+        {
+          "word": " isso",
+          "start": 377.55,
+          "end": 377.69,
+          "prob": 0.9995
+        },
+        {
+          "word": " aí",
+          "start": 377.69,
+          "end": 377.85,
+          "prob": 1.0
+        },
+        {
+          "word": " mesmo,",
+          "start": 377.85,
+          "end": 378.11,
+          "prob": 0.9995
+        },
+        {
+          "word": " mano.",
+          "start": 378.15,
+          "end": 378.25,
+          "prob": 0.999
+        },
+        {
+          "word": " Henry",
+          "start": 382.3,
+          "end": 382.5,
+          "prob": 0.3052
+        },
+        {
+          "word": " Carecão,",
+          "start": 382.5,
+          "end": 383.08,
+          "prob": 0.9702
+        },
+        {
+          "word": " um",
+          "start": 383.18,
+          "end": 383.24,
+          "prob": 0.5742
+        },
+        {
+          "word": " brilhado",
+          "start": 383.24,
+          "end": 383.36,
+          "prob": 0.5466
+        },
+        {
+          "word": " pelos",
+          "start": 383.36,
+          "end": 383.58,
+          "prob": 0.3911
+        },
+        {
+          "word": " três",
+          "start": 383.58,
+          "end": 383.78,
+          "prob": 0.7974
+        },
+        {
+          "word": " meses,",
+          "start": 383.78,
+          "end": 384.32,
+          "prob": 1.0
+        },
+        {
+          "word": " velho,",
+          "start": 384.48,
+          "end": 384.66,
+          "prob": 0.9968
+        },
+        {
+          "word": " também.",
+          "start": 384.76,
+          "end": 384.92,
+          "prob": 0.9995
+        },
+        {
+          "word": " Muito",
+          "start": 385.08,
+          "end": 385.22,
+          "prob": 0.9995
+        },
+        {
+          "word": " obrigado,",
+          "start": 385.22,
+          "end": 385.68,
+          "prob": 0.999
+        },
+        {
+          "word": " mano.",
+          "start": 385.84,
+          "end": 385.94,
+          "prob": 0.9961
+        },
+        {
+          "word": " O",
+          "start": 388.95,
+          "end": 389.09,
+          "prob": 0.9136
+        },
+        {
+          "word": " que",
+          "start": 389.09,
+          "end": 389.11,
+          "prob": 0.999
+        },
+        {
+          "word": " mais,",
+          "start": 389.11,
+          "end": 389.33,
+          "prob": 0.9971
+        },
+        {
+          "word": " Char,",
+          "start": 389.39,
+          "end": 389.51,
+          "prob": 0.2754
+        },
+        {
+          "word": " tem",
+          "start": 389.59,
+          "end": 389.67,
+          "prob": 0.999
+        },
+        {
+          "word": " de",
+          "start": 389.67,
+          "end": 389.79,
+          "prob": 0.9995
+        },
+        {
+          "word": " bom?",
+          "start": 389.79,
+          "end": 389.99,
+          "prob": 0.999
+        },
+        {
+          "word": " Tem",
+          "start": 390.09,
+          "end": 390.21,
+          "prob": 0.9692
+        },
+        {
+          "word": " nada",
+          "start": 390.21,
+          "end": 390.35,
+          "prob": 0.9883
+        },
+        {
+          "word": " de",
+          "start": 390.35,
+          "end": 390.47,
+          "prob": 0.9961
+        },
+        {
+          "word": " bom,",
+          "start": 390.47,
+          "end": 390.61,
+          "prob": 1.0
+        },
+        {
+          "word": " né?",
+          "start": 390.67,
+          "end": 390.75,
+          "prob": 1.0
+        },
+        {
+          "word": " De",
+          "start": 390.75,
+          "end": 390.87,
+          "prob": 0.9995
+        },
+        {
+          "word": " bom",
+          "start": 390.87,
+          "end": 390.99,
+          "prob": 0.9995
+        },
+        {
+          "word": " nunca",
+          "start": 390.99,
+          "end": 391.21,
+          "prob": 0.9868
+        },
+        {
+          "word": " tem",
+          "start": 391.21,
+          "end": 391.41,
+          "prob": 1.0
+        },
+        {
+          "word": " nada.",
+          "start": 391.41,
+          "end": 391.71,
+          "prob": 1.0
+        },
+        {
+          "word": " Mas",
+          "start": 392.07,
+          "end": 392.29,
+          "prob": 0.9839
+        },
+        {
+          "word": " de",
+          "start": 392.29,
+          "end": 392.43,
+          "prob": 0.9971
+        },
+        {
+          "word": " ruim",
+          "start": 392.43,
+          "end": 392.59,
+          "prob": 1.0
+        },
+        {
+          "word": " tem",
+          "start": 392.59,
+          "end": 392.71,
+          "prob": 0.9995
+        },
+        {
+          "word": " muita",
+          "start": 392.71,
+          "end": 392.91,
+          "prob": 1.0
+        },
+        {
+          "word": " coisa,",
+          "start": 392.91,
+          "end": 393.23,
+          "prob": 1.0
+        },
+        {
+          "word": " né?",
+          "start": 393.31,
+          "end": 393.39,
+          "prob": 0.9976
+        },
+        {
+          "word": " Mas",
+          "start": 393.41,
+          "end": 393.57,
+          "prob": 0.999
+        },
+        {
+          "word": " de",
+          "start": 393.57,
+          "end": 393.67,
+          "prob": 1.0
+        },
+        {
+          "word": " bom",
+          "start": 393.67,
+          "end": 393.85,
+          "prob": 1.0
+        },
+        {
+          "word": " tem",
+          "start": 393.85,
+          "end": 394.09,
+          "prob": 0.9995
+        },
+        {
+          "word": " o",
+          "start": 394.09,
+          "end": 394.27,
+          "prob": 0.9971
+        },
+        {
+          "word": " quê?",
+          "start": 394.27,
+          "end": 394.31,
+          "prob": 0.9683
+        },
+        {
+          "word": " Tem",
+          "start": 394.43,
+          "end": 394.55,
+          "prob": 0.9922
+        },
+        {
+          "word": " eu,",
+          "start": 394.55,
+          "end": 394.77,
+          "prob": 0.9937
+        },
+        {
+          "word": " né?",
+          "start": 394.87,
+          "end": 394.93,
+          "prob": 1.0
+        },
+        {
+          "word": " Viu",
+          "start": 402.2,
+          "end": 402.42,
+          "prob": 0.9092
+        },
+        {
+          "word": " as",
+          "start": 402.42,
+          "end": 402.56,
+          "prob": 0.9985
+        },
+        {
+          "word": " novas",
+          "start": 402.56,
+          "end": 402.8,
+          "prob": 1.0
+        },
+        {
+          "word": " screenshots",
+          "start": 402.8,
+          "end": 403.22,
+          "prob": 0.9878
+        },
+        {
+          "word": " de",
+          "start": 403.22,
+          "end": 403.44,
+          "prob": 0.7012
+        },
+        {
+          "word": " GTA?",
+          "start": 403.44,
+          "end": 403.7,
+          "prob": 0.9995
+        },
+        {
+          "word": " Eu",
+          "start": 403.82,
+          "end": 403.92,
+          "prob": 0.9692
+        },
+        {
+          "word": " vi,",
+          "start": 403.92,
+          "end": 404.1,
+          "prob": 0.9995
+        },
+        {
+          "word": " sim.",
+          "start": 404.24,
+          "end": 404.32,
+          "prob": 1.0
+        },
+        {
+          "word": " Eu",
+          "start": 407.68,
+          "end": 407.98,
+          "prob": 0.9961
+        },
+        {
+          "word": " vi,",
+          "start": 407.98,
+          "end": 408.12,
+          "prob": 1.0
+        },
+        {
+          "word": " sim.",
+          "start": 408.2,
+          "end": 408.36,
+          "prob": 1.0
+        },
+        {
+          "word": " Dia",
+          "start": 409.69,
+          "end": 409.87,
+          "prob": 0.9429
+        },
+        {
+          "word": " de",
+          "start": 409.87,
+          "end": 410.03,
+          "prob": 0.9995
+        },
+        {
+          "word": " ler",
+          "start": 410.03,
+          "end": 410.19,
+          "prob": 0.9927
+        },
+        {
+          "word": " o",
+          "start": 410.19,
+          "end": 410.29,
+          "prob": 0.9463
+        },
+        {
+          "word": " walkthrough",
+          "start": 410.29,
+          "end": 410.69,
+          "prob": 0.8545
+        },
+        {
+          "word": " ou",
+          "start": 410.69,
+          "end": 410.81,
+          "prob": 0.9038
+        },
+        {
+          "word": " ler",
+          "start": 410.81,
+          "end": 410.89,
+          "prob": 0.6562
+        },
+        {
+          "word": " o",
+          "start": 410.89,
+          "end": 410.97,
+          "prob": 0.7061
+        },
+        {
+          "word": " antes",
+          "start": 410.97,
+          "end": 411.11,
+          "prob": 0.9858
+        },
+        {
+          "word": " da",
+          "start": 411.11,
+          "end": 411.25,
+          "prob": 1.0
+        },
+        {
+          "word": " live?",
+          "start": 411.25,
+          "end": 411.59,
+          "prob": 0.999
+        },
+        {
+          "word": " Ô,",
+          "start": 411.87,
+          "end": 411.99,
+          "prob": 0.7778
+        },
+        {
+          "word": " louco,",
+          "start": 412.03,
+          "end": 412.15,
+          "prob": 0.9941
+        },
+        {
+          "word": " não",
+          "start": 412.19,
+          "end": 412.27,
+          "prob": 0.9766
+        },
+        {
+          "word": " precisa",
+          "start": 412.27,
+          "end": 412.41,
+          "prob": 0.998
+        },
+        {
+          "word": " de",
+          "start": 412.41,
+          "end": 412.51,
+          "prob": 0.999
+        },
+        {
+          "word": " walkthrough",
+          "start": 412.51,
+          "end": 412.87,
+          "prob": 0.9995
+        },
+        {
+          "word": " pro",
+          "start": 412.87,
+          "end": 413.11,
+          "prob": 0.9619
+        },
+        {
+          "word": " jogo",
+          "start": 413.11,
+          "end": 413.75,
+          "prob": 0.9712
+        },
+        {
+          "word": " aí.",
+          "start": 413.75,
+          "end": 413.91,
+          "prob": 0.9966
+        },
+        {
+          "word": " Precisa?",
+          "start": 414.03,
+          "end": 414.33,
+          "prob": 0.9956
+        }
+      ]
+    },
+    {
+      "start": 415.8,
+      "end": 459.99,
+      "text": " Não li não, mano. Né? Não li não. Bacazimbrá para os 47. Tá vendo os vazamentos ainda. Não teve mais vazamento, pô. O cara meteu o pé já o vazador. Depois saiu esse trailer de 27 minutos. Né? Né? Não teve mais. O que mais tem de bom aí, mano? Será que ele morreu o vazador? Pior que não, mano. Pior que eu acho que a Rockstar não faz ideia de como o cara vazou os bagulhos, velho. Pior que eu acho que ele não morreu não, mano.",
+      "words": [
+        {
+          "word": " Não",
+          "start": 415.8,
+          "end": 416.12,
+          "prob": 0.9624
+        },
+        {
+          "word": " li",
+          "start": 416.12,
+          "end": 416.26,
+          "prob": 0.9961
+        },
+        {
+          "word": " não,",
+          "start": 416.26,
+          "end": 416.46,
+          "prob": 0.7422
+        },
+        {
+          "word": " mano.",
+          "start": 416.54,
+          "end": 416.66,
+          "prob": 0.998
+        },
+        {
+          "word": " Né?",
+          "start": 420.59,
+          "end": 420.91,
+          "prob": 0.6696
+        },
+        {
+          "word": " Não",
+          "start": 421.17,
+          "end": 421.43,
+          "prob": 0.9507
+        },
+        {
+          "word": " li",
+          "start": 421.43,
+          "end": 421.57,
+          "prob": 1.0
+        },
+        {
+          "word": " não.",
+          "start": 421.57,
+          "end": 421.69,
+          "prob": 0.9995
+        },
+        {
+          "word": " Bacazimbrá",
+          "start": 422.09,
+          "end": 422.41,
+          "prob": 0.6258
+        },
+        {
+          "word": " para",
+          "start": 422.41,
+          "end": 422.51,
+          "prob": 0.2231
+        },
+        {
+          "word": " os",
+          "start": 422.51,
+          "end": 422.59,
+          "prob": 0.9761
+        },
+        {
+          "word": " 47.",
+          "start": 422.59,
+          "end": 423.17,
+          "prob": 0.9878
+        },
+        {
+          "word": " Tá",
+          "start": 424.45,
+          "end": 424.77,
+          "prob": 0.6221
+        },
+        {
+          "word": " vendo",
+          "start": 424.77,
+          "end": 424.95,
+          "prob": 0.9292
+        },
+        {
+          "word": " os",
+          "start": 424.95,
+          "end": 425.11,
+          "prob": 1.0
+        },
+        {
+          "word": " vazamentos",
+          "start": 425.11,
+          "end": 425.59,
+          "prob": 0.9998
+        },
+        {
+          "word": " ainda.",
+          "start": 425.59,
+          "end": 425.83,
+          "prob": 0.999
+        },
+        {
+          "word": " Não",
+          "start": 425.95,
+          "end": 426.05,
+          "prob": 0.9976
+        },
+        {
+          "word": " teve",
+          "start": 426.05,
+          "end": 426.27,
+          "prob": 0.9995
+        },
+        {
+          "word": " mais",
+          "start": 426.27,
+          "end": 426.43,
+          "prob": 1.0
+        },
+        {
+          "word": " vazamento,",
+          "start": 426.43,
+          "end": 426.95,
+          "prob": 0.9954
+        },
+        {
+          "word": " pô.",
+          "start": 427.09,
+          "end": 427.17,
+          "prob": 0.9917
+        },
+        {
+          "word": " O",
+          "start": 427.23,
+          "end": 427.43,
+          "prob": 0.998
+        },
+        {
+          "word": " cara",
+          "start": 427.43,
+          "end": 427.43,
+          "prob": 1.0
+        },
+        {
+          "word": " meteu",
+          "start": 427.43,
+          "end": 427.83,
+          "prob": 0.9988
+        },
+        {
+          "word": " o",
+          "start": 427.83,
+          "end": 427.93,
+          "prob": 0.9912
+        },
+        {
+          "word": " pé",
+          "start": 427.93,
+          "end": 428.05,
+          "prob": 1.0
+        },
+        {
+          "word": " já",
+          "start": 428.05,
+          "end": 428.21,
+          "prob": 0.9932
+        },
+        {
+          "word": " o",
+          "start": 428.21,
+          "end": 428.31,
+          "prob": 0.5547
+        },
+        {
+          "word": " vazador.",
+          "start": 428.31,
+          "end": 428.75,
+          "prob": 0.9961
+        },
+        {
+          "word": " Depois",
+          "start": 430.28,
+          "end": 430.6,
+          "prob": 0.9995
+        },
+        {
+          "word": " saiu",
+          "start": 430.6,
+          "end": 430.88,
+          "prob": 0.9766
+        },
+        {
+          "word": " esse",
+          "start": 430.88,
+          "end": 431.02,
+          "prob": 0.9995
+        },
+        {
+          "word": " trailer",
+          "start": 431.02,
+          "end": 431.42,
+          "prob": 0.9995
+        },
+        {
+          "word": " de",
+          "start": 431.42,
+          "end": 431.92,
+          "prob": 0.9961
+        },
+        {
+          "word": " 27",
+          "start": 431.92,
+          "end": 432.32,
+          "prob": 0.9946
+        },
+        {
+          "word": " minutos.",
+          "start": 432.32,
+          "end": 432.8,
+          "prob": 0.9995
+        },
+        {
+          "word": " Né?",
+          "start": 437.49,
+          "end": 437.81,
+          "prob": 0.9792
+        },
+        {
+          "word": " Né?",
+          "start": 438.13,
+          "end": 438.39,
+          "prob": 0.8247
+        },
+        {
+          "word": " Não",
+          "start": 442.47,
+          "end": 442.57,
+          "prob": 0.9502
+        },
+        {
+          "word": " teve",
+          "start": 442.57,
+          "end": 442.87,
+          "prob": 1.0
+        },
+        {
+          "word": " mais.",
+          "start": 442.87,
+          "end": 443.13,
+          "prob": 0.9556
+        },
+        {
+          "word": " O",
+          "start": 445.39,
+          "end": 445.71,
+          "prob": 0.8853
+        },
+        {
+          "word": " que",
+          "start": 445.71,
+          "end": 445.81,
+          "prob": 0.9937
+        },
+        {
+          "word": " mais",
+          "start": 445.81,
+          "end": 446.05,
+          "prob": 0.9819
+        },
+        {
+          "word": " tem",
+          "start": 446.05,
+          "end": 446.21,
+          "prob": 0.6729
+        },
+        {
+          "word": " de",
+          "start": 446.21,
+          "end": 446.47,
+          "prob": 0.9956
+        },
+        {
+          "word": " bom",
+          "start": 446.47,
+          "end": 446.71,
+          "prob": 0.9995
+        },
+        {
+          "word": " aí,",
+          "start": 446.71,
+          "end": 446.89,
+          "prob": 0.999
+        },
+        {
+          "word": " mano?",
+          "start": 446.99,
+          "end": 447.13,
+          "prob": 1.0
+        },
+        {
+          "word": " Será",
+          "start": 452.03,
+          "end": 452.31,
+          "prob": 0.9375
+        },
+        {
+          "word": " que",
+          "start": 452.31,
+          "end": 453.13,
+          "prob": 1.0
+        },
+        {
+          "word": " ele",
+          "start": 453.13,
+          "end": 453.21,
+          "prob": 1.0
+        },
+        {
+          "word": " morreu",
+          "start": 453.21,
+          "end": 453.53,
+          "prob": 0.9998
+        },
+        {
+          "word": " o",
+          "start": 453.53,
+          "end": 453.61,
+          "prob": 0.6392
+        },
+        {
+          "word": " vazador?",
+          "start": 453.61,
+          "end": 453.95,
+          "prob": 0.9998
+        },
+        {
+          "word": " Pior",
+          "start": 454.05,
+          "end": 454.19,
+          "prob": 0.998
+        },
+        {
+          "word": " que",
+          "start": 454.19,
+          "end": 454.33,
+          "prob": 1.0
+        },
+        {
+          "word": " não,",
+          "start": 454.33,
+          "end": 454.51,
+          "prob": 1.0
+        },
+        {
+          "word": " mano.",
+          "start": 454.63,
+          "end": 454.69,
+          "prob": 0.999
+        },
+        {
+          "word": " Pior",
+          "start": 454.79,
+          "end": 454.89,
+          "prob": 0.9973
+        },
+        {
+          "word": " que",
+          "start": 454.89,
+          "end": 454.99,
+          "prob": 0.998
+        },
+        {
+          "word": " eu",
+          "start": 454.99,
+          "end": 455.07,
+          "prob": 0.9995
+        },
+        {
+          "word": " acho",
+          "start": 455.07,
+          "end": 455.19,
+          "prob": 0.9995
+        },
+        {
+          "word": " que",
+          "start": 455.19,
+          "end": 455.27,
+          "prob": 1.0
+        },
+        {
+          "word": " a",
+          "start": 455.27,
+          "end": 455.35,
+          "prob": 0.999
+        },
+        {
+          "word": " Rockstar",
+          "start": 455.35,
+          "end": 455.69,
+          "prob": 0.9976
+        },
+        {
+          "word": " não",
+          "start": 455.69,
+          "end": 455.83,
+          "prob": 0.9995
+        },
+        {
+          "word": " faz",
+          "start": 455.83,
+          "end": 456.05,
+          "prob": 1.0
+        },
+        {
+          "word": " ideia",
+          "start": 456.05,
+          "end": 456.35,
+          "prob": 0.9995
+        },
+        {
+          "word": " de",
+          "start": 456.35,
+          "end": 456.47,
+          "prob": 0.9985
+        },
+        {
+          "word": " como",
+          "start": 456.47,
+          "end": 456.67,
+          "prob": 1.0
+        },
+        {
+          "word": " o",
+          "start": 456.67,
+          "end": 456.79,
+          "prob": 1.0
+        },
+        {
+          "word": " cara",
+          "start": 456.79,
+          "end": 456.93,
+          "prob": 1.0
+        },
+        {
+          "word": " vazou",
+          "start": 456.93,
+          "end": 457.25,
+          "prob": 1.0
+        },
+        {
+          "word": " os",
+          "start": 457.25,
+          "end": 457.35,
+          "prob": 0.9912
+        },
+        {
+          "word": " bagulhos,",
+          "start": 457.35,
+          "end": 457.69,
+          "prob": 0.8607
+        },
+        {
+          "word": " velho.",
+          "start": 457.75,
+          "end": 457.93,
+          "prob": 0.9722
+        },
+        {
+          "word": " Pior",
+          "start": 458.51,
+          "end": 458.77,
+          "prob": 0.9988
+        },
+        {
+          "word": " que",
+          "start": 458.77,
+          "end": 458.85,
+          "prob": 1.0
+        },
+        {
+          "word": " eu",
+          "start": 458.85,
+          "end": 458.91,
+          "prob": 1.0
+        },
+        {
+          "word": " acho",
+          "start": 458.91,
+          "end": 458.99,
+          "prob": 1.0
+        },
+        {
+          "word": " que",
+          "start": 458.99,
+          "end": 459.07,
+          "prob": 1.0
+        },
+        {
+          "word": " ele",
+          "start": 459.07,
+          "end": 459.17,
+          "prob": 0.9995
+        },
+        {
+          "word": " não",
+          "start": 459.17,
+          "end": 459.27,
+          "prob": 1.0
+        },
+        {
+          "word": " morreu",
+          "start": 459.27,
+          "end": 459.59,
+          "prob": 1.0
+        },
+        {
+          "word": " não,",
+          "start": 459.59,
+          "end": 459.75,
+          "prob": 0.876
+        },
+        {
+          "word": " mano.",
+          "start": 459.85,
+          "end": 459.99,
+          "prob": 1.0
+        }
+      ]
+    },
+    {
+      "start": 461.49,
+      "end": 501.09,
+      "text": " Quem matou você ontem de noite? Ah, tava jogando solo, Falcon. Ficou uns horrorosos mesmo. Tava jogando solo, pô. Né? Gabibre, é pelo 77. Tá gripado? Eu não sei se tô gripado. Ontem eu acordei com dor de garganta. O dia inteiro meio zoom. O dia inteiro não, né? Acordei com uma dorzinha de garganta. Daí à noite, meu nariz começou a ficar meio chumbrado, mano. Meu nariz começou a ficar... Né? Daí hoje eu acordei sem dor de garganta.",
+      "words": [
+        {
+          "word": " Quem",
+          "start": 461.49,
+          "end": 461.91,
+          "prob": 0.98
+        },
+        {
+          "word": " matou",
+          "start": 461.91,
+          "end": 462.23,
+          "prob": 0.9912
+        },
+        {
+          "word": " você",
+          "start": 462.23,
+          "end": 462.53,
+          "prob": 0.999
+        },
+        {
+          "word": " ontem",
+          "start": 462.53,
+          "end": 462.79,
+          "prob": 0.9993
+        },
+        {
+          "word": " de",
+          "start": 462.79,
+          "end": 462.91,
+          "prob": 1.0
+        },
+        {
+          "word": " noite?",
+          "start": 462.91,
+          "end": 463.23,
+          "prob": 1.0
+        },
+        {
+          "word": " Ah,",
+          "start": 463.53,
+          "end": 463.73,
+          "prob": 0.9976
+        },
+        {
+          "word": " tava",
+          "start": 463.83,
+          "end": 463.91,
+          "prob": 0.9346
+        },
+        {
+          "word": " jogando",
+          "start": 463.91,
+          "end": 464.21,
+          "prob": 0.9998
+        },
+        {
+          "word": " solo,",
+          "start": 464.21,
+          "end": 464.59,
+          "prob": 0.998
+        },
+        {
+          "word": " Falcon.",
+          "start": 464.73,
+          "end": 465.03,
+          "prob": 0.9106
+        },
+        {
+          "word": " Ficou",
+          "start": 465.29,
+          "end": 465.43,
+          "prob": 0.4976
+        },
+        {
+          "word": " uns",
+          "start": 465.43,
+          "end": 465.57,
+          "prob": 0.6899
+        },
+        {
+          "word": " horrorosos",
+          "start": 465.57,
+          "end": 466.05,
+          "prob": 0.7869
+        },
+        {
+          "word": " mesmo.",
+          "start": 466.05,
+          "end": 466.27,
+          "prob": 0.9629
+        },
+        {
+          "word": " Tava",
+          "start": 469.98,
+          "end": 470.18,
+          "prob": 0.9939
+        },
+        {
+          "word": " jogando",
+          "start": 470.18,
+          "end": 470.48,
+          "prob": 0.9985
+        },
+        {
+          "word": " solo,",
+          "start": 470.48,
+          "end": 470.84,
+          "prob": 1.0
+        },
+        {
+          "word": " pô.",
+          "start": 470.94,
+          "end": 471.1,
+          "prob": 0.9963
+        },
+        {
+          "word": " Né?",
+          "start": 474.82,
+          "end": 475.02,
+          "prob": 0.9746
+        },
+        {
+          "word": " Gabibre,",
+          "start": 476.02,
+          "end": 476.44,
+          "prob": 0.6178
+        },
+        {
+          "word": " é",
+          "start": 476.56,
+          "end": 476.56,
+          "prob": 0.3875
+        },
+        {
+          "word": " pelo",
+          "start": 476.56,
+          "end": 476.66,
+          "prob": 0.8481
+        },
+        {
+          "word": " 77.",
+          "start": 476.66,
+          "end": 477.4,
+          "prob": 0.9966
+        },
+        {
+          "word": " Tá",
+          "start": 481.2,
+          "end": 481.58,
+          "prob": 0.9941
+        },
+        {
+          "word": " gripado?",
+          "start": 481.58,
+          "end": 482.2,
+          "prob": 0.9995
+        },
+        {
+          "word": " Eu",
+          "start": 482.76,
+          "end": 483.08,
+          "prob": 0.3174
+        },
+        {
+          "word": " não",
+          "start": 483.08,
+          "end": 483.18,
+          "prob": 0.9995
+        },
+        {
+          "word": " sei",
+          "start": 483.18,
+          "end": 483.28,
+          "prob": 0.9995
+        },
+        {
+          "word": " se",
+          "start": 483.28,
+          "end": 483.38,
+          "prob": 0.9995
+        },
+        {
+          "word": " tô",
+          "start": 483.38,
+          "end": 483.48,
+          "prob": 0.7681
+        },
+        {
+          "word": " gripado.",
+          "start": 483.48,
+          "end": 483.94,
+          "prob": 0.9998
+        },
+        {
+          "word": " Ontem",
+          "start": 484.02,
+          "end": 484.2,
+          "prob": 0.9973
+        },
+        {
+          "word": " eu",
+          "start": 484.2,
+          "end": 484.3,
+          "prob": 0.9888
+        },
+        {
+          "word": " acordei",
+          "start": 484.3,
+          "end": 484.58,
+          "prob": 0.9997
+        },
+        {
+          "word": " com",
+          "start": 484.58,
+          "end": 484.68,
+          "prob": 1.0
+        },
+        {
+          "word": " dor",
+          "start": 484.68,
+          "end": 484.8,
+          "prob": 0.9985
+        },
+        {
+          "word": " de",
+          "start": 484.8,
+          "end": 484.94,
+          "prob": 1.0
+        },
+        {
+          "word": " garganta.",
+          "start": 484.94,
+          "end": 485.56,
+          "prob": 1.0
+        },
+        {
+          "word": " O",
+          "start": 486.37,
+          "end": 486.61,
+          "prob": 0.6113
+        },
+        {
+          "word": " dia",
+          "start": 486.61,
+          "end": 486.77,
+          "prob": 0.4963
+        },
+        {
+          "word": " inteiro",
+          "start": 486.77,
+          "end": 487.11,
+          "prob": 1.0
+        },
+        {
+          "word": " meio",
+          "start": 487.11,
+          "end": 487.29,
+          "prob": 0.6909
+        },
+        {
+          "word": " zoom.",
+          "start": 487.29,
+          "end": 487.69,
+          "prob": 0.9722
+        },
+        {
+          "word": " O",
+          "start": 489.2,
+          "end": 489.38,
+          "prob": 0.5649
+        },
+        {
+          "word": " dia",
+          "start": 489.38,
+          "end": 489.44,
+          "prob": 0.9976
+        },
+        {
+          "word": " inteiro",
+          "start": 489.44,
+          "end": 489.64,
+          "prob": 1.0
+        },
+        {
+          "word": " não,",
+          "start": 489.64,
+          "end": 489.82,
+          "prob": 0.9922
+        },
+        {
+          "word": " né?",
+          "start": 489.9,
+          "end": 489.96,
+          "prob": 0.9995
+        },
+        {
+          "word": " Acordei",
+          "start": 489.96,
+          "end": 490.26,
+          "prob": 0.9977
+        },
+        {
+          "word": " com",
+          "start": 490.26,
+          "end": 490.34,
+          "prob": 1.0
+        },
+        {
+          "word": " uma",
+          "start": 490.34,
+          "end": 490.44,
+          "prob": 0.9985
+        },
+        {
+          "word": " dorzinha",
+          "start": 490.44,
+          "end": 490.78,
+          "prob": 0.998
+        },
+        {
+          "word": " de",
+          "start": 490.78,
+          "end": 490.9,
+          "prob": 1.0
+        },
+        {
+          "word": " garganta.",
+          "start": 490.9,
+          "end": 491.4,
+          "prob": 1.0
+        },
+        {
+          "word": " Daí",
+          "start": 491.58,
+          "end": 491.8,
+          "prob": 0.9492
+        },
+        {
+          "word": " à",
+          "start": 491.8,
+          "end": 491.94,
+          "prob": 0.4346
+        },
+        {
+          "word": " noite,",
+          "start": 491.94,
+          "end": 492.46,
+          "prob": 1.0
+        },
+        {
+          "word": " meu",
+          "start": 493.36,
+          "end": 494.14,
+          "prob": 0.9937
+        },
+        {
+          "word": " nariz",
+          "start": 494.14,
+          "end": 494.4,
+          "prob": 0.9998
+        },
+        {
+          "word": " começou",
+          "start": 494.4,
+          "end": 494.74,
+          "prob": 1.0
+        },
+        {
+          "word": " a",
+          "start": 494.74,
+          "end": 494.84,
+          "prob": 1.0
+        },
+        {
+          "word": " ficar",
+          "start": 494.84,
+          "end": 494.96,
+          "prob": 1.0
+        },
+        {
+          "word": " meio",
+          "start": 494.96,
+          "end": 495.12,
+          "prob": 0.9976
+        },
+        {
+          "word": " chumbrado,",
+          "start": 495.12,
+          "end": 495.66,
+          "prob": 0.9988
+        },
+        {
+          "word": " mano.",
+          "start": 495.76,
+          "end": 495.84,
+          "prob": 0.998
+        },
+        {
+          "word": " Meu",
+          "start": 495.92,
+          "end": 495.98,
+          "prob": 0.9683
+        },
+        {
+          "word": " nariz",
+          "start": 495.98,
+          "end": 496.16,
+          "prob": 0.9998
+        },
+        {
+          "word": " começou",
+          "start": 496.16,
+          "end": 496.36,
+          "prob": 1.0
+        },
+        {
+          "word": " a",
+          "start": 496.36,
+          "end": 496.52,
+          "prob": 1.0
+        },
+        {
+          "word": " ficar...",
+          "start": 496.52,
+          "end": 496.96,
+          "prob": 0.9636
+        },
+        {
+          "word": " Né?",
+          "start": 497.18,
+          "end": 497.96,
+          "prob": 0.9929
+        },
+        {
+          "word": " Daí",
+          "start": 498.89,
+          "end": 499.21,
+          "prob": 0.9319
+        },
+        {
+          "word": " hoje",
+          "start": 499.21,
+          "end": 499.39,
+          "prob": 0.9907
+        },
+        {
+          "word": " eu",
+          "start": 499.39,
+          "end": 499.47,
+          "prob": 0.9971
+        },
+        {
+          "word": " acordei",
+          "start": 499.47,
+          "end": 499.93,
+          "prob": 1.0
+        },
+        {
+          "word": " sem",
+          "start": 499.93,
+          "end": 500.17,
+          "prob": 0.9985
+        },
+        {
+          "word": " dor",
+          "start": 500.17,
+          "end": 500.37,
+          "prob": 1.0
+        },
+        {
+          "word": " de",
+          "start": 500.37,
+          "end": 500.53,
+          "prob": 1.0
+        },
+        {
+          "word": " garganta.",
+          "start": 500.53,
+          "end": 501.09,
+          "prob": 1.0
+        }
+      ]
+    },
+    {
+      "start": 501.61,
+      "end": 556.16,
+      "text": " Mas com o nariz meio chumbradinho ainda. Mas não tô tossindo, não tô espirrando, não tô... Só tô com o nariz meio chumbrado, tá ligado? Espero que seja só, sei lá, velho. Bagulho de dois dias aí e amanhã já esteja melhor, mano. É. É que eu tô meio gripadinha. É. É isso, né, pô. Luiz Beapolis 11. Onde ele comprou o bebê do Sam Porter. Cara, é edição de colecionador, eu acho. That's strange, bebê. Esse daqui, você tá falando? É edição de colecionador, velho.",
+      "words": [
+        {
+          "word": " Mas",
+          "start": 501.61,
+          "end": 502.01,
+          "prob": 0.488
+        },
+        {
+          "word": " com",
+          "start": 502.01,
+          "end": 502.15,
+          "prob": 0.9956
+        },
+        {
+          "word": " o",
+          "start": 502.15,
+          "end": 502.23,
+          "prob": 0.9819
+        },
+        {
+          "word": " nariz",
+          "start": 502.23,
+          "end": 502.45,
+          "prob": 1.0
+        },
+        {
+          "word": " meio",
+          "start": 502.45,
+          "end": 502.61,
+          "prob": 0.9951
+        },
+        {
+          "word": " chumbradinho",
+          "start": 502.61,
+          "end": 503.33,
+          "prob": 0.9961
+        },
+        {
+          "word": " ainda.",
+          "start": 503.33,
+          "end": 503.61,
+          "prob": 0.9966
+        },
+        {
+          "word": " Mas",
+          "start": 503.93,
+          "end": 504.29,
+          "prob": 0.999
+        },
+        {
+          "word": " não",
+          "start": 504.29,
+          "end": 504.41,
+          "prob": 0.9473
+        },
+        {
+          "word": " tô",
+          "start": 504.41,
+          "end": 504.53,
+          "prob": 0.9263
+        },
+        {
+          "word": " tossindo,",
+          "start": 504.53,
+          "end": 505.05,
+          "prob": 0.998
+        },
+        {
+          "word": " não",
+          "start": 505.13,
+          "end": 505.21,
+          "prob": 1.0
+        },
+        {
+          "word": " tô",
+          "start": 505.21,
+          "end": 505.35,
+          "prob": 1.0
+        },
+        {
+          "word": " espirrando,",
+          "start": 505.35,
+          "end": 505.95,
+          "prob": 0.9992
+        },
+        {
+          "word": " não",
+          "start": 506.07,
+          "end": 506.13,
+          "prob": 0.9067
+        },
+        {
+          "word": " tô...",
+          "start": 506.13,
+          "end": 506.69,
+          "prob": 0.9409
+        },
+        {
+          "word": " Só",
+          "start": 506.69,
+          "end": 506.89,
+          "prob": 0.9878
+        },
+        {
+          "word": " tô",
+          "start": 506.89,
+          "end": 507.03,
+          "prob": 0.9995
+        },
+        {
+          "word": " com",
+          "start": 507.03,
+          "end": 507.13,
+          "prob": 1.0
+        },
+        {
+          "word": " o",
+          "start": 507.13,
+          "end": 507.19,
+          "prob": 1.0
+        },
+        {
+          "word": " nariz",
+          "start": 507.19,
+          "end": 507.39,
+          "prob": 1.0
+        },
+        {
+          "word": " meio",
+          "start": 507.39,
+          "end": 507.53,
+          "prob": 1.0
+        },
+        {
+          "word": " chumbrado,",
+          "start": 507.53,
+          "end": 508.13,
+          "prob": 0.8918
+        },
+        {
+          "word": " tá",
+          "start": 508.21,
+          "end": 508.33,
+          "prob": 0.5352
+        },
+        {
+          "word": " ligado?",
+          "start": 508.33,
+          "end": 508.57,
+          "prob": 0.9976
+        },
+        {
+          "word": " Espero",
+          "start": 510.54,
+          "end": 510.94,
+          "prob": 0.9961
+        },
+        {
+          "word": " que",
+          "start": 510.94,
+          "end": 511.14,
+          "prob": 1.0
+        },
+        {
+          "word": " seja",
+          "start": 511.14,
+          "end": 511.52,
+          "prob": 0.8853
+        },
+        {
+          "word": " só,",
+          "start": 511.52,
+          "end": 511.72,
+          "prob": 0.9673
+        },
+        {
+          "word": " sei",
+          "start": 511.86,
+          "end": 511.94,
+          "prob": 0.9971
+        },
+        {
+          "word": " lá,",
+          "start": 511.94,
+          "end": 512.1,
+          "prob": 1.0
+        },
+        {
+          "word": " velho.",
+          "start": 512.2,
+          "end": 512.34,
+          "prob": 0.981
+        },
+        {
+          "word": " Bagulho",
+          "start": 513.11,
+          "end": 513.51,
+          "prob": 0.8963
+        },
+        {
+          "word": " de",
+          "start": 513.51,
+          "end": 513.75,
+          "prob": 1.0
+        },
+        {
+          "word": " dois",
+          "start": 513.75,
+          "end": 514.09,
+          "prob": 0.9644
+        },
+        {
+          "word": " dias",
+          "start": 514.09,
+          "end": 514.31,
+          "prob": 0.999
+        },
+        {
+          "word": " aí",
+          "start": 514.31,
+          "end": 514.49,
+          "prob": 0.9912
+        },
+        {
+          "word": " e",
+          "start": 514.49,
+          "end": 514.59,
+          "prob": 0.5093
+        },
+        {
+          "word": " amanhã",
+          "start": 514.59,
+          "end": 514.87,
+          "prob": 0.9998
+        },
+        {
+          "word": " já",
+          "start": 514.87,
+          "end": 515.03,
+          "prob": 1.0
+        },
+        {
+          "word": " esteja",
+          "start": 515.03,
+          "end": 515.35,
+          "prob": 0.999
+        },
+        {
+          "word": " melhor,",
+          "start": 515.35,
+          "end": 515.63,
+          "prob": 1.0
+        },
+        {
+          "word": " mano.",
+          "start": 515.75,
+          "end": 515.83,
+          "prob": 0.9937
+        },
+        {
+          "word": " É.",
+          "start": 517.69,
+          "end": 518.09,
+          "prob": 0.9878
+        },
+        {
+          "word": " É",
+          "start": 519.79,
+          "end": 520.19,
+          "prob": 0.9897
+        },
+        {
+          "word": " que",
+          "start": 520.19,
+          "end": 520.27,
+          "prob": 0.999
+        },
+        {
+          "word": " eu",
+          "start": 520.27,
+          "end": 520.35,
+          "prob": 1.0
+        },
+        {
+          "word": " tô",
+          "start": 520.35,
+          "end": 520.47,
+          "prob": 1.0
+        },
+        {
+          "word": " meio",
+          "start": 520.47,
+          "end": 520.75,
+          "prob": 1.0
+        },
+        {
+          "word": " gripadinha.",
+          "start": 520.75,
+          "end": 521.77,
+          "prob": 0.952
+        },
+        {
+          "word": " É.",
+          "start": 529.22,
+          "end": 529.52,
+          "prob": 0.9927
+        },
+        {
+          "word": " É",
+          "start": 529.68,
+          "end": 529.98,
+          "prob": 0.999
+        },
+        {
+          "word": " isso,",
+          "start": 537.88,
+          "end": 538.16,
+          "prob": 0.9995
+        },
+        {
+          "word": " né,",
+          "start": 538.22,
+          "end": 538.3,
+          "prob": 1.0
+        },
+        {
+          "word": " pô.",
+          "start": 538.38,
+          "end": 538.5,
+          "prob": 0.9968
+        },
+        {
+          "word": " Luiz",
+          "start": 538.58,
+          "end": 538.78,
+          "prob": 0.6647
+        },
+        {
+          "word": " Beapolis",
+          "start": 538.78,
+          "end": 539.1,
+          "prob": 0.417
+        },
+        {
+          "word": " 11.",
+          "start": 539.1,
+          "end": 539.62,
+          "prob": 0.8555
+        },
+        {
+          "word": " Onde",
+          "start": 541.51,
+          "end": 541.91,
+          "prob": 0.998
+        },
+        {
+          "word": " ele",
+          "start": 541.91,
+          "end": 542.03,
+          "prob": 1.0
+        },
+        {
+          "word": " comprou",
+          "start": 542.03,
+          "end": 542.37,
+          "prob": 0.9998
+        },
+        {
+          "word": " o",
+          "start": 542.37,
+          "end": 542.47,
+          "prob": 1.0
+        },
+        {
+          "word": " bebê",
+          "start": 542.47,
+          "end": 542.67,
+          "prob": 0.9976
+        },
+        {
+          "word": " do",
+          "start": 542.67,
+          "end": 542.81,
+          "prob": 1.0
+        },
+        {
+          "word": " Sam",
+          "start": 542.81,
+          "end": 543.07,
+          "prob": 1.0
+        },
+        {
+          "word": " Porter.",
+          "start": 543.07,
+          "end": 543.51,
+          "prob": 0.998
+        },
+        {
+          "word": " Cara,",
+          "start": 544.11,
+          "end": 544.51,
+          "prob": 0.9814
+        },
+        {
+          "word": " é",
+          "start": 544.59,
+          "end": 544.65,
+          "prob": 0.9985
+        },
+        {
+          "word": " edição",
+          "start": 544.65,
+          "end": 544.89,
+          "prob": 0.8125
+        },
+        {
+          "word": " de",
+          "start": 544.89,
+          "end": 545.01,
+          "prob": 1.0
+        },
+        {
+          "word": " colecionador,",
+          "start": 545.01,
+          "end": 545.55,
+          "prob": 0.9993
+        },
+        {
+          "word": " eu",
+          "start": 545.63,
+          "end": 545.69,
+          "prob": 0.9077
+        },
+        {
+          "word": " acho.",
+          "start": 545.69,
+          "end": 545.79,
+          "prob": 0.9995
+        },
+        {
+          "word": " That's",
+          "start": 545.87,
+          "end": 546.11,
+          "prob": 0.7197
+        },
+        {
+          "word": " strange,",
+          "start": 546.11,
+          "end": 546.31,
+          "prob": 0.8174
+        },
+        {
+          "word": " bebê.",
+          "start": 546.41,
+          "end": 546.63,
+          "prob": 0.9644
+        },
+        {
+          "word": " Esse",
+          "start": 547.77,
+          "end": 548.15,
+          "prob": 0.9917
+        },
+        {
+          "word": " daqui,",
+          "start": 548.15,
+          "end": 548.37,
+          "prob": 0.9878
+        },
+        {
+          "word": " você",
+          "start": 548.43,
+          "end": 548.55,
+          "prob": 0.9404
+        },
+        {
+          "word": " tá",
+          "start": 548.55,
+          "end": 548.61,
+          "prob": 0.9966
+        },
+        {
+          "word": " falando?",
+          "start": 548.61,
+          "end": 548.87,
+          "prob": 0.9995
+        },
+        {
+          "word": " É",
+          "start": 554.42,
+          "end": 554.82,
+          "prob": 0.9995
+        },
+        {
+          "word": " edição",
+          "start": 554.82,
+          "end": 555.1,
+          "prob": 0.9951
+        },
+        {
+          "word": " de",
+          "start": 555.1,
+          "end": 555.24,
+          "prob": 1.0
+        },
+        {
+          "word": " colecionador,",
+          "start": 555.24,
+          "end": 555.9,
+          "prob": 1.0
+        },
+        {
+          "word": " velho.",
+          "start": 556.0,
+          "end": 556.16,
+          "prob": 0.9966
+        }
+      ]
+    },
+    {
+      "start": 556.52,
+      "end": 593.24,
+      "text": " Do Death Stranding. Eu acho, pelo que eu me lembro. Né? Ó, Zé Plus 85. Zoca, dessa vez juro que eu não vou nem perguntar mais daquele jogo pós-apocalíptico nuclear. Stalker? Já perdi as esperanças. Irmão, tô esperando o cara que tava traduzindo, pô. O cara sumiu. O cara sumiu, mano. O cara do Stalker Gama. Ó, tem uma aqui no Nexus, velho. 0.95, que é a última, né? Quem que traduziu? Nexus porra nem, mano. Modbi. Não é no Nexus.",
+      "words": [
+        {
+          "word": " Do",
+          "start": 556.52,
+          "end": 556.92,
+          "prob": 0.8154
+        },
+        {
+          "word": " Death",
+          "start": 556.92,
+          "end": 557.2,
+          "prob": 0.9922
+        },
+        {
+          "word": " Stranding.",
+          "start": 557.2,
+          "end": 557.68,
+          "prob": 0.9829
+        },
+        {
+          "word": " Eu",
+          "start": 558.27,
+          "end": 558.71,
+          "prob": 0.9985
+        },
+        {
+          "word": " acho,",
+          "start": 558.71,
+          "end": 558.97,
+          "prob": 1.0
+        },
+        {
+          "word": " pelo",
+          "start": 559.07,
+          "end": 559.19,
+          "prob": 0.9985
+        },
+        {
+          "word": " que",
+          "start": 559.19,
+          "end": 559.29,
+          "prob": 0.999
+        },
+        {
+          "word": " eu",
+          "start": 559.29,
+          "end": 559.37,
+          "prob": 0.9971
+        },
+        {
+          "word": " me",
+          "start": 559.37,
+          "end": 559.45,
+          "prob": 0.9995
+        },
+        {
+          "word": " lembro.",
+          "start": 559.45,
+          "end": 559.73,
+          "prob": 0.9988
+        },
+        {
+          "word": " Né?",
+          "start": 562.35,
+          "end": 562.45,
+          "prob": 0.611
+        },
+        {
+          "word": " Ó,",
+          "start": 564.87,
+          "end": 565.01,
+          "prob": 0.6714
+        },
+        {
+          "word": " Zé",
+          "start": 565.11,
+          "end": 565.25,
+          "prob": 0.3817
+        },
+        {
+          "word": " Plus",
+          "start": 565.25,
+          "end": 565.43,
+          "prob": 0.2915
+        },
+        {
+          "word": " 85.",
+          "start": 565.43,
+          "end": 566.13,
+          "prob": 0.9609
+        },
+        {
+          "word": " Zoca,",
+          "start": 566.39,
+          "end": 566.55,
+          "prob": 0.6984
+        },
+        {
+          "word": " dessa",
+          "start": 566.55,
+          "end": 566.73,
+          "prob": 0.999
+        },
+        {
+          "word": " vez",
+          "start": 566.73,
+          "end": 566.95,
+          "prob": 1.0
+        },
+        {
+          "word": " juro",
+          "start": 566.95,
+          "end": 567.15,
+          "prob": 0.9016
+        },
+        {
+          "word": " que",
+          "start": 567.15,
+          "end": 567.23,
+          "prob": 1.0
+        },
+        {
+          "word": " eu",
+          "start": 567.23,
+          "end": 567.29,
+          "prob": 0.9722
+        },
+        {
+          "word": " não",
+          "start": 567.29,
+          "end": 567.35,
+          "prob": 0.9985
+        },
+        {
+          "word": " vou",
+          "start": 567.35,
+          "end": 567.45,
+          "prob": 1.0
+        },
+        {
+          "word": " nem",
+          "start": 567.45,
+          "end": 567.57,
+          "prob": 1.0
+        },
+        {
+          "word": " perguntar",
+          "start": 567.57,
+          "end": 568.09,
+          "prob": 0.9998
+        },
+        {
+          "word": " mais",
+          "start": 568.09,
+          "end": 568.31,
+          "prob": 0.9995
+        },
+        {
+          "word": " daquele",
+          "start": 568.31,
+          "end": 568.59,
+          "prob": 0.9966
+        },
+        {
+          "word": " jogo",
+          "start": 568.59,
+          "end": 568.79,
+          "prob": 1.0
+        },
+        {
+          "word": " pós",
+          "start": 568.79,
+          "end": 569.05,
+          "prob": 0.9993
+        },
+        {
+          "word": "-apocalíptico",
+          "start": 569.05,
+          "end": 569.61,
+          "prob": 0.9956
+        },
+        {
+          "word": " nuclear.",
+          "start": 569.61,
+          "end": 570.01,
+          "prob": 0.9976
+        },
+        {
+          "word": " Stalker?",
+          "start": 570.29,
+          "end": 570.73,
+          "prob": 0.9774
+        },
+        {
+          "word": " Já",
+          "start": 571.07,
+          "end": 571.47,
+          "prob": 0.999
+        },
+        {
+          "word": " perdi",
+          "start": 571.47,
+          "end": 571.73,
+          "prob": 0.9993
+        },
+        {
+          "word": " as",
+          "start": 571.73,
+          "end": 571.83,
+          "prob": 1.0
+        },
+        {
+          "word": " esperanças.",
+          "start": 571.83,
+          "end": 572.47,
+          "prob": 0.9998
+        },
+        {
+          "word": " Irmão,",
+          "start": 572.85,
+          "end": 573.29,
+          "prob": 0.9948
+        },
+        {
+          "word": " tô",
+          "start": 573.37,
+          "end": 573.45,
+          "prob": 0.707
+        },
+        {
+          "word": " esperando",
+          "start": 573.45,
+          "end": 573.77,
+          "prob": 1.0
+        },
+        {
+          "word": " o",
+          "start": 573.77,
+          "end": 573.89,
+          "prob": 1.0
+        },
+        {
+          "word": " cara",
+          "start": 573.89,
+          "end": 574.03,
+          "prob": 0.9995
+        },
+        {
+          "word": " que",
+          "start": 574.03,
+          "end": 574.13,
+          "prob": 1.0
+        },
+        {
+          "word": " tava",
+          "start": 574.13,
+          "end": 574.25,
+          "prob": 0.9971
+        },
+        {
+          "word": " traduzindo,",
+          "start": 574.25,
+          "end": 574.89,
+          "prob": 0.9998
+        },
+        {
+          "word": " pô.",
+          "start": 575.01,
+          "end": 575.07,
+          "prob": 0.9973
+        },
+        {
+          "word": " O",
+          "start": 575.11,
+          "end": 575.19,
+          "prob": 0.9995
+        },
+        {
+          "word": " cara",
+          "start": 575.19,
+          "end": 575.31,
+          "prob": 1.0
+        },
+        {
+          "word": " sumiu.",
+          "start": 575.31,
+          "end": 575.77,
+          "prob": 0.9995
+        },
+        {
+          "word": " O",
+          "start": 578.36,
+          "end": 578.8,
+          "prob": 0.9995
+        },
+        {
+          "word": " cara",
+          "start": 578.8,
+          "end": 579.02,
+          "prob": 1.0
+        },
+        {
+          "word": " sumiu,",
+          "start": 579.02,
+          "end": 579.58,
+          "prob": 0.9995
+        },
+        {
+          "word": " mano.",
+          "start": 579.7,
+          "end": 579.88,
+          "prob": 1.0
+        },
+        {
+          "word": " O",
+          "start": 580.62,
+          "end": 581.06,
+          "prob": 0.9995
+        },
+        {
+          "word": " cara",
+          "start": 581.06,
+          "end": 581.26,
+          "prob": 1.0
+        },
+        {
+          "word": " do",
+          "start": 581.26,
+          "end": 581.38,
+          "prob": 1.0
+        },
+        {
+          "word": " Stalker",
+          "start": 581.38,
+          "end": 581.8,
+          "prob": 0.9974
+        },
+        {
+          "word": " Gama.",
+          "start": 581.8,
+          "end": 582.14,
+          "prob": 0.7428
+        },
+        {
+          "word": " Ó,",
+          "start": 584.26,
+          "end": 584.7,
+          "prob": 0.999
+        },
+        {
+          "word": " tem",
+          "start": 584.8,
+          "end": 584.96,
+          "prob": 0.9995
+        },
+        {
+          "word": " uma",
+          "start": 584.96,
+          "end": 585.14,
+          "prob": 0.9971
+        },
+        {
+          "word": " aqui",
+          "start": 585.14,
+          "end": 585.28,
+          "prob": 1.0
+        },
+        {
+          "word": " no",
+          "start": 585.28,
+          "end": 585.4,
+          "prob": 1.0
+        },
+        {
+          "word": " Nexus,",
+          "start": 585.4,
+          "end": 585.82,
+          "prob": 0.999
+        },
+        {
+          "word": " velho.",
+          "start": 586.04,
+          "end": 586.26,
+          "prob": 0.9976
+        },
+        {
+          "word": " 0",
+          "start": 587.0,
+          "end": 587.4,
+          "prob": 0.998
+        },
+        {
+          "word": ".95,",
+          "start": 587.4,
+          "end": 588.18,
+          "prob": 0.9968
+        },
+        {
+          "word": " que",
+          "start": 588.34,
+          "end": 588.46,
+          "prob": 0.877
+        },
+        {
+          "word": " é",
+          "start": 588.46,
+          "end": 588.46,
+          "prob": 1.0
+        },
+        {
+          "word": " a",
+          "start": 588.46,
+          "end": 588.54,
+          "prob": 1.0
+        },
+        {
+          "word": " última,",
+          "start": 588.54,
+          "end": 588.82,
+          "prob": 0.9995
+        },
+        {
+          "word": " né?",
+          "start": 588.98,
+          "end": 589.04,
+          "prob": 1.0
+        },
+        {
+          "word": " Quem",
+          "start": 589.16,
+          "end": 589.32,
+          "prob": 0.9985
+        },
+        {
+          "word": " que",
+          "start": 589.32,
+          "end": 589.42,
+          "prob": 0.9863
+        },
+        {
+          "word": " traduziu?",
+          "start": 589.42,
+          "end": 589.9,
+          "prob": 0.9993
+        },
+        {
+          "word": " Nexus",
+          "start": 590.58,
+          "end": 591.02,
+          "prob": 0.9937
+        },
+        {
+          "word": " porra",
+          "start": 591.02,
+          "end": 591.3,
+          "prob": 0.5868
+        },
+        {
+          "word": " nem,",
+          "start": 591.3,
+          "end": 591.36,
+          "prob": 0.2629
+        },
+        {
+          "word": " mano.",
+          "start": 591.42,
+          "end": 591.52,
+          "prob": 0.998
+        },
+        {
+          "word": " Modbi.",
+          "start": 591.6,
+          "end": 592.0,
+          "prob": 0.651
+        },
+        {
+          "word": " Não",
+          "start": 592.58,
+          "end": 592.82,
+          "prob": 0.4802
+        },
+        {
+          "word": " é",
+          "start": 592.82,
+          "end": 592.84,
+          "prob": 0.9985
+        },
+        {
+          "word": " no",
+          "start": 592.84,
+          "end": 592.96,
+          "prob": 0.9937
+        },
+        {
+          "word": " Nexus.",
+          "start": 592.96,
+          "end": 593.24,
+          "prob": 1.0
+        }
+      ]
+    },
+    {
+      "start": 595.32,
+      "end": 598.6,
+      "text": " Foi o Pedro Amaral e o Anthony Lucas.",
+      "words": [
+        {
+          "word": " Foi",
+          "start": 595.32,
+          "end": 595.88,
+          "prob": 0.6997
+        },
+        {
+          "word": " o",
+          "start": 595.88,
+          "end": 596.1,
+          "prob": 0.9995
+        },
+        {
+          "word": " Pedro",
+          "start": 596.1,
+          "end": 596.64,
+          "prob": 0.9995
+        },
+        {
+          "word": " Amaral",
+          "start": 596.64,
+          "end": 597.46,
+          "prob": 0.9992
+        },
+        {
+          "word": " e",
+          "start": 597.46,
+          "end": 597.7,
+          "prob": 0.9609
+        },
+        {
+          "word": " o",
+          "start": 597.7,
+          "end": 597.82,
+          "prob": 0.9995
+        },
+        {
+          "word": " Anthony",
+          "start": 597.82,
+          "end": 598.1,
+          "prob": 0.5776
+        },
+        {
+          "word": " Lucas.",
+          "start": 598.1,
+          "end": 598.6,
+          "prob": 0.9995
+        }
+      ]
+    }
+  ],
+  "total_segments": 16
+}

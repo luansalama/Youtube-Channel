@@ -1,6 +1,6 @@
 """Proposal contract: read-only runners -> structured JSON -> human review -> apply.
 
-Contract (identical for codex/opencode/openai/manual):
+Contract (identical for codex/opencode/agy and legacy openai/manual):
   {summary, document, files, questions, warnings}
 files may be {path: content} or [{path, content}].
 """
@@ -14,54 +14,102 @@ from .core import StudioError, get_stage, load_project, read_json, utc_now, writ
 from .workspace import write_text_file
 
 REQUIRED_KEYS = ("summary", "document", "files", "questions", "warnings")
+PARSE_REQUIRED_KEYS = ("summary", "files", "questions", "warnings")
 
 
-def normalise_proposal(raw: dict) -> dict:
+class ProposalFormatError(StudioError):
+    """The runner answered, but its proposal payload does not satisfy the contract."""
+
+
+def normalise_proposal(raw: dict, target_document_path: str = "") -> dict:
     if not isinstance(raw, dict):
-        raise StudioError("proposal must be a JSON object")
-    missing = [k for k in REQUIRED_KEYS if k not in raw]
+        raise ProposalFormatError("proposal must be a JSON object")
+    required = REQUIRED_KEYS if not target_document_path else tuple(k for k in REQUIRED_KEYS if k != "document")
+    missing = [k for k in required if k not in raw]
     if missing:
-        raise StudioError(f"proposal missing keys: {missing}")
+        raise ProposalFormatError(f"proposal missing keys: {missing}")
     files = raw["files"]
     if isinstance(files, list):
         norm: dict[str, str] = {}
         for item in files:
             if not isinstance(item, dict) or not isinstance(item.get("path"), str) \
                     or not isinstance(item.get("content"), str):
-                raise StudioError("proposal.files entries must be {path, content} strings")
+                raise ProposalFormatError("proposal.files entries must be {path, content} strings")
             if item["path"] in norm:
-                raise StudioError(f"duplicate proposal file: {item['path']}")
+                raise ProposalFormatError(f"duplicate proposal file: {item['path']}")
             norm[item["path"]] = item["content"]
         files = norm
     if not isinstance(files, dict):
-        raise StudioError("proposal.files must be object or list")
+        raise ProposalFormatError("proposal.files must be object or list")
     for k, v in files.items():
         if not isinstance(k, str) or not isinstance(v, str):
-            raise StudioError("proposal file paths/contents must be strings")
+            raise ProposalFormatError("proposal file paths/contents must be strings")
     for k in ("questions", "warnings"):
         if not isinstance(raw[k], list) or any(not isinstance(x, str) for x in raw[k]):
-            raise StudioError(f"proposal.{k} must be list[str]")
-    doc = str(raw["document"])
+            raise ProposalFormatError(f"proposal.{k} must be list[str]")
+
+    raw_doc = raw.get("document", "")
+    if isinstance(raw_doc, dict) and isinstance(raw_doc.get("content"), str):
+        raw_doc = raw_doc["content"]
+    doc = str(raw_doc or "")
+
+    # Some runners put the full target document in files[target] and leave
+    # `document` empty/short. That is semantically recoverable and should not
+    # trigger another paid model call. Promote it to the canonical field.
+    if target_document_path and target_document_path in files:
+        target_copy = files[target_document_path]
+        if len(doc.strip()) < 40 and len(target_copy.strip()) >= 40:
+            doc = target_copy
+            files = dict(files)
+            files.pop(target_document_path, None)
+        elif doc.strip() == target_copy.strip():
+            files = dict(files)
+            files.pop(target_document_path, None)
+        elif len(doc.strip()) >= 40:
+            raise ProposalFormatError(
+                f"proposal contains two different versions of target document {target_document_path}"
+            )
+
     if len(doc.strip()) < 40:
-        raise StudioError("proposal.document too short (<40 chars)")
+        raise ProposalFormatError(
+            "target document content is too short (<40 chars); put the full target document in `document` "
+            "or in files[target_document]"
+        )
     return {"summary": str(raw["summary"]), "document": doc, "files": dict(files),
             "questions": list(raw["questions"]), "warnings": list(raw["warnings"])}
 
 
 def parse_json_text(text: str) -> dict:
-    """Extract strict JSON object from runner stdout (fenced or bare)."""
-    m = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", text, re.S)
-    candidate = m.group(1) if m else text
-    try:
-        return json.loads(candidate)
-    except json.JSONDecodeError:
-        pass
-    # fallback: largest {...} span
-    start = candidate.find("{")
-    end = candidate.rfind("}")
-    if start >= 0 and end > start:
-        return json.loads(candidate[start:end + 1])
-    raise StudioError("no JSON proposal found in runner output")
+    """Extract a proposal JSON object from noisy or multi-object runner output."""
+    decoder = json.JSONDecoder()
+    candidates: list[dict] = []
+    # Prefer fenced payloads, then scan every object start. This handles CLIs
+    # that print diagnostics/events or even a duplicate JSON object.
+    chunks = [m.group(1) for m in re.finditer(r"```(?:json)?\s*(\{.*?\})\s*```", text, re.S)]
+    chunks.append(text)
+    for chunk in chunks:
+        for match in re.finditer(r"\{", chunk):
+            try:
+                obj, _end = decoder.raw_decode(chunk[match.start():])
+            except json.JSONDecodeError:
+                continue
+            if isinstance(obj, dict):
+                if all(key in obj for key in PARSE_REQUIRED_KEYS):
+                    return obj
+                candidates.append(obj)
+    if candidates:
+        # Give envelope-style runners one final chance.
+        for obj in candidates:
+            structured = obj.get("structured_output")
+            if isinstance(structured, dict) and all(k in structured for k in PARSE_REQUIRED_KEYS):
+                return structured
+            response = obj.get("response")
+            if isinstance(response, str) and response != text:
+                try:
+                    return parse_json_text(response)
+                except StudioError:
+                    pass
+    raise ProposalFormatError("no JSON proposal found in runner output")
 
 
 def _proposals_dir(vdir: str) -> str:
@@ -85,7 +133,7 @@ def validate_proposal(root: str, slug: str, proposal: dict, stage_id: str | None
     vdir, project = load_project(root, slug)
     stage_id = stage_id or project.get("stage", "config")
     stage = get_stage(root, stage_id)
-    norm = normalise_proposal(proposal)
+    norm = normalise_proposal(proposal, target_document_path=str(stage["doc"]))
     allowed = _allowed_paths(root, stage_id)
     cleaned = {}
     for rel, content in norm["files"].items():
@@ -102,26 +150,60 @@ def validate_proposal(root: str, slug: str, proposal: dict, stage_id: str | None
 
 
 def create_proposal(root: str, slug: str, proposal: dict, runner: str = "manual",
-                    stage_id: str | None = None, user_request: str = "") -> dict:
+                    stage_id: str | None = None, user_request: str = "",
+                    model: str = "", reasoning_effort: str = "") -> dict:
     from .core import evaluate_stage
     vdir, project = load_project(root, slug)
     validated = validate_proposal(root, slug, proposal, stage_id)
-    # deterministic pre-check: overlay onto temp copies is heavy; run scope=proposal
-    # against current tree + overlay in-memory where feasible via file write to temp dir
+    # Deterministic pre-check without duplicating large VOD/master files. The
+    # temporary tree lives under the repository (same filesystem), so unchanged
+    # files can be hard-linked. Files that the proposal will overwrite are real
+    # copies, preventing writes through a hard link into production state.
     import shutil
     import tempfile
-    with tempfile.TemporaryDirectory() as tmp:
+    tmp_root = os.path.join(root, ".studio", "tmp", "proposals")
+    os.makedirs(tmp_root, exist_ok=True)
+    overlay_paths = {validated["document_path"], *validated["files"].keys()}
+
+    def _cheap_copy(src: str, dst: str):
+        rel = os.path.relpath(src, vdir).replace("\\", "/")
+        if rel in overlay_paths:
+            return shutil.copy2(src, dst)
+        try:
+            os.link(src, dst)
+            return dst
+        except OSError:
+            # If hard links are unavailable, never byte-copy a multi-GB media file
+            # just to validate a text proposal. A sparse placeholder preserves the
+            # existence/size checks used by proposal validation.
+            try:
+                size = os.path.getsize(src)
+            except OSError:
+                size = 0
+            if size > 16 * 1024 * 1024:
+                with open(dst, "wb") as fh:
+                    fh.truncate(size)
+                return dst
+            return shutil.copy2(src, dst)
+
+    with tempfile.TemporaryDirectory(dir=tmp_root) as tmp:
         tv = os.path.join(tmp, "v")
-        shutil.copytree(vdir, tv, ignore=shutil.ignore_patterns(".studio/backups"))
-        os.makedirs(os.path.join(tv, os.path.dirname(validated["document_path"])), exist_ok=True)
-        with open(os.path.join(tv, validated["document_path"]), "w", encoding="utf-8") as fh:
+        shutil.copytree(vdir, tv, ignore=shutil.ignore_patterns("backups", "Auto-Save"), copy_function=_cheap_copy)
+        doc_dest = os.path.join(tv, validated["document_path"])
+        os.makedirs(os.path.dirname(doc_dest), exist_ok=True)
+        # Replace instead of truncating in place in case a target was linked by an
+        # older proposal implementation.
+        if os.path.exists(doc_dest):
+            os.remove(doc_dest)
+        with open(doc_dest, "w", encoding="utf-8") as fh:
             fh.write(validated["document"])
         for rel, content in validated["files"].items():
             dest = os.path.join(tv, rel)
             os.makedirs(os.path.dirname(dest), exist_ok=True)
+            if os.path.exists(dest):
+                os.remove(dest)
             with open(dest, "w", encoding="utf-8", newline="\n") as fh:
                 fh.write(content)
-        # evaluate using copied tree by monkey-root: temporarily evaluate manually
         from . import core as _core
         real_prod = _core.prod_path
         try:
@@ -133,6 +215,7 @@ def create_proposal(root: str, slug: str, proposal: dict, runner: str = "manual"
     pid = secrets.token_hex(6)
     record = {**validated, "id": pid, "created_at": utc_now(), "status": "pending",
               "runner": runner, "user_request": user_request,
+              "model": str(model or ""), "reasoning_effort": str(reasoning_effort or ""),
               "deterministic_validation": "passed" if not failures else "failed",
               "blockers": [{"label": c.label, "detail": c.detail} for c in failures]}
     write_json(os.path.join(_proposals_dir(vdir), f"{pid}.json"), record)

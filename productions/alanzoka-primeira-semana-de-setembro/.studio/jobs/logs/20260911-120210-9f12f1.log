@@ -1,0 +1,10 @@
+[2026-09-11T12:02:10Z] Cuts Studio job video-proposal pid=19432
+Video proposal: create
+Runner: agy
+Model: gemini-3.8-flash
+Reasoning: high
+Sources: 8
+
+Video proposal · runner=agy · model=gemini-3.8-flash · effort=high · resume=no
+
+ERROR: runner could not launch: C:\Users\Admin\AppData\Local\agy\bin\agy.EXE (binary_exists=True; cwd_exists=True; cmdline_chars=125570; WinError=206; detail=[WinError 206] The filename or extension is too long)

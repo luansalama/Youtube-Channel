@@ -40,12 +40,16 @@ def build_parser() -> argparse.ArgumentParser:
     s = sub.add_parser("youtube-channel-set"); s.add_argument("--streamer", required=True); s.add_argument("--name", required=True); s.add_argument("--url", required=True); s.add_argument("--channel-id", default=""); s.add_argument("--language", default="", help="Whisper language hint for this streamer, e.g. pt; empty keeps auto/default"); s.add_argument("--disabled", action="store_true")
     s = sub.add_parser("youtube-index"); s.add_argument("slug"); s.add_argument("--streamer", default=""); s.add_argument("--refresh-index", action="store_true"); s.add_argument("--force", action="store_true")
     s = sub.add_parser("youtube-resolve"); s.add_argument("slug"); s.add_argument("--streamer", default=""); s.add_argument("--vod-id", default=""); s.add_argument("--refresh-index", action="store_true"); s.add_argument("--download-verified", action="store_true"); s.add_argument("--no-download", action="store_true"); s.add_argument("--no-verify", action="store_true"); s.add_argument("--force", action="store_true")
+    s = sub.add_parser("youtube-sizes"); s.add_argument("slug"); s.add_argument("--streamer", default=""); s.add_argument("--force", action="store_true")
     s = sub.add_parser("youtube-verify"); s.add_argument("slug"); s.add_argument("--vod-id", required=True); s.add_argument("--video-id", required=True); s.add_argument("--force", action="store_true")
     s = sub.add_parser("youtube-download"); s.add_argument("slug"); s.add_argument("--vod-id", required=True); s.add_argument("--video-id", required=True); s.add_argument("--force", action="store_true")
     s = sub.add_parser("youtube-job-worker", help=argparse.SUPPRESS); s.add_argument("slug"); s.add_argument("--job-id", required=True)
+    s = sub.add_parser("job-worker", help=argparse.SUPPRESS); s.add_argument("slug"); s.add_argument("--job-id", required=True)
     s = sub.add_parser("rights"); s.add_argument("slug"); s.add_argument("--asset", required=True); s.add_argument("--status", required=True); s.add_argument("--by", default=""); s.add_argument("--scope", default=""); s.add_argument("--evidence", default="")
     s = sub.add_parser("cutlist-validate"); s.add_argument("slug")
-    s = sub.add_parser("nle-export"); s.add_argument("slug"); s.add_argument("--driver", default="davinci-resolve"); s.add_argument("--outdir", default="")
+    s = sub.add_parser("nle-export"); s.add_argument("slug"); s.add_argument("--driver", default=""); s.add_argument("--outdir", default="")
+    s = sub.add_parser("nle-status"); s.add_argument("--driver", default="")
+    s = sub.add_parser("nle-doctor"); s.add_argument("--driver", default=""); s.add_argument("--timeout", type=int, default=60)
     s = sub.add_parser("master"); s.add_argument("slug"); s.add_argument("--file", required=True); s.add_argument("--duration", type=float, required=True); s.add_argument("--fps", type=float, default=30.0)
     s = sub.add_parser("metadata"); s.add_argument("slug"); s.add_argument("--title", required=True); s.add_argument("--description", required=True); s.add_argument("--tags", required=True)
     s = sub.add_parser("package"); s.add_argument("slug")
@@ -133,6 +137,11 @@ def main(argv=None) -> int:
             rec = YR.run_job(root, args.slug, "resolve", streamer=args.streamer, vod_id=args.vod_id, refresh_index=args.refresh_index, download=download, no_download=bool(args.no_download), force=args.force, verify=not args.no_verify, command="youtube-resolve")
             print(json.dumps(rec, ensure_ascii=False, indent=2))
             return 0 if rec.get("status") == "completed" else 1
+        elif args.cmd == "youtube-sizes":
+            from . import youtube_resolver as YR
+            rec = YR.run_job(root, args.slug, "sizes", streamer=args.streamer, force=args.force, command="youtube-sizes")
+            print(json.dumps(rec, ensure_ascii=False, indent=2))
+            return 0 if rec.get("status") == "completed" else 1
         elif args.cmd == "youtube-verify":
             from . import youtube_resolver as YR
             rec = YR.run_job(root, args.slug, "verify", vod_id=args.vod_id, video_id=args.video_id, force=args.force, command="youtube-verify")
@@ -146,6 +155,10 @@ def main(argv=None) -> int:
         elif args.cmd == "youtube-job-worker":
             from . import youtube_resolver as YR
             rec = YR.run_persisted_job(root, args.slug, args.job_id)
+            return 0 if rec.get("status") == "completed" else 1
+        elif args.cmd == "job-worker":
+            from . import jobs as J
+            rec = J.run_persisted_job(root, args.slug, args.job_id)
             return 0 if rec.get("status") == "completed" else 1
         elif args.cmd == "rights":
             from . import rights as RT
@@ -161,8 +174,17 @@ def main(argv=None) -> int:
             vdir = prod_path(root, args.slug)
             tl = json.load(open(os.path.join(vdir, ".studio/internal/assembly/timeline.json"), encoding="utf-8"))
             _, proj = C.load_project(root, args.slug)
-            out = args.outdir or os.path.join(vdir, ".studio/internal/assembly/resolve")
-            print(json.dumps(NLE.get_driver(args.driver).export(tl, out, proj.get("title", "")), ensure_ascii=False, indent=2))
+            driver = NLE.get_driver(args.driver, root=root)
+            out = args.outdir or os.path.join(vdir, ".studio/internal/assembly", driver.name)
+            print(json.dumps(driver.export(tl, out, proj.get("title", "")), ensure_ascii=False, indent=2))
+        elif args.cmd == "nle-status":
+            from . import nle as NLE
+            print(json.dumps(NLE.get_driver(args.driver, root=root).status(), ensure_ascii=False, indent=2))
+        elif args.cmd == "nle-doctor":
+            from . import nle as NLE
+            result = NLE.get_driver(args.driver, root=root).doctor(timeout=args.timeout)
+            print(json.dumps(result, ensure_ascii=False, indent=2))
+            return 0 if result.get("doctor_ok") else 1
         elif args.cmd == "master":
             from . import pipeline as PL
             print(json.dumps(PL.register_master(root, args.slug, args.file, args.duration, args.fps), ensure_ascii=False, indent=2))
@@ -186,7 +208,7 @@ def main(argv=None) -> int:
         elif args.cmd == "dashboard":
             from .dashboard import render
             slug = (C.active_production(root) or {}).get("slug", "")
-            out = render(root, "gates", slug)
+            out = render(root, "production", slug)
             if args.output:
                 open(args.output, "w", encoding="utf-8").write(out); print(args.output)
             else:

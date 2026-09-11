@@ -1,0 +1,10 @@
+[2026-09-11T11:55:34Z] Cuts Studio job video-proposal pid=16644
+Video proposal: create
+Runner: agy
+Model: gemini-3.8-flash
+Reasoning: high
+Sources: 8
+
+Video proposal · runner=agy · model=gemini-3.8-flash · effort=high · resume=no
+
+ERROR: runner binary not found: C:\Users\Admin\AppData\Local\agy\bin\agy.EXE

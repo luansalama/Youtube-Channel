@@ -1,0 +1,948 @@
+{
+  "schema_version": 2,
+  "id": "fe53735e563a",
+  "kind": "video",
+  "status": "accepted",
+  "revision": 2,
+  "created_at": "2026-09-11T12:19:56Z",
+  "updated_at": "2026-09-11T13:06:40Z",
+  "runner": "agy",
+  "model": "gemini-3.8-flash",
+  "reasoning_effort": "high",
+  "runner_session": {
+    "runner": "agy",
+    "session_id": "c877392f-87e2-4b0c-9edc-931ff6844827"
+  },
+  "runner_usage": {
+    "input_tokens": 391241,
+    "output_tokens": 41395,
+    "thinking_tokens": 25357,
+    "cache_read_tokens": 2760584,
+    "total_tokens": 432636
+  },
+  "request": "Quero fazer os melhores momentos do alan da primeira semana de setembro. esses 8 vods sao dessa semana. O objetivo é procurar por momentos engraçados, inacreditaveis, interessantes, ou qualquer coisa que se destaque por algum motivo legal. Seria interessante tambem ter uma corrente, de um momento aparecer em um corte e a resolucao do mesmo aparecer em outro momento no video, algo do tipo. A duracao pode variar entre 10 e 30mins. Vai depender da capacidade de encontrar cortes suficientes pelas transcrições.",
+  "source_asset_ids": [
+    "twitch-vod-2861744268",
+    "twitch-vod-2862622285",
+    "twitch-vod-2863504919",
+    "twitch-vod-2864229186",
+    "twitch-vod-2865097583",
+    "twitch-vod-2868004694",
+    "twitch-vod-2868864059",
+    "twitch-vod-2869682753"
+  ],
+  "source_snapshot": [
+    {
+      "asset_id": "twitch-vod-2861744268",
+      "vod_id": "2861744268",
+      "title": "METAL GEAR SOLID 4: GUNS OF THE PATRIOTS - continunando nossa saga metal gear, o 1, 2 e o 3 tao no youtube",
+      "url": "https://www.twitch.tv/videos/2861744268",
+      "created_at": "2026-08-31T18:13:55Z",
+      "duration_seconds": 25902,
+      "rights_status": "sem_autorizacao_confirmada",
+      "chat_available": true,
+      "verified_mirrors": [
+        {
+          "youtube_video_id": "iEZOwN5xssU",
+          "title": "VAMP E RAIDEN! - METAL GEAR SOLID 4: GUNS OF THE PATRIOTS - Parte 6",
+          "url": "https://www.youtube.com/watch?v=iEZOwN5xssU",
+          "downloaded": false
+        },
+        {
+          "youtube_video_id": "muxOFHGOpZs",
+          "title": "PERSEGUIÇÃO COM A BIG MAMA! - METAL GEAR SOLID 4: GUNS OF THE PATRIOTS - Parte 4",
+          "url": "https://www.youtube.com/watch?v=muxOFHGOpZs",
+          "downloaded": false
+        },
+        {
+          "youtube_video_id": "S_mY0ESbwMY",
+          "title": "DE VOLTA EM SHADOW MOSES! - METAL GEAR SOLID 4: GUNS OF THE PATRIOTS - Parte 5",
+          "url": "https://www.youtube.com/watch?v=S_mY0ESbwMY",
+          "downloaded": false
+        }
+      ],
+      "twitch_media": {
+        "asset_id": "twitch-video-2861744268",
+        "path": ".studio/internal/ingest/twitch/media/2861744268/2861744268.mp4",
+        "bytes": 24790942720,
+        "sha256": "1605ad447320615ea04e8e4abe115eda0df5a9eabe146fc50fe13cc139aa0086",
+        "platform": "twitch",
+        "title": "METAL GEAR SOLID 4: GUNS OF THE PATRIOTS - continunando nossa saga metal gear, o 1, 2 e o 3 tao no youtube",
+        "vod_id": "2861744268",
+        "transcript": {
+          "status": "completed",
+          "asset_id": "twitch-video-2861744268",
+          "stale": false,
+          "segment_count": 4568,
+          "word_count": 26870,
+          "duration_seconds": 25966.884,
+          "model": "turbo",
+          "language": "pt",
+          "word_timestamps": true,
+          "timestamp_mode": "word+segment",
+          "source_identity": "twitch-vod:2861744268",
+          "source_mode": "registered-media",
+          "paths": {
+            "json": ".studio/internal/transcripts/editorial/twitch-video-2861744268/transcript.json",
+            "text": ".studio/internal/transcripts/editorial/twitch-video-2861744268/transcript.txt",
+            "windows": ".studio/internal/transcripts/editorial/twitch-video-2861744268/windows.jsonl",
+            "progress": ".studio/internal/transcripts/editorial/twitch-video-2861744268/progress.json"
+          }
+        }
+      },
+      "media_ready": true,
+      "transcript_ready": true,
+      "full_vod_transcript_ready": true,
+      "proposal_ready": true,
+      "media_sources": [
+        {
+          "asset_id": "twitch-video-2861744268",
+          "path": ".studio/internal/ingest/twitch/media/2861744268/2861744268.mp4",
+          "bytes": 24790942720,
+          "sha256": "1605ad447320615ea04e8e4abe115eda0df5a9eabe146fc50fe13cc139aa0086",
+          "platform": "twitch",
+          "title": "METAL GEAR SOLID 4: GUNS OF THE PATRIOTS - continunando nossa saga metal gear, o 1, 2 e o 3 tao no youtube",
+          "vod_id": "2861744268",
+          "transcript": {
+            "status": "completed",
+            "asset_id": "twitch-video-2861744268",
+            "stale": false,
+            "segment_count": 4568,
+            "word_count": 26870,
+            "duration_seconds": 25966.884,
+            "model": "turbo",
+            "language": "pt",
+            "word_timestamps": true,
+            "timestamp_mode": "word+segment",
+            "source_identity": "twitch-vod:2861744268",
+            "source_mode": "registered-media",
+            "paths": {
+              "json": ".studio/internal/transcripts/editorial/twitch-video-2861744268/transcript.json",
+              "text": ".studio/internal/transcripts/editorial/twitch-video-2861744268/transcript.txt",
+              "windows": ".studio/internal/transcripts/editorial/twitch-video-2861744268/windows.jsonl",
+              "progress": ".studio/internal/transcripts/editorial/twitch-video-2861744268/progress.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "asset_id": "twitch-vod-2862622285",
+      "vod_id": "2862622285",
+      "title": "terminando metal gear 4",
+      "url": "https://www.twitch.tv/videos/2862622285",
+      "created_at": "2026-09-01T18:29:33Z",
+      "duration_seconds": 22413,
+      "rights_status": "sem_autorizacao_confirmada",
+      "chat_available": true,
+      "verified_mirrors": [
+        {
+          "youtube_video_id": "SynOBrPYbV0",
+          "title": "A BATALHA FINAL! - METAL GEAR SOLID 4: GUNS OF THE PATRIOTS - Parte 7 / FINAL",
+          "url": "https://www.youtube.com/watch?v=SynOBrPYbV0",
+          "downloaded": false
+        }
+      ],
+      "twitch_media": {
+        "asset_id": "twitch-video-2862622285",
+        "platform": "twitch",
+        "title": "terminando metal gear 4",
+        "vod_id": "2862622285",
+        "path": "",
+        "bytes": 0,
+        "downloaded": false,
+        "transcript_only": true,
+        "transcript": {
+          "status": "completed",
+          "asset_id": "twitch-video-2862622285",
+          "stale": false,
+          "segment_count": 5424,
+          "word_count": 31039,
+          "duration_seconds": 22477.932,
+          "model": "K:\\Applications\\LLMS\\Whisper\\faster-whisper-large-v3-turbo",
+          "language": "pt",
+          "word_timestamps": false,
+          "timestamp_mode": "segment",
+          "source_identity": "twitch-vod:2862622285",
+          "source_mode": "temporary-audio",
+          "paths": {
+            "json": ".studio/internal/transcripts/editorial/twitch-video-2862622285/transcript.json",
+            "text": ".studio/internal/transcripts/editorial/twitch-video-2862622285/transcript.txt",
+            "windows": ".studio/internal/transcripts/editorial/twitch-video-2862622285/windows.jsonl",
+            "progress": ".studio/internal/transcripts/editorial/twitch-video-2862622285/progress.json"
+          }
+        }
+      },
+      "media_ready": false,
+      "transcript_ready": true,
+      "full_vod_transcript_ready": true,
+      "proposal_ready": true,
+      "media_sources": [
+        {
+          "asset_id": "twitch-video-2862622285",
+          "platform": "twitch",
+          "title": "terminando metal gear 4",
+          "vod_id": "2862622285",
+          "path": "",
+          "bytes": 0,
+          "downloaded": false,
+          "transcript_only": true,
+          "transcript": {
+            "status": "completed",
+            "asset_id": "twitch-video-2862622285",
+            "stale": false,
+            "segment_count": 5424,
+            "word_count": 31039,
+            "duration_seconds": 22477.932,
+            "model": "K:\\Applications\\LLMS\\Whisper\\faster-whisper-large-v3-turbo",
+            "language": "pt",
+            "word_timestamps": false,
+            "timestamp_mode": "segment",
+            "source_identity": "twitch-vod:2862622285",
+            "source_mode": "temporary-audio",
+            "paths": {
+              "json": ".studio/internal/transcripts/editorial/twitch-video-2862622285/transcript.json",
+              "text": ".studio/internal/transcripts/editorial/twitch-video-2862622285/transcript.txt",
+              "windows": ".studio/internal/transcripts/editorial/twitch-video-2862622285/windows.jsonl",
+              "progress": ".studio/internal/transcripts/editorial/twitch-video-2862622285/progress.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "asset_id": "twitch-vod-2863504919",
+      "vod_id": "2863504919",
+      "title": "!live vai dar uma atrasada - blood of the dawnwalker as 19h, antes disso nao sei descubra",
+      "url": "https://www.twitch.tv/videos/2863504919",
+      "created_at": "2026-09-02T18:53:16Z",
+      "duration_seconds": 24696,
+      "rights_status": "sem_autorizacao_confirmada",
+      "chat_available": true,
+      "verified_mirrors": [
+        {
+          "youtube_video_id": "Bnzb0zhWGmE",
+          "title": "O MELHOR SNIPER DO JOGO! - BATTLEFIELD 1",
+          "url": "https://www.youtube.com/watch?v=Bnzb0zhWGmE",
+          "downloaded": false
+        },
+        {
+          "youtube_video_id": "XR0-lJLW_rs",
+          "title": "ENTRE A VIDA E A MORTE! - THE BLOOD OF THE DAWNWALKER - Parte 1",
+          "url": "https://www.youtube.com/watch?v=XR0-lJLW_rs",
+          "downloaded": false
+        }
+      ],
+      "twitch_media": {
+        "asset_id": "twitch-video-2863504919",
+        "platform": "twitch",
+        "title": "!live vai dar uma atrasada - blood of the dawnwalker as 19h, antes disso nao sei descubra",
+        "vod_id": "2863504919",
+        "path": "",
+        "bytes": 0,
+        "downloaded": false,
+        "transcript_only": true,
+        "transcript": {
+          "status": "completed",
+          "asset_id": "twitch-video-2863504919",
+          "stale": false,
+          "segment_count": 5208,
+          "word_count": 32012,
+          "duration_seconds": 24760.406,
+          "model": "K:\\Applications\\LLMS\\Whisper\\faster-whisper-large-v3-turbo",
+          "language": "pt",
+          "word_timestamps": false,
+          "timestamp_mode": "segment",
+          "source_identity": "twitch-vod:2863504919",
+          "source_mode": "temporary-audio",
+          "paths": {
+            "json": ".studio/internal/transcripts/editorial/twitch-video-2863504919/transcript.json",
+            "text": ".studio/internal/transcripts/editorial/twitch-video-2863504919/transcript.txt",
+            "windows": ".studio/internal/transcripts/editorial/twitch-video-2863504919/windows.jsonl",
+            "progress": ".studio/internal/transcripts/editorial/twitch-video-2863504919/progress.json"
+          }
+        }
+      },
+      "media_ready": false,
+      "transcript_ready": true,
+      "full_vod_transcript_ready": true,
+      "proposal_ready": true,
+      "media_sources": [
+        {
+          "asset_id": "twitch-video-2863504919",
+          "platform": "twitch",
+          "title": "!live vai dar uma atrasada - blood of the dawnwalker as 19h, antes disso nao sei descubra",
+          "vod_id": "2863504919",
+          "path": "",
+          "bytes": 0,
+          "downloaded": false,
+          "transcript_only": true,
+          "transcript": {
+            "status": "completed",
+            "asset_id": "twitch-video-2863504919",
+            "stale": false,
+            "segment_count": 5208,
+            "word_count": 32012,
+            "duration_seconds": 24760.406,
+            "model": "K:\\Applications\\LLMS\\Whisper\\faster-whisper-large-v3-turbo",
+            "language": "pt",
+            "word_timestamps": false,
+            "timestamp_mode": "segment",
+            "source_identity": "twitch-vod:2863504919",
+            "source_mode": "temporary-audio",
+            "paths": {
+              "json": ".studio/internal/transcripts/editorial/twitch-video-2863504919/transcript.json",
+              "text": ".studio/internal/transcripts/editorial/twitch-video-2863504919/transcript.txt",
+              "windows": ".studio/internal/transcripts/editorial/twitch-video-2863504919/windows.jsonl",
+              "progress": ".studio/internal/transcripts/editorial/twitch-video-2863504919/progress.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "asset_id": "twitch-vod-2864229186",
+      "vod_id": "2864229186",
+      "title": "live mais cedo quinta (la pra 13h)",
+      "url": "https://www.twitch.tv/videos/2864229186",
+      "created_at": "2026-09-03T16:04:11Z",
+      "duration_seconds": 24832,
+      "rights_status": "sem_autorizacao_confirmada",
+      "chat_available": true,
+      "verified_mirrors": [
+        {
+          "youtube_video_id": "fSMIJVnlB_Y",
+          "title": "A EMBOSCADA! - THE BLOOD OF THE DAWNWALKER - Parte 3",
+          "url": "https://www.youtube.com/watch?v=fSMIJVnlB_Y",
+          "downloaded": false
+        },
+        {
+          "youtube_video_id": "OKO05-GPKyI",
+          "title": "ONIMUSHA: WAY OF THE SWORD - Parte 1",
+          "url": "https://www.youtube.com/watch?v=OKO05-GPKyI",
+          "downloaded": false
+        },
+        {
+          "youtube_video_id": "_Q-dV2V2g5s",
+          "title": "PRESO NO ACAMPAMENTO! - THE BLOOD OF THE DAWNWALKER - Parte 2",
+          "url": "https://www.youtube.com/watch?v=_Q-dV2V2g5s",
+          "downloaded": false
+        }
+      ],
+      "twitch_media": {
+        "asset_id": "twitch-video-2864229186",
+        "platform": "twitch",
+        "title": "live mais cedo quinta (la pra 13h)",
+        "vod_id": "2864229186",
+        "path": "",
+        "bytes": 0,
+        "downloaded": false,
+        "transcript_only": true,
+        "transcript": {
+          "status": "completed",
+          "asset_id": "twitch-video-2864229186",
+          "stale": false,
+          "segment_count": 5341,
+          "word_count": 32215,
+          "duration_seconds": 24896.939,
+          "model": "K:\\Applications\\LLMS\\Whisper\\faster-whisper-large-v3-turbo",
+          "language": "pt",
+          "word_timestamps": false,
+          "timestamp_mode": "segment",
+          "source_identity": "twitch-vod:2864229186",
+          "source_mode": "temporary-audio",
+          "paths": {
+            "json": ".studio/internal/transcripts/editorial/twitch-video-2864229186/transcript.json",
+            "text": ".studio/internal/transcripts/editorial/twitch-video-2864229186/transcript.txt",
+            "windows": ".studio/internal/transcripts/editorial/twitch-video-2864229186/windows.jsonl",
+            "progress": ".studio/internal/transcripts/editorial/twitch-video-2864229186/progress.json"
+          }
+        }
+      },
+      "media_ready": false,
+      "transcript_ready": true,
+      "full_vod_transcript_ready": true,
+      "proposal_ready": true,
+      "media_sources": [
+        {
+          "asset_id": "twitch-video-2864229186",
+          "platform": "twitch",
+          "title": "live mais cedo quinta (la pra 13h)",
+          "vod_id": "2864229186",
+          "path": "",
+          "bytes": 0,
+          "downloaded": false,
+          "transcript_only": true,
+          "transcript": {
+            "status": "completed",
+            "asset_id": "twitch-video-2864229186",
+            "stale": false,
+            "segment_count": 5341,
+            "word_count": 32215,
+            "duration_seconds": 24896.939,
+            "model": "K:\\Applications\\LLMS\\Whisper\\faster-whisper-large-v3-turbo",
+            "language": "pt",
+            "word_timestamps": false,
+            "timestamp_mode": "segment",
+            "source_identity": "twitch-vod:2864229186",
+            "source_mode": "temporary-audio",
+            "paths": {
+              "json": ".studio/internal/transcripts/editorial/twitch-video-2864229186/transcript.json",
+              "text": ".studio/internal/transcripts/editorial/twitch-video-2864229186/transcript.txt",
+              "windows": ".studio/internal/transcripts/editorial/twitch-video-2864229186/windows.jsonl",
+              "progress": ".studio/internal/transcripts/editorial/twitch-video-2864229186/progress.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "asset_id": "twitch-vod-2865097583",
+      "vod_id": "2865097583",
+      "title": "live mais cedo de novo sexta la pra 13h -> onimusha - halloween - blood of the dawnwalker",
+      "url": "https://www.twitch.tv/videos/2865097583",
+      "created_at": "2026-09-04T16:09:03Z",
+      "duration_seconds": 32949,
+      "rights_status": "sem_autorizacao_confirmada",
+      "chat_available": true,
+      "verified_mirrors": [
+        {
+          "youtube_video_id": "favxANUu9O4",
+          "title": "ONIMUSHA: WAY OF THE SWORD - Parte 2",
+          "url": "https://www.youtube.com/watch?v=favxANUu9O4",
+          "downloaded": false
+        },
+        {
+          "youtube_video_id": "jcs6OmYZQ-o",
+          "title": "FUGINDO DO MICHAEL MYERS! - HALLOWEEN: THE GAME COM OS AMIGOS",
+          "url": "https://www.youtube.com/watch?v=jcs6OmYZQ-o",
+          "downloaded": false
+        },
+        {
+          "youtube_video_id": "Plcc-06LY-A",
+          "title": "A MALDIÇÃO DO CONVENTO! - THE BLOOD OF THE DAWNWALKER - Parte 4",
+          "url": "https://www.youtube.com/watch?v=Plcc-06LY-A",
+          "downloaded": false
+        }
+      ],
+      "twitch_media": {
+        "asset_id": "twitch-video-2865097583",
+        "platform": "twitch",
+        "title": "live mais cedo de novo sexta la pra 13h -> onimusha - halloween - blood of the dawnwalker",
+        "vod_id": "2865097583",
+        "path": "",
+        "bytes": 0,
+        "downloaded": false,
+        "transcript_only": true,
+        "transcript": {
+          "status": "completed",
+          "asset_id": "twitch-video-2865097583",
+          "stale": false,
+          "segment_count": 7080,
+          "word_count": 44251,
+          "duration_seconds": 33013.484,
+          "model": "K:\\Applications\\LLMS\\Whisper\\faster-whisper-large-v3-turbo",
+          "language": "pt",
+          "word_timestamps": false,
+          "timestamp_mode": "segment",
+          "source_identity": "twitch-vod:2865097583",
+          "source_mode": "temporary-audio",
+          "paths": {
+            "json": ".studio/internal/transcripts/editorial/twitch-video-2865097583/transcript.json",
+            "text": ".studio/internal/transcripts/editorial/twitch-video-2865097583/transcript.txt",
+            "windows": ".studio/internal/transcripts/editorial/twitch-video-2865097583/windows.jsonl",
+            "progress": ".studio/internal/transcripts/editorial/twitch-video-2865097583/progress.json"
+          }
+        }
+      },
+      "media_ready": false,
+      "transcript_ready": true,
+      "full_vod_transcript_ready": true,
+      "proposal_ready": true,
+      "media_sources": [
+        {
+          "asset_id": "twitch-video-2865097583",
+          "platform": "twitch",
+          "title": "live mais cedo de novo sexta la pra 13h -> onimusha - halloween - blood of the dawnwalker",
+          "vod_id": "2865097583",
+          "path": "",
+          "bytes": 0,
+          "downloaded": false,
+          "transcript_only": true,
+          "transcript": {
+            "status": "completed",
+            "asset_id": "twitch-video-2865097583",
+            "stale": false,
+            "segment_count": 7080,
+            "word_count": 44251,
+            "duration_seconds": 33013.484,
+            "model": "K:\\Applications\\LLMS\\Whisper\\faster-whisper-large-v3-turbo",
+            "language": "pt",
+            "word_timestamps": false,
+            "timestamp_mode": "segment",
+            "source_identity": "twitch-vod:2865097583",
+            "source_mode": "temporary-audio",
+            "paths": {
+              "json": ".studio/internal/transcripts/editorial/twitch-video-2865097583/transcript.json",
+              "text": ".studio/internal/transcripts/editorial/twitch-video-2865097583/transcript.txt",
+              "windows": ".studio/internal/transcripts/editorial/twitch-video-2865097583/windows.jsonl",
+              "progress": ".studio/internal/transcripts/editorial/twitch-video-2865097583/progress.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "asset_id": "twitch-vod-2868004694",
+      "vod_id": "2868004694",
+      "title": "onimusha e blood of the dawnwalker",
+      "url": "https://www.twitch.tv/videos/2868004694",
+      "created_at": "2026-09-07T18:28:45Z",
+      "duration_seconds": 27028,
+      "rights_status": "sem_autorizacao_confirmada",
+      "chat_available": true,
+      "verified_mirrors": [
+        {
+          "youtube_video_id": "QcJ0mjcA62k",
+          "title": "ENCONTREI A XANTHE! - THE BLOOD OF THE DAWNWALKER - Parte 5",
+          "url": "https://www.youtube.com/watch?v=QcJ0mjcA62k",
+          "downloaded": false
+        },
+        {
+          "youtube_video_id": "TEHaNIT7eZs",
+          "title": "ONIMUSHA: WAY OF THE SWORD - Parte 3",
+          "url": "https://www.youtube.com/watch?v=TEHaNIT7eZs",
+          "downloaded": false
+        }
+      ],
+      "twitch_media": {
+        "asset_id": "twitch-video-2868004694",
+        "platform": "twitch",
+        "title": "onimusha e blood of the dawnwalker",
+        "vod_id": "2868004694",
+        "path": "",
+        "bytes": 0,
+        "downloaded": false,
+        "transcript_only": true,
+        "transcript": {
+          "status": "completed",
+          "asset_id": "twitch-video-2868004694",
+          "stale": false,
+          "segment_count": 5306,
+          "word_count": 31180,
+          "duration_seconds": 27092.844,
+          "model": "K:\\Applications\\LLMS\\Whisper\\faster-whisper-large-v3-turbo",
+          "language": "pt",
+          "word_timestamps": false,
+          "timestamp_mode": "segment",
+          "source_identity": "twitch-vod:2868004694",
+          "source_mode": "temporary-audio",
+          "paths": {
+            "json": ".studio/internal/transcripts/editorial/twitch-video-2868004694/transcript.json",
+            "text": ".studio/internal/transcripts/editorial/twitch-video-2868004694/transcript.txt",
+            "windows": ".studio/internal/transcripts/editorial/twitch-video-2868004694/windows.jsonl",
+            "progress": ".studio/internal/transcripts/editorial/twitch-video-2868004694/progress.json"
+          }
+        }
+      },
+      "media_ready": false,
+      "transcript_ready": true,
+      "full_vod_transcript_ready": true,
+      "proposal_ready": true,
+      "media_sources": [
+        {
+          "asset_id": "twitch-video-2868004694",
+          "platform": "twitch",
+          "title": "onimusha e blood of the dawnwalker",
+          "vod_id": "2868004694",
+          "path": "",
+          "bytes": 0,
+          "downloaded": false,
+          "transcript_only": true,
+          "transcript": {
+            "status": "completed",
+            "asset_id": "twitch-video-2868004694",
+            "stale": false,
+            "segment_count": 5306,
+            "word_count": 31180,
+            "duration_seconds": 27092.844,
+            "model": "K:\\Applications\\LLMS\\Whisper\\faster-whisper-large-v3-turbo",
+            "language": "pt",
+            "word_timestamps": false,
+            "timestamp_mode": "segment",
+            "source_identity": "twitch-vod:2868004694",
+            "source_mode": "temporary-audio",
+            "paths": {
+              "json": ".studio/internal/transcripts/editorial/twitch-video-2868004694/transcript.json",
+              "text": ".studio/internal/transcripts/editorial/twitch-video-2868004694/transcript.txt",
+              "windows": ".studio/internal/transcripts/editorial/twitch-video-2868004694/windows.jsonl",
+              "progress": ".studio/internal/transcripts/editorial/twitch-video-2868004694/progress.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "asset_id": "twitch-vod-2868864059",
+      "vod_id": "2868864059",
+      "title": "mais onimusha e blood of the dawnwalker",
+      "url": "https://www.twitch.tv/videos/2868864059",
+      "created_at": "2026-09-08T18:18:43Z",
+      "duration_seconds": 27292,
+      "rights_status": "sem_autorizacao_confirmada",
+      "chat_available": true,
+      "verified_mirrors": [],
+      "twitch_media": {
+        "asset_id": "twitch-video-2868864059",
+        "platform": "twitch",
+        "title": "mais onimusha e blood of the dawnwalker",
+        "vod_id": "2868864059",
+        "path": "",
+        "bytes": 0,
+        "downloaded": false,
+        "transcript_only": true,
+        "transcript": {
+          "status": "completed",
+          "asset_id": "twitch-video-2868864059",
+          "stale": false,
+          "segment_count": 4652,
+          "word_count": 28757,
+          "duration_seconds": 27356.673,
+          "model": "K:\\Applications\\LLMS\\Whisper\\faster-whisper-large-v3-turbo",
+          "language": "pt",
+          "word_timestamps": false,
+          "timestamp_mode": "segment",
+          "source_identity": "twitch-vod:2868864059",
+          "source_mode": "temporary-audio",
+          "paths": {
+            "json": ".studio/internal/transcripts/editorial/twitch-video-2868864059/transcript.json",
+            "text": ".studio/internal/transcripts/editorial/twitch-video-2868864059/transcript.txt",
+            "windows": ".studio/internal/transcripts/editorial/twitch-video-2868864059/windows.jsonl",
+            "progress": ".studio/internal/transcripts/editorial/twitch-video-2868864059/progress.json"
+          }
+        }
+      },
+      "media_ready": false,
+      "transcript_ready": true,
+      "full_vod_transcript_ready": true,
+      "proposal_ready": true,
+      "media_sources": [
+        {
+          "asset_id": "twitch-video-2868864059",
+          "platform": "twitch",
+          "title": "mais onimusha e blood of the dawnwalker",
+          "vod_id": "2868864059",
+          "path": "",
+          "bytes": 0,
+          "downloaded": false,
+          "transcript_only": true,
+          "transcript": {
+            "status": "completed",
+            "asset_id": "twitch-video-2868864059",
+            "stale": false,
+            "segment_count": 4652,
+            "word_count": 28757,
+            "duration_seconds": 27356.673,
+            "model": "K:\\Applications\\LLMS\\Whisper\\faster-whisper-large-v3-turbo",
+            "language": "pt",
+            "word_timestamps": false,
+            "timestamp_mode": "segment",
+            "source_identity": "twitch-vod:2868864059",
+            "source_mode": "temporary-audio",
+            "paths": {
+              "json": ".studio/internal/transcripts/editorial/twitch-video-2868864059/transcript.json",
+              "text": ".studio/internal/transcripts/editorial/twitch-video-2868864059/transcript.txt",
+              "windows": ".studio/internal/transcripts/editorial/twitch-video-2868864059/windows.jsonl",
+              "progress": ".studio/internal/transcripts/editorial/twitch-video-2868864059/progress.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "asset_id": "twitch-vod-2869682753",
+      "vod_id": "2869682753",
+      "title": "mais onimusha e blood of the dawnwalker -> WARDOGS amanhã",
+      "url": "https://www.twitch.tv/videos/2869682753",
+      "created_at": "2026-09-09T17:31:06Z",
+      "duration_seconds": 28015,
+      "rights_status": "sem_autorizacao_confirmada",
+      "chat_available": true,
+      "verified_mirrors": [],
+      "twitch_media": {
+        "asset_id": "twitch-video-2869682753",
+        "platform": "twitch",
+        "title": "mais onimusha e blood of the dawnwalker -> WARDOGS amanhã",
+        "vod_id": "2869682753",
+        "path": "",
+        "bytes": 0,
+        "downloaded": false,
+        "transcript_only": true,
+        "transcript": {
+          "status": "completed",
+          "asset_id": "twitch-video-2869682753",
+          "stale": false,
+          "segment_count": 4564,
+          "word_count": 28658,
+          "duration_seconds": 28079.232,
+          "model": "K:\\Applications\\LLMS\\Whisper\\faster-whisper-large-v3-turbo",
+          "language": "pt",
+          "word_timestamps": false,
+          "timestamp_mode": "segment",
+          "source_identity": "twitch-vod:2869682753",
+          "source_mode": "temporary-audio",
+          "paths": {
+            "json": ".studio/internal/transcripts/editorial/twitch-video-2869682753/transcript.json",
+            "text": ".studio/internal/transcripts/editorial/twitch-video-2869682753/transcript.txt",
+            "windows": ".studio/internal/transcripts/editorial/twitch-video-2869682753/windows.jsonl",
+            "progress": ".studio/internal/transcripts/editorial/twitch-video-2869682753/progress.json"
+          }
+        }
+      },
+      "media_ready": false,
+      "transcript_ready": true,
+      "full_vod_transcript_ready": true,
+      "proposal_ready": true,
+      "media_sources": [
+        {
+          "asset_id": "twitch-video-2869682753",
+          "platform": "twitch",
+          "title": "mais onimusha e blood of the dawnwalker -> WARDOGS amanhã",
+          "vod_id": "2869682753",
+          "path": "",
+          "bytes": 0,
+          "downloaded": false,
+          "transcript_only": true,
+          "transcript": {
+            "status": "completed",
+            "asset_id": "twitch-video-2869682753",
+            "stale": false,
+            "segment_count": 4564,
+            "word_count": 28658,
+            "duration_seconds": 28079.232,
+            "model": "K:\\Applications\\LLMS\\Whisper\\faster-whisper-large-v3-turbo",
+            "language": "pt",
+            "word_timestamps": false,
+            "timestamp_mode": "segment",
+            "source_identity": "twitch-vod:2869682753",
+            "source_mode": "temporary-audio",
+            "paths": {
+              "json": ".studio/internal/transcripts/editorial/twitch-video-2869682753/transcript.json",
+              "text": ".studio/internal/transcripts/editorial/twitch-video-2869682753/transcript.txt",
+              "windows": ".studio/internal/transcripts/editorial/twitch-video-2869682753/windows.jsonl",
+              "progress": ".studio/internal/transcripts/editorial/twitch-video-2869682753/progress.json"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "human_answers": [
+    {
+      "question_id": "q1",
+      "text": "Na dinâmica das piadas recorrentes (a desculpa da academia 'um dia não mata / susto no corpo' e o álibi do 'pai responsável'), você prefere que elas funcionem como esquetes curtas de transição/respiro entre os jogos ou compiladas em blocos temáticos dedicados?",
+      "answer": "bloco tematico. elas soltas entre cortes de jogos nao seria muito interessante. A menos que seja um callback durante algum jogo esse assunto voltar.",
+      "answered_at": "2026-09-11T12:59:02Z"
+    },
+    {
+      "question_id": "q2",
+      "text": "O material oferece dois pólos muito fortes: o desastre cooperativo/multiplayer (Rocket League com Falcon/Flip e Halloween morrendo pro bot) versus a gameplay solo imersiva de RPG (Onimusha e Dawnwalker). Qual desses dois pólos deve receber maior minutagem no corte final?",
+      "answer": "Gameplay de rpg. Mas claro, se tiver cortes interessantes no Rocket League com Falcon/Flip e Halloween morrendo pro bot, incluir.",
+      "answered_at": "2026-09-11T12:59:02Z"
+    },
+    {
+      "question_id": "q3",
+      "text": "O arco do 'bicho e o sobrevivente da vila' em Blood of the Dawnwalker tem uma narrativa completa de investigação de quase 4 minutos. Prefere mantê-lo com ritmo de 'minidocumentário investigativo' ou prefere cortes rápidos focados apenas nos sustos e reações expressivas?",
+      "answer": "Podemos fazer um minidocumentário que faça sentido narrativo.",
+      "answered_at": "2026-09-11T12:59:02Z"
+    }
+  ],
+  "summary": "Proposta editorial consolidada (Parte 2) para o vídeo de melhores momentos da primeira semana de setembro do Alanzoka (duração alvo: 18 a 26 minutos). A proposta incorpora rigorosamente as três decisões autoritativas do usuário: (1) a Saga da Academia foi estruturada em um bloco temático dedicado em três atos; (2) 60-65% da minutagem foi alocada para as campanhas de RPG (Blood of the Dawnwalker e Onimusha), mantendo uma curadoria potente e focada dos desastres multiplayer (Rocket League e Halloween); (3) o arco de 'Estudo em Vermelho' e o confronto da vila em Dawnwalker foi transformado em um minidocumentário investigativo narrativamente coerente. Todas as perguntas anteriores foram resolvidas e eliminadas, mantendo 19 candidate moments rigorosamente fundamentados em evidências transcritas.",
+  "document": "# Proposta Editorial Consolidada (Parte 2): O Detetive de Laslea & Outros Desastres\n\n## 1. Diretrizes Consolidadas a Partir das Decisões Humanas\nCom base nas respostas autoritativas do usuário (`existing_proposal.human_answers`), a estrutura do vídeo foi refinada com os seguintes pilares:\n1. **Compilação Temática da Saga Fitness:** Em vez de esquetes curtas diluídas entre jogos, a 'Saga da Academia' foi consolidada em um bloco temático dedicado em três atos (Segunda: 'um dia não mata ninguém' -> Quinta: 'semana inteira perdida' -> Sexta: 'ficar em off pra dar um susto no corpo'). Os gags de paternidade permanecem orgânicos como callbacks durante os jogos.\n2. **Prioridade para Gameplay de RPG (~60-65% da minutagem):** O foco principal do vídeo é direcionado às campanhas solo de *Blood of the Dawnwalker* e *Onimusha: Way of the Sword*, mantendo uma curadoria precisa dos momentos mais explosivos de multiplayer (*Rocket League* e *Halloween: The Game*).\n3. **Minidocumentário Narrativo em Blood of the Dawnwalker:** O arco da missão *'Estudo em Vermelho'* e o confronto com o sobrevivente da vila em Laslea foi roteirizado com estrutura de minidocumentário investigativo, possuindo apresentação do mistério, investigação de campo, reviravolta chocante e clímax com consequências cômicas imediatas.\n\n---\n\n## 2. Macro-Estrutura do Vídeo (Duração Alvo: 18 a 26 Minutos)\n\n### Bloco 1: Abertura & A Saga Fitness (00:00 - 03:30)\n- **Cold Open:** Flashback do MGS4 na base de Shadow Moses (gráficos de PS1), quebra do OBS e monólogo profético comparando Kojima com GTA 6 (*'só vai abrir geladeira e pegar coca'*).\n- **Bloco Temático 'A Saga da Academia':** Montagem sequencial com os três dias da semana mostrando a evolução da desculpa de Alanzoka para não treinar:\n  - *Segunda-feira:* 'Fiquei doente, um dia não mata ninguém, talvez dois...'\n  - *Quinta-feira:* 'Não fui pra academia a semana inteira, já fecho a semana sem ir...'\n  - *Sexta-feira:* 'Uma semana não mata ninguém... é bom pra dar um susto no corpo!'\n\n### Bloco 2: Desastres Multiplayer & Callbacks de Paternidade (03:30 - 09:30)\n- **Rocket League com Falcon & Flip:**\n  - Roubos de boost e gols perdidos na cara da trave (*'Só fazer! Fazer com o que?'*).\n  - Delírio de grandeza: Alanzoka jura que jogaria no Real Madrid e elogia o 'Dom' do filho de 4 meses.\n  - O forfeit paternal: perdendo de lavada, usa a desculpa de ter *'filho pra cuidar'*.\n  - Colapso mental: assinatura de canais inusitados (*'Julinha Rabudinha'*) e a ordem para Falcon voltar a tocar Mozart no violino.\n- **Battlefield 1 (Comunidade & VoIP):**\n  - Fã rasgando seda pro Alan e pra EA Games, cobrando presença no vídeo e cachê.\n  - Alan mente no VoIP em plena live: *'Hoje não tem live não, tô com o parto cuidando do meu filho do meu lado... que pai eu seria?'*.\n- **Halloween: The Game:**\n  - Amigo falhando no QTE e morrendo vergonhosamente para um bot (*'confisca a carteirinha do DBD dele!'*).\n  - Debate de balanceamento: por que Michael Myers não dá medo e a facilidade de escapar usando o numpad *'3-1-4-2'*.\n\n### Bloco 3: RPG Solo — A Saga Oriental de Onimusha (09:30 - 14:30)\n- **Estreia com Teclado e Mouse:** Reclamação sobre saturação de jogos de samurai e a promessa: *'duas horinhas e depois fica pro BRKsEDU'*.\n- **A Manopla Invasiva:** Reflexão sobre o constrangimento de ter a alma de Shizuka na manopla durante suas idas ao banheiro.\n- **A Epifania do 'Mario Moderno':** Alanzoka percebe que o jogo o trata como uma criança guiada pela mão (*'é a mina falando tudo que eu tenho que fazer e eu só apertando V'*).\n\n### Bloco 4: Minidocumentário Investigativo — O Mistério do Bicho em Dawnwalker (14:30 - 22:30)\n- **Ato 1 (O Cenário e a Fome):** As regras sombrias do mundo de Blood of the Dawnwalker e o terror de sucumbir à fome devorando NPCs importantes em diálogos.\n- **Ato 2 (A Desolação de Laslea):** Chegada à vila natal destruída, corpos massacrados e a busca pelos sobreviventes.\n- **Ato 3 (A Investigação e a Fadiga de Ubisoft):** Exploração do mapa, desabafo contra o excesso de pontos de interrogação no mapa e busca pelas pistas do Dr. Simeon.\n- **Ato 4 (A Revelação de 'Estudo em Vermelho'):** Leitura da carta do Dr. Simeon revelando que a fera não era inocente e de fato matou o joalheiro e todos na fazenda.\n- **Ato 5 (A Cobrança do Sobrevivente):** Imediatamente após a revelação, um aldeão sobrevivente encurrala Alanzoka na cidade exigindo vingança pelo massacre da vila. Alan entra em pânico cômico: *'Eu não sou o Coen!'*.\n\n### Bloco 5: Conclusão & Pós-Créditos (22:30 - 25:00)\n- **Debate Técnico GTA 6:** Repercussão no chat desmistificando o 'monstrinho' Xbox Series S (*'é mais pra um carinha gente boa... só a live do Alanzoka que é grátis'*).\n- **Fechamento:** Alanzoka encerrando a transmissão na sexta-feira com a constatação final da maturidade paterna: *'se eu não fosse um pai, iria até meia-noite... Responsabilidade'*.\n\n---\n\n## 3. Justificativa Editorial dos Candidate Moments\nA shortlist selecionou 19 intervalos precisos com marcadores temporais ancorados diretamente nas transcrições oficiais, respeitando integralmente as decisões autoritativas humanas. As narrativas possuem causalidade clara e o espectador do YouTube é conduzido por uma experiência coesa que equilibra humor rápido de internet com uma história de investigação em RPG genuinamente envolvente.",
+  "video": {
+    "working_title": "Alanzoka: O Detetive de Laslea & A Saga Fitness (Melhores Momentos)",
+    "premise": "Um especial semanal dos melhores momentos de Alanzoka focado na imersão caótica de novos RPGs (Blood of the Dawnwalker e Onimusha), costurado pelo desastre hilário em jogos multiplayer com amigos e pela saga de procrastinação fitness e responsabilidades paternas do streamer.",
+    "editorial_angle": "Equilíbrio entre comédia de situação e minidocumentário investigativo: foco narrativo nas escolhas e consequências em RPGs solo (especialmente o arco investigativo de Blood of the Dawnwalker e a dinâmica com a manopla em Onimusha), sustentado por blocos temáticos bem definidos (a Saga Fitness em 3 atos) e recortes de alta octanagem de desastres multiplayer no Rocket League e Halloween.",
+    "target_duration_minutes": {
+      "min": 18,
+      "max": 26
+    },
+    "selection_criteria": [
+      "Cenas com forte valor narrativo e causalidade (setup de mistério e revelação de culpa no RPG).",
+      "Momentos de humor espontâneo de alta intensidade (morte pro bot, fã no VoIP, discussões no Discord).",
+      "Presença de callbacks temáticos recorrentes (saga fitness e desculpas paternas).",
+      "Compreensibilidade imediata para o público do YouTube sem necessidade de contexto exaustivo."
+    ],
+    "constraints": [
+      "Utilizar exclusivamente asset IDs de mídia transcrita autorizados pela esteira (.studio/internal/transcripts/editorial).",
+      "Tratar os timestamps como coordenadas editoriais preliminares a serem refinadas e sincronizadas via forma de onda no Premiere.",
+      "Atenção redobrada ao áudio de cutscenes em MGS4 e músicas de fundo para evitar flags de Content ID."
+    ]
+  },
+  "candidate_moments": [
+    {
+      "source_asset_id": "twitch-video-2861744268",
+      "start_seconds": 265.0,
+      "end_seconds": 302.0,
+      "label": "Saga Fitness (Ato 1): 'Um dia não mata ninguém'",
+      "rationale": "Primeiro ato do bloco temático da academia: na segunda-feira, Alan inicia a semana gripado e cria a primeira desculpa fitness da semana.",
+      "transcript_evidence": "Tô fano? Eu fiquei doente, gente... Boa tarde, mano. Eu fiquei doente... Começamos nessa bela segunda... Já não fui pra academia, né, mano. Pra academia eu não fui. Não vou forçar, não tem motivo. Um dia não mata ninguém, talvez dois, né, amanhã... Só pra..."
+    },
+    {
+      "source_asset_id": "twitch-video-2864229186",
+      "start_seconds": 24300.0,
+      "end_seconds": 24500.0,
+      "label": "Saga Fitness (Ato 2): Semana Perdida na Quinta-Feira",
+      "rationale": "Segundo ato do bloco temático: na quinta-feira, Alan constata que a semana inteira já foi perdida sem treinos e empurra o compromisso para sábado.",
+      "transcript_evidence": "Como eu ainda tô meio doente, eu não tô doente, vai, já tô melhor. Mas, mano, eu já não fui pra academia a semana inteira, já fecho a semana sem ir, né? Sábado eu vou qualquer coisa."
+    },
+    {
+      "source_asset_id": "twitch-video-2865097583",
+      "start_seconds": 260.0,
+      "end_seconds": 305.0,
+      "label": "Saga Fitness (Ato 3): 'Ficar em Off pra Dar um Susto no Corpo'",
+      "rationale": "Desfecho triunfal do bloco temático da academia: na sexta-feira, confrontado pelo chat, Alan converte a semana sem treino em estratégia biológica de choque.",
+      "transcript_evidence": "Foi pra academia hoje? Não, né, gente? Mano, essa semana tá sendo conturbada, velho. Essa é uma semana dura, velho... Uma semana não mata ninguém, cara. Uma semana não mata ninguém, né? Às vezes é até bom a gente ficar uma semana em off, né? Só pra dar um susto no corpo."
+    },
+    {
+      "source_asset_id": "twitch-video-2861744268",
+      "start_seconds": 15567.0,
+      "end_seconds": 15720.0,
+      "label": "MGS4 Flashback Retrô e Monólogo: Kojima vs GTA 6",
+      "rationale": "Momento cômico e nostálgico em MGS4 ao carregar a fase clássica de PS1; Alan critica jogos modernos e faz monólogo sobre GTA 6 ('só vai abrir geladeira e pegar coca'). Conecta com o debate de GTA 6 no final da semana.",
+      "transcript_evidence": "Meu jogo abriu Metal Gear 1. Calma. Chat, não tá capturando porque ele literalmente abriu outro jogo no meu PC... Ele abriu o Metal Gear 1... Relaxa que aqui eu estou em casa, mano. Aqui é skill pura, é next stage, mano... Caralho, o Kojima perdeu a mão, mano! É, GTA 6 não vai ter isso não. Vocês acham que GTA 6 vai abrir o Vice City no meio da gameplay só pra dar um flashback? Não vai nada, pô, você não vai fazer nada naquele jogo, só vai abrir geladeira, pegar coca, andar de mão dada... Isso aqui é o True Video Game 2, pô!"
+    },
+    {
+      "source_asset_id": "twitch-video-2868864059",
+      "start_seconds": 26915.0,
+      "end_seconds": 27010.0,
+      "label": "Debate Técnico: O 'Monstrinho' Series S e GTA 6",
+      "rationale": "Callback da discussão de GTA 6: Alan ironiza a alcunha de 'monstrinho' do Xbox Series S, rebaixando-o para 'carinha gente boa', e afirma que 'só a live do Alanzoka que é grátis'.",
+      "transcript_evidence": "Fala lá, acho que o GTA 6 corre o risco de vir bomba no Series S? Acho que vai vir bomba em todos os consoles, né, mano?... Monstrinho é foda, né, mano? É mais pra um carinha gente boa, né? Monstro eu acho uma palavra muito forte pro Series S... Irmão, nem o Play 5 tá rodando o jogo direito, imagina o Series S, mano... Só a live do Alanzoka que é grátis."
+    },
+    {
+      "source_asset_id": "twitch-video-2862622285",
+      "start_seconds": 14400.0,
+      "end_seconds": 14700.0,
+      "label": "Rocket League: 'Só Fazer!' e Inimigos do Gol Aberto",
+      "rationale": "Abertura do bloco multiplayer de alto impacto: Alan rouba o boost de Falcon, bate em companheiros e reclama de gol perdido com a pérola 'Só fazer! Fazer com o que?'.",
+      "transcript_evidence": "Mano, tá open net. Só você fazer, mano... Você sabe que o intuito de fazer um reset é uma bola ir pra frente, né? Não pra trás, mano... Cara, você roubou meu boost, mano... Mano, você nunca vai fazer um reset... Só fazer! Fazer com o quê?... Relaxa, essa daqui não contou, infelizmente essa daqui ficou pra próxima..."
+    },
+    {
+      "source_asset_id": "twitch-video-2862622285",
+      "start_seconds": 16371.0,
+      "end_seconds": 16443.0,
+      "label": "Delírio Next Stage: Futebol Europeu e o Dom do Filho",
+      "rationale": "Setup orgânico da corrente de paternidade durante o Rocket League: Alan jura que jogaria no Real Madrid se não fosse streamer e projeta genialidade no filho de 4 meses.",
+      "transcript_evidence": "Se eu não fosse streamer, eu provavelmente estaria na Europa jogando futebol, mano, no Real Madrid. É sério, pô. Eu fui destinado a ser algo bom na vida, pô. Eu fui destinado a ser um vencedor, mano... Eu sou um cara de muitos talentos, mano. Eu nasci com o Dom, mano. Igual meu filho. Meu filho tá quase engatinhando já, pô. Não fez nem quatro meses, mano... Quero que ele não siga os passos do pai, mano. Vai ser ruim em todo jogo."
+    },
+    {
+      "source_asset_id": "twitch-video-2862622285",
+      "start_seconds": 16735.0,
+      "end_seconds": 16750.0,
+      "label": "Forfeit Paternal: 'Tenho Filho pra Cuidar'",
+      "rationale": "Callback imediato no Rocket League: sob chuva de gols adversários, Alan usa a paternidade como desculpa definitiva para exigir forfeit.",
+      "transcript_evidence": "Tem mais o que fazer na minha vida, mano. Tenho filho pra cuidar, mano. Pelo amor de Deus, dá forfeit."
+    },
+    {
+      "source_asset_id": "twitch-video-2862622285",
+      "start_seconds": 19500.0,
+      "end_seconds": 19800.0,
+      "label": "Colapso Total: Julinha Rabudinha e o Violino do Falcon",
+      "rationale": "Clímax do Rocket League: Alan assinando canais improváveis na Twitch para aliviar a tensão do 3x0 e mandando Falcon largar o jogo para tocar Mozart no violino.",
+      "transcript_evidence": "Vou vomitar, mano. Você é tão ruim que tá me dando ânsia de vômito... Ainda vou assinar a Julinha Rabudinha, mano... 3x0, velho. Flip, não dá. Ele é muito ruim, mano... O Falcon tem que tocar violino... É o que você faz de bem. Você sabe tocar o Mozart, mano."
+    },
+    {
+      "source_asset_id": "twitch-video-2863504919",
+      "start_seconds": 5100.0,
+      "end_seconds": 5380.0,
+      "label": "Battlefield 1: Fã Apaixonado no VoIP e Álibi da Paternidade",
+      "rationale": "Momento hilário com a comunidade no Battlefield 1: fã bajula Alan e EA Games, cobra aparição no vídeo, e quando outro jogador pergunta sobre live, Alan mente que não fará stream pois está cuidando do bebê.",
+      "transcript_evidence": "Mano, Battlefield 1 porque o Alonzoka tá no Battlefield 1, esse jogo é maravilhoso, é o melhor jogo que tem no mundo... Só do Alonzoka tá no jogo, mano... Eu vou aparecer no vídeo, Alonzoka? Vai, vai aparecer, mano... Mas se eu não aparecer no vídeo, eu vou ficar puto em você, mano... Ô Alan, parabéns pelo filho aí mano, você vai ter um pai maravilhoso... Vai ter live hoje, Alan? Irmão, hoje eu não vou fazer live não, mano. Tô com o parto cuidando do meu filho. Ele tá aqui do meu lado, mano. Não dá, né, pô, pra eu fazer live com o filho, mano? Que pai, que tipo de pai que eu seria, né?"
+    },
+    {
+      "source_asset_id": "twitch-video-2865097583",
+      "start_seconds": 18266.0,
+      "end_seconds": 18360.0,
+      "label": "Halloween Multiplayer: Morte Pro Bot e Carteirinha Cassada",
+      "rationale": "Destaque do multiplayer cooperativo: amigo falha no QTE e é eliminado por um bot. A call explode em gargalhadas exigindo confisco imediato da carteirinha de Dead by Daylight.",
+      "transcript_evidence": "Caralho, olha o tempo que ele demora pra acertar o Quick Time Event, mano, ele é muito Nilba, meu Deus. Ele tomou pro bot! Jesus, ele tomou pro bot! Caraca, tomou o gap! Meu, ele tomou o gap do bot! Aí é dureza, aí é dureza, aí acabou. Confisca a carteira dele, mano... Confisca a carteirinha do DBD dele, que pra ele acabou, mano."
+    },
+    {
+      "source_asset_id": "twitch-video-2865097583",
+      "start_seconds": 18900.0,
+      "end_seconds": 19100.0,
+      "label": "Halloween: O Segredo do Teclado Numérico '3-1-4-2'",
+      "rationale": "Discussão cômica sobre o balanceamento de Halloween: Michael Myers inofensivo que não bota medo em ninguém e a facilidade de escapar digitando 3-1-4-2 no teclado numérico.",
+      "transcript_evidence": "Como sobrevivente, a minha experiência é de que não dá medo do Killer. Você consegue ficar trolando o Killer, você não fica com medo dele... Não, acabou. Porque é mais fácil de escapar, mano. É facinho sair da agarrada, pô. Pô, é quatro botão, mano. É 3-1-4-2... A sorte que meu teclado tem número, né? Imagina a gente não tinha esse número no teclado. Aí tira todas as mecânicas."
+    },
+    {
+      "source_asset_id": "twitch-video-2864229186",
+      "start_seconds": 1500.0,
+      "end_seconds": 1800.0,
+      "label": "Onimusha: Saturação Samurai e 'Deixa pro BRKsEDU'",
+      "rationale": "Abertura do bloco de RPG solo: Alan inicia Onimusha no mouse/teclado, desabafa sobre a saturação de temas orientais e avisa que se cansar passa o jogo para o BRKsEDU.",
+      "transcript_evidence": "Bora, Onimusha! Joguinho novo do Onimusha, que lançou... não sei se eu vou terminar, eu quero ver, quero sentir, igual Mortal Shell 2... Esse daqui vai ser a mesma vibe, eu vou jogar o começo, umas duas horinhas aí, curte o jogo e depois fica pro BRKS Edu, né. Porque tomei um saturado de jogo de Samurai, Espada, Japão, Barra, China, Souls-like."
+    },
+    {
+      "source_asset_id": "twitch-video-2865097583",
+      "start_seconds": 8130.0,
+      "end_seconds": 8325.0,
+      "label": "Onimusha: Manopla Invasiva no Banheiro e o 'Mario Moderno'",
+      "rationale": "Ápice do humor em Onimusha: Alan reflete sobre o constrangimento de ter a alma de Shizuka na manopla vendo seus momentos íntimos no banheiro e conclui que o jogo virou o 'Mario moderno' (ele só aperta V e segue ordens).",
+      "transcript_evidence": "Será que a mina vê ele limpando a bunda, mano, quando ele vai no banheiro? Eu ia ficar meio incomodado com a mina dentro de uma manopla minha, tá ligado?... Meu Deus, mano. Eu acabei de me tocar que esse jogo é literalmente o Mario moderno... com essa manopla. É literalmente a mina falando tudo que eu tenho que fazer, mano. E eu aqui, só apertando V e seguindo. Eu nem tô pensando muito no jogo porque eu não preciso."
+    },
+    {
+      "source_asset_id": "twitch-video-2863504919",
+      "start_seconds": 22560.0,
+      "end_seconds": 22750.0,
+      "label": "Dawnwalker Mini-Doc (Ato 1): O Massacre de Laslea e Desolação",
+      "rationale": "Introdução do minidocumentário narrativo de Blood of the Dawnwalker: Alan chega à vila de Laslea, encontra tudo em ruínas e corpos massacrados, iniciando a investigação sombria.",
+      "transcript_evidence": "Anker, por que você não está dizendo nada? Porque eu vi o que estava faltando... Se eu comer alho eu morro, mano? Será?... Onde está todo mundo? O que ele fez com eles?... Zad! Luka! O Vrakir está desaparecido. E quem é isso? Um dos Brancis são homens... The whole village razed. Wiped out. I'll check my house..."
+    },
+    {
+      "source_asset_id": "twitch-video-2865097583",
+      "start_seconds": 19560.0,
+      "end_seconds": 19645.0,
+      "label": "Dawnwalker Mini-Doc (Ato 2): A Fome Vampírica e Comer NPCs",
+      "rationale": "Segundo ato do minidocumentário: Alan explica a mecânica implacável de sucumbir à fome no jogo, onde o personagem morde e assassina NPCs cruciais em diálogos.",
+      "transcript_evidence": "Tem uma mecânica no jogo que se você ficar com muita fome, você pode acabar matando um NPC... Se você não se alimentar à noite e entrar num diálogo com o NPC, pode ser um NPC importante. Você pode matar ele, mordendo ele, comendo ele... Quando você vai escolher o diálogo, começa a embaralhar tudo e escrever: Sucumbir à fome, sucumbir à fome. Daí do lado ele morde o cara."
+    },
+    {
+      "source_asset_id": "twitch-video-2869682753",
+      "start_seconds": 24920.0,
+      "end_seconds": 25050.0,
+      "label": "Dawnwalker Mini-Doc (Ato 3): A Síndrome de Jogo da Ubisoft",
+      "rationale": "Terceiro ato do minidocumentário: durante as buscas no mapa, Alan se revolta contra o excesso de pontos de interrogação, comparando a 'jogo da Ubisoft'.",
+      "transcript_evidence": "Mano, tem um monte de interrogação. Esses interrogação pode ser uma side interessante ou não? Porque, pô, eu não vou ficar indo de ponto de interrogação em ponto de interrogação. Tem muito ponto de interrogação no mapa, mano. Eu não vou passar por todos, velho. Me desculpa. É muito ponto de interrogação, mano. É jogo da Ubisoft, velho."
+    },
+    {
+      "source_asset_id": "twitch-video-2869682753",
+      "start_seconds": 26620.0,
+      "end_seconds": 26925.0,
+      "label": "Dawnwalker Mini-Doc (Ato 4): O Bicho Assassino e o Cobrador da Vila",
+      "rationale": "Clímax eletrizante do minidocumentário: Alan descobre que o monstro em 'Estudo em Vermelho' massacrou a vila, e na sequência um aldeão sobrevivente vem cobrar vingança pelas mortes ('Eu não sou o Coen!').",
+      "transcript_evidence": "Dr. Simeon: Ivo, o bicho enlouqueceu afinal... Ele matou o joalheiro... Caralho, descobri a verdade sobre o bicho. Meu Deus, era o bicho que matou eles mesmo! Nossa, voltou pra Quest 1 Estudo em Vermelho, chat!... E logo em seguida: Meu Deus, é o cara que eu prometi! Não, gente, eu não tenho culpa, eu juro! Veio me cobrar, mano, que eu matei a vila dele!... Eu não sou o Coen!"
+    },
+    {
+      "source_asset_id": "twitch-video-2865097583",
+      "start_seconds": 32400.0,
+      "end_seconds": 32550.0,
+      "label": "Encerramento: Paternidade, Responsabilidade e Fim de Semana",
+      "rationale": "Fechamento conclusivo do vídeo unindo paternidade e cansaço da maratona semanal ao encerrar a transmissão na sexta-feira.",
+      "transcript_evidence": "Umas onze e meia, daí já vai ficar meio tarde, né? Mas responsabilidade. É, mano, se eu não fosse mais um pai... Mas é foda, né, se eu não fosse um pai, daí eu iria até 11h30 ali, meia-noite. Eu iria, pô, tranquilo... Mas responsabilidade, é mano, se eu não fosse mais um pai."
+    }
+  ],
+  "questions": [],
+  "warnings": [
+    "Os marcadores temporais fornecidos são coordenadas por segmento de transcrição; o corte fino e a sincronização labial definitiva devem ser executados na timeline do Premiere.",
+    "As sessões de Rocket League e Halloween possuem faixas com múltiplas vozes falando simultaneamente no Discord; será necessário aplicar ducking para garantir clareza nas falas de Alanzoka.",
+    "As cutscenes de MGS4 possuem trilha orquestrada sujeita a direitos autorais; cortar antes das seções musicais longas ou aplicar filtros de áudio adequados."
+  ],
+  "planning_phase": "part2_final",
+  "part1_completed_at": "2026-09-11T12:19:56Z",
+  "answers_updated_at": "2026-09-11T12:59:02Z",
+  "part2_consolidated_at": "2026-09-11T12:59:58Z",
+  "accepted_at": "2026-09-11T13:06:40Z",
+  "video_id": "alanzoka-o-detetive-de-laslea-a-saga-fitness-melhores-momentos"
+}

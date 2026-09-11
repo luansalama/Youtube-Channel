@@ -1,0 +1,17 @@
+[2026-09-11T18:31:18Z] Cuts Studio job source-batch-download-twitch pid=10952
+
+=== Full source download 1/1: Twitch 2868004694 ===
+Twitch full VOD download
+Command: C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe\yt-dlp.EXE --no-playlist --continue --part --newline --concurrent-fragments 8 --write-info-json -f best --no-overwrites --ffmpeg-location C:\Users\Admin\AppData\Local\ffmpeg\bin -o K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\twitch\media\2868004694\2868004694.%(ext)s https://www.twitch.tv/videos/2868004694
+WARNING: "-f best" selects the best pre-merged format which is often not the best option.
+         To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
+         If you know what you are doing and want only the best pre-merged format, use "-f b" instead to suppress this warning
+[twitch:vod] Extracting URL: https://www.twitch.tv/videos/2868004694
+[twitch:vod] 2868004694: Downloading stream metadata GraphQL
+[twitch:vod] 2868004694: Downloading video access token GraphQL
+[twitch:vod] 2868004694: Downloading m3u8 information
+[twitch:vod] 2868004694: Downloading storyboard metadata JSON
+[info] v2868004694: Downloading 1 format(s): 1080p60
+[info] Video metadata is already present
+[download] K:\Applications\Youtube-Channel\productions\alanzoka-primeira-semana-de-setembro\.studio\internal\ingest\twitch\media\2868004694\2868004694.mp4 has already been downloaded
+[download] 100% of   24.19GiB

@@ -1,0 +1,65 @@
+{
+  "id": "20260911-093142-60df60",
+  "type": "source-batch-audio-transcribe",
+  "status": "completed",
+  "slug": "alanzoka-primeira-semana-de-setembro",
+  "created_at": "2026-09-11T09:31:42Z",
+  "started_at": "2026-09-11T09:31:42Z",
+  "ended_at": "2026-09-11T11:07:58Z",
+  "return_code": 0,
+  "error": "",
+  "worker_pid": 26500,
+  "log_path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\jobs\\logs\\20260911-093142-60df60.log",
+  "params": {
+    "vod_ids": [
+      "2862622285",
+      "2863504919",
+      "2864229186",
+      "2865097583",
+      "2868004694",
+      "2868864059",
+      "2869682753"
+    ]
+  },
+  "result_summary": {
+    "vods_requested": 7,
+    "vods_transcribed": 7,
+    "items": [
+      {
+        "vod_id": "2862622285",
+        "segments": 5424,
+        "timestamp_mode": "segment"
+      },
+      {
+        "vod_id": "2863504919",
+        "segments": 5208,
+        "timestamp_mode": "segment"
+      },
+      {
+        "vod_id": "2864229186",
+        "segments": 5341,
+        "timestamp_mode": "segment"
+      },
+      {
+        "vod_id": "2865097583",
+        "segments": 7080,
+        "timestamp_mode": "segment"
+      },
+      {
+        "vod_id": "2868004694",
+        "segments": 5306,
+        "timestamp_mode": "segment"
+      },
+      {
+        "vod_id": "2868864059",
+        "segments": 4652,
+        "timestamp_mode": "segment"
+      },
+      {
+        "vod_id": "2869682753",
+        "segments": 4564,
+        "timestamp_mode": "segment"
+      }
+    ]
+  }
+}

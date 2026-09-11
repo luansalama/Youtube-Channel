@@ -1,0 +1,35 @@
+{
+  "id": "20260911-125902-631fb4",
+  "type": "video-proposal-refine",
+  "status": "completed",
+  "slug": "alanzoka-primeira-semana-de-setembro",
+  "created_at": "2026-09-11T12:59:02Z",
+  "started_at": "2026-09-11T12:59:02Z",
+  "ended_at": "2026-09-11T12:59:58Z",
+  "return_code": 0,
+  "error": "",
+  "worker_pid": 25208,
+  "log_path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\jobs\\logs\\20260911-125902-631fb4.log",
+  "params": {
+    "proposal_id": "fe53735e563a",
+    "request": "Consolide a Parte 2 usando todas as respostas humanas salvas como decisões autoritativas. Torne a proposta específica, remova perguntas resolvidas e preserve os candidate moments sustentados pela transcrição. Delegue agentes onde for necessário para reunir as informações com precisão.",
+    "runner": "agy",
+    "model": "gemini-3.8-flash",
+    "reasoning_effort": "high"
+  },
+  "result_summary": {
+    "runner": "agy",
+    "model": "gemini-3.8-flash",
+    "reasoning_effort": "high",
+    "video_proposal_id": "fe53735e563a",
+    "revision": 2,
+    "summary": "Proposta editorial consolidada (Parte 2) para o vídeo de melhores momentos da primeira semana de setembro do Alanzoka (duração alvo: 18 a 26 minutos). A proposta incorpora rigorosamente as três decisões autoritativas do usuário: (1) a Saga da Academia foi estruturada em um bloco temático dedicado em três atos; (2) 60-65% da minutagem foi alocada para as campanhas de RPG (Blood of the Dawnwalker e Onimusha), mantendo uma curadoria potente e focada dos desastres multiplayer (Rocket League e Halloween); (3) o arco de 'Estudo em Vermelho' e o confronto da vila em Dawnwalker foi transformado em um minidocumentário investigativo narrativamente coerente. Todas as perguntas anteriores foram resolvidas e eliminadas, mantendo 19 candidate moments rigorosamente fundamentados em evidências transcritas.",
+    "usage": {
+      "input_tokens": 391241,
+      "output_tokens": 41395,
+      "thinking_tokens": 25357,
+      "cache_read_tokens": 2760584,
+      "total_tokens": 432636
+    }
+  }
+}

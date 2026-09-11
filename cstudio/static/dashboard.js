@@ -107,6 +107,190 @@
     });
   }
 
+  const runnerForms = $$('[data-agent-job-form], [data-runner-form]');
+  runnerForms.forEach((agentForm) => {
+    const submitButton = $('button[type="submit"]', agentForm);
+    const feedback = $('[data-agent-feedback]', agentForm);
+    const originalButtonHtml = submitButton?.innerHTML || '';
+    const formLocked = Boolean(submitButton?.disabled);
+    const runnerSelect = $('[data-runner-select]', agentForm);
+    const modelSelect = $('[data-model-select]', agentForm);
+    const effortSelect = $('[data-effort-select]', agentForm);
+    const modelHint = $('[data-model-hint]', agentForm);
+    const effortHint = $('[data-effort-hint]', agentForm);
+    const selectionSummary = $('[data-agent-selection-summary]', agentForm);
+    let runnerConfig = {
+      models: {}, model_labels: {}, efforts: {}, model_efforts: {},
+      model_default_efforts: {}, defaults: {}, effort_labels: {},
+    };
+    try { runnerConfig = { ...runnerConfig, ...JSON.parse(agentForm.dataset.runnerConfig || '{}') }; } catch (_) {}
+    let previousRunner = runnerSelect?.value || '';
+    let previousModel = modelSelect?.value || '';
+
+    function runnerDefault(runner) {
+      return runnerConfig.defaults?.[runner] || {};
+    }
+
+    function effortsFor(runner, model) {
+      return runnerConfig.model_efforts?.[runner]?.[model] || runnerConfig.efforts?.[runner] || [];
+    }
+
+    function populateModels(runner, wanted = '') {
+      if (!modelSelect) return '';
+      const models = runnerConfig.models?.[runner] || [];
+      const labels = runnerConfig.model_labels?.[runner] || {};
+      const target = models.includes(wanted) ? wanted : (runnerDefault(runner).model || models[0] || '');
+      modelSelect.innerHTML = '';
+      models.forEach((model) => {
+        const option = document.createElement('option');
+        option.value = model;
+        option.textContent = labels[model] || model;
+        option.selected = model === target;
+        modelSelect.appendChild(option);
+      });
+      return target;
+    }
+
+    function populateEfforts(runner, model, wanted = '') {
+      if (!effortSelect) return '';
+      const efforts = effortsFor(runner, model);
+      const labels = runnerConfig.effort_labels || {};
+      const modelDefault = runnerConfig.model_default_efforts?.[runner]?.[model] || runnerDefault(runner).reasoning_effort || efforts[0] || '';
+      const target = efforts.includes(wanted) ? wanted : (efforts.includes(modelDefault) ? modelDefault : (efforts[0] || ''));
+      effortSelect.innerHTML = '';
+      efforts.forEach((effort) => {
+        const option = document.createElement('option');
+        option.value = effort;
+        option.textContent = labels[effort] || effort;
+        option.selected = effort === target;
+        effortSelect.appendChild(option);
+      });
+      return target;
+    }
+
+    function syncAgentControls({ runnerChanged = false, modelChanged = false } = {}) {
+      if (!runnerSelect || !modelSelect || !effortSelect) return;
+      const runner = runnerSelect.value;
+      if (runnerChanged || runner !== previousRunner) {
+        previousModel = populateModels(runner, runnerDefault(runner).model);
+        populateEfforts(runner, previousModel, runnerDefault(runner).reasoning_effort);
+      } else if (modelChanged || modelSelect.value !== previousModel) {
+        previousModel = modelSelect.value;
+        populateEfforts(runner, previousModel, runnerConfig.model_default_efforts?.[runner]?.[previousModel] || '');
+      } else if (!effortSelect.options.length) {
+        populateEfforts(runner, modelSelect.value, '');
+      }
+      previousRunner = runner;
+      previousModel = modelSelect.value;
+      modelSelect.disabled = formLocked;
+      effortSelect.disabled = formLocked;
+
+      if (modelHint) {
+        modelHint.textContent = runner === 'opencode'
+          ? 'Somente o lineup OpenCode Zen Free desta configuração.'
+          : runner === 'agy'
+            ? 'Modelos do Antigravity Free; uso continua sujeito às quotas da conta/modelo.'
+            : 'Catálogo atual do Codex CLI; modelos aposentados ficam fora do seletor.';
+      }
+      if (effortHint) {
+        const count = effortsFor(runner, modelSelect.value).length;
+        effortHint.textContent = runner === 'opencode' && effortSelect.value === 'default'
+          ? 'Este modelo não expõe variant; o reasoning fica model-managed.'
+          : count <= 1
+            ? 'Reasoning fixo para este modelo.'
+            : 'Somente níveis compatíveis com o modelo selecionado.';
+      }
+      const modelLabel = modelSelect.selectedOptions[0]?.textContent || modelSelect.value || 'modelo padrão';
+      const effortLabel = effortSelect.selectedOptions[0]?.textContent || effortSelect.value || 'default';
+      if (selectionSummary) selectionSummary.textContent = `${runner} · ${modelLabel} · reasoning ${effortLabel}`;
+    }
+
+    runnerSelect?.addEventListener('change', () => syncAgentControls({ runnerChanged: true }));
+    modelSelect?.addEventListener('change', () => syncAgentControls({ modelChanged: true }));
+    effortSelect?.addEventListener('change', () => syncAgentControls());
+    syncAgentControls();
+
+    function setAgentFeedback(message, isError = false) {
+      if (!feedback) return;
+      if (!message) {
+        feedback.hidden = true;
+        feedback.className = 'agent-submit-feedback';
+        feedback.textContent = '';
+        return;
+      }
+      feedback.hidden = false;
+      feedback.className = `agent-submit-feedback notice ${isError ? 'notice-danger' : 'notice-info'}`;
+      feedback.textContent = message;
+    }
+
+    agentForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (submitButton?.disabled) return;
+      const formData = new FormData(agentForm);
+      const sourceIds = formData.getAll('source_asset_ids').map(String).filter(Boolean);
+      const continueAttempt = ['1', 'true', 'on', 'yes'].includes(String(formData.get('continue_attempt') || '').toLowerCase());
+      if (agentForm.action.endsWith('/action/video-proposal-run') && sourceIds.length === 0 && !continueAttempt) {
+        setAgentFeedback('Selecione pelo menos um VOD para esta proposta.', true);
+        return;
+      }
+      const payload = Object.fromEntries(formData.entries());
+      if (sourceIds.length) payload.source_asset_ids = sourceIds;
+      if (agentForm.action.endsWith('/action/video-proposal-refine')) {
+        const card = agentForm.closest('.video-proposal-card');
+        const answerFields = card ? $$('[name^="answer_"]', card) : [];
+        payload.answers = Object.fromEntries(answerFields.map((field) => [field.name.slice(7), field.value]));
+      }
+      setAgentFeedback('');
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Iniciando…';
+      }
+      try {
+        const response = await fetch(agentForm.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+          cache: 'no-store',
+        });
+        let data = {};
+        try { data = await response.json(); } catch (_) { data = {}; }
+        if (!response.ok || !data.ok) throw new Error(data.error || `HTTP ${response.status}`);
+        setAgentFeedback(continueAttempt
+          ? 'Continuação iniciada na mesma sessão. O agente recebeu apenas “Continue.”'
+          : (agentForm.action.includes('refine') ? 'Refinamento iniciado. Acompanhe o job acima.' : 'Proposta iniciada. Acompanhe o job abaixo.'));
+        if (submitButton) submitButton.textContent = 'Executando…';
+        const pageJob = $('.studio-job-fragment[data-studio-job-endpoint]');
+        pageJob?.dispatchEvent(new CustomEvent('cstudio:refresh-job'));
+      } catch (error) {
+        const offline = error instanceof TypeError;
+        setAgentFeedback(
+          offline ? 'Não foi possível falar com o dashboard. O servidor local pode ter parado.' : `Não foi possível iniciar: ${error.message || error}`,
+          true,
+        );
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.innerHTML = originalButtonHtml;
+        }
+      }
+    });
+  });
+
+  const vodChoices = $$('input[name="source_asset_ids"]');
+  if (vodChoices.length) {
+    const count = $('[data-vod-selection-count]');
+    const syncVodCount = () => {
+      const selected = vodChoices.filter((item) => item.checked).length;
+      if (count) count.textContent = `${selected} VOD${selected === 1 ? '' : 's'} selecionado${selected === 1 ? '' : 's'}`;
+    };
+    $$('[data-vod-select]').forEach((button) => button.addEventListener('click', () => {
+      const checked = button.dataset.vodSelect === 'all';
+      vodChoices.forEach((item) => { item.checked = checked; });
+      syncVodCount();
+    }));
+    vodChoices.forEach((item) => item.addEventListener('change', syncVodCount));
+    syncVodCount();
+  }
+
   const dialog = $('#confirm-dialog');
   const dialogMessage = $('#confirm-message');
   let pendingForm = null;
@@ -228,6 +412,46 @@
       if (timer) clearTimeout(timer);
     });
   }
+
+  $$('.studio-job-fragment[data-studio-job-endpoint]').forEach((studioContainer) => {
+    const endpoint = studioContainer.dataset.studioJobEndpoint;
+    const connection = $('[data-studio-job-connection]');
+    let timer = null;
+    let stopped = false;
+
+    function currentRun() { return $('[data-studio-job-live]', studioContainer); }
+    function setConnection(text) { if (connection) connection.textContent = text; }
+
+    async function refreshStudioJob() {
+      if (stopped || !endpoint) return;
+      try {
+        setConnection('Atualizando…');
+        const response = await fetch(endpoint, { headers: { 'Accept': 'text/html', 'X-CStudio-Fragment': '1' }, cache: 'no-store' });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const html = await response.text();
+        const newRun = replaceLiveFragment(studioContainer, html, '[data-studio-job-live]');
+        setConnection(newRun?.dataset.running === 'true' ? 'Monitor local · 2 s' : 'Execução finalizada');
+        if (newRun?.dataset.running !== 'true') stopped = true;
+      } catch (error) {
+        setConnection('Falha ao atualizar · tentando novamente');
+      }
+      if (!stopped) timer = window.setTimeout(refreshStudioJob, 2000);
+    }
+
+    if (currentRun()?.dataset.running === 'true') timer = window.setTimeout(refreshStudioJob, 800);
+    else setConnection('Monitor local');
+
+    studioContainer.addEventListener('cstudio:refresh-job', () => {
+      stopped = false;
+      if (timer) clearTimeout(timer);
+      timer = window.setTimeout(refreshStudioJob, 80);
+    });
+
+    window.addEventListener('beforeunload', () => {
+      stopped = true;
+      if (timer) clearTimeout(timer);
+    });
+  });
 
   const youtubeContainer = $('#youtube-run-fragment');
   if (youtubeContainer) {

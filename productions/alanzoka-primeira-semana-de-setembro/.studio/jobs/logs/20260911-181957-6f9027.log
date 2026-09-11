@@ -1,0 +1,11 @@
+[2026-09-11T18:19:58Z] Cuts Studio job premiere-doctor pid=10376
+Premiere MCP local check: ready
+
+Ready: MCP server — This copy of Premiere MCP can run on this computer.
+Ready: Node.js runtime — The local Node.js runtime meets Premiere MCP's supported minimum.
+Ready: Premiere Connector — The Premiere Connector is installed on this computer.
+Not checked: UXP connection — A UXP connection is not configured. This is only needed when you choose the UXP route.
+Not checked: Live Premiere check — A local install check cannot prove that Premiere Pro is open and connected.
+  Next: Open Premiere Pro and run the safe connection check from your AI assistant.
+
+This check does not access project names, media names, paths, tokens, prompts, or tool results.

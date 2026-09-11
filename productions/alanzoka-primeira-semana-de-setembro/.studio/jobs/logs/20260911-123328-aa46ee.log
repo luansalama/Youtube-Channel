@@ -1,0 +1,11 @@
+[2026-09-11T12:33:28Z] Cuts Studio job video-proposal-refine pid=15204
+Video proposal: refine
+Runner: agy
+Model: claude-opus-4-6
+Reasoning: thinking
+Sources: 0
+
+Video proposal · runner=agy · model=claude-opus-4-6 · effort=thinking · resume=no
+Agy prompt transport: stdin stream-json · chars=132942
+
+ERROR: runner timed out after 1200s

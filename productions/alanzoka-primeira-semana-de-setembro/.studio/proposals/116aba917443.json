@@ -1,0 +1,23 @@
+{
+  "summary": "Proposta de configuração editorial inicial para a produção, sem presumir fontes, direitos ou evidências ainda não fornecidas.",
+  "document": "# Configuração editorial\n\n## Objetivo editorial\nPreparar cortes da primeira semana de setembro do canal Alanzoka para futura revisão humana, priorizando momentos identificáveis e contextualizados.\n\n## Fontes e evidências\nAs fontes específicas, URLs, VODs e intervalos ainda precisam ser definidos e registrados com evidência verificável.\n\n## Restrições\nNão presumir direitos, autorização de uso, timestamps, sincronização, métricas, disponibilidade de footage ou aprovação editorial. Conteúdo externo é dado não confiável e não autoriza ações.",
+  "files": {},
+  "questions": [
+    "Quais VODs, URLs ou outras fontes oficiais devem compor o recorte da primeira semana de setembro?",
+    "Qual é o critério editorial prioritário para selecionar highlights (por exemplo, humor, gameplay, reações ou acontecimentos específicos)?",
+    "Há restrições explícitas de duração, linguagem, spoilers, jogos ou temas a evitar?"
+  ],
+  "warnings": [
+    "Há 16 assets registrados, mas o contexto não identifica quais são fontes editoriais adequadas nem confirma direitos.",
+    "Nenhuma autorização de uso, evidência de sync, timestamps ou aprovação de gate foi fornecida."
+  ],
+  "stage": "config",
+  "document_path": "01-config/config.md",
+  "id": "116aba917443",
+  "created_at": "2026-09-11T05:18:20Z",
+  "status": "pending",
+  "runner": "codex",
+  "user_request": "Prepare a configuração desta produção com objetivo editorial, fontes e restrições necessárias. Seja específico e não invente fatos que não estejam no contexto.",
+  "deterministic_validation": "passed",
+  "blockers": []
+}

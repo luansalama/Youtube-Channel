@@ -1,0 +1,33 @@
+{
+  "audio": "K:\\Applications\\Youtube-Channel\\.studio-benchmark\\whisper-word-timestamps\\sample_10min_16k_mono.wav",
+  "audio_duration_s": 600.0,
+  "model": "turbo",
+  "model_dir": "K:\\Applications\\LLMS\\Whisper",
+  "device": "cuda",
+  "language": "pt",
+  "word_timestamps": true,
+  "condition_on_previous_text": false,
+  "load_s": 7.474,
+  "runs": [
+    {
+      "run": 1,
+      "total_s": 41.44,
+      "segments": 227,
+      "words": 1312,
+      "rtf": 0.06907,
+      "vram_max_gb": 3.537
+    },
+    {
+      "run": 2,
+      "total_s": 27.564,
+      "segments": 227,
+      "words": 1312,
+      "rtf": 0.04594,
+      "vram_max_gb": 3.537
+    }
+  ],
+  "median_total_s": 41.44,
+  "median_rtf": 0.06907,
+  "torch": "2.6.0+cu124",
+  "whisper": "20250625"
+}

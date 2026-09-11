@@ -1,1 +1,53 @@
-{"apply_requires_human_review":true,"fallback_order":["codex","opencode","openai","manual"],"proposal_contract":"read_only_structured_json","routes":{"assembly":"opencode","audit":"opencode","creative":"codex","graphics":"opencode","ingest":"opencode","metadata":"opencode","publish":"opencode"},"runners":{"codex":{"command":"codex exec","notes":"Read-only sandbox. Reviews VOD evidence, proposes cutlist/graphics copy. Never applies."},"manual":{"command":"manual import","notes":"Provider-independent fallback. Paste JSON proposal via CLI/dashboard."},"openai":{"command":"Responses API","notes":"Optional fallback. Key only from env or local-settings with explicit remember."},"opencode":{"agent":"studio-assistant","command":"opencode run","notes":"Read-only agent. Uses connected provider/model."}},"safety":{"runner_may_not":["approve phase","apply own proposal","publish or message externally","access credentials","spend money","invent footage/completion/rights/analytics/sync"]},"schema_version":4}
+{
+  "apply_requires_human_review": true,
+  "fallback_order": [
+    "codex",
+    "opencode",
+    "agy",
+    "manual"
+  ],
+  "proposal_contract": "read_only_structured_json",
+  "routes": {
+    "assembly": "opencode",
+    "audit": "opencode",
+    "creative": "codex",
+    "graphics": "opencode",
+    "ingest": "opencode",
+    "metadata": "opencode",
+    "publish": "opencode"
+  },
+  "runners": {
+    "codex": {
+      "command": "codex exec",
+      "notes": "Read-only sandbox. Current Codex model/reasoning catalog is exposed explicitly in the dashboard."
+    },
+    "manual": {
+      "command": "manual import",
+      "notes": "Provider-independent fallback. Paste JSON proposal via CLI/dashboard."
+    },
+    "openai": {
+      "command": "Responses API",
+      "notes": "Optional fallback. Key only from env or local-settings with explicit remember."
+    },
+    "opencode": {
+      "agent": "studio-assistant",
+      "command": "opencode run",
+      "notes": "Read-only studio-assistant. Dashboard exposes only the configured OpenCode Zen Free lineup."
+    },
+    "agy": {
+      "command": "agy -p",
+      "notes": "Antigravity CLI headless. Dashboard exposes current Free-plan reasoning models; account/model quotas still apply."
+    }
+  },
+  "safety": {
+    "runner_may_not": [
+      "approve phase",
+      "apply own proposal",
+      "publish or message externally",
+      "access credentials",
+      "spend money",
+      "invent footage/completion/rights/analytics/sync"
+    ]
+  },
+  "schema_version": 6
+}

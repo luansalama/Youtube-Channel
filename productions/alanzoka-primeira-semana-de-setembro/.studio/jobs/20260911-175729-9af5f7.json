@@ -1,0 +1,22 @@
+{
+  "id": "20260911-175729-9af5f7",
+  "type": "video-candidate-precision",
+  "status": "completed",
+  "slug": "alanzoka-primeira-semana-de-setembro",
+  "created_at": "2026-09-11T17:57:29Z",
+  "started_at": "2026-09-11T17:57:29Z",
+  "ended_at": "2026-09-11T18:15:32Z",
+  "return_code": 0,
+  "error": "",
+  "worker_pid": 22568,
+  "log_path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\jobs\\logs\\20260911-175729-9af5f7.log",
+  "params": {
+    "video_id": "alanzoka-o-detetive-de-laslea-a-saga-fitness-melhores-momentos"
+  },
+  "result_summary": {
+    "video_id": "alanzoka-o-detetive-de-laslea-a-saga-fitness-melhores-momentos",
+    "candidate_count": 19,
+    "word_count": 6556,
+    "timestamp_mode": "word+segment"
+  }
+}

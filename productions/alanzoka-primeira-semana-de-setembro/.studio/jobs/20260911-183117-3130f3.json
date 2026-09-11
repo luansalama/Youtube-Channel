@@ -1,0 +1,29 @@
+{
+  "id": "20260911-183117-3130f3",
+  "type": "source-batch-download-twitch",
+  "status": "completed",
+  "slug": "alanzoka-primeira-semana-de-setembro",
+  "created_at": "2026-09-11T18:31:17Z",
+  "started_at": "2026-09-11T18:31:17Z",
+  "ended_at": "2026-09-11T18:32:17Z",
+  "return_code": 0,
+  "error": "",
+  "worker_pid": 10952,
+  "log_path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\jobs\\logs\\20260911-183117-3130f3.log",
+  "params": {
+    "vod_ids": [
+      "2868004694"
+    ]
+  },
+  "result_summary": {
+    "vods_requested": 1,
+    "vods_downloaded": 1,
+    "items": [
+      {
+        "vod_id": "2868004694",
+        "asset_id": "twitch-video-2868004694",
+        "bytes": 25973975500
+      }
+    ]
+  }
+}

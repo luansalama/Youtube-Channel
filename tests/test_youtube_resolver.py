@@ -978,7 +978,21 @@ def test_enriched_metadata_can_skip_expensive_media(tmp_path, monkeypatch):
     assert done["verification"]["mode"] == "metadata-rejected-before-media"
 
 
-def test_faster_whisper_discovery_and_auto_backend(tmp_path):
+def test_faster_whisper_discovery_and_auto_backend(tmp_path, monkeypatch):
+    # Keep this discovery test hermetic. A developer machine may intentionally
+    # define CSTUDIO_WHISPER_* overrides pointing at a real installation; those
+    # overrides are correct runtime behavior, but they must not leak into a test
+    # whose purpose is to verify root-relative auto-discovery.
+    for name in (
+        "CSTUDIO_WHISPER_PYTHON",
+        "CSTUDIO_WHISPER",
+        "CSTUDIO_WHISPER_HOME",
+        "CSTUDIO_WHISPER_MODEL",
+        "CSTUDIO_FASTER_WHISPER_MODEL",
+        "CSTUDIO_TRANSCRIPTION_BACKEND",
+    ):
+        monkeypatch.delenv(name, raising=False)
+
     apps = tmp_path / "Applications"
     root = apps / "Youtube-Channel"
     (root / "studio").mkdir(parents=True)
@@ -993,6 +1007,34 @@ def test_faster_whisper_discovery_and_auto_backend(tmp_path):
     assert Path(YR.resolve_faster_whisper_model(str(root))).resolve() == model.resolve()
     assert Path(YR.resolve_whisper_python(str(root))).resolve() == python.resolve()
     assert YR.transcription_backend(str(root)) == "faster-whisper"
+
+
+def test_whisper_python_root_runtime_beats_global_path_whisper(tmp_path, monkeypatch):
+    apps = tmp_path / "Applications"
+    root = apps / "Youtube-Channel"
+    (root / "studio").mkdir(parents=True)
+    C.write_json(str(root / "studio" / "youtube-mirrors.json"), YR.default_config())
+
+    local_python = apps / "LLMS" / "Whisper" / ".venv" / "Scripts" / "python.exe"
+    local_python.parent.mkdir(parents=True)
+    local_python.write_bytes(b"x")
+
+    global_scripts = tmp_path / "GlobalWhisper" / ".venv" / "Scripts"
+    global_scripts.mkdir(parents=True)
+    global_whisper = global_scripts / "whisper.exe"
+    global_python = global_scripts / "python.exe"
+    global_whisper.write_bytes(b"x")
+    global_python.write_bytes(b"x")
+
+    for name in (
+        "CSTUDIO_WHISPER_PYTHON",
+        "CSTUDIO_WHISPER",
+        "CSTUDIO_WHISPER_HOME",
+    ):
+        monkeypatch.delenv(name, raising=False)
+    monkeypatch.setattr(YR.shutil, "which", lambda name: str(global_whisper) if name == "whisper" else None)
+
+    assert Path(YR.resolve_whisper_python(str(root))).resolve() == local_python.resolve()
 
 
 def test_faster_whisper_preflight_reports_ctranslate2_cuda_and_is_cached(tmp_path, monkeypatch):
@@ -1030,7 +1072,7 @@ def test_faster_whisper_preflight_reports_ctranslate2_cuda_and_is_cached(tmp_pat
         YR._FASTER_WHISPER_PREFLIGHTS.clear()
 
 
-def test_faster_whisper_runner_spec_uses_batching_and_independent_windows(tmp_path, monkeypatch):
+def test_faster_whisper_localized_ranges_use_batched_inference_and_independent_windows(tmp_path, monkeypatch):
     root = _harness(tmp_path)
     media = tmp_path / "clip.m4a"
     media.write_bytes(b"audio")
@@ -1070,17 +1112,93 @@ def test_faster_whisper_runner_spec_uses_batching_and_independent_windows(tmp_pa
     )
     spec = captured["spec"]
     assert spec["batch_size"] == 8
+    assert spec["inference_mode"] == "batched"
     assert spec["compute_type"] == "float16"
     assert spec["device"] == "cuda"
     assert spec["language"] == "pt"
     assert spec["inputs"][0]["ranges"] == [[10.0, 58.0]]
-    assert transcript["provider"] == YR.TRANSCRIPT_PROVIDER_FASTER
+    assert transcript["provider"] == YR.TRANSCRIPT_PROVIDER_FASTER_BATCHED
     profile = transcript["decoding_profile"]
     assert profile["condition_on_previous_text"] is False
     assert profile["backend"] == "faster-whisper"
+    assert profile["inference_mode"] == "batched"
     assert profile["batch_size"] == 8
     assert transcript["quality_state"] == "valid"
 
+
+
+def test_faster_whisper_full_source_discovery_defaults_to_plain_inference(tmp_path, monkeypatch):
+    root = _harness(tmp_path)
+    media = tmp_path / "vod.m4a"
+    media.write_bytes(b"audio")
+    fake_python = tmp_path / "python.exe"
+    fake_python.write_bytes(b"x")
+    model = tmp_path / "faster-model"
+    model.mkdir()
+    (model / "model.bin").write_bytes(b"x")
+    monkeypatch.setattr(YR, "resolve_whisper_python", lambda root="", required=False: str(fake_python))
+    monkeypatch.setattr(YR, "resolve_faster_whisper_model", lambda root="", required=False: str(model))
+    monkeypatch.setattr(YR, "_faster_whisper_preflight", lambda root, log=None: {
+        "model": str(model), "effective_device": "cuda", "compute_type": "float16",
+        "batch_size": 8, "faster_whisper": "1.2.1", "ctranslate2": "4.8.2",
+    })
+    captured = {}
+
+    class P:
+        def __init__(self, cmd, **kwargs):
+            spec_path = Path(cmd[cmd.index("--spec") + 1])
+            output_path = Path(cmd[cmd.index("--output") + 1])
+            captured["spec"] = json.loads(spec_path.read_text(encoding="utf-8"))
+            output_path.write_text(json.dumps({
+                "text": "fala detalhada suficiente para discovery editorial",
+                "language": "pt",
+                "segments": [{"start": 1.0, "end": 3.0, "text": "fala detalhada suficiente para discovery editorial", "words": []}],
+                "backend": {"faster_whisper": "1.2.1", "ctranslate2": "4.8.2", "inference_mode": "plain"},
+                "processed_duration_seconds": 600.0,
+            }), encoding="utf-8")
+            self.stdout = iter(['CSTUDIO_FW {"event":"done","segments":1}\n'])
+        def wait(self):
+            return 0
+
+    monkeypatch.setattr(subprocess, "Popen", P)
+    transcript = YR._run_faster_whisper(
+        root, str(media), source_kind="editorial", source_id="twitch-video-123", streamer="alanzoka",
+    )
+    spec = captured["spec"]
+    assert spec["inference_mode"] == "plain"
+    assert spec["word_timestamps"] is False
+    assert spec["inputs"][0]["ranges"] == []
+    assert transcript["provider"] == YR.TRANSCRIPT_PROVIDER_FASTER
+    profile = transcript["decoding_profile"]
+    assert profile["inference_mode"] == "plain"
+    assert profile["batch_size"] is None
+    assert profile["word_timestamps"] is False
+
+
+def test_faster_whisper_candidate_precision_uses_plain_while_localized_matching_uses_batched(tmp_path, monkeypatch):
+    root = _harness(tmp_path)
+    clip = tmp_path / "candidate.wav"
+    clip.write_bytes(b"audio")
+    monkeypatch.setattr(YR, "transcription_backend", lambda root="": "faster-whisper")
+    calls = []
+
+    def fake_inputs(root_arg, inputs, **kwargs):
+        calls.append(kwargs)
+        return {"segments": [{"start": 0, "end": 1, "text": "ok", "words": []}]}
+
+    monkeypatch.setattr(YR, "_run_faster_whisper_inputs", fake_inputs)
+    YR._run_whisper_clip_files(
+        root, [(str(clip), 10.0, 20.0)], source_kind="candidate-precision", source_id="v1",
+        word_timestamps=True,
+    )
+    YR._run_whisper_clip_files(
+        root, [(str(clip), 10.0, 20.0)], source_kind="youtube", source_id="yt1",
+        word_timestamps=False,
+    )
+    assert calls[0]["inference_mode"] == "plain"
+    assert calls[0]["word_timestamps"] is True
+    assert calls[1]["inference_mode"] == "batched"
+    assert calls[1]["word_timestamps"] is False
 
 def test_faster_whisper_failure_falls_back_to_openai(tmp_path, monkeypatch):
     root = _harness(tmp_path)
@@ -1673,3 +1791,111 @@ def test_video_sort_key_uses_playlist_index_when_flat_dates_are_missing():
     ]
     ordered = sorted(rows, key=YR._video_sort_key, reverse=True)
     assert [row["video_id"] for row in ordered] == ["first", "second", "legacy"]
+
+
+def test_selected_download_estimate_sums_video_and_audio_filesizes():
+    raw = {
+        "duration": 3600,
+        "requested_formats": [
+            {"format_id": "401", "height": 2160, "fps": 60, "vcodec": "av01", "acodec": "none", "filesize": 5_000_000_000},
+            {"format_id": "251", "vcodec": "none", "acodec": "opus", "filesize_approx": 180_000_000},
+        ],
+    }
+    estimate = YR._selected_download_estimate(raw, selector=YR.MASTER_FORMAT_SELECTOR)
+    assert estimate["bytes"] == 5_180_000_000
+    assert estimate["confidence"] == "approx"
+    assert estimate["height"] == 2160
+    assert estimate["fps"] == 60
+    assert estimate["format_ids"] == ["401", "251"]
+
+
+def test_selected_download_estimate_uses_bitrate_when_filesize_missing():
+    raw = {
+        "duration": 1000,
+        "format_id": "source",
+        "url": "https://example.invalid/source.m3u8",
+        "height": 1080,
+        "fps": 60,
+        "vcodec": "h264",
+        "acodec": "aac",
+        "tbr": 6000,
+    }
+    estimate = YR._selected_download_estimate(raw, selector=YR.MASTER_FORMAT_SELECTOR)
+    assert estimate["bytes"] == 750_000_000
+    assert estimate["confidence"] == "bitrate"
+    assert estimate["height"] == 1080
+
+
+def test_storage_status_and_dashboard_show_per_source_sizes(tmp_path):
+    root = _harness(tmp_path)
+    vod_id = "2861744268"
+    _write_vod(root, vod_id=vod_id, duration=20000)
+    video = {
+        "video_id": "verifiedABC1", "title": "Metal Gear Parte 5", "channel_name": "alanzoka",
+        "url": "https://www.youtube.com/watch?v=verifiedABC1", "upload_date": "20260903", "duration": 3600,
+    }
+    pair = {"vod_id": vod_id, "state": "verified", "candidate_score": .74, "audio": {"anchors": [{"similarity": .98}] * 4, "assessment": {"timeline_consistency": "strong"}}}
+    YR.save_assignment(root, "yt", {
+        "youtube_video_id": video["video_id"], "streamer": "alanzoka", "status": "completed", "state": "verified",
+        "primary_vod_id": vod_id, "assigned_vod_ids": [vod_id], "evaluated_vod_ids": [vod_id],
+        "pair_results": {vod_id: pair}, "youtube": video, "matcher_engine": "numpy-exact",
+    })
+    YR.save_match(root, "yt", {
+        "youtube_video_id": video["video_id"], "youtube": video, "twitch_vod_ids": [vod_id],
+        "twitch": {"vod_id": vod_id, "title": "MGS4 live", "duration": 20000, "source_url": f"https://www.twitch.tv/videos/{vod_id}"},
+        "streamer": "alanzoka", "state": "verified", "candidate_score": .74,
+        "verification": {"audio": pair["audio"]}, "timeline_segments": [], "download": {"status": "not_downloaded", "path": ""},
+    })
+    YR._save_storage_estimates(root, "yt", {
+        "youtube": {video["video_id"]: {"source_id": video["video_id"], "platform": "youtube", "bytes": 5 * 1024**3, "confidence": "approx", "height": 2160, "fps": 60}},
+        "twitch": {vod_id: {"source_id": vod_id, "platform": "twitch", "bytes": 12 * 1024**3, "confidence": "bitrate", "height": 1080, "fps": 60}},
+    })
+    status = YR.storage_status(root, "yt")
+    assert status["youtube_total"]["bytes"] == 5 * 1024**3
+    assert status["twitch_total"]["bytes"] == 12 * 1024**3
+    assert status["combined_total"]["bytes"] == 17 * 1024**3
+    page = D.render(root, "youtube", "yt", csrf_token="csrf")
+    assert "Espaço das sources" in page
+    assert "/action/youtube-sizes" in page
+    assert "Master 2160p60" in page
+    assert "~5.00 GB" in page
+    assert "source 1080p60" in page
+    assert "~12.0 GB" in page
+    assert "~17.0 GB" in page
+
+
+def test_estimate_storage_probes_only_verified_youtube_and_known_twitch(tmp_path, monkeypatch):
+    root = _harness(tmp_path)
+    vod_id = "2861744268"
+    _write_vod(root, vod_id=vod_id)
+    verified = {"video_id": "verifiedABC1", "title": "Verified", "url": "https://www.youtube.com/watch?v=verifiedABC1"}
+    unmatched = {"video_id": "unmatchedABC2", "title": "No match", "url": "https://www.youtube.com/watch?v=unmatchedABC2"}
+    YR.save_assignment(root, "yt", {
+        "youtube_video_id": verified["video_id"], "streamer": "alanzoka", "status": "completed", "state": "verified",
+        "primary_vod_id": vod_id, "assigned_vod_ids": [vod_id], "evaluated_vod_ids": [vod_id], "pair_results": {vod_id: {}}, "youtube": verified,
+    })
+    YR.save_assignment(root, "yt", {
+        "youtube_video_id": unmatched["video_id"], "streamer": "alanzoka", "status": "completed", "state": "unmatched",
+        "primary_vod_id": vod_id, "assigned_vod_ids": [], "evaluated_vod_ids": [vod_id], "pair_results": {vod_id: {}}, "youtube": unmatched,
+    })
+    calls = []
+
+    def fake_probe(url, platform, *, log=None):
+        calls.append((platform, url))
+        return {"bytes": 1024**3, "confidence": "exact", "height": 2160 if platform == "youtube" else 1080, "fps": 60}
+
+    monkeypatch.setattr(YR, "_storage_probe_estimate", fake_probe)
+    result = YR.estimate_storage(root, "yt", force=True)
+    assert result["youtube_sources"] == 1
+    assert result["twitch_sources"] == 1
+    assert [platform for platform, _ in calls].count("youtube") == 1
+    assert [platform for platform, _ in calls].count("twitch") == 1
+    assert all("unmatchedABC2" not in url for _, url in calls)
+
+
+def test_cli_exposes_youtube_sizes_command():
+    from cstudio import cli
+    args = cli.build_parser().parse_args(["youtube-sizes", "yt", "--force"])
+    assert args.cmd == "youtube-sizes"
+    assert args.slug == "yt"
+    assert args.force is True

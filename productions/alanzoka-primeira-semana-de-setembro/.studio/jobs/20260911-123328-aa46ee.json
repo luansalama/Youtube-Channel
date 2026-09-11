@@ -1,0 +1,21 @@
+{
+  "id": "20260911-123328-aa46ee",
+  "type": "video-proposal-refine",
+  "status": "failed",
+  "slug": "alanzoka-primeira-semana-de-setembro",
+  "created_at": "2026-09-11T12:33:28Z",
+  "started_at": "2026-09-11T12:33:28Z",
+  "ended_at": "2026-09-11T12:53:29Z",
+  "return_code": 1,
+  "error": "runner timed out after 1200s",
+  "worker_pid": 15204,
+  "log_path": "K:\\Applications\\Youtube-Channel\\productions\\alanzoka-primeira-semana-de-setembro\\.studio\\jobs\\logs\\20260911-123328-aa46ee.log",
+  "params": {
+    "proposal_id": "fe53735e563a",
+    "request": "Consolide a Parte 2 usando todas as respostas humanas salvas como decisões autoritativas. Torne a proposta específica, remova perguntas resolvidas e preserve os candidate moments sustentados pela transcrição.",
+    "runner": "agy",
+    "model": "claude-opus-4-6",
+    "reasoning_effort": "thinking"
+  },
+  "result_summary": {}
+}
