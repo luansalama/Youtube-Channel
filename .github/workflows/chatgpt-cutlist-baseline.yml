@@ -19,16 +19,23 @@ jobs:
           python .github/scripts/apply_cutlist_patch.py
           python .github/scripts/fix_cutlist_patch.py
           python .github/scripts/remove_stage_progression.py
+          python .github/scripts/fix_stagefree_regressions.py
       - name: Install project and test tooling
         run: |
           python -m pip install --upgrade pip
           python -m pip install -e . pytest
       - name: Compile changed Python
-        run: python -m py_compile cstudio/video_cutlists.py cstudio/runners.py cstudio/jobs.py cstudio/dashboard.py cstudio/server.py tests/test_video_cutlist_workflow.py
+        run: python -m py_compile cstudio/video_cutlists.py cstudio/runners.py cstudio/jobs.py cstudio/dashboard.py cstudio/server.py tests/test_video_cutlist_workflow.py tests/test_dashboard_ui.py
       - name: Targeted cutlist workflow tests
-        run: python -m pytest tests/test_video_cutlist_workflow.py tests/test_video_plans.py tests/test_agent_runner_controls.py tests/test_dashboard_ui.py tests/test_cutlist_sync_timecode.py -q | tee targeted-tests.txt
+        shell: bash
+        run: |
+          set -o pipefail
+          python -m pytest tests/test_video_cutlist_workflow.py tests/test_video_plans.py tests/test_agent_runner_controls.py tests/test_dashboard_ui.py tests/test_cutlist_sync_timecode.py -q | tee targeted-tests.txt
       - name: Full test suite
-        run: python -m pytest tests/ -q | tee full-tests.txt
+        shell: bash
+        run: |
+          set -o pipefail
+          python -m pytest tests/ -q | tee full-tests.txt
       - name: Post-change maintain and status
         run: |
           python -m cstudio --root . maintain | tee post-maintain.txt
@@ -36,6 +43,7 @@ jobs:
       - name: Build extractable patch ZIP
         shell: bash
         run: |
+          set -o pipefail
           mkdir -p patch/cstudio/static patch/tests
           cp cstudio/video_cutlists.py patch/cstudio/video_cutlists.py
           cp cstudio/runners.py patch/cstudio/runners.py
@@ -44,10 +52,12 @@ jobs:
           cp cstudio/server.py patch/cstudio/server.py
           cp cstudio/static/dashboard.css patch/cstudio/static/dashboard.css
           cp tests/test_video_cutlist_workflow.py patch/tests/test_video_cutlist_workflow.py
+          cp tests/test_dashboard_ui.py patch/tests/test_dashboard_ui.py
           (cd patch && zip -qr ../stagefree-cutlist-workflow-patch.zip .)
           git diff --stat | tee patch-stat.txt
           git diff --check | tee diff-check.txt
       - name: Upload validation logs
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: stagefree-cutlist-validation-logs
@@ -58,6 +68,7 @@ jobs:
             post-status.txt
             patch-stat.txt
             diff-check.txt
+          if-no-files-found: ignore
       - name: Upload patch ZIP
         uses: actions/upload-artifact@v4
         with:
